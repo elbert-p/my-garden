@@ -58,6 +58,7 @@ export default function Home() {
       id: uuidv4(),
       commonName: newPlantName,
       mainImage: newPlantImage,
+      scientificName: '',
       datePlanted: '',
       notes: '',
       images: [],
@@ -92,7 +93,7 @@ export default function Home() {
       }
     } else if (file) {
       setNewPlantImage(null);
-      setError('Please select a valid image file (e.g., .jpg, .png).');
+      setError('Select a valid image file (.jpg, .png).');
     }
   };
 

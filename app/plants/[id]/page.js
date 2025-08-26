@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useRouter, useParams } from 'next/navigation';
+import { IoClose } from 'react-icons/io5';
 import { FiEdit } from 'react-icons/fi';
 import localforage from 'localforage'; // 1. Import localforage
 import imageCompression from 'browser-image-compression'; // 2. Import compression library
@@ -14,6 +15,8 @@ export default function PlantPage() {
   const [plant, setPlant] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
   const [tempPlant, setTempPlant] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null); // 1. State for the modal
+
 
   useEffect(() => {
     // This function is now async
@@ -31,6 +34,21 @@ export default function PlantPage() {
     };
     loadPlant();
   }, [id, router]);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setSelectedImage(null);
+      }
+    };
+    if (selectedImage) {
+      document.addEventListener('keydown', handleKeyDown);
+    }
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedImage]);
+
 
   const handleEdit = () => {
     setTempPlant({ ...plant });
@@ -95,6 +113,7 @@ export default function PlantPage() {
   }
 
   return (
+    <>
     <div className={styles.container}>
       <header className={styles.header}>
         <button onClick={() => router.push('/')} className={styles.backButton}>
@@ -142,6 +161,20 @@ export default function PlantPage() {
           )}
         </div>
         <div className={styles.infoSection}>
+        <label className={styles.label}>Scientific Name:</label>
+        {isEditing ? (
+            <input
+            type="text"
+            // placeholder="e.g., Monstera deliciosa"
+            value={tempPlant.scientificName}
+            onChange={(e) => setTempPlant({ ...tempPlant, scientificName: e.target.value })}
+            className={styles.input}
+            />
+        ) : (
+            <p className={styles.text}>{plant.scientificName || 'Not set'}</p>
+        )}
+        </div>
+        <div className={styles.infoSection}>
           <label className={styles.label}>Date Planted:</label>
           {isEditing ? (
             <input
@@ -171,16 +204,23 @@ export default function PlantPage() {
           <h2 className={styles.sectionTitle}>Photos</h2>
           <div className={styles.imageGrid}>
             {tempPlant.images && tempPlant.images.length > 0 ? (
-              tempPlant.images.map((img, index) => (
-                <div key={index} className={styles.photoItem}>
-                  <img src={img} alt={`Additional photo ${index + 1}`} className={styles.photo} />
-                  {isEditing && (
-                    <button onClick={() => handleRemoveImage(img)} className={styles.removeButton}>
-                      &times;
+                tempPlant.images.map((img, index) => (
+                <div key={index} className={styles.photoItem} onClick={() => setSelectedImage(img)}>
+                    <img src={img} alt={`Additional photo ${index + 1}`} className={styles.photo} />
+                    {isEditing && (
+                    <button 
+                        onClick={(e) => {
+                        e.stopPropagation(); 
+                        handleRemoveImage(img);
+                        }} 
+                        className={styles.removeButton}
+                    >
+                        {/* Replace the text with the icon component */}
+                        <IoClose size={18} strokeWidth={20}/>
                     </button>
-                  )}
+                    )}
                 </div>
-              ))
+                ))
             ) : (
               !isEditing && <p className={styles.noPhotos}>No additional photos yet.</p>
             )}
@@ -194,5 +234,16 @@ export default function PlantPage() {
         </div>
       </div>
     </div>
+    {selectedImage && (
+        <div className={styles.photoModalOverlay} onClick={() => setSelectedImage(null)}>
+          <div className={styles.photoModalContent} onClick={(e) => e.stopPropagation()}>
+            <img src={selectedImage} alt="Expanded view" className={styles.photoModalImage} />
+            <button className={styles.photoModalCloseButton} onClick={() => setSelectedImage(null)}>
+              <IoClose size={30} />
+            </button>
+          </div>
+        </div>
+    )}
+    </>
   );
 }

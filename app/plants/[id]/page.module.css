@@ -91,11 +91,10 @@ label.mainImageContainer {
   object-fit: cover;
 }
 
-/* --- NEW STYLE FOR THE EDIT ICON --- */
 .mainImageEditIcon {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.25rem;
+  right: 0.25rem;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   width: 48px;
@@ -192,9 +191,6 @@ label.mainImageContainer:hover .mainImageEditIcon {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  font-size: 1.2rem;
-  font-weight: 700;
-  line-height: 1;
 }
 
 .noPhotos {
@@ -227,4 +223,78 @@ label.mainImageContainer:hover .mainImageEditIcon {
 
 .fileInput {
   display: none;
+}
+
+.photoModalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  /* Increased padding makes the content area smaller relative to the screen */
+  padding: 4rem; 
+  animation: fadeIn 0.3s ease;
+  box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+}
+
+.photoModalContent {
+  position: relative;
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Let the content shrink-wrap the image */
+  width: auto;
+  height: auto;
+}
+
+.photoModalImage {
+  display: block;
+  border-radius: 6px;
+  object-fit: contain;
+  /* Set max-dimensions relative to the viewport minus the overlay padding.
+    (4rem padding top + 4rem padding bottom = 8rem) 
+  */
+  max-width: calc(100vw - 8rem);
+  max-height: calc(100vh - 8rem);
+}
+
+.photoModalCloseButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #888;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.photoModalCloseButton:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+/* Make photo items in the grid clickable */
+.photoItem {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
