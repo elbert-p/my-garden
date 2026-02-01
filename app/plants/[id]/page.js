@@ -1,11 +1,17 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter, useParams } from 'next/navigation';
-import { IoClose } from 'react-icons/io5';
-import { FiEdit } from 'react-icons/fi';
-import localforage from 'localforage'; // 1. Import localforage
-import imageCompression from 'browser-image-compression'; // 2. Import compression library
+import { IoClose, IoArrowBack } from 'react-icons/io5';
+import { FiEdit, FiPlus } from 'react-icons/fi';
+import localforage from 'localforage';
+import imageCompression from 'browser-image-compression';
+import InfoField from '@/components/InfoField';
 import styles from './page.module.css';
+
+// Options for multi-select fields
+const BLOOM_TIME_OPTIONS = ['Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'];
+const SUNLIGHT_OPTIONS = ['Full', 'Part', 'Shade'];
+const MOISTURE_OPTIONS = ['Moist', 'Med', 'Dry'];
 
 export default function PlantPage() {
   const router = useRouter();
@@ -15,11 +21,11 @@ export default function PlantPage() {
   const [plant, setPlant] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
   const [tempPlant, setTempPlant] = useState(null);
-  const [selectedImage, setSelectedImage] = useState(null); // 1. State for the modal
-
+  const [selectedImage, setSelectedImage] = useState(null);
+  const mainImageInputRef = useRef(null);
+  const addPhotoInputRef = useRef(null);
 
   useEffect(() => {
-    // This function is now async
     const loadPlant = async () => {
       if (typeof window !== 'undefined' && id) {
         const storedPlants = (await localforage.getItem('plants')) || [];
@@ -49,45 +55,54 @@ export default function PlantPage() {
     };
   }, [selectedImage]);
 
-
   const handleEdit = () => {
     setTempPlant({ ...plant });
     setIsEditing(true);
   };
 
-  // handleSave is now async
   const handleSave = async () => {
     const storedPlants = (await localforage.getItem('plants')) || [];
     const updatedPlants = storedPlants.map((p) => (p.id === id ? tempPlant : p));
-    await localforage.setItem('plants', updatedPlants); // Use localforage
+    await localforage.setItem('plants', updatedPlants);
     setPlant(tempPlant);
     setIsEditing(false);
   };
 
-  // Helper function for image compression
+  // Auto-save function for individual field changes
+  const handleFieldSave = async () => {
+    const storedPlants = (await localforage.getItem('plants')) || [];
+    const updatedPlants = storedPlants.map((p) => (p.id === id ? tempPlant : p));
+    await localforage.setItem('plants', updatedPlants);
+    setPlant(tempPlant);
+  };
+
   const compressImage = async (file) => {
     const options = {
-      maxSizeMB: 1,          // Compress images over 1MB
-      maxWidthOrHeight: 1920, // Resize images larger than 1920px
+      maxSizeMB: 1,
+      maxWidthOrHeight: 1920,
       useWebWorker: true,
     };
     try {
       const compressedFile = await imageCompression(file, options);
-      // Convert the compressed file back to a Base64 string to store
       return await imageCompression.getDataUrlFromFile(compressedFile);
     } catch (error) {
       console.error('Image compression error:', error);
-      return null; // Handle error appropriately
+      return null;
     }
   };
 
-  // Update image handlers to use compression
   const handleMainImageChange = async (e) => {
     const file = e.target.files[0];
     if (file && file.type.startsWith('image/')) {
       const compressedDataUrl = await compressImage(file);
       if (compressedDataUrl) {
-        setTempPlant({ ...tempPlant, mainImage: compressedDataUrl });
+        const updatedTempPlant = { ...tempPlant, mainImage: compressedDataUrl };
+        setTempPlant(updatedTempPlant);
+        // Auto-save the image change
+        const storedPlants = (await localforage.getItem('plants')) || [];
+        const updatedPlants = storedPlants.map((p) => (p.id === id ? updatedTempPlant : p));
+        await localforage.setItem('plants', updatedPlants);
+        setPlant(updatedTempPlant);
       }
     }
   };
@@ -97,15 +112,31 @@ export default function PlantPage() {
     if (file && file.type.startsWith('image/')) {
       const compressedDataUrl = await compressImage(file);
       if (compressedDataUrl) {
-        const newImages = [...tempPlant.images, compressedDataUrl];
-        setTempPlant({ ...tempPlant, images: newImages });
+        const newImages = [...(tempPlant.images || []), compressedDataUrl];
+        const updatedTempPlant = { ...tempPlant, images: newImages };
+        setTempPlant(updatedTempPlant);
+        // Auto-save the image change
+        const storedPlants = (await localforage.getItem('plants')) || [];
+        const updatedPlants = storedPlants.map((p) => (p.id === id ? updatedTempPlant : p));
+        await localforage.setItem('plants', updatedPlants);
+        setPlant(updatedTempPlant);
       }
+    }
+    // Reset the input so the same file can be added again if needed
+    if (addPhotoInputRef.current) {
+      addPhotoInputRef.current.value = '';
     }
   };
 
-  const handleRemoveImage = (imageToRemove) => {
+  const handleRemoveImage = async (imageToRemove) => {
     const newImages = tempPlant.images.filter((img) => img !== imageToRemove);
-    setTempPlant({ ...tempPlant, images: newImages });
+    const updatedTempPlant = { ...tempPlant, images: newImages };
+    setTempPlant(updatedTempPlant);
+    // Auto-save the image removal
+    const storedPlants = (await localforage.getItem('plants')) || [];
+    const updatedPlants = storedPlants.map((p) => (p.id === id ? updatedTempPlant : p));
+    await localforage.setItem('plants', updatedPlants);
+    setPlant(updatedTempPlant);
   };
 
   if (!plant) {
@@ -114,136 +145,208 @@ export default function PlantPage() {
 
   return (
     <>
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <button onClick={() => router.push('/')} className={styles.backButton}>
-          ← Back
-        </button>
-        {/* Title now uses tempPlant name to update live while editing */}
-        <h1 className={styles.title}>{isEditing ? tempPlant.commonName : plant.commonName}</h1>
-        {isEditing ? (
-          <button onClick={handleSave} className={styles.editButton}>
-            Save
+      <div className={styles.container}>
+        <header className={styles.header}>
+          <button onClick={() => router.push('/')} className={styles.backButton}>
+            <IoArrowBack size={18} />
+            <span>Back</span>
           </button>
-        ) : (
-          <button onClick={handleEdit} className={styles.editButton}>
-            Edit
-          </button>
-        )}
-      </header>
-      <div className={styles.details}>
-        {/* --- MODIFIED MAIN IMAGE SECTION --- */}
-        {isEditing ? (
-          <label className={styles.mainImageContainer}>
-            <img src={tempPlant.mainImage} alt={tempPlant.commonName} className={styles.mainImage} />
-            <div className={styles.mainImageEditIcon}>
-              <FiEdit size={24} strokeWidth={2.5} />
-            </div>
-            <input type="file" onChange={handleMainImageChange} className={styles.fileInput} accept="image/*" />
-          </label>
-        ) : (
-          <div className={styles.mainImageContainer}>
-            <img src={plant.mainImage} alt={plant.commonName} className={styles.mainImage} />
-          </div>
-        )}
+          <h1 className={styles.title}>{plant.commonName || 'Plant Details'}</h1>
+          {isEditing ? (
+            <button onClick={handleSave} className={styles.saveButton}>
+              Save
+            </button>
+          ) : (
+            <button onClick={handleEdit} className={styles.editButton}>
+              Edit
+            </button>
+          )}
+        </header>
         
-        <div className={styles.infoSection}>
-          <label className={styles.label}>Common Name:</label>
-          {isEditing ? (
-            <input
-              type="text"
-              value={tempPlant.commonName}
-              onChange={(e) => setTempPlant({ ...tempPlant, commonName: e.target.value })}
-              className={styles.input}
+        <div className={styles.details}>
+          {/* Main Image with hover edit icon in top right */}
+          <div 
+            className={styles.mainImageContainer}
+            onClick={() => mainImageInputRef.current?.click()}
+          >
+            <img 
+              src={tempPlant.mainImage || '/placeholder-plant.jpg'} 
+              alt={tempPlant.commonName} 
+              className={styles.mainImage} 
             />
-          ) : (
-            <p className={styles.text}>{plant.commonName}</p>
-          )}
-        </div>
-        <div className={styles.infoSection}>
-        <label className={styles.label}>Scientific Name:</label>
-        {isEditing ? (
-            <input
-            type="text"
-            // placeholder="e.g., Monstera deliciosa"
-            value={tempPlant.scientificName}
-            onChange={(e) => setTempPlant({ ...tempPlant, scientificName: e.target.value })}
-            className={styles.input}
+            <button className={styles.mainImageEditButton} aria-label="Change photo">
+              <FiEdit size={18} strokeWidth={2} />
+            </button>
+            <input 
+              ref={mainImageInputRef}
+              type="file" 
+              onChange={handleMainImageChange} 
+              className={styles.fileInput} 
+              accept="image/*" 
             />
-        ) : (
-            <p className={styles.text}>{plant.scientificName || 'Not set'}</p>
-        )}
-        </div>
-        <div className={styles.infoSection}>
-          <label className={styles.label}>Date Planted:</label>
-          {isEditing ? (
-            <input
-              type="date"
-              value={tempPlant.datePlanted}
-              onChange={(e) => setTempPlant({ ...tempPlant, datePlanted: e.target.value })}
-              className={styles.input}
-            />
-          ) : (
-            <p className={styles.text}>{plant.datePlanted || 'Not set'}</p>
-          )}
-        </div>
-        <div className={styles.infoSection}>
-          <label className={styles.label}>Notes:</label>
-          {isEditing ? (
-            <textarea
-              value={tempPlant.notes}
-              onChange={(e) => setTempPlant({ ...tempPlant, notes: e.target.value })}
-              className={styles.textarea}
-            />
-          ) : (
-            <p className={styles.text}>{plant.notes || 'No notes'}</p>
-          )}
-        </div>
+          </div>
+          
+          <div className={styles.infoGridWrapper}>
+            <div className={styles.infoGrid}>
+              <InfoField
+                label="Common Name"
+                value={tempPlant.commonName}
+                onChange={(val) => setTempPlant({ ...tempPlant, commonName: val })}
+                onSave={handleFieldSave}
+                isEditing={isEditing}
+                type="text"
+              />
+                            
+              <InfoField
+                label="Scientific Name"
+                value={tempPlant.scientificName}
+                onChange={(val) => setTempPlant({ ...tempPlant, scientificName: val })}
+                onSave={handleFieldSave}
+                isEditing={isEditing}
+                type="text"
+              />
+                            
+              <InfoField
+                label="Date Planted"
+                value={tempPlant.datePlanted}
+                onChange={(val) => setTempPlant({ ...tempPlant, datePlanted: val })}
+                onSave={handleFieldSave}
+                isEditing={isEditing}
+                type="date"
+              />
+              
+              <InfoField
+                label="Bloom Time"
+                value={tempPlant.bloomTime}
+                onChange={(val) => setTempPlant({ ...tempPlant, bloomTime: val })}
+                onSave={handleFieldSave}
+                isEditing={isEditing}
+                type="multiselect"
+                options={BLOOM_TIME_OPTIONS}
+                placeholder="Select months..."
+              />
 
-        <div className={styles.infoSection}>
-          <h2 className={styles.sectionTitle}>Photos</h2>
-          <div className={styles.imageGrid}>
+              <InfoField
+                label="Height"
+                value={tempPlant.height}
+                onChange={(val) => setTempPlant({ ...tempPlant, height: val })}
+                onSave={handleFieldSave}
+                isEditing={isEditing}
+                type="text"
+                placeholder="e.g., 2-3 ft"
+              />
+
+              <InfoField
+                label="Sunlight"
+                value={tempPlant.sunlight}
+                onChange={(val) => setTempPlant({ ...tempPlant, sunlight: val })}
+                onSave={handleFieldSave}
+                isEditing={isEditing}
+                type="multiselect"
+                options={SUNLIGHT_OPTIONS}
+                placeholder="Select sunlight..."
+              />
+              
+              <InfoField
+                label="Moisture"
+                value={tempPlant.moisture}
+                onChange={(val) => setTempPlant({ ...tempPlant, moisture: val })}
+                onSave={handleFieldSave}
+                isEditing={isEditing}
+                type="multiselect"
+                options={MOISTURE_OPTIONS}
+                placeholder="Select moisture..."
+              />
+              
+              <InfoField
+                label="Notes"
+                value={tempPlant.notes}
+                onChange={(val) => setTempPlant({ ...tempPlant, notes: val })}
+                onSave={handleFieldSave}
+                isEditing={isEditing}
+                type="textarea"
+                emptyText="No notes"
+                size="large"
+              />
+            </div>
+          </div>
+
+          <div className={styles.photosSection}>
+            <h2 className={styles.sectionTitle}>Additional Photos</h2>
             {tempPlant.images && tempPlant.images.length > 0 ? (
-                tempPlant.images.map((img, index) => (
-                <div key={index} className={styles.photoItem} onClick={() => setSelectedImage(img)}>
-                    <img src={img} alt={`Additional photo ${index + 1}`} className={styles.photo} />
-                    {isEditing && (
+              <div className={styles.imageGrid}>
+                {tempPlant.images.map((img, index) => (
+                  <div key={index} className={styles.photoItem}>
+                    <img 
+                      src={img} 
+                      alt={`Additional photo ${index + 1}`} 
+                      className={styles.photo}
+                      onClick={() => setSelectedImage(img)} 
+                    />
                     <button 
-                        onClick={(e) => {
+                      onClick={(e) => {
                         e.stopPropagation(); 
                         handleRemoveImage(img);
-                        }} 
-                        className={styles.removeButton}
+                      }} 
+                      className={styles.removeButton}
+                      aria-label="Remove photo"
                     >
-                        {/* Replace the text with the icon component */}
-                        <IoClose size={18} strokeWidth={20}/>
+                      <IoClose size={16} />
                     </button>
-                    )}
-                </div>
-                ))
+                  </div>
+                ))}
+                <button 
+                  className={styles.addPhotoButton}
+                  onClick={() => addPhotoInputRef.current?.click()}
+                  aria-label="Add photo"
+                >
+                  <FiPlus size={24} strokeWidth={2} />
+                  <span>Add Photo</span>
+                  <input 
+                    ref={addPhotoInputRef}
+                    type="file" 
+                    onChange={handleAddImage} 
+                    className={styles.fileInput} 
+                    accept="image/*" 
+                  />
+                </button>
+              </div>
             ) : (
-              !isEditing && <p className={styles.noPhotos}>No additional photos yet.</p>
-            )}
-            {isEditing && (
-              <label className={styles.addPhotoButton}>
-                + Add Photo
-                <input type="file" onChange={handleAddImage} className={styles.fileInput} accept="image/*" />
-              </label>
+              <div className={styles.emptyPhotosContainer}>
+                <p className={styles.noPhotos}>No additional photos yet.</p>
+                <div className={`${styles.emptyPhotosAddButton} ${isEditing ? styles.visible : ''}`}>
+                  <button 
+                    className={styles.addPhotoButton}
+                    onClick={() => addPhotoInputRef.current?.click()}
+                    aria-label="Add photo"
+                  >
+                    <FiPlus size={24} strokeWidth={2} />
+                    <span>Add Photo</span>
+                    <input 
+                      ref={addPhotoInputRef}
+                      type="file" 
+                      onChange={handleAddImage} 
+                      className={styles.fileInput} 
+                      accept="image/*" 
+                    />
+                  </button>
+                </div>
+              </div>
             )}
           </div>
         </div>
       </div>
-    </div>
-    {selectedImage && (
+      
+      {selectedImage && (
         <div className={styles.photoModalOverlay} onClick={() => setSelectedImage(null)}>
           <div className={styles.photoModalContent} onClick={(e) => e.stopPropagation()}>
             <img src={selectedImage} alt="Expanded view" className={styles.photoModalImage} />
             <button className={styles.photoModalCloseButton} onClick={() => setSelectedImage(null)}>
-              <IoClose size={30} />
+              <IoClose size={24} />
             </button>
           </div>
         </div>
-    )}
+      )}
     </>
   );
 }

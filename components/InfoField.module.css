@@ -1,0 +1,307 @@
+/* InfoField - Google/Material Design inspired styles */
+
+.infoField {
+  background-color: #f8f9fa;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 14px 16px;
+  transition: all 0.2s ease;
+  min-width: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.infoField:hover {
+  background-color: #f1f3f4;
+}
+
+.infoField:hover .editHint {
+  opacity: 1;
+}
+
+/* Active/Editing state - white background with border */
+.infoFieldActive {
+  background-color: #fff;
+  border-color: #e8e8e8;
+  cursor: default;
+}
+
+.infoFieldActive:hover {
+  background-color: #fff;
+}
+
+.infoFieldActive .editHint {
+  opacity: 0 !important;
+}
+
+.infoFieldLarge {
+  grid-column: span 2;
+}
+
+@media (max-width: 600px) {
+  .infoFieldLarge {
+    grid-column: span 1;
+  }
+}
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  gap: 8px;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #5f6368;
+  flex-shrink: 0;
+}
+
+.editHint {
+  width: 14px;
+  height: 14px;
+  color: #9aa0a6;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
+}
+
+.text {
+  font-size: 15px;
+  color: #202124;
+  line-height: 1.5;
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.textEmpty {
+  color: #9aa0a6;
+  font-style: italic;
+}
+
+/* Input styles - clean, no extra outlines */
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #202124;
+  background-color: #fff;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+  font-family: inherit;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #1a73e8;
+}
+
+.input::placeholder {
+  color: #9aa0a6;
+}
+
+.textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #202124;
+  min-height: 80px;
+  resize: vertical;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+  font-family: inherit;
+  line-height: 1.5;
+  outline: none;
+}
+
+.textarea:focus {
+  border-color: #1a73e8;
+}
+
+.textarea::placeholder {
+  color: #9aa0a6;
+}
+
+/* Radio styles */
+.radioGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #202124;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background-color: #f1f3f4;
+  transition: background-color 0.2s ease;
+}
+
+.radioLabel:hover {
+  background-color: #e8eaed;
+}
+
+.radioInput {
+  width: 16px;
+  height: 16px;
+  accent-color: #1a73e8;
+  cursor: pointer;
+  margin: 0;
+}
+
+.radioText {
+  user-select: none;
+}
+
+/* Dropdown styles */
+.dropdownContainer {
+  position: relative;
+  width: 100%;
+}
+
+.dropdownTrigger {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  transition: border-color 0.2s ease;
+  text-align: left;
+  color: #202124;
+  font-family: inherit;
+  outline: none;
+}
+
+.dropdownTrigger:hover {
+  border-color: #bdc1c6;
+}
+
+.dropdownTrigger:focus {
+  border-color: #1a73e8;
+}
+
+.dropdownTriggerText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  min-width: 0;
+}
+
+.dropdownArrow {
+  width: 18px;
+  height: 18px;
+  color: #5f6368;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.dropdownArrowOpen {
+  transform: rotate(180deg);
+}
+
+/* Portal-based dropdown menu - fixed position so it can overflow anything */
+.dropdownMenuPortal {
+  position: fixed;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.1);
+  z-index: 99999;
+  padding: 6px 0;
+  animation: dropdownFadeIn 0.15s ease;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownItem {
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  background: none;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.15s ease;
+  color: #202124;
+  font-family: inherit;
+}
+
+.dropdownItem:hover {
+  background-color: #f1f3f4;
+}
+
+.dropdownItemSelected {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+}
+
+.dropdownItemSelected:hover {
+  background-color: #d2e3fc;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #5f6368;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: #fff;
+  transition: all 0.15s ease;
+}
+
+.checkbox svg {
+  width: 12px;
+  height: 12px;
+}
+
+.checkboxChecked {
+  border-color: #1a73e8;
+  background-color: #1a73e8;
+  color: #fff;
+}
+
+.checkIcon {
+  width: 18px;
+  height: 18px;
+  color: #1a73e8;
+  margin-left: auto;
+  flex-shrink: 0;
+}
