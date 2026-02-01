@@ -10,8 +10,9 @@ import styles from './page.module.css';
 
 // Options for multi-select fields
 const BLOOM_TIME_OPTIONS = ['Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'];
-const SUNLIGHT_OPTIONS = ['Full', 'Part', 'Shade'];
-const MOISTURE_OPTIONS = ['Moist', 'Med', 'Dry'];
+const SUNLIGHT_OPTIONS = ['Sun', 'Part Sun', 'Part Shade', 'Shade'];
+const MOISTURE_OPTIONS = ['Wet', 'Medium', 'Dry'];
+const NATIVE_RANGE_OPTIONS = ['Northeast US', 'Northern US', 'Southern US', 'Eastern US', 'East Coast US', 'Western US', 'Central US', 'Nativar', 'Europe', 'Asia', 'Africa', 'Other'];
 
 export default function PlantPage() {
   const router = useRouter();
@@ -256,6 +257,17 @@ export default function PlantPage() {
                 type="multiselect"
                 options={MOISTURE_OPTIONS}
                 placeholder="Select moisture..."
+              />
+
+              <InfoField
+                label="Native Range"
+                value={tempPlant.nativeRange}
+                onChange={(val) => setTempPlant({ ...tempPlant, nativeRange: val })}
+                onSave={handleFieldSave}
+                isEditing={isEditing}
+                type="multiselect"
+                options={NATIVE_RANGE_OPTIONS}
+                placeholder="Select native range..."
               />
               
               <InfoField

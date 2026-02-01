@@ -50,7 +50,7 @@ export default function Home() {
   // 5. Update handleAddPlant to be async and use localforage/compression
   const handleAddPlant = async () => {
     if (!newPlantName || !newPlantImage) {
-      setError('Please enter a name and select a valid image.');
+      setError('Please enter a name and valid image.');
       return;
     }
 
