@@ -12,7 +12,7 @@ import styles from './page.module.css';
 const BLOOM_TIME_OPTIONS = ['Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'];
 const SUNLIGHT_OPTIONS = ['Sun', 'Part Sun', 'Part Shade', 'Shade'];
 const MOISTURE_OPTIONS = ['Wet', 'Medium', 'Dry'];
-const NATIVE_RANGE_OPTIONS = ['Northeast US', 'Northern US', 'Southern US', 'Eastern US', 'East Coast US', 'Western US', 'Central US', 'Nativar', 'Europe', 'Asia', 'Africa', 'Other'];
+const NATIVE_RANGE_OPTIONS = ['Northeast US', 'Northern US', 'Midwestern US', 'Southern US', 'Eastern US', 'East Coast US', 'Western US', 'Central US', 'Nativar', 'Europe', 'Asia', 'Africa', 'Other'];
 
 export default function PlantPage() {
   const router = useRouter();
