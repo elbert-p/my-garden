@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { v4 as uuidv4 } from 'uuid';
 import { FiEdit } from 'react-icons/fi';
+import { useRouter } from 'next/navigation';
 import localforage from 'localforage'; // 1. Import localforage
 import imageCompression from 'browser-image-compression'; // 2. Import compression library
 import styles from './page.module.css';
@@ -11,8 +12,10 @@ export default function Home() {
   const [plants, setPlants] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [newPlantName, setNewPlantName] = useState('');
+  const [newScientificName, setNewScientificName] = useState('');
   const [newPlantImage, setNewPlantImage] = useState(null);
   const [error, setError] = useState('');
+  const router = useRouter();
 
   // 3. Update useEffect to be async and use localforage
   useEffect(() => {
@@ -49,7 +52,7 @@ export default function Home() {
 
   // 5. Update handleAddPlant to be async and use localforage/compression
   const handleAddPlant = async () => {
-    if (!newPlantName || !newPlantImage) {
+    if ((!newPlantName && !newScientificName) || !newPlantImage) {
       setError('Please enter a name and valid image.');
       return;
     }
@@ -58,7 +61,7 @@ export default function Home() {
       id: uuidv4(),
       commonName: newPlantName,
       mainImage: newPlantImage,
-      scientificName: '',
+      scientificName: newScientificName,
       datePlanted: '',
       notes: '',
       images: [],
@@ -69,6 +72,8 @@ export default function Home() {
       await localforage.setItem('plants', updatedPlants); // Use localforage
       setPlants(updatedPlants);
       handleCancel(); // Use handleCancel to reset the form
+      
+      router.push(`/plants/${newPlant.id}`);
     } catch (e) {
       setError('An error occurred while saving the plant.');
       console.error("Save error:", e);
@@ -78,6 +83,7 @@ export default function Home() {
   const handleCancel = () => {
     setShowModal(false);
     setNewPlantName('');
+    setNewScientificName('')
     setNewPlantImage(null);
     setError('');
   };
@@ -113,7 +119,11 @@ export default function Home() {
               <div className={styles.imageContainer}>
                 <img src={plant.mainImage} alt={plant.commonName} className={styles.image} />
               </div>
-              <span className={styles.name}>{plant.commonName}</span>
+              <span className={styles.name} style={{
+                fontStyle: plant.commonName ? "normal" : "italic"
+              }}>
+              {plant.commonName || plant.scientificName}
+              </span>
             </Link>
           ))
         ) : (
@@ -128,9 +138,17 @@ export default function Home() {
             {error && <p className={styles.errorText}>{error}</p>}
             <input
               type="text"
-              placeholder="Common Name"
+              placeholder="Common name"
               value={newPlantName}
               onChange={(e) => setNewPlantName(e.target.value)}
+              className={styles.input}
+            />
+            
+            <input
+              type="text"
+              placeholder="Enter scientific name for autofill"
+              value={newScientificName}
+              onChange={(e) => setNewScientificName(e.target.value)}
               className={styles.input}
             />
             

@@ -1,0 +1,5212 @@
+{
+  "This spreadsheet is being compiled by Heidi Dollard and Amy Meltzer of MA Pollinator Network.  For questions or suggestions, contact Amy Meltzer ameltzerma@comcast.net": {
+    "Latin name": "This spreadsheet is being compiled by Heidi Dollard and Amy Meltzer of MA Pollinator Network.  For questions or suggestions, contact Amy Meltzer ameltzerma@comcast.net",
+    "Common name": "",
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ]
+  },
+  "PERENNIALS": {
+    "Latin name": "PERENNIALS",
+    "Common name": "",
+    "Bloom time": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov"
+    ],
+    "Height": "in feet",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Achillea millefolium": {
+    "Latin name": "Achillea millefolium",
+    "Common name": "Common yarrow",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "1-3",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Acorus americanus": {
+    "Latin name": "Acorus americanus",
+    "Common name": "Sweet flag",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Actaea pachypoda": {
+    "Latin name": "Actaea pachypoda",
+    "Common name": "White baneberry; Doll's eyes",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "1-2'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Actaea (Cimifuga) racemosa": {
+    "Latin name": "Actaea (Cimifuga) racemosa",
+    "Common name": "Black cohosh",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3-7'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Actaea rubra": {
+    "Latin name": "Actaea rubra",
+    "Common name": "Red baneberry",
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Actinomeris alternifolia": {
+    "Latin name": "Actinomeris alternifolia",
+    "Common name": "Wingstem",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "8'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Agastache foeniculum": {
+    "Latin name": "Agastache foeniculum",
+    "Common name": "Anise hyssop",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2-4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Agastache scrophulariifolia": {
+    "Latin name": "Agastache scrophulariifolia",
+    "Common name": "Purple giant hyssop",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "6'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Ageratina altissima": {
+    "Latin name": "Ageratina altissima",
+    "Common name": "White snakeroot",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Agrimonia gryposepala": {
+    "Latin name": "Agrimonia gryposepala",
+    "Common name": "Tall hairy agrimony",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "5 '",
+    "Sunlight": [
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Agrimonia striata": {
+    "Latin name": "Agrimonia striata",
+    "Common name": "Roadside agrimony",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "6'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Allium cernuum": {
+    "Latin name": "Allium cernuum",
+    "Common name": "Nodding onion",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "1.5",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Allium stellatum": {
+    "Latin name": "Allium stellatum",
+    "Common name": "Prairie Onion",
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Height": "1.5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Allium tricoccum": {
+    "Latin name": "Allium tricoccum",
+    "Common name": "Wild leek",
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "0.75",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Amorpha canescens": {
+    "Latin name": "Amorpha canescens",
+    "Common name": "Leadplant",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Amorpha nana": {
+    "Latin name": "Amorpha nana",
+    "Common name": "Fragrant false indigo",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "2 '",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Amsonia hubrichtii": {
+    "Latin name": "Amsonia hubrichtii",
+    "Common name": "Thread-leaf bluestar",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Amsonia tabernaemontana": {
+    "Latin name": "Amsonia tabernaemontana",
+    "Common name": "Eastern bluestar",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Anaphalis  margaritacea": {
+    "Latin name": "Anaphalis  margaritacea",
+    "Common name": "Pearly everlasting",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "1-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Anemone canadensis": {
+    "Latin name": "Anemone canadensis",
+    "Common name": "Canada anemone",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "1'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Anemone cylindrica": {
+    "Latin name": "Anemone cylindrica",
+    "Common name": "Thimbleweed",
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Anemone virginiana": {
+    "Latin name": "Anemone virginiana",
+    "Common name": "Tall thimbleweed",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Angelica atropurpurea": {
+    "Latin name": "Angelica atropurpurea",
+    "Common name": "Purple stem angelica",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "3-8'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Antennaria neglecta": {
+    "Latin name": "Antennaria neglecta",
+    "Common name": "Prairie pussytoes",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": "0.25",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Antennaria parlinii": {
+    "Latin name": "Antennaria parlinii",
+    "Common name": "Ladies' tobacco",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": ".5-1",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Antennaria plantaginifolia": {
+    "Latin name": "Antennaria plantaginifolia",
+    "Common name": "Pussytoes",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": "0.25",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Aquilegia canadensis": {
+    "Latin name": "Aquilegia canadensis",
+    "Common name": "Wild columbine",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Arnoglossum reniforme": {
+    "Latin name": "Arnoglossum reniforme",
+    "Common name": "Great Indian Plantain",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3-9'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Aralia racemosa": {
+    "Latin name": "Aralia racemosa",
+    "Common name": "Spikenard",
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Height": "2-4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Arisaema tryphyllum": {
+    "Latin name": "Arisaema tryphyllum",
+    "Common name": "Jack in the pulpit",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Aruncus dioicus": {
+    "Latin name": "Aruncus dioicus",
+    "Common name": "Goat's beard",
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "4-6'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Asarum canadense": {
+    "Latin name": "Asarum canadense",
+    "Common name": "Wild ginger",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": ".5'",
+    "Sunlight": [
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Asclepias exaltata": {
+    "Latin name": "Asclepias exaltata",
+    "Common name": "Poke Milkweed",
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "1.5'-4.5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Asclepias incarnata": {
+    "Latin name": "Asclepias incarnata",
+    "Common name": "Rose milkweed",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "2-4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Asclepias sullivantii": {
+    "Latin name": "Asclepias sullivantii",
+    "Common name": "Prairie milkweed",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Asclepias syriaca": {
+    "Latin name": "Asclepias syriaca",
+    "Common name": "Common milkweed",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "3 - 5'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Asclepias tuberosa": {
+    "Latin name": "Asclepias tuberosa",
+    "Common name": "Butterflyweed",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Asclepias verticillata": {
+    "Latin name": "Asclepias verticillata",
+    "Common name": "Whorled milkweed",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Astralagus canadensis": {
+    "Latin name": "Astralagus canadensis",
+    "Common name": "Canadian milkvetch",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "1-4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Baptisia alba": {
+    "Latin name": "Baptisia alba",
+    "Common name": "White wild indigo",
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Baptisia australis": {
+    "Latin name": "Baptisia australis",
+    "Common name": "Blue false wild indigo",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Baptisia tinctoria": {
+    "Latin name": "Baptisia tinctoria",
+    "Common name": "Yellow wild indigo",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Blephilia ciliata": {
+    "Latin name": "Blephilia ciliata",
+    "Common name": "Downy wood mint",
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "1'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Blephilia hirsuta": {
+    "Latin name": "Blephilia hirsuta",
+    "Common name": "Hairy wood mint",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Boltonia asteroides": {
+    "Latin name": "Boltonia asteroides",
+    "Common name": "False Aster",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Callirhoe bushii": {
+    "Latin name": "Callirhoe bushii",
+    "Common name": "Bush's Poppy Mallow",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Caltha palustris": {
+    "Latin name": "Caltha palustris",
+    "Common name": "Marsh Marigold",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": "1-1.5",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Camassia scilloides": {
+    "Latin name": "Camassia scilloides",
+    "Common name": "Wild hyacinth",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "2 '",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Campanula americana": {
+    "Latin name": "Campanula americana",
+    "Common name": "American Bellflower",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "2-6",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Campanula rotundifolia": {
+    "Latin name": "Campanula rotundifolia",
+    "Common name": "American Harebell",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "1'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Cardamine concatenata": {
+    "Latin name": "Cardamine concatenata",
+    "Common name": "Toothwort",
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Height": "1 ft",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Caulophyllum thalictroides": {
+    "Latin name": "Caulophyllum thalictroides",
+    "Common name": "Blue cohosh",
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Chamaecrista fasciculata": {
+    "Latin name": "Chamaecrista fasciculata",
+    "Common name": "Partridge Pea",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Chamaenerion augustifolium": {
+    "Latin name": "Chamaenerion augustifolium",
+    "Common name": "Fireweed",
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Chamaepericlymenum canadense": {
+    "Latin name": "Chamaepericlymenum canadense",
+    "Common name": "Bunchberry",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "2-5 \"",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Chelone glabra": {
+    "Latin name": "Chelone glabra",
+    "Common name": "white turtlehead",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "1.5 - 2.5",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Chelone lyonii": {
+    "Latin name": "Chelone lyonii",
+    "Common name": "Pink turtlehead",
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Height": "2-3 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Chrysogonum virginianum": {
+    "Latin name": "Chrysogonum virginianum",
+    "Common name": "Green and gold",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": ".75 - 1'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Cimifuga racemosa": {
+    "Latin name": "Cimifuga racemosa",
+    "Common name": "Black cohosh",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3-7'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Cirsium discolor": {
+    "Latin name": "Cirsium discolor",
+    "Common name": "Pasture thistle",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "6'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Cirsium muticum": {
+    "Latin name": "Cirsium muticum",
+    "Common name": "Swamp Thistle",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "7'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Conoclinium coelstinum": {
+    "Latin name": "Conoclinium coelstinum",
+    "Common name": "Mistflower",
+    "Bloom time": [
+      "Sep",
+      "Oct"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Coreopsis lanceolata": {
+    "Latin name": "Coreopsis lanceolata",
+    "Common name": "Lanceleaf coreopsis",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Coreopsis palmata": {
+    "Latin name": "Coreopsis palmata",
+    "Common name": "Prairie Coreopsis",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Coreopsis rosea": {
+    "Latin name": "Coreopsis rosea",
+    "Common name": "Pink tickseed",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "1-2'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Coreopsis tripteris": {
+    "Latin name": "Coreopsis tripteris",
+    "Common name": "Tall coreopsis",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "7'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Coreopsis verticillata": {
+    "Latin name": "Coreopsis verticillata",
+    "Common name": "Thread leaf coreopsis",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "1.5' 2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Cornus canadensis": {
+    "Latin name": "Cornus canadensis",
+    "Common name": "Bunchberry",
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Corydalis sempervirens": {
+    "Latin name": "Corydalis sempervirens",
+    "Common name": "Rock Harlequin",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Cryptotaenia canadensis": {
+    "Latin name": "Cryptotaenia canadensis",
+    "Common name": "Honewort",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Dalea purpurea": {
+    "Latin name": "Dalea purpurea",
+    "Common name": "Purple prairie clover",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "1-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Delphinium exaltatum": {
+    "Latin name": "Delphinium exaltatum",
+    "Common name": "Tall larkspur",
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Height": "3-5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Desmanthus illinisoensis": {
+    "Latin name": "Desmanthus illinisoensis",
+    "Common name": "Illinois Bundleflower",
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Height": "5'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Desmodium canandense": {
+    "Latin name": "Desmodium canandense",
+    "Common name": "Showy tick trefoil",
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Height": "5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Diarrhena obovata": {
+    "Latin name": "Diarrhena obovata",
+    "Common name": "",
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Dicentra cucullaria": {
+    "Latin name": "Dicentra cucullaria",
+    "Common name": "Dutchman's breeches",
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Height": "1'",
+    "Sunlight": [
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Dicentra eximia": {
+    "Latin name": "Dicentra eximia",
+    "Common name": "Wild bleedingheart",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "1-1.5'",
+    "Sunlight": [
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Dodecatheon meadia": {
+    "Latin name": "Dodecatheon meadia",
+    "Common name": "Shooting star",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": "1'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Doellingeria umbellata": {
+    "Latin name": "Doellingeria umbellata",
+    "Common name": "Flat topped aster",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Echinacea angustifolia": {
+    "Latin name": "Echinacea angustifolia",
+    "Common name": "Narrow-leaved Coneflower",
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Echinacea pallida": {
+    "Latin name": "Echinacea pallida",
+    "Common name": "Pale Purple Coneflower",
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Echinacea paradoxa": {
+    "Latin name": "Echinacea paradoxa",
+    "Common name": "Bush's Coneflower",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Echinacea purpurea": {
+    "Latin name": "Echinacea purpurea",
+    "Common name": "Purple coneflower",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2-4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Epilobium glandulosum": {
+    "Latin name": "Epilobium glandulosum",
+    "Common name": "Northern willow herb",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Erigeron pulchellus": {
+    "Latin name": "Erigeron pulchellus",
+    "Common name": "Robin's plantain",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "1'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Eryngium yuccifolium": {
+    "Latin name": "Eryngium yuccifolium",
+    "Common name": "Rattlesnake master",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3-4'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Eupatorium altissimum": {
+    "Latin name": "Eupatorium altissimum",
+    "Common name": "Tall boneset",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Eupatorium fistulosum": {
+    "Latin name": "Eupatorium fistulosum",
+    "Common name": "Hollow Joe-pye weed",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "6'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Eupatorium hyssopifolium": {
+    "Latin name": "Eupatorium hyssopifolium",
+    "Common name": "Hyssop leaved boneset",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "1-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Eupatorium perfoliatum": {
+    "Latin name": "Eupatorium perfoliatum",
+    "Common name": "Boneset",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Eupatorium serotinum": {
+    "Latin name": "Eupatorium serotinum",
+    "Common name": "Late boneset",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Eurybia divaricata": {
+    "Latin name": "Eurybia divaricata",
+    "Common name": "White wood aster",
+    "Bloom time": [
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Eurybia macrophylla": {
+    "Latin name": "Eurybia macrophylla",
+    "Common name": "Bigleaf aster",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "1-3'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Eurybia shreberi": {
+    "Latin name": "Eurybia shreberi",
+    "Common name": "Shreber's Wood Aster",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "1-2'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Eurybia spectabilis": {
+    "Latin name": "Eurybia spectabilis",
+    "Common name": "Blue wood aster",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "1-2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Euthamia graminifolia": {
+    "Latin name": "Euthamia graminifolia",
+    "Common name": "Grass leaved goldenrod",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3-4'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Eutrochium dubium": {
+    "Latin name": "Eutrochium dubium",
+    "Common name": "Coastal Plain Joe Pye Weed",
+    "Bloom time": [
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3-4'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Eutrochium fistulosum": {
+    "Latin name": "Eutrochium fistulosum",
+    "Common name": "Hollow Joe-Pye weed",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3-8'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Eutrochium  maculatum": {
+    "Latin name": "Eutrochium  maculatum",
+    "Common name": "Joe Pye weed",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3-7'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Eutrochium purpureum": {
+    "Latin name": "Eutrochium purpureum",
+    "Common name": "Sweet Joe Pye weed",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3-8'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Filipendula rubra": {
+    "Latin name": "Filipendula rubra",
+    "Common name": "Queen of the Prairie",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "6-7'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Fragaria virginiana": {
+    "Latin name": "Fragaria virginiana",
+    "Common name": "Wild strawberry",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": ".5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Fragaria vesca": {
+    "Latin name": "Fragaria vesca",
+    "Common name": "Woodland strawberry",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": ".25 - .5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Gallardia grandifolia": {
+    "Latin name": "Gallardia grandifolia",
+    "Common name": "Blanket flower",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Gaura longiflora": {
+    "Latin name": "Gaura longiflora",
+    "Common name": "Large-flowered Gaura",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "6'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Gentiana andrewsii": {
+    "Latin name": "Gentiana andrewsii",
+    "Common name": "Bottle gentian",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Gentiana clausa": {
+    "Latin name": "Gentiana clausa",
+    "Common name": "Closed Bottle Gentian",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": ".75-1.5'",
+    "Sunlight": [
+      "Part"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Gentianopsis crinita": {
+    "Latin name": "Gentianopsis crinita",
+    "Common name": "Fringed Gentian",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "1-3'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Geranium maculatum": {
+    "Latin name": "Geranium maculatum",
+    "Common name": "Wild geranium",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "1-1.5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Geum fragroides": {
+    "Latin name": "Geum fragroides",
+    "Common name": "Appalachian barren strawberry",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": ".25 - .5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Geum rivale": {
+    "Latin name": "Geum rivale",
+    "Common name": "Purple avens",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "2.5'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Geum triflorum": {
+    "Latin name": "Geum triflorum",
+    "Common name": "Prairie smoke",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": "1-1.5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Gillenia trifoliata": {
+    "Latin name": "Gillenia trifoliata",
+    "Common name": "Bowman's Root",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Glycyrrhiza lepidota": {
+    "Latin name": "Glycyrrhiza lepidota",
+    "Common name": "American Wild Licorice",
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Helenium autumnale": {
+    "Latin name": "Helenium autumnale",
+    "Common name": "Sneezeweed",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "3-5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Helenium flexuosum": {
+    "Latin name": "Helenium flexuosum",
+    "Common name": "Purple-Headed Sneezeweed",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "1-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Helianthus angustifolius": {
+    "Latin name": "Helianthus angustifolius",
+    "Common name": "Swamp sunflower",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "8'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Helianthus divaricata": {
+    "Latin name": "Helianthus divaricata",
+    "Common name": "Woodland sunflower",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2-4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Helianthus grosseserratus": {
+    "Latin name": "Helianthus grosseserratus",
+    "Common name": "Sawtooth Sunflower",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "8'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Helianthus maximiliani": {
+    "Latin name": "Helianthus maximiliani",
+    "Common name": "Maximilian sunflower",
+    "Bloom time": [
+      "Aug",
+      "Sep"
+    ],
+    "Height": "7'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Helianthus mollis": {
+    "Latin name": "Helianthus mollis",
+    "Common name": "Downy sunflower",
+    "Bloom time": [
+      "Aug",
+      "Sep"
+    ],
+    "Height": "5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Helianthus occidentalis": {
+    "Latin name": "Helianthus occidentalis",
+    "Common name": "Western sunflower",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Heliopsis helianthoides": {
+    "Latin name": "Heliopsis helianthoides",
+    "Common name": "Oxeye sunflower",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3-6'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Hepatica acutiloba": {
+    "Latin name": "Hepatica acutiloba",
+    "Common name": "Sharp-lobed hepatica",
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Height": ".75'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Heuchera americana": {
+    "Latin name": "Heuchera americana",
+    "Common name": "American alumroot",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Hibiscus laevis": {
+    "Latin name": "Hibiscus laevis",
+    "Common name": "Smooth rose mallow",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Hibiscus moscheutos": {
+    "Latin name": "Hibiscus moscheutos",
+    "Common name": "Swamp rose mallow",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Houstonia caerulea": {
+    "Latin name": "Houstonia caerulea",
+    "Common name": "Bluets",
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": ".25'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Hydrophyllum virginianum": {
+    "Latin name": "Hydrophyllum virginianum",
+    "Common name": "Virginia waterleaf",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Hypericum ascyron (pyramidatum)": {
+    "Latin name": "Hypericum ascyron (pyramidatum)",
+    "Common name": "Great St. Johnswort",
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Height": "6'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Hypericum canadense": {
+    "Latin name": "Hypericum canadense",
+    "Common name": "",
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Hypericum majus": {
+    "Latin name": "Hypericum majus",
+    "Common name": "Greater Canadian St. Johnswort",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Hypericum punctatum": {
+    "Latin name": "Hypericum punctatum",
+    "Common name": "Spotted St. Johnswort",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Hypericum virginicum": {
+    "Latin name": "Hypericum virginicum",
+    "Common name": "Marsh St. Johnswort",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Impatiens capensis": {
+    "Latin name": "Impatiens capensis",
+    "Common name": "Jewelweed",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Ionactis linariifolia": {
+    "Latin name": "Ionactis linariifolia",
+    "Common name": "Stiff leaf aster",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "1-1.5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Iris cristata": {
+    "Latin name": "Iris cristata",
+    "Common name": "Crested iris",
+    "Bloom time": [
+      "May"
+    ],
+    "Height": ".25 - .75'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Iris versicolor": {
+    "Latin name": "Iris versicolor",
+    "Common name": "Blue flag iris",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "1-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Lespedeza capitata": {
+    "Latin name": "Lespedeza capitata",
+    "Common name": "Round headed bush clover",
+    "Bloom time": [
+      "Aug",
+      "Sep"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Lespedeza virginica": {
+    "Latin name": "Lespedeza virginica",
+    "Common name": "Slender Bush Clover",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Liatris aspera": {
+    "Latin name": "Liatris aspera",
+    "Common name": "Button blazing star",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Liatris ligulastylis": {
+    "Latin name": "Liatris ligulastylis",
+    "Common name": "Meadow blazing star",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "3-5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Liatris microcephala": {
+    "Latin name": "Liatris microcephala",
+    "Common name": "",
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Liatris novae anglia": {
+    "Latin name": "Liatris novae anglia",
+    "Common name": "Northern Blazing Star",
+    "Bloom time": [
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Liatris scariosa var. nieuwlandii": {
+    "Latin name": "Liatris scariosa var. nieuwlandii",
+    "Common name": "Northern Blazing Star",
+    "Bloom time": [
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Liatris pycnostachya": {
+    "Latin name": "Liatris pycnostachya",
+    "Common name": "Prairie Blazing Star",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Liatris spicata": {
+    "Latin name": "Liatris spicata",
+    "Common name": "Blazing star",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2-5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Lilum canadense": {
+    "Latin name": "Lilum canadense",
+    "Common name": "Canada lily",
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Height": "3-5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Lobelia cardinalis": {
+    "Latin name": "Lobelia cardinalis",
+    "Common name": "Cardinal flower",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Lobelia siphilitica": {
+    "Latin name": "Lobelia siphilitica",
+    "Common name": "Great blue lobelia",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Ludwigia alternifolia": {
+    "Latin name": "Ludwigia alternifolia",
+    "Common name": "Seedbox",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Lupinus perennis": {
+    "Latin name": "Lupinus perennis",
+    "Common name": "Sundial Lupine",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Lycopus uniflorus": {
+    "Latin name": "Lycopus uniflorus",
+    "Common name": "Northern bugleweed",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "1 - 2.5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Lythrum alatum": {
+    "Latin name": "Lythrum alatum",
+    "Common name": "Winged loosestrife",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Maianthemum canadense": {
+    "Latin name": "Maianthemum canadense",
+    "Common name": "Canada mayflower",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": ".75'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Maianthemum racemosum": {
+    "Latin name": "Maianthemum racemosum",
+    "Common name": "Solomon's plume",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun",
+      "Sep",
+      "Oct",
+      "Nov"
+    ],
+    "Height": "",
+    "Sunlight": [
+      "Full",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Maianthemum stellatum": {
+    "Latin name": "Maianthemum stellatum",
+    "Common name": "Starry Solomon's plume",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": "1-2'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Meehania cordata": {
+    "Latin name": "Meehania cordata",
+    "Common name": "",
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Mentha arvensis": {
+    "Latin name": "Mentha arvensis",
+    "Common name": "Wild mint",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Mentha canadensis": {
+    "Latin name": "Mentha canadensis",
+    "Common name": "American wild mint",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "1 -1.5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Mertensia virginica": {
+    "Latin name": "Mertensia virginica",
+    "Common name": "Virginia bluebells",
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Mimulus alatus": {
+    "Latin name": "Mimulus alatus",
+    "Common name": "Winged Monkey Flower",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "1 -3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Mimulus ringens": {
+    "Latin name": "Mimulus ringens",
+    "Common name": "Monkey flower",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2 '",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Mitella diphylla": {
+    "Latin name": "Mitella diphylla",
+    "Common name": "Bishop's cap",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": "1'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Mitchella repens": {
+    "Latin name": "Mitchella repens",
+    "Common name": "Partridge-berry",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "1-2\"",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Monarda bradburiana": {
+    "Latin name": "Monarda bradburiana",
+    "Common name": "Bradbury's beebalm",
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Monarda didyma": {
+    "Latin name": "Monarda didyma",
+    "Common name": "Scarlet bee balm",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2-4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Monarda didyma 'Colrain red'": {
+    "Latin name": "Monarda didyma 'Colrain red'",
+    "Common name": "",
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Monarda fistulosa": {
+    "Latin name": "Monarda fistulosa",
+    "Common name": "Wild bee‐balm",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Monarda punctata": {
+    "Latin name": "Monarda punctata",
+    "Common name": "Spotted Bee Balm",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Oclemena acuminata": {
+    "Latin name": "Oclemena acuminata",
+    "Common name": "Sharp leaved aster",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Oenothera fruticosa": {
+    "Latin name": "Oenothera fruticosa",
+    "Common name": "Narrow leaf Evening primrose",
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "1-2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Oenethera pilosella": {
+    "Latin name": "Oenethera pilosella",
+    "Common name": "Prairie sundrops",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Oligoneuron album": {
+    "Latin name": "Oligoneuron album",
+    "Common name": "Upland white goldenrod",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "1'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Oxalis violacea": {
+    "Latin name": "Oxalis violacea",
+    "Common name": "Purple wood sorrel",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": ".25'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Pachysandra procumbens": {
+    "Latin name": "Pachysandra procumbens",
+    "Common name": "Allegheny spurge",
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Height": ".5 - 1'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Packera aurea": {
+    "Latin name": "Packera aurea",
+    "Common name": "Golden ragwort",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Packera obovata": {
+    "Latin name": "Packera obovata",
+    "Common name": "Running groundsel",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": ".25 - .5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Parthenium integrifolium": {
+    "Latin name": "Parthenium integrifolium",
+    "Common name": "Wild Quinine",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Pedicularis canadensis": {
+    "Latin name": "Pedicularis canadensis",
+    "Common name": "Canadian wood-betony",
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Height": "1'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Penstemon calycosus": {
+    "Latin name": "Penstemon calycosus",
+    "Common name": "Calico Beardtongue",
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Penstemon cobea": {
+    "Latin name": "Penstemon cobea",
+    "Common name": "Showy beardtongue",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "2 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Penstemon digitalis": {
+    "Latin name": "Penstemon digitalis",
+    "Common name": "Foxglove beardtongue",
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "3 - 4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Penstemon grandiflorus": {
+    "Latin name": "Penstemon grandiflorus",
+    "Common name": "Large flowered beardtongue",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "2 '",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Penstemon hirsutus": {
+    "Latin name": "Penstemon hirsutus",
+    "Common name": "Northeastern beardtongue",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "1-2'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Penstemon laevigatus": {
+    "Latin name": "Penstemon laevigatus",
+    "Common name": "Eastern beardtongue",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Penstemon smallii": {
+    "Latin name": "Penstemon smallii",
+    "Common name": "Small's Penstemon",
+    "Bloom time": [
+      "Jun"
+    ],
+    "Height": "1-2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Phlox divaricata": {
+    "Latin name": "Phlox divaricata",
+    "Common name": "Wild blue phlox",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": "12\"",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Phlox maculata": {
+    "Latin name": "Phlox maculata",
+    "Common name": "Wild Sweet William",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Phlox pilosa": {
+    "Latin name": "Phlox pilosa",
+    "Common name": "Prairie phlox",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Phlox stolonlifera": {
+    "Latin name": "Phlox stolonlifera",
+    "Common name": "Woodland phlox",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": ".75 - 1'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Phlox subulata": {
+    "Latin name": "Phlox subulata",
+    "Common name": "Moss phlox",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": ".25 - .75",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Physostegia virginiana": {
+    "Latin name": "Physostegia virginiana",
+    "Common name": "Obedient plant",
+    "Bloom time": [
+      "Aug",
+      "Sep"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Podophyllum peltatum": {
+    "Latin name": "Podophyllum peltatum",
+    "Common name": "May apple",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "1'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Polemonium reptans": {
+    "Latin name": "Polemonium reptans",
+    "Common name": "Jacobs ladder",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": "1-1.5'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Polygonatum biflorum": {
+    "Latin name": "Polygonatum biflorum",
+    "Common name": "Solomon's seal",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Pontederia cordata": {
+    "Latin name": "Pontederia cordata",
+    "Common name": "Pickerelweed",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "1-4'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Porteranthus stipulatus": {
+    "Latin name": "Porteranthus stipulatus",
+    "Common name": "American Ipecac",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Prenanthes alba": {
+    "Latin name": "Prenanthes alba",
+    "Common name": "White Lettuce, Lion's Foot",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Prunella vulgaris": {
+    "Latin name": "Prunella vulgaris",
+    "Common name": "Self-heal, Heal All",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": ".5-1'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Pycnanthemum incanum": {
+    "Latin name": "Pycnanthemum incanum",
+    "Common name": "Hoary Mountain mint",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Pycnanthemum muticum": {
+    "Latin name": "Pycnanthemum muticum",
+    "Common name": "Broad leaf mountain mint",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2-4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Pycnanthemum tenuifolium": {
+    "Latin name": "Pycnanthemum tenuifolium",
+    "Common name": "Narrow leaf mountain mint",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": ".75- 1.25'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Pycnanthemum verticillatum": {
+    "Latin name": "Pycnanthemum verticillatum",
+    "Common name": "Whorled mountain mint",
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Height": "1-1.5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Pycnanthemum vert. pilosum": {
+    "Latin name": "Pycnanthemum vert. pilosum",
+    "Common name": "Hairy mountain mint",
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Pyncnanthemum virginianum": {
+    "Latin name": "Pyncnanthemum virginianum",
+    "Common name": "Virginia mountain mint",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Ratibida columnifera": {
+    "Latin name": "Ratibida columnifera",
+    "Common name": "Long-headed Prairie Coneflower",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Ratibida pinnata": {
+    "Latin name": "Ratibida pinnata",
+    "Common name": "Yellow coneflower",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3-5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Rhexia virginica": {
+    "Latin name": "Rhexia virginica",
+    "Common name": "Virginia Meadow Beauty",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "1'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Rubus hispidus": {
+    "Latin name": "Rubus hispidus",
+    "Common name": "Creeping dewberry",
+    "Bloom time": [
+      "Aug",
+      "Sep"
+    ],
+    "Height": ".25'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Rudbeckia fulgida": {
+    "Latin name": "Rudbeckia fulgida",
+    "Common name": "Orange cone flower",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "1.5 - 3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Rudbeckia hirta": {
+    "Latin name": "Rudbeckia hirta",
+    "Common name": "Black-eyed susan",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Rudbeckia laciniata": {
+    "Latin name": "Rudbeckia laciniata",
+    "Common name": "Green coneflower",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "3-4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Rudbeckia triloba": {
+    "Latin name": "Rudbeckia triloba",
+    "Common name": "Brown eyed susan",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Ruellia humilis": {
+    "Latin name": "Ruellia humilis",
+    "Common name": "Wild petunia",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "1'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Rumex altissimus": {
+    "Latin name": "Rumex altissimus",
+    "Common name": "Pale Dock",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Rumex orbiculatus": {
+    "Latin name": "Rumex orbiculatus",
+    "Common name": "Greater Water Dock",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Sagittaria latifolia": {
+    "Latin name": "Sagittaria latifolia",
+    "Common name": "Broadleaf Arrowhead",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Salvia azurea": {
+    "Latin name": "Salvia azurea",
+    "Common name": "Blue sage",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "3-5 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Salvia lyrata": {
+    "Latin name": "Salvia lyrata",
+    "Common name": "Lyre-leaf Sage",
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Sanguinaria canadensis": {
+    "Latin name": "Sanguinaria canadensis",
+    "Common name": "Bloodroot",
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Height": "6- 12\"",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Sanguisorba canadensis": {
+    "Latin name": "Sanguisorba canadensis",
+    "Common name": "American Burnet",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "6'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Scrophularia lanceolata": {
+    "Latin name": "Scrophularia lanceolata",
+    "Common name": "Lance leafed figwort",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "5'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Scutellaria incana": {
+    "Latin name": "Scutellaria incana",
+    "Common name": "Downy skullcap",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Scutelleria galericulata": {
+    "Latin name": "Scutelleria galericulata",
+    "Common name": "",
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Scutellaria lateriflora": {
+    "Latin name": "Scutellaria lateriflora",
+    "Common name": "Mad dog skullcap",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Sedum pulchellum": {
+    "Latin name": "Sedum pulchellum",
+    "Common name": "Widow's Cross",
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Sedum ternatum": {
+    "Latin name": "Sedum ternatum",
+    "Common name": "Woodland stonecrop",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": "8\"",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Senna hebecarpa": {
+    "Latin name": "Senna hebecarpa",
+    "Common name": "Wild senna",
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Height": "5 '",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Sibbaldiopsis tridentata": {
+    "Latin name": "Sibbaldiopsis tridentata",
+    "Common name": "Three tooth cinqufoil",
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": ".25 - .5'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Dry"
+    ]
+  },
+  "Silene regia": {
+    "Latin name": "Silene regia",
+    "Common name": "Royal catchfly",
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Silene virginica": {
+    "Latin name": "Silene virginica",
+    "Common name": "Fire pink",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Silphium perfoliatum": {
+    "Latin name": "Silphium perfoliatum",
+    "Common name": "Cup plant",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "6'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Sisyrinchium albidum": {
+    "Latin name": "Sisyrinchium albidum",
+    "Common name": "Blue eyed grass",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "0.5",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Sisyrinchium augustifolium": {
+    "Latin name": "Sisyrinchium augustifolium",
+    "Common name": "Blue eyed grass",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": ".5-1.5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Sisyrinchium montanum": {
+    "Latin name": "Sisyrinchium montanum",
+    "Common name": "",
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Solidago altissima": {
+    "Latin name": "Solidago altissima",
+    "Common name": "Tall goldenrod",
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Solidago arguta": {
+    "Latin name": "Solidago arguta",
+    "Common name": "Forest goldenrod",
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Solidago bicolor": {
+    "Latin name": "Solidago bicolor",
+    "Common name": "White goldenrod",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Solidago caesia": {
+    "Latin name": "Solidago caesia",
+    "Common name": "Blue stemmed goldenrod",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "3 ft",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Solidago canadensis": {
+    "Latin name": "Solidago canadensis",
+    "Common name": "Canada goldenrod",
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Solidago flexicaulis": {
+    "Latin name": "Solidago flexicaulis",
+    "Common name": "Zig zag goldenrod",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "3 ft",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Solidago gigantea": {
+    "Latin name": "Solidago gigantea",
+    "Common name": "Late goldenrod",
+    "Bloom time": [
+      "Aug",
+      "Sep"
+    ],
+    "Height": "6'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Solidago juncea": {
+    "Latin name": "Solidago juncea",
+    "Common name": "Early goldenrod",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Solidago nemoralis": {
+    "Latin name": "Solidago nemoralis",
+    "Common name": "Gray goldenrod",
+    "Bloom time": [
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2 '",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Solidago odora": {
+    "Latin name": "Solidago odora",
+    "Common name": "Sweet goldenrod",
+    "Bloom time": [
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3 '",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Solidago patula": {
+    "Latin name": "Solidago patula",
+    "Common name": "Rough-leaved Goldenrod",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Solidago ptarmacoides": {
+    "Latin name": "Solidago ptarmacoides",
+    "Common name": "see Oligoneuron album",
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Dry"
+    ]
+  },
+  "Solidago puberula": {
+    "Latin name": "Solidago puberula",
+    "Common name": "Downy goldenrod",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "1 - 3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Solidago rigidum": {
+    "Latin name": "Solidago rigidum",
+    "Common name": "Stiff goldenrod",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Solidago rugosa": {
+    "Latin name": "Solidago rugosa",
+    "Common name": "Rough goldenrod",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Solidago sempervirens": {
+    "Latin name": "Solidago sempervirens",
+    "Common name": "Seaside goldenrod",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "2 - 3.5'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Dry"
+    ]
+  },
+  "Solidago speciosa": {
+    "Latin name": "Solidago speciosa",
+    "Common name": "Showy goldenrod",
+    "Bloom time": [
+      "Sep",
+      "Oct",
+      "Nov"
+    ],
+    "Height": "5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Solidago uliginosa": {
+    "Latin name": "Solidago uliginosa",
+    "Common name": "Bog goldenrod",
+    "Bloom time": [
+      "Aug",
+      "Sep"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Stylophorum diphyllum": {
+    "Latin name": "Stylophorum diphyllum",
+    "Common name": "Wood poppy",
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Height": "1.5'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Symphoricarpos orbiculatus": {
+    "Latin name": "Symphoricarpos orbiculatus",
+    "Common name": "Coralberry",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Symphyotrichum cordifolium": {
+    "Latin name": "Symphyotrichum cordifolium",
+    "Common name": "Blue wood aster",
+    "Bloom time": [
+      "Sep",
+      "Oct"
+    ],
+    "Height": "1- 3'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Symphyotrichum dumosum": {
+    "Latin name": "Symphyotrichum dumosum",
+    "Common name": "Long stalked aster",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Symphyotrichum ericoides": {
+    "Latin name": "Symphyotrichum ericoides",
+    "Common name": "Heath Aster",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Symphyo. ericoides 'Snow Flurry'": {
+    "Latin name": "Symphyo. ericoides 'Snow Flurry'",
+    "Common name": "Heath Aster",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": ".25 - .5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Symphyotrichum firmum": {
+    "Latin name": "Symphyotrichum firmum",
+    "Common name": "",
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Symphyotrichum laeve": {
+    "Latin name": "Symphyotrichum laeve",
+    "Common name": "Smooth blue aster",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "1-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Symphyotrichum lateriflorum": {
+    "Latin name": "Symphyotrichum lateriflorum",
+    "Common name": "Calico Aster",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Symphyotrichum novae-angliae": {
+    "Latin name": "Symphyotrichum novae-angliae",
+    "Common name": "New England aster",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "2-4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Symphyotrichum novi-belgii": {
+    "Latin name": "Symphyotrichum novi-belgii",
+    "Common name": "New York aster",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "1-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Symphyotrichum oblongifolium": {
+    "Latin name": "Symphyotrichum oblongifolium",
+    "Common name": "Aromatic aster",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Symphyotrichum oolentangiense": {
+    "Latin name": "Symphyotrichum oolentangiense",
+    "Common name": "Sky blue aster",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Symphyotrichum pilosum": {
+    "Latin name": "Symphyotrichum pilosum",
+    "Common name": "Frost Aster",
+    "Bloom time": [
+      "Sep",
+      "Oct"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Symphyotrichum prenanthoides": {
+    "Latin name": "Symphyotrichum prenanthoides",
+    "Common name": "Crooked stemmed aster",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Symphyotrichum puniceum": {
+    "Latin name": "Symphyotrichum puniceum",
+    "Common name": "Purple-stemmed Aster",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "4-6'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Symphyotrichum  sericeum": {
+    "Latin name": "Symphyotrichum  sericeum",
+    "Common name": "Silky aster",
+    "Bloom time": [
+      "Sep",
+      "Oct"
+    ],
+    "Height": "1'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Symphyotrichum shortii": {
+    "Latin name": "Symphyotrichum shortii",
+    "Common name": "Short's Aster",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Teucrium canadense": {
+    "Latin name": "Teucrium canadense",
+    "Common name": "Germander",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Thalictrum dasycarpum": {
+    "Latin name": "Thalictrum dasycarpum",
+    "Common name": "Purple meadow rue",
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "6'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Thalictrum dioicum": {
+    "Latin name": "Thalictrum dioicum",
+    "Common name": "Early meadow rue",
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Height": "1-3'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Thalictrum pubescens": {
+    "Latin name": "Thalictrum pubescens",
+    "Common name": "Tall meadow rue",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "1.5 - 5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Thalictrum rochebrunianum": {
+    "Latin name": "Thalictrum rochebrunianum",
+    "Common name": "",
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Thalictrum thalictroides": {
+    "Latin name": "Thalictrum thalictroides",
+    "Common name": "Rue anemone",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": ".25- .75'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Thermopsis carolinia": {
+    "Latin name": "Thermopsis carolinia",
+    "Common name": "Carolina Lupine",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "3-5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Tiarella cordifolia": {
+    "Latin name": "Tiarella cordifolia",
+    "Common name": "Foam flower",
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Height": ".25-1'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Tradescantia bracteata": {
+    "Latin name": "Tradescantia bracteata",
+    "Common name": "Prairie Spiderwort",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "1'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Tradescantia ohiensis": {
+    "Latin name": "Tradescantia ohiensis",
+    "Common name": "Ohio spiderwort",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "1.5-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Tradescantia virginiana": {
+    "Latin name": "Tradescantia virginiana",
+    "Common name": "Virginia Spiderwort",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "1-2.5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Trillium erectum": {
+    "Latin name": "Trillium erectum",
+    "Common name": "Red trillium",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": ".75 - 1.25",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Trillum grandiflorum": {
+    "Latin name": "Trillum grandiflorum",
+    "Common name": "White trillium",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": ".5 -1'",
+    "Sunlight": [
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Triodanis perfoliata": {
+    "Latin name": "Triodanis perfoliata",
+    "Common name": "Clasping Venus's Looking Glass",
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Dry"
+    ]
+  },
+  "Uvularia grandiflora": {
+    "Latin name": "Uvularia grandiflora",
+    "Common name": "Great merry bells",
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Height": "1- 1.5'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Uvularia sessilifolia": {
+    "Latin name": "Uvularia sessilifolia",
+    "Common name": "Sessile leaf bellwort",
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Height": "12 \"",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Verbena hastata": {
+    "Latin name": "Verbena hastata",
+    "Common name": "Blue vervain",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "5 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Verbena stricta": {
+    "Latin name": "Verbena stricta",
+    "Common name": "Hoary vervain",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Verbena urtifolia": {
+    "Latin name": "Verbena urtifolia",
+    "Common name": "",
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Verbesina alternifolia": {
+    "Latin name": "Verbesina alternifolia",
+    "Common name": "Wingstem",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "8'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Vernonia fasciculata": {
+    "Latin name": "Vernonia fasciculata",
+    "Common name": "Prairie ironweed",
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "6 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Vernonia gigantea": {
+    "Latin name": "Vernonia gigantea",
+    "Common name": "Tall Ironweed",
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "5 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Vernonia noveboracensis": {
+    "Latin name": "Vernonia noveboracensis",
+    "Common name": "NY ironweed",
+    "Bloom time": [
+      "Aug",
+      "Sep"
+    ],
+    "Height": "4- 7 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Veronicastrum virginicum": {
+    "Latin name": "Veronicastrum virginicum",
+    "Common name": "Culvers root",
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "3-6 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Viola palmata": {
+    "Latin name": "Viola palmata",
+    "Common name": "",
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Viola pedata": {
+    "Latin name": "Viola pedata",
+    "Common name": "Bird's Foot Violet",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": ".25 - .5",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Viola pedatifida": {
+    "Latin name": "Viola pedatifida",
+    "Common name": "Prairie Violet",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": "0.5",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Viola pubescens": {
+    "Latin name": "Viola pubescens",
+    "Common name": "Downy yellow violet",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": ".25-1.5",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Dry"
+    ]
+  },
+  "Viola sororia": {
+    "Latin name": "Viola sororia",
+    "Common name": "Common blue violet",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": ".25'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Viola sororia \"Freckles\"": {
+    "Latin name": "Viola sororia \"Freckles\"",
+    "Common name": "Freckles Violet",
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Viola striata": {
+    "Latin name": "Viola striata",
+    "Common name": "Striped Cream Violet",
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": ".75-1'",
+    "Sunlight": [
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Zizia aptera": {
+    "Latin name": "Zizia aptera",
+    "Common name": "Heart leaved Alexanders",
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Zizia aurea": {
+    "Latin name": "Zizia aurea",
+    "Common name": "Golden Alexander",
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  }
+}
