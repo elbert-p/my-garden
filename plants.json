@@ -8075,8 +8075,8 @@
       "Medium"
     ]
   },
-  "Salix (matsudana tortuosa?)": {
-    "Latin name": "Salix (matsudana tortuosa?)",
+  "Salix matsudana 'Tortuosa'": {
+    "Latin name": "Salix matsudana 'Tortuosa'",
     "Common name": "Corkscrew Willow",
     "plantType": ["Shrubs"],
     "Bloom time": [],
@@ -8226,8 +8226,23 @@
       "Medium"
     ]
   },
-  "Swida (Cornus) sericea": {
-    "Latin name": "Swida (Cornus) sericea",
+  "Swida sericea": {
+    "Latin name": "Swida sericea",
+    "Common name": "Red Osier Dogwood",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "3-8'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+    "Cornus sericea": {
+    "Latin name": "Cornus sericea",
     "Common name": "Red Osier Dogwood",
     "plantType": ["Shrubs"],
     "Bloom time": [],

@@ -1,5 +1,5 @@
 'use client';
-import { createContext, useContext, useEffect, useState, useRef } from 'react';
+import { createContext, useContext, useEffect, useState, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { supabase } from '@/lib/supabaseClient';
 import localforage from 'localforage';
@@ -11,77 +11,38 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const [isInitialized, setIsInitialized] = useState(false);
   const [isMigrating, setIsMigrating] = useState(false);
-  const initializedRef = useRef(false);
   const router = useRouter();
+  
+  // Use ref to track the current session for the auth listener
+  const sessionRef = useRef(null);
 
-  // Initialize auth state
-  useEffect(() => {
-    let subscription;
-
-    const init = async () => {
-      if (initializedRef.current) return;
-      initializedRef.current = true;
-
-      const { data: { session: initialSession } } = await supabase.auth.getSession();
-      setSession(initialSession);
-      setLoading(false);
-
-      // If user just signed in, migrate local data
-      if (initialSession?.user) {
-        const hasMigrated = localStorage.getItem(`migrated_${initialSession.user.id}`);
-        if (!hasMigrated) {
-          setIsMigrating(true);
-          await migrateLocalDataToSupabase(initialSession.user.id);
-          localStorage.setItem(`migrated_${initialSession.user.id}`, 'true');
-          setIsMigrating(false);
-        }
+  // Sync user profile data to profiles table
+  const syncUserProfile = useCallback(async (user) => {
+    if (!user) return;
+    
+    try {
+      const { error } = await supabase
+        .from('profiles')
+        .upsert({
+          id: user.id,
+          email: user.email,
+          display_name: user.user_metadata?.full_name || user.email?.split('@')[0],
+          avatar_url: user.user_metadata?.avatar_url,
+          updated_at: new Date().toISOString(),
+        }, {
+          onConflict: 'id'
+        });
+      
+      if (error) {
+        console.error('[Auth] Error syncing profile:', error);
       }
-
-      setIsInitialized(true);
-
-      // Listen for auth changes
-      const { data } = supabase.auth.onAuthStateChange(async (event, currentSession) => {
-        console.log('[Auth] Event:', event);
-        
-        if (event === 'SIGNED_IN') {
-          const previousUserId = session?.user?.id;
-          const newUserId = currentSession?.user?.id;
-          
-          if (newUserId && newUserId !== previousUserId) {
-            const hasMigrated = localStorage.getItem(`migrated_${newUserId}`);
-            if (!hasMigrated) {
-              setIsMigrating(true);
-              setSession(currentSession); // Update session first so UI knows user is signed in
-              await migrateLocalDataToSupabase(newUserId);
-              localStorage.setItem(`migrated_${newUserId}`, 'true');
-              setIsMigrating(false);
-            }
-            if (!previousUserId) {
-              router.push('/');
-              router.refresh();
-            }
-          }
-        }
-
-        if (event === 'SIGNED_OUT') {
-          router.push('/');
-        }
-
-        setSession(currentSession);
-      });
-
-      subscription = data.subscription;
-    };
-
-    init();
-
-    return () => {
-      subscription?.unsubscribe();
-    };
-  }, [router, session?.user?.id]);
+    } catch (err) {
+      console.error('[Auth] Profile sync error:', err);
+    }
+  }, []);
 
   // Migrate local storage data to Supabase on first sign in
-  const migrateLocalDataToSupabase = async (userId) => {
+  const migrateLocalDataToSupabase = useCallback(async (userId) => {
     try {
       console.log('[Auth] Starting migration of local data...');
       
@@ -159,9 +120,110 @@ export function AuthProvider({ children }) {
     } catch (err) {
       console.error('[Auth] Migration error:', err);
     }
-  };
+  }, []);
 
-  const signInWithGoogle = async () => {
+  // Initialize auth state
+  useEffect(() => {
+    let isMounted = true;
+    let subscription = null;
+
+    const init = async () => {
+      try {
+        const { data: { session: initialSession } } = await supabase.auth.getSession();
+        
+        // Check if component is still mounted before updating state
+        if (!isMounted) return;
+        
+        sessionRef.current = initialSession;
+        setSession(initialSession);
+        setLoading(false);
+
+        // If user is signed in, migrate local data and sync profile
+        if (initialSession?.user) {
+          // Sync profile to profiles table
+          await syncUserProfile(initialSession.user);
+          
+          if (!isMounted) return;
+          
+          const hasMigrated = localStorage.getItem(`migrated_${initialSession.user.id}`);
+          if (!hasMigrated) {
+            setIsMigrating(true);
+            await migrateLocalDataToSupabase(initialSession.user.id);
+            if (!isMounted) return;
+            localStorage.setItem(`migrated_${initialSession.user.id}`, 'true');
+            setIsMigrating(false);
+          }
+        }
+
+        if (!isMounted) return;
+        setIsInitialized(true);
+
+        // Listen for auth changes
+        const { data } = supabase.auth.onAuthStateChange(async (event, currentSession) => {
+          if (!isMounted) return;
+          
+          console.log('[Auth] Event:', event);
+          
+          if (event === 'SIGNED_IN') {
+            const previousUserId = sessionRef.current?.user?.id;
+            const newUserId = currentSession?.user?.id;
+            
+            // Sync profile on sign in
+            if (currentSession?.user) {
+              await syncUserProfile(currentSession.user);
+            }
+            
+            if (!isMounted) return;
+            
+            if (newUserId && newUserId !== previousUserId) {
+              const hasMigrated = localStorage.getItem(`migrated_${newUserId}`);
+              if (!hasMigrated) {
+                setIsMigrating(true);
+                setSession(currentSession);
+                sessionRef.current = currentSession;
+                await migrateLocalDataToSupabase(newUserId);
+                if (!isMounted) return;
+                localStorage.setItem(`migrated_${newUserId}`, 'true');
+                setIsMigrating(false);
+              }
+              if (!previousUserId) {
+                router.push('/');
+                router.refresh();
+              }
+            }
+          }
+
+          if (!isMounted) return;
+
+          if (event === 'SIGNED_OUT') {
+            router.push('/');
+          }
+
+          sessionRef.current = currentSession;
+          setSession(currentSession);
+        });
+
+        subscription = data.subscription;
+      } catch (error) {
+        console.error('[Auth] Init error:', error);
+        if (isMounted) {
+          setLoading(false);
+          setIsInitialized(true);
+        }
+      }
+    };
+
+    init();
+
+    return () => {
+      isMounted = false;
+      if (subscription) {
+        subscription.unsubscribe();
+      }
+    };
+  }, [router, syncUserProfile, migrateLocalDataToSupabase]);
+
+  const signInWithGoogle = useCallback(async () => {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
@@ -172,23 +234,25 @@ export function AuthProvider({ children }) {
       console.error('Error signing in:', error);
       throw error;
     }
-  };
+  }, []);
 
-  const signOut = async () => {
+  const signOut = useCallback(async () => {
     try {
       const { error } = await supabase.auth.signOut();
       if (error) {
         console.error('Error signing out:', error);
         throw error;
       }
+      sessionRef.current = null;
       setSession(null);
       router.push('/');
     } catch (error) {
       console.error('Sign out error:', error);
+      sessionRef.current = null;
       setSession(null);
       router.push('/');
     }
-  };
+  }, [router]);
 
   const value = {
     session,
