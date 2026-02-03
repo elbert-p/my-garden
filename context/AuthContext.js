@@ -22,6 +22,13 @@ export function AuthProvider({ children }) {
       if (initializedRef.current) return;
       initializedRef.current = true;
 
+      // Skip initialization if supabase client isn't available (during build)
+      if (!supabase) {
+        setLoading(false);
+        setIsInitialized(true);
+        return;
+      }
+
       const { data: { session: initialSession } } = await supabase.auth.getSession();
       setSession(initialSession);
       setLoading(false);
@@ -162,6 +169,7 @@ export function AuthProvider({ children }) {
   };
 
   const signInWithGoogle = async () => {
+    if (!supabase) return;
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
@@ -175,6 +183,7 @@ export function AuthProvider({ children }) {
   };
 
   const signOut = async () => {
+    if (!supabase) return;
     try {
       const { error } = await supabase.auth.signOut();
       if (error) {
