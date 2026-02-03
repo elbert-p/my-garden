@@ -17,19 +17,39 @@ export default function SharedGardenPage() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    (async () => {
+    const abortController = new AbortController();
+    let isMounted = true;
+
+    const loadData = async () => {
       try {
-        const data = await getSharedGarden(gardenId);
+        const data = await getSharedGarden(gardenId, abortController.signal);
+        
+        if (!isMounted) return;
+        
         setGarden(data.garden);
         setPlants(data.plants);
         setOwner(data.owner);
       } catch (e) {
+        // Ignore abort errors - they're expected on unmount
+        if (e.name === 'AbortError') return;
+        
+        if (!isMounted) return;
+        
         console.error('Failed to load shared garden:', e);
         setError('Garden not found or no longer available.');
       } finally {
-        setLoading(false);
+        if (isMounted) {
+          setLoading(false);
+        }
       }
-    })();
+    };
+
+    loadData();
+
+    return () => {
+      isMounted = false;
+      abortController.abort();
+    };
   }, [gardenId]);
 
   if (loading) return <div className={styles.container}><p className={styles.message}>Loading...</p></div>;

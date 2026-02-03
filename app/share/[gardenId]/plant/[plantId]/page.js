@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import { IoClose } from 'react-icons/io5';
 import { getSharedPlant } from '@/lib/dataService';
 import PageHeader from '@/components/PageHeader';
@@ -9,7 +9,6 @@ import styles from './page.module.css';
 
 export default function SharedPlantPage() {
   const { gardenId, plantId } = useParams();
-  const router = useRouter();
   const [plant, setPlant] = useState(null);
   const [owner, setOwner] = useState(null);
   const [selImg, setSelImg] = useState(null);
@@ -24,18 +23,38 @@ export default function SharedPlantPage() {
   }, []);
 
   useEffect(() => {
-    (async () => {
+    const abortController = new AbortController();
+    let isMounted = true;
+
+    const loadData = async () => {
       try {
-        const data = await getSharedPlant(plantId);
+        const data = await getSharedPlant(plantId, abortController.signal);
+        
+        if (!isMounted) return;
+        
         setPlant(data.plant);
         setOwner(data.owner);
       } catch (e) {
+        // Ignore abort errors - they're expected on unmount
+        if (e.name === 'AbortError') return;
+        
+        if (!isMounted) return;
+        
         console.error('Failed to load shared plant:', e);
         setError('Plant not found.');
       } finally {
-        setLoading(false);
+        if (isMounted) {
+          setLoading(false);
+        }
       }
-    })();
+    };
+
+    loadData();
+
+    return () => {
+      isMounted = false;
+      abortController.abort();
+    };
   }, [plantId]);
 
   useEffect(() => {
