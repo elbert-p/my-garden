@@ -1,0 +1,99 @@
+.container {
+  position: relative;
+}
+
+.menuButton {
+  background-color: #fff;
+  color: #5f6368;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.menuButton:hover {
+  background-color: #f1f3f4;
+  color: #202124;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  min-width: 180px;
+  overflow: hidden;
+  z-index: 100;
+  animation: slideDown 0.15s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  background: none;
+  font-size: 0.95rem;
+  color: #202124;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  text-align: left;
+  font-family: inherit;
+}
+
+.item:hover {
+  background-color: #f1f3f4;
+}
+
+/* Success variant - green for add actions */
+.itemSuccess {
+  color: #1e7e34;
+}
+
+.itemSuccess:hover {
+  background-color: #d4edda;
+}
+
+/* Danger variant - red for delete actions */
+.itemDanger {
+  color: #d93025;
+}
+
+.itemDanger:hover {
+  background-color: #fce8e6;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 480px) {
+  .dropdown {
+    min-width: 160px;
+  }
+}

@@ -1,183 +1,133 @@
-'use client'
+'use client';
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { v4 as uuidv4 } from 'uuid';
-import { FiEdit } from 'react-icons/fi';
 import { useRouter } from 'next/navigation';
-import localforage from 'localforage'; // 1. Import localforage
-import imageCompression from 'browser-image-compression'; // 2. Import compression library
+import { useAuth } from '@/context/AuthContext';
+import { getGardens, createGarden } from '@/lib/dataService';
+import PageHeader from '@/components/PageHeader';
+import ItemGrid from '@/components/ItemGrid';
+import Modal from '@/components/Modal';
+import FormInput, { ErrorMessage } from '@/components/FormInput';
+import ImageUpload from '@/components/ImageUpload';
+import Button from '@/components/Button';
+import UserMenu from '@/components/UserMenu';
 import styles from './page.module.css';
 
+const DEFAULT_GARDEN_IMAGE = '/default-garden.jpg';
+
 export default function Home() {
-  const [plants, setPlants] = useState([]);
+  const { user, isInitialized, isMigrating } = useAuth();
+  const [gardens, setGardens] = useState([]);
   const [showModal, setShowModal] = useState(false);
-  const [newPlantName, setNewPlantName] = useState('');
-  const [newScientificName, setNewScientificName] = useState('');
-  const [newPlantImage, setNewPlantImage] = useState(null);
+  const [newGardenName, setNewGardenName] = useState('');
+  const [newGardenImage, setNewGardenImage] = useState(null);
   const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
 
-  // 3. Update useEffect to be async and use localforage
   useEffect(() => {
-    const loadPlants = async () => {
-      if (typeof window !== 'undefined') {
-        const storedPlants = await localforage.getItem('plants');
-        if (storedPlants) {
-          setPlants(storedPlants);
-        }
+    const loadGardens = async () => {
+      // Don't load until initialized and migration is complete
+      if (!isInitialized || isMigrating) return;
+      
+      try {
+        const data = await getGardens(user?.id);
+        setGardens(data);
+      } catch (e) {
+        console.error('Failed to load gardens:', e);
+      } finally {
+        setIsLoading(false);
       }
     };
-    loadPlants().catch(e => console.error("Failed to load plants:", e));
-  }, []);
-  
-  // 4. Create the image compression helper function
-  const compressImage = async (file) => {
-    const options = {
-      maxSizeMB: 1,
-      maxWidthOrHeight: 1920,
-      useWebWorker: true,
-    };
-    try {
-      console.log('Compressing image...');
-      const compressedFile = await imageCompression(file, options);
-      const dataUrl = await imageCompression.getDataUrlFromFile(compressedFile);
-      console.log('Compression successful!');
-      return dataUrl;
-    } catch (error) {
-      console.error("Image compression error:", error);
-      setError('Could not process the image. Please try a different one.');
-      return null;
-    }
-  };
+    
+    loadGardens();
+  }, [user?.id, isInitialized, isMigrating]);
 
-  // 5. Update handleAddPlant to be async and use localforage/compression
-  const handleAddPlant = async () => {
-    if ((!newPlantName && !newScientificName) || !newPlantImage) {
-      setError('Please enter a name and valid image.');
+  const handleAddGarden = async () => {
+    if (!newGardenName.trim()) {
+      setError('Please enter a garden name.');
       return;
     }
 
-    const newPlant = {
-      id: uuidv4(),
-      commonName: newPlantName,
-      mainImage: newPlantImage,
-      scientificName: newScientificName,
-      datePlanted: '',
-      notes: '',
-      images: [],
-    };
-
     try {
-      const updatedPlants = [...plants, newPlant];
-      await localforage.setItem('plants', updatedPlants); // Use localforage
-      setPlants(updatedPlants);
-      handleCancel(); // Use handleCancel to reset the form
-      
-      router.push(`/plants/${newPlant.id}`);
+      const newGarden = await createGarden({
+        name: newGardenName.trim(),
+        image: newGardenImage || DEFAULT_GARDEN_IMAGE,
+      }, user?.id);
+
+      setGardens([...gardens, newGarden]);
+      handleCloseModal();
+      router.push(`/garden/${newGarden.id}`);
     } catch (e) {
-      setError('An error occurred while saving the plant.');
-      console.error("Save error:", e);
+      setError('An error occurred while saving the garden.');
+      console.error('Save error:', e);
     }
   };
-  
-  const handleCancel = () => {
+
+  const handleCloseModal = () => {
     setShowModal(false);
-    setNewPlantName('');
-    setNewScientificName('')
-    setNewPlantImage(null);
+    setNewGardenName('');
+    setNewGardenImage(null);
     setError('');
   };
 
-  // 6. Update handleImageChange to be async and use compression
-  const handleImageChange = async (e) => {
-    const file = e.target.files[0];
-    if (file && file.type.startsWith('image/')) {
-      const compressedDataUrl = await compressImage(file);
-      if (compressedDataUrl) {
-        setNewPlantImage(compressedDataUrl);
-        setError('');
-      }
-    } else if (file) {
-      setNewPlantImage(null);
-      setError('Select a valid image file (.jpg, .png).');
-    }
-  };
+  const showLoading = !isInitialized || isMigrating || isLoading;
 
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <h1 className={styles.title}>My Garden</h1>
-        <button onClick={() => { setShowModal(true); setError(''); }} className={styles.addButton}>
-          + Add Plant
-        </button>
-      </header>
-
-      <div className={styles.grid}>
-        {plants.length > 0 ? (
-          plants.map((plant) => (
-            <Link key={plant.id} href={`/plants/${plant.id}`} className={styles.plantItem}>
-              <div className={styles.imageContainer}>
-                <img src={plant.mainImage} alt={plant.commonName} className={styles.image} />
-              </div>
-              <span className={styles.name} style={{
-                fontStyle: plant.commonName ? "normal" : "italic"
-              }}>
-              {plant.commonName || plant.scientificName}
-              </span>
-            </Link>
-          ))
-        ) : (
-          <p className={styles.noPlants}>No plants in your garden yet. Click &quot;Add Plant&quot; to get started!</p>
-        )}
-      </div>
-
-      {showModal && (
-        <div className={styles.modalOverlay}>
-          <div className={styles.modalContent}>
-            <h2 className={styles.modalTitle}>Add New Plant</h2>
-            {error && <p className={styles.errorText}>{error}</p>}
-            <input
-              type="text"
-              placeholder="Common name"
-              value={newPlantName}
-              onChange={(e) => setNewPlantName(e.target.value)}
-              className={styles.input}
-            />
-            
-            <input
-              type="text"
-              placeholder="Enter scientific name for autofill"
-              value={newScientificName}
-              onChange={(e) => setNewScientificName(e.target.value)}
-              className={styles.input}
-            />
-            
-            {!newPlantImage ? (
-              <label className={`${styles.imageUploadArea} ${styles.imageInputLabel}`}>
-                Select Main Image
-                <input type="file" onChange={handleImageChange} className={styles.fileInput} accept="image/*" />
-              </label>
-            ) : (
-              <label className={`${styles.imageUploadArea} ${styles.imagePreviewContainer}`}>
-                <img src={newPlantImage} alt="Preview" className={styles.imagePreview} />
-                <div className={styles.editIcon}>
-                  <FiEdit size={18} strokeWidth={2.5} />
-                </div>
-                <input type="file" onChange={handleImageChange} className={styles.fileInput} accept="image/*" />
-              </label>
-            )}
-            
-            <div className={styles.modalButtons}>
-              <button onClick={handleCancel} className={styles.cancelButton}>
-                Cancel
-              </button>
-              <button onClick={handleAddPlant} className={styles.saveButton}>
-                Save
-              </button>
-            </div>
+      <PageHeader
+        title="My Gardens"
+        titleAlign="left"
+        actions={
+          <div className={styles.headerActions}>
+            <UserMenu />
+            <Button size="small" onClick={() => setShowModal(true)}>+ New Garden</Button>
           </div>
-        </div>
+        }
+      />
+
+      {showLoading ? (
+        <p className={styles.loading}>
+          {isMigrating ? 'Migrating your gardens...' : 'Loading...'}
+        </p>
+      ) : (
+        <ItemGrid
+          items={gardens}
+          emptyMessage='No gardens yet. Click "+ New Garden" to get started!'
+          linkPrefix="/garden"
+          getItemId={(g) => g.id}
+          getItemImage={(g) => g.image || DEFAULT_GARDEN_IMAGE}
+          getItemName={(g) => g.name}
+        />
       )}
+
+      <Modal
+        isOpen={showModal}
+        onClose={handleCloseModal}
+        title="Add New Garden"
+        size="medium"
+      >
+        <ErrorMessage message={error} />
+        <FormInput
+          value={newGardenName}
+          onChange={setNewGardenName}
+          placeholder="Garden name"
+        />
+        <ImageUpload
+          image={newGardenImage}
+          onImageChange={setNewGardenImage}
+          onError={setError}
+          placeholder="Select Image (optional)"
+          size="large"
+        />
+        <div className={styles.modalButtons}>
+          <Button variant="secondary" onClick={handleCloseModal}>
+            Cancel
+          </Button>
+          <Button onClick={handleAddGarden}>
+            Save
+          </Button>
+        </div>
+      </Modal>
     </div>
   );
 }

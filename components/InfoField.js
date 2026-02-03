@@ -3,6 +3,15 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import styles from './InfoField.module.css';
 
+// Default date formatter that handles timezone correctly
+const defaultDateFormat = (dateStr) => {
+  if (!dateStr) return null;
+  // Parse YYYY-MM-DD as local date by splitting to avoid timezone shift
+  const [year, month, day] = dateStr.split('-').map(Number);
+  const date = new Date(year, month - 1, day);
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+};
+
 /**
  * InfoField - A versatile, Google-inspired info display/edit component
  * Supports click-to-edit - clicking anywhere on field enables editing
@@ -18,7 +27,8 @@ export default function InfoField({
   options = [],
   placeholder = '',
   emptyText = 'Not set',
-  size = 'normal'
+  size = 'normal',
+  formatDisplay
 }) {
   const [isFieldEditing, setIsFieldEditing] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -131,11 +141,7 @@ export default function InfoField({
       return value.length > 0 ? value.join(', ') : emptyText;
     }
     if (type === 'date' && value) {
-      return new Date(value).toLocaleDateString('en-US', { 
-        year: 'numeric', 
-        month: 'short', 
-        day: 'numeric' 
-      });
+      return formatDisplay ? formatDisplay(value) : defaultDateFormat(value);
     }
     return value || emptyText;
   };

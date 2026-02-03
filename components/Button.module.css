@@ -1,0 +1,85 @@
+.button {
+  border: none;
+  border-radius: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  font-family: inherit;
+}
+
+/* Sizes */
+.small {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+}
+
+.medium {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+.large {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+}
+
+/* Variants */
+.primary {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.primary:hover {
+  background-color: #45a049;
+}
+
+.secondary {
+  background-color: #eee;
+  color: #333;
+}
+
+.secondary:hover {
+  background-color: #e0e0e0;
+}
+
+.danger {
+  background-color: #d93025;
+  color: white;
+}
+
+.danger:hover {
+  background-color: #b3261e;
+}
+
+.success {
+  background-color: #34a853;
+  color: white;
+}
+
+.success:hover {
+  background-color: #2d8e47;
+  box-shadow: 0 2px 8px rgba(52, 168, 83, 0.3);
+}
+
+/* Back Button */
+.backButton {
+  background-color: #fff;
+  color: #5f6368;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: inherit;
+}
+
+.backButton:hover {
+  background-color: #f1f3f4;
+  color: #202124;
+}

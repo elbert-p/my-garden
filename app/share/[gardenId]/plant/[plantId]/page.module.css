@@ -1,0 +1,23 @@
+.container { max-width: 800px; margin: 0 auto; padding: 1.5rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #202124; }
+.loading { text-align: center; font-style: italic; color: #5f6368; margin-top: 4rem; }
+.badge { background-color: #e8f0fe; color: #1a73e8; padding: 6px 12px; border-radius: 16px; font-size: 0.85rem; font-weight: 500; }
+.details { background-color: #fff; border-radius: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.05); padding: 1.5rem; }
+.mainImageContainer { width: 100%; padding-bottom: 56.25%; position: relative; margin-bottom: 1.5rem; border-radius: 12px; overflow: hidden; background-color: #f1f3f4; }
+.mainImage { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+.infoGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 1.5rem; }
+.infoGridNoMargin { margin-bottom: 0; }
+.field { background-color: #f8f9fa; border-radius: 12px; padding: 14px 16px; }
+.fieldLarge { grid-column: span 2; }
+.label { display: block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #5f6368; margin-bottom: 6px; }
+.value { font-size: 15px; color: #202124; line-height: 1.5; }
+.photosSection { margin-top: 0.5rem; }
+.sectionTitle { font-size: 1rem; font-weight: 600; color: #202124; border-bottom: 1px solid #e8eaed; padding-bottom: 0.75rem; margin-bottom: 1rem; }
+.imageGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 0.75rem; }
+.photoItem { position: relative; width: 100%; padding-bottom: 100%; cursor: pointer; border-radius: 8px; overflow: hidden; background-color: #f1f3f4; }
+.photo { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+.photoItem:hover .photo { transform: scale(1.05); }
+.photoModalOverlay { position: fixed; inset: 0; background-color: rgba(0,0,0,0.85); display: flex; justify-content: center; align-items: center; z-index: 10000; padding: 2rem; }
+.photoModalContent { position: relative; background-color: white; padding: 8px; border-radius: 12px; max-width: calc(100vw - 4rem); max-height: calc(100vh - 4rem); }
+.photoModalImage { display: block; border-radius: 8px; object-fit: contain; max-width: 100%; max-height: calc(100vh - 6rem); }
+.photoModalCloseButton { position: absolute; top: -12px; right: -12px; background-color: #fff; color: #5f6368; border: none; border-radius: 50%; width: 36px; height: 36px; display: flex; justify-content: center; align-items: center; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+@media (max-width: 600px) { .infoGrid { grid-template-columns: 1fr; } .fieldLarge { grid-column: span 1; } }

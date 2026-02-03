@@ -1,46 +1,4 @@
 {
-  "This spreadsheet is being compiled by Heidi Dollard and Amy Meltzer of MA Pollinator Network.  For questions or suggestions, contact Amy Meltzer ameltzerma@comcast.net": {
-    "Latin name": "This spreadsheet is being compiled by Heidi Dollard and Amy Meltzer of MA Pollinator Network.  For questions or suggestions, contact Amy Meltzer ameltzerma@comcast.net",
-    "Common name": "",
-    "Bloom time": [],
-    "Height": "",
-    "Sunlight": [
-      "Full",
-      "Part",
-      "Shade"
-    ],
-    "Moisture": [
-      "Wet",
-      "Medium",
-      "Dry"
-    ]
-  },
-  "PERENNIALS": {
-    "Latin name": "PERENNIALS",
-    "Common name": "",
-    "Bloom time": [
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov"
-    ],
-    "Height": "in feet",
-    "Sunlight": [
-      "Full",
-      "Part",
-      "Shade"
-    ],
-    "Moisture": [
-      "Wet",
-      "Medium",
-      "Dry"
-    ]
-  },
   "Achillea millefolium": {
     "Latin name": "Achillea millefolium",
     "Common name": "Common yarrow",
@@ -50,14 +8,15 @@
       "Aug",
       "Sep"
     ],
-    "Height": "1-3",
+    "Height": "1-3'",
     "Sunlight": [
       "Full"
     ],
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Acorus americanus": {
     "Latin name": "Acorus americanus",
@@ -73,7 +32,8 @@
     ],
     "Moisture": [
       "Wet"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Actaea pachypoda": {
     "Latin name": "Actaea pachypoda",
@@ -90,7 +50,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Actaea (Cimifuga) racemosa": {
     "Latin name": "Actaea (Cimifuga) racemosa",
@@ -109,7 +70,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Actaea rubra": {
     "Latin name": "Actaea rubra",
@@ -126,7 +88,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Actinomeris alternifolia": {
     "Latin name": "Actinomeris alternifolia",
@@ -144,7 +107,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Agastache foeniculum": {
     "Latin name": "Agastache foeniculum",
@@ -163,7 +127,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Agastache scrophulariifolia": {
     "Latin name": "Agastache scrophulariifolia",
@@ -181,7 +146,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Ageratina altissima": {
     "Latin name": "Ageratina altissima",
@@ -201,7 +167,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Agrimonia gryposepala": {
     "Latin name": "Agrimonia gryposepala",
@@ -212,14 +179,15 @@
       "Aug",
       "Sep"
     ],
-    "Height": "5 '",
+    "Height": "5'",
     "Sunlight": [
       "Part"
     ],
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Agrimonia striata": {
     "Latin name": "Agrimonia striata",
@@ -237,7 +205,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Allium cernuum": {
     "Latin name": "Allium cernuum",
@@ -247,14 +216,15 @@
       "Jul",
       "Aug"
     ],
-    "Height": "1.5",
+    "Height": "1.5'",
     "Sunlight": [
       "Full",
       "Part"
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Allium stellatum": {
     "Latin name": "Allium stellatum",
@@ -271,7 +241,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Allium tricoccum": {
     "Latin name": "Allium tricoccum",
@@ -280,14 +251,15 @@
       "Jun",
       "Jul"
     ],
-    "Height": "0.75",
+    "Height": "0.75'",
     "Sunlight": [
       "Part",
       "Shade"
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Amorpha canescens": {
     "Latin name": "Amorpha canescens",
@@ -305,7 +277,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Amorpha nana": {
     "Latin name": "Amorpha nana",
@@ -315,14 +288,15 @@
       "Jul",
       "Aug"
     ],
-    "Height": "2 '",
+    "Height": "2'",
     "Sunlight": [
       "Full"
     ],
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial", "Shrubs"]
   },
   "Amsonia hubrichtii": {
     "Latin name": "Amsonia hubrichtii",
@@ -338,7 +312,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Amsonia tabernaemontana": {
     "Latin name": "Amsonia tabernaemontana",
@@ -355,10 +330,11 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
-  "Anaphalis  margaritacea": {
-    "Latin name": "Anaphalis  margaritacea",
+  "Anaphalis margaritacea": {
+    "Latin name": "Anaphalis margaritacea",
     "Common name": "Pearly everlasting",
     "Bloom time": [
       "Jun",
@@ -374,7 +350,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Anemone canadensis": {
     "Latin name": "Anemone canadensis",
@@ -392,7 +369,8 @@
       "Wet",
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Anemone cylindrica": {
     "Latin name": "Anemone cylindrica",
@@ -409,7 +387,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Anemone virginiana": {
     "Latin name": "Anemone virginiana",
@@ -428,7 +407,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Angelica atropurpurea": {
     "Latin name": "Angelica atropurpurea",
@@ -445,7 +425,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Antennaria neglecta": {
     "Latin name": "Antennaria neglecta",
@@ -455,7 +436,7 @@
       "May",
       "Jun"
     ],
-    "Height": "0.25",
+    "Height": "0.25'",
     "Sunlight": [
       "Full",
       "Part"
@@ -463,7 +444,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Antennaria parlinii": {
     "Latin name": "Antennaria parlinii",
@@ -473,7 +455,7 @@
       "May",
       "Jun"
     ],
-    "Height": ".5-1",
+    "Height": ".5-1'",
     "Sunlight": [
       "Full",
       "Part"
@@ -481,7 +463,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Antennaria plantaginifolia": {
     "Latin name": "Antennaria plantaginifolia",
@@ -491,7 +474,7 @@
       "May",
       "Jun"
     ],
-    "Height": "0.25",
+    "Height": "0.25'",
     "Sunlight": [
       "Full",
       "Part"
@@ -499,7 +482,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Aquilegia canadensis": {
     "Latin name": "Aquilegia canadensis",
@@ -518,7 +502,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Arnoglossum reniforme": {
     "Latin name": "Arnoglossum reniforme",
@@ -536,7 +521,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Aralia racemosa": {
     "Latin name": "Aralia racemosa",
@@ -553,7 +539,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Arisaema tryphyllum": {
     "Latin name": "Arisaema tryphyllum",
@@ -571,7 +558,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Aruncus dioicus": {
     "Latin name": "Aruncus dioicus",
@@ -588,7 +576,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Asarum canadense": {
     "Latin name": "Asarum canadense",
@@ -605,7 +594,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Asclepias exaltata": {
     "Latin name": "Asclepias exaltata",
@@ -622,7 +612,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Asclepias incarnata": {
     "Latin name": "Asclepias incarnata",
@@ -640,7 +631,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Asclepias sullivantii": {
     "Latin name": "Asclepias sullivantii",
@@ -656,7 +648,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Asclepias syriaca": {
     "Latin name": "Asclepias syriaca",
@@ -666,14 +659,15 @@
       "Jul",
       "Aug"
     ],
-    "Height": "3 - 5'",
+    "Height": "3-5'",
     "Sunlight": [
       "Full"
     ],
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Asclepias tuberosa": {
     "Latin name": "Asclepias tuberosa",
@@ -690,7 +684,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Asclepias verticillata": {
     "Latin name": "Asclepias verticillata",
@@ -708,7 +703,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Astralagus canadensis": {
     "Latin name": "Astralagus canadensis",
@@ -725,7 +721,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Baptisia alba": {
     "Latin name": "Baptisia alba",
@@ -742,7 +739,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Baptisia australis": {
     "Latin name": "Baptisia australis",
@@ -759,7 +757,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Baptisia tinctoria": {
     "Latin name": "Baptisia tinctoria",
@@ -777,7 +776,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Blephilia ciliata": {
     "Latin name": "Blephilia ciliata",
@@ -794,7 +794,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Blephilia hirsuta": {
     "Latin name": "Blephilia hirsuta",
@@ -812,7 +813,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Boltonia asteroides": {
     "Latin name": "Boltonia asteroides",
@@ -830,7 +832,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Callirhoe bushii": {
     "Latin name": "Callirhoe bushii",
@@ -848,7 +851,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Caltha palustris": {
     "Latin name": "Caltha palustris",
@@ -858,7 +862,7 @@
       "May",
       "Jun"
     ],
-    "Height": "1-1.5",
+    "Height": "1-1.5'",
     "Sunlight": [
       "Full",
       "Part"
@@ -866,7 +870,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Camassia scilloides": {
     "Latin name": "Camassia scilloides",
@@ -875,14 +880,15 @@
       "May",
       "Jun"
     ],
-    "Height": "2 '",
+    "Height": "2'",
     "Sunlight": [
       "Full",
       "Part"
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Campanula americana": {
     "Latin name": "Campanula americana",
@@ -893,14 +899,15 @@
       "Sep",
       "Oct"
     ],
-    "Height": "2-6",
+    "Height": "2-6'",
     "Sunlight": [
       "Full",
       "Part"
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Campanula rotundifolia": {
     "Latin name": "Campanula rotundifolia",
@@ -919,7 +926,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Cardamine concatenata": {
     "Latin name": "Cardamine concatenata",
@@ -928,14 +936,15 @@
       "Apr",
       "May"
     ],
-    "Height": "1 ft",
+    "Height": "1ft'",
     "Sunlight": [
       "Part",
       "Shade"
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Caulophyllum thalictroides": {
     "Latin name": "Caulophyllum thalictroides",
@@ -952,7 +961,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Chamaecrista fasciculata": {
     "Latin name": "Chamaecrista fasciculata",
@@ -970,7 +980,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Chamaenerion augustifolium": {
     "Latin name": "Chamaenerion augustifolium",
@@ -986,7 +997,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Chamaepericlymenum canadense": {
     "Latin name": "Chamaepericlymenum canadense",
@@ -995,7 +1007,7 @@
       "May",
       "Jun"
     ],
-    "Height": "2-5 \"",
+    "Height": "2-5'",
     "Sunlight": [
       "Part",
       "Shade"
@@ -1003,7 +1015,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Chelone glabra": {
     "Latin name": "Chelone glabra",
@@ -1013,14 +1026,15 @@
       "Aug",
       "Sep"
     ],
-    "Height": "1.5 - 2.5",
+    "Height": "1.5-2.5'",
     "Sunlight": [
       "Full",
       "Part"
     ],
     "Moisture": [
       "Wet"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Chelone lyonii": {
     "Latin name": "Chelone lyonii",
@@ -1029,7 +1043,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "2-3 ft",
+    "Height": "2-3ft'",
     "Sunlight": [
       "Full",
       "Part"
@@ -1037,7 +1051,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Chrysogonum virginianum": {
     "Latin name": "Chrysogonum virginianum",
@@ -1046,14 +1061,15 @@
       "May",
       "Jun"
     ],
-    "Height": ".75 - 1'",
+    "Height": ".75-1'",
     "Sunlight": [
       "Full",
       "Part"
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Cimifuga racemosa": {
     "Latin name": "Cimifuga racemosa",
@@ -1072,7 +1088,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Cirsium discolor": {
     "Latin name": "Cirsium discolor",
@@ -1089,7 +1106,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Cirsium muticum": {
     "Latin name": "Cirsium muticum",
@@ -1108,7 +1126,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Conoclinium coelstinum": {
     "Latin name": "Conoclinium coelstinum",
@@ -1123,7 +1142,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Coreopsis lanceolata": {
     "Latin name": "Coreopsis lanceolata",
@@ -1141,7 +1161,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Coreopsis palmata": {
     "Latin name": "Coreopsis palmata",
@@ -1160,7 +1181,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Coreopsis rosea": {
     "Latin name": "Coreopsis rosea",
@@ -1177,7 +1199,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Coreopsis tripteris": {
     "Latin name": "Coreopsis tripteris",
@@ -1195,7 +1218,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Coreopsis verticillata": {
     "Latin name": "Coreopsis verticillata",
@@ -1206,7 +1230,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "1.5' 2'",
+    "Height": "1.5'2'",
     "Sunlight": [
       "Full",
       "Part"
@@ -1214,15 +1238,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
-  },
-  "Cornus canadensis": {
-    "Latin name": "Cornus canadensis",
-    "Common name": "Bunchberry",
-    "Bloom time": [],
-    "Height": "",
-    "Sunlight": [],
-    "Moisture": []
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Corydalis sempervirens": {
     "Latin name": "Corydalis sempervirens",
@@ -1242,7 +1259,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Cryptotaenia canadensis": {
     "Latin name": "Cryptotaenia canadensis",
@@ -1259,7 +1277,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Dalea purpurea": {
     "Latin name": "Dalea purpurea",
@@ -1277,7 +1296,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Delphinium exaltatum": {
     "Latin name": "Delphinium exaltatum",
@@ -1293,7 +1313,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Desmanthus illinisoensis": {
     "Latin name": "Desmanthus illinisoensis",
@@ -1309,7 +1330,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Desmodium canandense": {
     "Latin name": "Desmodium canandense",
@@ -1325,20 +1347,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
-  },
-  "Diarrhena obovata": {
-    "Latin name": "Diarrhena obovata",
-    "Common name": "",
-    "Bloom time": [],
-    "Height": "",
-    "Sunlight": [
-      "Full",
-      "Part"
     ],
-    "Moisture": [
-      "Medium"
-    ]
+    "plantType": ["Herbaceous perennial"]
   },
   "Dicentra cucullaria": {
     "Latin name": "Dicentra cucullaria",
@@ -1353,7 +1363,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Dicentra eximia": {
     "Latin name": "Dicentra eximia",
@@ -1371,7 +1382,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Dodecatheon meadia": {
     "Latin name": "Dodecatheon meadia",
@@ -1388,7 +1400,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Doellingeria umbellata": {
     "Latin name": "Doellingeria umbellata",
@@ -1406,7 +1419,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Echinacea angustifolia": {
     "Latin name": "Echinacea angustifolia",
@@ -1422,7 +1436,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Echinacea pallida": {
     "Latin name": "Echinacea pallida",
@@ -1439,7 +1454,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Echinacea paradoxa": {
     "Latin name": "Echinacea paradoxa",
@@ -1457,7 +1473,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Echinacea purpurea": {
     "Latin name": "Echinacea purpurea",
@@ -1475,7 +1492,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Epilobium glandulosum": {
     "Latin name": "Epilobium glandulosum",
@@ -1493,7 +1511,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Erigeron pulchellus": {
     "Latin name": "Erigeron pulchellus",
@@ -1510,7 +1529,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Eryngium yuccifolium": {
     "Latin name": "Eryngium yuccifolium",
@@ -1526,7 +1546,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Eupatorium altissimum": {
     "Latin name": "Eupatorium altissimum",
@@ -1543,7 +1564,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Eupatorium fistulosum": {
     "Latin name": "Eupatorium fistulosum",
@@ -1561,7 +1583,8 @@
     ],
     "Moisture": [
       "Wet"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Eupatorium hyssopifolium": {
     "Latin name": "Eupatorium hyssopifolium",
@@ -1579,7 +1602,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Eupatorium perfoliatum": {
     "Latin name": "Eupatorium perfoliatum",
@@ -1597,7 +1621,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Eupatorium serotinum": {
     "Latin name": "Eupatorium serotinum",
@@ -1614,7 +1639,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Eurybia divaricata": {
     "Latin name": "Eurybia divaricata",
@@ -1632,7 +1658,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Eurybia macrophylla": {
     "Latin name": "Eurybia macrophylla",
@@ -1651,7 +1678,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Eurybia shreberi": {
     "Latin name": "Eurybia shreberi",
@@ -1669,7 +1697,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Eurybia spectabilis": {
     "Latin name": "Eurybia spectabilis",
@@ -1687,7 +1716,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Euthamia graminifolia": {
     "Latin name": "Euthamia graminifolia",
@@ -1705,7 +1735,8 @@
       "Wet",
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Eutrochium dubium": {
     "Latin name": "Eutrochium dubium",
@@ -1721,7 +1752,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Eutrochium fistulosum": {
     "Latin name": "Eutrochium fistulosum",
@@ -1740,10 +1772,11 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
-  "Eutrochium  maculatum": {
-    "Latin name": "Eutrochium  maculatum",
+  "Eutrochium maculatum": {
+    "Latin name": "Eutrochium maculatum",
     "Common name": "Joe Pye weed",
     "Bloom time": [
       "Jul",
@@ -1758,7 +1791,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Eutrochium purpureum": {
     "Latin name": "Eutrochium purpureum",
@@ -1775,7 +1809,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Filipendula rubra": {
     "Latin name": "Filipendula rubra",
@@ -1792,7 +1827,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Fragaria virginiana": {
     "Latin name": "Fragaria virginiana",
@@ -1810,7 +1846,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Fragaria vesca": {
     "Latin name": "Fragaria vesca",
@@ -1820,14 +1857,15 @@
       "Jun",
       "Jul"
     ],
-    "Height": ".25 - .5'",
+    "Height": ".25-.5'",
     "Sunlight": [
       "Full",
       "Part"
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Gallardia grandifolia": {
     "Latin name": "Gallardia grandifolia",
@@ -1844,7 +1882,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Gaura longiflora": {
     "Latin name": "Gaura longiflora",
@@ -1862,7 +1901,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Gentiana andrewsii": {
     "Latin name": "Gentiana andrewsii",
@@ -1879,7 +1919,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Gentiana clausa": {
     "Latin name": "Gentiana clausa",
@@ -1895,7 +1936,8 @@
     ],
     "Moisture": [
       "Wet"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Gentianopsis crinita": {
     "Latin name": "Gentianopsis crinita",
@@ -1912,7 +1954,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Geranium maculatum": {
     "Latin name": "Geranium maculatum",
@@ -1931,7 +1974,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Geum fragroides": {
     "Latin name": "Geum fragroides",
@@ -1941,7 +1985,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": ".25 - .5'",
+    "Height": ".25-.5'",
     "Sunlight": [
       "Full",
       "Part"
@@ -1949,7 +1993,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Geum rivale": {
     "Latin name": "Geum rivale",
@@ -1965,7 +2010,8 @@
     ],
     "Moisture": [
       "Wet"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Geum triflorum": {
     "Latin name": "Geum triflorum",
@@ -1983,7 +2029,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Gillenia trifoliata": {
     "Latin name": "Gillenia trifoliata",
@@ -2000,7 +2047,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Glycyrrhiza lepidota": {
     "Latin name": "Glycyrrhiza lepidota",
@@ -2016,7 +2064,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Helenium autumnale": {
     "Latin name": "Helenium autumnale",
@@ -2033,7 +2082,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Helenium flexuosum": {
     "Latin name": "Helenium flexuosum",
@@ -2051,7 +2101,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Helianthus angustifolius": {
     "Latin name": "Helianthus angustifolius",
@@ -2068,7 +2119,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Helianthus divaricata": {
     "Latin name": "Helianthus divaricata",
@@ -2086,7 +2138,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Helianthus grosseserratus": {
     "Latin name": "Helianthus grosseserratus",
@@ -2103,7 +2156,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Helianthus maximiliani": {
     "Latin name": "Helianthus maximiliani",
@@ -2119,7 +2173,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Helianthus mollis": {
     "Latin name": "Helianthus mollis",
@@ -2135,7 +2190,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Helianthus occidentalis": {
     "Latin name": "Helianthus occidentalis",
@@ -2153,7 +2209,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Heliopsis helianthoides": {
     "Latin name": "Heliopsis helianthoides",
@@ -2172,7 +2229,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Hepatica acutiloba": {
     "Latin name": "Hepatica acutiloba",
@@ -2189,7 +2247,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Heuchera americana": {
     "Latin name": "Heuchera americana",
@@ -2207,7 +2266,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Hibiscus laevis": {
     "Latin name": "Hibiscus laevis",
@@ -2225,7 +2285,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Hibiscus moscheutos": {
     "Latin name": "Hibiscus moscheutos",
@@ -2242,7 +2303,8 @@
     ],
     "Moisture": [
       "Wet"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Houstonia caerulea": {
     "Latin name": "Houstonia caerulea",
@@ -2260,7 +2322,8 @@
       "Wet",
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Hydrophyllum virginianum": {
     "Latin name": "Hydrophyllum virginianum",
@@ -2276,7 +2339,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Hypericum ascyron (pyramidatum)": {
     "Latin name": "Hypericum ascyron (pyramidatum)",
@@ -2292,7 +2356,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Hypericum canadense": {
     "Latin name": "Hypericum canadense",
@@ -2300,7 +2365,8 @@
     "Bloom time": [],
     "Height": "",
     "Sunlight": [],
-    "Moisture": []
+    "Moisture": [],
+    "plantType": ["Herbaceous perennial"]
   },
   "Hypericum majus": {
     "Latin name": "Hypericum majus",
@@ -2317,7 +2383,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Hypericum punctatum": {
     "Latin name": "Hypericum punctatum",
@@ -2334,7 +2401,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Hypericum virginicum": {
     "Latin name": "Hypericum virginicum",
@@ -2351,7 +2419,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Impatiens capensis": {
     "Latin name": "Impatiens capensis",
@@ -2369,7 +2438,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Ionactis linariifolia": {
     "Latin name": "Ionactis linariifolia",
@@ -2387,7 +2457,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Iris cristata": {
     "Latin name": "Iris cristata",
@@ -2395,7 +2466,7 @@
     "Bloom time": [
       "May"
     ],
-    "Height": ".25 - .75'",
+    "Height": ".25-.75'",
     "Sunlight": [
       "Full",
       "Part"
@@ -2403,7 +2474,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Iris versicolor": {
     "Latin name": "Iris versicolor",
@@ -2421,7 +2493,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Lespedeza capitata": {
     "Latin name": "Lespedeza capitata",
@@ -2438,7 +2511,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Lespedeza virginica": {
     "Latin name": "Lespedeza virginica",
@@ -2454,7 +2528,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Liatris aspera": {
     "Latin name": "Liatris aspera",
@@ -2473,7 +2548,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Liatris ligulastylis": {
     "Latin name": "Liatris ligulastylis",
@@ -2490,7 +2566,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Liatris microcephala": {
     "Latin name": "Liatris microcephala",
@@ -2503,7 +2580,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Liatris novae anglia": {
     "Latin name": "Liatris novae anglia",
@@ -2520,7 +2598,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Liatris scariosa var. nieuwlandii": {
     "Latin name": "Liatris scariosa var. nieuwlandii",
@@ -2537,7 +2616,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Liatris pycnostachya": {
     "Latin name": "Liatris pycnostachya",
@@ -2555,7 +2635,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Liatris spicata": {
     "Latin name": "Liatris spicata",
@@ -2573,7 +2654,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Lilum canadense": {
     "Latin name": "Lilum canadense",
@@ -2590,7 +2672,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Lobelia cardinalis": {
     "Latin name": "Lobelia cardinalis",
@@ -2608,7 +2691,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Lobelia siphilitica": {
     "Latin name": "Lobelia siphilitica",
@@ -2627,7 +2711,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Ludwigia alternifolia": {
     "Latin name": "Ludwigia alternifolia",
@@ -2644,7 +2729,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Lupinus perennis": {
     "Latin name": "Lupinus perennis",
@@ -2662,7 +2748,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Lycopus uniflorus": {
     "Latin name": "Lycopus uniflorus",
@@ -2672,14 +2759,15 @@
       "Aug",
       "Sep"
     ],
-    "Height": "1 - 2.5'",
+    "Height": "1-2.5'",
     "Sunlight": [
       "Full",
       "Part"
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Lythrum alatum": {
     "Latin name": "Lythrum alatum",
@@ -2696,7 +2784,8 @@
     ],
     "Moisture": [
       "Wet"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Maianthemum canadense": {
     "Latin name": "Maianthemum canadense",
@@ -2712,7 +2801,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Maianthemum racemosum": {
     "Latin name": "Maianthemum racemosum",
@@ -2733,7 +2823,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Maianthemum stellatum": {
     "Latin name": "Maianthemum stellatum",
@@ -2752,7 +2843,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Meehania cordata": {
     "Latin name": "Meehania cordata",
@@ -2767,7 +2859,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Mentha arvensis": {
     "Latin name": "Mentha arvensis",
@@ -2785,7 +2878,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Mentha canadensis": {
     "Latin name": "Mentha canadensis",
@@ -2795,7 +2889,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "1 -1.5'",
+    "Height": "1-1.5'",
     "Sunlight": [
       "Full",
       "Part"
@@ -2803,7 +2897,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Mertensia virginica": {
     "Latin name": "Mertensia virginica",
@@ -2819,7 +2914,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Mimulus alatus": {
     "Latin name": "Mimulus alatus",
@@ -2830,7 +2926,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "1 -3'",
+    "Height": "1-3'",
     "Sunlight": [
       "Full",
       "Part"
@@ -2838,7 +2934,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Mimulus ringens": {
     "Latin name": "Mimulus ringens",
@@ -2849,7 +2946,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2 '",
+    "Height": "2'",
     "Sunlight": [
       "Full",
       "Part"
@@ -2857,7 +2954,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Mitella diphylla": {
     "Latin name": "Mitella diphylla",
@@ -2874,7 +2972,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Mitchella repens": {
     "Latin name": "Mitchella repens",
@@ -2885,7 +2984,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "1-2\"",
+    "Height": "1-2\"'",
     "Sunlight": [
       "Part",
       "Shade"
@@ -2894,7 +2993,8 @@
       "Wet",
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Monarda bradburiana": {
     "Latin name": "Monarda bradburiana",
@@ -2910,7 +3010,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Monarda didyma": {
     "Latin name": "Monarda didyma",
@@ -2928,7 +3029,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Monarda didyma 'Colrain red'": {
     "Latin name": "Monarda didyma 'Colrain red'",
@@ -2941,7 +3043,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Monarda fistulosa": {
     "Latin name": "Monarda fistulosa",
@@ -2960,7 +3063,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Monarda punctata": {
     "Latin name": "Monarda punctata",
@@ -2978,7 +3082,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Oclemena acuminata": {
     "Latin name": "Oclemena acuminata",
@@ -2997,7 +3102,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Oenothera fruticosa": {
     "Latin name": "Oenothera fruticosa",
@@ -3014,7 +3120,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Oenethera pilosella": {
     "Latin name": "Oenethera pilosella",
@@ -3030,7 +3137,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Oligoneuron album": {
     "Latin name": "Oligoneuron album",
@@ -3048,7 +3156,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Oxalis violacea": {
     "Latin name": "Oxalis violacea",
@@ -3066,7 +3175,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Pachysandra procumbens": {
     "Latin name": "Pachysandra procumbens",
@@ -3075,7 +3185,7 @@
       "Apr",
       "May"
     ],
-    "Height": ".5 - 1'",
+    "Height": ".5-1'",
     "Sunlight": [
       "Part",
       "Shade"
@@ -3083,7 +3193,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Packera aurea": {
     "Latin name": "Packera aurea",
@@ -3101,7 +3212,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Packera obovata": {
     "Latin name": "Packera obovata",
@@ -3110,7 +3222,7 @@
       "May",
       "Jun"
     ],
-    "Height": ".25 - .5'",
+    "Height": ".25-.5'",
     "Sunlight": [
       "Full",
       "Part"
@@ -3118,7 +3230,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Parthenium integrifolium": {
     "Latin name": "Parthenium integrifolium",
@@ -3135,7 +3248,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Pedicularis canadensis": {
     "Latin name": "Pedicularis canadensis",
@@ -3152,7 +3266,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Penstemon calycosus": {
     "Latin name": "Penstemon calycosus",
@@ -3169,7 +3284,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Penstemon cobea": {
     "Latin name": "Penstemon cobea",
@@ -3179,7 +3295,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "2 ft",
+    "Height": "2ft'",
     "Sunlight": [
       "Full",
       "Part"
@@ -3187,7 +3303,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Penstemon digitalis": {
     "Latin name": "Penstemon digitalis",
@@ -3196,14 +3313,15 @@
       "Jun",
       "Jul"
     ],
-    "Height": "3 - 4'",
+    "Height": "3-4'",
     "Sunlight": [
       "Full",
       "Part"
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Penstemon grandiflorus": {
     "Latin name": "Penstemon grandiflorus",
@@ -3212,7 +3330,7 @@
       "May",
       "Jun"
     ],
-    "Height": "2 '",
+    "Height": "2'",
     "Sunlight": [
       "Full",
       "Part"
@@ -3220,7 +3338,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Penstemon hirsutus": {
     "Latin name": "Penstemon hirsutus",
@@ -3239,7 +3358,8 @@
       "Wet",
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Penstemon laevigatus": {
     "Latin name": "Penstemon laevigatus",
@@ -3257,7 +3377,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Penstemon smallii": {
     "Latin name": "Penstemon smallii",
@@ -3273,7 +3394,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Phlox divaricata": {
     "Latin name": "Phlox divaricata",
@@ -3283,14 +3405,15 @@
       "May",
       "Jun"
     ],
-    "Height": "12\"",
+    "Height": "12\"'",
     "Sunlight": [
       "Part",
       "Shade"
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Phlox maculata": {
     "Latin name": "Phlox maculata",
@@ -3307,7 +3430,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Phlox pilosa": {
     "Latin name": "Phlox pilosa",
@@ -3325,7 +3449,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Phlox stolonlifera": {
     "Latin name": "Phlox stolonlifera",
@@ -3335,14 +3460,15 @@
       "May",
       "Jun"
     ],
-    "Height": ".75 - 1'",
+    "Height": ".75-1'",
     "Sunlight": [
       "Full",
       "Part"
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Phlox subulata": {
     "Latin name": "Phlox subulata",
@@ -3351,14 +3477,15 @@
       "May",
       "Jun"
     ],
-    "Height": ".25 - .75",
+    "Height": ".25-.75'",
     "Sunlight": [
       "Full"
     ],
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Physostegia virginiana": {
     "Latin name": "Physostegia virginiana",
@@ -3375,7 +3502,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Podophyllum peltatum": {
     "Latin name": "Podophyllum peltatum",
@@ -3391,7 +3519,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Polemonium reptans": {
     "Latin name": "Polemonium reptans",
@@ -3409,7 +3538,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Polygonatum biflorum": {
     "Latin name": "Polygonatum biflorum",
@@ -3426,7 +3556,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Pontederia cordata": {
     "Latin name": "Pontederia cordata",
@@ -3442,7 +3573,8 @@
     ],
     "Moisture": [
       "Wet"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Porteranthus stipulatus": {
     "Latin name": "Porteranthus stipulatus",
@@ -3459,7 +3591,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Prenanthes alba": {
     "Latin name": "Prenanthes alba",
@@ -3476,7 +3609,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Prunella vulgaris": {
     "Latin name": "Prunella vulgaris",
@@ -3496,7 +3630,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Pycnanthemum incanum": {
     "Latin name": "Pycnanthemum incanum",
@@ -3513,7 +3648,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Pycnanthemum muticum": {
     "Latin name": "Pycnanthemum muticum",
@@ -3532,7 +3668,8 @@
       "Wet",
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Pycnanthemum tenuifolium": {
     "Latin name": "Pycnanthemum tenuifolium",
@@ -3543,7 +3680,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": ".75- 1.25'",
+    "Height": ".75-1.25'",
     "Sunlight": [
       "Full",
       "Part"
@@ -3551,7 +3688,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Pycnanthemum verticillatum": {
     "Latin name": "Pycnanthemum verticillatum",
@@ -3568,7 +3706,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Pycnanthemum vert. pilosum": {
     "Latin name": "Pycnanthemum vert. pilosum",
@@ -3584,7 +3723,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Pyncnanthemum virginianum": {
     "Latin name": "Pyncnanthemum virginianum",
@@ -3602,7 +3742,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Ratibida columnifera": {
     "Latin name": "Ratibida columnifera",
@@ -3620,7 +3761,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Ratibida pinnata": {
     "Latin name": "Ratibida pinnata",
@@ -3637,7 +3779,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Rhexia virginica": {
     "Latin name": "Rhexia virginica",
@@ -3655,7 +3798,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Rubus hispidus": {
     "Latin name": "Rubus hispidus",
@@ -3674,7 +3818,8 @@
       "Wet",
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Rudbeckia fulgida": {
     "Latin name": "Rudbeckia fulgida",
@@ -3684,7 +3829,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "1.5 - 3'",
+    "Height": "1.5-3'",
     "Sunlight": [
       "Full",
       "Part"
@@ -3692,7 +3837,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Rudbeckia hirta": {
     "Latin name": "Rudbeckia hirta",
@@ -3712,7 +3858,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Rudbeckia laciniata": {
     "Latin name": "Rudbeckia laciniata",
@@ -3731,7 +3878,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Rudbeckia triloba": {
     "Latin name": "Rudbeckia triloba",
@@ -3748,7 +3896,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Ruellia humilis": {
     "Latin name": "Ruellia humilis",
@@ -3766,7 +3915,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Rumex altissimus": {
     "Latin name": "Rumex altissimus",
@@ -3783,7 +3933,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Rumex orbiculatus": {
     "Latin name": "Rumex orbiculatus",
@@ -3800,7 +3951,8 @@
     ],
     "Moisture": [
       "Wet"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Sagittaria latifolia": {
     "Latin name": "Sagittaria latifolia",
@@ -3817,7 +3969,8 @@
     ],
     "Moisture": [
       "Wet"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Salvia azurea": {
     "Latin name": "Salvia azurea",
@@ -3827,7 +3980,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "3-5 ft",
+    "Height": "3-5ft'",
     "Sunlight": [
       "Full",
       "Part"
@@ -3835,7 +3988,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Salvia lyrata": {
     "Latin name": "Salvia lyrata",
@@ -3843,7 +3997,8 @@
     "Bloom time": [],
     "Height": "",
     "Sunlight": [],
-    "Moisture": []
+    "Moisture": [],
+    "plantType": ["Herbaceous perennial"]
   },
   "Sanguinaria canadensis": {
     "Latin name": "Sanguinaria canadensis",
@@ -3852,14 +4007,15 @@
       "Apr",
       "May"
     ],
-    "Height": "6- 12\"",
+    "Height": "6-12\"'",
     "Sunlight": [
       "Part",
       "Shade"
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Sanguisorba canadensis": {
     "Latin name": "Sanguisorba canadensis",
@@ -3875,7 +4031,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Scrophularia lanceolata": {
     "Latin name": "Scrophularia lanceolata",
@@ -3894,7 +4051,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Scutellaria incana": {
     "Latin name": "Scutellaria incana",
@@ -3913,7 +4071,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Scutelleria galericulata": {
     "Latin name": "Scutelleria galericulata",
@@ -3921,7 +4080,8 @@
     "Bloom time": [],
     "Height": "",
     "Sunlight": [],
-    "Moisture": []
+    "Moisture": [],
+    "plantType": ["Herbaceous perennial"]
   },
   "Scutellaria lateriflora": {
     "Latin name": "Scutellaria lateriflora",
@@ -3939,7 +4099,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Sedum pulchellum": {
     "Latin name": "Sedum pulchellum",
@@ -3947,7 +4108,8 @@
     "Bloom time": [],
     "Height": "",
     "Sunlight": [],
-    "Moisture": []
+    "Moisture": [],
+    "plantType": ["Herbaceous perennial"]
   },
   "Sedum ternatum": {
     "Latin name": "Sedum ternatum",
@@ -3957,7 +4119,7 @@
       "May",
       "Jun"
     ],
-    "Height": "8\"",
+    "Height": "8\"'",
     "Sunlight": [
       "Full",
       "Part",
@@ -3965,7 +4127,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Senna hebecarpa": {
     "Latin name": "Senna hebecarpa",
@@ -3974,14 +4137,15 @@
       "Jul",
       "Aug"
     ],
-    "Height": "5 '",
+    "Height": "5'",
     "Sunlight": [
       "Full",
       "Part"
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Sibbaldiopsis tridentata": {
     "Latin name": "Sibbaldiopsis tridentata",
@@ -3990,13 +4154,14 @@
       "Jun",
       "Jul"
     ],
-    "Height": ".25 - .5'",
+    "Height": ".25-.5'",
     "Sunlight": [
       "Full"
     ],
     "Moisture": [
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Silene regia": {
     "Latin name": "Silene regia",
@@ -4012,7 +4177,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Silene virginica": {
     "Latin name": "Silene virginica",
@@ -4029,7 +4195,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Silphium perfoliatum": {
     "Latin name": "Silphium perfoliatum",
@@ -4046,7 +4213,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Sisyrinchium albidum": {
     "Latin name": "Sisyrinchium albidum",
@@ -4055,7 +4223,7 @@
       "May",
       "Jun"
     ],
-    "Height": "0.5",
+    "Height": "0.5'",
     "Sunlight": [
       "Full",
       "Part"
@@ -4063,7 +4231,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Sisyrinchium augustifolium": {
     "Latin name": "Sisyrinchium augustifolium",
@@ -4080,7 +4249,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Sisyrinchium montanum": {
     "Latin name": "Sisyrinchium montanum",
@@ -4088,7 +4258,8 @@
     "Bloom time": [],
     "Height": "",
     "Sunlight": [],
-    "Moisture": []
+    "Moisture": [],
+    "plantType": ["Herbaceous perennial"]
   },
   "Solidago altissima": {
     "Latin name": "Solidago altissima",
@@ -4096,7 +4267,8 @@
     "Bloom time": [],
     "Height": "",
     "Sunlight": [],
-    "Moisture": []
+    "Moisture": [],
+    "plantType": ["Herbaceous perennial"]
   },
   "Solidago arguta": {
     "Latin name": "Solidago arguta",
@@ -4104,7 +4276,8 @@
     "Bloom time": [],
     "Height": "",
     "Sunlight": [],
-    "Moisture": []
+    "Moisture": [],
+    "plantType": ["Herbaceous perennial"]
   },
   "Solidago bicolor": {
     "Latin name": "Solidago bicolor",
@@ -4123,7 +4296,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Solidago caesia": {
     "Latin name": "Solidago caesia",
@@ -4133,7 +4307,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "3 ft",
+    "Height": "3ft'",
     "Sunlight": [
       "Full",
       "Part",
@@ -4142,7 +4316,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Solidago canadensis": {
     "Latin name": "Solidago canadensis",
@@ -4150,7 +4325,8 @@
     "Bloom time": [],
     "Height": "",
     "Sunlight": [],
-    "Moisture": []
+    "Moisture": [],
+    "plantType": ["Herbaceous perennial"]
   },
   "Solidago flexicaulis": {
     "Latin name": "Solidago flexicaulis",
@@ -4160,7 +4336,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "3 ft",
+    "Height": "3ft'",
     "Sunlight": [
       "Full",
       "Part",
@@ -4169,7 +4345,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Solidago gigantea": {
     "Latin name": "Solidago gigantea",
@@ -4186,7 +4363,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Solidago juncea": {
     "Latin name": "Solidago juncea",
@@ -4203,7 +4381,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Solidago nemoralis": {
     "Latin name": "Solidago nemoralis",
@@ -4212,7 +4391,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2 '",
+    "Height": "2'",
     "Sunlight": [
       "Full",
       "Part"
@@ -4220,7 +4399,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Solidago odora": {
     "Latin name": "Solidago odora",
@@ -4229,7 +4409,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3 '",
+    "Height": "3'",
     "Sunlight": [
       "Full",
       "Part"
@@ -4237,7 +4417,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Solidago patula": {
     "Latin name": "Solidago patula",
@@ -4256,7 +4437,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Solidago ptarmacoides": {
     "Latin name": "Solidago ptarmacoides",
@@ -4268,7 +4450,8 @@
     ],
     "Moisture": [
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Solidago puberula": {
     "Latin name": "Solidago puberula",
@@ -4278,7 +4461,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "1 - 3'",
+    "Height": "1-3'",
     "Sunlight": [
       "Full",
       "Part"
@@ -4286,7 +4469,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Solidago rigidum": {
     "Latin name": "Solidago rigidum",
@@ -4304,7 +4488,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Solidago rugosa": {
     "Latin name": "Solidago rugosa",
@@ -4323,7 +4508,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Solidago sempervirens": {
     "Latin name": "Solidago sempervirens",
@@ -4333,13 +4519,14 @@
       "Sep",
       "Oct"
     ],
-    "Height": "2 - 3.5'",
+    "Height": "2-3.5'",
     "Sunlight": [
       "Full"
     ],
     "Moisture": [
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Solidago speciosa": {
     "Latin name": "Solidago speciosa",
@@ -4357,7 +4544,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Solidago uliginosa": {
     "Latin name": "Solidago uliginosa",
@@ -4375,7 +4563,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Stylophorum diphyllum": {
     "Latin name": "Stylophorum diphyllum",
@@ -4392,7 +4581,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Symphoricarpos orbiculatus": {
     "Latin name": "Symphoricarpos orbiculatus",
@@ -4408,7 +4598,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Symphyotrichum cordifolium": {
     "Latin name": "Symphyotrichum cordifolium",
@@ -4417,7 +4608,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "1- 3'",
+    "Height": "1-3'",
     "Sunlight": [
       "Full",
       "Part",
@@ -4425,7 +4616,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Symphyotrichum dumosum": {
     "Latin name": "Symphyotrichum dumosum",
@@ -4443,7 +4635,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Symphyotrichum ericoides": {
     "Latin name": "Symphyotrichum ericoides",
@@ -4461,7 +4654,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Symphyo. ericoides 'Snow Flurry'": {
     "Latin name": "Symphyo. ericoides 'Snow Flurry'",
@@ -4471,7 +4665,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": ".25 - .5'",
+    "Height": ".25-.5'",
     "Sunlight": [
       "Full",
       "Part"
@@ -4479,7 +4673,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Symphyotrichum firmum": {
     "Latin name": "Symphyotrichum firmum",
@@ -4487,7 +4682,8 @@
     "Bloom time": [],
     "Height": "",
     "Sunlight": [],
-    "Moisture": []
+    "Moisture": [],
+    "plantType": ["Herbaceous perennial"]
   },
   "Symphyotrichum laeve": {
     "Latin name": "Symphyotrichum laeve",
@@ -4505,7 +4701,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Symphyotrichum lateriflorum": {
     "Latin name": "Symphyotrichum lateriflorum",
@@ -4522,7 +4719,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Symphyotrichum novae-angliae": {
     "Latin name": "Symphyotrichum novae-angliae",
@@ -4540,7 +4738,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Symphyotrichum novi-belgii": {
     "Latin name": "Symphyotrichum novi-belgii",
@@ -4557,7 +4756,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Symphyotrichum oblongifolium": {
     "Latin name": "Symphyotrichum oblongifolium",
@@ -4575,7 +4775,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Symphyotrichum oolentangiense": {
     "Latin name": "Symphyotrichum oolentangiense",
@@ -4593,7 +4794,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Symphyotrichum pilosum": {
     "Latin name": "Symphyotrichum pilosum",
@@ -4609,7 +4811,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Symphyotrichum prenanthoides": {
     "Latin name": "Symphyotrichum prenanthoides",
@@ -4626,7 +4829,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Symphyotrichum puniceum": {
     "Latin name": "Symphyotrichum puniceum",
@@ -4644,10 +4848,11 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
-  "Symphyotrichum  sericeum": {
-    "Latin name": "Symphyotrichum  sericeum",
+  "Symphyotrichum sericeum": {
+    "Latin name": "Symphyotrichum sericeum",
     "Common name": "Silky aster",
     "Bloom time": [
       "Sep",
@@ -4661,7 +4866,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Symphyotrichum shortii": {
     "Latin name": "Symphyotrichum shortii",
@@ -4678,7 +4884,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Teucrium canadense": {
     "Latin name": "Teucrium canadense",
@@ -4695,7 +4902,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Thalictrum dasycarpum": {
     "Latin name": "Thalictrum dasycarpum",
@@ -4711,7 +4919,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Thalictrum dioicum": {
     "Latin name": "Thalictrum dioicum",
@@ -4728,7 +4937,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Thalictrum pubescens": {
     "Latin name": "Thalictrum pubescens",
@@ -4738,7 +4948,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "1.5 - 5'",
+    "Height": "1.5-5'",
     "Sunlight": [
       "Full",
       "Part"
@@ -4746,7 +4956,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Thalictrum rochebrunianum": {
     "Latin name": "Thalictrum rochebrunianum",
@@ -4754,7 +4965,8 @@
     "Bloom time": [],
     "Height": "",
     "Sunlight": [],
-    "Moisture": []
+    "Moisture": [],
+    "plantType": ["Herbaceous perennial"]
   },
   "Thalictrum thalictroides": {
     "Latin name": "Thalictrum thalictroides",
@@ -4764,14 +4976,15 @@
       "May",
       "Jun"
     ],
-    "Height": ".25- .75'",
+    "Height": ".25-.75'",
     "Sunlight": [
       "Part",
       "Shade"
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Thermopsis carolinia": {
     "Latin name": "Thermopsis carolinia",
@@ -4788,7 +5001,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Tiarella cordifolia": {
     "Latin name": "Tiarella cordifolia",
@@ -4804,7 +5018,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Tradescantia bracteata": {
     "Latin name": "Tradescantia bracteata",
@@ -4821,7 +5036,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Tradescantia ohiensis": {
     "Latin name": "Tradescantia ohiensis",
@@ -4839,7 +5055,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Tradescantia virginiana": {
     "Latin name": "Tradescantia virginiana",
@@ -4857,7 +5074,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Trillium erectum": {
     "Latin name": "Trillium erectum",
@@ -4867,14 +5085,15 @@
       "May",
       "Jun"
     ],
-    "Height": ".75 - 1.25",
+    "Height": ".75-1.25'",
     "Sunlight": [
       "Part",
       "Shade"
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Trillum grandiflorum": {
     "Latin name": "Trillum grandiflorum",
@@ -4884,13 +5103,14 @@
       "May",
       "Jun"
     ],
-    "Height": ".5 -1'",
+    "Height": ".5-1'",
     "Sunlight": [
       "Part"
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Triodanis perfoliata": {
     "Latin name": "Triodanis perfoliata",
@@ -4908,7 +5128,8 @@
     ],
     "Moisture": [
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Uvularia grandiflora": {
     "Latin name": "Uvularia grandiflora",
@@ -4917,14 +5138,15 @@
       "Apr",
       "May"
     ],
-    "Height": "1- 1.5'",
+    "Height": "1-1.5'",
     "Sunlight": [
       "Part",
       "Shade"
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Uvularia sessilifolia": {
     "Latin name": "Uvularia sessilifolia",
@@ -4933,7 +5155,7 @@
       "Apr",
       "May"
     ],
-    "Height": "12 \"",
+    "Height": "12\"'",
     "Sunlight": [
       "Part",
       "Shade"
@@ -4941,7 +5163,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Verbena hastata": {
     "Latin name": "Verbena hastata",
@@ -4951,7 +5174,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "5 ft",
+    "Height": "5ft'",
     "Sunlight": [
       "Full",
       "Part"
@@ -4959,7 +5182,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Verbena stricta": {
     "Latin name": "Verbena stricta",
@@ -4978,7 +5202,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Verbena urtifolia": {
     "Latin name": "Verbena urtifolia",
@@ -4986,7 +5211,8 @@
     "Bloom time": [],
     "Height": "",
     "Sunlight": [],
-    "Moisture": []
+    "Moisture": [],
+    "plantType": ["Herbaceous perennial"]
   },
   "Verbesina alternifolia": {
     "Latin name": "Verbesina alternifolia",
@@ -5004,7 +5230,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Vernonia fasciculata": {
     "Latin name": "Vernonia fasciculata",
@@ -5014,14 +5241,15 @@
       "Aug",
       "Sep"
     ],
-    "Height": "6 ft",
+    "Height": "6ft'",
     "Sunlight": [
       "Full",
       "Part"
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Vernonia gigantea": {
     "Latin name": "Vernonia gigantea",
@@ -5031,14 +5259,15 @@
       "Sep",
       "Oct"
     ],
-    "Height": "5 ft",
+    "Height": "5ft'",
     "Sunlight": [
       "Full",
       "Part"
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Vernonia noveboracensis": {
     "Latin name": "Vernonia noveboracensis",
@@ -5047,7 +5276,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "4- 7 ft",
+    "Height": "4-7ft'",
     "Sunlight": [
       "Full",
       "Part"
@@ -5055,7 +5284,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Veronicastrum virginicum": {
     "Latin name": "Veronicastrum virginicum",
@@ -5065,14 +5295,15 @@
       "Jul",
       "Aug"
     ],
-    "Height": "3-6 ft",
+    "Height": "3-6ft'",
     "Sunlight": [
       "Full",
       "Part"
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Viola palmata": {
     "Latin name": "Viola palmata",
@@ -5080,7 +5311,8 @@
     "Bloom time": [],
     "Height": "",
     "Sunlight": [],
-    "Moisture": []
+    "Moisture": [],
+    "plantType": ["Herbaceous perennial"]
   },
   "Viola pedata": {
     "Latin name": "Viola pedata",
@@ -5090,7 +5322,7 @@
       "May",
       "Jun"
     ],
-    "Height": ".25 - .5",
+    "Height": ".25-.5'",
     "Sunlight": [
       "Full",
       "Part"
@@ -5098,7 +5330,8 @@
     "Moisture": [
       "Medium",
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Viola pedatifida": {
     "Latin name": "Viola pedatifida",
@@ -5108,14 +5341,15 @@
       "May",
       "Jun"
     ],
-    "Height": "0.5",
+    "Height": "0.5'",
     "Sunlight": [
       "Full",
       "Part"
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Viola pubescens": {
     "Latin name": "Viola pubescens",
@@ -5125,14 +5359,15 @@
       "May",
       "Jun"
     ],
-    "Height": ".25-1.5",
+    "Height": ".25-1.5'",
     "Sunlight": [
       "Part",
       "Shade"
     ],
     "Moisture": [
       "Dry"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Viola sororia": {
     "Latin name": "Viola sororia",
@@ -5150,7 +5385,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Viola sororia \"Freckles\"": {
     "Latin name": "Viola sororia \"Freckles\"",
@@ -5158,7 +5394,8 @@
     "Bloom time": [],
     "Height": "",
     "Sunlight": [],
-    "Moisture": []
+    "Moisture": [],
+    "plantType": ["Herbaceous perennial"]
   },
   "Viola striata": {
     "Latin name": "Viola striata",
@@ -5173,7 +5410,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Zizia aptera": {
     "Latin name": "Zizia aptera",
@@ -5189,7 +5427,8 @@
     ],
     "Moisture": [
       "Medium"
-    ]
+    ],
+    "plantType": ["Herbaceous perennial"]
   },
   "Zizia aurea": {
     "Latin name": "Zizia aurea",
@@ -5206,6 +5445,3037 @@
       "Part"
     ],
     "Moisture": [
+      "Medium"
+    ],
+    "plantType": ["Herbaceous perennial"]
+  },
+  "Agrostis perenns": {
+    "Latin name": "Agrostis perenns",
+    "Common name": "Bentgrass",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Andropogon gerardii": {
+    "Latin name": "Andropogon gerardii",
+    "Common name": "Big Blue Stem",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [],
+    "Height": "2-5'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Andropogon virginicus": {
+    "Latin name": "Andropogon virginicus",
+    "Common name": "Broom sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Aug",
+      "Sep"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Bouteloua curtipendula": {
+    "Latin name": "Bouteloua curtipendula",
+    "Common name": "Side oats grama",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Boutelua gracilis": {
+    "Latin name": "Boutelua gracilis",
+    "Common name": "Blue grama",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "1'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Bromus ciliatus": {
+    "Latin name": "Bromus ciliatus",
+    "Common name": "Fringed Brome",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Bromus kalmii": {
+    "Latin name": "Bromus kalmii",
+    "Common name": "Prairie Brome",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Bromus pubescens": {
+    "Latin name": "Bromus pubescens",
+    "Common name": "Hairy Wood Chess",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Calamagrostis canadensis": {
+    "Latin name": "Calamagrostis canadensis",
+    "Common name": "Blue Joint Grass",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Calamagrostis cinnoides": {
+    "Latin name": "Calamagrostis cinnoides",
+    "Common name": "Nuttall's reed grass",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Carex appalachica": {
+    "Latin name": "Carex appalachica",
+    "Common name": "Appalachian sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "1'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Carex blanda": {
+    "Latin name": "Carex blanda",
+    "Common name": "Common wood sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "1'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Carex brevior": {
+    "Latin name": "Carex brevior",
+    "Common name": "Plains oval sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Carex cephalophora": {
+    "Latin name": "Carex cephalophora",
+    "Common name": "Short headed bracted sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "1.5'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Carex comosa": {
+    "Latin name": "Carex comosa",
+    "Common name": "Bristly sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jun"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Carex crinita": {
+    "Latin name": "Carex crinita",
+    "Common name": "Fringed sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "1-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Carex eburnea": {
+    "Latin name": "Carex eburnea",
+    "Common name": "Bristle-leaf sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": ".5-1'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Carex gracillima": {
+    "Latin name": "Carex gracillima",
+    "Common name": "Purple sheathed graceful sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Carex intumescens": {
+    "Latin name": "Carex intumescens",
+    "Common name": "Shining burr sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Carex lupalina": {
+    "Latin name": "Carex lupalina",
+    "Common name": "Common hop sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Carex muskingumensis": {
+    "Latin name": "Carex muskingumensis",
+    "Common name": "Palm sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jun"
+    ],
+    "Height": ".5-.75'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Carex pensylvanica": {
+    "Latin name": "Carex pensylvanica",
+    "Common name": "Pennsylvania sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": "8\"'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Carex plantaginea": {
+    "Latin name": "Carex plantaginea",
+    "Common name": "Plantain leaved sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": "12\"'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Carex platyphylla": {
+    "Latin name": "Carex platyphylla",
+    "Common name": "Broad leaved sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [],
+    "Height": ".75-1'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Carex radiata": {
+    "Latin name": "Carex radiata",
+    "Common name": "Eastern star sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jun"
+    ],
+    "Height": "1'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Carex scoparia": {
+    "Latin name": "Carex scoparia",
+    "Common name": "Lance-fruited oval sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Carex squarrosa": {
+    "Latin name": "Carex squarrosa",
+    "Common name": "Narrow leaved cattail sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Carex sprengelii": {
+    "Latin name": "Carex sprengelii",
+    "Common name": "Long-beaked Sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "1-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Carex stricta": {
+    "Latin name": "Carex stricta",
+    "Common name": "Tussock Sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "3-4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Carex swanii": {
+    "Latin name": "Carex swanii",
+    "Common name": "Swan's sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [],
+    "Height": ".75-1'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Carex typhina": {
+    "Latin name": "Carex typhina",
+    "Common name": "Common cattail sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "1'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Carex vulpinoidea": {
+    "Latin name": "Carex vulpinoidea",
+    "Common name": "Fox Sedge",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "2-4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Chasmanthium latifolium": {
+    "Latin name": "Chasmanthium latifolium",
+    "Common name": "Northern sea oats",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Danthonia spicata": {
+    "Latin name": "Danthonia spicata",
+    "Common name": "Poverty Oat Grass",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "1'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Deschampsia flexuosa": {
+    "Latin name": "Deschampsia flexuosa",
+    "Common name": "Wavy hairgrass",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [],
+    "Height": "2-3ft'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Diarrhena obovata": {
+    "Latin name": "Diarrhena obovata",
+    "Common name": "Beak grass",
+    "plantType": ["Herbaceous perennial", "Grasses and sedges"],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Elymus canadensis": {
+    "Latin name": "Elymus canadensis",
+    "Common name": "Canada Wild Rye",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Height": "5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Elymus hystrix": {
+    "Latin name": "Elymus hystrix",
+    "Common name": "Bottlebrush grass",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "3-5'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Elymus riparius": {
+    "Latin name": "Elymus riparius",
+    "Common name": "Riverbank Wild Rye",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Elymus virginicus": {
+    "Latin name": "Elymus virginicus",
+    "Common name": "Virginia Wild Rye",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Height": "4'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Elymus villosus": {
+    "Latin name": "Elymus villosus",
+    "Common name": "Silky wild rye",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Eragrostis spectabilis": {
+    "Latin name": "Eragrostis spectabilis",
+    "Common name": "Purple lovegrass",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Glyceria striata": {
+    "Latin name": "Glyceria striata",
+    "Common name": "Fowl manna grass",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Hierochloe odorata": {
+    "Latin name": "Hierochloe odorata",
+    "Common name": "Sweetgrass",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Juncus tenuis": {
+    "Latin name": "Juncus tenuis",
+    "Common name": "",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Muhlenbergia capillaris": {
+    "Latin name": "Muhlenbergia capillaris",
+    "Common name": "Pink Hairgrass",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Panicum acuminatum": {
+    "Latin name": "Panicum acuminatum",
+    "Common name": "Hairy panic grass",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Panicum virgatum": {
+    "Latin name": "Panicum virgatum",
+    "Common name": "Switchgrass",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "3-6'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Poa palustris": {
+    "Latin name": "Poa palustris",
+    "Common name": "Fowl bluegrass",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Poa pratensis": {
+    "Latin name": "Poa pratensis",
+    "Common name": "Kentucky bluegrass",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Schizachyrium scoparium": {
+    "Latin name": "Schizachyrium scoparium",
+    "Common name": "Little bluestem",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Sep",
+      "Oct",
+      "Nov"
+    ],
+    "Height": "",
+    "Sunlight": [
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Sorghastrum nutans": {
+    "Latin name": "Sorghastrum nutans",
+    "Common name": "Indiangrass",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Sep",
+      "Oct",
+      "Nov"
+    ],
+    "Height": "",
+    "Sunlight": [
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Sphenopholis obtusata": {
+    "Latin name": "Sphenopholis obtusata",
+    "Common name": "Prairie Wedgegrass",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Sporobolus heterolepis": {
+    "Latin name": "Sporobolus heterolepis",
+    "Common name": "Prairie Dropseed",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Sep",
+      "Oct",
+      "Nov"
+    ],
+    "Height": "",
+    "Sunlight": [
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Tridens flavus": {
+    "Latin name": "Tridens flavus",
+    "Common name": "Purpletop",
+    "plantType": ["Grasses and sedges"],
+    "Bloom time": [
+      "Sep",
+      "Oct",
+      "Nov"
+    ],
+    "Height": "",
+    "Sunlight": [
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Adiantum pedatum": {
+    "Latin name": "Adiantum pedatum",
+    "Common name": "Maidenhair fern",
+    "plantType": ["Ferns"],
+    "Height": "1-2'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Asplenium platyneuron": {
+    "Latin name": "Asplenium platyneuron",
+    "Common name": "Ebony spleenwort",
+    "plantType": ["Ferns"],
+    "Height": ".75-1.75'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Athyrium felix-femina": {
+    "Latin name": "Athyrium felix-femina",
+    "Common name": "Lady fern",
+    "plantType": ["Ferns"],
+    "Height": "1-2'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Botrychium virginianum": {
+    "Latin name": "Botrychium virginianum",
+    "Common name": "Rattlesnake Fern",
+    "plantType": ["Ferns"],
+    "Height": "1.4'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Cryptogramma stelleri": {
+    "Latin name": "Cryptogramma stelleri",
+    "Common name": "Slender rock brake",
+    "plantType": ["Ferns"],
+    "Height": ".25-.75'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Cystopteris fragilis": {
+    "Latin name": "Cystopteris fragilis",
+    "Common name": "Fragile fern",
+    "plantType": ["Ferns"],
+    "Height": "1.25'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Dennstaedtia punctilobula": {
+    "Latin name": "Dennstaedtia punctilobula",
+    "Common name": "Hayscented fern",
+    "plantType": ["Ferns"],
+    "Height": "1-2'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Dryopteris cristata": {
+    "Latin name": "Dryopteris cristata",
+    "Common name": "Crested wood fern",
+    "plantType": ["Ferns"],
+    "Height": "1-3'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Dryopteris filix-mas": {
+    "Latin name": "Dryopteris filix-mas",
+    "Common name": "Male fern",
+    "plantType": ["Ferns"],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Dryopteris goldiana": {
+    "Latin name": "Dryopteris goldiana",
+    "Common name": "Goldie's fern",
+    "plantType": ["Ferns"],
+    "Height": "2.5-3.5'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Dryopteris intermedia": {
+    "Latin name": "Dryopteris intermedia",
+    "Common name": "Evergreen wood fern",
+    "plantType": ["Ferns"],
+    "Height": "1.5-2'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Dryopteris marginalis": {
+    "Latin name": "Dryopteris marginalis",
+    "Common name": "Marginal woodfern",
+    "plantType": ["Ferns"],
+    "Height": "18-24\"'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Gymnocarpium dryopteris": {
+    "Latin name": "Gymnocarpium dryopteris",
+    "Common name": "Oak fern",
+    "plantType": ["Ferns"],
+    "Height": ".25-1.25'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Matteuccia struthiopteris": {
+    "Latin name": "Matteuccia struthiopteris",
+    "Common name": "Ostrich fern",
+    "plantType": ["Ferns"],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Onoclea sensibilis": {
+    "Latin name": "Onoclea sensibilis",
+    "Common name": "Sensitive fern",
+    "plantType": ["Ferns"],
+    "Height": "1-2'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Osmunda cinnamomea": {
+    "Latin name": "Osmunda cinnamomea",
+    "Common name": "Cinnamon fern",
+    "plantType": ["Ferns"],
+    "Height": "2-4'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Osmunda claytonia": {
+    "Latin name": "Osmunda claytonia",
+    "Common name": "Interrupted fern",
+    "plantType": ["Ferns"],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Osmunda regalis": {
+    "Latin name": "Osmunda regalis",
+    "Common name": "Royal fern",
+    "plantType": ["Ferns"],
+    "Height": "2-3.5'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Parathelypteris noveboracensis": {
+    "Latin name": "Parathelypteris noveboracensis",
+    "Common name": "New York fern",
+    "plantType": ["Ferns"],
+    "Height": ".75-2'",
+    "Sunlight": [
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Pellaea atropurpurea": {
+    "Latin name": "Pellaea atropurpurea",
+    "Common name": "Purple cliffbrake",
+    "plantType": ["Ferns"],
+    "Height": ".25-1'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Dry"
+    ]
+  },
+  "Phegopteris connectilis": {
+    "Latin name": "Phegopteris connectilis",
+    "Common name": "Narrow beech fern",
+    "plantType": ["Ferns"],
+    "Height": ".25-1'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Phegopteris hexagonoptera": {
+    "Latin name": "Phegopteris hexagonoptera",
+    "Common name": "Broad beech fern",
+    "plantType": ["Ferns"],
+    "Height": "1-1.5'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Polypodium virginianum": {
+    "Latin name": "Polypodium virginianum",
+    "Common name": "Rock polypody",
+    "plantType": ["Ferns"],
+    "Height": ".5'-1'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Polystichum acrostoides": {
+    "Latin name": "Polystichum acrostoides",
+    "Common name": "Christmas fern",
+    "plantType": ["Ferns"],
+    "Height": ".75-1.5'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Polystichum braunii": {
+    "Latin name": "Polystichum braunii",
+    "Common name": "Braun's holly fern",
+    "plantType": ["Ferns"],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Thelypteris novaboracensis": {
+    "Latin name": "Thelypteris novaboracensis",
+    "Common name": "New York fern",
+    "plantType": ["Ferns"],
+    "Height": ".75-2'",
+    "Sunlight": [
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Thelypteris palustris": {
+    "Latin name": "Thelypteris palustris",
+    "Common name": "Marsh fern",
+    "plantType": ["Ferns"],
+    "Height": "1-1.5'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Woodsia obtusa": {
+    "Latin name": "Woodsia obtusa",
+    "Common name": "Blunt-lobed woodsia",
+    "plantType": ["Ferns"],
+    "Height": "1-1.5'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Woodwardia areolata": {
+    "Latin name": "Woodwardia areolata",
+    "Common name": "Netted chain fern",
+    "plantType": ["Ferns"],
+    "Height": "1.5-2'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Woodwardia virginica": {
+    "Latin name": "Woodwardia virginica",
+    "Common name": "Chain fern",
+    "plantType": ["Ferns"],
+    "Height": "2-4'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Alnus incana": {
+    "Latin name": "Alnus incana",
+    "Common name": "Speckled alder",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "Height": "6-15'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Alnus serrulata": {
+    "Latin name": "Alnus serrulata",
+    "Common name": "Smooth alder",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Mar",
+      "Apr",
+      "May"
+    ],
+    "Height": "10-15'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Amelanchier canadensis": {
+    "Latin name": "Amelanchier canadensis",
+    "Common name": "Serviceberry, Shadblow",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Height": "10-18'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Amorpha fruticosa": {
+    "Latin name": "Amorpha fruticosa",
+    "Common name": "False Indigo Bush",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "10-12'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Aronia arbutifolia": {
+    "Latin name": "Aronia arbutifolia",
+    "Common name": "Red chokeberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "5-12'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Aronia floribunda(prunifolia)": {
+    "Latin name": "Aronia floribunda(prunifolia)",
+    "Common name": "Purple chokeberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Height": "6-8'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Aronia melanocarpa": {
+    "Latin name": "Aronia melanocarpa",
+    "Common name": "Black chokeberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "3-10'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Arctostaphylos uva-ursi": {
+    "Latin name": "Arctostaphylos uva-ursi",
+    "Common name": "Red bearberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": ".25-.5'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Baccharis halimifolia": {
+    "Latin name": "Baccharis halimifolia",
+    "Common name": "Eastern false willow",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "6-12'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Calycanthus floridus": {
+    "Latin name": "Calycanthus floridus",
+    "Common name": "Carolina allspice",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "6-10'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Ceanothus americanus": {
+    "Latin name": "Ceanothus americanus",
+    "Common name": "New Jersey tea",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Ceanothus ovatus": {
+    "Latin name": "Ceanothus ovatus",
+    "Common name": "Red Root",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Jun"
+    ],
+    "Height": "3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Cephalanthus occidentalis": {
+    "Latin name": "Cephalanthus occidentalis",
+    "Common name": "Buttonbush",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "3-8'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Chamaedaphne calyculata": {
+    "Latin name": "Chamaedaphne calyculata",
+    "Common name": "Leatherleaf",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "May"
+    ],
+    "Height": "1-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Chionanthus virginicus": {
+    "Latin name": "Chionanthus virginicus",
+    "Common name": "Fringetree",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Jun"
+    ],
+    "Height": "10-20'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Clethra alnifolia": {
+    "Latin name": "Clethra alnifolia",
+    "Common name": "Sweet Pepperbush",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "4-8'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Comptonia peregrina": {
+    "Latin name": "Comptonia peregrina",
+    "Common name": "Sweetfern",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "1-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Cornus (Swida) amomum": {
+    "Latin name": "Cornus (Swida) amomum",
+    "Common name": "Silky dogwood",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "3-8'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Cornus canadensis": {
+    "Latin name": "Cornus canadensis",
+    "Common name": "Bunchberry",
+    "plantType": ["Herbaceous perennial", "Shrubs"],
+    "Bloom time": [],
+    "Height": ".25-.5'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Cornus (Swida) racemosa": {
+    "Latin name": "Cornus (Swida) racemosa",
+    "Common name": "Gray dogwood",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "3-8'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Cornus (Swida) sericea": {
+    "Latin name": "Cornus (Swida) sericea",
+    "Common name": "Red Osier Dogwood",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "3-8'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Corylus americana": {
+    "Latin name": "Corylus americana",
+    "Common name": "American Hazelnut",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Mar",
+      "Apr"
+    ],
+    "Height": "5-9'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Diervilla lonicera": {
+    "Latin name": "Diervilla lonicera",
+    "Common name": "Northern bush honeysuckle",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "2-4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Dirca palustris": {
+    "Latin name": "Dirca palustris",
+    "Common name": "Leatherwood",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "3-6'",
+    "Sunlight": [
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Euonymous atropurpurea": {
+    "Latin name": "Euonymous atropurpurea",
+    "Common name": "Eastern wahoo",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Fothergilla gardenii": {
+    "Latin name": "Fothergilla gardenii",
+    "Common name": "Dwarf witch alder",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "3-6'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Gaylussacia baccata": {
+    "Latin name": "Gaylussacia baccata",
+    "Common name": "Black huckleberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "1-3'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Hamamelis virginiana": {
+    "Latin name": "Hamamelis virginiana",
+    "Common name": "American Witch Hazel",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "6-15'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Hydrangea arborescens": {
+    "Latin name": "Hydrangea arborescens",
+    "Common name": "Smooth hydrangea",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "2-4'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Hydrangea quercifolia": {
+    "Latin name": "Hydrangea quercifolia",
+    "Common name": "Oakleaf Hydrangea",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "6-10'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Hypericum kalmianum": {
+    "Latin name": "Hypericum kalmianum",
+    "Common name": "Kalm's St John's Wort",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Hypericum prolificum": {
+    "Latin name": "Hypericum prolificum",
+    "Common name": "Shrubby St. John's Wort",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2-4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Ilex glabra": {
+    "Latin name": "Ilex glabra",
+    "Common name": "Inkberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "3-6'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Ilex opaca": {
+    "Latin name": "Ilex opaca",
+    "Common name": "American holly",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "12-30'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Ilex verticillata": {
+    "Latin name": "Ilex verticillata",
+    "Common name": "Winterberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": "4-10'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Itea virginica": {
+    "Latin name": "Itea virginica",
+    "Common name": "Sweetspire",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "3-4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Iva frutescens": {
+    "Latin name": "Iva frutescens",
+    "Common name": "Marsh elder",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "4-8'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Juniperus communis": {
+    "Latin name": "Juniperus communis",
+    "Common name": "Common juniper",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "5-25'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Juniperus horizontalis": {
+    "Latin name": "Juniperus horizontalis",
+    "Common name": "Creeping juniper",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": ".25-.5'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Kalmia angustifolia": {
+    "Latin name": "Kalmia angustifolia",
+    "Common name": "Sheep laurel",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Jun"
+    ],
+    "Height": "1-3'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Kalmia latifolia": {
+    "Latin name": "Kalmia latifolia",
+    "Common name": "Mountain laurel",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Jun"
+    ],
+    "Height": "4-10'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Leucothoe fontanesiana": {
+    "Latin name": "Leucothoe fontanesiana",
+    "Common name": "Drooping leucothoe",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "2-4'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Lindera benzoin": {
+    "Latin name": "Lindera benzoin",
+    "Common name": "Spicebush",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "6-12'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Myrica pensylvanica (Morella caroliniensis)": {
+    "Latin name": "Myrica pensylvanica (Morella caroliniensis)",
+    "Common name": "Bayberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": "2-6'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Nemopanthus mucronata": {
+    "Latin name": "Nemopanthus mucronata",
+    "Common name": "American moutain holly",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "5-9'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Photinia (Aronia) arbutifolia": {
+    "Latin name": "Photinia (Aronia) arbutifolia",
+    "Common name": "Red chokeberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "5-12'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Photinia (Aronia) melanocarpa": {
+    "Latin name": "Photinia (Aronia) melanocarpa",
+    "Common name": "Black chokeberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "3-10'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Physocarpus opulifolius": {
+    "Latin name": "Physocarpus opulifolius",
+    "Common name": "Ninebark",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "4-9'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Prunus americana": {
+    "Latin name": "Prunus americana",
+    "Common name": "American plum",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "4-10'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Prunus maritima": {
+    "Latin name": "Prunus maritima",
+    "Common name": "Beach plum",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "3-6'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Prunus pumila": {
+    "Latin name": "Prunus pumila",
+    "Common name": "Sand cherry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Mar",
+      "Sep",
+      "Oct",
+      "Nov"
+    ],
+    "Height": "",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Rhododendron arborescens": {
+    "Latin name": "Rhododendron arborescens",
+    "Common name": "Sweet azalea",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Jun",
+      "Oct",
+      "Nov"
+    ],
+    "Height": "",
+    "Sunlight": [
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Rhododendron canadense": {
+    "Latin name": "Rhododendron canadense",
+    "Common name": "Rhodora",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "2-4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Rhododendron maximum": {
+    "Latin name": "Rhododendron maximum",
+    "Common name": "Rosebay rhododendron",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "6-15'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Rhododendron periclymenoides": {
+    "Latin name": "Rhododendron periclymenoides",
+    "Common name": "Pinxterbloom azalea",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "3-8'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Rhododendron prinophyllum": {
+    "Latin name": "Rhododendron prinophyllum",
+    "Common name": "Early azalea",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "3-8'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Rhododendron vaseyi": {
+    "Latin name": "Rhododendron vaseyi",
+    "Common name": "Pinkshell azalea",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "8-15'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Rhododendron viscosum": {
+    "Latin name": "Rhododendron viscosum",
+    "Common name": "Swamp azalea",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "3-5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Rhus aromatica": {
+    "Latin name": "Rhus aromatica",
+    "Common name": "Fragrant sumac",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "3-7'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Rhus copallina": {
+    "Latin name": "Rhus copallina",
+    "Common name": "Winged sumac",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "5-8'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Rhus glabra": {
+    "Latin name": "Rhus glabra",
+    "Common name": "Smooth sumac",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "8-15'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Rhus typhina": {
+    "Latin name": "Rhus typhina",
+    "Common name": "Staghorn Sumac",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "8-15'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Ribes cynosbati": {
+    "Latin name": "Ribes cynosbati",
+    "Common name": "Eastern prickly gooseberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Rosa blanda": {
+    "Latin name": "Rosa blanda",
+    "Common name": "Early wild rose",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "4-5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Rosa carolina": {
+    "Latin name": "Rosa carolina",
+    "Common name": "Carolina rose",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "2-4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Rosa palustris": {
+    "Latin name": "Rosa palustris",
+    "Common name": "Swamp Rose",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "3-5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Rosa virginiana": {
+    "Latin name": "Rosa virginiana",
+    "Common name": "Virginia rose",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "2-4'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Rubus odoratus": {
+    "Latin name": "Rubus odoratus",
+    "Common name": "Flowering raspberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Height": "3-5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Rubus pensilvanicus": {
+    "Latin name": "Rubus pensilvanicus",
+    "Common name": "Pennsylvania blackberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Rubuas idaeus": {
+    "Latin name": "Rubuas idaeus",
+    "Common name": "Red raspberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "2-5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Rubus verrmontanus": {
+    "Latin name": "Rubus verrmontanus",
+    "Common name": "Veromont blackberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Salix discolor": {
+    "Latin name": "Salix discolor",
+    "Common name": "American pussy willow",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Mar",
+      "Apr"
+    ],
+    "Height": "5-15'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Salix bebbiana": {
+    "Latin name": "Salix bebbiana",
+    "Common name": "Bebb's Willow",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "20-30'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Salix cordata": {
+    "Latin name": "Salix cordata",
+    "Common name": "Heartleaf willow",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "10'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": []
+  },
+  "Salix eriocephala": {
+    "Latin name": "Salix eriocephala",
+    "Common name": "Heart leaved willow",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": "25'",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Salix humilis": {
+    "Latin name": "Salix humilis",
+    "Common name": "Prairie willow",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Height": "8'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Salix lucida": {
+    "Latin name": "Salix lucida",
+    "Common name": "Shining willow",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "12-20'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Salix (matsudana tortuosa?)": {
+    "Latin name": "Salix (matsudana tortuosa?)",
+    "Common name": "Corkscrew Willow",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Salix occidentalis": {
+    "Latin name": "Salix occidentalis",
+    "Common name": "Dwarf prairie willow",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Salix petiolaris": {
+    "Latin name": "Salix petiolaris",
+    "Common name": "Meadow willow",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Salix sericea": {
+    "Latin name": "Salix sericea",
+    "Common name": "Silky Willow",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Sambucus nigra": {
+    "Latin name": "Sambucus nigra",
+    "Common name": "Black elderberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "5-8'",
+    "Sunlight": [
+      "Part"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Sambucas racemosa": {
+    "Latin name": "Sambucas racemosa",
+    "Common name": "Red elderberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "4-8'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Spirea alba": {
+    "Latin name": "Spirea alba",
+    "Common name": "White meadowsweet",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2-5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Spirea latifolia": {
+    "Latin name": "Spirea latifolia",
+    "Common name": "Broadleaf meadowsweet",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2-5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Spiraea tomentosa": {
+    "Latin name": "Spiraea tomentosa",
+    "Common name": "Steeplebush",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Height": "2-5'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Swida (Cornus) amomum": {
+    "Latin name": "Swida (Cornus) amomum",
+    "Common name": "Silky dogwood",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "3-8'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Swida (Cornus) racemosa": {
+    "Latin name": "Swida (Cornus) racemosa",
+    "Common name": "Gray dogwood",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "3-8'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Swida (Cornus) sericea": {
+    "Latin name": "Swida (Cornus) sericea",
+    "Common name": "Red Osier Dogwood",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "3-8'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Symphoricarpos albus": {
+    "Latin name": "Symphoricarpos albus",
+    "Common name": "Snowberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "3-6'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Taxus canadensis": {
+    "Latin name": "Taxus canadensis",
+    "Common name": "American yew",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "2-3'",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Vaccinium augustifolium": {
+    "Latin name": "Vaccinium augustifolium",
+    "Common name": "Lowbush blueberrry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "1-2'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Vaccinium corymbosum": {
+    "Latin name": "Vaccinium corymbosum",
+    "Common name": "Highbush blueberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": []
+  },
+  "Vaccinium macrocarpum": {
+    "Latin name": "Vaccinium macrocarpum",
+    "Common name": "Large cranberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Wet"
+    ]
+  },
+  "Vaccinium oxycoccos": {
+    "Latin name": "Vaccinium oxycoccos",
+    "Common name": "Small cranberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Vaccinium pallidum": {
+    "Latin name": "Vaccinium pallidum",
+    "Common name": "Hillside cranberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": []
+  },
+  "Viburnum acerifolium": {
+    "Latin name": "Viburnum acerifolium",
+    "Common name": "Mapleleaf viburnum",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "3-6'",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ]
+  },
+  "Viburnum dentatum": {
+    "Latin name": "Viburnum dentatum",
+    "Common name": "Arrowwood",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "6-10'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ]
+  },
+  "Viburnum lantanoides": {
+    "Latin name": "Viburnum lantanoides",
+    "Common name": "Hobblebush",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": []
+  },
+  "Viburnum nudum": {
+    "Latin name": "Viburnum nudum",
+    "Common name": "Witherod",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "6-12'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Viburnum nudum cassinoides": {
+    "Latin name": "Viburnum nudum cassinoides",
+    "Common name": "Witherod",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "6-12'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ]
+  },
+  "Viburnum lentago": {
+    "Latin name": "Viburnum lentago",
+    "Common name": "Nannyberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Mar",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": []
+  },
+  "Viburnum prunifolium": {
+    "Latin name": "Viburnum prunifolium",
+    "Common name": "Blackhaw viburnum",
+    "plantType": ["Shrubs"],
+    "Bloom time": [
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Height": "",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": []
+  },
+  "Viburnum trilobum": {
+    "Latin name": "Viburnum trilobum",
+    "Common name": "American Cranberry",
+    "plantType": ["Shrubs"],
+    "Bloom time": [],
+    "Height": "5-12'",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
       "Medium"
     ]
   }

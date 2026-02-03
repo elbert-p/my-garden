@@ -6,22 +6,25 @@
   color: #333;
 }
 
-.loading {
+.message {
   text-align: center;
   color: #888;
   font-style: italic;
   margin-top: 4rem;
 }
 
-.headerActions {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.homeLink {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: #1a73e8;
 }
 
-.modalButtons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-  margin-top: 0.5rem;
+.badge {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
