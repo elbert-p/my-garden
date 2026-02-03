@@ -125,8 +125,8 @@ export default function PlantPage() {
         </div>
       </div>
       {selectedImage && <div className={styles.photoModalOverlay} onClick={() => setSelectedImage(null)}><div className={styles.photoModalContent} onClick={e => e.stopPropagation()}><img src={selectedImage} alt="" className={styles.photoModalImage} /><button className={styles.photoModalCloseButton} onClick={() => setSelectedImage(null)}><IoClose size={24} /></button></div></div>}
-      <ConfirmModal isOpen={showAutofillModal} onClose={() => setShowAutofillModal(false)} onConfirm={onAutofill} title="Autofill Plant Data" message={<>Found <strong>{autofillData?.['Latin name']}</strong> in database. Autofill?</>} confirmText="Yes" cancelText="No" />
-      <ConfirmModal isOpen={showNotFoundModal} onClose={() => setShowNotFoundModal(false)} onConfirm={() => setShowNotFoundModal(false)} title="Not Found" message={<><strong>{temp?.scientificName || 'Plant'}</strong> not in database.</>} confirmText="OK" cancelText={null} />
+      <ConfirmModal isOpen={showAutofillModal} onClose={() => setShowAutofillModal(false)} onConfirm={onAutofill} title="Autofill Plant Data" message={<>Found <strong>{autofillData?.['Latin name']}</strong> in database. Would you like to autofill?</>} confirmText="Yes" cancelText="No" />
+      <ConfirmModal isOpen={showNotFoundModal} onClose={() => setShowNotFoundModal(false)} onConfirm={() => setShowNotFoundModal(false)} title="Autofill not available" message={<><strong>{temp?.scientificName || 'Plant'}</strong> has not been added to the database.</>} confirmText="OK" cancelText={null} />
       <ConfirmModal isOpen={showDeleteModal} onClose={() => setShowDeleteModal(false)} onConfirm={onDelete} title="Delete Plant" message={<>Delete <strong>{plant.commonName || plant.scientificName}</strong>?</>} confirmText="Delete" cancelText="Cancel" variant="danger" />
       <Modal isOpen={showShareModal} onClose={() => setShowShareModal(false)} title="Share Plant" size="small">
         <p className={styles.shareText}>Anyone with this link can view this plant:</p>

@@ -30,8 +30,15 @@ export default function Home() {
       if (!isInitialized || isMigrating) return;
       
       try {
-        const data = await getGardens(user?.id);
-        setGardens(data);
+        const result = await getGardens(user?.id);
+        
+        // If a default garden was just created, redirect to it
+        if (result.createdDefault) {
+          router.push(`/garden/${result.gardens[0].id}`);
+          return;
+        }
+        
+        setGardens(result.gardens);
       } catch (e) {
         console.error('Failed to load gardens:', e);
       } finally {
@@ -40,7 +47,7 @@ export default function Home() {
     };
     
     loadGardens();
-  }, [user?.id, isInitialized, isMigrating]);
+  }, [user?.id, isInitialized, isMigrating, router]);
 
   const handleAddGarden = async () => {
     if (!newGardenName.trim()) {

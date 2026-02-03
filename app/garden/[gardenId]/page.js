@@ -153,7 +153,7 @@ export default function GardenPage() {
 
       <ItemGrid
         items={plants}
-        emptyMessage='No plants in this garden yet. Click the menu to add one!'
+        emptyMessage='No plants in this garden yet. Click the three dots menu to add one!'
         linkPrefix={`/garden/${gardenId}/plant`}
         getItemId={(p) => p.id}
         getItemImage={(p) => p.mainImage}
