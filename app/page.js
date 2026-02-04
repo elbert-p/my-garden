@@ -123,7 +123,7 @@ export default function Home() {
           image={newGardenImage}
           onImageChange={setNewGardenImage}
           onError={setError}
-          placeholder="Select Image (optional)"
+          placeholder="Select Image"
           size="large"
         />
         <div className={styles.modalButtons}>

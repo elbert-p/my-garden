@@ -62,8 +62,8 @@ export default function GardenPage() {
   }, [gardenId, user?.id, isInitialized, router]);
 
   const handleAddPlant = async () => {
-    if ((!newPlantName && !newScientificName) || !newPlantImage) {
-      setError('Please enter a name and select an image.');
+    if (!newPlantName && !newScientificName) { //|| !newPlantImage
+      setError('Please enter a name');
       return;
     }
     try {
@@ -156,7 +156,7 @@ export default function GardenPage() {
         emptyMessage='No plants in this garden yet. Click the three dots menu to add one!'
         linkPrefix={`/garden/${gardenId}/plant`}
         getItemId={(p) => p.id}
-        getItemImage={(p) => p.mainImage}
+        getItemImage={(p) => p.mainImage || '/placeholder-plant.jpg'}
         getItemName={(p) => p.commonName || p.scientificName}
         getItemStyle={(p) => ({ fontStyle: p.commonName ? 'normal' : 'italic' })}
       />

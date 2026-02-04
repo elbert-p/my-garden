@@ -69,7 +69,7 @@ export default function SharedGardenPage() {
         linkPrefix={`/share/${gardenId}/plant`}
         linkSuffix="?from=garden"
         getItemId={(p) => p.id}
-        getItemImage={(p) => p.mainImage}
+        getItemImage={(p) => p.mainImage || '/placeholder-plant.jpg'}
         getItemName={(p) => p.commonName || p.scientificName}
         getItemStyle={(p) => ({ fontStyle: p.commonName ? 'normal' : 'italic' })}
       />
