@@ -8,7 +8,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "1-3'",
+    "Height": "1-3 ft",
     "Sunlight": [
       "Full"
     ],
@@ -26,7 +26,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full"
     ],
@@ -42,7 +42,7 @@
       "May",
       "Jun"
     ],
-    "Height": "1-2'",
+    "Height": "1-2 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -63,7 +63,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3-7'",
+    "Height": "3-7 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -80,7 +80,7 @@
       "Apr",
       "May"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -100,7 +100,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "8'",
+    "Height": "8 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -119,7 +119,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2-4'",
+    "Height": "2-4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -139,7 +139,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "6'",
+    "Height": "6 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -158,7 +158,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -179,7 +179,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "5'",
+    "Height": "5 ft",
     "Sunlight": [
       "Part"
     ],
@@ -198,7 +198,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "6'",
+    "Height": "6 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -216,7 +216,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "1.5'",
+    "Height": "1.5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -233,7 +233,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "1.5'",
+    "Height": "1.5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -251,7 +251,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "0.75'",
+    "Height": "0.75 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -269,7 +269,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -288,7 +288,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full"
     ],
@@ -306,7 +306,7 @@
       "May",
       "Jun"
     ],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Full"
     ],
@@ -323,7 +323,7 @@
       "May",
       "Jun"
     ],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -342,7 +342,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "1-3'",
+    "Height": "1-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -360,7 +360,7 @@
       "May",
       "Jun"
     ],
-    "Height": "1'",
+    "Height": "1 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -379,7 +379,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -398,7 +398,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -417,7 +417,7 @@
       "May",
       "Jun"
     ],
-    "Height": "3-8'",
+    "Height": "3-8 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -436,7 +436,7 @@
       "May",
       "Jun"
     ],
-    "Height": "0.25'",
+    "Height": "0.25 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -455,7 +455,7 @@
       "May",
       "Jun"
     ],
-    "Height": ".5-1'",
+    "Height": ".5-1 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -474,7 +474,7 @@
       "May",
       "Jun"
     ],
-    "Height": "0.25'",
+    "Height": "0.25 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -493,7 +493,7 @@
       "May",
       "Jun"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -514,7 +514,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3-9'",
+    "Height": "3-9 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -531,7 +531,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "2-4'",
+    "Height": "2-4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -551,7 +551,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -568,7 +568,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "4-6'",
+    "Height": "4-6 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -587,7 +587,7 @@
       "May",
       "Jun"
     ],
-    "Height": ".5'",
+    "Height": ".5 ft",
     "Sunlight": [
       "Shade"
     ],
@@ -604,7 +604,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "1.5'-4.5'",
+    "Height": "1.5'-4.5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -623,7 +623,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "2-4'",
+    "Height": "2-4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -642,7 +642,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full"
     ],
@@ -659,7 +659,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "3-5'",
+    "Height": "3-5 ft",
     "Sunlight": [
       "Full"
     ],
@@ -677,7 +677,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full"
     ],
@@ -695,7 +695,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -714,7 +714,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "1-4'",
+    "Height": "1-4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -731,7 +731,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -750,7 +750,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -768,7 +768,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -786,7 +786,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "1'",
+    "Height": "1 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -806,7 +806,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -824,7 +824,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -843,7 +843,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -862,7 +862,7 @@
       "May",
       "Jun"
     ],
-    "Height": "1-1.5'",
+    "Height": "1-1.5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -880,7 +880,7 @@
       "May",
       "Jun"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -899,7 +899,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "2-6'",
+    "Height": "2-6 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -918,7 +918,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "1'",
+    "Height": "1 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -936,7 +936,7 @@
       "Apr",
       "May"
     ],
-    "Height": "1ft'",
+    "Height": "1 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -953,7 +953,7 @@
       "Apr",
       "May"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -972,7 +972,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -990,7 +990,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1007,7 +1007,7 @@
       "May",
       "Jun"
     ],
-    "Height": "2-5'",
+    "Height": "2-5 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -1026,7 +1026,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "1.5-2.5'",
+    "Height": "1.5-2.5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1043,7 +1043,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "2-3ft'",
+    "Height": "2-3ft ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1061,7 +1061,7 @@
       "May",
       "Jun"
     ],
-    "Height": ".75-1'",
+    "Height": ".75-1 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1081,7 +1081,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3-7'",
+    "Height": "3-7 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -1099,7 +1099,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "6'",
+    "Height": "6 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1118,7 +1118,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "7'",
+    "Height": "7 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1136,7 +1136,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Part"
     ],
@@ -1154,7 +1154,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full"
     ],
@@ -1173,7 +1173,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1192,7 +1192,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "1-2'",
+    "Height": "1-2 ft",
     "Sunlight": [
       "Full"
     ],
@@ -1211,7 +1211,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "7'",
+    "Height": "7 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1230,7 +1230,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "1.5'2'",
+    "Height": "1.5-2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1251,7 +1251,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1271,7 +1271,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Shade"
     ],
@@ -1288,7 +1288,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "1-3'",
+    "Height": "1-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1306,7 +1306,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "3-5'",
+    "Height": "3-5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1323,7 +1323,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "5'",
+    "Height": "5 ft",
     "Sunlight": [
       "Full"
     ],
@@ -1340,7 +1340,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "5'",
+    "Height": "5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1357,7 +1357,7 @@
       "Apr",
       "May"
     ],
-    "Height": "1'",
+    "Height": "1 ft",
     "Sunlight": [
       "Shade"
     ],
@@ -1375,7 +1375,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "1-1.5'",
+    "Height": "1-1.5 ft",
     "Sunlight": [
       "Part"
     ],
@@ -1393,7 +1393,7 @@
       "May",
       "Jun"
     ],
-    "Height": "1'",
+    "Height": "1 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1411,7 +1411,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "5'",
+    "Height": "5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1429,7 +1429,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full"
     ],
@@ -1446,7 +1446,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1465,7 +1465,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1485,7 +1485,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2-4'",
+    "Height": "2-4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1503,7 +1503,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1521,7 +1521,7 @@
       "May",
       "Jun"
     ],
-    "Height": "1'",
+    "Height": "1 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1540,7 +1540,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3-4'",
+    "Height": "3-4 ft",
     "Sunlight": [
       "Full"
     ],
@@ -1557,7 +1557,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1575,7 +1575,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "6'",
+    "Height": "6 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -1594,7 +1594,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "1-3'",
+    "Height": "1-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1613,7 +1613,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1632,7 +1632,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "5'",
+    "Height": "5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1649,7 +1649,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -1670,7 +1670,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "1-3'",
+    "Height": "1-3 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -1689,7 +1689,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "1-2'",
+    "Height": "1-2 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -1708,7 +1708,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "1-2'",
+    "Height": "1-2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1727,7 +1727,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3-4'",
+    "Height": "3-4 ft",
     "Sunlight": [
       "Full"
     ],
@@ -1745,7 +1745,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3-4'",
+    "Height": "3-4 ft",
     "Sunlight": [
       "Full"
     ],
@@ -1763,7 +1763,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3-8'",
+    "Height": "3-8 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -1783,7 +1783,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3-7'",
+    "Height": "3-7 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1802,7 +1802,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3-8'",
+    "Height": "3-8 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -1820,7 +1820,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "6-7'",
+    "Height": "6-7 ft",
     "Sunlight": [
       "Full"
     ],
@@ -1838,7 +1838,7 @@
       "May",
       "Jun"
     ],
-    "Height": ".5'",
+    "Height": ".5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1857,7 +1857,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": ".25-.5'",
+    "Height": ".25-.5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1875,7 +1875,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Full"
     ],
@@ -1893,7 +1893,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "6'",
+    "Height": "6 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1912,7 +1912,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1930,7 +1930,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": ".75-1.5'",
+    "Height": ".75-1.5 ft",
     "Sunlight": [
       "Part"
     ],
@@ -1947,7 +1947,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "1-3'",
+    "Height": "1-3 ft",
     "Sunlight": [
       "Full"
     ],
@@ -1966,7 +1966,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "1-1.5'",
+    "Height": "1-1.5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -1985,7 +1985,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": ".25-.5'",
+    "Height": ".25-.5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2004,7 +2004,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "2.5'",
+    "Height": "2.5 ft",
     "Sunlight": [
       "Full"
     ],
@@ -2021,7 +2021,7 @@
       "May",
       "Jun"
     ],
-    "Height": "1-1.5'",
+    "Height": "1-1.5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2039,7 +2039,7 @@
       "May",
       "Jun"
     ],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2057,7 +2057,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full"
     ],
@@ -2075,7 +2075,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "3-5'",
+    "Height": "3-5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2093,7 +2093,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "1-3'",
+    "Height": "1-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2112,7 +2112,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "8'",
+    "Height": "8 ft",
     "Sunlight": [
       "Full"
     ],
@@ -2130,7 +2130,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2-4'",
+    "Height": "2-4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2149,7 +2149,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "8'",
+    "Height": "8 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2166,7 +2166,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "7'",
+    "Height": "7 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2183,7 +2183,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "5'",
+    "Height": "5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2201,7 +2201,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2221,7 +2221,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3-6'",
+    "Height": "3-6 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2239,7 +2239,7 @@
       "Apr",
       "May"
     ],
-    "Height": ".75'",
+    "Height": ".75 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -2258,7 +2258,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -2277,7 +2277,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "5'",
+    "Height": "5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2296,7 +2296,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "5'",
+    "Height": "5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2313,7 +2313,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": ".25'",
+    "Height": ".25 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2332,7 +2332,7 @@
       "May",
       "Jun"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2349,7 +2349,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "6'",
+    "Height": "6 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2376,7 +2376,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2394,7 +2394,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2412,7 +2412,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full"
     ],
@@ -2430,7 +2430,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2449,7 +2449,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "1-1.5'",
+    "Height": "1-1.5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2466,7 +2466,7 @@
     "Bloom time": [
       "May"
     ],
-    "Height": ".25-.75'",
+    "Height": ".25-.75 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2485,7 +2485,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "1-3'",
+    "Height": "1-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2503,7 +2503,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2522,7 +2522,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Part"
     ],
@@ -2540,7 +2540,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2559,7 +2559,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "3-5'",
+    "Height": "3-5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2590,7 +2590,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2608,7 +2608,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2627,7 +2627,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2646,7 +2646,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2-5'",
+    "Height": "2-5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2664,7 +2664,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "3-5'",
+    "Height": "3-5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2683,7 +2683,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2703,7 +2703,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2722,7 +2722,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full"
     ],
@@ -2740,7 +2740,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2759,7 +2759,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "1-2.5'",
+    "Height": "1-2.5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2778,7 +2778,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full"
     ],
@@ -2794,7 +2794,7 @@
       "May",
       "Jun"
     ],
-    "Height": ".75'",
+    "Height": ".75 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -2834,7 +2834,7 @@
       "May",
       "Jun"
     ],
-    "Height": "1-2'",
+    "Height": "1-2 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -2870,7 +2870,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2889,7 +2889,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "1-1.5'",
+    "Height": "1-1.5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2907,7 +2907,7 @@
       "Apr",
       "May"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -2926,7 +2926,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "1-3'",
+    "Height": "1-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2946,7 +2946,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -2965,7 +2965,7 @@
       "May",
       "Jun"
     ],
-    "Height": "1'",
+    "Height": "1 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -2984,7 +2984,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "1-2\"'",
+    "Height": "1-2 in",
     "Sunlight": [
       "Part",
       "Shade"
@@ -3003,7 +3003,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3022,7 +3022,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2-4'",
+    "Height": "2-4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3032,8 +3032,8 @@
     ],
     "plantType": ["Herbaceous perennial"]
   },
-  "Monarda didyma 'Colrain red'": {
-    "Latin name": "Monarda didyma 'Colrain red'",
+  "Monarda didyma 'Colrain Red'": {
+    "Latin name": "Monarda didyma 'Colrain Red'",
     "Common name": "",
     "Bloom time": [],
     "Height": "",
@@ -3048,14 +3048,14 @@
   },
   "Monarda fistulosa": {
     "Latin name": "Monarda fistulosa",
-    "Common name": "Wild bee‐balm",
+    "Common name": "Wild bee-balm",
     "Bloom time": [
       "Jun",
       "Jul",
       "Aug",
       "Sep"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3074,7 +3074,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3093,7 +3093,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -3112,7 +3112,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "1-2'",
+    "Height": "1-2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3130,7 +3130,7 @@
       "May",
       "Jun"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3149,7 +3149,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "1'",
+    "Height": "1 ft",
     "Sunlight": [
       "Full"
     ],
@@ -3167,7 +3167,7 @@
       "May",
       "Jun"
     ],
-    "Height": ".25'",
+    "Height": ".25 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3185,7 +3185,7 @@
       "Apr",
       "May"
     ],
-    "Height": ".5-1'",
+    "Height": ".5-1 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -3203,7 +3203,7 @@
       "May",
       "Jun"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -3222,7 +3222,7 @@
       "May",
       "Jun"
     ],
-    "Height": ".25-.5'",
+    "Height": ".25-.5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3242,7 +3242,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full"
     ],
@@ -3258,7 +3258,7 @@
       "Apr",
       "May"
     ],
-    "Height": "1'",
+    "Height": "1 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3276,7 +3276,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -3295,7 +3295,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "2ft'",
+    "Height": "2ft ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3313,7 +3313,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "3-4'",
+    "Height": "3-4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3330,7 +3330,7 @@
       "May",
       "Jun"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3348,7 +3348,7 @@
       "May",
       "Jun"
     ],
-    "Height": "1-2'",
+    "Height": "1-2 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -3369,7 +3369,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -3386,7 +3386,7 @@
     "Bloom time": [
       "Jun"
     ],
-    "Height": "1-2'",
+    "Height": "1-2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3405,7 +3405,7 @@
       "May",
       "Jun"
     ],
-    "Height": "12\"'",
+    "Height": "12 in",
     "Sunlight": [
       "Part",
       "Shade"
@@ -3423,7 +3423,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3441,7 +3441,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3460,7 +3460,7 @@
       "May",
       "Jun"
     ],
-    "Height": ".75-1'",
+    "Height": ".75-1 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3477,7 +3477,7 @@
       "May",
       "Jun"
     ],
-    "Height": ".25-.75'",
+    "Height": ".25-.75 ft",
     "Sunlight": [
       "Full"
     ],
@@ -3494,7 +3494,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3512,7 +3512,7 @@
       "May",
       "Jun"
     ],
-    "Height": "1'",
+    "Height": "1 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -3530,7 +3530,7 @@
       "May",
       "Jun"
     ],
-    "Height": "1-1.5'",
+    "Height": "1-1.5 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -3548,7 +3548,7 @@
       "May",
       "Jun"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -3567,7 +3567,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "1-4'",
+    "Height": "1-4 ft",
     "Sunlight": [
       "Full"
     ],
@@ -3583,7 +3583,7 @@
       "May",
       "Jun"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3602,7 +3602,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -3622,7 +3622,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": ".5-1'",
+    "Height": ".5-1 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3641,7 +3641,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full"
     ],
@@ -3659,7 +3659,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2-4'",
+    "Height": "2-4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3680,7 +3680,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": ".75-1.25'",
+    "Height": ".75-1.25 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3698,7 +3698,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "1-1.5'",
+    "Height": "1-1.5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3716,7 +3716,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3735,7 +3735,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Full"
     ],
@@ -3753,7 +3753,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3772,7 +3772,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3-5'",
+    "Height": "3-5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3790,7 +3790,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "1'",
+    "Height": "1 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3808,7 +3808,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": ".25'",
+    "Height": ".25 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -3829,7 +3829,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "1.5-3'",
+    "Height": "1.5-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3850,7 +3850,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3870,7 +3870,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "3-4'",
+    "Height": "3-4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3889,7 +3889,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "5'",
+    "Height": "5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3907,7 +3907,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "1'",
+    "Height": "1 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3926,7 +3926,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3944,7 +3944,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3962,7 +3962,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -3980,7 +3980,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "3-5ft'",
+    "Height": "3-5ft ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4007,7 +4007,7 @@
       "Apr",
       "May"
     ],
-    "Height": "6-12\"'",
+    "Height": "6-12 in",
     "Sunlight": [
       "Part",
       "Shade"
@@ -4025,7 +4025,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "6'",
+    "Height": "6 ft",
     "Sunlight": [
       "Full"
     ],
@@ -4042,7 +4042,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "5'",
+    "Height": "5 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -4063,7 +4063,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4091,7 +4091,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4119,7 +4119,7 @@
       "May",
       "Jun"
     ],
-    "Height": "8\"'",
+    "Height": "8 in",
     "Sunlight": [
       "Full",
       "Part",
@@ -4137,7 +4137,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "5'",
+    "Height": "5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4154,7 +4154,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": ".25-.5'",
+    "Height": ".25-.5 ft",
     "Sunlight": [
       "Full"
     ],
@@ -4170,7 +4170,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4188,7 +4188,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Part"
     ],
@@ -4206,7 +4206,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "6'",
+    "Height": "6 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4223,7 +4223,7 @@
       "May",
       "Jun"
     ],
-    "Height": "0.5'",
+    "Height": "0.5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4241,7 +4241,7 @@
       "May",
       "Jun"
     ],
-    "Height": ".5-1.5'",
+    "Height": ".5-1.5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4288,7 +4288,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4307,7 +4307,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "3ft'",
+    "Height": "3ft ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -4336,7 +4336,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "3ft'",
+    "Height": "3ft ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -4355,7 +4355,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "6'",
+    "Height": "6 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -4374,7 +4374,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4391,7 +4391,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4409,7 +4409,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4429,7 +4429,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -4461,7 +4461,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "1-3'",
+    "Height": "1-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4480,7 +4480,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4500,7 +4500,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4519,7 +4519,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "2-3.5'",
+    "Height": "2-3.5 ft",
     "Sunlight": [
       "Full"
     ],
@@ -4536,7 +4536,7 @@
       "Oct",
       "Nov"
     ],
-    "Height": "5'",
+    "Height": "5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4554,7 +4554,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -4573,7 +4573,7 @@
       "Apr",
       "May"
     ],
-    "Height": "1.5'",
+    "Height": "1.5 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -4591,7 +4591,7 @@
       "May",
       "Jun"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4608,7 +4608,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "1-3'",
+    "Height": "1-3 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -4627,7 +4627,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4646,7 +4646,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4657,15 +4657,15 @@
     ],
     "plantType": ["Herbaceous perennial"]
   },
-  "Symphyo. ericoides 'Snow Flurry'": {
-    "Latin name": "Symphyo. ericoides 'Snow Flurry'",
+  "Symphyotrichum ericoides 'Snow Flurry'": {
+    "Latin name": "Symphyotrichum ericoides 'Snow Flurry'",
     "Common name": "Heath Aster",
     "Bloom time": [
       "Aug",
       "Sep",
       "Oct"
     ],
-    "Height": ".25-.5'",
+    "Height": ".25-.5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4693,7 +4693,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "1-3'",
+    "Height": "1-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4712,7 +4712,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4730,7 +4730,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "2-4'",
+    "Height": "2-4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4749,7 +4749,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "1-3'",
+    "Height": "1-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4768,7 +4768,7 @@
       "Oct",
       "Nov"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full"
     ],
@@ -4786,7 +4786,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4804,7 +4804,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full"
     ],
@@ -4822,7 +4822,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4840,7 +4840,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "4-6'",
+    "Height": "4-6 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4858,7 +4858,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "1'",
+    "Height": "1 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4877,7 +4877,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -4895,7 +4895,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4912,7 +4912,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "6'",
+    "Height": "6 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4929,7 +4929,7 @@
       "Apr",
       "May"
     ],
-    "Height": "1-3'",
+    "Height": "1-3 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -4948,7 +4948,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "1.5-5'",
+    "Height": "1.5-5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -4976,7 +4976,7 @@
       "May",
       "Jun"
     ],
-    "Height": ".25-.75'",
+    "Height": ".25-.75 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -4993,7 +4993,7 @@
       "May",
       "Jun"
     ],
-    "Height": "3-5'",
+    "Height": "3-5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5011,7 +5011,7 @@
       "Apr",
       "May"
     ],
-    "Height": ".25-1'",
+    "Height": ".25-1 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -5029,7 +5029,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "1'",
+    "Height": "1 ft",
     "Sunlight": [
       "Full"
     ],
@@ -5047,7 +5047,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "1.5-3'",
+    "Height": "1.5-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5066,7 +5066,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "1-2.5'",
+    "Height": "1-2.5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5085,7 +5085,7 @@
       "May",
       "Jun"
     ],
-    "Height": ".75-1.25'",
+    "Height": ".75-1.25 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -5103,7 +5103,7 @@
       "May",
       "Jun"
     ],
-    "Height": ".5-1'",
+    "Height": ".5-1 ft",
     "Sunlight": [
       "Part"
     ],
@@ -5121,7 +5121,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5138,7 +5138,7 @@
       "Apr",
       "May"
     ],
-    "Height": "1-1.5'",
+    "Height": "1-1.5 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -5155,7 +5155,7 @@
       "Apr",
       "May"
     ],
-    "Height": "12\"'",
+    "Height": "12 in",
     "Sunlight": [
       "Part",
       "Shade"
@@ -5174,7 +5174,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "5ft'",
+    "Height": "5ft ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5194,7 +5194,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5223,7 +5223,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "8'",
+    "Height": "8 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -5241,7 +5241,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "6ft'",
+    "Height": "6ft ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5259,7 +5259,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "5ft'",
+    "Height": "5ft ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5276,7 +5276,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "4-7ft'",
+    "Height": "4-7ft ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5295,7 +5295,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "3-6ft'",
+    "Height": "3-6ft ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5322,7 +5322,7 @@
       "May",
       "Jun"
     ],
-    "Height": ".25-.5'",
+    "Height": ".25-.5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5341,7 +5341,7 @@
       "May",
       "Jun"
     ],
-    "Height": "0.5'",
+    "Height": "0.5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5359,7 +5359,7 @@
       "May",
       "Jun"
     ],
-    "Height": ".25-1.5'",
+    "Height": ".25-1.5 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -5377,7 +5377,7 @@
       "May",
       "Jun"
     ],
-    "Height": ".25'",
+    "Height": ".25 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -5388,8 +5388,8 @@
     ],
     "plantType": ["Herbaceous perennial"]
   },
-  "Viola sororia \"Freckles\"": {
-    "Latin name": "Viola sororia \"Freckles\"",
+  "Viola sororia 'Freckles'": {
+    "Latin name": "Viola sororia 'Freckles'",
     "Common name": "Freckles Violet",
     "Bloom time": [],
     "Height": "",
@@ -5404,7 +5404,7 @@
       "May",
       "Jun"
     ],
-    "Height": ".75-1'",
+    "Height": ".75-1 ft",
     "Sunlight": [
       "Part"
     ],
@@ -5420,7 +5420,7 @@
       "Apr",
       "May"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5439,7 +5439,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5463,7 +5463,7 @@
     "Common name": "Big Blue Stem",
     "plantType": ["Grasses and sedges"],
     "Bloom time": [],
-    "Height": "2-5'",
+    "Height": "2-5 ft",
     "Sunlight": [
       "Full"
     ],
@@ -5480,7 +5480,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5498,7 +5498,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -5518,7 +5518,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "1'",
+    "Height": "1 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5533,7 +5533,7 @@
     "Common name": "Fringed Brome",
     "plantType": ["Grasses and sedges"],
     "Bloom time": [],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5548,7 +5548,7 @@
     "Common name": "Prairie Brome",
     "plantType": ["Grasses and sedges"],
     "Bloom time": [],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5566,7 +5566,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -5584,7 +5584,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5611,7 +5611,7 @@
       "May",
       "Jun"
     ],
-    "Height": "1'",
+    "Height": "1 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -5629,7 +5629,7 @@
       "May",
       "Jun"
     ],
-    "Height": "1'",
+    "Height": "1 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -5648,7 +5648,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -5667,7 +5667,7 @@
       "May",
       "Jun"
     ],
-    "Height": "1.5'",
+    "Height": "1.5 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -5684,7 +5684,7 @@
     "Bloom time": [
       "Jun"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5701,7 +5701,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "1-3'",
+    "Height": "1-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5718,7 +5718,7 @@
       "May",
       "Jun"
     ],
-    "Height": ".5-1'",
+    "Height": ".5-1 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5736,7 +5736,7 @@
       "May",
       "Jun"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5753,7 +5753,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -5773,7 +5773,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -5790,7 +5790,7 @@
     "Bloom time": [
       "Jun"
     ],
-    "Height": ".5-.75'",
+    "Height": ".5-.75 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -5810,7 +5810,7 @@
       "May",
       "Jun"
     ],
-    "Height": "8\"'",
+    "Height": "8 in",
     "Sunlight": [
       "Full",
       "Part",
@@ -5830,7 +5830,7 @@
       "May",
       "Jun"
     ],
-    "Height": "12\"'",
+    "Height": "12 in",
     "Sunlight": [
       "Part",
       "Shade"
@@ -5844,7 +5844,7 @@
     "Common name": "Broad leaved sedge",
     "plantType": ["Grasses and sedges"],
     "Bloom time": [],
-    "Height": ".75-1'",
+    "Height": ".75-1 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -5861,7 +5861,7 @@
     "Bloom time": [
       "Jun"
     ],
-    "Height": "1'",
+    "Height": "1 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -5878,7 +5878,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full"
     ],
@@ -5896,7 +5896,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -5915,7 +5915,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "1-3'",
+    "Height": "1-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5933,7 +5933,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "3-4'",
+    "Height": "3-4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5948,7 +5948,7 @@
     "Common name": "Swan's sedge",
     "plantType": ["Grasses and sedges"],
     "Bloom time": [],
-    "Height": ".75-1'",
+    "Height": ".75-1 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -5968,7 +5968,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "1'",
+    "Height": "1 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -5985,7 +5985,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "2-4'",
+    "Height": "2-4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -6004,7 +6004,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -6024,7 +6024,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "1'",
+    "Height": "1 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -6039,7 +6039,7 @@
     "Common name": "Wavy hairgrass",
     "plantType": ["Grasses and sedges"],
     "Bloom time": [],
-    "Height": "2-3ft'",
+    "Height": "2-3ft ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6057,7 +6057,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6076,7 +6076,7 @@
       "Sep",
       "Oct"
     ],
-    "Height": "5'",
+    "Height": "5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -6095,7 +6095,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "3-5'",
+    "Height": "3-5 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6114,7 +6114,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6131,7 +6131,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "4'",
+    "Height": "4 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -6151,7 +6151,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6168,7 +6168,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -6188,7 +6188,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -6208,7 +6208,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -6238,7 +6238,7 @@
     "Common name": "Pink Hairgrass",
     "plantType": ["Grasses and sedges"],
     "Bloom time": [],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -6257,7 +6257,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -6276,7 +6276,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "3-6'",
+    "Height": "3-6 ft",
     "Sunlight": [
       "Full"
     ],
@@ -6295,7 +6295,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2'",
+    "Height": "2 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -6359,7 +6359,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -6408,7 +6408,7 @@
     "Latin name": "Adiantum pedatum",
     "Common name": "Maidenhair fern",
     "plantType": ["Ferns"],
-    "Height": "1-2'",
+    "Height": "1-2 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6422,7 +6422,7 @@
     "Latin name": "Asplenium platyneuron",
     "Common name": "Ebony spleenwort",
     "plantType": ["Ferns"],
-    "Height": ".75-1.75'",
+    "Height": ".75-1.75 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6436,7 +6436,7 @@
     "Latin name": "Athyrium felix-femina",
     "Common name": "Lady fern",
     "plantType": ["Ferns"],
-    "Height": "1-2'",
+    "Height": "1-2 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6450,7 +6450,7 @@
     "Latin name": "Botrychium virginianum",
     "Common name": "Rattlesnake Fern",
     "plantType": ["Ferns"],
-    "Height": "1.4'",
+    "Height": "1.4 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -6466,7 +6466,7 @@
     "Latin name": "Cryptogramma stelleri",
     "Common name": "Slender rock brake",
     "plantType": ["Ferns"],
-    "Height": ".25-.75'",
+    "Height": ".25-.75 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6479,7 +6479,7 @@
     "Latin name": "Cystopteris fragilis",
     "Common name": "Fragile fern",
     "plantType": ["Ferns"],
-    "Height": "1.25'",
+    "Height": "1.25 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -6493,7 +6493,7 @@
     "Latin name": "Dennstaedtia punctilobula",
     "Common name": "Hayscented fern",
     "plantType": ["Ferns"],
-    "Height": "1-2'",
+    "Height": "1-2 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -6508,7 +6508,7 @@
     "Latin name": "Dryopteris cristata",
     "Common name": "Crested wood fern",
     "plantType": ["Ferns"],
-    "Height": "1-3'",
+    "Height": "1-3 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -6522,7 +6522,7 @@
     "Latin name": "Dryopteris filix-mas",
     "Common name": "Male fern",
     "plantType": ["Ferns"],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6536,7 +6536,7 @@
     "Latin name": "Dryopteris goldiana",
     "Common name": "Goldie's fern",
     "plantType": ["Ferns"],
-    "Height": "2.5-3.5'",
+    "Height": "2.5-3.5 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6550,7 +6550,7 @@
     "Latin name": "Dryopteris intermedia",
     "Common name": "Evergreen wood fern",
     "plantType": ["Ferns"],
-    "Height": "1.5-2'",
+    "Height": "1.5-2 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6564,7 +6564,7 @@
     "Latin name": "Dryopteris marginalis",
     "Common name": "Marginal woodfern",
     "plantType": ["Ferns"],
-    "Height": "18-24\"'",
+    "Height": "18-24 in",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6578,7 +6578,7 @@
     "Latin name": "Gymnocarpium dryopteris",
     "Common name": "Oak fern",
     "plantType": ["Ferns"],
-    "Height": ".25-1.25'",
+    "Height": ".25-1.25 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6591,7 +6591,7 @@
     "Latin name": "Matteuccia struthiopteris",
     "Common name": "Ostrich fern",
     "plantType": ["Ferns"],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -6606,7 +6606,7 @@
     "Latin name": "Onoclea sensibilis",
     "Common name": "Sensitive fern",
     "plantType": ["Ferns"],
-    "Height": "1-2'",
+    "Height": "1-2 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -6621,7 +6621,7 @@
     "Latin name": "Osmunda cinnamomea",
     "Common name": "Cinnamon fern",
     "plantType": ["Ferns"],
-    "Height": "2-4'",
+    "Height": "2-4 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -6635,7 +6635,7 @@
     "Latin name": "Osmunda claytonia",
     "Common name": "Interrupted fern",
     "plantType": ["Ferns"],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6648,7 +6648,7 @@
     "Latin name": "Osmunda regalis",
     "Common name": "Royal fern",
     "plantType": ["Ferns"],
-    "Height": "2-3.5'",
+    "Height": "2-3.5 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6661,7 +6661,7 @@
     "Latin name": "Parathelypteris noveboracensis",
     "Common name": "New York fern",
     "plantType": ["Ferns"],
-    "Height": ".75-2'",
+    "Height": ".75-2 ft",
     "Sunlight": [
       "Part"
     ],
@@ -6674,7 +6674,7 @@
     "Latin name": "Pellaea atropurpurea",
     "Common name": "Purple cliffbrake",
     "plantType": ["Ferns"],
-    "Height": ".25-1'",
+    "Height": ".25-1 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -6687,7 +6687,7 @@
     "Latin name": "Phegopteris connectilis",
     "Common name": "Narrow beech fern",
     "plantType": ["Ferns"],
-    "Height": ".25-1'",
+    "Height": ".25-1 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6700,7 +6700,7 @@
     "Latin name": "Phegopteris hexagonoptera",
     "Common name": "Broad beech fern",
     "plantType": ["Ferns"],
-    "Height": "1-1.5'",
+    "Height": "1-1.5 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6714,7 +6714,7 @@
     "Latin name": "Polypodium virginianum",
     "Common name": "Rock polypody",
     "plantType": ["Ferns"],
-    "Height": ".5'-1'",
+    "Height": ".5'-1 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6727,7 +6727,7 @@
     "Latin name": "Polystichum acrostoides",
     "Common name": "Christmas fern",
     "plantType": ["Ferns"],
-    "Height": ".75-1.5'",
+    "Height": ".75-1.5 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6741,7 +6741,7 @@
     "Latin name": "Polystichum braunii",
     "Common name": "Braun's holly fern",
     "plantType": ["Ferns"],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6754,7 +6754,7 @@
     "Latin name": "Thelypteris novaboracensis",
     "Common name": "New York fern",
     "plantType": ["Ferns"],
-    "Height": ".75-2'",
+    "Height": ".75-2 ft",
     "Sunlight": [
       "Part"
     ],
@@ -6767,7 +6767,7 @@
     "Latin name": "Thelypteris palustris",
     "Common name": "Marsh fern",
     "plantType": ["Ferns"],
-    "Height": "1-1.5'",
+    "Height": "1-1.5 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -6781,7 +6781,7 @@
     "Latin name": "Woodsia obtusa",
     "Common name": "Blunt-lobed woodsia",
     "plantType": ["Ferns"],
-    "Height": "1-1.5'",
+    "Height": "1-1.5 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6795,7 +6795,7 @@
     "Latin name": "Woodwardia areolata",
     "Common name": "Netted chain fern",
     "plantType": ["Ferns"],
-    "Height": "1.5-2'",
+    "Height": "1.5-2 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -6809,7 +6809,7 @@
     "Latin name": "Woodwardia virginica",
     "Common name": "Chain fern",
     "plantType": ["Ferns"],
-    "Height": "2-4'",
+    "Height": "2-4 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -6829,7 +6829,7 @@
       "Apr",
       "May"
     ],
-    "Height": "6-15'",
+    "Height": "6-15 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -6848,7 +6848,7 @@
       "Apr",
       "May"
     ],
-    "Height": "10-15'",
+    "Height": "10-15 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -6865,7 +6865,7 @@
       "Apr",
       "May"
     ],
-    "Height": "10-18'",
+    "Height": "10-18 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -6885,7 +6885,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "10-12'",
+    "Height": "10-12 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -6903,7 +6903,7 @@
       "May",
       "Jun"
     ],
-    "Height": "5-12'",
+    "Height": "5-12 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -6922,7 +6922,7 @@
       "Apr",
       "May"
     ],
-    "Height": "6-8'",
+    "Height": "6-8 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -6940,7 +6940,7 @@
       "May",
       "Jun"
     ],
-    "Height": "3-10'",
+    "Height": "3-10 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -6956,7 +6956,7 @@
     "Common name": "Red bearberry",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": ".25-.5'",
+    "Height": ".25-.5 ft",
     "Sunlight": [
       "Full"
     ],
@@ -6970,7 +6970,7 @@
     "Common name": "Eastern false willow",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "6-12'",
+    "Height": "6-12 ft",
     "Sunlight": [
       "Full"
     ],
@@ -6988,7 +6988,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "6-10'",
+    "Height": "6-10 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7006,7 +7006,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7023,7 +7023,7 @@
     "Bloom time": [
       "Jun"
     ],
-    "Height": "3'",
+    "Height": "3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7042,7 +7042,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "3-8'",
+    "Height": "3-8 ft",
     "Sunlight": [
       "Full"
     ],
@@ -7057,7 +7057,7 @@
     "Bloom time": [
       "May"
     ],
-    "Height": "1-3'",
+    "Height": "1-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7073,7 +7073,7 @@
     "Bloom time": [
       "Jun"
     ],
-    "Height": "10-20'",
+    "Height": "10-20 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -7089,7 +7089,7 @@
     "Common name": "Sweet Pepperbush",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "4-8'",
+    "Height": "4-8 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7104,7 +7104,7 @@
     "Common name": "Sweetfern",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "1-3'",
+    "Height": "1-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7119,7 +7119,7 @@
     "Common name": "Silky dogwood",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "3-8'",
+    "Height": "3-8 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7134,7 +7134,7 @@
     "Common name": "Bunchberry",
     "plantType": ["Herbaceous perennial", "Shrubs"],
     "Bloom time": [],
-    "Height": ".25-.5'",
+    "Height": ".25-.5 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -7149,7 +7149,7 @@
     "Common name": "Gray dogwood",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "3-8'",
+    "Height": "3-8 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7164,7 +7164,7 @@
     "Common name": "Red Osier Dogwood",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "3-8'",
+    "Height": "3-8 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7182,7 +7182,7 @@
       "Mar",
       "Apr"
     ],
-    "Height": "5-9'",
+    "Height": "5-9 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7201,7 +7201,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "2-4'",
+    "Height": "2-4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7216,7 +7216,7 @@
     "Common name": "Leatherwood",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "3-6'",
+    "Height": "3-6 ft",
     "Sunlight": [
       "Part"
     ],
@@ -7241,7 +7241,7 @@
       "May",
       "Jun"
     ],
-    "Height": "3-6'",
+    "Height": "3-6 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7256,7 +7256,7 @@
     "Common name": "Black huckleberry",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "1-3'",
+    "Height": "1-3 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -7272,7 +7272,7 @@
     "Common name": "American Witch Hazel",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "6-15'",
+    "Height": "6-15 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -7288,7 +7288,7 @@
     "Common name": "Smooth hydrangea",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "2-4'",
+    "Height": "2-4 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -7306,7 +7306,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "6-10'",
+    "Height": "6-10 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7324,7 +7324,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7343,7 +7343,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2-4'",
+    "Height": "2-4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7357,7 +7357,7 @@
     "Common name": "Inkberry",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "3-6'",
+    "Height": "3-6 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7373,7 +7373,7 @@
     "Common name": "American holly",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "12-30'",
+    "Height": "12-30 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7392,7 +7392,7 @@
       "May",
       "Jun"
     ],
-    "Height": "4-10'",
+    "Height": "4-10 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7410,7 +7410,7 @@
       "May",
       "Jun"
     ],
-    "Height": "3-4'",
+    "Height": "3-4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7425,7 +7425,7 @@
     "Common name": "Marsh elder",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "4-8'",
+    "Height": "4-8 ft",
     "Sunlight": [
       "Full"
     ],
@@ -7438,7 +7438,7 @@
     "Common name": "Common juniper",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "5-25'",
+    "Height": "5-25 ft",
     "Sunlight": [
       "Full"
     ],
@@ -7452,7 +7452,7 @@
     "Common name": "Creeping juniper",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": ".25-.5'",
+    "Height": ".25-.5 ft",
     "Sunlight": [
       "Full"
     ],
@@ -7468,7 +7468,7 @@
     "Bloom time": [
       "Jun"
     ],
-    "Height": "1-3'",
+    "Height": "1-3 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7486,7 +7486,7 @@
     "Bloom time": [
       "Jun"
     ],
-    "Height": "4-10'",
+    "Height": "4-10 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -7502,7 +7502,7 @@
     "Common name": "Drooping leucothoe",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "2-4'",
+    "Height": "2-4 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -7518,7 +7518,7 @@
     "Common name": "Spicebush",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "6-12'",
+    "Height": "6-12 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -7538,7 +7538,7 @@
       "May",
       "Jun"
     ],
-    "Height": "2-6'",
+    "Height": "2-6 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7553,7 +7553,7 @@
     "Common name": "American moutain holly",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "5-9'",
+    "Height": "5-9 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7571,7 +7571,7 @@
       "May",
       "Jun"
     ],
-    "Height": "5-12'",
+    "Height": "5-12 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7590,7 +7590,7 @@
       "May",
       "Jun"
     ],
-    "Height": "3-10'",
+    "Height": "3-10 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7609,7 +7609,7 @@
       "May",
       "Jun"
     ],
-    "Height": "4-9'",
+    "Height": "4-9 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7624,7 +7624,7 @@
     "Common name": "American plum",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "4-10'",
+    "Height": "4-10 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7639,7 +7639,7 @@
     "Common name": "Beach plum",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "3-6'",
+    "Height": "3-6 ft",
     "Sunlight": [
       "Full"
     ],
@@ -7689,7 +7689,7 @@
     "Common name": "Rhodora",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "2-4'",
+    "Height": "2-4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7703,7 +7703,7 @@
     "Common name": "Rosebay rhododendron",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "6-15'",
+    "Height": "6-15 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -7718,7 +7718,7 @@
     "Common name": "Pinxterbloom azalea",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "3-8'",
+    "Height": "3-8 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7732,7 +7732,7 @@
     "Common name": "Early azalea",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "3-8'",
+    "Height": "3-8 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7746,7 +7746,7 @@
     "Common name": "Pinkshell azalea",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "8-15'",
+    "Height": "8-15 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -7761,7 +7761,7 @@
     "Common name": "Swamp azalea",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "3-5'",
+    "Height": "3-5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7776,7 +7776,7 @@
     "Common name": "Fragrant sumac",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "3-7'",
+    "Height": "3-7 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7791,7 +7791,7 @@
     "Common name": "Winged sumac",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "5-8'",
+    "Height": "5-8 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7806,7 +7806,7 @@
     "Common name": "Smooth sumac",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "8-15'",
+    "Height": "8-15 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7821,7 +7821,7 @@
     "Common name": "Staghorn Sumac",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "8-15'",
+    "Height": "8-15 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7848,7 +7848,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "4-5'",
+    "Height": "4-5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7867,7 +7867,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "2-4'",
+    "Height": "2-4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7886,7 +7886,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "3-5'",
+    "Height": "3-5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7901,7 +7901,7 @@
     "Common name": "Virginia rose",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "2-4'",
+    "Height": "2-4 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7919,7 +7919,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "3-5'",
+    "Height": "3-5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7946,7 +7946,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "2-5'",
+    "Height": "2-5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7973,7 +7973,7 @@
       "Mar",
       "Apr"
     ],
-    "Height": "5-15'",
+    "Height": "5-15 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7991,7 +7991,7 @@
       "May",
       "Jun"
     ],
-    "Height": "20-30'",
+    "Height": "20-30 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -8011,7 +8011,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "10'",
+    "Height": "10 ft",
     "Sunlight": [
       "Full"
     ],
@@ -8027,7 +8027,7 @@
       "May",
       "Jun"
     ],
-    "Height": "25'",
+    "Height": "25 ft",
     "Sunlight": [
       "Full"
     ],
@@ -8044,7 +8044,7 @@
       "Apr",
       "May"
     ],
-    "Height": "8'",
+    "Height": "8 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -8064,7 +8064,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "12-20'",
+    "Height": "12-20 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -8116,7 +8116,7 @@
     "Common name": "Black elderberry",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "5-8'",
+    "Height": "5-8 ft",
     "Sunlight": [
       "Part"
     ],
@@ -8129,7 +8129,7 @@
     "Common name": "Red elderberry",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "4-8'",
+    "Height": "4-8 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -8148,7 +8148,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2-5'",
+    "Height": "2-5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -8167,7 +8167,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2-5'",
+    "Height": "2-5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -8186,7 +8186,7 @@
       "Aug",
       "Sep"
     ],
-    "Height": "2-5'",
+    "Height": "2-5 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -8201,7 +8201,7 @@
     "Common name": "Silky dogwood",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "3-8'",
+    "Height": "3-8 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -8216,7 +8216,7 @@
     "Common name": "Gray dogwood",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "3-8'",
+    "Height": "3-8 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -8231,7 +8231,7 @@
     "Common name": "Red Osier Dogwood",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "3-8'",
+    "Height": "3-8 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -8246,7 +8246,7 @@
     "Common name": "Red Osier Dogwood",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "3-8'",
+    "Height": "3-8 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -8261,7 +8261,7 @@
     "Common name": "Snowberry",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "3-6'",
+    "Height": "3-6 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -8277,7 +8277,7 @@
     "Common name": "American yew",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "2-3'",
+    "Height": "2-3 ft",
     "Sunlight": [
       "Part",
       "Shade"
@@ -8292,7 +8292,7 @@
     "Common name": "Lowbush blueberrry",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "1-2'",
+    "Height": "1-2 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -8361,7 +8361,7 @@
       "Jul",
       "Aug"
     ],
-    "Height": "3-6'",
+    "Height": "3-6 ft",
     "Sunlight": [
       "Full",
       "Part",
@@ -8380,7 +8380,7 @@
       "May",
       "Jun"
     ],
-    "Height": "6-10'",
+    "Height": "6-10 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -8416,7 +8416,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "6-12'",
+    "Height": "6-12 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -8434,7 +8434,7 @@
       "Jun",
       "Jul"
     ],
-    "Height": "6-12'",
+    "Height": "6-12 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -8484,7 +8484,7 @@
     "Common name": "American Cranberry",
     "plantType": ["Shrubs"],
     "Bloom time": [],
-    "Height": "5-12'",
+    "Height": "5-12 ft",
     "Sunlight": [
       "Full",
       "Part"
