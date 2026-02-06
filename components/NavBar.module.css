@@ -16,6 +16,13 @@
   padding: 0 1rem;
 }
 
+/* 
+  navLeft and navRight must be equal width for margin: 0 auto 
+  centering on navCenter to align with page content.
+  navRight (sign-in button) is the wider side, so we give 
+  navLeft a matching min-width to balance it.
+*/
+
 /* Far left - Home button */
 .navLeft {
   display: flex;

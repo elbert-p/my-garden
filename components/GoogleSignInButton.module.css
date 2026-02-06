@@ -3,21 +3,21 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 6.6px 16px;
+  padding: 8.6px 16px;
   font-size: 0.95rem;
   font-weight: 500;
   cursor: pointer;
-  background-color: white;
+  background-color: #f8f9fa;
   color: #5f6368;
-  border-radius: 18px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 20px;
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05); */
+  transition: background-color 0.2s ease, color 0.2s ease;
   font-family: inherit;
 }
 
 .button:hover {
-  background-color: #f8f9fa;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: #e8eaed;
+  color: #202124;
 }
 
 .button:disabled {

@@ -1,5 +1,5 @@
 'use client';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { IoLeaf, IoClose } from 'react-icons/io5';
 import { FiMenu, FiSearch } from 'react-icons/fi';
@@ -8,21 +8,6 @@ import DropdownMenu from './DropdownMenu';
 import SharedByBadge from './SharedByBadge';
 import styles from './NavBar.module.css';
 
-/**
- * NavBar - Sticky navigation bar component
- * 
- * @param {string} title - Page title
- * @param {boolean} showHome - Show home button (default: true)
- * @param {Array} tabs - Array of { label, href, active } for tab navigation
- * @param {boolean} showSearch - Show search button
- * @param {string} searchValue - Current search value
- * @param {function} onSearchChange - Search input change handler
- * @param {string} searchPlaceholder - Placeholder text for search input
- * @param {Array} menuItems - Items for dropdown menu (if provided, shows menu button)
- * @param {object} sharedBy - User object for shared pages (shows SharedByBadge next to title)
- * @param {React.ReactNode} extraActions - Additional action buttons
- * @param {string} contentWidth - Max width for content alignment ('large' = 1200px, 'medium' = 800px)
- */
 export default function NavBar({
   title,
   showHome = true,
@@ -38,7 +23,40 @@ export default function NavBar({
 }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const searchInputRef = useRef(null);
+  const leftRef = useRef(null);
+  const rightRef = useRef(null);
   const maxWidth = contentWidth === 'medium' ? '800px' : '1200px';
+
+  // Balance navLeft and navRight widths so margin: 0 auto centers correctly
+  const balanceSides = useCallback(() => {
+    const left = leftRef.current;
+    const right = rightRef.current;
+    if (!left || !right) return;
+
+    // Reset so we can measure natural widths
+    left.style.minWidth = '';
+    right.style.minWidth = '';
+
+    const leftW = left.offsetWidth;
+    const rightW = right.offsetWidth;
+
+    if (leftW < rightW) {
+      left.style.minWidth = `${rightW}px`;
+    } else if (rightW < leftW) {
+      right.style.minWidth = `${leftW}px`;
+    }
+  }, []);
+
+  useEffect(() => {
+    balanceSides();
+    window.addEventListener('resize', balanceSides);
+    return () => window.removeEventListener('resize', balanceSides);
+  }, [balanceSides]);
+
+  // Re-balance when search opens/closes (changes action area width)
+  useEffect(() => {
+    balanceSides();
+  }, [isSearchOpen, balanceSides]);
 
   // Focus input when search opens
   useEffect(() => {
@@ -77,7 +95,7 @@ export default function NavBar({
     <nav className={styles.navbar}>
       <div className={styles.navContent}>
         {/* Far Left - Home Button */}
-        <div className={styles.navLeft}>
+        <div className={styles.navLeft} ref={leftRef}>
           {showHome && (
             <Link href="/" className={styles.homeButton}>
               <IoLeaf size={22} />
@@ -170,8 +188,8 @@ export default function NavBar({
         </div>
 
         {/* Far Right - Profile/Sign-in */}
-        <div className={styles.navRight}>
-          <UserMenu />
+        <div className={styles.navRight} ref={rightRef}>
+          <UserMenu onAuthChange={balanceSides} />
         </div>
       </div>
     </nav>

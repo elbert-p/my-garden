@@ -22,7 +22,7 @@ export default function GoogleSignInButton() {
       disabled={loading}
     >
       <img src={GOOGLE_LOGO} alt="Google" className={styles.logo} />
-      <span>Sign in with Google</span>
+      <span>Sign in</span> {/* with Google */}
     </button>
   );
 }
