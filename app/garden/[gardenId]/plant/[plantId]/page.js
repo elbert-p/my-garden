@@ -49,14 +49,28 @@ export default function PlantPage() {
       try {
         const p = await getPlant(plantId, user?.id);
         if (p) {
-          setPlant(p); setTemp({ ...p });
-          const d = findData(p.scientificName);
-          if (p.scientificName && d && !p.hasAutofilled) { setAutofillData(d); setShowAutofillModal(true); }
+          setPlant(p); 
+          setTemp({ ...p });
         } else router.push(`/garden/${gardenId}`);
       } catch { router.push(`/garden/${gardenId}`); }
       setIsLoading(false);
     })();
   }, [plantId, gardenId, user?.id, isInitialized, router]);
+
+  useEffect(() => {
+    // 1. Check if we have a name and haven't autofilled yet
+    if (plant?.scientificName && !plant.hasAutofilled) {
+      
+      // 2. Check the database
+      const d = findData(plant.scientificName);
+      
+      // 3. Open modal if match found
+      if (d) {
+        setAutofillData(d);
+        setShowAutofillModal(true);
+      }
+    }
+  }, [plant?.scientificName, plant?.hasAutofilled]);
 
   useEffect(() => {
     const esc = (e) => { if (e.key === 'Escape') { setSelectedImage(null); setShowAutofillModal(false); setShowNotFoundModal(false); setShowDeleteModal(false); setShowShareModal(false); setShowSignInModal(false); }};

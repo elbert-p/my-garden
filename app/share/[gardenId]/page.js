@@ -17,24 +17,19 @@ export default function SharedGardenPage() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const abortController = new AbortController();
     let isMounted = true;
 
     const loadData = async () => {
       try {
-        const data = await getSharedGarden(gardenId, abortController.signal);
+        const data = await getSharedGarden(gardenId);
         
-        if (!isMounted) return;
+        if (!isMounted || !data) return;
         
         setGarden(data.garden);
         setPlants(data.plants);
         setOwner(data.owner);
       } catch (e) {
-        // Ignore abort errors - they're expected on unmount
-        if (e.name === 'AbortError') return;
-        
         if (!isMounted) return;
-        
         console.error('Failed to load shared garden:', e);
         setError('Garden not found or no longer available.');
       } finally {
@@ -48,7 +43,6 @@ export default function SharedGardenPage() {
 
     return () => {
       isMounted = false;
-      abortController.abort();
     };
   }, [gardenId]);
 
@@ -69,7 +63,7 @@ export default function SharedGardenPage() {
         linkPrefix={`/share/${gardenId}/plant`}
         linkSuffix="?from=garden"
         getItemId={(p) => p.id}
-        getItemImage={(p) => p.mainImage || '/placeholder-plant.jpg'}
+        getItemImage={(p) => p.mainImage}
         getItemName={(p) => p.commonName || p.scientificName}
         getItemStyle={(p) => ({ fontStyle: p.commonName ? 'normal' : 'italic' })}
       />

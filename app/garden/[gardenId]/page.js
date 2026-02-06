@@ -134,7 +134,7 @@ export default function GardenPage() {
 
   const menuItems = [
     { icon: <FiPlus size={16} />, label: 'Add Plant', onClick: () => setShowAddModal(true), variant: 'success' },
-    { icon: <FiEdit size={16} />, label: 'Edit Garden Details', onClick: openEditModal },
+    { icon: <FiEdit size={16} />, label: 'Edit Garden', onClick: openEditModal },
     { icon: <FiShare2 size={16} />, label: 'Share Garden', onClick: handleShare },
     { icon: <FiTrash2 size={16} />, label: 'Delete Garden', onClick: () => setShowDeleteModal(true), danger: true },
   ];

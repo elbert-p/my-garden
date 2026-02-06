@@ -16,30 +16,24 @@ export default function SharedPlantPage() {
   const [error, setError] = useState(null);
   const [fromGarden, setFromGarden] = useState(false);
 
-  // Check if user navigated from the shared garden page
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     setFromGarden(params.get('from') === 'garden');
   }, []);
 
   useEffect(() => {
-    const abortController = new AbortController();
     let isMounted = true;
 
     const loadData = async () => {
       try {
-        const data = await getSharedPlant(plantId, abortController.signal);
+        const data = await getSharedPlant(plantId);
         
-        if (!isMounted) return;
+        if (!isMounted || !data) return;
         
         setPlant(data.plant);
         setOwner(data.owner);
       } catch (e) {
-        // Ignore abort errors - they're expected on unmount
-        if (e.name === 'AbortError') return;
-        
         if (!isMounted) return;
-        
         console.error('Failed to load shared plant:', e);
         setError('Plant not found.');
       } finally {
@@ -53,7 +47,6 @@ export default function SharedPlantPage() {
 
     return () => {
       isMounted = false;
-      abortController.abort();
     };
   }, [plantId]);
 

@@ -1,11 +1,21 @@
 'use client';
-import { createContext, useContext, useEffect, useState, useRef, useCallback } from 'react';
+import { createContext, useContext, useEffect, useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { supabase } from '@/lib/supabaseClient';
 import localforage from 'localforage';
+import { clearAllCaches } from '@/lib/dataService';
 
 const AuthContext = createContext();
 
+/**
+ * AuthProvider - Robust auth handling inspired by working pattern
+ * 
+ * Key improvements:
+ * 1. Uses prevUserId in localStorage to track user across reloads
+ * 2. Handles INITIAL_SESSION separately from SIGNED_IN
+ * 3. Properly ignores AbortError from interrupted requests
+ * 4. Doesn't block on profile sync - does it in background
+ */
 export function AuthProvider({ children }) {
   const [session, setSession] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -13,11 +23,137 @@ export function AuthProvider({ children }) {
   const [isMigrating, setIsMigrating] = useState(false);
   const router = useRouter();
   
-  // Use ref to track the current session for the auth listener
-  const sessionRef = useRef(null);
+  const prevUserIdRef = useRef(null);
 
-  // Sync user profile data to profiles table
-  const syncUserProfile = useCallback(async (user) => {
+  useEffect(() => {
+    let isMounted = true;
+    let authSubscription = null;
+
+    const init = async () => {
+      try {
+        // Read previously known user from localStorage
+        const storedPrevUserId = localStorage.getItem('garden_prevUserId');
+        prevUserIdRef.current = storedPrevUserId;
+
+        // Get current session BEFORE attaching listener
+        const { data: { session: initialSession }, error: initError } = 
+          await supabase.auth.getSession();
+
+        if (!isMounted) return;
+
+        if (initError) {
+          // Ignore abort errors
+          if (initError.message?.includes('AbortError') || initError.name === 'AbortError') {
+            return;
+          }
+          console.error('[Auth] Error getting initial session:', initError);
+        }
+
+        setSession(initialSession);
+        setLoading(false);
+
+        // Handle initial session if user is signed in
+        if (initialSession?.user) {
+          const newUserId = initialSession.user.id;
+          
+          // Only do migration/sync if this is a DIFFERENT user than before
+          if (newUserId !== storedPrevUserId) {
+            await handleNewUser(initialSession.user, isMounted);
+          }
+          
+          // Persist current user
+          prevUserIdRef.current = newUserId;
+          localStorage.setItem('garden_prevUserId', newUserId);
+        }
+
+        if (!isMounted) return;
+        setIsInitialized(true);
+
+        // Now attach the listener - ignore INITIAL_SESSION since we handled it
+        const { data } = supabase.auth.onAuthStateChange(async (event, currentSession) => {
+          if (!isMounted) return;
+
+          // Skip INITIAL_SESSION - we already handled it above
+          if (event === 'INITIAL_SESSION') {
+            return;
+          }
+
+          if (event === 'SIGNED_IN' && currentSession?.user) {
+            const newUserId = currentSession.user.id;
+            
+            // Only process if it's a different user
+            if (newUserId !== prevUserIdRef.current) {
+              await handleNewUser(currentSession.user, isMounted);
+              
+              prevUserIdRef.current = newUserId;
+              localStorage.setItem('garden_prevUserId', newUserId);
+              
+              // Redirect to home after new sign in
+              if (!prevUserIdRef.current) {
+                router.push('/');
+                router.refresh();
+              }
+            }
+          }
+
+          if (event === 'SIGNED_OUT') {
+            prevUserIdRef.current = null;
+            localStorage.removeItem('garden_prevUserId');
+            clearAllCaches(); // Clear data cache on sign out
+            router.push('/');
+          }
+
+          if (isMounted) {
+            setSession(currentSession);
+          }
+        });
+
+        authSubscription = data.subscription;
+
+      } catch (error) {
+        // Ignore abort errors completely
+        if (error?.message?.includes('AbortError') || error?.name === 'AbortError') {
+          return;
+        }
+        console.error('[Auth] Init error:', error);
+        if (isMounted) {
+          setLoading(false);
+          setIsInitialized(true);
+        }
+      }
+    };
+
+    /**
+     * Handle a new user signing in
+     * - Sync profile to profiles table (non-blocking)
+     * - Migrate local data if needed
+     */
+    async function handleNewUser(user, mounted) {
+      // Sync profile in background - don't await
+      syncUserProfile(user);
+
+      // Check if migration is needed
+      const hasMigrated = localStorage.getItem(`garden_migrated_${user.id}`);
+      if (!hasMigrated && mounted) {
+        setIsMigrating(true);
+        await migrateLocalDataToSupabase(user.id);
+        if (mounted) {
+          localStorage.setItem(`garden_migrated_${user.id}`, 'true');
+          setIsMigrating(false);
+        }
+      }
+    }
+
+    init();
+
+    return () => {
+      isMounted = false;
+      authSubscription?.unsubscribe();
+    };
+  }, [router]);
+
+  // Sync user profile to profiles table - fire and forget
+  const syncUserProfile = async (user) => {
     if (!user) return;
     
     try {
@@ -34,34 +170,45 @@ export function AuthProvider({ children }) {
         });
       
       if (error) {
+        // Ignore abort errors
+        if (error.message?.includes('AbortError') || error.name === 'AbortError') {
+          return;
+        }
         console.error('[Auth] Error syncing profile:', error);
       }
     } catch (err) {
+      if (err?.message?.includes('AbortError') || err?.name === 'AbortError') {
+        return;
+      }
       console.error('[Auth] Profile sync error:', err);
     }
-  }, []);
+  };
 
-  // Migrate local storage data to Supabase on first sign in
-  const migrateLocalDataToSupabase = useCallback(async (userId) => {
+  // Migrate local storage data to Supabase
+  const migrateLocalDataToSupabase = async (userId) => {
     try {
-      console.log('[Auth] Starting migration of local data...');
-      
       const localGardens = (await localforage.getItem('gardens')) || [];
       const localPlants = (await localforage.getItem('plants')) || [];
 
       if (localGardens.length === 0 && localPlants.length === 0) {
-        console.log('[Auth] No local data to migrate');
         return;
       }
 
-      const { data: existingGardens } = await supabase
+      // Check if user already has data
+      const { data: existingGardens, error: checkError } = await supabase
         .from('gardens')
         .select('id')
-        .eq('user_id', userId);
+        .eq('user_id', userId)
+        .limit(1);
+
+      if (checkError) {
+        if (checkError.message?.includes('AbortError')) return;
+        console.error('[Auth] Error checking existing gardens:', checkError);
+        return;
+      }
 
       if (existingGardens && existingGardens.length > 0) {
-        console.log('[Auth] User already has data in Supabase, skipping migration');
-        return;
+        return; // User already has data, skip migration
       }
 
       const gardenIdMap = {};
@@ -78,6 +225,7 @@ export function AuthProvider({ children }) {
           .single();
 
         if (error) {
+          if (error.message?.includes('AbortError')) return;
           console.error('[Auth] Error migrating garden:', error);
           continue;
         }
@@ -87,10 +235,7 @@ export function AuthProvider({ children }) {
 
       for (const plant of localPlants) {
         const newGardenId = gardenIdMap[plant.gardenId];
-        if (!newGardenId) {
-          console.warn('[Auth] No matching garden for plant:', plant.id);
-          continue;
-        }
+        if (!newGardenId) continue;
 
         const { error } = await supabase
           .from('plants')
@@ -112,118 +257,21 @@ export function AuthProvider({ children }) {
           });
 
         if (error) {
+          if (error.message?.includes('AbortError')) return;
           console.error('[Auth] Error migrating plant:', error);
         }
       }
 
       console.log('[Auth] Migration complete!');
     } catch (err) {
+      if (err?.message?.includes('AbortError') || err?.name === 'AbortError') {
+        return;
+      }
       console.error('[Auth] Migration error:', err);
     }
-  }, []);
+  };
 
-  // Initialize auth state
-  useEffect(() => {
-    let isMounted = true;
-    let subscription = null;
-
-    const init = async () => {
-      try {
-        const { data: { session: initialSession } } = await supabase.auth.getSession();
-        
-        // Check if component is still mounted before updating state
-        if (!isMounted) return;
-        
-        sessionRef.current = initialSession;
-        setSession(initialSession);
-        setLoading(false);
-
-        // If user is signed in, migrate local data and sync profile
-        if (initialSession?.user) {
-          // Sync profile to profiles table
-          await syncUserProfile(initialSession.user);
-          
-          if (!isMounted) return;
-          
-          const hasMigrated = localStorage.getItem(`migrated_${initialSession.user.id}`);
-          if (!hasMigrated) {
-            setIsMigrating(true);
-            await migrateLocalDataToSupabase(initialSession.user.id);
-            if (!isMounted) return;
-            localStorage.setItem(`migrated_${initialSession.user.id}`, 'true');
-            setIsMigrating(false);
-          }
-        }
-
-        if (!isMounted) return;
-        setIsInitialized(true);
-
-        // Listen for auth changes
-        const { data } = supabase.auth.onAuthStateChange(async (event, currentSession) => {
-          if (!isMounted) return;
-          
-          console.log('[Auth] Event:', event);
-          
-          if (event === 'SIGNED_IN') {
-            const previousUserId = sessionRef.current?.user?.id;
-            const newUserId = currentSession?.user?.id;
-            
-            // Sync profile on sign in
-            if (currentSession?.user) {
-              await syncUserProfile(currentSession.user);
-            }
-            
-            if (!isMounted) return;
-            
-            if (newUserId && newUserId !== previousUserId) {
-              const hasMigrated = localStorage.getItem(`migrated_${newUserId}`);
-              if (!hasMigrated) {
-                setIsMigrating(true);
-                setSession(currentSession);
-                sessionRef.current = currentSession;
-                await migrateLocalDataToSupabase(newUserId);
-                if (!isMounted) return;
-                localStorage.setItem(`migrated_${newUserId}`, 'true');
-                setIsMigrating(false);
-              }
-              if (!previousUserId) {
-                router.push('/');
-                router.refresh();
-              }
-            }
-          }
-
-          if (!isMounted) return;
-
-          if (event === 'SIGNED_OUT') {
-            router.push('/');
-          }
-
-          sessionRef.current = currentSession;
-          setSession(currentSession);
-        });
-
-        subscription = data.subscription;
-      } catch (error) {
-        console.error('[Auth] Init error:', error);
-        if (isMounted) {
-          setLoading(false);
-          setIsInitialized(true);
-        }
-      }
-    };
-
-    init();
-
-    return () => {
-      isMounted = false;
-      if (subscription) {
-        subscription.unsubscribe();
-      }
-    };
-  }, [router, syncUserProfile, migrateLocalDataToSupabase]);
-
-  const signInWithGoogle = useCallback(async () => {
+  const signInWithGoogle = async () => {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
@@ -234,25 +282,21 @@ export function AuthProvider({ children }) {
       console.error('Error signing in:', error);
       throw error;
     }
-  }, []);
+  };
 
-  const signOut = useCallback(async () => {
+  const signOut = async () => {
     try {
-      const { error } = await supabase.auth.signOut();
-      if (error) {
-        console.error('Error signing out:', error);
-        throw error;
-      }
-      sessionRef.current = null;
-      setSession(null);
-      router.push('/');
+      await supabase.auth.signOut();
     } catch (error) {
       console.error('Sign out error:', error);
-      sessionRef.current = null;
-      setSession(null);
-      router.push('/');
     }
-  }, [router]);
+    // Always clean up local state regardless of Supabase response
+    prevUserIdRef.current = null;
+    localStorage.removeItem('garden_prevUserId');
+    clearAllCaches();
+    setSession(null);
+    router.push('/');
+  };
 
   const value = {
     session,
