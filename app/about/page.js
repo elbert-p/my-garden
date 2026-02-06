@@ -20,7 +20,7 @@ export default function AboutPage() {
         <div className={styles.content}>
           <h2>About My Gardens</h2>
           <p>This page is coming soon.</p>
-          <p>Here you'll be able to see information about your gardens and account settings.</p>
+          <p>Here you&apos;ll be able to see information about your gardens and account settings.</p>
         </div>
       </div>
     </>
