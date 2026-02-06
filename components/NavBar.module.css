@@ -1,0 +1,283 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #fff;
+  border-bottom: 1px solid #e8eaed;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.navContent {
+  display: flex;
+  align-items: center;
+  height: 55px;
+  padding: 0 1rem;
+}
+
+/* Far left - Home button */
+.navLeft {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding-right: 1rem;
+}
+
+/* Center section - constrained to content width */
+.navCenter {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  max-width: var(--content-max-width, 1200px);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  gap: 1.5rem;
+}
+
+/* Title group - title and optional shared badge */
+.titleGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+/* Title */
+.title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Spacer pushes tabs and actions apart */
+.spacer {
+  flex: 1;
+}
+
+/* Tab navigation */
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-shrink: 0;
+}
+
+.tab {
+  position: relative;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #5f6368;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.tab::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 8px;
+  right: 8px;
+  height: 3px;
+  background-color: transparent;
+  border-radius: 3px 3px 0 0;
+  transition: background-color 0.2s ease;
+}
+
+.tab:hover {
+  color: #202124;
+}
+
+.tab:hover::after {
+  background-color: #dadce0;
+}
+
+.tabActive {
+  color: #1a73e8;
+}
+
+.tabActive::after {
+  background-color: #1a73e8;
+}
+
+.tabActive:hover::after {
+  background-color: #1a73e8;
+}
+
+/* Actions group - aligned with content end */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* Far right - Profile/Sign-in */
+.navRight {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding-left: 1rem;
+}
+
+/* Icon button style */
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #f8f9fa;
+  color: #5f6368;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.iconButton:hover {
+  background-color: #e8eaed;
+  color: #202124;
+}
+
+/* Home button special styling */
+.homeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  color: #4CAF50;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.homeButton:hover {
+  background-color: #e8f5e9;
+  color: #45a049;
+}
+
+/* Search container */
+.searchContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.searchOpen {
+  flex-direction: row-reverse;
+}
+
+.searchInputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  width: 200px;
+  height: 40px;
+  padding: 0 32px 0 12px;
+  border: 1px solid #e8eaed;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  background-color: #f8f9fa;
+  color: #202124;
+  outline: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease, width 0.2s ease;
+}
+
+.searchInput:focus {
+  border-color: #1a73e8;
+  background-color: #fff;
+}
+
+.searchInput::placeholder {
+  color: #9aa0a6;
+}
+
+.searchClearButton {
+  position: absolute;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: none;
+  color: #5f6368;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.searchClearButton:hover {
+  background-color: #e8eaed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navContent {
+    padding: 0 0.5rem;
+  }
+  
+  .navCenter {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+  
+  .title {
+    font-size: 1.15rem;
+    max-width: 150px;
+  }
+  
+  .tab {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .searchInput {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navCenter {
+    padding: 0 0.5rem;
+  }
+
+  .title {
+    font-size: 1rem;
+    max-width: 100px;
+  }
+  
+  .tab {
+    padding: 8px 8px;
+    font-size: 0.85rem;
+  }
+  
+  .tabs {
+    gap: 0;
+  }
+  
+  .searchInput {
+    width: 120px;
+  }
+}

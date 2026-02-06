@@ -6,9 +6,17 @@
   color: #333;
 }
 
-.loading {
+.loading,
+.message {
   text-align: center;
   color: #888;
   font-style: italic;
   margin-top: 4rem;
+}
+
+.homeLink {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: #1a73e8;
 }

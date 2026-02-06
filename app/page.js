@@ -1,15 +1,15 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
+import { FiPlus } from 'react-icons/fi';
 import { useAuth } from '@/context/AuthContext';
 import { getGardens, createGarden } from '@/lib/dataService';
-import PageHeader from '@/components/PageHeader';
+import NavBar from '@/components/NavBar';
 import ItemGrid from '@/components/ItemGrid';
 import Modal from '@/components/Modal';
 import FormInput, { ErrorMessage } from '@/components/FormInput';
 import ImageUpload from '@/components/ImageUpload';
 import Button from '@/components/Button';
-import UserMenu from '@/components/UserMenu';
 import styles from './page.module.css';
 
 const DEFAULT_GARDEN_IMAGE = '/default-garden.jpg';
@@ -22,17 +22,16 @@ export default function Home() {
   const [newGardenImage, setNewGardenImage] = useState(null);
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState('');
   const router = useRouter();
 
   useEffect(() => {
     const loadGardens = async () => {
-      // Don't load until initialized and migration is complete
       if (!isInitialized || isMigrating) return;
       
       try {
         const result = await getGardens(user?.id);
         
-        // If a default garden was just created, redirect to it
         if (result.createdDefault) {
           router.push(`/garden/${result.gardens[0].id}`);
           return;
@@ -48,6 +47,15 @@ export default function Home() {
     
     loadGardens();
   }, [user?.id, isInitialized, isMigrating, router]);
+
+  // Filter gardens based on search query
+  const filteredGardens = useMemo(() => {
+    if (!searchQuery.trim()) return gardens;
+    const query = searchQuery.toLowerCase();
+    return gardens.filter(garden => 
+      garden.name.toLowerCase().includes(query)
+    );
+  }, [gardens, searchQuery]);
 
   const handleAddGarden = async () => {
     if (!newGardenName.trim()) {
@@ -79,62 +87,73 @@ export default function Home() {
 
   const showLoading = !isInitialized || isMigrating || isLoading;
 
+  const tabs = [
+    { label: 'Gardens', href: '/', active: true },
+    { label: 'About', href: '/about', active: false },
+  ];
+
+  const menuItems = [
+    { icon: <FiPlus size={16} />, label: 'New Garden', onClick: () => setShowModal(true), variant: 'success' },
+  ];
+
   return (
-    <div className={styles.container}>
-      <PageHeader
+    <>
+      <NavBar
         title="My Gardens"
-        titleAlign="left"
-        actions={
-          <div className={styles.headerActions}>
-            <UserMenu />
-            <Button size="small" onClick={() => setShowModal(true)}>+ New Garden</Button>
-          </div>
-        }
+        showHome={true}
+        tabs={tabs}
+        showSearch={true}
+        searchValue={searchQuery}
+        onSearchChange={setSearchQuery}
+        searchPlaceholder="Search gardens..."
+        menuItems={menuItems}
       />
+      
+      <div className={styles.container}>
+        {showLoading ? (
+          <p className={styles.loading}>
+            {isMigrating ? 'Migrating your gardens...' : 'Loading...'}
+          </p>
+        ) : (
+          <ItemGrid
+            items={filteredGardens}
+            emptyMessage={searchQuery ? 'No gardens match your search.' : 'No gardens yet. Click the menu to add one!'}
+            linkPrefix="/garden"
+            getItemId={(g) => g.id}
+            getItemImage={(g) => g.image || DEFAULT_GARDEN_IMAGE}
+            getItemName={(g) => g.name}
+          />
+        )}
 
-      {showLoading ? (
-        <p className={styles.loading}>
-          {isMigrating ? 'Migrating your gardens...' : 'Loading...'}
-        </p>
-      ) : (
-        <ItemGrid
-          items={gardens}
-          emptyMessage='No gardens yet. Click "+ New Garden" to get started!'
-          linkPrefix="/garden"
-          getItemId={(g) => g.id}
-          getItemImage={(g) => g.image || DEFAULT_GARDEN_IMAGE}
-          getItemName={(g) => g.name}
-        />
-      )}
-
-      <Modal
-        isOpen={showModal}
-        onClose={handleCloseModal}
-        title="Add New Garden"
-        size="medium"
-      >
-        <ErrorMessage message={error} />
-        <FormInput
-          value={newGardenName}
-          onChange={setNewGardenName}
-          placeholder="Garden name"
-        />
-        <ImageUpload
-          image={newGardenImage}
-          onImageChange={setNewGardenImage}
-          onError={setError}
-          placeholder="Select Image"
-          size="large"
-        />
-        <div className={styles.modalButtons}>
-          <Button variant="secondary" onClick={handleCloseModal}>
-            Cancel
-          </Button>
-          <Button onClick={handleAddGarden}>
-            Save
-          </Button>
-        </div>
-      </Modal>
-    </div>
+        <Modal
+          isOpen={showModal}
+          onClose={handleCloseModal}
+          title="Add New Garden"
+          size="medium"
+        >
+          <ErrorMessage message={error} />
+          <FormInput
+            value={newGardenName}
+            onChange={setNewGardenName}
+            placeholder="Garden name"
+          />
+          <ImageUpload
+            image={newGardenImage}
+            onImageChange={setNewGardenImage}
+            onError={setError}
+            placeholder="Select Image"
+            size="large"
+          />
+          <div className={styles.modalButtons}>
+            <Button variant="secondary" onClick={handleCloseModal}>
+              Cancel
+            </Button>
+            <Button onClick={handleAddGarden}>
+              Save
+            </Button>
+          </div>
+        </Modal>
+      </div>
+    </>
   );
 }

@@ -1,7 +1,7 @@
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 1.5rem 2rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   color: #202124;
 }
@@ -34,22 +34,28 @@
 
 .mainImage {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-.mainImageContainer:hover .mainImage { transform: scale(1.02); }
+.mainImageContainer:hover .mainImage {
+  transform: scale(1.02);
+}
 
 .mainImageEditButton {
   position: absolute;
-  top: 12px; right: 12px;
+  top: 12px;
+  right: 12px;
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
   border-radius: 50%;
-  width: 36px; height: 36px;
+  width: 36px;
+  height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,12 +64,22 @@
   transition: opacity 0.2s ease, background-color 0.2s ease;
 }
 
-.mainImageContainer:hover .mainImageEditButton { opacity: 1; }
-.mainImageEditButton:hover { background-color: rgba(0, 0, 0, 0.8); }
+.mainImageContainer:hover .mainImageEditButton {
+  opacity: 1;
+}
 
-.fileInput { display: none; }
+.mainImageEditButton:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
-.infoGridWrapper { max-width: 100%; margin: 0 auto 1.5rem; }
+.fileInput {
+  display: none;
+}
+
+.infoGridWrapper {
+  max-width: 100%;
+  margin: 0 auto 1.5rem;
+}
 
 .infoGrid {
   display: grid;
@@ -72,12 +88,23 @@
 }
 
 @media (max-width: 600px) {
-  .infoGrid { grid-template-columns: 1fr; }
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
-.photosSection { margin-top: 0.5rem; }
-.photosSection .addPhotoButton { opacity: 0; transition: opacity 0.2s ease; }
-.photosSection:hover .addPhotoButton { opacity: 1; }
+.photosSection {
+  margin-top: 0.5rem;
+}
+
+.photosSection .addPhotoButton {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.photosSection:hover .addPhotoButton {
+  opacity: 1;
+}
 
 .sectionTitle {
   font-size: 1rem;
@@ -106,22 +133,28 @@
 
 .photo {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-.photoItem:hover .photo { transform: scale(1.05); }
+.photoItem:hover .photo {
+  transform: scale(1.05);
+}
 
 .removeButton {
   position: absolute;
-  top: 6px; right: 6px;
+  top: 6px;
+  right: 6px;
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
   border-radius: 50%;
-  width: 26px; height: 26px;
+  width: 26px;
+  height: 26px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,24 +163,50 @@
   transition: opacity 0.2s ease, background-color 0.2s ease;
 }
 
-.photoItem:hover .removeButton { opacity: 1; }
-.removeButton:hover { background-color: #ea4335; }
+.photoItem:hover .removeButton {
+  opacity: 1;
+}
 
-.noPhotos { color: #9aa0a6; font-size: 0.9rem; margin: 0; }
+.removeButton:hover {
+  background-color: #ea4335;
+}
 
-.emptyPhotosContainer { display: flex; align-items: center; gap: 1.5rem; }
+.noPhotos {
+  color: #9aa0a6;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.emptyPhotosContainer {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
 
 .emptyPhotosAddButton {
-  width: 100px; height: 100px;
+  width: 100px;
+  height: 100px;
   flex-shrink: 0;
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
-.emptyPhotosAddButton.visible { visibility: visible; opacity: 1; }
-.photosSection:hover .emptyPhotosAddButton { visibility: visible; opacity: 1; }
-.emptyPhotosAddButton .addPhotoButton { width: 100%; height: 100%; min-height: unset; }
+.emptyPhotosAddButton.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.photosSection:hover .emptyPhotosAddButton {
+  visibility: visible;
+  opacity: 1;
+}
+
+.emptyPhotosAddButton .addPhotoButton {
+  width: 100%;
+  height: 100%;
+  min-height: unset;
+}
 
 .addPhotoButton {
   display: flex;
@@ -172,6 +231,7 @@
   color: #1a73e8;
 }
 
+/* Photo Modal */
 .photoModalOverlay {
   position: fixed;
   inset: 0;
@@ -184,7 +244,10 @@
   animation: fadeIn 0.2s ease;
 }
 
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
 .photoModalContent {
   position: relative;
@@ -206,12 +269,14 @@
 
 .photoModalCloseButton {
   position: absolute;
-  top: -12px; right: -12px;
+  top: -12px;
+  right: -12px;
   background-color: #fff;
   color: #5f6368;
   border: none;
   border-radius: 50%;
-  width: 36px; height: 36px;
+  width: 36px;
+  height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -219,14 +284,44 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-.photoModalCloseButton:hover { color: #202124; }
-
-@media (max-width: 480px) {
-  .container { padding: 1rem; }
-  .details { padding: 1rem; }
+.photoModalCloseButton:hover {
+  color: #202124;
 }
 
-.shareText { color: #5f6368; margin: 0 0 0.75rem 0; font-size: 0.95rem; }
-.shareLink { background-color: #f8f9fa; border: 1px solid #e8eaed; border-radius: 8px; padding: 12px; margin-bottom: 1rem; word-break: break-all; }
-.shareLink code { font-size: 0.85rem; color: #202124; }
-.shareButtons, .signInButtons { display: flex; justify-content: flex-end; gap: 0.75rem; }
+/* Plant-specific modal styles */
+.shareText {
+  color: #5f6368;
+  margin: 0 0 0.75rem 0;
+  font-size: 0.95rem;
+}
+
+.shareLink {
+  background-color: #f8f9fa;
+  border: 1px solid #e8eaed;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 1rem;
+  word-break: break-all;
+}
+
+.shareLink code {
+  font-size: 0.85rem;
+  color: #202124;
+}
+
+.shareButtons,
+.signInButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .details {
+    padding: 1rem;
+  }
+}

@@ -2,18 +2,33 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   gap: 1rem;
-  position: relative;
   min-height: 48px;
+  position: relative;
 }
 
 .left {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
   flex-shrink: 0;
   z-index: 1;
+}
+
+/* Title centered absolutely */
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  max-width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .right {
@@ -21,56 +36,8 @@
   align-items: center;
   gap: 0.75rem;
   flex-shrink: 0;
-  z-index: 1;
   margin-left: auto;
-}
-
-/* Centered title - uses absolute positioning to stay centered regardless of left/right sizes */
-.title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin: 0;
-  max-width: 50%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  text-align: center;
-}
-
-/* Left-aligned title - sits in the flow next to left items */
-.titleLeft {
-  position: static;
-  transform: none;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: none;
-}
-
-.homeLink {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #fff;
-  color: #4CAF50;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.homeLink:hover {
-  background-color: #f1f3f4;
-  color: #45a049;
+  z-index: 1;
 }
 
 .backLink {
@@ -80,11 +47,7 @@
 @media (max-width: 600px) {
   .title {
     font-size: 1.5rem;
-    max-width: 40%;
-  }
-  
-  .titleLeft {
-    font-size: 1.5rem;
+    max-width: 50%;
   }
 }
 
@@ -93,24 +56,8 @@
     min-height: 40px;
   }
   
-  /* Only wrap for centered titles on mobile */
-  .header:has(.title) {
-    flex-wrap: wrap;
-    padding-top: 2.5rem;
-  }
-  
-  .header:has(.title) .title {
-    position: static;
-    transform: none;
-    order: -1;
-    flex-basis: 100%;
-    text-align: center;
-    margin-bottom: 0.5rem;
-    white-space: normal;
-    max-width: 100%;
-  }
-  
-  .titleLeft {
+  .title {
     font-size: 1.25rem;
+    max-width: 45%;
   }
 }

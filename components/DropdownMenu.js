@@ -1,16 +1,18 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
-import { IoEllipsisHorizontal } from 'react-icons/io5';
+import { FiMenu } from 'react-icons/fi';
 import styles from './DropdownMenu.module.css';
 
 /**
  * Reusable Dropdown Menu Component
- * @param {Array} items - Array of menu items: { icon, label, onClick, danger?, variant? }
+ * @param {Array} items - Array of menu items: { icon, label, onClick, danger?, variant?, divider? }
  *   - variant: 'default' | 'success' | 'danger'
  *   - danger: shorthand for variant='danger'
- * @param {string} buttonClassName - Optional additional class for the trigger button
+ *   - divider: if true, renders a divider line instead of a button
+ * @param {React.ReactNode} icon - Custom icon for the trigger button (default: hamburger)
+ * @param {string} buttonClassName - Optional custom class for the trigger button
  */
-export default function DropdownMenu({ items, buttonClassName = '' }) {
+export default function DropdownMenu({ items, icon, buttonClassName }) {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -38,7 +40,7 @@ export default function DropdownMenu({ items, buttonClassName = '' }) {
 
   const handleItemClick = (item) => {
     setIsOpen(false);
-    item.onClick();
+    item.onClick?.();
   };
 
   const getItemClass = (item) => {
@@ -54,23 +56,28 @@ export default function DropdownMenu({ items, buttonClassName = '' }) {
     <div className={styles.container} ref={menuRef}>
       <button 
         onClick={() => setIsOpen(!isOpen)} 
-        className={`${styles.menuButton} ${buttonClassName}`}
+        className={buttonClassName || styles.menuButton}
         aria-label="Menu"
       >
-        <IoEllipsisHorizontal size={20} />
+        {icon || <FiMenu size={20} />}
       </button>
       {isOpen && (
         <div className={styles.dropdown}>
-          {items.map((item, index) => (
-            <button
-              key={index}
-              onClick={() => handleItemClick(item)}
-              className={getItemClass(item)}
-            >
-              {item.icon && <span className={styles.icon}>{item.icon}</span>}
-              <span>{item.label}</span>
-            </button>
-          ))}
+          {items.map((item, index) => {
+            if (item.divider) {
+              return <div key={index} className={styles.divider} />;
+            }
+            return (
+              <button
+                key={index}
+                onClick={() => handleItemClick(item)}
+                className={getItemClass(item)}
+              >
+                {item.icon && <span className={styles.icon}>{item.icon}</span>}
+                <span>{item.label}</span>
+              </button>
+            );
+          })}
         </div>
       )}
     </div>
