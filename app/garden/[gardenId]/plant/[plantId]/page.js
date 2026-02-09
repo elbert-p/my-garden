@@ -28,7 +28,7 @@ const formatDateDisplay = (dateStr) => { if (!dateStr) return ''; const [y, m, d
 export default function PlantPage() {
   const router = useRouter();
   const { plantId } = useParams();
-  const { gardenId, user, isInitialized, garden, plants } = useGarden();
+  const { gardenId, user, isInitialized, garden } = useGarden();
 
   const [plant, setPlant] = useState(null);
   const [editing, setEditing] = useState(false);
@@ -44,10 +44,6 @@ export default function PlantPage() {
   const [isLoading, setIsLoading] = useState(true);
   const mainRef = useRef(null);
   const addRef = useRef(null);
-
-  // Get plant name from context for immediate header display
-  const contextPlant = plants?.find(p => p.id === plantId);
-  const displayName = plant?.commonName || plant?.scientificName || contextPlant?.commonName || contextPlant?.scientificName || 'Plant';
 
   // Load plant data
   useEffect(() => {
@@ -178,82 +174,84 @@ export default function PlantPage() {
     { icon: <FiTrash2 size={16} />, label: 'Delete', onClick: () => setShowDeleteModal(true), danger: true },
   ];
 
+  if (isLoading || !plant) {
+    return (
+      <div className={styles.container}>
+        <div className={styles.loading}>Loading plant...</div>
+      </div>
+    );
+  }
+
   return (
     <>
       <div className={styles.container}>
         <PageHeader
-          title={displayName}
+          title={plant.commonName || plant.scientificName || 'Plant'}
           onBack={() => router.push(`/garden/${gardenId}`)}
           actions={
-            !isLoading && plant ? (
-              editing ? (
-                <Button variant="success" onClick={async () => { await save(temp); setEditing(false); }}>
-                  Save
-                </Button>
-              ) : (
-                <DropdownMenu items={plantMenu} />
-              )
-            ) : null
+            editing ? (
+              <Button variant="success" onClick={async () => { await save(temp); setEditing(false); }}>
+                Save
+              </Button>
+            ) : (
+              <DropdownMenu items={plantMenu} />
+            )
           }
         />
 
-        {isLoading || !plant ? (
-          <div className={styles.loading}>Loading plant...</div>
-        ) : (
-          <div className={styles.details}>
-            <div className={styles.mainImageContainer} onClick={() => mainRef.current?.click()}>
-              <img src={temp.mainImage || '/placeholder-plant.jpg'} alt="" className={styles.mainImage} />
-              <button className={styles.mainImageEditButton}><FiEdit size={18} /></button>
-              <input ref={mainRef} type="file" onChange={onMain} className={styles.fileInput} accept="image/*" />
-            </div>
+        <div className={styles.details}>
+          <div className={styles.mainImageContainer} onClick={() => mainRef.current?.click()}>
+            <img src={temp.mainImage || '/placeholder-plant.jpg'} alt="" className={styles.mainImage} />
+            <button className={styles.mainImageEditButton}><FiEdit size={18} /></button>
+            <input ref={mainRef} type="file" onChange={onMain} className={styles.fileInput} accept="image/*" />
+          </div>
 
-            <div className={styles.infoGridWrapper}>
-              <div className={styles.infoGrid}>
-                <InfoField label="Common Name" value={temp.commonName} onChange={v => setTemp({ ...temp, commonName: v })} onSave={() => save(temp)} isEditing={editing} type="text" />
-                <InfoField label="Scientific Name" value={temp.scientificName} onChange={v => setTemp({ ...temp, scientificName: v })} onSave={() => save(temp)} isEditing={editing} type="text" />
-                <InfoField label="Date Planted" value={temp.datePlanted} onChange={v => setTemp({ ...temp, datePlanted: v })} onSave={() => save(temp)} isEditing={editing} type="date" formatDisplay={formatDateDisplay} />
-                <InfoField label="Bloom Time" value={temp.bloomTime} onChange={v => setTemp({ ...temp, bloomTime: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={BLOOM_OPTIONS} />
-                <InfoField label="Height" value={temp.height} onChange={v => setTemp({ ...temp, height: v })} onSave={() => save(temp)} isEditing={editing} type="text" placeholder="e.g., 2-3 ft" />
-                <InfoField label="Sunlight" value={temp.sunlight} onChange={v => setTemp({ ...temp, sunlight: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={SUN_OPTIONS} />
-                <InfoField label="Moisture" value={temp.moisture} onChange={v => setTemp({ ...temp, moisture: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={MOISTURE_OPTIONS} />
-                <InfoField label="Native Range" value={temp.nativeRange} onChange={v => setTemp({ ...temp, nativeRange: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={NATIVE_OPTIONS} />
-                <InfoField label="Notes" value={temp.notes} onChange={v => setTemp({ ...temp, notes: v })} onSave={() => save(temp)} isEditing={editing} type="textarea" emptyText="No notes" size="large" />
+          <div className={styles.infoGridWrapper}>
+            <div className={styles.infoGrid}>
+              <InfoField label="Common Name" value={temp.commonName} onChange={v => setTemp({ ...temp, commonName: v })} onSave={() => save(temp)} isEditing={editing} type="text" />
+              <InfoField label="Scientific Name" value={temp.scientificName} onChange={v => setTemp({ ...temp, scientificName: v })} onSave={() => save(temp)} isEditing={editing} type="text" />
+              <InfoField label="Date Planted" value={temp.datePlanted} onChange={v => setTemp({ ...temp, datePlanted: v })} onSave={() => save(temp)} isEditing={editing} type="date" formatDisplay={formatDateDisplay} />
+              <InfoField label="Bloom Time" value={temp.bloomTime} onChange={v => setTemp({ ...temp, bloomTime: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={BLOOM_OPTIONS} />
+              <InfoField label="Height" value={temp.height} onChange={v => setTemp({ ...temp, height: v })} onSave={() => save(temp)} isEditing={editing} type="text" placeholder="e.g., 2-3 ft" />
+              <InfoField label="Sunlight" value={temp.sunlight} onChange={v => setTemp({ ...temp, sunlight: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={SUN_OPTIONS} />
+              <InfoField label="Moisture" value={temp.moisture} onChange={v => setTemp({ ...temp, moisture: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={MOISTURE_OPTIONS} />
+              <InfoField label="Native Range" value={temp.nativeRange} onChange={v => setTemp({ ...temp, nativeRange: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={NATIVE_OPTIONS} />
+              <InfoField label="Notes" value={temp.notes} onChange={v => setTemp({ ...temp, notes: v })} onSave={() => save(temp)} isEditing={editing} type="textarea" emptyText="No notes" size="large" />
+            </div>
+          </div>
+
+          <div className={styles.photosSection}>
+            <h2 className={styles.sectionTitle}>Additional Photos</h2>
+            {temp.images?.length > 0 ? (
+              <div className={styles.imageGrid}>
+                {temp.images.map((img, i) => (
+                  <div key={i} className={styles.photoItem}>
+                    <img src={img} alt="" className={styles.photo} onClick={() => setSelectedImage(img)} />
+                    <button onClick={e => { e.stopPropagation(); onRemove(img); }} className={styles.removeButton}>
+                      <IoClose size={16} />
+                    </button>
+                  </div>
+                ))}
+                <button className={styles.addPhotoButton} onClick={() => addRef.current?.click()}>
+                  <FiPlus size={24} />
+                  <span>Add Photo</span>
+                  <input ref={addRef} type="file" onChange={onAdd} className={styles.fileInput} accept="image/*" />
+                </button>
               </div>
-            </div>
-
-            <div className={styles.photosSection}>
-              <h2 className={styles.sectionTitle}>Additional Photos</h2>
-              {temp.images?.length > 0 ? (
-                <div className={styles.imageGrid}>
-                  {temp.images.map((img, i) => (
-                    <div key={i} className={styles.photoItem}>
-                      <img src={img} alt="" className={styles.photo} onClick={() => setSelectedImage(img)} />
-                      <button onClick={e => { e.stopPropagation(); onRemove(img); }} className={styles.removeButton}>
-                        <IoClose size={16} />
-                      </button>
-                    </div>
-                  ))}
+            ) : (
+              <div className={styles.emptyPhotosContainer}>
+                <p className={styles.noPhotos}>No additional photos yet.</p>
+                <div className={`${styles.emptyPhotosAddButton} ${editing ? styles.visible : ''}`}>
                   <button className={styles.addPhotoButton} onClick={() => addRef.current?.click()}>
                     <FiPlus size={24} />
                     <span>Add Photo</span>
                     <input ref={addRef} type="file" onChange={onAdd} className={styles.fileInput} accept="image/*" />
                   </button>
                 </div>
-              ) : (
-                <div className={styles.emptyPhotosContainer}>
-                  <p className={styles.noPhotos}>No additional photos yet.</p>
-                  <div className={`${styles.emptyPhotosAddButton} ${editing ? styles.visible : ''}`}>
-                    <button className={styles.addPhotoButton} onClick={() => addRef.current?.click()}>
-                      <FiPlus size={24} />
-                      <span>Add Photo</span>
-                      <input ref={addRef} type="file" onChange={onAdd} className={styles.fileInput} accept="image/*" />
-                    </button>
-                  </div>
-                </div>
-              )}
-            </div>
+              </div>
+            )}
           </div>
-        )}
+        </div>
       </div>
 
       {/* Photo Modal */}
@@ -294,7 +292,7 @@ export default function PlantPage() {
         onClose={() => setShowDeleteModal(false)}
         onConfirm={onDelete}
         title="Delete Plant"
-        message={<>Delete <strong>{plant?.commonName || plant?.scientificName}</strong>?</>}
+        message={<>Delete <strong>{plant.commonName || plant.scientificName}</strong>?</>}
         confirmText="Delete"
         cancelText="Cancel"
         variant="danger"

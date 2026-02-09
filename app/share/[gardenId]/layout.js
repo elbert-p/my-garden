@@ -9,7 +9,7 @@ function SharedGardenLayoutContent({ children }) {
   const { gardenId } = useParams();
   const pathname = usePathname();
   
-  const { garden, owner, isLoading, error, searchQuery, setSearchQuery } = useSharedGarden();
+  const { garden, owner, isLoading, plantsLoaded, error, searchQuery, setSearchQuery } = useSharedGarden();
 
   // Determine active tab and content width
   const isAboutPage = pathname.endsWith('/about');
@@ -18,13 +18,13 @@ function SharedGardenLayoutContent({ children }) {
   // Plant pages use narrower content width
   const contentWidth = isPlantPage ? 'medium' : 'large';
   
-  // Plants tab is active on both garden list and plant detail pages
+  // Tabs and search are always shown immediately (URLs use gardenId from params)
   const tabs = [
     { label: 'Plants', href: `/share/${gardenId}`, active: !isAboutPage },
     { label: 'About', href: `/share/${gardenId}/about`, active: isAboutPage },
   ];
 
-  // Error state - show after loading completes
+  // Error state - show after garden loading completes
   if (!isLoading && error) {
     return (
       <>
@@ -37,22 +37,20 @@ function SharedGardenLayoutContent({ children }) {
     );
   }
 
-  // Always render the NavBar immediately - use garden data when available,
-  // fallback to placeholder while loading
   return (
     <>
       <NavBar
         title={garden?.name || ''}
         showHome={true}
-        tabs={!isLoading ? tabs : []}
-        showSearch={!isLoading && !isPlantPage && !isAboutPage}
+        tabs={tabs}
+        showSearch={!isPlantPage && !isAboutPage}
         searchValue={searchQuery}
         onSearchChange={setSearchQuery}
         searchPlaceholder="Search plants..."
         sharedBy={owner}
         contentWidth={contentWidth}
       />
-      {isLoading ? (
+      {!garden || (!plantsLoaded && !isPlantPage) ? (
         <div className={styles.container}>
           <p className={styles.loading}>Loading...</p>
         </div>

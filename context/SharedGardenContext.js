@@ -1,7 +1,7 @@
 'use client';
 import { createContext, useContext, useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
-import { getSharedGarden } from '@/lib/dataService';
+import { getSharedGardenInfo, getSharedGardenPlants } from '@/lib/dataService';
 
 const SharedGardenContext = createContext();
 
@@ -11,7 +11,8 @@ export function SharedGardenProvider({ children }) {
   const [garden, setGarden] = useState(null);
   const [plants, setPlants] = useState([]);
   const [owner, setOwner] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [gardenLoading, setGardenLoading] = useState(true);
+  const [plantsLoaded, setPlantsLoaded] = useState(false);
   const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -20,21 +21,25 @@ export function SharedGardenProvider({ children }) {
 
     const loadData = async () => {
       try {
-        const data = await getSharedGarden(gardenId);
+        // Phase 1: Load garden info + owner (fast, populates navbar)
+        const info = await getSharedGardenInfo(gardenId);
+        if (!isMounted) return;
         
-        if (!isMounted || !data) return;
+        setGarden(info.garden);
+        setOwner(info.owner);
+        setGardenLoading(false);
+
+        // Phase 2: Load plants (can be slower)
+        const plantsList = await getSharedGardenPlants(gardenId);
+        if (!isMounted) return;
         
-        setGarden(data.garden);
-        setPlants(data.plants);
-        setOwner(data.owner);
+        setPlants(plantsList);
+        setPlantsLoaded(true);
       } catch (e) {
         if (!isMounted) return;
         console.error('Failed to load shared garden:', e);
         setError('Garden not found or no longer available.');
-      } finally {
-        if (isMounted) {
-          setIsLoading(false);
-        }
+        setGardenLoading(false);
       }
     };
 
@@ -59,7 +64,8 @@ export function SharedGardenProvider({ children }) {
     plants,
     filteredPlants,
     owner,
-    isLoading,
+    isLoading: gardenLoading,
+    plantsLoaded,
     error,
     searchQuery,
     setSearchQuery,

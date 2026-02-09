@@ -14,6 +14,7 @@ export function GardenProvider({ children }) {
   const [garden, setGarden] = useState(null);
   const [plants, setPlants] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [plantsLoaded, setPlantsLoaded] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   
   // Modal states
@@ -23,25 +24,28 @@ export function GardenProvider({ children }) {
   const [showShareModal, setShowShareModal] = useState(false);
   const [showSignInModal, setShowSignInModal] = useState(false);
 
-  // Load garden and plants data
+  // Load garden and plants data in two phases
   useEffect(() => {
     const loadData = async () => {
       if (!isInitialized || !gardenId) return;
       
       try {
+        // Phase 1: Load garden info (fast, populates navbar)
         const gardenData = await getGarden(gardenId, user?.id);
-        if (gardenData) {
-          setGarden(gardenData);
-          const plantsData = await getPlants(gardenId, user?.id);
-          setPlants(plantsData);
-        } else {
+        if (!gardenData) {
           router.push('/');
+          return;
         }
+        setGarden(gardenData);
+        setIsLoading(false);
+
+        // Phase 2: Load plants
+        const plantsData = await getPlants(gardenId, user?.id);
+        setPlants(plantsData);
+        setPlantsLoaded(true);
       } catch (e) {
         console.error('Failed to load garden:', e);
         router.push('/');
-      } finally {
-        setIsLoading(false);
       }
     };
     
@@ -93,6 +97,7 @@ export function GardenProvider({ children }) {
     plants,
     filteredPlants,
     isLoading,
+    plantsLoaded,
     user,
     isInitialized,
     searchQuery,

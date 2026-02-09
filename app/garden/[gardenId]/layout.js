@@ -19,6 +19,7 @@ function GardenLayoutContent({ children }) {
   const {
     garden,
     isLoading,
+    plantsLoaded,
     isInitialized,
     user,
     searchQuery,
@@ -135,29 +136,27 @@ function GardenLayoutContent({ children }) {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const showLoading = !isInitialized || isLoading;
-
   return (
     <>
       <NavBar
         title={garden?.name || ''}
         showHome={true}
-        tabs={!showLoading && garden ? tabs : []}
-        showSearch={!showLoading && garden && !isPlantPage && !isAboutPage}
+        tabs={tabs}
+        showSearch={!isPlantPage && !isAboutPage}
         searchValue={searchQuery}
         onSearchChange={setSearchQuery}
         searchPlaceholder="Search plants..."
-        menuItems={!showLoading && garden ? menuItems : undefined}
+        menuItems={menuItems}
         contentWidth={contentWidth}
       />
 
-      {showLoading ? (
+      {!garden || (!plantsLoaded && !isPlantPage) ? (
         <div className={styles.container}>
           <p className={styles.loading}>Loading garden...</p>
         </div>
-      ) : garden ? (
+      ) : (
         children
-      ) : null}
+      )}
 
       {/* Add Plant Modal */}
       <Modal isOpen={showAddPlantModal} onClose={handleCloseAddModal} title="Add New Plant" size="medium">
