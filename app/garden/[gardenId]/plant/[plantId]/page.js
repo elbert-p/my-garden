@@ -18,7 +18,8 @@ import styles from './page.module.css';
 const BLOOM_OPTIONS = ['Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'];
 const SUN_OPTIONS = ['Sun', 'Part Sun', 'Part Shade', 'Shade'];
 const MOISTURE_OPTIONS = ['Wet', 'Medium', 'Dry'];
-const NATIVE_OPTIONS = ['Northern US', 'Northeastern US', 'Southern US', 'Southeastern US', 'Eastern US', 'East Coast US', 'Mid-Atlantic US', 'Western US', 'Midwestern US', 'Central US', 'Cultivar', 'Nativar', 'Europe', 'Asia', 'South America', 'Africa', 'Other'];
+const NATIVE_OPTIONS = ['Northern US', 'Northeastern US', 'Southern US', 'Southeastern US', 'Eastern US', 'East Coast US', 
+  'Mid-Atlantic US', 'Western US', 'Midwestern US', 'Central US', 'US Native', 'MA Native', 'Cultivar', 'Nativar', 'Europe', 'Asia', 'South America', 'Africa', 'Other'];
 
 const mapSun = (arr) => arr ? arr.map(s => ({ 'Full': 'Sun', 'Part': 'Part Sun', 'Shade': 'Shade' }[s] || s)).filter(Boolean) : [];
 const findData = (name) => { if (!name) return null; const key = Object.keys(plantsData).find(k => k.toLowerCase() === name.toLowerCase()); return key ? plantsData[key] : null; };
