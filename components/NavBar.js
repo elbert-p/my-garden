@@ -10,6 +10,7 @@ import styles from './NavBar.module.css';
 
 export default function NavBar({
   title,
+  badge,
   showHome = true,
   tabs = [],
   showSearch = false,
@@ -103,6 +104,7 @@ export default function NavBar({
         >
           <div className={styles.titleGroup}>
             <h1 className={styles.title}>{title}</h1>
+            {badge != null && <span className={styles.badge}>{badge}</span>}
             {sharedBy && <SharedByBadge user={sharedBy} />}
           </div>
           

@@ -18,6 +18,7 @@ function GardenLayoutContent({ children }) {
   
   const {
     garden,
+    plants,
     isLoading,
     plantsLoaded,
     isInitialized,
@@ -140,6 +141,7 @@ function GardenLayoutContent({ children }) {
     <>
       <NavBar
         title={garden?.name || ''}
+        badge={plantsLoaded ? plants.length : null}
         showHome={true}
         tabs={tabs}
         showSearch={!isPlantPage && !isAboutPage}

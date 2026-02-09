@@ -11,6 +11,7 @@ import styles from './ItemGrid.module.css';
  * @param {function} getItemImage - Function to get item image
  * @param {function} getItemName - Function to get item name
  * @param {function} getItemStyle - Optional function for custom name styling
+ * @param {function} getItemBadge - Optional function to get badge value (e.g. plant count)
  */
 export default function ItemGrid({ 
   items = [],
@@ -20,6 +21,7 @@ export default function ItemGrid({
   getItemImage = (item) => item.image,
   getItemName = (item) => item.name,
   getItemStyle = () => ({}),
+  getItemBadge,
 }) {
   if (items.length === 0) {
     return <p className={styles.empty}>{emptyMessage}</p>;
@@ -27,24 +29,28 @@ export default function ItemGrid({
 
   return (
     <div className={styles.grid}>
-      {items.map((item) => (
-        <Link 
-          key={getItemId(item)} 
-          href={`${linkPrefix}/${getItemId(item)}`} 
-          className={styles.item}
-        >
-          <div className={styles.imageContainer}>
-            <img 
-              src={getItemImage(item)} 
-              alt={getItemName(item)} 
-              className={styles.image} 
-            />
-          </div>
-          <span className={styles.name} style={getItemStyle(item)}>
-            {getItemName(item)}
-          </span>
-        </Link>
-      ))}
+      {items.map((item) => {
+        const badge = getItemBadge?.(item);
+        return (
+          <Link 
+            key={getItemId(item)} 
+            href={`${linkPrefix}/${getItemId(item)}`} 
+            className={styles.item}
+          >
+            <div className={styles.imageContainer}>
+              <img 
+                src={getItemImage(item)} 
+                alt={getItemName(item)} 
+                className={styles.image} 
+              />
+            </div>
+            <span className={styles.name} style={getItemStyle(item)}>
+              {getItemName(item)}
+              {badge != null && <span className={styles.badge}>{badge}</span>}
+            </span>
+          </Link>
+        );
+      })}
     </div>
   );
 }

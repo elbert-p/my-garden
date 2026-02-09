@@ -3,7 +3,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { FiPlus } from 'react-icons/fi';
 import { useAuth } from '@/context/AuthContext';
-import { getGardens, createGarden } from '@/lib/dataService';
+import { getGardens, createGarden, getPlants } from '@/lib/dataService';
 import NavBar from '@/components/NavBar';
 import ItemGrid from '@/components/ItemGrid';
 import Modal from '@/components/Modal';
@@ -17,6 +17,7 @@ const DEFAULT_GARDEN_IMAGE = '/default-garden.jpg';
 export default function Home() {
   const { user, isInitialized, isMigrating } = useAuth();
   const [gardens, setGardens] = useState([]);
+  const [plantCounts, setPlantCounts] = useState({});
   const [showModal, setShowModal] = useState(false);
   const [newGardenName, setNewGardenName] = useState('');
   const [newGardenImage, setNewGardenImage] = useState(null);
@@ -38,9 +39,21 @@ export default function Home() {
         }
         
         setGardens(result.gardens);
+        setIsLoading(false);
+
+        // Load plant counts in background
+        const counts = {};
+        for (const garden of result.gardens) {
+          try {
+            const plants = await getPlants(garden.id, user?.id);
+            counts[garden.id] = plants.length;
+          } catch {
+            // Skip on error
+          }
+        }
+        setPlantCounts(counts);
       } catch (e) {
         console.error('Failed to load gardens:', e);
-      } finally {
         setIsLoading(false);
       }
     };
@@ -122,6 +135,7 @@ export default function Home() {
             getItemId={(g) => g.id}
             getItemImage={(g) => g.image || DEFAULT_GARDEN_IMAGE}
             getItemName={(g) => g.name}
+            getItemBadge={(g) => plantCounts[g.id] != null ? plantCounts[g.id] : null}
           />
         )}
 

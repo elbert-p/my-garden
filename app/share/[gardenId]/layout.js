@@ -9,7 +9,7 @@ function SharedGardenLayoutContent({ children }) {
   const { gardenId } = useParams();
   const pathname = usePathname();
   
-  const { garden, owner, isLoading, plantsLoaded, error, searchQuery, setSearchQuery } = useSharedGarden();
+  const { garden, owner, plants, isLoading, plantsLoaded, error, searchQuery, setSearchQuery } = useSharedGarden();
 
   // Determine active tab and content width
   const isAboutPage = pathname.endsWith('/about');
@@ -41,6 +41,7 @@ function SharedGardenLayoutContent({ children }) {
     <>
       <NavBar
         title={garden?.name || ''}
+        badge={plantsLoaded ? plants.length : null}
         showHome={true}
         tabs={tabs}
         showSearch={!isPlantPage && !isAboutPage}

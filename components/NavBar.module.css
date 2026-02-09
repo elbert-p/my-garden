@@ -64,6 +64,22 @@
   text-overflow: ellipsis;
 }
 
+/* Plant count badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 7px;
+  border-radius: 12px;
+  background-color: #e6f4ea;
+  color: #1e8e3e;
+  font-size: 0.8rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
 /* Spacer pushes tabs and actions apart */
 .spacer {
   flex: 1;
