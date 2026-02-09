@@ -43,7 +43,7 @@ export default function UserMenu() {
         {avatarUrl && !imgError ? (
           <img src={avatarUrl} alt="" className={styles.avatar} onError={() => setImgError(true)} />
         ) : (
-          <FiUser size={20} className={styles.avatarIcon} />
+          <FiUser size={22} className={styles.avatarIcon} />
         )}
       </button>
 

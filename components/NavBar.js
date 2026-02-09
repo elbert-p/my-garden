@@ -1,5 +1,5 @@
 'use client';
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { IoLeaf, IoClose } from 'react-icons/io5';
 import { FiMenu, FiSearch } from 'react-icons/fi';
@@ -27,36 +27,29 @@ export default function NavBar({
   const rightRef = useRef(null);
   const maxWidth = contentWidth === 'medium' ? '800px' : '1200px';
 
-  // Balance navLeft and navRight widths so margin: 0 auto centers correctly
-  const balanceSides = useCallback(() => {
+  // Balance navLeft and navRight widths so margin: 0 auto centers correctly.
+  // Uses ResizeObserver to react whenever either side changes size.
+  // Measures scrollWidth to get natural content width without needing to
+  // reset minWidth, avoiding a visible flash of misalignment.
+  useEffect(() => {
     const left = leftRef.current;
     const right = rightRef.current;
     if (!left || !right) return;
 
-    // Reset so we can measure natural widths
-    left.style.minWidth = '';
-    right.style.minWidth = '';
+    const balance = () => {
+      const leftW = left.scrollWidth;
+      const rightW = right.scrollWidth;
+      const max = Math.max(leftW, rightW);
+      left.style.minWidth = `${max}px`;
+      right.style.minWidth = `${max}px`;
+    };
 
-    const leftW = left.offsetWidth;
-    const rightW = right.offsetWidth;
+    const observer = new ResizeObserver(balance);
+    observer.observe(left);
+    observer.observe(right);
 
-    if (leftW < rightW) {
-      left.style.minWidth = `${rightW}px`;
-    } else if (rightW < leftW) {
-      right.style.minWidth = `${leftW}px`;
-    }
+    return () => observer.disconnect();
   }, []);
-
-  useEffect(() => {
-    balanceSides();
-    window.addEventListener('resize', balanceSides);
-    return () => window.removeEventListener('resize', balanceSides);
-  }, [balanceSides]);
-
-  // Re-balance when search opens/closes (changes action area width)
-  useEffect(() => {
-    balanceSides();
-  }, [isSearchOpen, balanceSides]);
 
   // Focus input when search opens
   useEffect(() => {
@@ -189,7 +182,7 @@ export default function NavBar({
 
         {/* Far Right - Profile/Sign-in */}
         <div className={styles.navRight} ref={rightRef}>
-          <UserMenu onAuthChange={balanceSides} />
+          <UserMenu />
         </div>
       </div>
     </nav>

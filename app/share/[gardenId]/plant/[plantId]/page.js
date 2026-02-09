@@ -15,6 +15,10 @@ export default function SharedPlantPage() {
   const [selImg, setSelImg] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  // Get plant name from context for immediate header display
+  const contextPlant = plants.find(p => p.id === plantId);
+  const displayName = plant?.commonName || plant?.scientificName || contextPlant?.commonName || contextPlant?.scientificName || 'Plant';
+
   // Try to get plant from context first (already loaded), otherwise fetch
   useEffect(() => {
     const cachedPlant = plants.find(p => p.id === plantId);
@@ -56,65 +60,55 @@ export default function SharedPlantPage() {
     </div>
   ) : null;
 
-  if (loading) {
-    return (
-      <div className={styles.container}>
-        <div className={styles.loading}>Loading plant...</div>
-      </div>
-    );
-  }
-
-  if (!plant) {
-    return (
-      <div className={styles.container}>
-        <p className={styles.loading}>Plant not found.</p>
-      </div>
-    );
-  }
-
   return (
     <>
       <div className={styles.container}>
         <PageHeader
-          title={plant.commonName || plant.scientificName || 'Plant'}
+          title={displayName}
           backHref={`/share/${gardenId}`}
         />
 
-        <div className={styles.details}>
-          <div className={styles.mainImageContainer}>
-            <img src={plant.mainImage || '/placeholder-plant.jpg'} alt="" className={styles.mainImage} />
-          </div>
+        {loading ? (
+          <div className={styles.loading}>Loading plant...</div>
+        ) : !plant ? (
+          <p className={styles.loading}>Plant not found.</p>
+        ) : (
+          <div className={styles.details}>
+            <div className={styles.mainImageContainer}>
+              <img src={plant.mainImage || '/placeholder-plant.jpg'} alt="" className={styles.mainImage} />
+            </div>
 
-          <div className={`${styles.infoGrid} ${!plant.images?.length ? styles.infoGridNoMargin : ''}`}>
-            <Field label="Common Name" value={plant.commonName} />
-            <Field label="Scientific Name" value={plant.scientificName} />
-            <Field label="Date Planted" value={formatDate(plant.datePlanted)} />
-            <Field label="Bloom Time" value={plant.bloomTime} />
-            <Field label="Height" value={plant.height} />
-            <Field label="Sunlight" value={plant.sunlight} />
-            <Field label="Moisture" value={plant.moisture} />
-            <Field label="Native Range" value={plant.nativeRange} />
-            {plant.notes && (
-              <div className={`${styles.field} ${styles.fieldLarge}`}>
-                <span className={styles.label}>Notes</span>
-                <span className={styles.value}>{plant.notes}</span>
+            <div className={`${styles.infoGrid} ${!plant.images?.length ? styles.infoGridNoMargin : ''}`}>
+              <Field label="Common Name" value={plant.commonName} />
+              <Field label="Scientific Name" value={plant.scientificName} />
+              <Field label="Date Planted" value={formatDate(plant.datePlanted)} />
+              <Field label="Bloom Time" value={plant.bloomTime} />
+              <Field label="Height" value={plant.height} />
+              <Field label="Sunlight" value={plant.sunlight} />
+              <Field label="Moisture" value={plant.moisture} />
+              <Field label="Native Range" value={plant.nativeRange} />
+              {plant.notes && (
+                <div className={`${styles.field} ${styles.fieldLarge}`}>
+                  <span className={styles.label}>Notes</span>
+                  <span className={styles.value}>{plant.notes}</span>
+                </div>
+              )}
+            </div>
+
+            {plant.images?.length > 0 && (
+              <div className={styles.photosSection}>
+                <h2 className={styles.sectionTitle}>Additional Photos</h2>
+                <div className={styles.imageGrid}>
+                  {plant.images.map((img, i) => (
+                    <div key={i} className={styles.photoItem} onClick={() => setSelImg(img)}>
+                      <img src={img} alt="" className={styles.photo} />
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
           </div>
-
-          {plant.images?.length > 0 && (
-            <div className={styles.photosSection}>
-              <h2 className={styles.sectionTitle}>Additional Photos</h2>
-              <div className={styles.imageGrid}>
-                {plant.images.map((img, i) => (
-                  <div key={i} className={styles.photoItem} onClick={() => setSelImg(img)}>
-                    <img src={img} alt="" className={styles.photo} />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
+        )}
       </div>
 
       {selImg && (

@@ -135,35 +135,29 @@ function GardenLayoutContent({ children }) {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  // Loading state
-  if (!isInitialized || isLoading) {
-    return (
-      <>
-        <NavBar title="" showHome={true} contentWidth={contentWidth} />
-        <div className={styles.container}>
-          <p className={styles.loading}>Loading garden...</p>
-        </div>
-      </>
-    );
-  }
-
-  if (!garden) return null;
+  const showLoading = !isInitialized || isLoading;
 
   return (
     <>
       <NavBar
-        title={garden.name}
+        title={garden?.name || ''}
         showHome={true}
-        tabs={tabs}
-        showSearch={!isPlantPage && !isAboutPage}
+        tabs={!showLoading && garden ? tabs : []}
+        showSearch={!showLoading && garden && !isPlantPage && !isAboutPage}
         searchValue={searchQuery}
         onSearchChange={setSearchQuery}
         searchPlaceholder="Search plants..."
-        menuItems={menuItems}
+        menuItems={!showLoading && garden ? menuItems : undefined}
         contentWidth={contentWidth}
       />
 
-      {children}
+      {showLoading ? (
+        <div className={styles.container}>
+          <p className={styles.loading}>Loading garden...</p>
+        </div>
+      ) : garden ? (
+        children
+      ) : null}
 
       {/* Add Plant Modal */}
       <Modal isOpen={showAddPlantModal} onClose={handleCloseAddModal} title="Add New Plant" size="medium">
@@ -206,7 +200,7 @@ function GardenLayoutContent({ children }) {
         onClose={() => setShowDeleteGardenModal(false)}
         onConfirm={handleDeleteGarden}
         title="Delete Garden"
-        message={<>Are you sure you want to delete <strong>{garden.name}</strong> and all its plants? This cannot be undone.</>}
+        message={<>Are you sure you want to delete <strong>{garden?.name}</strong> and all its plants? This cannot be undone.</>}
         confirmText="Delete"
         cancelText="Cancel"
         variant="danger"

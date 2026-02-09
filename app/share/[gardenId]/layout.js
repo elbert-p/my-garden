@@ -24,20 +24,8 @@ function SharedGardenLayoutContent({ children }) {
     { label: 'About', href: `/share/${gardenId}/about`, active: isAboutPage },
   ];
 
-  // Loading state
-  if (isLoading) {
-    return (
-      <>
-        <NavBar title="" showHome={true} contentWidth={contentWidth} />
-        <div className={styles.container}>
-          <p className={styles.loading}>Loading...</p>
-        </div>
-      </>
-    );
-  }
-
-  // Error state
-  if (error) {
+  // Error state - show after loading completes
+  if (!isLoading && error) {
     return (
       <>
         <NavBar title="Not Found" showHome={true} contentWidth={contentWidth} />
@@ -49,22 +37,28 @@ function SharedGardenLayoutContent({ children }) {
     );
   }
 
-  if (!garden) return null;
-
+  // Always render the NavBar immediately - use garden data when available,
+  // fallback to placeholder while loading
   return (
     <>
       <NavBar
-        title={garden.name}
+        title={garden?.name || ''}
         showHome={true}
-        tabs={tabs}
-        showSearch={!isPlantPage && !isAboutPage}
+        tabs={!isLoading ? tabs : []}
+        showSearch={!isLoading && !isPlantPage && !isAboutPage}
         searchValue={searchQuery}
         onSearchChange={setSearchQuery}
         searchPlaceholder="Search plants..."
         sharedBy={owner}
         contentWidth={contentWidth}
       />
-      {children}
+      {isLoading ? (
+        <div className={styles.container}>
+          <p className={styles.loading}>Loading...</p>
+        </div>
+      ) : (
+        children
+      )}
     </>
   );
 }
