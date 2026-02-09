@@ -22,7 +22,7 @@ const NATIVE_OPTIONS = ['Northern US', 'Northeastern US', 'Southern US', 'Southe
   'Mid-Atlantic US', 'Western US', 'Midwestern US', 'Central US', 'US Native', 'MA Native', 'Cultivar', 'Nativar', 'Europe', 'Asia', 'South America', 'Africa', 'Other'];
 
 const mapSun = (arr) => arr ? arr.map(s => ({ 'Full': 'Sun', 'Part': 'Part Sun', 'Shade': 'Shade' }[s] || s)).filter(Boolean) : [];
-const findData = (name) => { if (!name) return null; const key = Object.keys(plantsData).find(k => k.toLowerCase() === name.toLowerCase()); return key ? plantsData[key] : null; };
+const findData = (name) => { if (!name) return null; const key = Object.keys(plantsData).find(k => k.toLowerCase() === name.trim().toLowerCase()); return key ? plantsData[key] : null; };
 const formatDateDisplay = (dateStr) => { if (!dateStr) return ''; const [y, m, d] = dateStr.split('-').map(Number); return new Date(y, m - 1, d).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }); };
 
 export default function PlantPage() {
