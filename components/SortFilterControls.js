@@ -108,7 +108,7 @@ function comparePlants(a, b, sortKey) {
     case 'name': {
       const na = (a.commonName || a.scientificName || '').toLowerCase();
       const nb = (b.commonName || b.scientificName || '').toLowerCase();
-      return na.localeCompare(nb);
+      return na.trim().localeCompare(nb.trim());
     }
     case 'datePlanted': {
       const da = a.datePlanted || '';

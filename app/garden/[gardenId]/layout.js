@@ -101,9 +101,9 @@ function GardenLayoutContent({ children }) {
     }
     try {
       const newPlant = await createPlant({
-        commonName: newPlantName,
+        commonName: newPlantName.trim(),
         mainImage: newPlantImage,
-        scientificName: newScientificName,
+        scientificName: newScientificName.trim(),
         datePlanted: '',
         notes: '',
         images: [],

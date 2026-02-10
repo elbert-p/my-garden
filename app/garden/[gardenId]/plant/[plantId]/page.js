@@ -151,7 +151,7 @@ export default function PlantPage() {
     if (!autofillData) return;
     await save({
       ...temp,
-      commonName: autofillData['Common name'] || temp.commonName,
+      commonName: autofillData['Common name'].trim() || temp.commonName,
       bloomTime: autofillData['Bloom time'] || temp.bloomTime,
       height: autofillData['Height'] || temp.height,
       sunlight: mapSun(autofillData['Sunlight']) || temp.sunlight,
@@ -211,8 +211,8 @@ export default function PlantPage() {
 
           <div className={styles.infoGridWrapper}>
             <div className={styles.infoGrid}>
-              <InfoField label="Common Name" value={temp.commonName} onChange={v => setTemp({ ...temp, commonName: v })} onSave={() => save(temp)} isEditing={editing} type="text" />
-              <InfoField label="Scientific Name" value={temp.scientificName} onChange={v => setTemp({ ...temp, scientificName: v })} onSave={() => save(temp)} isEditing={editing} type="text" />
+              <InfoField label="Common Name" value={temp.commonName} onChange={v => setTemp({ ...temp, commonName: v.trim() })} onSave={() => save(temp)} isEditing={editing} type="text" />
+              <InfoField label="Scientific Name" value={temp.scientificName} onChange={v => setTemp({ ...temp, scientificName: v.trim() })} onSave={() => save(temp)} isEditing={editing} type="text" />
               <InfoField label="Date Planted" value={temp.datePlanted} onChange={v => setTemp({ ...temp, datePlanted: v })} onSave={() => save(temp)} isEditing={editing} type="date" formatDisplay={formatDateDisplay} />
               <InfoField label="Bloom Time" value={temp.bloomTime} onChange={v => setTemp({ ...temp, bloomTime: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={BLOOM_OPTIONS} />
               <InfoField label="Height" value={temp.height} onChange={v => setTemp({ ...temp, height: v })} onSave={() => save(temp)} isEditing={editing} type="text" placeholder="e.g., 2-3 ft" />
