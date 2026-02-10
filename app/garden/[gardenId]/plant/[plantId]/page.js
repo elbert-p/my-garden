@@ -28,7 +28,7 @@ const formatDateDisplay = (dateStr) => { if (!dateStr) return ''; const [y, m, d
 export default function PlantPage() {
   const router = useRouter();
   const { plantId } = useParams();
-  const { gardenId, user, isInitialized, garden } = useGarden();
+  const { gardenId, user, isInitialized, garden, updatePlantInContext, removePlantFromContext } = useGarden();
 
   const [plant, setPlant] = useState(null);
   const [editing, setEditing] = useState(false);
@@ -96,6 +96,7 @@ export default function PlantPage() {
     const u = await updatePlant(plantId, p, user?.id);
     setPlant(u);
     setTemp(u);
+    updatePlantInContext(u);
   };
 
   const compress = async (f) => {
@@ -162,6 +163,7 @@ export default function PlantPage() {
 
   const onDelete = async () => {
     await deletePlant(plantId, user?.id);
+    removePlantFromContext(plantId);
     router.push(`/garden/${gardenId}`);
   };
 
@@ -186,7 +188,8 @@ export default function PlantPage() {
     <>
       <div className={styles.container}>
         <PageHeader
-          title={plant.commonName || plant.scientificName || 'Plant'}
+            title={plant.commonName ? (plant.commonName) : plant.scientificName ? (
+            <em>{plant.scientificName}</em>) : ('Plant')}
           onBack={() => router.push(`/garden/${gardenId}`)}
           actions={
             editing ? (

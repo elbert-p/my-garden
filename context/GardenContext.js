@@ -76,6 +76,14 @@ export function GardenProvider({ children }) {
     return newPlant;
   }, [gardenId, user?.id]);
 
+  const handleUpdatePlantInContext = useCallback((updatedPlant) => {
+    setPlants(prev => prev.map(p => p.id === updatedPlant.id ? updatedPlant : p));
+  }, []);
+
+  const handleRemovePlantFromContext = useCallback((plantId) => {
+    setPlants(prev => prev.filter(p => p.id !== plantId));
+  }, []);
+
   const handleShare = useCallback(() => {
     if (!user) {
       setShowSignInModal(true);
@@ -116,6 +124,8 @@ export function GardenProvider({ children }) {
     updateGarden: handleUpdateGarden,
     deleteGarden: handleDeleteGarden,
     createPlant: handleCreatePlant,
+    updatePlantInContext: handleUpdatePlantInContext,
+    removePlantFromContext: handleRemovePlantFromContext,
     handleShare,
     
     // Modal controls

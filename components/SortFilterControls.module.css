@@ -295,6 +295,85 @@
   color: white;
 }
 
+/* ============ RANGE / DATE FILTER INPUTS ============ */
+
+.rangeFilterContent {
+  padding: 4px 12px 12px;
+}
+
+.rangeRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rangeSelect {
+  height: 34px;
+  flex: 1;
+  padding: 0 24px 0 8px;
+  border: 1px solid #e8eaed;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  color: #202124;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%235f6368'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+}
+
+.rangeInputWrapper {
+  display: flex;
+  align-items: center;
+  height: 34px;
+  border: 1px solid #e8eaed;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  overflow: hidden;
+}
+
+.rangeInput::-webkit-outer-spin-button,
+.rangeInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.rangeInput {
+  width: 36px;
+  height: 100%;
+  padding: 0 8px;
+  border: none;
+  background: none;
+  font-size: 0.85rem;
+  font-family: inherit;
+  color: #202124;
+  outline: none;
+  appearance: textfield;
+}
+
+.rangeUnit {
+  padding-right: 8px;
+  font-size: 0.8rem;
+  color: #5f6368;
+  font-weight: 500;
+}
+
+.dateInput {
+  height: 34px;
+  padding: 0 8px;
+  border: 1px solid #e8eaed;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  color: #202124;
+  background-color: #f8f9fa;
+  outline: none;
+}
+
 /* ============ RESPONSIVE ============ */
 
 @media (max-width: 768px) {

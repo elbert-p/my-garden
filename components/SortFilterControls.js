@@ -13,7 +13,7 @@ const SORT_OPTIONS = [
   { key: 'moisture', label: 'Moisture' },
 ];
 
-const FILTER_CATEGORIES = [
+const MULTI_FILTER_CATEGORIES = [
   {
     key: 'bloomTime',
     label: 'Bloom Time',
@@ -36,38 +36,56 @@ const FILTER_CATEGORIES = [
   },
 ];
 
+const HEIGHT_OPS = [
+  { value: 'gt', label: 'Greater than' },
+  { value: 'lt', label: 'Less than' },
+  { value: 'eq', label: 'Equal to' },
+];
+
+const DATE_OPS = [
+  { value: 'after', label: 'After' },
+  { value: 'before', label: 'Before' },
+  { value: 'eq', label: 'Equal to' },
+];
+
 // ============ SORT LOGIC ============
 
 const BLOOM_ORDER = { 'Feb': 2, 'Mar': 3, 'Apr': 4, 'May': 5, 'Jun': 6, 'Jul': 7, 'Aug': 8, 'Sep': 9, 'Oct': 10, 'Nov': 11 };
 const SUN_ORDER = { 'Sun': 4, 'Part Sun': 3, 'Part Shade': 2, 'Shade': 1 };
 const MOISTURE_ORDER = { 'Dry': 1, 'Medium': 2, 'Wet': 3 };
 
-function parseHeight(h) {
+function parseHeightRange(h) {
   if (!h) return null;
   const s = h.toLowerCase();
-  const nums = [];
-  // Match patterns like "4-6 ft", "12 in", "2 ft"
+  let lo = null, hi = null;
+
   const ftMatch = s.match(/([\d.]+)\s*(?:-\s*([\d.]+))?\s*ft/);
   const inMatch = s.match(/([\d.]+)\s*(?:-\s*([\d.]+))?\s*in/);
+
   if (ftMatch) {
-    const lo = parseFloat(ftMatch[1]);
-    const hi = ftMatch[2] ? parseFloat(ftMatch[2]) : lo;
-    nums.push((lo + hi) / 2);
-  }
-  if (inMatch) {
-    const lo = parseFloat(inMatch[1]);
-    const hi = inMatch[2] ? parseFloat(inMatch[2]) : lo;
-    nums.push((lo + hi) / 2 / 12);
-  }
-  if (nums.length === 0) {
-    // Try bare numbers as feet
+    lo = parseFloat(ftMatch[1]);
+    hi = ftMatch[2] ? parseFloat(ftMatch[2]) : lo;
+  } else if (inMatch) {
+    lo = parseFloat(inMatch[1]) / 12;
+    hi = inMatch[2] ? parseFloat(inMatch[2]) / 12 : lo;
+  } else {
     const bare = s.match(/([\d.]+)\s*-\s*([\d.]+)/);
-    if (bare) return (parseFloat(bare[1]) + parseFloat(bare[2])) / 2;
-    const single = parseFloat(s);
-    if (!isNaN(single)) return single;
-    return null;
+    if (bare) {
+      lo = parseFloat(bare[1]);
+      hi = parseFloat(bare[2]);
+    } else {
+      const single = parseFloat(s);
+      if (!isNaN(single)) { lo = single; hi = single; }
+    }
   }
-  return nums[0];
+
+  if (lo == null) return null;
+  return { lo, hi, avg: (lo + hi) / 2 };
+}
+
+function parseHeight(h) {
+  const range = parseHeightRange(h);
+  return range ? range.avg : null;
 }
 
 function getEarliestBloom(bloomArr) {
@@ -119,13 +137,41 @@ function comparePlants(a, b, sortKey) {
   }
 }
 
+// ============ FILTER LOGIC ============
+
+function matchesHeightFilter(plant, heightFilter) {
+  if (!heightFilter?.value) return true;
+  const range = parseHeightRange(plant.height);
+  if (!range) return false;
+  const target = parseFloat(heightFilter.value);
+  if (isNaN(target)) return true;
+  switch (heightFilter.op) {
+    case 'gt': return range.hi > target;
+    case 'lt': return range.lo < target;
+    case 'eq': return target >= range.lo && target <= range.hi;
+    default: return true;
+  }
+}
+
+function matchesDateFilter(plant, dateFilter) {
+  if (!dateFilter?.value) return true;
+  if (!plant.datePlanted) return false;
+  switch (dateFilter.op) {
+    case 'after': return plant.datePlanted > dateFilter.value;
+    case 'before': return plant.datePlanted < dateFilter.value;
+    case 'eq': return plant.datePlanted === dateFilter.value;
+    default: return true;
+  }
+}
+
 // ============ PUBLIC HELPERS ============
 
 export function applySortAndFilter(plants, sort, filters) {
   let result = [...plants];
 
-  // Apply filters
+  // Multi-select filters
   for (const [key, values] of Object.entries(filters)) {
+    if (key === '_height' || key === '_date') continue;
     if (!values?.length) continue;
     result = result.filter(p => {
       const plantVal = p[key];
@@ -136,7 +182,17 @@ export function applySortAndFilter(plants, sort, filters) {
     });
   }
 
-  // Apply sort — plants missing the sort field always go to the bottom
+  // Height filter
+  if (filters._height) {
+    result = result.filter(p => matchesHeightFilter(p, filters._height));
+  }
+
+  // Date filter
+  if (filters._date) {
+    result = result.filter(p => matchesDateFilter(p, filters._date));
+  }
+
+  // Sort — plants missing the sort field always go to the bottom
   if (sort.key) {
     result.sort((a, b) => {
       const aNull = isMissingField(a, sort.key);
@@ -171,16 +227,19 @@ function isMissingField(plant, sortKey) {
   }
 }
 
-/**
- * Returns true if a plant is missing data for the active sort field
- */
 export function isMissingSortField(plant, sort) {
   if (!sort?.key) return false;
   return isMissingField(plant, sort.key);
 }
 
 export function getActiveFilterCount(filters) {
-  return Object.values(filters).reduce((sum, arr) => sum + (arr?.length || 0), 0);
+  let count = Object.entries(filters).reduce((sum, [key, val]) => {
+    if (key === '_height' || key === '_date') return sum;
+    return sum + (val?.length || 0);
+  }, 0);
+  if (filters._height?.value) count++;
+  if (filters._date?.value) count++;
+  return count;
 }
 
 // ============ COMPONENT ============
@@ -215,7 +274,6 @@ export default function SortFilterControls({ sort, onSortChange, filters, onFilt
 
   const handleSortClick = (key) => {
     if (sort.key === key) {
-      // Toggle direction
       onSortChange({ key, dir: sort.dir === 'asc' ? 'desc' : 'asc' });
     } else {
       onSortChange({ key, dir: 'asc' });
@@ -246,6 +304,33 @@ export default function SortFilterControls({ sort, onSortChange, filters, onFilt
     delete updated[categoryKey];
     onFiltersChange(updated);
   };
+
+  const updateHeightFilter = (field, value) => {
+    const current = filters._height || { op: 'gt', value: '' };
+    onFiltersChange({ ...filters, _height: { ...current, [field]: value } });
+  };
+
+  const clearHeightFilter = (e) => {
+    e.stopPropagation();
+    const updated = { ...filters };
+    delete updated._height;
+    onFiltersChange(updated);
+  };
+
+  const updateDateFilter = (field, value) => {
+    const current = filters._date || { op: 'after', value: '' };
+    onFiltersChange({ ...filters, _date: { ...current, [field]: value } });
+  };
+
+  const clearDateFilter = (e) => {
+    e.stopPropagation();
+    const updated = { ...filters };
+    delete updated._date;
+    onFiltersChange(updated);
+  };
+
+  const heightFilter = filters._height || { op: 'gt', value: '' };
+  const dateFilter = filters._date || { op: 'after', value: '' };
 
   return (
     <>
@@ -321,7 +406,99 @@ export default function SortFilterControls({ sort, onSortChange, filters, onFilt
                 <button className={styles.clearAllLink} onClick={clearFilters}>Clear all</button>
               )}
             </div>
-            {FILTER_CATEGORIES.map(cat => {
+
+            {/* Date planted filter */}
+            <div className={styles.filterCategory}>
+              <div
+                className={styles.categoryHeader}
+                onClick={() => setExpandedCategory(expandedCategory === '_date' ? null : '_date')}
+                role="button"
+                tabIndex={0}
+              >
+                <span className={styles.categoryLabel}>
+                  Date Planted
+                  {dateFilter.value && <span className={styles.categoryCount}>1</span>}
+                </span>
+                {dateFilter.value && (
+                  <span className={styles.categoryClear} onClick={clearDateFilter} role="button" tabIndex={0} aria-label="Clear date filter">
+                    <FiX size={12} />
+                  </span>
+                )}
+                <span className={`${styles.chevron} ${expandedCategory === '_date' ? styles.chevronOpen : ''}`}>›</span>
+              </div>
+              {expandedCategory === '_date' && (
+                <div className={styles.rangeFilterContent}>
+                  <div className={styles.rangeRow}>
+                    <select
+                      className={styles.rangeSelect}
+                      value={dateFilter.op}
+                      onChange={(e) => updateDateFilter('op', e.target.value)}
+                    >
+                      {DATE_OPS.map(o => (
+                        <option key={o.value} value={o.value}>{o.label}</option>
+                      ))}
+                    </select>
+                    <input
+                      type="date"
+                      className={styles.dateInput}
+                      value={dateFilter.value}
+                      onChange={(e) => updateDateFilter('value', e.target.value)}
+                    />
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Height filter */}
+            <div className={styles.filterCategory}>
+              <div
+                className={styles.categoryHeader}
+                onClick={() => setExpandedCategory(expandedCategory === '_height' ? null : '_height')}
+                role="button"
+                tabIndex={0}
+              >
+                <span className={styles.categoryLabel}>
+                  Height
+                  {heightFilter.value && <span className={styles.categoryCount}>1</span>}
+                </span>
+                {heightFilter.value && (
+                  <span className={styles.categoryClear} onClick={clearHeightFilter} role="button" tabIndex={0} aria-label="Clear height filter">
+                    <FiX size={12} />
+                  </span>
+                )}
+                <span className={`${styles.chevron} ${expandedCategory === '_height' ? styles.chevronOpen : ''}`}>›</span>
+              </div>
+              {expandedCategory === '_height' && (
+                <div className={styles.rangeFilterContent}>
+                  <div className={styles.rangeRow}>
+                    <select
+                      className={styles.rangeSelect}
+                      value={heightFilter.op}
+                      onChange={(e) => updateHeightFilter('op', e.target.value)}
+                    >
+                      {HEIGHT_OPS.map(o => (
+                        <option key={o.value} value={o.value}>{o.label}</option>
+                      ))}
+                    </select>
+                    <div className={styles.rangeInputWrapper}>
+                      <input
+                        type="number"
+                        className={styles.rangeInput}
+                        value={heightFilter.value}
+                        onChange={(e) => updateHeightFilter('value', e.target.value)}
+                        placeholder="0"
+                        min="0"
+                        step="0.5"
+                      />
+                      <span className={styles.rangeUnit}>ft</span>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Multi-select categories */}
+            {MULTI_FILTER_CATEGORIES.map(cat => {
               const activeValues = filters[cat.key] || [];
               const isExpanded = expandedCategory === cat.key;
               return (
