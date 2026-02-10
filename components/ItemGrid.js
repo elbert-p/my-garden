@@ -12,6 +12,7 @@ import styles from './ItemGrid.module.css';
  * @param {function} getItemName - Function to get item name
  * @param {function} getItemStyle - Optional function for custom name styling
  * @param {function} getItemBadge - Optional function to get badge value (e.g. plant count)
+ * @param {function} getItemDimmed - Optional function returning true if item should appear dimmed
  */
 export default function ItemGrid({ 
   items = [],
@@ -22,6 +23,7 @@ export default function ItemGrid({
   getItemName = (item) => item.name,
   getItemStyle = () => ({}),
   getItemBadge,
+  getItemDimmed,
 }) {
   if (items.length === 0) {
     return <p className={styles.empty}>{emptyMessage}</p>;
@@ -31,11 +33,12 @@ export default function ItemGrid({
     <div className={styles.grid}>
       {items.map((item) => {
         const badge = getItemBadge?.(item);
+        const dimmed = getItemDimmed?.(item);
         return (
           <Link 
             key={getItemId(item)} 
             href={`${linkPrefix}/${getItemId(item)}`} 
-            className={styles.item}
+            className={`${styles.item} ${dimmed ? styles.itemDimmed : ''}`}
           >
             <div className={styles.imageContainer}>
               <img 

@@ -4,6 +4,7 @@ import { useParams, useRouter, usePathname } from 'next/navigation';
 import { FiPlus, FiEdit, FiTrash2, FiShare2 } from 'react-icons/fi';
 import { GardenProvider, useGarden } from '@/context/GardenContext';
 import NavBar from '@/components/NavBar';
+import SortFilterControls from '@/components/SortFilterControls';
 import Modal, { ConfirmModal } from '@/components/Modal';
 import FormInput, { ErrorMessage } from '@/components/FormInput';
 import ImageUpload from '@/components/ImageUpload';
@@ -25,6 +26,10 @@ function GardenLayoutContent({ children }) {
     user,
     searchQuery,
     setSearchQuery,
+    sort,
+    setSort,
+    filters,
+    setFilters,
     updateGarden,
     deleteGarden,
     createPlant,
@@ -148,6 +153,14 @@ function GardenLayoutContent({ children }) {
         searchValue={searchQuery}
         onSearchChange={setSearchQuery}
         searchPlaceholder="Search plants..."
+        extraActions={!isPlantPage && !isAboutPage ? (
+          <SortFilterControls
+            sort={sort}
+            onSortChange={setSort}
+            filters={filters}
+            onFiltersChange={setFilters}
+          />
+        ) : null}
         menuItems={menuItems}
         contentWidth={contentWidth}
       />

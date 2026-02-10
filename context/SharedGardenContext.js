@@ -2,6 +2,7 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import { getSharedGardenInfo, getSharedGardenPlants } from '@/lib/dataService';
+import { applySortAndFilter } from '@/components/SortFilterControls';
 
 const SharedGardenContext = createContext();
 
@@ -15,6 +16,8 @@ export function SharedGardenProvider({ children }) {
   const [plantsLoaded, setPlantsLoaded] = useState(false);
   const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const [sort, setSort] = useState({ key: null, dir: 'asc' });
+  const [filters, setFilters] = useState({});
 
   useEffect(() => {
     let isMounted = true;
@@ -48,8 +51,8 @@ export function SharedGardenProvider({ children }) {
     return () => { isMounted = false; };
   }, [gardenId]);
 
-  // Filter plants based on search
-  const filteredPlants = searchQuery.trim()
+  // Filter by search, then apply sort & filters
+  const searchFiltered = searchQuery.trim()
     ? plants.filter(plant => {
         const query = searchQuery.toLowerCase();
         const commonName = (plant.commonName || '').toLowerCase();
@@ -57,6 +60,8 @@ export function SharedGardenProvider({ children }) {
         return commonName.includes(query) || scientificName.includes(query);
       })
     : plants;
+  
+  const filteredPlants = applySortAndFilter(searchFiltered, sort, filters);
 
   const value = {
     garden,
@@ -69,6 +74,10 @@ export function SharedGardenProvider({ children }) {
     error,
     searchQuery,
     setSearchQuery,
+    sort,
+    setSort,
+    filters,
+    setFilters,
   };
 
   return (

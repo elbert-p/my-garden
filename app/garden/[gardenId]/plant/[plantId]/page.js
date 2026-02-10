@@ -15,7 +15,7 @@ import GoogleSignInButton from '@/components/GoogleSignInButton';
 import plantsData from '@/plants.json';
 import styles from './page.module.css';
 
-const BLOOM_OPTIONS = ['Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'];
+const BLOOM_OPTIONS = ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'];
 const SUN_OPTIONS = ['Sun', 'Part Sun', 'Part Shade', 'Shade'];
 const MOISTURE_OPTIONS = ['Wet', 'Medium', 'Dry'];
 const NATIVE_OPTIONS = ['Northern US', 'Northeastern US', 'Southern US', 'Southeastern US', 'Eastern US', 'East Coast US', 

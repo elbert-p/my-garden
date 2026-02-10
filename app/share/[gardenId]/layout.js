@@ -3,13 +3,14 @@ import { useParams, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { SharedGardenProvider, useSharedGarden } from '@/context/SharedGardenContext';
 import NavBar from '@/components/NavBar';
+import SortFilterControls from '@/components/SortFilterControls';
 import styles from './layout.module.css';
 
 function SharedGardenLayoutContent({ children }) {
   const { gardenId } = useParams();
   const pathname = usePathname();
   
-  const { garden, owner, plants, isLoading, plantsLoaded, error, searchQuery, setSearchQuery } = useSharedGarden();
+  const { garden, owner, plants, isLoading, plantsLoaded, error, searchQuery, setSearchQuery, sort, setSort, filters, setFilters } = useSharedGarden();
 
   // Determine active tab and content width
   const isAboutPage = pathname.endsWith('/about');
@@ -48,6 +49,14 @@ function SharedGardenLayoutContent({ children }) {
         searchValue={searchQuery}
         onSearchChange={setSearchQuery}
         searchPlaceholder="Search plants..."
+        extraActions={!isPlantPage && !isAboutPage ? (
+          <SortFilterControls
+            sort={sort}
+            onSortChange={setSort}
+            filters={filters}
+            onFiltersChange={setFilters}
+          />
+        ) : null}
         sharedBy={owner}
         contentWidth={contentWidth}
       />

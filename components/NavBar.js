@@ -24,9 +24,12 @@ export default function NavBar({
 }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const searchInputRef = useRef(null);
+  const searchContainerRef = useRef(null);
   const leftRef = useRef(null);
   const rightRef = useRef(null);
   const maxWidth = contentWidth === 'medium' ? '800px' : '1200px';
+
+  const hasActions = !!(extraActions || showSearch || (menuItems && menuItems.length > 0));
 
   // Balance navLeft and navRight widths so margin: 0 auto centers correctly.
   // Uses ResizeObserver to react whenever either side changes size.
@@ -59,7 +62,7 @@ export default function NavBar({
     }
   }, [isSearchOpen]);
 
-  // Close search on escape
+  // Close search on escape, and on outside click when empty
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape' && isSearchOpen) {
@@ -67,22 +70,32 @@ export default function NavBar({
         onSearchChange?.('');
       }
     };
+    const handleClickOutside = (e) => {
+      if (
+        isSearchOpen &&
+        !searchValue &&
+        searchContainerRef.current &&
+        !searchContainerRef.current.contains(e.target)
+      ) {
+        setIsSearchOpen(false);
+      }
+    };
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isSearchOpen, onSearchChange]);
+    document.addEventListener('click', handleClickOutside);
+    // Use click so that user clicking on another button goes through before layout changes
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isSearchOpen, searchValue, onSearchChange]);
 
   const handleSearchToggle = () => {
-    if (isSearchOpen) {
-      setIsSearchOpen(false);
-      onSearchChange?.('');
-    } else {
-      setIsSearchOpen(true);
-    }
+    setIsSearchOpen(true);
   };
 
-  const handleSearchClear = () => {
+  const handleSearchClose = () => {
+    setIsSearchOpen(false);
     onSearchChange?.('');
-    searchInputRef.current?.focus();
   };
 
   return (
@@ -135,51 +148,56 @@ export default function NavBar({
             </div>
           )}
 
-          {/* Actions */}
-          <div className={styles.actions}>
-            {extraActions}
-            
-            {showSearch && (
-              <div className={`${styles.searchContainer} ${isSearchOpen ? styles.searchOpen : ''}`}>
-                {isSearchOpen && (
-                  <div className={styles.searchInputWrapper}>
-                    <input
-                      ref={searchInputRef}
-                      type="text"
-                      value={searchValue}
-                      onChange={(e) => onSearchChange?.(e.target.value)}
-                      placeholder={searchPlaceholder}
-                      className={styles.searchInput}
-                    />
-                    {searchValue && (
+          {/* Actions - only render if there's content */}
+          {hasActions && (
+            <div className={styles.actions}>
+              {extraActions}
+              
+              {showSearch && (
+                <div
+                  className={styles.searchContainer}
+                  ref={searchContainerRef}
+                >
+                  {isSearchOpen && (
+                    <div className={styles.searchInputWrapper}>
+                      <input
+                        ref={searchInputRef}
+                        type="text"
+                        value={searchValue}
+                        onChange={(e) => onSearchChange?.(e.target.value)}
+                        placeholder={searchPlaceholder}
+                        className={styles.searchInput}
+                      />
                       <button 
                         className={styles.searchClearButton}
-                        onClick={handleSearchClear}
-                        aria-label="Clear search"
+                        onClick={handleSearchClose}
+                        aria-label="Close search"
                       >
                         <IoClose size={16} />
                       </button>
-                    )}
-                  </div>
-                )}
-                <button 
-                  className={styles.iconButton} 
-                  onClick={handleSearchToggle}
-                  aria-label={isSearchOpen ? "Close search" : "Open search"}
-                >
-                  {isSearchOpen ? <IoClose size={20} /> : <FiSearch size={20} />}
-                </button>
-              </div>
-            )}
-            
-            {menuItems && menuItems.length > 0 && (
-              <DropdownMenu 
-                items={menuItems} 
-                icon={<FiMenu size={20} />}
-                buttonClassName={styles.iconButton}
-              />
-            )}
-          </div>
+                    </div>
+                  )}
+                  {!isSearchOpen && (
+                    <button 
+                      className={styles.iconButton} 
+                      onClick={handleSearchToggle}
+                      aria-label="Open search"
+                    >
+                      <FiSearch size={20} />
+                    </button>
+                  )}
+                </div>
+              )}
+              
+              {menuItems && menuItems.length > 0 && (
+                <DropdownMenu 
+                  items={menuItems} 
+                  icon={<FiMenu size={20} />}
+                  buttonClassName={styles.iconButton}
+                />
+              )}
+            </div>
+          )}
         </div>
 
         {/* Far Right - Profile/Sign-in */}

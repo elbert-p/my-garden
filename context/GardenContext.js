@@ -3,6 +3,7 @@ import { createContext, useContext, useState, useEffect, useCallback } from 'rea
 import { useParams, useRouter } from 'next/navigation';
 import { useAuth } from './AuthContext';
 import { getGarden, updateGarden, deleteGarden, createPlant, getPlants } from '@/lib/dataService';
+import { applySortAndFilter } from '@/components/SortFilterControls';
 
 const GardenContext = createContext();
 
@@ -16,6 +17,8 @@ export function GardenProvider({ children }) {
   const [isLoading, setIsLoading] = useState(true);
   const [plantsLoaded, setPlantsLoaded] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [sort, setSort] = useState({ key: null, dir: 'asc' });
+  const [filters, setFilters] = useState({});
   
   // Modal states
   const [showAddPlantModal, setShowAddPlantModal] = useState(false);
@@ -81,8 +84,8 @@ export function GardenProvider({ children }) {
     setShowShareModal(true);
   }, [user]);
 
-  // Filter plants based on search
-  const filteredPlants = searchQuery.trim()
+  // Filter by search, then apply sort & filters
+  const searchFiltered = searchQuery.trim()
     ? plants.filter(plant => {
         const query = searchQuery.toLowerCase();
         const commonName = (plant.commonName || '').toLowerCase();
@@ -90,6 +93,8 @@ export function GardenProvider({ children }) {
         return commonName.includes(query) || scientificName.includes(query);
       })
     : plants;
+  
+  const filteredPlants = applySortAndFilter(searchFiltered, sort, filters);
 
   const value = {
     garden,
@@ -102,6 +107,10 @@ export function GardenProvider({ children }) {
     isInitialized,
     searchQuery,
     setSearchQuery,
+    sort,
+    setSort,
+    filters,
+    setFilters,
     
     // Actions
     updateGarden: handleUpdateGarden,
