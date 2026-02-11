@@ -6823,7 +6823,7 @@
   "Alnus incana": {
     "Latin name": "Alnus incana",
     "Common name": "Speckled alder",
-    "plantType": ["Shrubs"],
+    "plantType": ["Shrubs", "Trees"],
     "Bloom time": [
       "Mar",
       "Apr",
@@ -6842,7 +6842,7 @@
   "Alnus serrulata": {
     "Latin name": "Alnus serrulata",
     "Common name": "Smooth alder",
-    "plantType": ["Shrubs"],
+    "plantType": ["Shrubs", "Trees"],
     "Bloom time": [
       "Mar",
       "Apr",
@@ -6860,7 +6860,7 @@
   "Amelanchier canadensis": {
     "Latin name": "Amelanchier canadensis",
     "Common name": "Serviceberry, Shadblow",
-    "plantType": ["Shrubs"],
+    "plantType": ["Shrubs", "Trees"],
     "Bloom time": [
       "Apr",
       "May"
@@ -7069,7 +7069,7 @@
   "Chionanthus virginicus": {
     "Latin name": "Chionanthus virginicus",
     "Common name": "Fringetree",
-    "plantType": ["Shrubs"],
+    "plantType": ["Shrubs", "Trees"],
     "Bloom time": [
       "Jun"
     ],
@@ -7082,7 +7082,8 @@
     "Moisture": [
       "Wet",
       "Medium"
-    ]
+    ],
+    "Ecoregion": "58"
   },
   "Clethra alnifolia": {
     "Latin name": "Clethra alnifolia",
@@ -7433,20 +7434,6 @@
       "Medium"
     ]
   },
-  "Juniperus communis": {
-    "Latin name": "Juniperus communis",
-    "Common name": "Common juniper",
-    "plantType": ["Shrubs"],
-    "Bloom time": [],
-    "Height": "5-25 ft",
-    "Sunlight": [
-      "Full"
-    ],
-    "Moisture": [
-      "Medium",
-      "Dry"
-    ]
-  },
   "Juniperus horizontalis": {
     "Latin name": "Juniperus horizontalis",
     "Common name": "Creeping juniper",
@@ -7610,21 +7597,6 @@
       "Jun"
     ],
     "Height": "4-9 ft",
-    "Sunlight": [
-      "Full",
-      "Part"
-    ],
-    "Moisture": [
-      "Medium",
-      "Dry"
-    ]
-  },
-  "Prunus americana": {
-    "Latin name": "Prunus americana",
-    "Common name": "American plum",
-    "plantType": ["Shrubs"],
-    "Bloom time": [],
-    "Height": "4-10 ft",
     "Sunlight": [
       "Full",
       "Part"
@@ -7986,7 +7958,7 @@
   "Salix bebbiana": {
     "Latin name": "Salix bebbiana",
     "Common name": "Bebb's Willow",
-    "plantType": ["Shrubs"],
+    "plantType": ["Shrubs", "Trees"],
     "Bloom time": [
       "May",
       "Jun"
@@ -8096,7 +8068,7 @@
   "Salix petiolaris": {
     "Latin name": "Salix petiolaris",
     "Common name": "Meadow willow",
-    "plantType": ["Shrubs"],
+    "plantType": ["Shrubs", "Trees"],
     "Bloom time": [],
     "Height": "",
     "Sunlight": [],
@@ -8105,7 +8077,7 @@
   "Salix sericea": {
     "Latin name": "Salix sericea",
     "Common name": "Silky Willow",
-    "plantType": ["Shrubs"],
+    "plantType": ["Shrubs", "Trees"],
     "Bloom time": [],
     "Height": "",
     "Sunlight": [],
@@ -8214,7 +8186,7 @@
   "Swida (Cornus) racemosa": {
     "Latin name": "Swida (Cornus) racemosa",
     "Common name": "Gray dogwood",
-    "plantType": ["Shrubs"],
+    "plantType": ["Shrubs", "Trees"],
     "Bloom time": [],
     "Height": "3-8 ft",
     "Sunlight": [
@@ -8493,5 +8465,1461 @@
       "Wet",
       "Medium"
     ]
+  },
+  "Abies balsamea": {
+    "Latin name": "Abies balsamea",
+    "Common name": "Balsam fir",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "35-60 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": ""
+  },
+  "Acer negundo": {
+    "Latin name": "Acer negundo",
+    "Common name": "Box elder",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [
+      "Mar",
+      "Apr"
+    ],
+    "Height": "30-50 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": ""
+  },
+  "Acer nigrum": {
+    "Latin name": "Acer nigrum",
+    "Common name": "Black maple",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "100 ft",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [],
+    "Ecoregion": ""
+  },
+  "Acer pensylvanicum": {
+    "Latin name": "Acer pensylvanicum",
+    "Common name": "Striped maple",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "15-25 ft",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Ecoregion": ""
+  },
+  "Acer rubrum": {
+    "Latin name": "Acer rubrum",
+    "Common name": "Red maple",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "35-50 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": ""
+  },
+  "Acer saccharinum": {
+    "Latin name": "Acer saccharinum",
+    "Common name": "Silver maple",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "50-65 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": ""
+  },
+  "Acer saccharum": {
+    "Latin name": "Acer saccharum",
+    "Common name": "Sugar maple",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "60-80 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": ""
+  },
+  "Acer spicatum": {
+    "Latin name": "Acer spicatum",
+    "Common name": "Mountain maple",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "12-25 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Ecoregion": ""
+  },
+  "Amelanchier arborea": {
+    "Latin name": "Amelanchier arborea",
+    "Common name": "Downy serviceberry",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Height": "15-25 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": ""
+  },
+  "Amelanchier laevis": {
+    "Latin name": "Amelanchier laevis",
+    "Common name": "Allegheny serviceberry",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Height": "15-30 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "all of MA"
+  },
+  "Asimina triloba": {
+    "Latin name": "Asimina triloba",
+    "Common name": "Pawpaw",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "10-30 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": "83, 84"
+  },
+  "Betula alleghaniensis": {
+    "Latin name": "Betula alleghaniensis",
+    "Common name": "Yellow birch",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "40-60 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Betula lenta": {
+    "Latin name": "Betula lenta",
+    "Common name": "Sweet or black birch",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "40-60 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 83, 84"
+  },
+  "Betula nigra": {
+    "Latin name": "Betula nigra",
+    "Common name": "River Birch",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "25-45 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 83, 84"
+  },
+  "Betula papyrifera": {
+    "Latin name": "Betula papyrifera",
+    "Common name": "Paper Birch",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "25-45 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Betula populifolia": {
+    "Latin name": "Betula populifolia",
+    "Common name": "Gray birch",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "20-40 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Carpinus caroliniana": {
+    "Latin name": "Carpinus caroliniana",
+    "Common name": "American Hornbeam",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "20-30 ft",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Carya ovata": {
+    "Latin name": "Carya ovata",
+    "Common name": "Shagbark hickory",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "50-100 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Catalpa speciosa": {
+    "Latin name": "Catalpa speciosa",
+    "Common name": "Northern Catalpa",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "75-100 ft",
+    "Sunlight": [
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": ""
+  },
+  "Celtis occidentalis": {
+    "Latin name": "Celtis occidentalis",
+    "Common name": "Common hackberry",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "30-50 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "58, 59, 83"
+  },
+  "Cercis canadensis": {
+    "Latin name": "Cercis canadensis",
+    "Common name": "Redbud",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "12-25 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": "58"
+  },
+  "Chamaecyparis thyoides": {
+    "Latin name": "Chamaecyparis thyoides",
+    "Common name": "Altantic white cedar",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "20-40 ft",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Wet"
+    ],
+    "Ecoregion": "58, 59, 82, 84"
+  },
+  "Cornus (Swida) alternifolia": {
+    "Latin name": "Cornus (Swida) alternifolia",
+    "Common name": "Alternate leaf dogwood",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "10-20 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Cornus florida (1)": {
+    "Latin name": "Cornus florida (1)",
+    "Common name": "Dogwood",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [
+      "May"
+    ],
+    "Height": "15-25 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [],
+    "Ecoregion": ""
+  },
+  "Cotinus obovatus": {
+    "Latin name": "Cotinus obovatus",
+    "Common name": "Smoketree",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "15-30 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Dry"
+    ],
+    "Ecoregion": "Deep south US"
+  },
+  "Crataegus crus-galli": {
+    "Latin name": "Crataegus crus-galli",
+    "Common name": "Cockspur hawthorn",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [
+      "May"
+    ],
+    "Height": "15-30 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Crataegus mollis": {
+    "Latin name": "Crataegus mollis",
+    "Common name": "Downy hawthorn",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": [],
+    "Ecoregion": ""
+  },
+  "Craetagus phaenopyrum": {
+    "Latin name": "Craetagus phaenopyrum",
+    "Common name": "Washington hawthorn",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Height": "20-35 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": "parts of eastern MA"
+  },
+  "Crataegus punctata": {
+    "Latin name": "Crataegus punctata",
+    "Common name": "Thicket hawthorn",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": [],
+    "Ecoregion": ""
+  },
+  "Diospyros virginiana (2)": {
+    "Latin name": "Diospyros virginiana (2)",
+    "Common name": "Persimmon",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "20-40 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Ecoregion": "59"
+  },
+  "Euonymus atropurpureus": {
+    "Latin name": "Euonymus atropurpureus",
+    "Common name": "Eastern wahoo",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Height": "12-29 ft",
+    "Sunlight": [
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Ecoregion": "some MA counties"
+  },
+  "Fagus grandifolia": {
+    "Latin name": "Fagus grandifolia",
+    "Common name": "American beech",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "50-70 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Fraxinus americana": {
+    "Latin name": "Fraxinus americana",
+    "Common name": "White ash",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "50-80 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Fraxinus nigra": {
+    "Latin name": "Fraxinus nigra",
+    "Common name": "Black ash",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "30-50 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Fraxinus pennsylvanica": {
+    "Latin name": "Fraxinus pennsylvanica",
+    "Common name": "Green ash",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "50-70 ft",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Juglans cinera": {
+    "Latin name": "Juglans cinera",
+    "Common name": "Butternut",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "40-70 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Juglans nigra": {
+    "Latin name": "Juglans nigra",
+    "Common name": "Black walnut",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "50-80 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 83, 84"
+  },
+  "Juniperus communis": {
+    "Latin name": "Juniperus communis",
+    "Common name": "Common juniper",
+    "plantType": [
+      "Trees", "Shrubs"
+    ],
+    "Bloom time": [],
+    "Height": "5-25 ft",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Juniperus virginiana": {
+    "Latin name": "Juniperus virginiana",
+    "Common name": "Red cedar",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "15-30 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Larix laricina": {
+    "Latin name": "Larix laricina",
+    "Common name": "Tamarack",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "30-60 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Liquidambar styraciflua": {
+    "Latin name": "Liquidambar styraciflua",
+    "Common name": "Sweet gum",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "60-90 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": "59, 83, 84"
+  },
+  "Liriodendron tulipifera": {
+    "Latin name": "Liriodendron tulipifera",
+    "Common name": "Tulip Tree",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": "70-120 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 83, 84"
+  },
+  "Magnolia tripelata": {
+    "Latin name": "Magnolia tripelata",
+    "Common name": "Umbrella tree",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "25-40 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Ecoregion": "83, 58"
+  },
+  "Magnolia virginiana": {
+    "Latin name": "Magnolia virginiana",
+    "Common name": "Sweet bay",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [
+      "Jul"
+    ],
+    "Height": "10-20 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": "84, 59"
+  },
+  "Malus spp (1)": {
+    "Latin name": "Malus spp (1)",
+    "Common name": "crabapples",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": [],
+    "Ecoregion": ""
+  },
+  "Nyssa sylvatica": {
+    "Latin name": "Nyssa sylvatica",
+    "Common name": "Black Tupelo, Black Gum",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Height": "30-60 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Ostrya virginiana": {
+    "Latin name": "Ostrya virginiana",
+    "Common name": "American hop hornbeam",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "20-30 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Picea glauca": {
+    "Latin name": "Picea glauca",
+    "Common name": "White spruce",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "30-60 ft",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "58, 59, 82"
+  },
+  "Pinus banksiana": {
+    "Latin name": "Pinus banksiana",
+    "Common name": "Jack pine",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": [],
+    "Ecoregion": ""
+  },
+  "Pinus resinosa": {
+    "Latin name": "Pinus resinosa",
+    "Common name": "Red pine",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": [],
+    "Ecoregion": ""
+  },
+  "Pinus ridgida": {
+    "Latin name": "Pinus ridgida",
+    "Common name": "Pitch pine",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "30-60 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Pinus strobus": {
+    "Latin name": "Pinus strobus",
+    "Common name": "White pine",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "60-90 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Platanus occidentalis": {
+    "Latin name": "Platanus occidentalis",
+    "Common name": "American sycamore",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "70-100 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 83, 84"
+  },
+  "Populus deltoides": {
+    "Latin name": "Populus deltoides",
+    "Common name": "Easter cottonwood",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "50-100 ft",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Populus tremuloides": {
+    "Latin name": "Populus tremuloides",
+    "Common name": "Quaking aspen",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "20-50 ft",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": ""
+  },
+  "Prunus americana": {
+    "Latin name": "Prunus americana",
+    "Common name": "American plum",
+    "plantType": [
+      "Trees", "Shrubs"
+    ],
+    "Bloom time": [],
+    "Height": "4-10 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "58, 59, 83, 84"
+  },
+  "Prunus pensylvanica": {
+    "Latin name": "Prunus pensylvanica",
+    "Common name": "Pin cherry",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "15-35 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Prunus serotina": {
+    "Latin name": "Prunus serotina",
+    "Common name": "Black cherry",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "30-60 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Prunus virginiana": {
+    "Latin name": "Prunus virginiana",
+    "Common name": "Chokecherry",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "4-12 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Ptela trifoliata": {
+    "Latin name": "Ptela trifoliata",
+    "Common name": "Hoptree",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": [],
+    "Ecoregion": ""
+  },
+  "Quercus alba": {
+    "Latin name": "Quercus alba",
+    "Common name": "White oak",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "60-80 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Quercus bicolor": {
+    "Latin name": "Quercus bicolor",
+    "Common name": "Swamp oak",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "60-80 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Quercus coccinea": {
+    "Latin name": "Quercus coccinea",
+    "Common name": "Scarlet Oak",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "50-70 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Quercus ilicifolia": {
+    "Latin name": "Quercus ilicifolia",
+    "Common name": "Bear oak / scrub oak",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "3-30 ft",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Quercus macrocarpa": {
+    "Latin name": "Quercus macrocarpa",
+    "Common name": "Bur Oak",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "150 ft",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "Berkshire County MA"
+  },
+  "Quercus montana": {
+    "Latin name": "Quercus montana",
+    "Common name": "Chesnut Oak",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": [],
+    "Ecoregion": ""
+  },
+  "Quercus muehlenbergii": {
+    "Latin name": "Quercus muehlenbergii",
+    "Common name": "Chinkapin Oak",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": [],
+    "Ecoregion": ""
+  },
+  "Quercus palustris": {
+    "Latin name": "Quercus palustris",
+    "Common name": "Pin Oak",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "50-70 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 83, 84"
+  },
+  "Quercus prinoides": {
+    "Latin name": "Quercus prinoides",
+    "Common name": "Dwarf Chinkapin Oak",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "5-30 ft",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "Berkshire County"
+  },
+  "Quercus prinus": {
+    "Latin name": "Quercus prinus",
+    "Common name": "Chestnut Oak",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": [],
+    "Ecoregion": ""
+  },
+  "Quercus rubra": {
+    "Latin name": "Quercus rubra",
+    "Common name": "Northern red oak",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "60-80 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Quercus stellata": {
+    "Latin name": "Quercus stellata",
+    "Common name": "Post Oak",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": [],
+    "Ecoregion": ""
+  },
+  "Quercus velutina": {
+    "Latin name": "Quercus velutina",
+    "Common name": "Black Oak",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "50-60 ft",
+    "Sunlight": [
+      "Full"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Salix nigra": {
+    "Latin name": "Salix nigra",
+    "Common name": "Black willow",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "10-60 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Sassafras albidum": {
+    "Latin name": "Sassafras albidum",
+    "Common name": "Sassafras",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "20-40 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "58, 59, 83, 84"
+  },
+  "Sorbus americana": {
+    "Latin name": "Sorbus americana",
+    "Common name": "American moutain ash",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "15-30 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Staphylea trifoliata": {
+    "Latin name": "Staphylea trifoliata",
+    "Common name": "Bladdernut",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "",
+    "Sunlight": [],
+    "Moisture": [],
+    "Ecoregion": ""
+  },
+  "Swida alternifolia": {
+    "Latin name": "Swida alternifolia",
+    "Common name": "Pagoda dogwood",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Height": "10-20 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": ""
+  },
+  "Taxodium distichum": {
+    "Latin name": "Taxodium distichum",
+    "Common name": "Bald cypress",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "35-120 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "NY and south"
+  },
+  "Thuja occidentalis": {
+    "Latin name": "Thuja occidentalis",
+    "Common name": "Arborvitae, Northern white cedar",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "40-60 ft",
+    "Sunlight": [
+      "Full",
+      "Part",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": ""
+  },
+  "Tilia americana": {
+    "Latin name": "Tilia americana",
+    "Common name": "American linden / basswood",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "50-70 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Ulmus americana": {
+    "Latin name": "Ulmus americana",
+    "Common name": "American Elm",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [],
+    "Height": "60-100 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84"
+  },
+  "Zanthoxylum americanum": {
+    "Latin name": "Zanthoxylum americanum",
+    "Common name": "Pricklyash",
+    "plantType": [
+      "Trees"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Height": "15-20 ft",
+    "Sunlight": [
+      "Full",
+      "Part"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Ecoregion": "W MA"
   }
 }
