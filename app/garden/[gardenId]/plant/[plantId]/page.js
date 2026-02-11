@@ -12,7 +12,7 @@ import Modal, { ConfirmModal } from '@/components/Modal';
 import Button from '@/components/Button';
 import InfoField from '@/components/InfoField';
 import GoogleSignInButton from '@/components/GoogleSignInButton';
-import plantsData from '@/plants.json';
+import plantsData from '@/plants_dynamic.json';
 import styles from './page.module.css';
 
 const BLOOM_OPTIONS = ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'];
@@ -21,7 +21,7 @@ const MOISTURE_OPTIONS = ['Wet', 'Medium', 'Dry'];
 const NATIVE_OPTIONS = ['Northern US', 'Northeastern US', 'Southern US', 'Southeastern US', 'Eastern US', 'East Coast US', 
   'Mid-Atlantic US', 'Western US', 'Midwestern US', 'Central US', 'US Native', 'MA Native', 'Cultivar', 'Nativar', 'Europe', 'Asia', 'South America', 'Africa', 'Other'];
 
-const mapSun = (arr) => arr ? arr.map(s => ({ 'Full': 'Sun', 'Part': 'Part Sun', 'Shade': 'Shade' }[s] || s)).filter(Boolean) : [];
+// const mapSun = (arr) => arr ? arr.map(s => ({ 'Full': 'Sun', 'Part': 'Part Sun', 'Shade': 'Shade' }[s] || s)).filter(Boolean) : [];
 const findData = (name) => { if (!name) return null; const key = Object.keys(plantsData).find(k => k.toLowerCase() === name.trim().toLowerCase()); return key ? plantsData[key] : null; };
 const formatDateDisplay = (dateStr) => { if (!dateStr) return ''; const [y, m, d] = dateStr.split('-').map(Number); return new Date(y, m - 1, d).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }); };
 
@@ -154,7 +154,7 @@ export default function PlantPage() {
       commonName: autofillData['Common name'].trim() || temp.commonName,
       bloomTime: autofillData['Bloom time'] || temp.bloomTime,
       height: autofillData['Height'] || temp.height,
-      sunlight: mapSun(autofillData['Sunlight']) || temp.sunlight,
+      sunlight: autofillData['Sunlight'] || temp.sunlight,
       moisture: autofillData['Moisture'] || temp.moisture,
       hasAutofilled: true
     });
