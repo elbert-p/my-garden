@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { supabase } from '@/lib/supabaseClient';
 import localforage from 'localforage';
 import { clearAllCaches } from '@/lib/dataService';
+import { uploadImage } from '@/lib/imageStorage';
 
 const AuthContext = createContext();
 
@@ -184,6 +185,21 @@ export function AuthProvider({ children }) {
     }
   };
 
+  /**
+   * Helper: upload a single image (data URL) to Supabase Storage.
+   * Returns the public URL, or the original value if it's not a data URL
+   * or if the upload fails.
+   */
+  const safeUploadImage = async (dataUrl, userId, folder) => {
+    if (!dataUrl || !dataUrl.startsWith('data:')) return dataUrl;
+    try {
+      return await uploadImage(dataUrl, userId, folder);
+    } catch (err) {
+      console.error('[Auth] Image upload failed during migration:', err);
+      return dataUrl; // fall back to keeping the data URL
+    }
+  };
+
   // Migrate local storage data to Supabase
   const migrateLocalDataToSupabase = async (userId) => {
     try {
@@ -214,12 +230,15 @@ export function AuthProvider({ children }) {
       const gardenIdMap = {};
 
       for (const garden of localGardens) {
+        // Upload garden image to storage instead of storing base64
+        const imageUrl = await safeUploadImage(garden.image, userId, 'gardens');
+
         const { data: newGarden, error } = await supabase
           .from('gardens')
           .insert({
             user_id: userId,
             name: garden.name,
-            image: garden.image,
+            image: imageUrl,
           })
           .select()
           .single();
@@ -237,6 +256,16 @@ export function AuthProvider({ children }) {
         const newGardenId = gardenIdMap[plant.gardenId];
         if (!newGardenId) continue;
 
+        // Upload plant images to storage
+        const mainImageUrl = await safeUploadImage(plant.mainImage, userId, 'plants');
+
+        let galleryUrls = plant.images || [];
+        if (galleryUrls.length > 0) {
+          galleryUrls = await Promise.all(
+            galleryUrls.map(img => safeUploadImage(img, userId, 'plants'))
+          );
+        }
+
         const { error } = await supabase
           .from('plants')
           .insert({
@@ -244,7 +273,7 @@ export function AuthProvider({ children }) {
             garden_id: newGardenId,
             common_name: plant.commonName,
             scientific_name: plant.scientificName,
-            main_image: plant.mainImage,
+            main_image: mainImageUrl,
             date_planted: plant.datePlanted || null,
             bloom_time: plant.bloomTime || [],
             height: plant.height,
@@ -252,7 +281,7 @@ export function AuthProvider({ children }) {
             moisture: plant.moisture || [],
             native_range: plant.nativeRange || [],
             notes: plant.notes,
-            images: plant.images || [],
+            images: galleryUrls,
             has_autofilled: plant.hasAutofilled || false,
           });
 

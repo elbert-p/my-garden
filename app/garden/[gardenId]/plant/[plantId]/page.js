@@ -6,6 +6,7 @@ import { FiEdit, FiPlus, FiTrash2, FiDatabase, FiShare2 } from 'react-icons/fi';
 import imageCompression from 'browser-image-compression';
 import { useGarden } from '@/context/GardenContext';
 import { getPlant, updatePlant, deletePlant } from '@/lib/dataService';
+import { uploadImage, deleteImage } from '@/lib/imageStorage';
 import PageHeader from '@/components/PageHeader';
 import DropdownMenu from '@/components/DropdownMenu';
 import Modal, { ConfirmModal } from '@/components/Modal';
@@ -18,10 +19,9 @@ import styles from './page.module.css';
 const BLOOM_OPTIONS = ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'];
 const SUN_OPTIONS = ['Sun', 'Part Sun', 'Part Shade', 'Shade'];
 const MOISTURE_OPTIONS = ['Wet', 'Medium', 'Dry'];
-const NATIVE_OPTIONS = ['Northern US', 'Northeastern US', 'Southern US', 'Southeastern US', 'Eastern US', 'East Coast US', 
+const NATIVE_OPTIONS = ['Northern US', 'Northeastern US', 'Southern US', 'Southeastern US', 'Eastern US', 'East Coast US',
   'Mid-Atlantic US', 'Western US', 'Midwestern US', 'Central US', 'US Native', 'MA Native', 'Cultivar', 'Nativar', 'Europe', 'Asia', 'South America', 'Africa', 'Other'];
 
-// const mapSun = (arr) => arr ? arr.map(s => ({ 'Full': 'Sun', 'Part': 'Part Sun', 'Shade': 'Shade' }[s] || s)).filter(Boolean) : [];
 const findData = (name) => { if (!name) return null; const key = Object.keys(plantsData).find(k => k.toLowerCase() === name.trim().toLowerCase()); return key ? plantsData[key] : null; };
 const formatDateDisplay = (dateStr) => { if (!dateStr) return ''; const [y, m, d] = dateStr.split('-').map(Number); return new Date(y, m - 1, d).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }); };
 
@@ -48,7 +48,7 @@ export default function PlantPage() {
   // Load plant data
   useEffect(() => {
     if (!isInitialized || !plantId || !garden) return;
-    
+
     (async () => {
       try {
         const p = await getPlant(plantId, user?.id);
@@ -111,21 +111,32 @@ export default function PlantPage() {
   const onMain = async (e) => {
     const f = e.target.files[0];
     if (f?.type.startsWith('image/')) {
-      const u = await compress(f);
-      if (u) await save({ ...temp, mainImage: u });
+      const dataUrl = await compress(f);
+      if (dataUrl) {
+        const oldImage = temp.mainImage;
+        const url = user?.id ? await uploadImage(dataUrl, user.id, 'plants') : dataUrl;
+        await save({ ...temp, mainImage: url });
+        if (user?.id) deleteImage(oldImage); // clean up old image
+      }
     }
   };
 
   const onAdd = async (e) => {
     const f = e.target.files[0];
     if (f?.type.startsWith('image/')) {
-      const u = await compress(f);
-      if (u) await save({ ...temp, images: [...(temp.images || []), u] });
+      const dataUrl = await compress(f);
+      if (dataUrl) {
+        const url = user?.id ? await uploadImage(dataUrl, user.id, 'plants') : dataUrl;
+        await save({ ...temp, images: [...(temp.images || []), url] });
+      }
     }
     if (addRef.current) addRef.current.value = '';
   };
 
-  const onRemove = async (i) => await save({ ...temp, images: temp.images.filter(x => x !== i) });
+  const onRemove = async (i) => {
+    if (user?.id) deleteImage(i); // clean up from storage
+    await save({ ...temp, images: temp.images.filter(x => x !== i) });
+  };
 
   const handleShare = () => {
     if (!user) {
@@ -162,6 +173,11 @@ export default function PlantPage() {
   };
 
   const onDelete = async () => {
+    // Clean up all images from storage
+    if (user?.id && plant) {
+      deleteImage(plant.mainImage);
+      (plant.images || []).forEach(img => deleteImage(img));
+    }
     await deletePlant(plantId, user?.id);
     removePlantFromContext(plantId);
     router.push(`/garden/${gardenId}`);

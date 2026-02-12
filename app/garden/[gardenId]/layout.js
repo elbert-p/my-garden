@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useParams, useRouter, usePathname } from 'next/navigation';
 import { FiPlus, FiEdit, FiTrash2, FiShare2 } from 'react-icons/fi';
 import { GardenProvider, useGarden } from '@/context/GardenContext';
+import { uploadImage, isDataUrl } from '@/lib/imageStorage';
 import NavBar from '@/components/NavBar';
 import SortFilterControls from '@/components/SortFilterControls';
 import Modal, { ConfirmModal } from '@/components/Modal';
@@ -16,7 +17,7 @@ function GardenLayoutContent({ children }) {
   const { gardenId } = useParams();
   const router = useRouter();
   const pathname = usePathname();
-  
+
   const {
     garden,
     plants,
@@ -58,10 +59,10 @@ function GardenLayoutContent({ children }) {
   // Determine active tab and content width
   const isAboutPage = pathname.endsWith('/about');
   const isPlantPage = pathname.includes('/plant/');
-  
+
   // Plant pages use narrower content width
   const contentWidth = isPlantPage ? 'medium' : 'large';
-  
+
   // Plants tab is active on both garden list and plant detail pages
   const tabs = [
     { label: 'Plants', href: `/garden/${gardenId}`, active: !isAboutPage },
@@ -100,9 +101,15 @@ function GardenLayoutContent({ children }) {
       return;
     }
     try {
+      // Upload image to storage if user is signed in
+      let imageUrl = newPlantImage;
+      if (imageUrl && user?.id) {
+        imageUrl = await uploadImage(imageUrl, user.id, 'plants');
+      }
+
       const newPlant = await createPlant({
         commonName: newPlantName.trim(),
-        mainImage: newPlantImage,
+        mainImage: imageUrl,
         scientificName: newScientificName.trim(),
         datePlanted: '',
         notes: '',
@@ -121,9 +128,15 @@ function GardenLayoutContent({ children }) {
       return;
     }
     try {
+      // Upload new garden image to storage if it's a fresh data URL
+      let imageUrl = editImage;
+      if (imageUrl && isDataUrl(imageUrl) && user?.id) {
+        imageUrl = await uploadImage(imageUrl, user.id, 'gardens');
+      }
+
       await updateGarden({
         name: editName.trim(),
-        image: editImage || garden.image,
+        image: imageUrl || garden.image,
       });
       setShowEditGardenModal(false);
       setError('');

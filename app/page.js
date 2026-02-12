@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { FiPlus } from 'react-icons/fi';
 import { useAuth } from '@/context/AuthContext';
 import { getGardens, createGarden, getPlants } from '@/lib/dataService';
+import { uploadImage } from '@/lib/imageStorage';
 import NavBar from '@/components/NavBar';
 import ItemGrid from '@/components/ItemGrid';
 import Modal from '@/components/Modal';
@@ -29,15 +30,15 @@ export default function Home() {
   useEffect(() => {
     const loadGardens = async () => {
       if (!isInitialized || isMigrating) return;
-      
+
       try {
         const result = await getGardens(user?.id);
-        
+
         if (result.createdDefault) {
           router.push(`/garden/${result.gardens[0].id}`);
           return;
         }
-        
+
         setGardens(result.gardens);
         setIsLoading(false);
 
@@ -57,7 +58,7 @@ export default function Home() {
         setIsLoading(false);
       }
     };
-    
+
     loadGardens();
   }, [user?.id, isInitialized, isMigrating, router]);
 
@@ -65,7 +66,7 @@ export default function Home() {
   const filteredGardens = useMemo(() => {
     if (!searchQuery.trim()) return gardens;
     const query = searchQuery.toLowerCase();
-    return gardens.filter(garden => 
+    return gardens.filter(garden =>
       garden.name.toLowerCase().includes(query)
     );
   }, [gardens, searchQuery]);
@@ -77,9 +78,15 @@ export default function Home() {
     }
 
     try {
+      // Upload image to storage if user is signed in
+      let imageUrl = newGardenImage;
+      if (imageUrl && user?.id) {
+        imageUrl = await uploadImage(imageUrl, user.id, 'gardens');
+      }
+
       const newGarden = await createGarden({
         name: newGardenName.trim(),
-        image: newGardenImage || DEFAULT_GARDEN_IMAGE,
+        image: imageUrl || DEFAULT_GARDEN_IMAGE,
       }, user?.id);
 
       setGardens([...gardens, newGarden]);
@@ -121,7 +128,7 @@ export default function Home() {
         searchPlaceholder="Search gardens..."
         menuItems={menuItems}
       />
-      
+
       <div className={styles.container}>
         {showLoading ? (
           <p className={styles.loading}>
