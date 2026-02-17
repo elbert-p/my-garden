@@ -1,0 +1,391 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+}
+
+.headerActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Circular edit button — matches NavBar iconButton style */
+.editIconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #f8f9fa;
+  color: #5f6368;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.editIconButton:hover {
+  background-color: #e8eaed;
+  color: #202124;
+}
+
+/* ---- Page card ---- */
+.page {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1rem 1.5rem 1rem;
+}
+
+/* ========== VIEW MODE ========== */
+.viewArea {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.viewBlock {
+  background-color: #f8f9fa;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  transition: all 0.2s ease;
+}
+
+.viewBlockEditable {
+  cursor: pointer;
+}
+
+.viewBlockEditable:hover {
+  background-color: #f1f3f4;
+}
+
+.viewBlockActive {
+  background-color: #fff;
+  border-color: #e8e8e8;
+  cursor: default;
+}
+
+.viewBlockActive:hover {
+  background-color: #fff;
+}
+
+.viewTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #202124;
+  margin: 0 0 0.4rem 0;
+}
+
+.viewImageWrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.viewImage {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  max-height: 500px;
+}
+
+.viewCaption {
+  font-size: 1.2rem;
+  color: #5f6368;
+  text-align: center;
+  margin: 0.7rem 0 0 0;
+  font-style: italic;
+}
+
+.placeholderText {
+  color: #9aa0a6;
+  font-style: italic;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.emptyMessage {
+  text-align: center;
+  color: #9aa0a6;
+  font-style: italic;
+  padding: 2rem 0;
+}
+
+/* ========== EDIT MODE (all) ========== */
+.editArea {
+  display: flex;
+  flex-direction: column;
+}
+
+.editBlock {
+  border: 1px solid #e8eaed;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.blockToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e8eaed;
+}
+
+.blockTypeLabel {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #5f6368;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.blockActions {
+  display: flex;
+  gap: 2px;
+}
+
+.blockAction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 28px;
+  border: none;
+  background: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #5f6368;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.blockAction:hover {
+  background-color: #e8eaed;
+  color: #202124;
+}
+
+.blockAction:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.blockAction:disabled:hover {
+  background-color: transparent;
+  color: #5f6368;
+}
+
+.blockActionDanger:hover {
+  background-color: #fce8e6;
+  color: #d93025;
+}
+
+/* ---- Shared edit body ---- */
+.blockBody {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.titleInput {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #e8eaed;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: #202124;
+  outline: none;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.titleInput:focus {
+  border-color: #1a73e8;
+}
+
+.titleInput::placeholder {
+  color: #bdc1c6;
+  font-weight: 400;
+}
+
+.captionInput {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #e8eaed;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: #5f6368;
+  outline: none;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.captionInput:focus {
+  border-color: #1a73e8;
+}
+
+.captionInput::placeholder {
+  color: #bdc1c6;
+}
+
+/* ---- Image block edit ---- */
+.imageContainer {
+  display: block;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: 2px dashed #ddd;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.imageContainer:hover {
+  border-color: #bdc1c6;
+  background-color: #f8f9fa;
+}
+
+.imageContainer:has(.imagePreview) {
+  border-style: solid;
+  border-width: 1px;
+}
+
+.imageContainer:has(.imagePreview):hover {
+  background-color: transparent;
+}
+
+.imagePreview {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+.imageEditIcon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.imageContainer:hover .imageEditIcon {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.imageUploadArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 3rem 2rem;
+  color: #5f6368;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ---- Add block button ---- */
+.addButtonRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 0;
+  position: relative;
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 2px dashed #dadce0;
+  border-radius: 50%;
+  background: white;
+  color: #9aa0a6;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.addButton:hover {
+  border-color: #1a73e8;
+  color: #1a73e8;
+  background-color: #e8f0fe;
+}
+
+.addMenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  display: flex;
+  gap: 4px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  padding: 6px;
+  animation: menuIn 0.12s ease;
+}
+
+@keyframes menuIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(-4px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.addMenuItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: none;
+  background: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #3c4043;
+  font-family: inherit;
+  white-space: nowrap;
+  transition: background-color 0.15s ease;
+}
+
+.addMenuItem:hover {
+  background-color: #f1f3f4;
+}
+
+.emptyHint {
+  text-align: center;
+  color: #9aa0a6;
+  font-size: 0.9rem;
+  padding: 1rem 0;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+  .page {
+    padding: 1rem 1.25rem 1.5rem;
+  }
+}

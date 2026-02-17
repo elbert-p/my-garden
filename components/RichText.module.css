@@ -1,0 +1,39 @@
+.richText {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #3c4043;
+}
+
+.heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #202124;
+  margin: 1rem 0 0.4rem 0;
+}
+
+.heading:first-child {
+  margin-top: 0;
+}
+
+.paragraph {
+  margin: 0 0 0.6rem 0;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.list {
+  margin: 0 0 0.6rem 0;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.list li {
+  margin-bottom: 0.25rem;
+  display: list-item;
+}
+
+.list li:last-child {
+  margin-bottom: 0;
+}

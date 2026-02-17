@@ -1,27 +1,25 @@
 'use client';
 import { useGarden } from '@/context/GardenContext';
-import styles from './page.module.css';
+import AboutPageContent from '@/components/AboutPageContent';
 
 export default function GardenAboutPage() {
-  const { garden } = useGarden();
+  const { garden, user, updateGardenAbout } = useGarden();
 
-  if (!garden) {
-    return (
-      <div className={styles.container}>
-        <p className={styles.loading}>Loading...</p>
-      </div>
-    );
-  }
+  if (!garden) return null;
+
+  const defaultBlocks = [
+    { id: 'default-text', type: 'text', title: 'Description', content: '' },
+    { id: 'default-img', type: 'image', content: garden.image || '/default-garden.jpg', title: 'Garden image' },
+  ];
+
+  const blocks = garden.aboutBlocks?.length > 0 ? garden.aboutBlocks : defaultBlocks;
 
   return (
-    <div className={styles.container}>
-      <div className={styles.content}>
-        <div className={styles.gardenImage}>
-          <img src={garden.image || '/default-garden.jpg'} alt={garden.name} />
-        </div>
-        <h2>{garden.name}</h2>
-        <p className={styles.placeholder}>Garden details and statistics coming soon.</p>
-      </div>
-    </div>
+    <AboutPageContent
+      blocks={blocks}
+      onSave={updateGardenAbout}
+      userId={user?.id}
+      title="About This Garden"
+    />
   );
 }

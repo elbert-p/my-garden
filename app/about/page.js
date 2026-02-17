@@ -1,12 +1,42 @@
 'use client';
+import { useState, useEffect } from 'react';
+import { useAuth } from '@/context/AuthContext';
+import { getProfileAboutBlocks, updateProfileAboutBlocks } from '@/lib/dataService';
 import NavBar from '@/components/NavBar';
+import AboutPageContent from '@/components/AboutPageContent';
 import styles from './page.module.css';
 
 export default function AboutPage() {
+  const { user, isInitialized } = useAuth();
+  const [blocks, setBlocks] = useState([]);
+  const [loaded, setLoaded] = useState(false);
+
   const tabs = [
     { label: 'Gardens', href: '/', active: false },
     { label: 'About', href: '/about', active: true },
   ];
+
+  useEffect(() => {
+    if (!isInitialized) return;
+    (async () => {
+      if (user?.id) {
+        const data = await getProfileAboutBlocks(user.id);
+        setBlocks(data);
+      }
+      setLoaded(true);
+    })();
+  }, [user?.id, isInitialized]);
+
+  const handleSave = async (updatedBlocks) => {
+    await updateProfileAboutBlocks(user.id, updatedBlocks);
+    setBlocks(updatedBlocks);
+  };
+
+  const defaultBlocks = [
+    { id: 'default-text', type: 'text', title: 'About Me', content: '' },
+  ];
+
+  const effectiveBlocks = blocks.length > 0 ? blocks : defaultBlocks;
 
   return (
     <>
@@ -14,15 +44,20 @@ export default function AboutPage() {
         title="My Gardens"
         showHome={true}
         tabs={tabs}
+        contentWidth="medium"
       />
-      
-      <div className={styles.container}>
-        <div className={styles.content}>
-          <h2>About My Gardens</h2>
-          <p>This page is coming soon.</p>
-          <p>Here you&apos;ll be able to see information about your gardens and account settings.</p>
+      {!loaded ? (
+        <div className={styles.loadingContainer}>
+          <p className={styles.loading}>Loading...</p>
         </div>
-      </div>
+      ) : (
+        <AboutPageContent
+          blocks={effectiveBlocks}
+          onSave={user ? handleSave : null}
+          userId={user?.id}
+          title="About Me"
+        />
+      )}
     </>
   );
 }

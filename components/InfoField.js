@@ -1,22 +1,18 @@
 'use client';
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { createPortal } from 'react-dom';
+import RichText from './RichText';
+import RichTextEditor from './RichTextEditor';
 import styles from './InfoField.module.css';
 
 // Default date formatter that handles timezone correctly
 const defaultDateFormat = (dateStr) => {
   if (!dateStr) return null;
-  // Parse YYYY-MM-DD as local date by splitting to avoid timezone shift
   const [year, month, day] = dateStr.split('-').map(Number);
   const date = new Date(year, month - 1, day);
   return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 };
 
-/**
- * InfoField - A versatile, Google-inspired info display/edit component
- * Supports click-to-edit - clicking anywhere on field enables editing
- * Clicking outside or pressing Enter/Escape saves and closes
- */
 export default function InfoField({
   label,
   value,
@@ -40,13 +36,11 @@ export default function InfoField({
   const dropdownRef = useRef(null);
   const inputRef = useRef(null);
 
-  // Track if component is mounted for portal
   useEffect(() => {
     setMounted(true);
     return () => setMounted(false);
   }, []);
 
-  // Calculate dropdown position
   const updateDropdownPosition = useCallback(() => {
     if (dropdownTriggerRef.current) {
       const rect = dropdownTriggerRef.current.getBoundingClientRect();
@@ -54,10 +48,7 @@ export default function InfoField({
       const spaceBelow = viewportHeight - rect.bottom;
       const spaceAbove = rect.top;
       const dropdownHeight = Math.min(options.length * 42 + 12, 280);
-      
-      // Position below if enough space, otherwise above
       const shouldPositionAbove = spaceBelow < dropdownHeight && spaceAbove > spaceBelow;
-      
       setDropdownPosition({
         top: shouldPositionAbove ? rect.top - dropdownHeight - 4 : rect.bottom + 4,
         left: rect.left,
@@ -66,7 +57,6 @@ export default function InfoField({
     }
   }, [options.length]);
 
-  // Update position when dropdown opens
   useEffect(() => {
     if (isDropdownOpen) {
       updateDropdownPosition();
@@ -79,63 +69,45 @@ export default function InfoField({
     };
   }, [isDropdownOpen, updateDropdownPosition]);
 
-  // Close dropdown and save when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
-      // Skip if we just activated (prevents immediate close)
-      if (justActivated) {
-        return;
-      }
-      
+      if (justActivated) return;
       const isClickInsideContainer = containerRef.current && containerRef.current.contains(e.target);
       const isClickInsideDropdown = dropdownRef.current && dropdownRef.current.contains(e.target);
-      
       if (!isClickInsideContainer && !isClickInsideDropdown) {
         if (isFieldEditing) {
           setIsFieldEditing(false);
           setIsDropdownOpen(false);
-          if (onSave) {
-            onSave();
-          }
+          if (onSave) onSave();
         }
       }
     };
-    
     if (isFieldEditing) {
       document.addEventListener('mousedown', handleClickOutside);
     }
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isFieldEditing, onSave, justActivated]);
 
-  // Reset justActivated flag after a short delay
   useEffect(() => {
     if (justActivated) {
-      const timer = setTimeout(() => {
-        setJustActivated(false);
-      }, 100);
+      const timer = setTimeout(() => setJustActivated(false), 100);
       return () => clearTimeout(timer);
     }
   }, [justActivated]);
 
-  // Focus input when field editing starts
   useEffect(() => {
     if (isFieldEditing && inputRef.current && (type === 'text' || type === 'textarea')) {
       inputRef.current.focus();
     }
   }, [isFieldEditing, type]);
 
-  // Sync with parent editing mode
   useEffect(() => {
-    if (parentIsEditing) {
-      // Parent entered edit mode - don't auto-activate individual fields
-    } else if (!parentIsEditing && isFieldEditing) {
-      // Parent exited edit mode - close this field too
+    if (!parentIsEditing && isFieldEditing) {
       setIsFieldEditing(false);
       setIsDropdownOpen(false);
     }
   }, [parentIsEditing]);
 
-  // Format value for display
   const formatDisplayValue = () => {
     if (type === 'multiselect' && Array.isArray(value)) {
       return value.length > 0 ? value.join(', ') : emptyText;
@@ -146,7 +118,6 @@ export default function InfoField({
     return value || emptyText;
   };
 
-  // Handle click to edit
   const handleFieldClick = (e) => {
     if (!isFieldEditing) {
       e.preventDefault();
@@ -159,7 +130,6 @@ export default function InfoField({
     }
   };
 
-  // Handle key press
   const handleKeyDown = (e) => {
     if (e.key === 'Enter' && type === 'text') {
       e.preventDefault();
@@ -174,11 +144,9 @@ export default function InfoField({
     }
   };
 
-  // Handle multi-select toggle
   const handleMultiSelectToggle = (option) => {
     const optionValue = typeof option === 'object' ? option.value : option;
     const currentValues = Array.isArray(value) ? value : [];
-    
     if (currentValues.includes(optionValue)) {
       onChange(currentValues.filter(v => v !== optionValue));
     } else {
@@ -186,7 +154,6 @@ export default function InfoField({
     }
   };
 
-  // Handle single select
   const handleSingleSelect = (option) => {
     const optionValue = typeof option === 'object' ? option.value : option;
     onChange(optionValue);
@@ -195,29 +162,21 @@ export default function InfoField({
     if (onSave) onSave();
   };
 
-  // Get option label/value
   const getOptionLabel = (option) => typeof option === 'object' ? option.label : option;
   const getOptionValue = (option) => typeof option === 'object' ? option.value : option;
 
-  // Dropdown menu rendered via portal
   const renderDropdownPortal = () => {
     if (!isDropdownOpen || !mounted) return null;
-    
     const selectedValues = type === 'multiselect' ? (Array.isArray(value) ? value : []) : null;
-    
     return createPortal(
-      <div 
+      <div
         ref={dropdownRef}
         className={styles.dropdownMenuPortal}
-        style={{
-          top: dropdownPosition.top,
-          left: dropdownPosition.left,
-          width: dropdownPosition.width
-        }}
+        style={{ top: dropdownPosition.top, left: dropdownPosition.left, width: dropdownPosition.width }}
       >
         {options.map((option, index) => {
           const optValue = getOptionValue(option);
-          const isSelected = type === 'multiselect' 
+          const isSelected = type === 'multiselect'
             ? selectedValues.includes(optValue)
             : value === optValue;
           return (
@@ -253,104 +212,66 @@ export default function InfoField({
     );
   };
 
-  // Render the input based on type
   const renderInput = () => {
     switch (type) {
       case 'text':
         return (
-          <input
-            ref={inputRef}
-            type="text"
-            value={value || ''}
-            onChange={(e) => onChange(e.target.value)}
-            onKeyDown={handleKeyDown}
-            className={styles.input}
-            placeholder={placeholder || `Enter ${label.toLowerCase()}...`}
-          />
+          <input ref={inputRef} type="text" value={value || ''} onChange={(e) => onChange(e.target.value)}
+            onKeyDown={handleKeyDown} className={styles.input}
+            placeholder={placeholder || `Enter ${label.toLowerCase()}...`} />
         );
-
       case 'textarea':
         return (
-          <textarea
-            ref={inputRef}
+          <RichTextEditor
             value={value || ''}
-            onChange={(e) => onChange(e.target.value)}
-            onKeyDown={handleKeyDown}
-            className={styles.textarea}
+            onChange={(val) => onChange(val)}
             placeholder={placeholder || `Enter ${label.toLowerCase()}...`}
+            minRows={3}
           />
         );
-
       case 'date':
         return (
-          <input
-            ref={inputRef}
-            type="date"
-            value={value || ''}
-            onChange={(e) => onChange(e.target.value)}
-            onKeyDown={handleKeyDown}
-            className={styles.input}
-          />
+          <input ref={inputRef} type="date" value={value || ''} onChange={(e) => onChange(e.target.value)}
+            onKeyDown={handleKeyDown} className={styles.input} />
         );
-
       case 'radio':
         return (
           <div className={styles.radioGroup}>
             {options.map((option, index) => (
               <label key={index} className={styles.radioLabel}>
-                <input
-                  type="radio"
-                  name={label}
-                  value={getOptionValue(option)}
+                <input type="radio" name={label} value={getOptionValue(option)}
                   checked={value === getOptionValue(option)}
-                  onChange={() => handleSingleSelect(option)}
-                  className={styles.radioInput}
-                />
+                  onChange={() => handleSingleSelect(option)} className={styles.radioInput} />
                 <span className={styles.radioText}>{getOptionLabel(option)}</span>
               </label>
             ))}
           </div>
         );
-
       case 'dropdown':
-      case 'multiselect':
+      case 'multiselect': {
         const selectedValues = type === 'multiselect' ? (Array.isArray(value) ? value : []) : null;
         return (
           <div className={styles.dropdownContainer}>
-            <button
-              ref={dropdownTriggerRef}
-              type="button"
-              className={styles.dropdownTrigger}
-              onClick={(e) => {
-                e.stopPropagation();
-                setIsDropdownOpen(!isDropdownOpen);
-              }}
-            >
+            <button ref={dropdownTriggerRef} type="button" className={styles.dropdownTrigger}
+              onClick={(e) => { e.stopPropagation(); setIsDropdownOpen(!isDropdownOpen); }}>
               <span className={styles.dropdownTriggerText}>
-                {type === 'multiselect' 
+                {type === 'multiselect'
                   ? (selectedValues.length > 0 ? selectedValues.join(', ') : placeholder || 'Select...')
-                  : (value || placeholder || 'Select...')
-                }
+                  : (value || placeholder || 'Select...')}
               </span>
-              <svg className={`${styles.dropdownArrow} ${isDropdownOpen ? styles.dropdownArrowOpen : ''}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg className={`${styles.dropdownArrow} ${isDropdownOpen ? styles.dropdownArrowOpen : ''}`}
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </button>
             {renderDropdownPortal()}
           </div>
         );
-
+      }
       default:
         return (
-          <input
-            ref={inputRef}
-            type="text"
-            value={value || ''}
-            onChange={(e) => onChange(e.target.value)}
-            onKeyDown={handleKeyDown}
-            className={styles.input}
-            placeholder={placeholder}
-          />
+          <input ref={inputRef} type="text" value={value || ''} onChange={(e) => onChange(e.target.value)}
+            onKeyDown={handleKeyDown} className={styles.input} placeholder={placeholder} />
         );
     }
   };
@@ -359,13 +280,9 @@ export default function InfoField({
   const isActive = isFieldEditing || parentIsEditing;
 
   return (
-    <div 
+    <div
       ref={containerRef}
-      className={`
-        ${styles.infoField} 
-        ${isActive ? styles.infoFieldActive : ''}
-        ${size === 'large' ? styles.infoFieldLarge : ''}
-      `}
+      className={`${styles.infoField} ${isActive ? styles.infoFieldActive : ''} ${size === 'large' ? styles.infoFieldLarge : ''}`}
       onClick={handleFieldClick}
     >
       <div className={styles.labelRow}>
@@ -379,6 +296,10 @@ export default function InfoField({
       </div>
       {isActive ? (
         renderInput()
+      ) : type === 'textarea' && !isEmpty ? (
+        <div className={styles.text}>
+          <RichText content={value} />
+        </div>
       ) : (
         <p className={`${styles.text} ${isEmpty ? styles.textEmpty : ''}`}>
           {formatDisplayValue()}

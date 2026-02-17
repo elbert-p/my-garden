@@ -2,7 +2,7 @@
 import { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { useAuth } from './AuthContext';
-import { getGarden, updateGarden, deleteGarden, createPlant, getPlants } from '@/lib/dataService';
+import { getGarden, updateGarden, updateGardenAbout, deleteGarden, createPlant, getPlants } from '@/lib/dataService';
 import { applySortAndFilter } from '@/components/SortFilterControls';
 
 const GardenContext = createContext();
@@ -33,7 +33,6 @@ export function GardenProvider({ children }) {
       if (!isInitialized || !gardenId) return;
       
       try {
-        // Phase 1: Load garden info (fast, populates navbar)
         const gardenData = await getGarden(gardenId, user?.id);
         if (!gardenData) {
           router.push('/');
@@ -42,7 +41,6 @@ export function GardenProvider({ children }) {
         setGarden(gardenData);
         setIsLoading(false);
 
-        // Phase 2: Load plants
         const plantsData = await getPlants(gardenId, user?.id);
         setPlants(plantsData);
         setPlantsLoaded(true);
@@ -58,6 +56,12 @@ export function GardenProvider({ children }) {
   // Garden actions
   const handleUpdateGarden = useCallback(async (updates) => {
     const updated = await updateGarden(gardenId, updates, user?.id);
+    setGarden(updated);
+    return updated;
+  }, [gardenId, user?.id]);
+
+  const handleUpdateGardenAbout = useCallback(async (aboutBlocks) => {
+    const updated = await updateGardenAbout(gardenId, aboutBlocks, user?.id);
     setGarden(updated);
     return updated;
   }, [gardenId, user?.id]);
@@ -122,6 +126,7 @@ export function GardenProvider({ children }) {
     
     // Actions
     updateGarden: handleUpdateGarden,
+    updateGardenAbout: handleUpdateGardenAbout,
     deleteGarden: handleDeleteGarden,
     createPlant: handleCreatePlant,
     updatePlantInContext: handleUpdatePlantInContext,

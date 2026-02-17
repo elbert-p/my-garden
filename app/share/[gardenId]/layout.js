@@ -17,8 +17,8 @@ function SharedGardenLayoutContent({ children }) {
   const isPlantPage = pathname.includes('/plant/');
   
   // Plant pages use narrower content width
-  const contentWidth = isPlantPage ? 'medium' : 'large';
-  
+  const contentWidth = (isPlantPage || isAboutPage) ? 'medium' : 'large';
+
   // Tabs and search are always shown immediately (URLs use gardenId from params)
   const tabs = [
     { label: 'Plants', href: `/share/${gardenId}`, active: !isAboutPage },

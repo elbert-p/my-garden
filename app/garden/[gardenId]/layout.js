@@ -61,7 +61,7 @@ function GardenLayoutContent({ children }) {
   const isPlantPage = pathname.includes('/plant/');
 
   // Plant pages use narrower content width
-  const contentWidth = isPlantPage ? 'medium' : 'large';
+  const contentWidth = (isPlantPage || isAboutPage) ? 'medium' : 'large';
 
   // Plants tab is active on both garden list and plant detail pages
   const tabs = [
