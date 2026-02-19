@@ -28,12 +28,12 @@ export default function AboutPage() {
   }, [user?.id, isInitialized]);
 
   const handleSave = async (updatedBlocks) => {
-    await updateProfileAboutBlocks(user.id, updatedBlocks);
+    await updateProfileAboutBlocks(user?.id, updatedBlocks);
     setBlocks(updatedBlocks);
   };
 
   const defaultBlocks = [
-    { id: 'default-text', type: 'text', title: 'About Me', content: '' },
+    { id: 'default-text', type: 'text', title: 'My Gardens', content: '' },
   ];
 
   const effectiveBlocks = blocks.length > 0 ? blocks : defaultBlocks;
@@ -53,7 +53,7 @@ export default function AboutPage() {
       ) : (
         <AboutPageContent
           blocks={effectiveBlocks}
-          onSave={user ? handleSave : null}
+          onSave={handleSave}
           userId={user?.id}
           title="About Me"
         />

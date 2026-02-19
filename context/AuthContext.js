@@ -203,6 +203,24 @@ export function AuthProvider({ children }) {
   // Migrate local storage data to Supabase
   const migrateLocalDataToSupabase = async (userId) => {
     try {
+      // Migrate profile about blocks
+      const localProfileBlocks = await localforage.getItem('profileAboutBlocks');
+      if (localProfileBlocks?.length > 0) {
+        const { data: existing } = await supabase
+          .from('profiles')
+          .select('about_blocks')
+          .eq('id', userId)
+          .single();
+
+        if (!existing?.about_blocks?.length) {
+          await supabase
+            .from('profiles')
+            .update({ about_blocks: localProfileBlocks })
+            .eq('id', userId);
+        }
+        await localforage.removeItem('profileAboutBlocks');
+      }
+
       const localGardens = (await localforage.getItem('gardens')) || [];
       const localPlants = (await localforage.getItem('plants')) || [];
 
