@@ -56,8 +56,26 @@
   border-radius: 15px;
 }
 
+.badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 8px;
+  border-radius: 14px;
+  background-color: #e6f4ea;
+  color: #1e8e3e;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
 .name {
-  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -65,23 +83,6 @@
   font-weight: 600;
   margin-top: 0.75rem;
   padding-bottom: 0.5rem;
-}
-
-.badge {
-  position: absolute;
-  left: 100%;
-  margin-left: 0.5rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 24px;
-  height: 24px;
-  padding: 0 7px;
-  border-radius: 12px;
-  background-color: #d8e8df;
-  color: #1e8e3e;
-  font-size: 0.9rem;
-  font-weight: 600;
 }
 
 /* ============ GROUPED (with sort markers) ============ */
@@ -93,7 +94,6 @@
 }
 
 .section {
-  /* each group is marker + grid */
   min-width: 0;
 }
 

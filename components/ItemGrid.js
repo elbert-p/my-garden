@@ -29,16 +29,15 @@ export default function ItemGrid({
             alt={getItemName(item)}
             className={styles.image}
           />
+          {badge != null && <span className={styles.badge}>{badge}</span>}
         </div>
         <span className={styles.name} style={getItemStyle(item)}>
           {getItemName(item)}
-          {badge != null && <span className={styles.badge}>{badge}</span>}
         </span>
       </Link>
     );
   };
 
-  // Grouped rendering with markers
   if (sortGroups && sortGroups.length > 0) {
     return (
       <div className={styles.grouped}>
@@ -54,7 +53,6 @@ export default function ItemGrid({
     );
   }
 
-  // Flat rendering (existing)
   if (items.length === 0) {
     return <p className={styles.empty}>{emptyMessage}</p>;
   }
