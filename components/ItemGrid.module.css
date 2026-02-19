@@ -67,10 +67,11 @@
   height: 28px;
   padding: 0 8px;
   border-radius: 14px;
-  background-color: #e6f4ea;
-  color: #1e8e3e;
+  background-color: #1e8e3e;
+  color: #ffffff;
   font-size: 1rem;
   font-weight: 600;
+  border: 1px solid white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
