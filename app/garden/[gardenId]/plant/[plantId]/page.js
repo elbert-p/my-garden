@@ -7,6 +7,7 @@ import imageCompression from 'browser-image-compression';
 import { useGarden } from '@/context/GardenContext';
 import { getPlant, updatePlant, deletePlant } from '@/lib/dataService';
 import { uploadImage, deleteImage } from '@/lib/imageStorage';
+import { BLOOM_OPTIONS, SUN_OPTIONS, MOISTURE_OPTIONS, NATIVE_OPTIONS } from '@/lib/plantConstants';
 import PageHeader from '@/components/PageHeader';
 import DropdownMenu from '@/components/DropdownMenu';
 import Modal, { ConfirmModal } from '@/components/Modal';
@@ -15,12 +16,6 @@ import InfoField from '@/components/InfoField';
 import GoogleSignInButton from '@/components/GoogleSignInButton';
 import plantsData from '@/plants_dynamic.json';
 import styles from './page.module.css';
-
-const BLOOM_OPTIONS = ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'];
-const SUN_OPTIONS = ['Sun', 'Part Sun', 'Part Shade', 'Shade'];
-const MOISTURE_OPTIONS = ['Wet', 'Medium', 'Dry'];
-const NATIVE_OPTIONS = ['Northern US', 'Northeastern US', 'Mid-Atlantic US', 'Eastern US', 'East Coast US', 'Southeastern US', 'Southern US', 'Midwestern US', 'Central US', 
-  'Western US', 'West Coast US', 'Southwestern US', 'Northwestern US', 'US Native', 'MA Native', 'Cultivar', 'Nativar', 'Europe', 'Asia', 'Middle East', 'South America', 'Africa', 'Other'];
 
 const findData = (name) => { if (!name) return null; const key = Object.keys(plantsData).find(k => k.toLowerCase() === name.trim().toLowerCase()); return key ? plantsData[key] : null; };
 const formatDateDisplay = (dateStr) => { if (!dateStr) return ''; const [y, m, d] = dateStr.split('-').map(Number); return new Date(y, m - 1, d).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }); };

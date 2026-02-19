@@ -2,6 +2,7 @@
 import { useParams, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { SharedGardenProvider, useSharedGarden } from '@/context/SharedGardenContext';
+import { getActiveFilterCount, getActiveSortCount } from '@/components/SortFilterControls';
 import NavBar from '@/components/NavBar';
 import SortFilterControls from '@/components/SortFilterControls';
 import styles from './layout.module.css';
@@ -10,7 +11,7 @@ function SharedGardenLayoutContent({ children }) {
   const { gardenId } = useParams();
   const pathname = usePathname();
   
-  const { garden, owner, plants, isLoading, plantsLoaded, error, searchQuery, setSearchQuery, sort, setSort, filters, setFilters } = useSharedGarden();
+  const { garden, owner, plants, filteredPlants, isLoading, plantsLoaded, error, searchQuery, setSearchQuery, sort, setSort, filters, setFilters } = useSharedGarden();
 
   // Determine active tab and content width
   const isAboutPage = pathname.endsWith('/about');
@@ -42,7 +43,18 @@ function SharedGardenLayoutContent({ children }) {
     <>
       <NavBar
         title={garden?.name || ''}
-        badge={plantsLoaded ? plants.length : null}
+        badge={plantsLoaded ? (() => {
+          const filterCount = getActiveFilterCount(filters);
+          const hasFilters = filterCount > 0 || !!searchQuery;
+          if (hasFilters) {
+            return `${filteredPlants.length} / ${plants.length}`;
+          }
+          const sortCount = getActiveSortCount(plants, sort);
+          if (sortCount !== null && sortCount < plants.length) {
+            return `${sortCount} / ${plants.length}`;
+          }
+          return plants.length;
+        })() : null}
         showHome={true}
         tabs={tabs}
         showSearch={!isPlantPage && !isAboutPage}

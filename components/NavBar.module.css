@@ -78,6 +78,7 @@
   font-size: 0.8rem;
   font-weight: 600;
   flex-shrink: 0;
+  white-space: nowrap;
 }
 
 /* Spacer pushes tabs and actions apart */

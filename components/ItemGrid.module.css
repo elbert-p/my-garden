@@ -82,3 +82,27 @@
   font-size: 0.8rem;
   font-weight: 600;
 }
+
+/* ============ GROUPED (with sort markers) ============ */
+
+.grouped {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.section {
+  /* each group is marker + grid */
+  min-width: 0;
+}
+
+.marker {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #5f6368;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #e8eaed;
+}

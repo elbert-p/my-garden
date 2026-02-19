@@ -4,6 +4,7 @@ import { useParams, useRouter, usePathname } from 'next/navigation';
 import { FiPlus, FiEdit, FiTrash2, FiShare2 } from 'react-icons/fi';
 import { GardenProvider, useGarden } from '@/context/GardenContext';
 import { uploadImage, isDataUrl } from '@/lib/imageStorage';
+import { getActiveFilterCount, getActiveSortCount } from '@/components/SortFilterControls';
 import NavBar from '@/components/NavBar';
 import SortFilterControls from '@/components/SortFilterControls';
 import Modal, { ConfirmModal } from '@/components/Modal';
@@ -21,6 +22,7 @@ function GardenLayoutContent({ children }) {
   const {
     garden,
     plants,
+    filteredPlants,
     isLoading,
     plantsLoaded,
     isInitialized,
@@ -159,7 +161,18 @@ function GardenLayoutContent({ children }) {
     <>
       <NavBar
         title={garden?.name || ''}
-        badge={plantsLoaded ? plants.length : null}
+        badge={plantsLoaded ? (() => {
+          const filterCount = getActiveFilterCount(filters);
+          const hasFilters = filterCount > 0 || !!searchQuery;
+          if (hasFilters) {
+            return `${filteredPlants.length} / ${plants.length}`;
+          }
+          const sortCount = getActiveSortCount(plants, sort);
+          if (sortCount !== null && sortCount < plants.length) {
+            return `${sortCount} / ${plants.length}`;
+          }
+          return plants.length;
+        })() : null}
         showHome={true}
         tabs={tabs}
         showSearch={!isPlantPage && !isAboutPage}

@@ -2,7 +2,10 @@
 import { useState, useRef, useEffect } from 'react';
 import { FiFilter, FiArrowUp, FiArrowDown, FiX, FiCheck } from 'react-icons/fi';
 import { TbArrowsSort } from 'react-icons/tb';
+import { BLOOM_OPTIONS, SUN_OPTIONS, MOISTURE_OPTIONS, NATIVE_OPTIONS } from '@/lib/plantConstants';
 import styles from './SortFilterControls.module.css';
+
+// ============ CONSTANTS ============
 
 const SORT_OPTIONS = [
   { key: 'name', label: 'Name' },
@@ -14,26 +17,10 @@ const SORT_OPTIONS = [
 ];
 
 const MULTI_FILTER_CATEGORIES = [
-  {
-    key: 'bloomTime',
-    label: 'Bloom Time',
-    options: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
-  },
-  {
-    key: 'sunlight',
-    label: 'Sunlight',
-    options: ['Sun', 'Part Sun', 'Part Shade', 'Shade'],
-  },
-  {
-    key: 'moisture',
-    label: 'Moisture',
-    options: ['Wet', 'Medium', 'Dry'],
-  },
-  {
-    key: 'nativeRange',
-    label: 'Native Range',
-    options: ['Northern US', 'Northeastern US', 'Southern US', 'Southeastern US', 'Eastern US', 'East Coast US', 'Mid-Atlantic US', 'Western US', 'Midwestern US', 'Central US', 'US Native', 'MA Native', 'Cultivar', 'Nativar', 'Europe', 'Asia', 'South America', 'Africa', 'Other'],
-  },
+  { key: 'bloomTime', label: 'Bloom Time', options: BLOOM_OPTIONS },
+  { key: 'sunlight', label: 'Sunlight', options: SUN_OPTIONS },
+  { key: 'moisture', label: 'Moisture', options: MOISTURE_OPTIONS },
+  { key: 'nativeRange', label: 'Native Range', options: NATIVE_OPTIONS },
 ];
 
 const HEIGHT_OPS = [
@@ -48,20 +35,56 @@ const DATE_OPS = [
   { value: 'eq', label: 'Equal to' },
 ];
 
+// ============ COMBO RANKING (sunlight / moisture) ============
+
+function buildComboRanks(values) {
+  const ranks = new Map();
+  let rank = 0;
+
+  function expand(included, startIdx) {
+    const key = values.filter((_, i) => included[i]).join(', ');
+    if (!ranks.has(key)) ranks.set(key, rank++);
+    for (let i = startIdx; i < values.length; i++) {
+      if (included[i]) continue;
+      included[i] = true;
+      expand(included, i + 1);
+      included[i] = false;
+    }
+  }
+
+  for (let m = 0; m < values.length; m++) {
+    const inc = new Array(values.length).fill(false);
+    inc[m] = true;
+    expand(inc, m + 1);
+  }
+
+  return ranks;
+}
+
+const SUN_RANKS = buildComboRanks(SUN_OPTIONS);
+const MOISTURE_RANKS = buildComboRanks(MOISTURE_OPTIONS);
+
+function getComboRank(vals, rankMap, orderedList) {
+  if (!vals?.length) return 999;
+  const key = orderedList.filter(v => vals.includes(v)).join(', ');
+  return rankMap.get(key) ?? 999;
+}
+
+function comboLabel(vals, orderedList) {
+  if (!vals?.length) return '';
+  return orderedList.filter(v => vals.includes(v)).join(', ');
+}
+
 // ============ SORT LOGIC ============
 
 const BLOOM_ORDER = { 'Feb': 2, 'Mar': 3, 'Apr': 4, 'May': 5, 'Jun': 6, 'Jul': 7, 'Aug': 8, 'Sep': 9, 'Oct': 10, 'Nov': 11 };
-const SUN_ORDER = { 'Sun': 4, 'Part Sun': 3, 'Part Shade': 2, 'Shade': 1 };
-const MOISTURE_ORDER = { 'Dry': 1, 'Medium': 2, 'Wet': 3 };
 
 function parseHeightRange(h) {
   if (!h) return null;
   const s = h.toLowerCase();
   let lo = null, hi = null;
-
   const ftMatch = s.match(/([\d.]+)\s*(?:-\s*([\d.]+))?\s*ft/);
   const inMatch = s.match(/([\d.]+)\s*(?:-\s*([\d.]+))?\s*in/);
-
   if (ftMatch) {
     lo = parseFloat(ftMatch[1]);
     hi = ftMatch[2] ? parseFloat(ftMatch[2]) : lo;
@@ -70,15 +93,9 @@ function parseHeightRange(h) {
     hi = inMatch[2] ? parseFloat(inMatch[2]) / 12 : lo;
   } else {
     const bare = s.match(/([\d.]+)\s*-\s*([\d.]+)/);
-    if (bare) {
-      lo = parseFloat(bare[1]);
-      hi = parseFloat(bare[2]);
-    } else {
-      const single = parseFloat(s);
-      if (!isNaN(single)) { lo = single; hi = single; }
-    }
+    if (bare) { lo = parseFloat(bare[1]); hi = parseFloat(bare[2]); }
+    else { const single = parseFloat(s); if (!isNaN(single)) { lo = single; hi = single; } }
   }
-
   if (lo == null) return null;
   return { lo, hi, avg: (lo + hi) / 2 };
 }
@@ -91,16 +108,6 @@ function parseHeight(h) {
 function getEarliestBloom(bloomArr) {
   if (!bloomArr?.length) return 99;
   return Math.min(...bloomArr.map(b => BLOOM_ORDER[b] ?? 99));
-}
-
-function getMaxSun(sunArr) {
-  if (!sunArr?.length) return 0;
-  return Math.max(...sunArr.map(s => SUN_ORDER[s] ?? 0));
-}
-
-function getMaxMoisture(moistArr) {
-  if (!moistArr?.length) return 0;
-  return Math.max(...moistArr.map(m => MOISTURE_ORDER[m] ?? 0));
 }
 
 function comparePlants(a, b, sortKey) {
@@ -129,9 +136,9 @@ function comparePlants(a, b, sortKey) {
     case 'bloomTime':
       return getEarliestBloom(a.bloomTime) - getEarliestBloom(b.bloomTime);
     case 'sunlight':
-      return getMaxSun(a.sunlight) - getMaxSun(b.sunlight);
+      return getComboRank(a.sunlight, SUN_RANKS, SUN_OPTIONS) - getComboRank(b.sunlight, SUN_RANKS, SUN_OPTIONS);
     case 'moisture':
-      return getMaxMoisture(a.moisture) - getMaxMoisture(b.moisture);
+      return getComboRank(a.moisture, MOISTURE_RANKS, MOISTURE_OPTIONS) - getComboRank(b.moisture, MOISTURE_RANKS, MOISTURE_OPTIONS);
     default:
       return 0;
   }
@@ -166,33 +173,34 @@ function matchesDateFilter(plant, dateFilter) {
 
 // ============ PUBLIC HELPERS ============
 
+function isMissingField(plant, sortKey) {
+  switch (sortKey) {
+    case 'name': return !plant.commonName && !plant.scientificName;
+    case 'datePlanted': return !plant.datePlanted;
+    case 'height': return parseHeight(plant.height) == null;
+    case 'bloomTime': return !plant.bloomTime?.length;
+    case 'sunlight': return !plant.sunlight?.length;
+    case 'moisture': return !plant.moisture?.length;
+    default: return false;
+  }
+}
+
 export function applySortAndFilter(plants, sort, filters) {
   let result = [...plants];
 
-  // Multi-select filters
   for (const [key, values] of Object.entries(filters)) {
     if (key === '_height' || key === '_date') continue;
     if (!values?.length) continue;
     result = result.filter(p => {
       const plantVal = p[key];
-      if (Array.isArray(plantVal)) {
-        return values.some(v => plantVal.includes(v));
-      }
+      if (Array.isArray(plantVal)) return values.some(v => plantVal.includes(v));
       return values.includes(plantVal);
     });
   }
 
-  // Height filter
-  if (filters._height) {
-    result = result.filter(p => matchesHeightFilter(p, filters._height));
-  }
+  if (filters._height) result = result.filter(p => matchesHeightFilter(p, filters._height));
+  if (filters._date) result = result.filter(p => matchesDateFilter(p, filters._date));
 
-  // Date filter
-  if (filters._date) {
-    result = result.filter(p => matchesDateFilter(p, filters._date));
-  }
-
-  // Sort — plants missing the sort field always go to the bottom
   if (sort.key) {
     result.sort((a, b) => {
       const aNull = isMissingField(a, sort.key);
@@ -206,25 +214,6 @@ export function applySortAndFilter(plants, sort, filters) {
   }
 
   return result;
-}
-
-function isMissingField(plant, sortKey) {
-  switch (sortKey) {
-    case 'name':
-      return !plant.commonName && !plant.scientificName;
-    case 'datePlanted':
-      return !plant.datePlanted;
-    case 'height':
-      return parseHeight(plant.height) == null;
-    case 'bloomTime':
-      return !plant.bloomTime?.length;
-    case 'sunlight':
-      return !plant.sunlight?.length;
-    case 'moisture':
-      return !plant.moisture?.length;
-    default:
-      return false;
-  }
 }
 
 export function isMissingSortField(plant, sort) {
@@ -242,6 +231,81 @@ export function getActiveFilterCount(filters) {
   return count;
 }
 
+// ============ SORT GROUPS (markers) ============
+
+const BLOOM_MONTH_NAMES = { 2: 'February', 3: 'March', 4: 'April', 5: 'May', 6: 'June', 7: 'July', 8: 'August', 9: 'September', 10: 'October', 11: 'November' };
+const MONTH_ABBR = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+function groupByLabel(plants, labelFn) {
+  const groups = [];
+  let curLabel = null, curItems = [];
+  for (const p of plants) {
+    const label = labelFn(p);
+    if (label !== curLabel) {
+      if (curItems.length > 0) groups.push({ label: curLabel, items: curItems });
+      curLabel = label;
+      curItems = [p];
+    } else {
+      curItems.push(p);
+    }
+  }
+  if (curItems.length > 0) groups.push({ label: curLabel, items: curItems });
+  return groups;
+}
+
+function groupByDate(plants) {
+  if (plants.length === 0) return [];
+  const monthSet = new Set();
+  for (const p of plants) {
+    const [y, m] = p.datePlanted.split('-');
+    monthSet.add(`${y}-${m}`);
+  }
+  const useMonths = monthSet.size > 1 && plants.length / monthSet.size >= 2;
+
+  return groupByLabel(plants, (p) => {
+    const [y, m] = p.datePlanted.split('-');
+    return useMonths ? `${MONTH_ABBR[parseInt(m)]} ${y}` : y;
+  });
+}
+
+export function getSortGroups(sortedPlants, sort) {
+  if (!sort.key || sort.key === 'name') return null;
+
+  const withField = sortedPlants.filter(p => !isMissingField(p, sort.key));
+  const withoutField = sortedPlants.filter(p => isMissingField(p, sort.key));
+
+  let groups;
+  if (sort.key === 'datePlanted') {
+    groups = groupByDate(withField);
+  } else {
+    const labelFn = {
+      bloomTime: (p) => BLOOM_MONTH_NAMES[getEarliestBloom(p.bloomTime)] || 'Unknown',
+      height: (p) => {
+        const h = parseHeight(p.height);
+        if (h == null) return 'Unknown';
+        const lo = Math.floor(h);
+        return `${lo}\u2013${lo + 1} ft`;
+      },
+      sunlight: (p) => comboLabel(p.sunlight, SUN_OPTIONS),
+      moisture: (p) => comboLabel(p.moisture, MOISTURE_OPTIONS),
+    }[sort.key];
+
+    if (!labelFn) return null;
+    groups = groupByLabel(withField, labelFn);
+  }
+
+  if (withoutField.length > 0) {
+    groups.push({ label: 'Not set', items: withoutField });
+  }
+
+  return groups.length > 0 ? groups : null;
+}
+
+export function getActiveSortCount(plants, sort) {
+  if (!sort.key || sort.key === 'name') return null;
+  return plants.filter(p => !isMissingField(p, sort.key)).length;
+}
+
 // ============ COMPONENT ============
 
 export default function SortFilterControls({ sort, onSortChange, filters, onFiltersChange }) {
@@ -253,7 +317,6 @@ export default function SortFilterControls({ sort, onSortChange, filters, onFilt
 
   const filterCount = getActiveFilterCount(filters);
 
-  // Close on outside click
   useEffect(() => {
     const handle = (e) => {
       if (sortRef.current && !sortRef.current.contains(e.target)) setSortOpen(false);
@@ -263,7 +326,6 @@ export default function SortFilterControls({ sort, onSortChange, filters, onFilt
     return () => document.removeEventListener('mousedown', handle);
   }, []);
 
-  // Close on escape
   useEffect(() => {
     const handle = (e) => {
       if (e.key === 'Escape') { setSortOpen(false); setFilterOpen(false); }

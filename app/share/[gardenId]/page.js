@@ -1,6 +1,6 @@
 'use client';
 import { useSharedGarden } from '@/context/SharedGardenContext';
-import { isMissingSortField, getActiveFilterCount } from '@/components/SortFilterControls';
+import { isMissingSortField, getActiveFilterCount, getSortGroups } from '@/components/SortFilterControls';
 import ItemGrid from '@/components/ItemGrid';
 import styles from './page.module.css';
 
@@ -9,6 +9,7 @@ export default function SharedGardenPage() {
 
   const filterCount = getActiveFilterCount(filters);
   const hasActiveFilters = !!(searchQuery || filterCount > 0 || sort.key);
+  const sortGroups = getSortGroups(filteredPlants, sort);
 
   const emptyMessage = hasActiveFilters
     ? 'No plants match your current filters.'
@@ -18,6 +19,7 @@ export default function SharedGardenPage() {
     <div className={styles.container}>
       <ItemGrid
         items={filteredPlants}
+        sortGroups={sortGroups}
         emptyMessage={emptyMessage}
         linkPrefix={`/share/${gardenId}/plant`}
         getItemId={(p) => p.id}

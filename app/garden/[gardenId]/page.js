@@ -1,6 +1,6 @@
 'use client';
 import { useGarden } from '@/context/GardenContext';
-import { isMissingSortField, getActiveFilterCount } from '@/components/SortFilterControls';
+import { isMissingSortField, getActiveFilterCount, getSortGroups } from '@/components/SortFilterControls';
 import ItemGrid from '@/components/ItemGrid';
 import styles from './page.module.css';
 
@@ -8,6 +8,7 @@ export default function GardenPage() {
   const { gardenId, filteredPlants, plants, searchQuery, sort, filters } = useGarden();
 
   const hasActiveFilters = !!(getActiveFilterCount(filters) > 0);
+  const sortGroups = getSortGroups(filteredPlants, sort);
 
   const emptyMessage = searchQuery
     ? 'No plants match your current search.'
@@ -19,6 +20,7 @@ export default function GardenPage() {
     <div className={styles.container}>
       <ItemGrid
         items={filteredPlants}
+        sortGroups={sortGroups}
         emptyMessage={emptyMessage}
         linkPrefix={`/garden/${gardenId}/plant`}
         getItemId={(p) => p.id}
