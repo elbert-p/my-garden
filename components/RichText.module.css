@@ -34,6 +34,6 @@
   display: list-item;
 }
 
-.list li:last-child {
+.list:last-child {
   margin-bottom: 0;
 }

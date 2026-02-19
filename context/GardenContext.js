@@ -2,7 +2,7 @@
 import { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { useAuth } from './AuthContext';
-import { getGarden, updateGarden, updateGardenAbout, deleteGarden, createPlant, getPlants } from '@/lib/dataService';
+import { getGarden, updateGarden, updateGardenAbout, updateGardenTodo, deleteGarden, createPlant, getPlants } from '@/lib/dataService';
 import { applySortAndFilter } from '@/components/SortFilterControls';
 
 const GardenContext = createContext();
@@ -62,6 +62,12 @@ export function GardenProvider({ children }) {
 
   const handleUpdateGardenAbout = useCallback(async (aboutBlocks) => {
     const updated = await updateGardenAbout(gardenId, aboutBlocks, user?.id);
+    setGarden(updated);
+    return updated;
+  }, [gardenId, user?.id]);
+
+  const handleUpdateGardenTodo = useCallback(async (todoContent) => {
+    const updated = await updateGardenTodo(gardenId, todoContent, user?.id);
     setGarden(updated);
     return updated;
   }, [gardenId, user?.id]);
@@ -127,6 +133,7 @@ export function GardenProvider({ children }) {
     // Actions
     updateGarden: handleUpdateGarden,
     updateGardenAbout: handleUpdateGardenAbout,
+    updateGardenTodo: handleUpdateGardenTodo,
     deleteGarden: handleDeleteGarden,
     createPlant: handleCreatePlant,
     updatePlantInContext: handleUpdatePlantInContext,

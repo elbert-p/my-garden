@@ -1,0 +1,72 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+}
+
+.headerActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editIconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #f8f9fa;
+  color: #5f6368;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.editIconButton:hover {
+  background-color: #e8eaed;
+  color: #202124;
+}
+
+.page {
+  background-color: #f8f9fa;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.25rem 1.5rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.pageClickable {
+  cursor: pointer;
+}
+
+.pageClickable:hover {
+  background-color: #f1f3f4;
+}
+
+.pageActive {
+  background-color: #fff;
+  border-color: #e8e8e8;
+  cursor: default;
+}
+
+.pageActive:hover {
+  background-color: #fff;
+}
+
+.empty {
+  color: #9aa0a6;
+  font-style: italic;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+  .page {
+    padding: 1rem 1.25rem;
+  }
+}

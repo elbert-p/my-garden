@@ -60,15 +60,18 @@ function GardenLayoutContent({ children }) {
 
   // Determine active tab and content width
   const isAboutPage = pathname.endsWith('/about');
+  const isTodoPage = pathname.endsWith('/todo');
   const isPlantPage = pathname.includes('/plant/');
 
   // Plant pages use narrower content width
-  const contentWidth = (isPlantPage || isAboutPage) ? 'medium' : 'large';
+  const isSubPage = isPlantPage || isAboutPage || isTodoPage;
+  const contentWidth = isSubPage ? 'medium' : 'large';
 
-  // Plants tab is active on both garden list and plant detail pages
+  // Tabs shown on both garden and plant page
   const tabs = [
-    { label: 'Plants', href: `/garden/${gardenId}`, active: !isAboutPage },
+    { label: 'Plants', href: `/garden/${gardenId}`, active: !isAboutPage && !isTodoPage },
     { label: 'About', href: `/garden/${gardenId}/about`, active: isAboutPage },
+    { label: 'To-Do', href: `/garden/${gardenId}/todo`, active: isTodoPage },
   ];
 
   // Menu items
@@ -175,11 +178,11 @@ function GardenLayoutContent({ children }) {
         })() : null}
         showHome={true}
         tabs={tabs}
-        showSearch={!isPlantPage && !isAboutPage}
+        showSearch={!isSubPage}
         searchValue={searchQuery}
         onSearchChange={setSearchQuery}
         searchPlaceholder="Search plants..."
-        extraActions={!isPlantPage && !isAboutPage ? (
+        extraActions={!isSubPage ? (
           <SortFilterControls
             sort={sort}
             onSortChange={setSort}
@@ -191,7 +194,7 @@ function GardenLayoutContent({ children }) {
         contentWidth={contentWidth}
       />
 
-      {!garden || (!plantsLoaded && !isPlantPage) ? (
+      {!garden || (!plantsLoaded && !isSubPage) ? (
         <div className={styles.container}>
           <p className={styles.loading}>Loading garden...</p>
         </div>

@@ -7,8 +7,9 @@
 .empty {
   grid-column: 1 / -1;
   text-align: center;
-  color: #888;
+  color: #5f6368;
   font-style: italic;
+  font-size: large;
   margin-top: 4rem;
 }
 

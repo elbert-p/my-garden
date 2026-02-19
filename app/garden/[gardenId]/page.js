@@ -3,6 +3,7 @@ import { useGarden } from '@/context/GardenContext';
 import { isMissingSortField, getActiveFilterCount, getSortGroups } from '@/components/SortFilterControls';
 import ItemGrid from '@/components/ItemGrid';
 import styles from './page.module.css';
+import { FiMenu } from 'react-icons/fi';
 
 export default function GardenPage() {
   const { gardenId, filteredPlants, plants, searchQuery, sort, filters } = useGarden();
@@ -14,8 +15,7 @@ export default function GardenPage() {
     ? 'No plants match your current search.'
     : hasActiveFilters
     ? 'No plants match your current filters.'
-    : 'No plants in this garden yet. Click the menu to add one!';
-
+    : <>No plants in this garden yet. Click the menu <FiMenu size={20} style={{ verticalAlign: 'text-bottom', display: 'inline-block', margin: '0 2px' }} /> to add one!</>;
   return (
     <div className={styles.container}>
       <ItemGrid
