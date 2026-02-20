@@ -2,7 +2,7 @@
 import { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { useAuth } from './AuthContext';
-import { getGarden, updateGarden, updateGardenAbout, updateGardenTodo, deleteGarden, createPlant, getPlants } from '@/lib/dataService';
+import { getGarden, updateGarden, updateGardenAbout, updateGardenTodo, updateGardenCustomization, deleteGarden, createPlant, getPlants } from '@/lib/dataService';
 import { applySortAndFilter } from '@/components/SortFilterControls';
 
 const GardenContext = createContext();
@@ -19,6 +19,7 @@ export function GardenProvider({ children }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [sort, setSort] = useState({ key: null, dir: 'asc' });
   const [filters, setFilters] = useState({});
+  const [previewCustomization, setPreviewCustomization] = useState(null);
   
   // Modal states
   const [showAddPlantModal, setShowAddPlantModal] = useState(false);
@@ -26,6 +27,7 @@ export function GardenProvider({ children }) {
   const [showDeleteGardenModal, setShowDeleteGardenModal] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
   const [showSignInModal, setShowSignInModal] = useState(false);
+  const [showCustomizeModal, setShowCustomizeModal] = useState(false);
 
   // Load garden and plants data in two phases
   useEffect(() => {
@@ -68,6 +70,12 @@ export function GardenProvider({ children }) {
 
   const handleUpdateGardenTodo = useCallback(async (todoContent) => {
     const updated = await updateGardenTodo(gardenId, todoContent, user?.id);
+    setGarden(updated);
+    return updated;
+  }, [gardenId, user?.id]);
+
+  const handleUpdateGardenCustomization = useCallback(async (customization) => {
+    const updated = await updateGardenCustomization(gardenId, customization, user?.id);
     setGarden(updated);
     return updated;
   }, [gardenId, user?.id]);
@@ -134,6 +142,7 @@ export function GardenProvider({ children }) {
     updateGarden: handleUpdateGarden,
     updateGardenAbout: handleUpdateGardenAbout,
     updateGardenTodo: handleUpdateGardenTodo,
+    updateGardenCustomization: handleUpdateGardenCustomization,
     deleteGarden: handleDeleteGarden,
     createPlant: handleCreatePlant,
     updatePlantInContext: handleUpdatePlantInContext,
@@ -151,6 +160,10 @@ export function GardenProvider({ children }) {
     setShowShareModal,
     showSignInModal,
     setShowSignInModal,
+    showCustomizeModal,
+    setShowCustomizeModal,
+    previewCustomization,
+    setPreviewCustomization,
   };
 
   return (

@@ -1,7 +1,7 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, useRouter, usePathname } from 'next/navigation';
-import { FiPlus, FiEdit, FiTrash2, FiShare2 } from 'react-icons/fi';
+import { FiPlus, FiEdit, FiTrash2, FiShare2, FiSliders } from 'react-icons/fi';
 import { GardenProvider, useGarden } from '@/context/GardenContext';
 import { uploadImage, isDataUrl } from '@/lib/imageStorage';
 import { getActiveFilterCount, getActiveSortCount } from '@/components/SortFilterControls';
@@ -13,6 +13,28 @@ import ImageUpload from '@/components/ImageUpload';
 import Button from '@/components/Button';
 import GoogleSignInButton from '@/components/GoogleSignInButton';
 import styles from './layout.module.css';
+
+const DEFAULT_CUSTOMIZATION = { columns: 4, bgColor: '#f4f4f9' };
+
+const SUGGESTED_COLORS = [
+  '#f4f4f9',
+  '#f0f7f0',
+  '#f5f0eb',
+  '#eef2f7',
+  '#faf5f0',
+  '#f0f0f0',
+  '#fff8f0',
+  '#f5f5dc',
+];
+
+const hexToRgb = (hex) => {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return `${r}, ${g}, ${b}`;
+};
+
+const clampColumns = (val) => Math.min(6, Math.max(1, parseInt(val) || DEFAULT_CUSTOMIZATION.columns));
 
 function GardenLayoutContent({ children }) {
   const { gardenId } = useParams();
@@ -37,6 +59,7 @@ function GardenLayoutContent({ children }) {
     deleteGarden,
     createPlant,
     handleShare,
+    updateGardenCustomization,
     showAddPlantModal,
     setShowAddPlantModal,
     showEditGardenModal,
@@ -47,6 +70,10 @@ function GardenLayoutContent({ children }) {
     setShowShareModal,
     showSignInModal,
     setShowSignInModal,
+    showCustomizeModal,
+    setShowCustomizeModal,
+    previewCustomization,
+    setPreviewCustomization,
   } = useGarden();
 
   // Form states
@@ -58,26 +85,53 @@ function GardenLayoutContent({ children }) {
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
 
-  // Determine active tab and content width
+  // Customize form state — columns is a string so user can clear & retype
+  const [customizeColumnsStr, setCustomizeColumnsStr] = useState('');
+  const [customizeBgColor, setCustomizeBgColor] = useState(DEFAULT_CUSTOMIZATION.bgColor);
+
+  // Page state
   const isAboutPage = pathname.endsWith('/about');
   const isTodoPage = pathname.endsWith('/todo');
   const isPlantPage = pathname.includes('/plant/');
-
-  // Plant pages use narrower content width
   const isSubPage = isPlantPage || isAboutPage || isTodoPage;
   const contentWidth = isSubPage ? 'medium' : 'large';
 
-  // Tabs shown on both garden and plant page
+  // Saved customization (with defaults)
+  const customization = { ...DEFAULT_CUSTOMIZATION, ...garden?.customization };
+
+  // Numeric value for preview: only update grid when input is a valid number
+  const previewColumns = (() => {
+    const n = parseInt(customizeColumnsStr);
+    return (!isNaN(n) && n >= 1 && n <= 6) ? n : null;
+  })();
+
+  // Sync form state to previewCustomization in context while modal is open
+  useEffect(() => {
+    if (showCustomizeModal) {
+      setPreviewCustomization({
+        columns: previewColumns ?? customization.columns,
+        bgColor: customizeBgColor,
+      });
+    }
+  }, [showCustomizeModal, previewColumns, customizeBgColor, setPreviewCustomization, customization.columns]);
+
+  // Applied values: preview when modal open, otherwise saved
+  const appliedBgColor = previewCustomization?.bgColor ?? customization.bgColor;
+
+  const isCustomDefault =
+    clampColumns(customizeColumnsStr) === DEFAULT_CUSTOMIZATION.columns &&
+    customizeBgColor === DEFAULT_CUSTOMIZATION.bgColor;
+
   const tabs = [
     { label: 'Plants', href: `/garden/${gardenId}`, active: !isAboutPage && !isTodoPage },
     { label: 'About', href: `/garden/${gardenId}/about`, active: isAboutPage },
     { label: 'To-Do', href: `/garden/${gardenId}/todo`, active: isTodoPage },
   ];
 
-  // Menu items
   const menuItems = [
     { icon: <FiPlus size={16} />, label: 'Add Plant', onClick: () => setShowAddPlantModal(true), variant: 'success' },
-    { icon: <FiEdit size={16} />, label: 'Edit Garden', onClick: () => openEditModal() },
+    { icon: <FiEdit size={16} />, label: 'Edit Details', onClick: () => openEditModal() },
+    { icon: <FiSliders size={16} />, label: 'Customize', onClick: () => openCustomizeModal() },
     { icon: <FiShare2 size={16} />, label: 'Share Garden', onClick: handleShare },
     { divider: true },
     { icon: <FiTrash2 size={16} />, label: 'Delete Garden', onClick: () => setShowDeleteGardenModal(true), danger: true },
@@ -90,6 +144,17 @@ function GardenLayoutContent({ children }) {
       setShowEditGardenModal(true);
       setError('');
     }
+  };
+
+  const openCustomizeModal = () => {
+    setCustomizeColumnsStr(String(customization.columns));
+    setCustomizeBgColor(customization.bgColor);
+    setShowCustomizeModal(true);
+  };
+
+  const closeCustomizeModal = () => {
+    setShowCustomizeModal(false);
+    setPreviewCustomization(null);
   };
 
   const handleCloseAddModal = () => {
@@ -106,12 +171,10 @@ function GardenLayoutContent({ children }) {
       return;
     }
     try {
-      // Upload image to storage if user is signed in
       let imageUrl = newPlantImage;
       if (imageUrl && user?.id) {
         imageUrl = await uploadImage(imageUrl, user.id, 'plants');
       }
-
       const newPlant = await createPlant({
         commonName: newPlantName.trim(),
         mainImage: imageUrl,
@@ -133,16 +196,11 @@ function GardenLayoutContent({ children }) {
       return;
     }
     try {
-      // Upload new garden image to storage if it's a fresh data URL
       let imageUrl = editImage;
       if (imageUrl && isDataUrl(imageUrl) && user?.id) {
         imageUrl = await uploadImage(imageUrl, user.id, 'gardens');
       }
-
-      await updateGarden({
-        name: editName.trim(),
-        image: imageUrl || garden.image,
-      });
+      await updateGarden({ name: editName.trim(), image: imageUrl || garden.image });
       setShowEditGardenModal(false);
       setError('');
     } catch (e) {
@@ -150,8 +208,27 @@ function GardenLayoutContent({ children }) {
     }
   };
 
-  const handleDeleteGarden = async () => {
-    await deleteGarden();
+  const handleDeleteGarden = async () => { await deleteGarden(); };
+
+  const handleSaveCustomization = async () => {
+    const clamped = clampColumns(customizeColumnsStr);
+    setCustomizeColumnsStr(String(clamped));
+    try {
+      await updateGardenCustomization({ columns: clamped, bgColor: customizeBgColor });
+      setShowCustomizeModal(false);
+      setPreviewCustomization(null);
+    } catch (e) {
+      console.error('Failed to save customization:', e);
+    }
+  };
+
+  const handleColumnsBlur = () => {
+    setCustomizeColumnsStr(String(clampColumns(customizeColumnsStr)));
+  };
+
+  const resetCustomization = () => {
+    setCustomizeColumnsStr(String(DEFAULT_CUSTOMIZATION.columns));
+    setCustomizeBgColor(DEFAULT_CUSTOMIZATION.bgColor);
   };
 
   const copyShareLink = async () => {
@@ -167,13 +244,9 @@ function GardenLayoutContent({ children }) {
         badge={plantsLoaded ? (() => {
           const filterCount = getActiveFilterCount(filters);
           const hasFilters = filterCount > 0 || !!searchQuery;
-          if (hasFilters) {
-            return `${filteredPlants.length} / ${plants.length}`;
-          }
+          if (hasFilters) return `${filteredPlants.length} / ${plants.length}`;
           const sortCount = getActiveSortCount(plants, sort);
-          if (sortCount !== null && sortCount < plants.length) {
-            return `${sortCount} / ${plants.length}`;
-          }
+          if (sortCount !== null && sortCount < plants.length) return `${sortCount} / ${plants.length}`;
           return plants.length;
         })() : null}
         showHome={true}
@@ -183,12 +256,7 @@ function GardenLayoutContent({ children }) {
         onSearchChange={setSearchQuery}
         searchPlaceholder="Search plants..."
         extraActions={!isSubPage ? (
-          <SortFilterControls
-            sort={sort}
-            onSortChange={setSort}
-            filters={filters}
-            onFiltersChange={setFilters}
-          />
+          <SortFilterControls sort={sort} onSortChange={setSort} filters={filters} onFiltersChange={setFilters} />
         ) : null}
         menuItems={menuItems}
         contentWidth={contentWidth}
@@ -199,7 +267,9 @@ function GardenLayoutContent({ children }) {
           <p className={styles.loading}>Loading garden...</p>
         </div>
       ) : (
-        children
+        <div className={styles.gardenBackground} style={{ backgroundColor: appliedBgColor }}>
+          {children}
+        </div>
       )}
 
       {/* Add Plant Modal */}
@@ -222,6 +292,69 @@ function GardenLayoutContent({ children }) {
         <div className={styles.modalButtons}>
           <Button variant="secondary" onClick={() => { setShowEditGardenModal(false); setError(''); }}>Cancel</Button>
           <Button onClick={handleEditGarden}>Save</Button>
+        </div>
+      </Modal>
+
+      {/* Customize Garden Modal */}
+      <Modal isOpen={showCustomizeModal} onClose={closeCustomizeModal} title="Customize Garden" size="medium">
+        <div className={styles.customizeField}>
+          <label className={styles.customizeLabel}>Number of Columns</label>
+          <div className={styles.columnsRow}>
+            <input
+              type="number"
+              min={1}
+              max={6}
+              step={1}
+              value={customizeColumnsStr}
+              onChange={e => setCustomizeColumnsStr(e.target.value)}
+              onBlur={handleColumnsBlur}
+              className={styles.columnsInput}
+            />
+            <span className={styles.columnsText}>columns</span>
+          </div>
+        </div>
+
+        <div className={`${styles.customizeField} ${styles.customizeFieldSpaced}`}>
+          <label className={styles.customizeLabel}>Background Color</label>
+          <div className={styles.colorRow}>
+            <label className={styles.colorSwatch} style={{ backgroundColor: customizeBgColor }}>
+              <input
+                type="color"
+                value={customizeBgColor}
+                onChange={e => setCustomizeBgColor(e.target.value)}
+                className={styles.colorInputHidden}
+              />
+            </label>
+            <div className={styles.colorInfo}>
+              <span className={styles.colorHex}>{customizeBgColor}</span>
+              <span className={styles.colorRgb}>rgb({hexToRgb(customizeBgColor)})</span>
+            </div>
+          </div>
+          <div className={styles.suggestedColors}>
+            {SUGGESTED_COLORS.map(color => (
+              <button
+                key={color}
+                className={`${styles.colorOption} ${customizeBgColor.toLowerCase() === color.toLowerCase() ? styles.colorOptionActive : ''}`}
+                style={{ backgroundColor: color }}
+                onClick={() => setCustomizeBgColor(color)}
+                title={color}
+                type="button"
+              />
+            ))}
+          </div>
+        </div>
+
+        <button
+          onClick={resetCustomization}
+          className={`${styles.resetButton} ${isCustomDefault ? styles.resetButtonDisabled : ''}`}
+          type="button"
+          disabled={isCustomDefault}
+        >
+          Reset to Defaults
+        </button>
+        <div className={styles.modalButtons}>
+          <Button variant="secondary" onClick={closeCustomizeModal}>Cancel</Button>
+          <Button onClick={handleSaveCustomization}>Save</Button>
         </div>
       </Modal>
 
@@ -264,9 +397,7 @@ function GardenLayoutContent({ children }) {
 export default function GardenLayout({ children }) {
   return (
     <GardenProvider>
-      <GardenLayoutContent>
-        {children}
-      </GardenLayoutContent>
+      <GardenLayoutContent>{children}</GardenLayoutContent>
     </GardenProvider>
   );
 }

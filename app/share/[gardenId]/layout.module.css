@@ -20,3 +20,8 @@
   margin-top: 1rem;
   color: #1a73e8;
 }
+
+.gardenBackground {
+  min-height: calc(100vh - 55px);
+  transition: background-color 0.3s ease;
+}

@@ -7,6 +7,8 @@ import NavBar from '@/components/NavBar';
 import SortFilterControls from '@/components/SortFilterControls';
 import styles from './layout.module.css';
 
+const DEFAULT_CUSTOMIZATION = { columns: 4, bgColor: '#f4f4f9' };
+
 function SharedGardenLayoutContent({ children }) {
   const { gardenId } = useParams();
   const pathname = usePathname();
@@ -25,6 +27,11 @@ function SharedGardenLayoutContent({ children }) {
     { label: 'Plants', href: `/share/${gardenId}`, active: !isAboutPage },
     { label: 'About', href: `/share/${gardenId}/about`, active: isAboutPage },
   ];
+
+  const customization = {
+    ...DEFAULT_CUSTOMIZATION,
+    ...garden?.customization,
+  };
 
   // Error state - show after garden loading completes
   if (!isLoading && error) {
@@ -72,13 +79,18 @@ function SharedGardenLayoutContent({ children }) {
         sharedBy={owner}
         contentWidth={contentWidth}
       />
-      {!garden || (!plantsLoaded && !isPlantPage) ? (
-        <div className={styles.container}>
-          <p className={styles.loading}>Loading...</p>
-        </div>
-      ) : (
-        children
-      )}
+        {!garden || (!plantsLoaded && !isPlantPage) ? (
+          <div className={styles.container}>
+            <p className={styles.loading}>Loading...</p>
+          </div>
+        ) : (
+          <div
+            className={styles.gardenBackground}
+            style={{ backgroundColor: customization.bgColor }}
+          >
+            {children}
+          </div>
+        )}
     </>
   );
 }

@@ -257,6 +257,7 @@ export function AuthProvider({ children }) {
             user_id: userId,
             name: garden.name,
             image: imageUrl,
+            customization: garden.customization || {},
           })
           .select()
           .single();

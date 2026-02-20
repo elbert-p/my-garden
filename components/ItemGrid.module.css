@@ -21,9 +21,10 @@
   text-decoration: none;
   color: inherit;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  border-radius: 15px;
+  border-radius: var(--item-radius, 15px);
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
 .item:hover {
@@ -53,7 +54,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: var(--item-radius, 15px);
 }
 
 .badge {
@@ -82,8 +83,9 @@
   justify-content: center;
   font-size: 1.1rem;
   font-weight: 600;
-  margin-top: 0.75rem;
-  padding-bottom: 0.5rem;
+  margin-top: var(--item-name-mt, 0.75rem);
+  padding-bottom: var(--item-name-pb, 0.5rem);
+  padding-inline: 2px;
 }
 
 /* ============ GROUPED (with sort markers) ============ */

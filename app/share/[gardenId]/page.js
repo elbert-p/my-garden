@@ -5,11 +5,12 @@ import ItemGrid from '@/components/ItemGrid';
 import styles from './page.module.css';
 
 export default function SharedGardenPage() {
-  const { gardenId, filteredPlants, plants, searchQuery, sort, filters } = useSharedGarden();
+  const { garden, gardenId, filteredPlants, plants, searchQuery, sort, filters } = useSharedGarden();
 
   const filterCount = getActiveFilterCount(filters);
   const hasActiveFilters = !!(searchQuery || filterCount > 0 || sort.key);
   const sortGroups = getSortGroups(filteredPlants, sort);
+  const columns = garden?.customization?.columns;
 
   const emptyMessage = hasActiveFilters
     ? 'No plants match your current filters.'
@@ -27,6 +28,7 @@ export default function SharedGardenPage() {
         getItemName={(p) => p.commonName || p.scientificName}
         getItemStyle={(p) => ({ fontStyle: p.commonName ? 'normal' : 'italic' })}
         getItemDimmed={sort.key ? (p) => isMissingSortField(p, sort) : undefined}
+        columns={columns}
       />
     </div>
   );
