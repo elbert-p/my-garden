@@ -2,10 +2,10 @@
 import Link from 'next/link';
 import styles from './ItemGrid.module.css';
 
-// Derived from CSS: 1200px max-width - 2×32px padding = 1136px content area
-const CONTENT_WIDTH = 1136;
-const DEFAULT_GAP = 32; // 2rem
-const DEFAULT_ITEM_WIDTH = (CONTENT_WIDTH - DEFAULT_GAP * 3) / 4; // 260px at 4 columns
+// Reference content width for calibrating column count:
+// At a typical 1200px viewport, content is 1200 − 2 × 32 = 1136px.
+const REF_CONTENT_WIDTH = 1136;
+const REF_GAP = 32; // 2rem at 16px root
 
 export default function ItemGrid({
   items = [],
@@ -20,17 +20,26 @@ export default function ItemGrid({
   getItemDimmed,
   columns,
 }) {
-  // Compute scaled grid style: gap shrinks for 5+ columns,
-  // item width accounts for scaled gap, properties scale from item size.
+  // Compute grid style.
+  // When `columns` is set, calibrate item width so that exactly `columns`
+  // items fit at the reference desktop width.  On narrow screens auto-fill
+  // naturally drops to fewer columns, with a floor of 2 columns ensured
+  // by min(Xpx, calc(50% - gap/2)).
   const gridStyle = (() => {
     if (!columns) return {};
+
     const gapScale = Math.min(1, 4 / columns);
-    const gapPx = DEFAULT_GAP * gapScale;
-    const itemWidth = Math.floor((CONTENT_WIDTH - gapPx * (columns - 1)) / columns);
-    const scale = Math.min(itemWidth / DEFAULT_ITEM_WIDTH, 1);
+    const gapPx = REF_GAP * gapScale;
+    const itemWidth = Math.floor(
+      (REF_CONTENT_WIDTH - gapPx * (columns - 1)) / columns
+    );
+    const scale = Math.min(1, 4 / columns);
+    const gapRem = (2 * gapScale).toFixed(2);
+
     return {
-      gridTemplateColumns: `repeat(auto-fill, minmax(${itemWidth}px, 1fr))`,
-      gap: `${(2 * gapScale).toFixed(2)}rem`,
+      gridTemplateColumns:
+        `repeat(auto-fill, minmax(min(${itemWidth}px, calc(50% - 1rem)), 1fr))`,
+      gap: `min(${gapRem}rem, var(--page-padding-inline, 2rem))`,
       '--item-radius': `${Math.round(15 * scale)}px`,
       '--item-name-mt': `${(0.75 * scale).toFixed(2)}rem`,
       '--item-name-pb': `${(0.5 * scale).toFixed(2)}rem`,

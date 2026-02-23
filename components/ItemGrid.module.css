@@ -1,7 +1,10 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2rem;
+  /* min(250px, calc(50% - 1rem)) ensures minimum 2 columns above ~300px,
+     and ~4 columns at typical desktop width (~1136px content). */
+  grid-template-columns: repeat(auto-fill, minmax(min(250px, calc(50% - 1rem)), 1fr));
+  /* Gap is at most the page inline padding for the current breakpoint */
+  gap: min(2rem, var(--page-padding-inline, 2rem));
 }
 
 .empty {

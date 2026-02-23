@@ -112,3 +112,33 @@
 .menuItem:hover {
   background-color: #f1f3f4;
 }
+
+/* ---- Responsive: match navbar button sizes ---- */
+
+@media (max-width: 768px) {
+  .skeleton {
+    width: 36px;
+    height: 36px;
+  }
+
+  .avatarButton {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skeleton {
+    width: 32px;
+    height: 32px;
+  }
+
+  .avatarButton {
+    width: 32px;
+    height: 32px;
+  }
+
+  .dropdown {
+    min-width: 200px;
+  }
+}

@@ -1,7 +1,9 @@
+/* About me — /app/about/page.module.css */
+
 .loadingContainer {
-  max-width: 800px;
+  max-width: var(--page-max-width-medium, 800px);
   margin: 0 auto;
-  padding: 2rem;
+  padding: var(--page-padding-block, 2rem) var(--page-padding-inline, 2rem);
 }
 
 .loading {

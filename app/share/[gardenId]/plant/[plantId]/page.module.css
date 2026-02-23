@@ -1,7 +1,9 @@
+/* Shared plant detail — /app/share/[gardenId]/plant/[plantId]/page.module.css */
+
 .container {
-  max-width: 800px;
+  max-width: var(--page-max-width-medium, 800px);
   margin: 0 auto;
-  padding: 1.5rem 2rem;
+  padding: var(--page-padding-block, 1.5rem) var(--page-padding-inline, 2rem);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   color: #202124;
 }
@@ -165,6 +167,22 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 768px) {
+  .details {
+    padding: 1.25rem;
+  }
+
+  .mainImageContainer {
+    margin-bottom: 1.25rem;
+    border-radius: 10px;
+  }
+
+  .field {
+    padding: 12px 14px;
+    border-radius: 10px;
+  }
+}
+
 @media (max-width: 600px) {
   .infoGrid {
     grid-template-columns: 1fr;
@@ -176,11 +194,31 @@
 }
 
 @media (max-width: 480px) {
-  .container {
-    padding: 1rem;
-  }
-  
   .details {
     padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .mainImageContainer {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+
+  .field {
+    padding: 10px 12px;
+    border-radius: 8px;
+  }
+
+  .photoModalOverlay {
+    padding: 1rem;
+  }
+
+  .photoModalContent {
+    max-width: calc(100vw - 2rem);
+    max-height: calc(100vh - 2rem);
+  }
+
+  .photoModalImage {
+    max-height: calc(100vh - 4rem);
   }
 }

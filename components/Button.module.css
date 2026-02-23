@@ -66,7 +66,8 @@
   background-color: #fff;
   color: #5f6368;
   border: none;
-  padding: 8px 16px;
+  padding: 0 16px;
+  height: 40px;
   border-radius: 24px;
   font-size: 0.9rem;
   font-weight: 500;
@@ -82,4 +83,65 @@
 .backButton:hover {
   background-color: #f1f3f4;
   color: #202124;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 768px) {
+  .small {
+    padding: 6px 14px;
+    font-size: 0.82rem;
+  }
+
+  .medium {
+    padding: 7px 16px;
+    font-size: 0.9rem;
+  }
+
+  .large {
+    padding: 9px 20px;
+    font-size: 1rem;
+  }
+
+  .backButton {
+    height: 36px;
+    padding: 0 14px;
+    font-size: 0.85rem;
+    gap: 5px;
+  }
+
+  .backButton svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .small {
+    padding: 5px 12px;
+    font-size: 0.78rem;
+  }
+
+  .medium {
+    padding: 6px 12px;
+    font-size: 0.82rem;
+  }
+
+  .large {
+    padding: 7px 16px;
+    font-size: 0.9rem;
+  }
+
+  .backButton {
+    height: 32px;
+    padding: 0 10px;
+    font-size: 0.8rem;
+    gap: 4px;
+    border-radius: 16px;
+  }
+
+  .backButton svg {
+    width: 14px;
+    height: 14px;
+  }
 }

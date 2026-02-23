@@ -103,6 +103,7 @@
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease;
+  font-family: inherit;
 }
 
 .cancelButton:hover {
@@ -120,6 +121,7 @@
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  font-family: inherit;
 }
 
 .confirmButton:hover {
@@ -137,6 +139,7 @@
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  font-family: inherit;
 }
 
 .deleteButton:hover {
@@ -144,18 +147,52 @@
   box-shadow: 0 2px 8px rgba(217, 48, 37, 0.3);
 }
 
+/* ---- Responsive ---- */
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.35rem;
+  }
+
+  .message {
+    font-size: 0.95rem;
+  }
+
+  .cancelButton,
+  .confirmButton,
+  .deleteButton {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 480px) {
-  .content {
+  .small {
     padding: 1.25rem 1.5rem;
   }
-  
+
+  .medium,
+  .large {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .message {
+    font-size: 0.9rem;
+  }
+
   .buttons {
     flex-direction: column;
   }
-  
+
   .cancelButton,
   .confirmButton,
   .deleteButton {
     width: 100%;
+    padding: 8px 14px;
+    font-size: 0.85rem;
   }
 }

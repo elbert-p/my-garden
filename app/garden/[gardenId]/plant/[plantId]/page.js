@@ -34,6 +34,8 @@ export default function PlantPage() {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
   const [showSignInModal, setShowSignInModal] = useState(false);
+  const [showDeletePhotoModal, setShowDeletePhotoModal] = useState(false);
+  const [photoToDelete, setPhotoToDelete] = useState(null);
   const [copied, setCopied] = useState(false);
   const [autofillData, setAutofillData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -81,6 +83,7 @@ export default function PlantPage() {
         setShowDeleteModal(false);
         setShowShareModal(false);
         setShowSignInModal(false);
+        setShowDeletePhotoModal(false);
       }
     };
     document.addEventListener('keydown', esc);
@@ -111,7 +114,7 @@ export default function PlantPage() {
         const oldImage = temp.mainImage;
         const url = user?.id ? await uploadImage(dataUrl, user.id, 'plants') : dataUrl;
         await save({ ...temp, mainImage: url });
-        if (user?.id) deleteImage(oldImage); // clean up old image
+        if (user?.id) deleteImage(oldImage);
       }
     }
   };
@@ -128,9 +131,28 @@ export default function PlantPage() {
     if (addRef.current) addRef.current.value = '';
   };
 
-  const onRemove = async (i) => {
-    if (user?.id) deleteImage(i); // clean up from storage
-    await save({ ...temp, images: temp.images.filter(x => x !== i) });
+  const onRemove = async (img) => {
+    if (user?.id) deleteImage(img);
+    await save({ ...temp, images: temp.images.filter(x => x !== img) });
+  };
+
+  // On tablet/mobile, show confirmation modal; on desktop, remove directly
+  const handleRemoveClick = (img, e) => {
+    e.stopPropagation();
+    if (window.innerWidth <= 768) {
+      setPhotoToDelete(img);
+      setShowDeletePhotoModal(true);
+    } else {
+      onRemove(img);
+    }
+  };
+
+  const confirmDeletePhoto = () => {
+    if (photoToDelete) {
+      onRemove(photoToDelete);
+      setPhotoToDelete(null);
+      setShowDeletePhotoModal(false);
+    }
   };
 
   const handleShare = () => {
@@ -168,7 +190,6 @@ export default function PlantPage() {
   };
 
   const onDelete = async () => {
-    // Clean up all images from storage
     if (user?.id && plant) {
       deleteImage(plant.mainImage);
       (plant.images || []).forEach(img => deleteImage(img));
@@ -214,7 +235,10 @@ export default function PlantPage() {
         />
 
         <div className={styles.details}>
-          <div className={styles.mainImageContainer} onClick={() => mainRef.current?.click()}>
+          <div
+            className={`${styles.mainImageContainer} ${editing ? styles.mainImageEditing : ''}`}
+            onClick={() => mainRef.current?.click()}
+          >
             <img src={temp.mainImage || '/placeholder-plant.jpg'} alt="" className={styles.mainImage} />
             <button className={styles.mainImageEditButton}><FiEdit size={18} /></button>
             <input ref={mainRef} type="file" onChange={onMain} className={styles.fileInput} accept="image/*" />
@@ -234,14 +258,14 @@ export default function PlantPage() {
             </div>
           </div>
 
-          <div className={styles.photosSection}>
+          <div className={`${styles.photosSection} ${editing ? styles.photosSectionEditing : ''}`}>
             <h2 className={styles.sectionTitle}>Additional Photos</h2>
             {temp.images?.length > 0 ? (
               <div className={styles.imageGrid}>
                 {temp.images.map((img, i) => (
                   <div key={i} className={styles.photoItem}>
                     <img src={img} alt="" className={styles.photo} onClick={() => setSelectedImage(img)} />
-                    <button onClick={e => { e.stopPropagation(); onRemove(img); }} className={styles.removeButton}>
+                    <button onClick={e => handleRemoveClick(img, e)} className={styles.removeButton}>
                       <IoClose size={16} />
                     </button>
                   </div>
@@ -279,6 +303,18 @@ export default function PlantPage() {
           </div>
         </div>
       )}
+
+      {/* Delete Photo Confirmation (tablet/mobile) */}
+      <ConfirmModal
+        isOpen={showDeletePhotoModal}
+        onClose={() => { setShowDeletePhotoModal(false); setPhotoToDelete(null); }}
+        onConfirm={confirmDeletePhoto}
+        title="Delete Photo"
+        message="Remove this photo from your gallery?"
+        confirmText="Delete"
+        cancelText="Cancel"
+        variant="danger"
+      />
 
       {/* Plant-specific Modals */}
       <ConfirmModal

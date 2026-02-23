@@ -9,7 +9,7 @@
   align-items: center;
   gap: 6px;
   height: 40px;
-  padding: 0 12px;
+  padding: 0 10px;
   border-radius: 20px;
   border: none;
   background-color: #f8f9fa;
@@ -341,7 +341,6 @@
     margin: 0;
 }
 
-
 .rangeInput {
   width: 36px;
   height: 100%;
@@ -374,13 +373,20 @@
   outline: none;
 }
 
-/* ============ RESPONSIVE ============ */
+/* ================================================================
+   RESPONSIVE — match button heights with navbar icon buttons
+   ================================================================ */
 
 @media (max-width: 768px) {
+  .controlButton {
+    height: 36px;
+    padding: 0 10px;
+  }
+
   .activeLabel {
     display: none;
   }
-  
+
   .dropdown {
     min-width: 200px;
   }
@@ -388,7 +394,43 @@
 
 @media (max-width: 480px) {
   .controlButton {
-    padding: 0 10px;
+    height: 32px;
+    padding: 0 8px;
+  }
+}
+
+/* ================================================================
+   COMPACT MODE — when navbar is NOT in balanced layout
+   
+   Uses data-layout attribute set on <nav> by NavBar.js.
+   Control buttons become circular icon-only buttons matching the
+   other navbar icon buttons. Active state shown by background color.
+   ================================================================ */
+
+:global(nav:not([data-layout="balanced"])) .controlButton {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+  justify-content: center;
+}
+
+/* Hide all children except the icon (first child) when active */
+:global(nav:not([data-layout="balanced"])) .controlButton.active > *:not(:first-child) {
+  display: none;
+}
+
+/* Responsive compact sizes — match navbar icon button sizes */
+@media (max-width: 768px) {
+  :global(nav:not([data-layout="balanced"])) .controlButton {
+    width: 36px;
     height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  :global(nav:not([data-layout="balanced"])) .controlButton {
+    width: 32px;
+    height: 32px;
   }
 }

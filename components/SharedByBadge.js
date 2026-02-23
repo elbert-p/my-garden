@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import { FiUser } from 'react-icons/fi';
 import styles from './SharedByBadge.module.css';
 
-export default function SharedByBadge({ user }) {
+export default function SharedByBadge({ user, compact }) {
   const [isOpen, setIsOpen] = useState(false);
   const [imgError, setImgError] = useState(false);
   const menuRef = useRef(null);
@@ -23,15 +23,24 @@ export default function SharedByBadge({ user }) {
 
   return (
     <div className={styles.container} ref={menuRef}>
-      <button className={styles.badge} onClick={() => setIsOpen(!isOpen)}>
-        <span className={styles.label}>Shared by:</span>
-        <div className={styles.avatar}>
-          {avatarUrl && !imgError ? (
-            <img src={avatarUrl} alt="" onError={() => setImgError(true)} />
-          ) : (
-            <FiUser size={16} />
-          )}
-        </div>
+      <button
+        className={`${styles.badge} ${compact ? styles.badgeCompact : ''}`}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {compact ? (
+          <span className={styles.labelCompact}>Shared</span>
+        ) : (
+          <>
+            <span className={styles.label}>Shared by:</span>
+            <div className={styles.avatar}>
+              {avatarUrl && !imgError ? (
+                <img src={avatarUrl} alt="" onError={() => setImgError(true)} />
+              ) : (
+                <FiUser size={16} />
+              )}
+            </div>
+          </>
+        )}
       </button>
 
       {isOpen && (

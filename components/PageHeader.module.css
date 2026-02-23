@@ -1,11 +1,15 @@
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: min(1.5rem, var(--page-padding-block, 1.5rem));
   gap: 1rem;
   min-height: 48px;
   position: relative;
+}
+
+/* Centered mode: left/right stay in flex flow, title is absolute */
+.headerCentered {
+  /* no additional layout needed — relative is already set */
 }
 
 .left {
@@ -15,20 +19,27 @@
   z-index: 1;
 }
 
-/* Title centered absolutely */
+/* ---- Title: flow mode (default) ---- */
 .title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  flex: 1;
   font-size: 1.75rem;
   font-weight: 700;
   color: #1a1a1a;
   margin: 0;
-  max-width: 60%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  min-width: 0;
+}
+
+/* ---- Title: centered mode ---- */
+.titleCentered {
+  flex: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
+  max-width: 80%;
 }
 
 .right {
@@ -45,19 +56,17 @@
 }
 
 @media (max-width: 600px) {
+  .header {
+    min-height: 0;
+  }
+
   .title {
     font-size: 1.5rem;
-    max-width: 50%;
   }
 }
 
 @media (max-width: 480px) {
-  .header {
-    min-height: 40px;
-  }
-  
   .title {
     font-size: 1.25rem;
-    max-width: 45%;
   }
 }

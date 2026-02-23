@@ -1,7 +1,9 @@
+/* Todo page — /app/garden/[gardenId]/todo/page.module.css */
+
 .container {
-  max-width: 800px;
+  max-width: var(--page-max-width-medium, 800px);
   margin: 0 auto;
-  padding: 1.5rem 2rem;
+  padding: var(--page-padding-block, 1.5rem) var(--page-padding-inline, 2rem);
 }
 
 .headerActions {
@@ -62,11 +64,21 @@
   margin: 0;
 }
 
-@media (max-width: 600px) {
-  .container {
-    padding: 1rem;
+@media (max-width: 768px) {
+  .editIconButton {
+    width: 36px;
+    height: 36px;
   }
+}
+
+@media (max-width: 480px) {
   .page {
     padding: 1rem 1.25rem;
+    border-radius: 12px;
+  }
+
+  .editIconButton {
+    width: 32px;
+    height: 32px;
   }
 }

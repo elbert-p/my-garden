@@ -21,7 +21,7 @@
 
 .label {
   color: #1a73e8;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
@@ -42,6 +42,33 @@
   height: 100%;
   object-fit: cover;
 }
+
+/* ---- Compact: text-only, no avatar ---- */
+
+.badgeCompact {
+  padding: 6px 12px;
+  gap: 0;
+}
+
+.labelCompact {
+  color: #1a73e8;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Small screens: tighter compact badge */
+@media (max-width: 480px) {
+  .badgeCompact {
+    padding: 5px 10px;
+  }
+
+  .labelCompact {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}
+
+/* ---- Dropdown ---- */
 
 .dropdown {
   position: absolute;

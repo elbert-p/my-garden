@@ -405,7 +405,7 @@ export default function SortFilterControls({ sort, onSortChange, filters, onFilt
           tabIndex={0}
           aria-label="Sort"
         >
-          <TbArrowsSort size={18} />
+          <TbArrowsSort size={20} />
           {sort.key && (
             <>
               <span className={styles.activeLabel}>
@@ -421,7 +421,12 @@ export default function SortFilterControls({ sort, onSortChange, filters, onFilt
 
         {sortOpen && (
           <div className={styles.dropdown}>
-            <div className={styles.dropdownHeader}>Sort by</div>
+            <div className={styles.dropdownHeader}>
+              <span>Sort by</span>
+              {sort.key && (
+                <button className={styles.clearAllLink} onClick={(e) => { e.stopPropagation(); onSortChange({ key: null, dir: 'asc' }); setSortOpen(false); }}>Clear</button>
+              )}
+            </div>
             {SORT_OPTIONS.map(opt => (
               <button
                 key={opt.key}
@@ -449,7 +454,7 @@ export default function SortFilterControls({ sort, onSortChange, filters, onFilt
           tabIndex={0}
           aria-label="Filter"
         >
-          <FiFilter size={17} />
+          <FiFilter size={20} />
           {filterCount > 0 && (
             <>
               <span className={styles.filterBadge}>{filterCount}</span>

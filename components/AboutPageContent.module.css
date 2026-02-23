@@ -1,7 +1,9 @@
+/* AboutPageContent — shared component for garden about & profile about pages */
+
 .container {
-  max-width: 800px;
+  max-width: var(--page-max-width-medium, 800px);
   margin: 0 auto;
-  padding: 1.5rem 2rem;
+  padding: var(--page-padding-block, 1.5rem) var(--page-padding-inline, 2rem);
 }
 
 .headerActions {
@@ -95,7 +97,6 @@
 .viewCaption {
   font-size: 1rem;
   color: #000;
-  /* color: #5f6368;  */
   text-align: center;
   margin: 0.6rem 0 0 0;
   font-style: italic;
@@ -382,11 +383,40 @@
   padding: 1rem 0;
 }
 
-@media (max-width: 600px) {
-  .container {
-    padding: 1rem;
+/* ---- Responsive ---- */
+
+@media (max-width: 768px) {
+  .editIconButton {
+    width: 36px;
+    height: 36px;
   }
+
+  .viewBlock {
+    padding: 0.85rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
   .page {
-    padding: 1rem 1.25rem 1.5rem;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+  }
+
+  .editIconButton {
+    width: 32px;
+    height: 32px;
+  }
+
+  .viewBlock {
+    padding: 0.75rem 0.85rem;
+    border-radius: 10px;
+  }
+
+  .viewTitle {
+    font-size: 1.15rem;
+  }
+
+  .imageUploadArea {
+    padding: 2rem 1rem;
   }
 }

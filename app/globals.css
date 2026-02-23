@@ -6,3 +6,33 @@ body {
   padding: 0;
   background-color: #f4f4f9;
 }
+
+:root {
+  /* Wide page max-width: grows past 1200px on wide screens */
+  --page-max-width-large: max(1200px, calc(100vw - 300px));
+  --page-max-width-medium: 800px;
+
+  /* Inline (horizontal) padding inside page containers */
+  --page-padding-inline: 2rem;
+  /* Block (vertical) padding inside page containers */
+  --page-padding-block: 2rem;
+
+  /* Content max-width = page max-width minus inline padding.
+     NavBar uses this to align its center section with page content. */
+  --content-max-width-large: calc(var(--page-max-width-large) - var(--page-padding-inline) * 2);
+  --content-max-width-medium: calc(var(--page-max-width-medium) - var(--page-padding-inline) * 2);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --page-padding-inline: 1.5rem;
+    --page-padding-block: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --page-padding-inline: 1rem;
+    --page-padding-block: 1rem;
+  }
+}

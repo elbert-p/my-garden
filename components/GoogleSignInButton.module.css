@@ -10,9 +10,10 @@
   background-color: #f8f9fa;
   color: #5f6368;
   border-radius: 20px;
-  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05); */
   transition: background-color 0.2s ease, color 0.2s ease;
   font-family: inherit;
+  white-space: nowrap;
+  border: none;
 }
 
 .button:hover {
@@ -28,4 +29,32 @@
 .logo {
   width: 18px;
   height: 18px;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 768px) {
+  .button {
+    padding: 6px 12px;
+    font-size: 0.88rem;
+    gap: 8px;
+  }
+
+  .logo {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    padding: 5px 10px;
+    font-size: 0.82rem;
+    gap: 6px;
+  }
+
+  .logo {
+    width: 14px;
+    height: 14px;
+  }
 }

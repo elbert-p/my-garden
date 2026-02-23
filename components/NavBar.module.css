@@ -1,3 +1,14 @@
+/* ================================================================
+   NavBar — Three responsive layout modes:
+   1. Balanced   (wide)    : center absolutely aligned with page content
+   2. Unbalanced (medium)  : center flows naturally between left & right
+   3. Double-bar (narrow)  : two rows — title row + tabs/actions row
+
+   Layout mode is determined dynamically by JS measuring element widths.
+   The data-layout attribute on <nav> communicates the mode to children
+   (e.g. SortFilterControls) for compact styling.
+   ================================================================ */
+
 .navbar {
   position: sticky;
   top: 0;
@@ -9,6 +20,8 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
+/* ============ PRIMARY ROW ============ */
+
 .navContent {
   display: flex;
   align-items: center;
@@ -16,14 +29,7 @@
   padding: 0 1rem;
 }
 
-/* 
-  navLeft and navRight must be equal width for margin: 0 auto 
-  centering on navCenter to align with page content.
-  navRight (sign-in button) is the wider side, so we give 
-  navLeft a matching min-width to balance it.
-*/
-
-/* Far left - Home button */
+/* ---- Far left / right ---- */
 .navLeft {
   display: flex;
   align-items: center;
@@ -31,29 +37,53 @@
   padding-right: 1rem;
 }
 
-/* Center section - constrained to content width */
+.navRight {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding-left: 1rem;
+}
+
+/* ---- Center (balanced & unbalanced) ---- */
 .navCenter {
   display: flex;
   align-items: center;
   flex: 1;
   min-width: 0;
-  max-width: var(--content-max-width, 1200px);
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 2rem;
   gap: 1.5rem;
+  width: 100%;
 }
 
-/* Title group - title and optional shared badge */
+/* ---- Center (double-bar first row) ---- */
+.navCenterDouble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+}
+
+/* ============ TITLE GROUP ============ */
+
 .titleGroup {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  flex-shrink: 0;
-  min-width: 0;
+  min-width: 80px;
+  flex-shrink: 1;
 }
 
-/* Title */
+/* Double-bar: absolutely center the TITLE (not group) in the viewport.
+   --title-extra is set by JS to the badge-area width.
+   Transform offsets by half that so the title text itself is centered. */
+.titleGroupCentered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(calc(-50% + var(--title-extra, 0px) / 2), -50%);
+  max-width: calc(100% - 8rem); /* safety cap so it doesn't overlap sides */
+}
+
 .title {
   font-size: 1.35rem;
   font-weight: 700;
@@ -64,7 +94,6 @@
   text-overflow: ellipsis;
 }
 
-/* Plant count badge */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -81,17 +110,26 @@
   white-space: nowrap;
 }
 
-/* Spacer pushes tabs and actions apart */
+/* ============ SPACER ============ */
+
 .spacer {
   flex: 1;
 }
 
-/* Tab navigation */
+/* ============ TABS ============ */
+
 .tabs {
   display: flex;
   align-items: center;
   gap: 0.25rem;
   flex-shrink: 0;
+}
+
+/* Hidden but still measurable for layout calculations */
+.tabsHidden {
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .tab {
@@ -106,6 +144,7 @@
   transition: color 0.2s ease;
   font-family: inherit;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .tab::after {
@@ -140,7 +179,8 @@
   background-color: #1a73e8;
 }
 
-/* Actions group - aligned with content end */
+/* ============ ACTIONS ============ */
+
 .actions {
   display: flex;
   align-items: center;
@@ -152,15 +192,8 @@
   display: none;
 }
 
-/* Far right - Profile/Sign-in */
-.navRight {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  padding-left: 1rem;
-}
+/* ============ BUTTONS ============ */
 
-/* Icon button style */
 .iconButton {
   display: flex;
   align-items: center;
@@ -181,7 +214,16 @@
   color: #202124;
 }
 
-/* Home button special styling */
+/* Search icon with active search (compact mode: green indicator) */
+.iconButtonSearchActive {
+  background-color: #e6f4ea;
+  color: #1e8e3e;
+}
+
+.iconButtonSearchActive:hover {
+  background-color: #ceead6;
+}
+
 .homeButton {
   display: flex;
   align-items: center;
@@ -200,11 +242,11 @@
   color: #45a049;
 }
 
-/* Search container */
+/* ============ SEARCH ============ */
+
 .searchContainer {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
 }
 
 .searchInputWrapper {
@@ -213,8 +255,10 @@
   align-items: center;
 }
 
+/* Search input uses min() so it never exceeds a vw fraction,
+   preventing layout thrashing when opened in compact modes. */
 .searchInput {
-  width: 200px;
+  width: min(200px, 45vw);
   height: 40px;
   padding: 0 32px 0 12px;
   border: 1px solid #e8eaed;
@@ -224,7 +268,7 @@
   background-color: #f8f9fa;
   color: #202124;
   outline: none;
-  transition: border-color 0.2s ease, background-color 0.2s ease, width 0.2s ease;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .searchInput:focus {
@@ -256,52 +300,184 @@
   background-color: #e8eaed;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .navContent {
-    padding: 0 0.5rem;
-  }
-  
-  .navCenter {
-    padding: 0 1rem;
-    gap: 1rem;
-  }
-  
+/* ================================================================
+   DOUBLE-BAR LAYOUT
+   ================================================================ */
+
+/* First row needs position context for absolutely centered title */
+.navContentDouble {
+  height: 48px;
+  position: relative;
+}
+
+/* ---- Second row ---- */
+.secondRow {
+  border-top: 1px solid #f1f3f4;
+}
+
+.secondRowContent {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  margin: 0 auto;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.secondRowLarge {
+  max-width: var(--page-max-width-large, 1200px);
+  padding-inline: var(--page-padding-inline, 2rem);
+}
+
+.secondRowMedium {
+  max-width: var(--page-max-width-medium, 800px);
+  padding-inline: var(--page-padding-inline, 2rem);
+}
+
+.secondRow .tab::after {
+  bottom: -1px;
+}
+
+/* ================================================================
+   RESPONSIVE — TABLET (≤ 1024px)
+   ================================================================ */
+
+@media (max-width: 1024px) {
   .title {
-    font-size: 1.15rem;
-    max-width: 150px;
+    font-size: 1.2rem;
   }
-  
+
   .tab {
     padding: 8px 12px;
     font-size: 0.9rem;
   }
-  
+
   .searchInput {
-    width: 150px;
+    width: min(170px, 40vw);
+  }
+
+  .navCenter {
+    gap: 1rem;
   }
 }
 
+/* ================================================================
+   RESPONSIVE — SMALL TABLET / LARGE PHONE (≤ 768px)
+   ================================================================ */
+
+@media (max-width: 768px) {
+  .navContent,
+  .navContentDouble {
+    height: 48px;
+    padding: 0 0.75rem;
+  }
+
+  .navLeft {
+    padding-right: 0.75rem;
+  }
+
+  .navRight {
+    padding-left: 0.75rem;
+  }
+
+  .title {
+    font-size: 1.15rem;
+  }
+
+  .badge {
+    min-width: 26px;
+    height: 26px;
+    padding: 0 7px;
+    font-size: 0.9rem;
+  }
+
+  .iconButton {
+    width: 36px;
+    height: 36px;
+  }
+
+  .homeButton {
+    width: 36px;
+    height: 36px;
+  }
+
+  .tab {
+    padding: 6px 10px;
+    font-size: 0.88rem;
+  }
+
+  .searchInput {
+    width: min(150px, 38vw);
+    height: 34px;
+  }
+
+  .secondRowContent {
+    height: 40px;
+  }
+}
+
+/* ================================================================
+   RESPONSIVE — PHONE (≤ 480px)
+   ================================================================ */
+
 @media (max-width: 480px) {
-  .navCenter {
+  .navContent,
+  .navContentDouble {
+    height: 44px;
     padding: 0 0.5rem;
+  }
+
+  .navLeft {
+    padding-right: 0.5rem;
+  }
+
+  .navRight {
+    padding-left: 0.5rem;
   }
 
   .title {
     font-size: 1rem;
-    max-width: 100px;
   }
-  
-  .tab {
-    padding: 8px 8px;
-    font-size: 0.85rem;
+
+  .badge {
+    min-width: 22px;
+    height: 22px;
+    padding: 0 6px;
+    font-size: 0.8rem;
+    border-radius: 11px;
   }
-  
+
+  .iconButton {
+    width: 32px;
+    height: 32px;
+  }
+
+  .homeButton {
+    width: 32px;
+    height: 32px;
+  }
+
   .tabs {
     gap: 0;
   }
-  
+
+  .tab {
+    padding: 6px 8px;
+    font-size: 0.82rem;
+  }
+
+  .actions {
+    gap: 0.25rem;
+  }
+
   .searchInput {
-    width: 120px;
+    width: min(145px, 40vw);
+    height: 30px;
+    font-size: 0.85rem;
+  }
+
+  .secondRowContent {
+    height: 38px;
+    gap: 0.25rem;
   }
 }
