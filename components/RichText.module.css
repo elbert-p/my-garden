@@ -39,3 +39,46 @@
 .list:last-child {
   margin-bottom: 0;
 }
+
+/* ---- Responsive ---- */
+
+@media (max-width: 768px) {
+  .richText {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .heading {
+    font-size: 1.02rem;
+    margin: 0.85rem 0 0.35rem 0;
+  }
+
+  .list {
+    padding-left: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .richText {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .heading {
+    font-size: 0.95rem;
+    margin: 0.75rem 0 0.3rem 0;
+  }
+
+  .paragraph {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .list {
+    padding-left: 1rem;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .list li {
+    margin-bottom: 0.2rem;
+  }
+}

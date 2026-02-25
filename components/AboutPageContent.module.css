@@ -385,8 +385,8 @@
 
 /* ---- Responsive ---- */
 
-/* editIconButton: 40px → 36px for tablet and smaller */
 @media (max-width: 768px) {
+  /* editIconButton: 40px → 36px for tablet and smaller */
   .editIconButton {
     width: 36px;
     height: 36px;
@@ -394,6 +394,36 @@
 
   .viewBlock {
     padding: 0.85rem 1rem;
+  }
+
+  .viewTitle {
+    font-size: 1.2rem;
+  }
+
+  .viewCaption {
+    font-size: 0.92rem;
+    margin: 0.5rem 0 0 0;
+  }
+
+  .viewImage {
+    max-height: 400px;
+  }
+
+  .viewArea {
+    gap: 0.85rem;
+  }
+
+  .placeholderText {
+    font-size: 0.9rem;
+  }
+
+  .blockBody {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .titleInput {
+    font-size: 1rem;
   }
 }
 
@@ -411,10 +441,50 @@
   }
 
   .viewTitle {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
+    margin: 0 0 0.3rem 0;
+  }
+
+  .viewCaption {
+    font-size: 0.85rem;
+    margin: 0.4rem 0 0 0;
+  }
+
+  .viewImage {
+    max-height: 300px;
+  }
+
+  .viewArea {
+    gap: 0.75rem;
+    padding: 0.25rem 0;
+  }
+
+  .placeholderText {
+    font-size: 0.85rem;
+  }
+
+  .emptyMessage {
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
   }
 
   .imageUploadArea {
     padding: 2rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .blockBody {
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .titleInput {
+    font-size: 0.95rem;
+    padding: 7px 9px;
+  }
+
+  .captionInput {
+    font-size: 0.85rem;
+    padding: 7px 9px;
   }
 }

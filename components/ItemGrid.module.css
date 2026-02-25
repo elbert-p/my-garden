@@ -113,3 +113,66 @@
   margin-bottom: 1.25rem;
   border-bottom: 1px solid #e8eaed;
 }
+
+/* ---- Responsive ---- */
+
+@media (max-width: 768px) {
+  .name {
+    font-size: 1rem;
+  }
+
+  .badge {
+    top: 6px;
+    right: 6px;
+    min-width: 24px;
+    height: 24px;
+    padding: 0 6px;
+    font-size: 0.85rem;
+  }
+
+  .empty {
+    margin-top: 3rem;
+    font-size: 1rem;
+  }
+
+  .grouped {
+    gap: 1.5rem;
+  }
+
+  .marker {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .name {
+    font-size: 0.9rem;
+  }
+
+  .badge {
+    top: 4px;
+    right: 4px;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 5px;
+    font-size: 0.78rem;
+    border-radius: 11px;
+  }
+
+  .empty {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+  }
+
+  .grouped {
+    gap: 1.25rem;
+  }
+
+  .marker {
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.4rem;
+  }
+}

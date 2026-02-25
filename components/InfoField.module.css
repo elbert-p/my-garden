@@ -305,3 +305,91 @@
   margin-left: auto;
   flex-shrink: 0;
 }
+
+/* ---- Responsive ---- */
+
+@media (max-width: 768px) {
+  .infoField {
+    padding: 12px 14px;
+    border-radius: 10px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+
+  .input {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .textarea {
+    padding: 8px 10px;
+    font-size: 14px;
+    min-height: 70px;
+  }
+
+  .dropdownTrigger {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .radioLabel {
+    font-size: 13px;
+    padding: 5px 10px;
+    gap: 6px;
+  }
+
+  .radioGroup {
+    gap: 8px;
+  }
+
+  .dropdownItem {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .infoField {
+    padding: 10px 12px;
+    border-radius: 8px;
+  }
+
+  .labelRow {
+    margin-bottom: 4px;
+  }
+
+  .label {
+    font-size: 10px;
+  }
+
+  .text {
+    font-size: 13.5px;
+    line-height: 1.45;
+  }
+
+  .input {
+    padding: 7px 9px;
+    font-size: 13.5px;
+    border-radius: 6px;
+  }
+
+  .textarea {
+    padding: 7px 9px;
+    font-size: 13.5px;
+    min-height: 60px;
+    border-radius: 6px;
+  }
+
+  .dropdownTrigger {
+    padding: 7px 9px;
+    font-size: 13.5px;
+    border-radius: 6px;
+  }
+
+  .radioLabel {
+    font-size: 12.5px;
+    padding: 4px 8px;
+  }
+}

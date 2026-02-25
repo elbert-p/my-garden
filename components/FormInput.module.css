@@ -39,3 +39,25 @@
   text-align: center;
   margin: 0;
 }
+
+/* ---- Responsive ---- */
+
+@media (max-width: 768px) {
+  .input {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .input {
+    padding: 9px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+  }
+
+  .errorBox {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+}

@@ -345,13 +345,7 @@
   gap: 0.75rem;
 }
 
-/* ================================================================
-   RESPONSIVE — TABLET (≤ 768px)
-   
-   Touch-friendly: remove buttons visible on section hover/tap
-   (matches the add button behavior). Buttons positioned tighter
-   to edges. Confirmation modal used for deletes (handled in JS).
-   ================================================================ */
+/* ---- Responsive ---- */
 
 @media (max-width: 768px) {
   .details {
@@ -363,10 +357,23 @@
     border-radius: 10px;
   }
 
-  /* Main image edit button: tighter position, always visible on interaction */
   .mainImageEditButton {
     top: 2px;
     right: 2px;
+  }
+
+  .infoGridWrapper {
+    margin-bottom: 1.25rem;
+  }
+
+  .infoGrid {
+    gap: 10px;
+  }
+
+  .sectionTitle {
+    font-size: 0.95rem;
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.85rem;
   }
 
   /* Remove buttons visible on section hover (tap activates hover on touch) */
@@ -379,8 +386,8 @@
     right: 2px;
   }
 
-  .infoGridWrapper {
-    margin-bottom: 1.25rem;
+  .noPhotos {
+    font-size: 0.85rem;
   }
 }
 
@@ -405,6 +412,16 @@
     margin-bottom: 1rem;
   }
 
+  .infoGrid {
+    gap: 8px;
+  }
+
+  .sectionTitle {
+    /* font-size: 0.9rem; */
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
   .imageGrid {
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     gap: 0.5rem;
@@ -418,6 +435,10 @@
   .addPhotoButton {
     min-height: 80px;
     font-size: 0.75rem;
+  }
+
+  .noPhotos {
+    font-size: 0.82rem;
   }
 
   .photoModalOverlay {

@@ -76,6 +76,7 @@
   font-size: 15px;
   color: #202124;
   line-height: 1.5;
+  overflow-wrap: break-word;
 }
 
 .photosSection {
@@ -167,6 +168,8 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* ---- Responsive ---- */
+
 @media (max-width: 768px) {
   .details {
     padding: 1.25rem;
@@ -177,9 +180,24 @@
     border-radius: 10px;
   }
 
+  .infoGrid {
+    gap: 10px;
+    margin-bottom: 1.25rem;
+  }
+
   .field {
     padding: 12px 14px;
     border-radius: 10px;
+  }
+
+  .value {
+    font-size: 14px;
+  }
+
+  .sectionTitle {
+    font-size: 0.95rem;
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.85rem;
   }
 }
 
@@ -187,7 +205,7 @@
   .infoGrid {
     grid-template-columns: 1fr;
   }
-  
+
   .fieldLarge {
     grid-column: span 1;
   }
@@ -204,9 +222,35 @@
     border-radius: 8px;
   }
 
+  .infoGrid {
+    gap: 8px;
+    margin-bottom: 1rem;
+  }
+
   .field {
     padding: 10px 12px;
     border-radius: 8px;
+  }
+
+  .label {
+    font-size: 10px;
+    margin-bottom: 4px;
+  }
+
+  .value {
+    font-size: 13.5px;
+    line-height: 1.45;
+  }
+
+  .sectionTitle {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .imageGrid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 0.5rem;
   }
 
   .photoModalOverlay {
