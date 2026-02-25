@@ -150,14 +150,6 @@
 /* ---- Responsive ---- */
 
 @media (max-width: 768px) {
-  .title {
-    font-size: 1.35rem;
-  }
-
-  .message {
-    font-size: 0.95rem;
-  }
-
   .cancelButton,
   .confirmButton,
   .deleteButton {
@@ -176,22 +168,9 @@
     padding: 1.25rem 1.5rem;
   }
 
-  .title {
-    font-size: 1.2rem;
-  }
-
-  .message {
-    font-size: 0.9rem;
-  }
-
-  .buttons {
-    flex-direction: column;
-  }
-
   .cancelButton,
   .confirmButton,
   .deleteButton {
-    width: 100%;
     padding: 8px 14px;
     font-size: 0.85rem;
   }

@@ -36,3 +36,8 @@ body {
     --page-padding-block: 1rem;
   }
 }
+
+/* Prevent horizontal overflow / scroll on mobile */
+html, body {
+  overflow-x: hidden;
+}

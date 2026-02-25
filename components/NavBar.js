@@ -36,11 +36,9 @@ export default function NavBar({
   const tabsRef = useRef(null);
   const actionsRef = useRef(null);
 
-  // Ref mirror so updateLayout callback stays stable
   const isSearchOpenRef = useRef(false);
   isSearchOpenRef.current = isSearchOpen;
 
-  // Cache actions width when search is closed (steady-state)
   const actionsWidthCache = useRef(0);
 
   const hasActions = !!(extraActions || showSearch || (menuItems && menuItems.length > 0));
@@ -49,16 +47,17 @@ export default function NavBar({
   const isDouble = layoutMode === 'double';
   const isCompact = layoutMode !== 'balanced';
   const hasActiveSearch = !!searchValue;
+  const hasBadgeChildren = badge != null || !!sharedBy;
 
   // ---- Layout mode detection ----
   const updateLayout = useCallback(() => {
     const left = leftRef.current;
     const right = rightRef.current;
+    const titleGroup = titleGroupRef.current;
     if (!left || !right) return;
 
     const vw = window.innerWidth;
 
-    // Read CSS variables
     const rootStyles = getComputedStyle(document.documentElement);
     const rootFontSize = parseFloat(rootStyles.fontSize) || 16;
     const rawPadding = rootStyles.getPropertyValue('--page-padding-inline').trim();
@@ -66,7 +65,6 @@ export default function NavBar({
       ? parseFloat(rawPadding) * rootFontSize
       : (parseFloat(rawPadding) || 32);
 
-    // Content max-width for this page
     let pageMaxWidth;
     if (contentWidth === 'medium') {
       pageMaxWidth = 800;
@@ -75,7 +73,6 @@ export default function NavBar({
     }
     const cmw = pageMaxWidth - pagePadding * 2;
 
-    // Reset min-widths to measure natural sizes
     left.style.minWidth = '';
     right.style.minWidth = '';
 
@@ -87,29 +84,59 @@ export default function NavBar({
         + parseFloat(getComputedStyle(navContentEl).paddingRight)
       : 32;
 
-    // Measure center children natural widths
-    const titleW = Math.max(titleGroupRef.current?.scrollWidth || 0, 80);
+    // Measure titleGroup: compute ideal (unconstrained) width by summing
+    // each child's natural width. We can't rely on the group's scrollWidth
+    // because when the group is flex-squeezed, its children's overflow:hidden
+    // causes scrollWidth to report the constrained size.
+    const titleEl = titleGroup?.querySelector('h1');
+    const titleTextW = titleEl?.scrollWidth || 0;
+
+    let idealGroupW = 0;
+    if (titleGroup) {
+      const groupGap = parseFloat(getComputedStyle(titleGroup).gap) || 0;
+      let visibleCount = 0;
+      for (const child of titleGroup.children) {
+        // For the title h1, use scrollWidth (unconstrained text width)
+        // For badges/other elements, use offsetWidth (they have flex-shrink: 0)
+        const childW = child === titleEl ? titleTextW : child.offsetWidth;
+        if (childW > 0) {
+          idealGroupW += childW;
+          visibleCount++;
+        }
+      }
+      if (visibleCount > 1) {
+        idealGroupW += groupGap * (visibleCount - 1);
+      }
+    }
+
+    // When badges are present, ensure the title gets at least 60px in the
+    // layout calculation so the navbar switches to double-bar rather than
+    // letting badges squeeze the title to nothing.
+    let titleW;
+    if (hasBadgeChildren && titleTextW < 60 && idealGroupW > 0) {
+      const badgeAreaW = Math.max(0, idealGroupW - titleTextW);
+      titleW = 60 + badgeAreaW;
+    } else {
+      titleW = idealGroupW;
+    }
+
     const tabsW = tabsRef.current?.scrollWidth || 0;
-    // Use cached actions width (steady state, search closed) for layout calc
     if (!isSearchOpenRef.current && actionsRef.current) {
       actionsWidthCache.current = actionsRef.current.scrollWidth;
     }
     const actionsW = actionsWidthCache.current || (actionsRef.current?.scrollWidth || 0);
 
-    // Gap between center children
     const gap = vw > 1024 ? 24 : 16;
     const parts = [titleW, tabsW, actionsW].filter(w => w > 0);
     const gapsTotal = Math.max(0, parts.length - 1) * gap;
     const minCenterW = titleW + tabsW + actionsW + gapsTotal;
 
-    // 1) Can everything fit in a single row?
     const singleRowNeeded = leftW + rightW + navPad + minCenterW;
 
     let mode;
     if (vw < singleRowNeeded) {
       mode = 'double';
     } else {
-      // 2) Does balanced (content-aligned center) fit?
       const balancedSide = Math.max(leftW, rightW);
       const balancedNeeded = cmw + balancedSide * 2 + navPad;
 
@@ -122,24 +149,20 @@ export default function NavBar({
       }
     }
 
-    // 3) Double-bar: decide if title can be absolutely centered
+    // Double-bar: decide if title can be absolutely centered.
     let centered = true;
-    if (mode === 'double' && titleGroupRef.current) {
-      const titleEl = titleGroupRef.current.querySelector('h1');
-      const titleElW = titleEl?.offsetWidth || 0;
-      const groupW = titleGroupRef.current.offsetWidth || 0;
-      const extraW = Math.max(0, groupW - titleElW);
+    if (mode === 'double' && titleGroup) {
+      const naturalTitleW = titleTextW;
+      const extraW = Math.max(0, idealGroupW - naturalTitleW);
 
-      // Can center when: vw/2 >= titleW/2 + badge area + navRight total width
-      centered = titleElW === 0 || (vw / 2 >= titleElW / 2 + extraW + rightW);
+      centered = naturalTitleW === 0 || (vw / 2 >= naturalTitleW / 2 + extraW + rightW);
 
-      // Publish badge-area width so CSS can offset the transform
-      titleGroupRef.current.style.setProperty('--title-extra', `${extraW}px`);
+      titleGroup.style.setProperty('--title-extra', `${extraW}px`);
     }
 
     setLayoutMode(mode);
     setDoubleCentered(centered);
-  }, [contentWidth]);
+  }, [contentWidth, hasBadgeChildren]);
 
   useIsomorphicLayoutEffect(() => {
     updateLayout();
@@ -178,10 +201,8 @@ export default function NavBar({
         !searchContainerRef.current.contains(e.target)
       ) {
         if (isCompact) {
-          // Compact: collapse bar on click outside, keep value
           setIsSearchOpen(false);
         } else {
-          // Balanced: only close if empty
           if (!searchValue) setIsSearchOpen(false);
         }
       }
@@ -200,7 +221,6 @@ export default function NavBar({
     onSearchChange?.('');
   };
 
-  // ---- Center inline style (balanced only) ----
   const centerStyle = layoutMode === 'balanced'
     ? {
         maxWidth: contentWidth === 'medium'
@@ -210,7 +230,6 @@ export default function NavBar({
       }
     : {};
 
-  // In compact mode, hide tabs when search is expanded
   const showTabsVisually = !(isCompact && isSearchOpen);
 
   // ---- Sub-trees ----
@@ -320,7 +339,9 @@ export default function NavBar({
         </div>
 
         {isDouble ? (
-          <div className={styles.navCenterDouble}>
+          <div className={`${styles.navCenterDouble} ${
+            !doubleCentered ? styles.navCenterDoubleLeft : ''
+          }`}>
             {titleGroupContent}
           </div>
         ) : (

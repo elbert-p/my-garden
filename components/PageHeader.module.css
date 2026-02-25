@@ -7,9 +7,8 @@
   position: relative;
 }
 
-/* Centered mode: left/right stay in flex flow, title is absolute */
 .headerCentered {
-  /* no additional layout needed — relative is already set */
+  /* positioning context already set by position: relative */
 }
 
 .left {
@@ -19,7 +18,7 @@
   z-index: 1;
 }
 
-/* ---- Title: flow mode (default) ---- */
+/* Flow mode (default): title fills available space */
 .title {
   flex: 1;
   font-size: 1.75rem;
@@ -32,7 +31,7 @@
   min-width: 0;
 }
 
-/* ---- Title: centered mode ---- */
+/* Centered mode: absolutely centered in header */
 .titleCentered {
   flex: none;
   position: absolute;
@@ -57,7 +56,8 @@
 
 @media (max-width: 600px) {
   .header {
-    min-height: 0;
+    min-height: 40px;
+    gap: 0.75rem;
   }
 
   .title {
@@ -66,7 +66,11 @@
 }
 
 @media (max-width: 480px) {
+  .header {
+    min-height: 36px;
+  }
+
   .title {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
   }
 }

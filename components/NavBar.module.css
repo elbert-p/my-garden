@@ -4,9 +4,7 @@
    2. Unbalanced (medium)  : center flows naturally between left & right
    3. Double-bar (narrow)  : two rows — title row + tabs/actions row
 
-   Layout mode is determined dynamically by JS measuring element widths.
-   The data-layout attribute on <nav> communicates the mode to children
-   (e.g. SortFilterControls) for compact styling.
+   data-layout attribute on <nav> communicates the mode to children.
    ================================================================ */
 
 .navbar {
@@ -29,7 +27,6 @@
   padding: 0 1rem;
 }
 
-/* ---- Far left / right ---- */
 .navLeft {
   display: flex;
   align-items: center;
@@ -63,27 +60,39 @@
   min-width: 0;
 }
 
+/* Tighter gap between title and badges in double-bar */
+.navCenterDouble .titleGroup {
+  gap: 0.35rem;
+}
+
+/* When title can't be centered, left-align in available space */
+.navCenterDoubleLeft {
+  justify-content: flex-start;
+}
+
 /* ============ TITLE GROUP ============ */
 
 .titleGroup {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  min-width: 80px;
   flex-shrink: 1;
+  min-width: 0;
 }
 
-/* Double-bar: absolutely center the TITLE (not group) in the viewport.
-   --title-extra is set by JS to the badge-area width.
-   Transform offsets by half that so the title text itself is centered. */
+/* Double-bar centered: absolutely center the title text.
+   --title-extra (set by JS) = badge-area width.
+   Transform offsets by half that so the title itself is centered. */
 .titleGroupCentered {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(calc(-50% + var(--title-extra, 0px) / 2), -50%);
-  max-width: calc(100% - 8rem); /* safety cap so it doesn't overlap sides */
+  max-width: calc(100% - 8rem);
 }
 
+/* Title: no CSS min-width — layout minimum is handled in JS
+   conditionally (60px when badges present, 0 otherwise). */
 .title {
   font-size: 1.35rem;
   font-weight: 700;
@@ -92,6 +101,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  min-width: 0
 }
 
 .badge {
@@ -125,7 +135,6 @@
   flex-shrink: 0;
 }
 
-/* Hidden but still measurable for layout calculations */
 .tabsHidden {
   position: absolute;
   visibility: hidden;
@@ -214,7 +223,6 @@
   color: #202124;
 }
 
-/* Search icon with active search (compact mode: green indicator) */
 .iconButtonSearchActive {
   background-color: #e6f4ea;
   color: #1e8e3e;
@@ -255,8 +263,6 @@
   align-items: center;
 }
 
-/* Search input uses min() so it never exceeds a vw fraction,
-   preventing layout thrashing when opened in compact modes. */
 .searchInput {
   width: min(200px, 45vw);
   height: 40px;
@@ -304,13 +310,11 @@
    DOUBLE-BAR LAYOUT
    ================================================================ */
 
-/* First row needs position context for absolutely centered title */
 .navContentDouble {
   height: 48px;
   position: relative;
 }
 
-/* ---- Second row ---- */
 .secondRow {
   border-top: 1px solid #f1f3f4;
 }
@@ -447,6 +451,8 @@
     border-radius: 11px;
   }
 
+  /* iconButton & homeButton: 32px inherited from 768px? No — 768px sets 36px.
+     Phone needs the smaller 32px size. */
   .iconButton {
     width: 32px;
     height: 32px;

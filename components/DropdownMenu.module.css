@@ -97,8 +97,7 @@
   margin: 4px 0;
 }
 
-/* ---- Responsive: match navbar button sizes ---- */
-
+/* Standalone menu button (not navbar) stays at 36px min */
 @media (max-width: 768px) {
   .menuButton {
     width: 36px;
@@ -107,10 +106,7 @@
 }
 
 @media (max-width: 480px) {
-  .menuButton {
-    width: 32px;
-    height: 32px;
-  }
+  /* menuButton stays 36px from 768px breakpoint */
 
   .dropdown {
     min-width: 180px;
