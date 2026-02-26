@@ -236,3 +236,64 @@
 .resetButton:disabled:hover {
   text-decoration: none;
 }
+
+/* ---- ADD THESE to the END of /app/garden/[gardenId]/layout.module.css ---- */
+
+/* ============ PRIVACY MODE ============ */
+
+.privacyActions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Container for privacy mode — same max-width & horizontal padding
+   as .container, but reduced top padding so the banner sits closer
+   to the navbar without the full page-padding-block gap. */
+.privacyContent {
+  max-width: var(--page-max-width-large, 1200px);
+  margin: 0 auto;
+  padding: 1rem var(--page-padding-inline, 2rem) var(--page-padding-block, 2rem);
+}
+
+.privacyBanner {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 768px) {
+  .privacyContent {
+    padding: 0.75rem var(--page-padding-inline, 1.5rem) var(--page-padding-block, 1.5rem);
+  }
+
+  .privacyBanner {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+    margin-bottom: 0.85rem;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacyContent {
+    padding: 0.5rem var(--page-padding-inline, 1rem) var(--page-padding-block, 1rem);
+  }
+
+  .privacyBanner {
+    font-size: 0.82rem;
+    padding: 7px 12px;
+    margin-bottom: 0.75rem;
+    border-radius: 8px;
+  }
+
+  .privacyActions {
+    gap: 0.35rem;
+  }
+}

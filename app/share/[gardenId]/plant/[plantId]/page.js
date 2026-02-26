@@ -2,9 +2,13 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import { IoClose } from 'react-icons/io5';
+import { FiCopy } from 'react-icons/fi';
 import { useSharedGarden } from '@/context/SharedGardenContext';
 import { getSharedPlant } from '@/lib/dataService';
+import { setCopiedPlant } from '@/lib/clipboardStorage';
 import PageHeader from '@/components/PageHeader';
+import DropdownMenu from '@/components/DropdownMenu';
+import RichText from '@/components/RichText';
 import styles from './page.module.css';
 
 export default function SharedPlantPage() {
@@ -15,9 +19,7 @@ export default function SharedPlantPage() {
   const [selImg, setSelImg] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Fetch the plant directly — don't wait for the full garden plants list
   useEffect(() => {
-    // Check if already in context
     if (plantsLoaded) {
       const cached = plants.find(p => p.id === plantId);
       if (cached) {
@@ -27,7 +29,6 @@ export default function SharedPlantPage() {
       }
     }
 
-    // Fetch independently
     (async () => {
       try {
         const data = await getSharedPlant(plantId);
@@ -51,6 +52,28 @@ export default function SharedPlantPage() {
     const [year, month, day] = d.split('-').map(Number);
     return new Date(year, month - 1, day).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
   };
+
+  const onCopyPlant = () => {
+    if (!plant) return;
+    setCopiedPlant({
+      commonName: plant.commonName,
+      scientificName: plant.scientificName,
+      mainImage: plant.mainImage,
+      datePlanted: plant.datePlanted,
+      bloomTime: plant.bloomTime,
+      height: plant.height,
+      sunlight: plant.sunlight,
+      moisture: plant.moisture,
+      nativeRange: plant.nativeRange,
+      notes: plant.notes,
+      images: plant.images,
+      hasAutofilled: plant.hasAutofilled,
+    });
+  };
+
+  const copyMenu = [
+    { icon: <FiCopy size={16} />, label: 'Copy Plant', onClick: onCopyPlant },
+  ];
 
   const Field = ({ label, value }) => value && (Array.isArray(value) ? value.length > 0 : true) ? (
     <div className={styles.field}>
@@ -81,6 +104,7 @@ export default function SharedPlantPage() {
         <PageHeader
           title={plant.commonName || plant.scientificName || 'Plant'}
           backHref={`/share/${gardenId}`}
+          actions={<DropdownMenu items={copyMenu} />}
         />
 
         <div className={styles.details}>
@@ -100,7 +124,7 @@ export default function SharedPlantPage() {
             {plant.notes && (
               <div className={`${styles.field} ${styles.fieldLarge}`}>
                 <span className={styles.label}>Notes</span>
-                <span className={styles.value}>{plant.notes}</span>
+                <div className={styles.value}><RichText content={plant.notes} /></div>
               </div>
             )}
           </div>

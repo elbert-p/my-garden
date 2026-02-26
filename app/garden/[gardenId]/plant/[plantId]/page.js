@@ -2,8 +2,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { IoClose } from 'react-icons/io5';
-import { FiEdit, FiPlus, FiTrash2, FiDatabase, FiShare2 } from 'react-icons/fi';
+import { FiEdit, FiPlus, FiTrash2, FiDatabase, FiShare2, FiCopy } from 'react-icons/fi';
 import imageCompression from 'browser-image-compression';
+import { setCopiedPlant } from '@/lib/clipboardStorage';
 import { useGarden } from '@/context/GardenContext';
 import { getPlant, updatePlant, deletePlant } from '@/lib/dataService';
 import { uploadImage, deleteImage } from '@/lib/imageStorage';
@@ -131,6 +132,25 @@ export default function PlantPage() {
     if (addRef.current) addRef.current.value = '';
   };
 
+  const onCopyPlant = () => {
+    if (!plant) return;
+    setCopiedPlant({
+      commonName: plant.commonName,
+      scientificName: plant.scientificName,
+      mainImage: plant.mainImage,
+      datePlanted: plant.datePlanted,
+      bloomTime: plant.bloomTime,
+      height: plant.height,
+      sunlight: plant.sunlight,
+      moisture: plant.moisture,
+      nativeRange: plant.nativeRange,
+      notes: plant.notes,
+      images: plant.images,
+      hasAutofilled: plant.hasAutofilled,
+    });
+    // Brief visual feedback could be added here
+  };
+
   const onRemove = async (img) => {
     if (user?.id) deleteImage(img);
     await save({ ...temp, images: temp.images.filter(x => x !== img) });
@@ -203,7 +223,8 @@ export default function PlantPage() {
   const plantMenu = [
     { icon: <FiEdit size={16} />, label: 'Edit', onClick: () => { setTemp({ ...plant }); setEditing(true); }},
     { icon: <FiDatabase size={16} />, label: 'Autofill', onClick: onAutofillClick },
-    { icon: <FiShare2 size={16} />, label: 'Share Plant', onClick: handleShare },
+    { icon: <FiCopy size={16} />, label: 'Copy Plant', onClick: onCopyPlant },
+    { icon: <FiShare2 size={16} />, label: 'Share Plant', onClick: handleShare, variant: 'share' },
     { divider: true },
     { icon: <FiTrash2 size={16} />, label: 'Delete', onClick: () => setShowDeleteModal(true), danger: true },
   ];

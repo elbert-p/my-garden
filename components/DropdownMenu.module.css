@@ -83,6 +83,22 @@
   background-color: #fce8e6;
 }
 
+.itemShare {
+  color: #1a73e8;
+}
+
+.itemShare:hover {
+  background-color: #e8f0fe;
+}
+
+/* .itemSave {
+  color: #b06000;
+} */
+
+.itemSave:hover {
+  background-color: #fef3e0;
+}
+
 .icon {
   display: flex;
   align-items: center;
@@ -106,8 +122,6 @@
 }
 
 @media (max-width: 480px) {
-  /* menuButton stays 36px from 768px breakpoint */
-
   .dropdown {
     min-width: 180px;
   }

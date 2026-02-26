@@ -1,9 +1,6 @@
 .grid {
   display: grid;
-  /* min(250px, calc(50% - 1rem)) ensures minimum 2 columns above ~300px,
-     and ~4 columns at typical desktop width (~1136px content). */
   grid-template-columns: repeat(auto-fill, minmax(min(250px, calc(50% - 1rem)), 1fr));
-  /* Gap is at most the page inline padding for the current breakpoint */
   gap: min(2rem, var(--page-padding-inline, 2rem));
 }
 
@@ -35,13 +32,28 @@
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
+.itemClickable {
+  cursor: pointer;
+  user-select: none;
+}
+
 .itemDimmed {
   opacity: 0.5;
   transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.itemDimmed:hover {
+/* Show full opacity on hover for dimmed items — but NOT in selection mode,
+   where the dim/undim must reflect the checkbox state, not hover */
+.itemDimmed:hover:not(.itemClickable) {
   opacity: 1;
+}
+
+/* Touch devices: prevent sticky hover transform/shadow on selection items */
+@media (hover: none) {
+  .itemClickable:hover {
+    transform: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .imageContainer {
@@ -91,6 +103,32 @@
   padding-inline: 2px;
 }
 
+/* ============ SELECTION CHECKBOX ============ */
+/* Circle with white outline matching .badge border style */
+
+.selectionCheckbox {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 2;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.selectionChecked {
+  background-color: #1a73e8;
+  border-color: white;
+}
+
 /* ============ GROUPED (with sort markers) ============ */
 
 .grouped {
@@ -114,6 +152,17 @@
   border-bottom: 1px solid #e8eaed;
 }
 
+/* ============ SECTION HEADER (for home page) ============ */
+
+.sectionHeader {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3c4043;
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #e8eaed;
+}
+
 /* ---- Responsive ---- */
 
 @media (max-width: 768px) {
@@ -130,6 +179,13 @@
     font-size: 0.85rem;
   }
 
+  .selectionCheckbox {
+    top: 6px;
+    right: 6px;
+    width: 26px;
+    height: 26px;
+  }
+
   .empty {
     margin-top: 3rem;
     font-size: 1rem;
@@ -141,6 +197,12 @@
 
   .marker {
     font-size: 0.8rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .sectionHeader {
+    font-size: 1rem;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
   }
@@ -161,6 +223,13 @@
     border-radius: 11px;
   }
 
+  .selectionCheckbox {
+    top: 4px;
+    right: 4px;
+    width: 24px;
+    height: 24px;
+  }
+
   .empty {
     margin-top: 2rem;
     font-size: 0.95rem;
@@ -172,6 +241,12 @@
 
   .marker {
     font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.4rem;
+  }
+
+  .sectionHeader {
+    font-size: 0.92rem;
     margin-bottom: 0.75rem;
     padding-bottom: 0.4rem;
   }

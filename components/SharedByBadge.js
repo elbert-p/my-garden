@@ -1,5 +1,6 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
 import { FiUser } from 'react-icons/fi';
 import styles from './SharedByBadge.module.css';
 
@@ -20,6 +21,7 @@ export default function SharedByBadge({ user, compact }) {
 
   const displayName = user?.display_name || user?.email?.split('@')[0] || 'User';
   const avatarUrl = user?.avatar_url;
+  const profileHref = user?.id ? `/share/user/${user.id}` : null;
 
   return (
     <div className={styles.container} ref={menuRef}>
@@ -50,10 +52,17 @@ export default function SharedByBadge({ user, compact }) {
             {user?.email && <div className={styles.userEmail}>{user.email}</div>}
           </div>
           <div className={styles.divider} />
-          <button className={styles.menuItem} disabled>
-            <FiUser size={16} />
-            <span>Profile</span>
-          </button>
+          {profileHref ? (
+            <Link href={profileHref} className={styles.menuItem} onClick={() => setIsOpen(false)}>
+              <FiUser size={16} />
+              <span>Profile</span>
+            </Link>
+          ) : (
+            <button className={styles.menuItem} disabled>
+              <FiUser size={16} />
+              <span>Profile</span>
+            </button>
+          )}
         </div>
       )}
     </div>

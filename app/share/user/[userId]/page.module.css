@@ -1,0 +1,40 @@
+/* Shared profile gardens — /app/share/user/[userId]/page.module.css */
+
+.container {
+  max-width: var(--page-max-width-large, 1200px);
+  margin: 0 auto;
+  padding: var(--page-padding-block, 2rem) var(--page-padding-inline, 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.sectionEmpty {
+  color: #9aa0a6;
+  font-style: italic;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 768px) {
+  .container {
+    gap: 2rem;
+  }
+
+  .sectionEmpty {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    gap: 1.5rem;
+  }
+
+  .sectionEmpty {
+    font-size: 0.85rem;
+    padding: 0.35rem 0;
+  }
+}

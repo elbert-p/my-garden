@@ -6,7 +6,7 @@ import styles from './DropdownMenu.module.css';
 /**
  * Reusable Dropdown Menu Component
  * @param {Array} items - Array of menu items: { icon, label, onClick, danger?, variant?, divider? }
- *   - variant: 'default' | 'success' | 'danger'
+ *   - variant: 'default' | 'success' | 'danger' | 'share' | 'save'
  *   - danger: shorthand for variant='danger'
  *   - divider: if true, renders a divider line instead of a button
  * @param {React.ReactNode} icon - Custom icon for the trigger button (default: hamburger)
@@ -48,9 +48,14 @@ export default function DropdownMenu({ items, icon, buttonClassName }) {
     switch (variant) {
       case 'success': return `${styles.item} ${styles.itemSuccess}`;
       case 'danger': return `${styles.item} ${styles.itemDanger}`;
+      case 'share': return `${styles.item} ${styles.itemShare}`;
+      case 'save': return `${styles.item} ${styles.itemSave}`;
       default: return styles.item;
     }
   };
+
+  // Filter out items where visible === false
+  const visibleItems = items.filter(item => item.visible !== false);
 
   return (
     <div className={styles.container} ref={menuRef}>
@@ -63,7 +68,7 @@ export default function DropdownMenu({ items, icon, buttonClassName }) {
       </button>
       {isOpen && (
         <div className={styles.dropdown}>
-          {items.map((item, index) => {
+          {visibleItems.map((item, index) => {
             if (item.divider) {
               return <div key={index} className={styles.divider} />;
             }
