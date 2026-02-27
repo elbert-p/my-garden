@@ -13,7 +13,7 @@ import {
   getLocalSavedGardens, getLocalRecentlyViewed,
   getCopyGardenSource, clearCopyGardenSource,
 } from '@/lib/clipboardStorage';
-import { getSharedGardenInfo } from '@/lib/dataService';
+import { getSharedGardenInfo, getSharedGardenPlants } from '@/lib/dataService';
 import NavBar from '@/components/NavBar';
 import ItemGrid, { ItemGridSection } from '@/components/ItemGrid';
 import Modal from '@/components/Modal';
@@ -71,36 +71,36 @@ export default function Home() {
         // Just show the empty state
 
         // Load saved gardens
+        let loadedSaved = [];
         if (user?.id) {
-          const saved = await getSavedGardens(user.id);
-          setSavedGardens(saved);
+          loadedSaved = await getSavedGardens(user.id);
+          setSavedGardens(loadedSaved);
         } else {
           // For non-logged-in, load from localStorage and fetch garden info
           const localSavedIds = getLocalSavedGardens();
-          const localSaved = [];
           for (const id of localSavedIds) {
             try {
               const info = await getSharedGardenInfo(id);
-              if (info?.garden) localSaved.push(info.garden);
+              if (info?.garden) loadedSaved.push(info.garden);
             } catch { /* skip */ }
           }
-          setSavedGardens(localSaved);
+          setSavedGardens(loadedSaved);
         }
 
         // Load recently viewed
+        let loadedRecent = [];
         if (user?.id) {
-          const recent = await getRecentlyViewedGardens(user.id);
-          setRecentGardens(recent);
+          loadedRecent = await getRecentlyViewedGardens(user.id);
+          setRecentGardens(loadedRecent);
         } else {
           const localRecent = getLocalRecentlyViewed();
-          const recentList = [];
           for (const entry of localRecent.slice(0, 10)) {
             try {
               const info = await getSharedGardenInfo(entry.id);
-              if (info?.garden) recentList.push(info.garden);
+              if (info?.garden) loadedRecent.push(info.garden);
             } catch { /* skip */ }
           }
-          setRecentGardens(recentList);
+          setRecentGardens(loadedRecent);
         }
 
         // Load visibility settings
@@ -111,7 +111,7 @@ export default function Home() {
 
         setIsLoading(false);
 
-        // Load plant counts in background
+        // Load plant counts in background for all sections
         const counts = {};
         for (const garden of result) {
           try {
@@ -119,7 +119,23 @@ export default function Home() {
             counts[garden.id] = plants.length;
           } catch { /* skip */ }
         }
-        setPlantCounts(counts);
+        setPlantCounts({ ...counts });
+
+        // Load counts for saved & recently viewed gardens (shared endpoint)
+        const sharedIds = new Set();
+        [...loadedSaved, ...loadedRecent].forEach(g => {
+          if (!counts[g.id]) sharedIds.add(g.id);
+        });
+        const sharedCounts = {};
+        for (const id of sharedIds) {
+          try {
+            const plants = await getSharedGardenPlants(id);
+            sharedCounts[id] = plants.length;
+          } catch { /* skip */ }
+        }
+        if (Object.keys(sharedCounts).length > 0) {
+          setPlantCounts(prev => ({ ...prev, ...sharedCounts }));
+        }
       } catch (e) {
         console.error('Failed to load:', e);
         setIsLoading(false);
@@ -306,8 +322,8 @@ export default function Home() {
   const menuItems = [
     { icon: <FiPlus size={16} />, label: 'New Garden', onClick: () => setShowModal(true), variant: 'success' },
     { divider: true },
-    { icon: <FiShare2 size={16} />, label: 'Share Profile', onClick: handleShare, variant: 'share' },
     { icon: <FiEye size={16} />, label: 'Edit Privacy', onClick: startPrivacyMode, visible: isAuthenticated },
+    { icon: <FiShare2 size={16} />, label: 'Share Profile', onClick: handleShare, variant: 'share' },
   ];
 
   return (
@@ -332,7 +348,7 @@ export default function Home() {
       <div className={styles.container}>
         {privacyMode && (
           <div className={styles.privacyBanner}>
-            Select which gardens are visible on your shared profile. Checked gardens will be visible to others.
+            Select which gardens are visible on your shared profile. Checked gardens will be shown to others.
           </div>
         )}
 
@@ -375,6 +391,7 @@ export default function Home() {
                   getItemId={(g) => g.id}
                   getItemImage={(g) => g.image || DEFAULT_GARDEN_IMAGE}
                   getItemName={(g) => g.name}
+                  getItemBadge={!privacyMode ? (g) => plantCounts[g.id] != null ? plantCounts[g.id] : null : undefined}
                   selectionMode={privacyMode}
                   selectedIds={savedSelectedIds}
                   onToggleSelection={(id) => togglePrivacySelection(id, 'saved')}
@@ -395,6 +412,7 @@ export default function Home() {
                   getItemId={(g) => g.id}
                   getItemImage={(g) => g.image || DEFAULT_GARDEN_IMAGE}
                   getItemName={(g) => g.name}
+                  getItemBadge={!privacyMode ? (g) => plantCounts[g.id] != null ? plantCounts[g.id] : null : undefined}
                   selectionMode={privacyMode}
                   selectedIds={recentSelectedIds}
                   onToggleSelection={(id) => togglePrivacySelection(id, 'recent')}
