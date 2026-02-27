@@ -10,6 +10,11 @@ import styles from './NavBar.module.css';
 
 const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
+// Pixels of extra space required before switching OUT of a mode.
+// Prevents oscillation at the boundary where measurements differ
+// between the two DOM structures (single-row vs double-bar).
+const HYSTERESIS = 20;
+
 export default function NavBar({
   title,
   badge,
@@ -40,6 +45,10 @@ export default function NavBar({
   isSearchOpenRef.current = isSearchOpen;
 
   const actionsWidthCache = useRef(0);
+
+  // Synchronous ref for current layout mode — avoids stale closures in
+  // ResizeObserver and lets hysteresis compare against the true current mode.
+  const layoutModeRef = useRef('balanced');
 
   const hasActions = !!(extraActions || showSearch || (menuItems && menuItems.length > 0));
   const hasTabs = tabs.length > 0;
@@ -96,8 +105,6 @@ export default function NavBar({
       const groupGap = parseFloat(getComputedStyle(titleGroup).gap) || 0;
       let visibleCount = 0;
       for (const child of titleGroup.children) {
-        // For the title h1, use scrollWidth (unconstrained text width)
-        // For badges/other elements, use offsetWidth (they have flex-shrink: 0)
         const childW = child === titleEl ? titleTextW : child.offsetWidth;
         if (childW > 0) {
           idealGroupW += childW;
@@ -133,8 +140,19 @@ export default function NavBar({
 
     const singleRowNeeded = leftW + rightW + navPad + minCenterW;
 
+    // ---- Hysteresis ----
+    // When currently in double-bar mode, require HYSTERESIS extra pixels
+    // of viewport width before switching back to single-row. This prevents
+    // oscillation: measurements taken in double-bar mode (where tabs/actions
+    // live in a different DOM parent) may differ slightly from single-row
+    // measurements, causing the threshold to flip back and forth.
+    const currentMode = layoutModeRef.current;
+    const singleRowThreshold = currentMode === 'double'
+      ? singleRowNeeded + HYSTERESIS
+      : singleRowNeeded;
+
     let mode;
-    if (vw < singleRowNeeded) {
+    if (vw < singleRowThreshold) {
       mode = 'double';
     } else {
       const balancedSide = Math.max(leftW, rightW);
@@ -160,6 +178,8 @@ export default function NavBar({
       titleGroup.style.setProperty('--title-extra', `${extraW}px`);
     }
 
+    // Update ref synchronously so the next callback sees the right mode
+    layoutModeRef.current = mode;
     setLayoutMode(mode);
     setDoubleCentered(centered);
   }, [contentWidth, hasBadgeChildren]);
@@ -167,15 +187,28 @@ export default function NavBar({
   useIsomorphicLayoutEffect(() => {
     updateLayout();
 
-    const ro = new ResizeObserver(updateLayout);
+    // Debounce ResizeObserver with requestAnimationFrame — coalesces
+    // rapid-fire callbacks (from DOM restructuring during a mode switch)
+    // into a single layout pass per frame, preventing cascading re-entries.
+    let rafId = null;
+    const debouncedUpdate = () => {
+      if (rafId !== null) return;
+      rafId = requestAnimationFrame(() => {
+        rafId = null;
+        updateLayout();
+      });
+    };
+
+    const ro = new ResizeObserver(debouncedUpdate);
     [leftRef, rightRef, titleGroupRef, tabsRef, actionsRef].forEach(r => {
       if (r.current) ro.observe(r.current);
     });
-    window.addEventListener('resize', updateLayout);
+    window.addEventListener('resize', debouncedUpdate);
 
     return () => {
       ro.disconnect();
-      window.removeEventListener('resize', updateLayout);
+      window.removeEventListener('resize', debouncedUpdate);
+      if (rafId !== null) cancelAnimationFrame(rafId);
     };
   }, [updateLayout]);
 
