@@ -357,7 +357,7 @@
   }
 
   .searchInput {
-    width: min(170px, 40vw);
+    width: 165px;
   }
 
   .navCenter {

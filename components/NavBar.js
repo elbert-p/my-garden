@@ -41,14 +41,14 @@ export default function NavBar({
   const tabsRef = useRef(null);
   const actionsRef = useRef(null);
 
+  // Synchronous ref for current layout mode — avoids stale closures in
+  // ResizeObserver and lets hysteresis compare against the true current mode.
+  const layoutModeRef = useRef('balanced');
+
   const isSearchOpenRef = useRef(false);
   isSearchOpenRef.current = isSearchOpen;
 
   const actionsWidthCache = useRef(0);
-
-  // Synchronous ref for current layout mode — avoids stale closures in
-  // ResizeObserver and lets hysteresis compare against the true current mode.
-  const layoutModeRef = useRef('balanced');
 
   const hasActions = !!(extraActions || showSearch || (menuItems && menuItems.length > 0));
   const hasTabs = tabs.length > 0;
@@ -116,16 +116,13 @@ export default function NavBar({
       }
     }
 
-    // When badges are present, ensure the title gets at least 60px in the
-    // layout calculation so the navbar switches to double-bar rather than
-    // letting badges squeeze the title to nothing.
-    let titleW;
-    if (hasBadgeChildren && titleTextW < 60 && idealGroupW > 0) {
-      const badgeAreaW = Math.max(0, idealGroupW - titleTextW);
-      titleW = 60 + badgeAreaW;
-    } else {
-      titleW = idealGroupW;
-    }
+    // For the single-row threshold: the title text can truncate (overflow:
+    // hidden + ellipsis), so cap its contribution at 60px. Badges and other
+    // title-group children are flex-shrink: 0 and keep their full width.
+    // This prevents badge width changes (e.g. "12" → "5 / 12") from
+    // triggering a mode switch when the title is already being truncated.
+    const nonTitleW = Math.max(0, idealGroupW - titleTextW);
+    const titleW = (titleTextW > 0 ? Math.min(titleTextW, 60) : 0) + nonTitleW;
 
     const tabsW = tabsRef.current?.scrollWidth || 0;
     if (!isSearchOpenRef.current && actionsRef.current) {
@@ -136,7 +133,10 @@ export default function NavBar({
     const gap = vw > 1024 ? 24 : 16;
     const parts = [titleW, tabsW, actionsW].filter(w => w > 0);
     const gapsTotal = Math.max(0, parts.length - 1) * gap;
-    const minCenterW = titleW + tabsW + actionsW + gapsTotal;
+    // The spacer div between titleGroup and tabs/actions adds one more
+    // flex-gap slot that the parts count doesn't capture.
+    const spacerGap = (tabsW > 0 || actionsW > 0) ? gap : 0;
+    const minCenterW = titleW + tabsW + actionsW + gapsTotal + spacerGap;
 
     const singleRowNeeded = leftW + rightW + navPad + minCenterW;
 
@@ -189,7 +189,7 @@ export default function NavBar({
 
     // Debounce ResizeObserver with requestAnimationFrame — coalesces
     // rapid-fire callbacks (from DOM restructuring during a mode switch)
-    // into a single layout pass per frame, preventing cascading re-entries.
+    // into a single layout pass per frame.
     let rafId = null;
     const debouncedUpdate = () => {
       if (rafId !== null) return;
