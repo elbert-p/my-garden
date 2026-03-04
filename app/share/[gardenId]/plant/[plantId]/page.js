@@ -65,6 +65,8 @@ export default function SharedPlantPage() {
       sunlight: plant.sunlight,
       moisture: plant.moisture,
       nativeRange: plant.nativeRange,
+      plantType: plant.plantType,
+      hostedInsects: plant.hostedInsects,
       notes: plant.notes,
       images: plant.images,
       hasAutofilled: plant.hasAutofilled,
@@ -121,6 +123,8 @@ export default function SharedPlantPage() {
             <Field label="Sunlight" value={plant.sunlight} />
             <Field label="Moisture" value={plant.moisture} />
             <Field label="Native Range" value={plant.nativeRange} />
+            <Field label="Plant Type" value={plant.plantType} />
+            <Field label="Hosted Insects" value={plant.hostedInsects} />
             {plant.notes && (
               <div className={`${styles.field} ${styles.fieldLarge}`}>
                 <span className={styles.label}>Notes</span>

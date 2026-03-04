@@ -8,7 +8,7 @@ import { setCopiedPlant } from '@/lib/clipboardStorage';
 import { useGarden } from '@/context/GardenContext';
 import { getPlant, updatePlant, deletePlant } from '@/lib/dataService';
 import { uploadImage, deleteImage } from '@/lib/imageStorage';
-import { BLOOM_OPTIONS, SUN_OPTIONS, MOISTURE_OPTIONS, NATIVE_OPTIONS } from '@/lib/plantConstants';
+import { BLOOM_OPTIONS, SUN_OPTIONS, MOISTURE_OPTIONS, NATIVE_OPTIONS, PLANT_TYPE_OPTIONS } from '@/lib/plantConstants';
 import PageHeader from '@/components/PageHeader';
 import DropdownMenu from '@/components/DropdownMenu';
 import Modal, { ConfirmModal } from '@/components/Modal';
@@ -144,6 +144,8 @@ export default function PlantPage() {
       sunlight: plant.sunlight,
       moisture: plant.moisture,
       nativeRange: plant.nativeRange,
+      plantType: plant.plantType,
+      hostedInsects: plant.hostedInsects,
       notes: plant.notes,
       images: plant.images,
       hasAutofilled: plant.hasAutofilled,
@@ -204,6 +206,7 @@ export default function PlantPage() {
       height: autofillData['Height'] || temp.height,
       sunlight: autofillData['Sunlight'] || temp.sunlight,
       moisture: autofillData['Moisture'] || temp.moisture,
+      plantType: autofillData['plantType']?.[0] || temp.plantType,
       hasAutofilled: true
     });
     setShowAutofillModal(false);
@@ -275,6 +278,8 @@ export default function PlantPage() {
               <InfoField label="Sunlight" value={temp.sunlight} onChange={v => setTemp({ ...temp, sunlight: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={SUN_OPTIONS} />
               <InfoField label="Moisture" value={temp.moisture} onChange={v => setTemp({ ...temp, moisture: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={MOISTURE_OPTIONS} />
               <InfoField label="Native Range" value={temp.nativeRange} onChange={v => setTemp({ ...temp, nativeRange: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={NATIVE_OPTIONS} />
+              <InfoField label="Plant Type" value={temp.plantType} onChange={v => setTemp({ ...temp, plantType: v })} onSave={() => save(temp)} isEditing={editing} type="dropdown" options={PLANT_TYPE_OPTIONS} />
+              <InfoField label="Hosted Insects" value={temp.hostedInsects} onChange={v => setTemp({ ...temp, hostedInsects: v })} onSave={() => save(temp)} isEditing={editing} type="text" placeholder="e.g., Monarch; Swallowtail; Bumblebee" />
               <InfoField label="Notes" value={temp.notes} onChange={v => setTemp({ ...temp, notes: v })} onSave={() => save(temp)} isEditing={editing} type="textarea" emptyText="No notes" size="large" />
             </div>
           </div>

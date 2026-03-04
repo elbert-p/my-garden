@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { FiFilter, FiArrowUp, FiArrowDown, FiX, FiCheck } from 'react-icons/fi';
 import { TbArrowsSort } from 'react-icons/tb';
-import { BLOOM_OPTIONS, SUN_OPTIONS, MOISTURE_OPTIONS, NATIVE_OPTIONS } from '@/lib/plantConstants';
+import { BLOOM_OPTIONS, SUN_OPTIONS, MOISTURE_OPTIONS, NATIVE_OPTIONS, PLANT_TYPE_OPTIONS } from '@/lib/plantConstants';
 import styles from './SortFilterControls.module.css';
 
 // ============ CONSTANTS ============
@@ -14,6 +14,7 @@ const SORT_OPTIONS = [
   { key: 'bloomTime', label: 'Earliest Bloom' },
   { key: 'sunlight', label: 'Sunlight' },
   { key: 'moisture', label: 'Moisture' },
+  { key: 'hostedInsects', label: 'Hosted Insects' },
 ];
 
 const MULTI_FILTER_CATEGORIES = [
@@ -21,6 +22,7 @@ const MULTI_FILTER_CATEGORIES = [
   { key: 'sunlight', label: 'Sunlight', options: SUN_OPTIONS },
   { key: 'moisture', label: 'Moisture', options: MOISTURE_OPTIONS },
   { key: 'nativeRange', label: 'Native Range', options: NATIVE_OPTIONS },
+  { key: 'plantType', label: 'Plant Type', options: PLANT_TYPE_OPTIONS },
 ];
 
 const HEIGHT_OPS = [
@@ -110,6 +112,11 @@ function getEarliestBloom(bloomArr) {
   return Math.min(...bloomArr.map(b => BLOOM_ORDER[b] ?? 99));
 }
 
+function getHostedInsectCount(str) {
+  if (!str || !str.trim()) return 0;
+  return str.split(';').filter(s => s.trim()).length;
+}
+
 function comparePlants(a, b, sortKey) {
   switch (sortKey) {
     case 'name': {
@@ -139,6 +146,8 @@ function comparePlants(a, b, sortKey) {
       return getComboRank(a.sunlight, SUN_RANKS, SUN_OPTIONS) - getComboRank(b.sunlight, SUN_RANKS, SUN_OPTIONS);
     case 'moisture':
       return getComboRank(a.moisture, MOISTURE_RANKS, MOISTURE_OPTIONS) - getComboRank(b.moisture, MOISTURE_RANKS, MOISTURE_OPTIONS);
+    case 'hostedInsects':
+      return getHostedInsectCount(a.hostedInsects) - getHostedInsectCount(b.hostedInsects);
     default:
       return 0;
   }
@@ -181,6 +190,7 @@ function isMissingField(plant, sortKey) {
     case 'bloomTime': return !plant.bloomTime?.length;
     case 'sunlight': return !plant.sunlight?.length;
     case 'moisture': return !plant.moisture?.length;
+    case 'hostedInsects': return !plant.hostedInsects || !plant.hostedInsects.trim();
     default: return false;
   }
 }
@@ -288,6 +298,10 @@ export function getSortGroups(sortedPlants, sort) {
       },
       sunlight: (p) => comboLabel(p.sunlight, SUN_OPTIONS),
       moisture: (p) => comboLabel(p.moisture, MOISTURE_OPTIONS),
+      hostedInsects: (p) => {
+        const count = getHostedInsectCount(p.hostedInsects);
+        return `${count} insect${count !== 1 ? 's' : ''}`;
+      },
     }[sort.key];
 
     if (!labelFn) return null;
