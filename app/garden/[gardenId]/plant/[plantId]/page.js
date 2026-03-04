@@ -294,9 +294,8 @@ export default function PlantPage() {
     { icon: <FiEdit size={16} />, label: 'Edit', onClick: () => { setTemp({ ...plant }); setEditing(true); }},
     { icon: <FiDatabase size={16} />, label: 'Autofill', onClick: onAutofillClick },
     { icon: <FiEye size={16} />, label: 'Edit Privacy', onClick: startPlantPrivacy, visible: !!user },
-    { divider: true },
-    { icon: <FiShare2 size={16} />, label: 'Share Plant', onClick: handleShare, variant: 'share' },
     { icon: <FiCopy size={16} />, label: 'Copy Plant', onClick: onCopyPlant },
+    { icon: <FiShare2 size={16} />, label: 'Share Plant', onClick: handleShare, variant: 'share' },
     { divider: true },
     { icon: <FiTrash2 size={16} />, label: 'Delete', onClick: () => setShowDeleteModal(true), danger: true },
   ];
@@ -358,7 +357,7 @@ export default function PlantPage() {
               {renderField('sunlight', <InfoField label="Sunlight" value={temp.sunlight} onChange={v => setTemp({ ...temp, sunlight: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={SUN_OPTIONS} />)}
               {renderField('moisture', <InfoField label="Moisture" value={temp.moisture} onChange={v => setTemp({ ...temp, moisture: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={MOISTURE_OPTIONS} />)}
               {renderField('nativeRange', <InfoField label="Native Range" value={temp.nativeRange} onChange={v => setTemp({ ...temp, nativeRange: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={NATIVE_OPTIONS} />)}
-              {renderField('plantType', <InfoField label="Plant Type" value={temp.plantType} onChange={v => setTemp({ ...temp, plantType: v })} onSave={() => save(temp)} isEditing={editing} type="dropdown" options={PLANT_TYPE_OPTIONS} />)}
+              {renderField('plantType', <InfoField label="Plant Type" value={temp.plantType} onChange={v => { const updated = { ...temp, plantType: v }; setTemp(updated); if (!editing) save(updated); }} isEditing={editing} type="dropdown" options={PLANT_TYPE_OPTIONS} />)}
               {renderField('hostedInsects', <InfoField label="Hosted Insects" value={temp.hostedInsects} onChange={v => setTemp({ ...temp, hostedInsects: v })} onSave={() => save(temp)} isEditing={editing} type="text" placeholder="e.g., Monarch; Swallowtail; Bumblebee" />)}
               {renderField('notes', <InfoField label="Notes" value={temp.notes} onChange={v => setTemp({ ...temp, notes: v })} onSave={() => save(temp)} isEditing={editing} type="textarea" emptyText="No notes" size="large" />, true)}
             </div>
