@@ -6,10 +6,12 @@ import styles from './page.module.css';
 const DEFAULT_GARDEN_IMAGE = '/default-garden.jpg';
 
 export default function SharedProfilePage() {
-  const { userId, createdGardens, savedGardens, recentGardens } = useSharedProfile();
+  const { userId, createdGardens, savedGardens, recentGardens, plantCounts } = useSharedProfile();
 
   const hasSaved = savedGardens.length > 0;
   const hasRecent = recentGardens.length > 0;
+
+  const getBadge = (g) => plantCounts[g.id] != null ? plantCounts[g.id] : null;
 
   return (
     <div className={styles.container}>
@@ -21,6 +23,7 @@ export default function SharedProfilePage() {
             getItemId={(g) => g.id}
             getItemImage={(g) => g.image || DEFAULT_GARDEN_IMAGE}
             getItemName={(g) => g.name}
+            getItemBadge={getBadge}
           />
         ) : (
           <p className={styles.sectionEmpty}>No shared gardens.</p>
@@ -35,6 +38,7 @@ export default function SharedProfilePage() {
             getItemId={(g) => g.id}
             getItemImage={(g) => g.image || DEFAULT_GARDEN_IMAGE}
             getItemName={(g) => g.name}
+            getItemBadge={getBadge}
           />
         </ItemGridSection>
       )}
@@ -47,6 +51,7 @@ export default function SharedProfilePage() {
             getItemId={(g) => g.id}
             getItemImage={(g) => g.image || DEFAULT_GARDEN_IMAGE}
             getItemName={(g) => g.name}
+            getItemBadge={getBadge}
           />
         </ItemGridSection>
       )}

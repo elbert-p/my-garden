@@ -51,15 +51,22 @@ export function SharedGardenProvider({ children }) {
     return () => { isMounted = false; };
   }, [gardenId]);
 
+  // Filter out hidden plants (garden-level privacy)
+  const hiddenPlantIds = garden?.customization?.hiddenPlantIds || [];
+  const visiblePlants = hiddenPlantIds.length > 0
+    ? plants.filter(p => !hiddenPlantIds.includes(p.id))
+    : plants;
+  const totalVisible = visiblePlants.length;
+
   // Filter by search, then apply sort & filters
   const searchFiltered = searchQuery.trim()
-    ? plants.filter(plant => {
+    ? visiblePlants.filter(plant => {
         const query = searchQuery.toLowerCase();
         const commonName = (plant.commonName || '').toLowerCase();
         const scientificName = (plant.scientificName || '').toLowerCase();
         return commonName.includes(query) || scientificName.includes(query);
       })
-    : plants;
+    : visiblePlants;
   
   const filteredPlants = applySortAndFilter(searchFiltered, sort, filters);
 
@@ -68,6 +75,7 @@ export function SharedGardenProvider({ children }) {
     gardenId,
     plants,
     filteredPlants,
+    totalVisible,
     owner,
     isLoading: gardenLoading,
     plantsLoaded,

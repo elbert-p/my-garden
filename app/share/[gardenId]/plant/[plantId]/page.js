@@ -77,12 +77,21 @@ export default function SharedPlantPage() {
     { icon: <FiCopy size={16} />, label: 'Copy Plant', onClick: onCopyPlant },
   ];
 
-  const Field = ({ label, value }) => value && (Array.isArray(value) ? value.length > 0 : true) ? (
-    <div className={styles.field}>
-      <span className={styles.label}>{label}</span>
-      <span className={styles.value}>{Array.isArray(value) ? value.join(', ') : value}</span>
-    </div>
-  ) : null;
+  const hiddenFields = plant?.plantPrivacy?.hiddenFields || [];
+  const hiddenImages = plant?.plantPrivacy?.hiddenImages || [];
+  const isFieldVisible = (key) => !hiddenFields.includes(key);
+  const visibleImages = (plant?.images || []).filter(img => !hiddenImages.includes(img));
+
+  const Field = ({ label, value, fieldKey }) => {
+    if (fieldKey && !isFieldVisible(fieldKey)) return null;
+    if (!value || (Array.isArray(value) && value.length === 0)) return null;
+    return (
+      <div className={styles.field}>
+        <span className={styles.label}>{label}</span>
+        <span className={styles.value}>{Array.isArray(value) ? value.join(', ') : value}</span>
+      </div>
+    );
+  };
 
   if (loading) {
     return (
@@ -114,18 +123,18 @@ export default function SharedPlantPage() {
             <img src={plant.mainImage || '/placeholder-plant.jpg'} alt="" className={styles.mainImage} />
           </div>
 
-          <div className={`${styles.infoGrid} ${!plant.images?.length ? styles.infoGridNoMargin : ''}`}>
-            <Field label="Common Name" value={plant.commonName} />
-            <Field label="Scientific Name" value={plant.scientificName} />
-            <Field label="Date Planted" value={formatDate(plant.datePlanted)} />
-            <Field label="Bloom Time" value={plant.bloomTime} />
-            <Field label="Height" value={plant.height} />
-            <Field label="Sunlight" value={plant.sunlight} />
-            <Field label="Moisture" value={plant.moisture} />
-            <Field label="Native Range" value={plant.nativeRange} />
-            <Field label="Plant Type" value={plant.plantType} />
-            <Field label="Hosted Insects" value={plant.hostedInsects} />
-            {plant.notes && (
+          <div className={`${styles.infoGrid} ${!visibleImages.length ? styles.infoGridNoMargin : ''}`}>
+            <Field label="Common Name" value={plant.commonName} fieldKey="commonName" />
+            <Field label="Scientific Name" value={plant.scientificName} fieldKey="scientificName" />
+            <Field label="Date Planted" value={formatDate(plant.datePlanted)} fieldKey="datePlanted" />
+            <Field label="Bloom Time" value={plant.bloomTime} fieldKey="bloomTime" />
+            <Field label="Height" value={plant.height} fieldKey="height" />
+            <Field label="Sunlight" value={plant.sunlight} fieldKey="sunlight" />
+            <Field label="Moisture" value={plant.moisture} fieldKey="moisture" />
+            <Field label="Native Range" value={plant.nativeRange} fieldKey="nativeRange" />
+            <Field label="Plant Type" value={plant.plantType} fieldKey="plantType" />
+            <Field label="Hosted Insects" value={plant.hostedInsects} fieldKey="hostedInsects" />
+            {isFieldVisible('notes') && plant.notes && (
               <div className={`${styles.field} ${styles.fieldLarge}`}>
                 <span className={styles.label}>Notes</span>
                 <div className={styles.value}><RichText content={plant.notes} /></div>
@@ -133,11 +142,11 @@ export default function SharedPlantPage() {
             )}
           </div>
 
-          {plant.images?.length > 0 && (
+          {visibleImages.length > 0 && (
             <div className={styles.photosSection}>
               <h2 className={styles.sectionTitle}>Additional Photos</h2>
               <div className={styles.imageGrid}>
-                {plant.images.map((img, i) => (
+                {visibleImages.map((img, i) => (
                   <div key={i} className={styles.photoItem} onClick={() => setSelImg(img)}>
                     <img src={img} alt="" className={styles.photo} />
                   </div>

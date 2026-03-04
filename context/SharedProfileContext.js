@@ -1,7 +1,7 @@
 'use client';
 import { createContext, useContext, useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
-import { getSharedProfileData } from '@/lib/dataService';
+import { getSharedProfileData, getSharedGardenPlants } from '@/lib/dataService';
 
 const SharedProfileContext = createContext();
 
@@ -12,6 +12,7 @@ export function SharedProfileProvider({ children }) {
   const [createdGardens, setCreatedGardens] = useState([]);
   const [savedGardens, setSavedGardens] = useState([]);
   const [recentGardens, setRecentGardens] = useState([]);
+  const [plantCounts, setPlantCounts] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -28,6 +29,25 @@ export function SharedProfileProvider({ children }) {
         setSavedGardens(data.savedGardens);
         setRecentGardens(data.recentGardens);
         setIsLoading(false);
+
+        // Load visible plant counts in background
+        const allGardens = [...data.createdGardens, ...data.savedGardens, ...data.recentGardens];
+        const seen = new Set();
+        const counts = {};
+        for (const garden of allGardens) {
+          if (seen.has(garden.id)) continue;
+          seen.add(garden.id);
+          try {
+            const plants = await getSharedGardenPlants(garden.id);
+            const hiddenIds = garden.customization?.hiddenPlantIds || [];
+            counts[garden.id] = hiddenIds.length > 0
+              ? plants.filter(p => !hiddenIds.includes(p.id)).length
+              : plants.length;
+          } catch { /* skip */ }
+        }
+        if (isMounted && Object.keys(counts).length > 0) {
+          setPlantCounts(counts);
+        }
       } catch (e) {
         if (!isMounted) return;
         console.error('Failed to load shared profile:', e);
@@ -46,6 +66,7 @@ export function SharedProfileProvider({ children }) {
     createdGardens,
     savedGardens,
     recentGardens,
+    plantCounts,
     isLoading,
     error,
   };

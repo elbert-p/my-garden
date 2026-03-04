@@ -209,7 +209,7 @@ function GardenLayoutContent({ children }) {
     { icon: <FiPlus size={16} />, label: 'Add Plant', onClick: () => setShowAddPlantModal(true), variant: 'success' },
     { icon: <FiEdit size={16} />, label: 'Edit Details', onClick: () => openEditModal() },
     { icon: <FiSliders size={16} />, label: 'Customize', onClick: () => openCustomizeModal() },
-    { icon: <FiEye size={16} />, label: 'Edit Privacy', onClick: startPrivacyMode, visible: !isSubPage },
+    { icon: <FiEye size={16} />, label: 'Edit Privacy', onClick: startPrivacyMode, visible: !isSubPage && !!user },
     { divider: true },
     { icon: <FiClipboard size={16} />, label: 'Paste Plant', onClick: handlePastePlant, variant: 'success', visible: hasCopiedPlant },
     { icon: <FiShare2 size={16} />, label: 'Share Garden', onClick: handleShare, variant: 'share' },

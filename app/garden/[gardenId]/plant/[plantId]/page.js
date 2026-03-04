@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { IoClose } from 'react-icons/io5';
-import { FiEdit, FiPlus, FiTrash2, FiDatabase, FiShare2, FiCopy } from 'react-icons/fi';
+import { FiEdit, FiPlus, FiTrash2, FiDatabase, FiShare2, FiCopy, FiEye, FiCheck } from 'react-icons/fi';
 import imageCompression from 'browser-image-compression';
 import { setCopiedPlant } from '@/lib/clipboardStorage';
 import { useGarden } from '@/context/GardenContext';
@@ -40,6 +40,12 @@ export default function PlantPage() {
   const [copied, setCopied] = useState(false);
   const [autofillData, setAutofillData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+
+  // Privacy mode
+  const [privacyMode, setPrivacyMode] = useState(false);
+  const [hiddenFieldsDraft, setHiddenFieldsDraft] = useState(new Set());
+  const [hiddenImagesDraft, setHiddenImagesDraft] = useState(new Set());
+
   const mainRef = useRef(null);
   const addRef = useRef(null);
 
@@ -85,11 +91,72 @@ export default function PlantPage() {
         setShowShareModal(false);
         setShowSignInModal(false);
         setShowDeletePhotoModal(false);
+        if (privacyMode) { setPrivacyMode(false); }
       }
     };
     document.addEventListener('keydown', esc);
     return () => document.removeEventListener('keydown', esc);
-  }, []);
+  }, [privacyMode]);
+
+  // Privacy mode handlers
+  const startPlantPrivacy = () => {
+    const privacy = plant?.plantPrivacy || {};
+    setHiddenFieldsDraft(new Set(privacy.hiddenFields || []));
+    setHiddenImagesDraft(new Set(privacy.hiddenImages || []));
+    setEditing(false);
+    setPrivacyMode(true);
+  };
+
+  const cancelPlantPrivacy = () => {
+    setPrivacyMode(false);
+    setHiddenFieldsDraft(new Set());
+    setHiddenImagesDraft(new Set());
+  };
+
+  const savePlantPrivacy = async () => {
+    const privacy = {
+      hiddenFields: Array.from(hiddenFieldsDraft),
+      hiddenImages: Array.from(hiddenImagesDraft),
+    };
+    await save({ ...plant, plantPrivacy: privacy });
+    setPrivacyMode(false);
+  };
+
+  const toggleFieldVisibility = (fieldKey) => {
+    setHiddenFieldsDraft(prev => {
+      const next = new Set(prev);
+      if (next.has(fieldKey)) next.delete(fieldKey);
+      else next.add(fieldKey);
+      return next;
+    });
+  };
+
+  const toggleImageVisibility = (imageUrl) => {
+    setHiddenImagesDraft(prev => {
+      const next = new Set(prev);
+      if (next.has(imageUrl)) next.delete(imageUrl);
+      else next.add(imageUrl);
+      return next;
+    });
+  };
+
+  // Helper: wrap an InfoField with privacy overlay
+  const renderField = (key, fieldJsx, large = false) => {
+    if (!privacyMode) return fieldJsx;
+    const isHidden = hiddenFieldsDraft.has(key);
+    return (
+      <div
+        key={key}
+        className={`${styles.privacyFieldWrapper} ${isHidden ? styles.privacyFieldDimmed : ''} ${large ? styles.privacyFieldLarge : ''}`}
+        onClick={() => toggleFieldVisibility(key)}
+      >
+        {fieldJsx}
+        <div className={`${styles.privacyCheckbox} ${!isHidden ? styles.privacyChecked : ''}`}>
+          {!isHidden && <FiCheck size={12} strokeWidth={3.5} />}
+        </div>
+      </div>
+    );
+  };
 
   const save = async (p) => {
     const u = await updatePlant(plantId, p, user?.id);
@@ -226,8 +293,10 @@ export default function PlantPage() {
   const plantMenu = [
     { icon: <FiEdit size={16} />, label: 'Edit', onClick: () => { setTemp({ ...plant }); setEditing(true); }},
     { icon: <FiDatabase size={16} />, label: 'Autofill', onClick: onAutofillClick },
-    { icon: <FiCopy size={16} />, label: 'Copy Plant', onClick: onCopyPlant },
+    { icon: <FiEye size={16} />, label: 'Edit Privacy', onClick: startPlantPrivacy, visible: !!user },
+    { divider: true },
     { icon: <FiShare2 size={16} />, label: 'Share Plant', onClick: handleShare, variant: 'share' },
+    { icon: <FiCopy size={16} />, label: 'Copy Plant', onClick: onCopyPlant },
     { divider: true },
     { icon: <FiTrash2 size={16} />, label: 'Delete', onClick: () => setShowDeleteModal(true), danger: true },
   ];
@@ -248,7 +317,12 @@ export default function PlantPage() {
             <em>{plant.scientificName}</em>) : ('Plant')}
           onBack={() => router.push(`/garden/${gardenId}`)}
           actions={
-            editing ? (
+            privacyMode ? (
+              <div className={styles.privacyActions}>
+                <Button variant="secondary" size="small" onClick={cancelPlantPrivacy}>Cancel</Button>
+                <Button size="small" onClick={savePlantPrivacy}>Save</Button>
+              </div>
+            ) : editing ? (
               <Button variant="success" onClick={async () => { await save(temp); setEditing(false); }}>
                 Save
               </Button>
@@ -259,34 +333,59 @@ export default function PlantPage() {
         />
 
         <div className={styles.details}>
+          {privacyMode && (
+            <div className={styles.privacyBanner}>
+              Select which fields and photos are visible when this plant is shared. Checked items will be visible to viewers.
+            </div>
+          )}
+
           <div
             className={`${styles.mainImageContainer} ${editing ? styles.mainImageEditing : ''}`}
-            onClick={() => mainRef.current?.click()}
+            onClick={() => !privacyMode && mainRef.current?.click()}
           >
             <img src={temp.mainImage || '/placeholder-plant.jpg'} alt="" className={styles.mainImage} />
-            <button className={styles.mainImageEditButton}><FiEdit size={18} /></button>
+            {!privacyMode && <button className={styles.mainImageEditButton}><FiEdit size={18} /></button>}
             <input ref={mainRef} type="file" onChange={onMain} className={styles.fileInput} accept="image/*" />
           </div>
 
           <div className={styles.infoGridWrapper}>
-            <div className={styles.infoGrid}>
-              <InfoField label="Common Name" value={temp.commonName} onChange={v => setTemp({ ...temp, commonName: v.trim() })} onSave={() => save(temp)} isEditing={editing} type="text" />
-              <InfoField label="Scientific Name" value={temp.scientificName} onChange={v => setTemp({ ...temp, scientificName: v.trim() })} onSave={() => save(temp)} isEditing={editing} type="text" />
-              <InfoField label="Date Planted" value={temp.datePlanted} onChange={v => setTemp({ ...temp, datePlanted: v })} onSave={() => save(temp)} isEditing={editing} type="date" formatDisplay={formatDateDisplay} />
-              <InfoField label="Bloom Time" value={temp.bloomTime} onChange={v => setTemp({ ...temp, bloomTime: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={BLOOM_OPTIONS} />
-              <InfoField label="Height" value={temp.height} onChange={v => setTemp({ ...temp, height: v })} onSave={() => save(temp)} isEditing={editing} type="text" placeholder="e.g., 2-3 ft" />
-              <InfoField label="Sunlight" value={temp.sunlight} onChange={v => setTemp({ ...temp, sunlight: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={SUN_OPTIONS} />
-              <InfoField label="Moisture" value={temp.moisture} onChange={v => setTemp({ ...temp, moisture: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={MOISTURE_OPTIONS} />
-              <InfoField label="Native Range" value={temp.nativeRange} onChange={v => setTemp({ ...temp, nativeRange: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={NATIVE_OPTIONS} />
-              <InfoField label="Plant Type" value={temp.plantType} onChange={v => setTemp({ ...temp, plantType: v })} onSave={() => save(temp)} isEditing={editing} type="dropdown" options={PLANT_TYPE_OPTIONS} />
-              <InfoField label="Hosted Insects" value={temp.hostedInsects} onChange={v => setTemp({ ...temp, hostedInsects: v })} onSave={() => save(temp)} isEditing={editing} type="text" placeholder="e.g., Monarch; Swallowtail; Bumblebee" />
-              <InfoField label="Notes" value={temp.notes} onChange={v => setTemp({ ...temp, notes: v })} onSave={() => save(temp)} isEditing={editing} type="textarea" emptyText="No notes" size="large" />
+            <div className={`${styles.infoGrid} ${privacyMode ? styles.infoGridPrivacy : ''}`}>
+              {renderField('commonName', <InfoField label="Common Name" value={temp.commonName} onChange={v => setTemp({ ...temp, commonName: v.trim() })} onSave={() => save(temp)} isEditing={editing} type="text" />)}
+              {renderField('scientificName', <InfoField label="Scientific Name" value={temp.scientificName} onChange={v => setTemp({ ...temp, scientificName: v.trim() })} onSave={() => save(temp)} isEditing={editing} type="text" />)}
+              {renderField('datePlanted', <InfoField label="Date Planted" value={temp.datePlanted} onChange={v => setTemp({ ...temp, datePlanted: v })} onSave={() => save(temp)} isEditing={editing} type="date" formatDisplay={formatDateDisplay} />)}
+              {renderField('bloomTime', <InfoField label="Bloom Time" value={temp.bloomTime} onChange={v => setTemp({ ...temp, bloomTime: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={BLOOM_OPTIONS} />)}
+              {renderField('height', <InfoField label="Height" value={temp.height} onChange={v => setTemp({ ...temp, height: v })} onSave={() => save(temp)} isEditing={editing} type="text" placeholder="e.g., 2-3 ft" />)}
+              {renderField('sunlight', <InfoField label="Sunlight" value={temp.sunlight} onChange={v => setTemp({ ...temp, sunlight: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={SUN_OPTIONS} />)}
+              {renderField('moisture', <InfoField label="Moisture" value={temp.moisture} onChange={v => setTemp({ ...temp, moisture: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={MOISTURE_OPTIONS} />)}
+              {renderField('nativeRange', <InfoField label="Native Range" value={temp.nativeRange} onChange={v => setTemp({ ...temp, nativeRange: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={NATIVE_OPTIONS} />)}
+              {renderField('plantType', <InfoField label="Plant Type" value={temp.plantType} onChange={v => setTemp({ ...temp, plantType: v })} onSave={() => save(temp)} isEditing={editing} type="dropdown" options={PLANT_TYPE_OPTIONS} />)}
+              {renderField('hostedInsects', <InfoField label="Hosted Insects" value={temp.hostedInsects} onChange={v => setTemp({ ...temp, hostedInsects: v })} onSave={() => save(temp)} isEditing={editing} type="text" placeholder="e.g., Monarch; Swallowtail; Bumblebee" />)}
+              {renderField('notes', <InfoField label="Notes" value={temp.notes} onChange={v => setTemp({ ...temp, notes: v })} onSave={() => save(temp)} isEditing={editing} type="textarea" emptyText="No notes" size="large" />, true)}
             </div>
           </div>
 
           <div className={`${styles.photosSection} ${editing ? styles.photosSectionEditing : ''}`}>
             <h2 className={styles.sectionTitle}>Additional Photos</h2>
-            {temp.images?.length > 0 ? (
+            {privacyMode ? (
+              (plant.images?.length > 0) ? (
+                <div className={styles.imageGrid}>
+                  {plant.images.map((img, i) => {
+                    const isImgHidden = hiddenImagesDraft.has(img);
+                    return (
+                      <div key={i} className={`${styles.photoItem} ${isImgHidden ? styles.privacyFieldDimmed : ''}`}
+                        onClick={() => toggleImageVisibility(img)}>
+                        <img src={img} alt="" className={styles.photo} />
+                        <div className={`${styles.privacyCheckbox} ${!isImgHidden ? styles.privacyChecked : ''}`}>
+                          {!isImgHidden && <FiCheck size={14} strokeWidth={3.5} />}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                <p className={styles.noPhotos}>No additional photos.</p>
+              )
+            ) : temp.images?.length > 0 ? (
               <div className={styles.imageGrid}>
                 {temp.images.map((img, i) => (
                   <div key={i} className={styles.photoItem}>

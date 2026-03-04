@@ -28,7 +28,7 @@ function SharedGardenLayoutContent({ children }) {
   const { user } = useAuth();
   
   const {
-    garden, owner, plants, filteredPlants, isLoading, plantsLoaded, error,
+    garden, owner, filteredPlants, totalVisible, isLoading, plantsLoaded, error,
     searchQuery, setSearchQuery, sort, setSort, filters, setFilters,
   } = useSharedGarden();
 
@@ -117,13 +117,13 @@ function SharedGardenLayoutContent({ children }) {
           const filterCount = getActiveFilterCount(filters);
           const hasFilters = filterCount > 0 || !!searchQuery;
           if (hasFilters) {
-            return `${filteredPlants.length} / ${plants.length}`;
+            return `${filteredPlants.length} / ${totalVisible}`;
           }
-          const sortCount = getActiveSortCount(plants, sort);
-          if (sortCount !== null && sortCount < plants.length) {
-            return `${sortCount} / ${plants.length}`;
+          const sortCount = getActiveSortCount(filteredPlants, sort);
+          if (sortCount !== null && sortCount < totalVisible) {
+            return `${sortCount} / ${totalVisible}`;
           }
-          return plants.length;
+          return totalVisible;
         })() : null}
         showHome={true}
         tabs={tabs}
