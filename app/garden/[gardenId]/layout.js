@@ -270,7 +270,7 @@ function GardenLayoutContent({ children }) {
         sunlight: pasteData?.sunlight || [],
         moisture: pasteData?.moisture || [],
         nativeRange: pasteData?.nativeRange || [],
-        plantType: pasteData?.plantType || '',
+        plantType: pasteData?.plantType || [],
         hostedInsects: pasteData?.hostedInsects || '',
         notes: pasteData?.notes || '',
         images: pasteData?.images || [],
