@@ -321,8 +321,8 @@ export default function Home() {
 
   const menuItems = [
     { icon: <FiPlus size={16} />, label: 'New Garden', onClick: () => setShowModal(true), variant: 'success' },
-    { divider: true },
     { icon: <FiEye size={16} />, label: 'Edit Privacy', onClick: startPrivacyMode, visible: isAuthenticated },
+    { divider: true },
     { icon: <FiShare2 size={16} />, label: 'Share Profile', onClick: handleShare, variant: 'share' },
   ];
 

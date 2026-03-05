@@ -1,23 +1,32 @@
 'use client';
-import { useState, useEffect } from 'react';
-import { useParams } from 'next/navigation';
+import { useState, useEffect, useRef } from 'react';
+import { useParams, useRouter } from 'next/navigation';
 import { IoClose } from 'react-icons/io5';
-import { FiCopy } from 'react-icons/fi';
+import { FiCopy, FiShare2 } from 'react-icons/fi';
 import { useSharedGarden } from '@/context/SharedGardenContext';
 import { getSharedPlant } from '@/lib/dataService';
 import { setCopiedPlant } from '@/lib/clipboardStorage';
 import PageHeader from '@/components/PageHeader';
 import DropdownMenu from '@/components/DropdownMenu';
+import Modal from '@/components/Modal';
+import Button from '@/components/Button';
 import RichText from '@/components/RichText';
 import styles from './page.module.css';
 
 export default function SharedPlantPage() {
   const { gardenId, plantId } = useParams();
+  const router = useRouter();
   const { plants, plantsLoaded } = useSharedGarden();
+  const hadContextOnMount = useRef(plantsLoaded);
   
   const [plant, setPlant] = useState(null);
   const [selImg, setSelImg] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [showShareModal, setShowShareModal] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  // Scroll to top on mount
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
   useEffect(() => {
     if (plantsLoaded) {
@@ -42,7 +51,7 @@ export default function SharedPlantPage() {
   }, [plantId, plantsLoaded, plants]);
 
   useEffect(() => {
-    const esc = (e) => { if (e.key === 'Escape') setSelImg(null); };
+    const esc = (e) => { if (e.key === 'Escape') { setSelImg(null); setShowShareModal(false); } };
     document.addEventListener('keydown', esc);
     return () => document.removeEventListener('keydown', esc);
   }, []);
@@ -51,6 +60,20 @@ export default function SharedPlantPage() {
     if (!d) return null;
     const [year, month, day] = d.split('-').map(Number);
     return new Date(year, month - 1, day).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+  };
+
+  const handleBack = () => {
+    if (hadContextOnMount.current) {
+      router.back();
+    } else {
+      router.push(`/share/${gardenId}`);
+    }
+  };
+
+  const copyShareLink = async () => {
+    await navigator.clipboard.writeText(`${window.location.origin}/share/${gardenId}/plant/${plantId}`);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   const onCopyPlant = () => {
@@ -73,8 +96,9 @@ export default function SharedPlantPage() {
     });
   };
 
-  const copyMenu = [
+  const menuItems = [
     { icon: <FiCopy size={16} />, label: 'Copy Plant', onClick: onCopyPlant },
+    { icon: <FiShare2 size={16} />, label: 'Share Plant', onClick: () => { setShowShareModal(true); setCopied(false); } },
   ];
 
   const hiddenFields = plant?.plantPrivacy?.hiddenFields || [];
@@ -114,8 +138,8 @@ export default function SharedPlantPage() {
       <div className={styles.container}>
         <PageHeader
           title={plant.commonName || plant.scientificName || 'Plant'}
-          backHref={`/share/${gardenId}`}
-          actions={<DropdownMenu items={copyMenu} />}
+          onBack={handleBack}
+          actions={<DropdownMenu items={menuItems} />}
         />
 
         <div className={styles.details}>
@@ -167,6 +191,17 @@ export default function SharedPlantPage() {
           </div>
         </div>
       )}
+
+      <Modal isOpen={showShareModal} onClose={() => setShowShareModal(false)} title="Share Plant" size="small">
+        <p className={styles.shareText}>Anyone with this link can view this plant:</p>
+        <div className={styles.shareLink}>
+          <code>{`${typeof window !== 'undefined' ? window.location.origin : ''}/share/${gardenId}/plant/${plantId}`}</code>
+        </div>
+        <div className={styles.shareButtons}>
+          <Button variant="secondary" onClick={() => setShowShareModal(false)}>Close</Button>
+          <Button onClick={copyShareLink}>{copied ? 'Copied!' : 'Copy Link'}</Button>
+        </div>
+      </Modal>
     </>
   );
 }

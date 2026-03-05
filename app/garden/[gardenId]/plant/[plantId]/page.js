@@ -49,6 +49,9 @@ export default function PlantPage() {
   const mainRef = useRef(null);
   const addRef = useRef(null);
 
+  // Scroll to top on mount
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+
   // Load plant data
   useEffect(() => {
     if (!isInitialized || !plantId || !garden) return;
@@ -314,7 +317,7 @@ export default function PlantPage() {
         <PageHeader
             title={plant.commonName ? (plant.commonName) : plant.scientificName ? (
             <em>{plant.scientificName}</em>) : ('Plant')}
-          onBack={() => router.push(`/garden/${gardenId}`)}
+          onBack={() => router.back()}
           actions={
             privacyMode ? (
               <div className={styles.privacyActions}>

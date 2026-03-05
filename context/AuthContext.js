@@ -1,12 +1,14 @@
 'use client';
 import { createContext, useContext, useEffect, useState, useRef } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { supabase } from '@/lib/supabaseClient';
 import localforage from 'localforage';
 import { clearAllCaches } from '@/lib/dataService';
 import { uploadImage } from '@/lib/imageStorage';
 
 const AuthContext = createContext();
+
+const RETURN_PATH_KEY = 'garden_auth_return_path';
 
 /**
  * AuthProvider - Robust auth handling inspired by working pattern
@@ -23,8 +25,22 @@ export function AuthProvider({ children }) {
   const [isInitialized, setIsInitialized] = useState(false);
   const [isMigrating, setIsMigrating] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
   
   const prevUserIdRef = useRef(null);
+  const pathnameRef = useRef(pathname);
+  pathnameRef.current = pathname;
+  const signingOutRef = useRef(false);
+
+  // Helper: determine sign-out destination
+  // On owned garden pages → swap to shared version
+  // Elsewhere → stay put
+  const getSignOutRedirect = (currentPath) => {
+    if (currentPath.startsWith('/garden/')) {
+      return currentPath.replace(/^\/garden\//, '/share/');
+    }
+    return null;
+  };
 
   useEffect(() => {
     let isMounted = true;
@@ -70,6 +86,15 @@ export function AuthProvider({ children }) {
         if (!isMounted) return;
         setIsInitialized(true);
 
+        // After sign-in OAuth redirect: check for stored return path
+        const returnPath = localStorage.getItem(RETURN_PATH_KEY);
+        if (returnPath) {
+          localStorage.removeItem(RETURN_PATH_KEY);
+          if (returnPath !== '/' && isMounted) {
+            router.replace(returnPath);
+          }
+        }
+
         // Now attach the listener - ignore INITIAL_SESSION since we handled it
         const { data } = supabase.auth.onAuthStateChange(async (event, currentSession) => {
           if (!isMounted) return;
@@ -88,23 +113,20 @@ export function AuthProvider({ children }) {
               
               prevUserIdRef.current = newUserId;
               localStorage.setItem('garden_prevUserId', newUserId);
-              
-              // Redirect to home after new sign in
-              if (!prevUserIdRef.current) {
-                router.push('/');
-                router.refresh();
-              }
             }
           }
 
           if (event === 'SIGNED_OUT') {
+            // Cleanup only — signOut() handles navigation
             prevUserIdRef.current = null;
             localStorage.removeItem('garden_prevUserId');
-            clearAllCaches(); // Clear data cache on sign out
-            router.push('/');
+            clearAllCaches();
           }
 
           if (isMounted) {
+            // Skip session update if signOut() is handling navigation
+            // (prevents GardenContext from seeing null user and redirecting to /)
+            if (event === 'SIGNED_OUT' && signingOutRef.current) return;
             setSession(currentSession);
           }
         });
@@ -320,6 +342,12 @@ export function AuthProvider({ children }) {
   };
 
   const signInWithGoogle = async () => {
+    // Store current path so we can return here after OAuth
+    // Local garden pages go to home (local IDs change during migration)
+    const currentPath = pathnameRef.current || '/';
+    const returnPath = currentPath.startsWith('/garden/') ? '/' : currentPath;
+    localStorage.setItem(RETURN_PATH_KEY, returnPath);
+    
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
@@ -327,23 +355,40 @@ export function AuthProvider({ children }) {
       },
     });
     if (error) {
+      localStorage.removeItem(RETURN_PATH_KEY);
       console.error('Error signing in:', error);
       throw error;
     }
   };
 
   const signOut = async () => {
+    // Capture redirect before clearing state
+    const redirect = getSignOutRedirect(pathnameRef.current || '/');
+    
+    // Prevent SIGNED_OUT event from updating session
+    // (avoids race where GardenContext detects null user and redirects to /)
+    signingOutRef.current = true;
+    
+    // Clean up local state
+    prevUserIdRef.current = null;
+    localStorage.removeItem('garden_prevUserId');
+    clearAllCaches();
+    
     try {
       await supabase.auth.signOut();
     } catch (error) {
       console.error('Sign out error:', error);
     }
-    // Always clean up local state regardless of Supabase response
-    prevUserIdRef.current = null;
-    localStorage.removeItem('garden_prevUserId');
-    clearAllCaches();
-    setSession(null);
-    router.push('/');
+    
+    if (redirect) {
+      // On owned garden pages: full page load to shared version
+      window.location.href = redirect;
+    } else {
+      // On all other pages: update state and refresh in place
+      signingOutRef.current = false;
+      setSession(null);
+      router.refresh();
+    }
   };
 
   const value = {
