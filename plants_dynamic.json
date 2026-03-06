@@ -16,10 +16,12 @@
     "plantType": [
       "Herbaceous perennial"
     ],
-    "Common name": "Common yarrow",
+    "Common name": "Common Yarrow",
+    "Alternate common name": "",
     "Height": "1-3 ft",
-    "Ecoregion": "",
-    "Native Range": "",
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": "US Native, MA Native",
+    "Hosted Insects": "",
     "Latin name": "Achillea millefolium"
   },
   "Acorus americanus": {
@@ -37,15 +39,17 @@
     "plantType": [
       "Herbaceous perennial"
     ],
-    "Common name": "Sweet flag",
+    "Common name": "Sweet Flag",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
-    "Native Range": "",
+    "Native Range": "Northern US, Northeastern US, Northwestern US, Midwestern US, MA Native",
+    "Hosted Insects": "",
     "Latin name": "Acorus americanus"
   },
   "Actaea pachypoda": {
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -59,15 +63,18 @@
     "plantType": [
       "Herbaceous perennial"
     ],
-    "Common name": "White baneberry; Doll's eyes",
+    "Common name": "White Baneberry",
+    "Alternate common name": "Doll's Eyes",
     "Height": "1-2 ft",
-    "Ecoregion": "",
-    "Native Range": "",
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": "Northeastern US, Eastern US, Midwestern US, Southeastern US, MA Native",
+    "Hosted Insects": "",
     "Latin name": "Actaea pachypoda"
   },
-  "Actaea (Cimifuga) racemosa": {
+  "Actaea racemosa": {
     "Sunlight": [
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -83,15 +90,17 @@
     "plantType": [
       "Herbaceous perennial"
     ],
-    "Common name": "Black cohosh",
+    "Common name": "Black Cohosh",
+    "Alternate common name": "",
     "Height": "3-7 ft",
-    "Ecoregion": "",
-    "Native Range": "",
-    "Latin name": "Actaea (Cimifuga) racemosa"
+    "Ecoregion": "58,59,83,84",
+    "Native Range": "Northeastern US, Eastern US, Southeastern US, MA Native",
+    "Hosted Insects": "Summer Azure (Celastrina neglecta)",
+    "Latin name": "Actaea racemosa"
   },
   "Actaea rubra": {
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -100,15 +109,18 @@
     ],
     "Bloom time": [
       "Apr",
-      "May"
+      "May",
+      "Jun"
     ],
     "plantType": [
       "Herbaceous perennial"
     ],
-    "Common name": "Red baneberry",
+    "Common name": "Red Baneberry",
+    "Alternate common name": "",
     "Height": "2 ft",
-    "Ecoregion": "",
-    "Native Range": "",
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": "Northeastern US, Midwestern US, Northwestern US, MA Native",
+    "Hosted Insects": "Eupithecia strattonata; Baneberry Pug (Eupithecia cimicifugata)",
     "Latin name": "Actaea rubra"
   },
   "Actinomeris alternifolia": {
@@ -129,15 +141,18 @@
       "Herbaceous perennial"
     ],
     "Common name": "Wingstem",
+    "Alternate common name": "",
     "Height": "8 ft",
     "Ecoregion": "",
-    "Native Range": "",
+    "Native Range": "Eastern US, Southeastern US",
+    "Hosted Insects": "Agonopterix eupatoriiella; Silvery Checkerspot (Chlosyne nycteis)",
     "Latin name": "Actinomeris alternifolia"
   },
   "Agastache foeniculum": {
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Medium",
@@ -152,11 +167,38 @@
     "plantType": [
       "Herbaceous perennial"
     ],
-    "Common name": "Anise hyssop",
+    "Common name": "Anise Hyssop",
+    "Alternate common name": "",
     "Height": "2-4 ft",
-    "Ecoregion": "",
-    "Native Range": "",
+    "Ecoregion": 82,
+    "Native Range": "Northern US",
+    "Hosted Insects": "Bold-Feathered Grass Moth (Herpetogramma pertextalis);",
     "Latin name": "Agastache foeniculum"
+  },
+  "Agastache nepetoides": {
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Common name": "Yellow Giant Hyssop",
+    "Alternate common name": "Catnip Giant Hyssop",
+    "Height": "N/A",
+    "Ecoregion": "",
+    "Native Range": "Midwestern US, Mid-Atlantic US",
+    "Hosted Insects": "Radcliffe's Dagger (Acronicta radcliffei); Summer Azure (Celastrina neglecta)",
+    "Latin name": "Agastache nepetoides"
   },
   "Agastache scrophulariifolia": {
     "Sunlight": [
@@ -175,16 +217,19 @@
     "plantType": [
       "Herbaceous perennial"
     ],
-    "Common name": "Purple giant hyssop",
+    "Common name": "Purple Giant Hyssop",
+    "Alternate common name": "",
     "Height": "6 ft",
     "Ecoregion": "",
-    "Native Range": "",
+    "Native Range": "Northeastern US, MA Native",
+    "Hosted Insects": "Splendid Brass Looper, Green-Patched Looper (Diachrysia balluca); Bold-Feathered Grass Moth (Herpetogramma pertextalis); Stalk Borer (Papaipema nebris)",
     "Latin name": "Agastache scrophulariifolia"
   },
   "Ageratina altissima": {
     "Sunlight": [
       "Sun",
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -200,10 +245,12 @@
     "plantType": [
       "Herbaceous perennial"
     ],
-    "Common name": "White snakeroot",
+    "Common name": "White Snakeroot",
+    "Alternate common name": "",
     "Height": "2-3 ft",
-    "Ecoregion": "",
-    "Native Range": "",
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": "Northeastern US, Eastern US, Midwestern US, Southeastern US, MA Native",
+    "Hosted Insects": "Eyed Thyris (Dysodia oculatana Clemens); Clymene Moth (Haploa clymene); Evergreen Bagworm Moth (Thyridopteryx ephemeraeformis)",
     "Latin name": "Ageratina altissima"
   },
   "Agrimonia gryposepala": {
@@ -223,11 +270,35 @@
     "plantType": [
       "Herbaceous perennial"
     ],
-    "Common name": "Tall hairy agrimony",
+    "Common name": "Tall Hairy Agrimony",
+    "Alternate common name": "Common Agrimony",
     "Height": "5 ft",
     "Ecoregion": "",
-    "Native Range": "",
+    "Native Range": "Northeastern US, Eastern US, Midwestern US, Southeastern US, West Coast US, MA Native",
+    "Hosted Insects": "",
     "Latin name": "Agrimonia gryposepala"
+  },
+  "Agrimonia rostellata": {
+    "Sunlight": [
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jul"
+    ],
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Common name": "Woodland Agrimony",
+    "Alternate common name": "Beaked Agrimony",
+    "Height": "1-2.5 ft",
+    "Ecoregion": "",
+    "Native Range": "Northeastern US, Eastern US, Midwestern US, Southeastern US, Southwestern US, MA Native",
+    "Hosted Insects": "Coptotriche agrimoniella ",
+    "Latin name": "Agrimonia rostellata"
   },
   "Agrimonia striata": {
     "Sunlight": [
@@ -246,19 +317,23 @@
     "plantType": [
       "Herbaceous perennial"
     ],
-    "Common name": "Roadside agrimony",
+    "Common name": "Roadside Agrimony",
+    "Alternate common name": "",
     "Height": "6 ft",
     "Ecoregion": "",
-    "Native Range": "",
+    "Native Range": "Northern US, MA Native",
+    "Hosted Insects": "",
     "Latin name": "Agrimonia striata"
   },
   "Allium cernuum": {
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
-      "Medium"
+      "Medium",
+      "Dry"
     ],
     "Bloom time": [
       "Jun",
@@ -268,16 +343,19 @@
     "plantType": [
       "Herbaceous perennial"
     ],
-    "Common name": "Nodding onion",
+    "Common name": "Nodding Onion",
+    "Alternate common name": "",
     "Height": "1.5 ft",
-    "Ecoregion": "",
-    "Native Range": "",
+    "Ecoregion": 83,
+    "Native Range": "US Native",
+    "Hosted Insects": "Schinia snowi ",
     "Latin name": "Allium cernuum"
   },
   "Allium stellatum": {
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Medium",
@@ -285,23 +363,28 @@
     ],
     "Bloom time": [
       "Jul",
-      "Aug"
+      "Aug",
+      "Sep"
     ],
     "plantType": [
       "Herbaceous perennial"
     ],
     "Common name": "Prairie Onion",
+    "Alternate common name": "",
     "Height": "1.5 ft",
     "Ecoregion": "",
-    "Native Range": "",
+    "Native Range": "Midwestern US",
+    "Hosted Insects": "",
     "Latin name": "Allium stellatum"
   },
   "Allium tricoccum": {
     "Sunlight": [
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
+      "Wet",
       "Medium"
     ],
     "Bloom time": [
@@ -311,10 +394,12 @@
     "plantType": [
       "Herbaceous perennial"
     ],
-    "Common name": "Wild leek",
+    "Common name": "Wild Leek",
+    "Alternate common name": "Ramp",
     "Height": "0.75 ft",
-    "Ecoregion": "",
-    "Native Range": "",
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": "Northeastern US, Midwestern US, Mid-Atlantic US, MA Native",
+    "Hosted Insects": "",
     "Latin name": "Allium tricoccum"
   },
   "Amorpha canescens": {
@@ -334,10 +419,12 @@
     "plantType": [
       "Herbaceous perennial"
     ],
-    "Common name": "Leadplant",
+    "Common name": "Lead Plant",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
-    "Native Range": "",
+    "Native Range": "Midwestern US, Southwestern US",
+    "Hosted Insects": "Whitney's Underwing (Catocala whitneyi); Black-Spotted Prominent (Dasylophia anguina); Ordered Angle (Digrammia ordinata); Pale-Winged Gray (Iridopsis ephyraria); Ashen Pinion (Lithophane antennata); Amorpha Flower Moth, Leadplant Moth, Flale Indigo Flower Moth (Schinia lucens); Southern Dogface (Zerene cesonia)",
     "Latin name": "Amorpha canescens"
   },
   "Amorpha nana": {
@@ -358,9 +445,11 @@
       "Shrubs"
     ],
     "Common name": "Fragrant false indigo",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Amorpha nana"
   },
   "Amsonia hubrichtii": {
@@ -379,9 +468,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Thread-leaf bluestar",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Amsonia hubrichtii"
   },
   "Amsonia tabernaemontana": {
@@ -401,9 +492,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Eastern bluestar",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Amsonia tabernaemontana"
   },
   "Anaphalis margaritacea": {
@@ -425,9 +518,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Pearly everlasting",
+    "Alternate common name": "",
     "Height": "1-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Anaphalis margaritacea"
   },
   "Anemone canadensis": {
@@ -448,9 +543,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Canada anemone",
+    "Alternate common name": "",
     "Height": "1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Anemone canadensis"
   },
   "Anemone cylindrica": {
@@ -470,9 +567,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Thimbleweed",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Anemone cylindrica"
   },
   "Anemone virginiana": {
@@ -494,9 +593,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Tall thimbleweed",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Anemone virginiana"
   },
   "Angelica atropurpurea": {
@@ -516,9 +617,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Purple stem angelica",
+    "Alternate common name": "",
     "Height": "3-8 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Angelica atropurpurea"
   },
   "Antennaria neglecta": {
@@ -539,9 +642,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Prairie pussytoes",
+    "Alternate common name": "",
     "Height": "0.25 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Antennaria neglecta"
   },
   "Antennaria parlinii": {
@@ -562,9 +667,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Ladies' tobacco",
+    "Alternate common name": "",
     "Height": ".5-1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Antennaria parlinii"
   },
   "Antennaria plantaginifolia": {
@@ -585,9 +692,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Pussytoes",
+    "Alternate common name": "",
     "Height": "0.25 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Antennaria plantaginifolia"
   },
   "Aquilegia canadensis": {
@@ -609,9 +718,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Wild columbine",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Aquilegia canadensis"
   },
   "Arnoglossum reniforme": {
@@ -632,9 +743,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Great Indian Plantain",
+    "Alternate common name": "",
     "Height": "3-9 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Arnoglossum reniforme"
   },
   "Aralia racemosa": {
@@ -654,9 +767,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Spikenard",
+    "Alternate common name": "",
     "Height": "2-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Aralia racemosa"
   },
   "Arisaema tryphyllum": {
@@ -677,9 +792,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Jack in the pulpit",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Arisaema tryphyllum"
   },
   "Aruncus dioicus": {
@@ -699,9 +816,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Goat's beard",
+    "Alternate common name": "",
     "Height": "4-6 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Aruncus dioicus"
   },
   "Asarum canadense": {
@@ -721,9 +840,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Wild ginger",
+    "Alternate common name": "",
     "Height": ".5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Asarum canadense"
   },
   "Asclepias exaltata": {
@@ -743,9 +864,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Poke Milkweed",
+    "Alternate common name": "",
     "Height": "1.5-4.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "B.terricola, b. vagans",
     "Latin name": "Asclepias exaltata"
   },
   "Asclepias incarnata": {
@@ -766,9 +889,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Rose milkweed",
+    "Alternate common name": "",
     "Height": "2-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "Monarch (Danaus plexippus (Linnaeus, 1758); Milkweed Tussock Moth or Milkweed Tiger Moth (Euchaetes egle (Drury, 1773); Queen (Danaus gilippus (Cramer, [1775]) MA non-native; Pollen source for B. terricola; B. vagans; ",
     "Latin name": "Asclepias incarnata"
   },
   "Asclepias sullivantii": {
@@ -787,9 +912,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Prairie milkweed",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "B.terricola, b. vagans",
     "Latin name": "Asclepias sullivantii"
   },
   "Asclepias syriaca": {
@@ -809,9 +936,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Common milkweed",
+    "Alternate common name": "",
     "Height": "3-5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "B.terricola, b. vagans",
     "Latin name": "Asclepias syriaca"
   },
   "Asclepias tuberosa": {
@@ -830,10 +959,12 @@
     "plantType": [
       "Herbaceous perennial"
     ],
-    "Common name": "Butterflyweed",
+    "Common name": "Butterfly Milkweed",
+    "Alternate common name": "",
     "Height": "2 ft",
-    "Ecoregion": "",
-    "Native Range": "",
+    "Ecoregion": "58,59,53,54",
+    "Native Range": "Northeastern US, Midwestern US, Southeastern US, Southwestern US, MA Native",
+    "Hosted Insects": "Monarch (Danaus plexippus (Linnaeus, 1758); Gray Hairstreak (Strymon melinus (H?bner, 1818)); Dogbane Tiger Moth (Cycnia tenera H?bner, 1818); Queen (Danaus gilippus (Cramer, [1775]) MA non-native; Milkweed Tussock Moth or Milkweed Tiger Moth (Euchaetes egle (Drury, 1773); Pollen source for B. terricola; B. vagans; ",
     "Latin name": "Asclepias tuberosa"
   },
   "Asclepias verticillata": {
@@ -854,12 +985,14 @@
       "Herbaceous perennial"
     ],
     "Common name": "Whorled milkweed",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "B.terricola, b. vagans",
     "Latin name": "Asclepias verticillata"
   },
-  "Astralagus canadensis": {
+  "Astragalus canadensis": {
     "Sunlight": [
       "Sun",
       "Part Sun"
@@ -876,10 +1009,12 @@
       "Herbaceous perennial"
     ],
     "Common name": "Canadian milkvetch",
+    "Alternate common name": "",
     "Height": "1-4 ft",
     "Ecoregion": "",
     "Native Range": "",
-    "Latin name": "Astralagus canadensis"
+    "Hosted Insects": "Julia's Dicymolomia (Dicymolomia julianalis (Walker, 1859); Wild Indigo Duskywing (Gesta baptisiae (Forbes, 1936); Persius Duskywing (Gesta persius (Scudder, 1863); Queen Alexandra's Sulphur (Colias alexandra Edwards, 1863, MA non-native); Acmon Blue (Icaricia acmon (Westwood, [1851], MA non-native); Western Tailed-Blue (Cupido amyntula (Boisduval, 1852). MA non-native); Northern Blue (Plebejus idas (Linnaeus, 1761), MA non-native; Melissa Blue (Plebejus melissa (Edwards, 1873), MA non-Native;",
+    "Latin name": "Astragalus canadensis"
   },
   "Baptisia alba": {
     "Sunlight": [
@@ -898,9 +1033,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "White wild indigo",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Baptisia alba"
   },
   "Baptisia australis": {
@@ -920,9 +1057,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Blue false wild indigo",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Baptisia australis"
   },
   "Baptisia tinctoria": {
@@ -943,9 +1082,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Yellow wild indigo",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "Clouded Sulphur (Colias philodice Godart, 1819); Wild Indigo Duskywing (Gesta baptisiae (Forbes, 1936)); Eastern Tailed-Blue (Cupido comyntas (Godart, [1824]); Frosted Elfin (Callophrys irus (Godart, [1824]); Black-spotted Prominent (Dasylophia anguina (J.E.Smith, 1797); Persius Duskywing (Gesta persius (Scudder, 1863)); Sitochroa dasconalis (Walker, 1859); Genista Broom Moth (Uresiphita reversalis (Guen?e, 1864); Agonopterix lecontella (Clemens, 1860, MA non-native)",
     "Latin name": "Baptisia tinctoria"
   },
   "Blephilia ciliata": {
@@ -965,9 +1106,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Downy wood mint",
+    "Alternate common name": "",
     "Height": "1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Blephilia ciliata"
   },
   "Blephilia hirsuta": {
@@ -988,9 +1131,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Hairy wood mint",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Blephilia hirsuta"
   },
   "Boltonia asteroides": {
@@ -1011,9 +1156,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "False Aster",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Boltonia asteroides"
   },
   "Callirhoe bushii": {
@@ -1034,9 +1181,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Bush's Poppy Mallow",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Callirhoe bushii"
   },
   "Caltha palustris": {
@@ -1057,9 +1206,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Marsh Marigold",
+    "Alternate common name": "",
     "Height": "1-1.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Caltha palustris"
   },
   "Camassia scilloides": {
@@ -1078,9 +1229,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Wild hyacinth",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Camassia scilloides"
   },
   "Campanula americana": {
@@ -1101,9 +1254,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "American Bellflower",
+    "Alternate common name": "",
     "Height": "2-6 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Campanula americana"
   },
   "Campanula rotundifolia": {
@@ -1125,9 +1280,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "American Harebell",
+    "Alternate common name": "",
     "Height": "1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Campanula rotundifolia"
   },
   "Cardamine concatenata": {
@@ -1146,9 +1303,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Toothwort",
+    "Alternate common name": "",
     "Height": "1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Cardamine concatenata"
   },
   "Caulophyllum thalictroides": {
@@ -1168,9 +1327,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Blue cohosh",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Caulophyllum thalictroides"
   },
   "Chamaecrista fasciculata": {
@@ -1191,9 +1352,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Partridge Pea",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Chamaecrista fasciculata"
   },
   "Chamaenerion augustifolium": {
@@ -1212,9 +1375,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Fireweed",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Chamaenerion augustifolium"
   },
   "Chamaepericlymenum canadense": {
@@ -1234,9 +1399,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Bunchberry",
+    "Alternate common name": "",
     "Height": "2-5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Chamaepericlymenum canadense"
   },
   "Chelone glabra": {
@@ -1256,9 +1423,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "white turtlehead",
+    "Alternate common name": "",
     "Height": "1.5-2.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Chelone glabra"
   },
   "Chelone lyonii": {
@@ -1278,9 +1447,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Pink turtlehead",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Chelone lyonii"
   },
   "Chrysogonum virginianum": {
@@ -1299,9 +1470,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Green and gold",
+    "Alternate common name": "",
     "Height": ".75-1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Chrysogonum virginianum"
   },
   "Cimifuga racemosa": {
@@ -1323,9 +1496,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Black cohosh",
+    "Alternate common name": "",
     "Height": "3-7 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Cimifuga racemosa"
   },
   "Cirsium discolor": {
@@ -1345,9 +1520,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Pasture thistle",
+    "Alternate common name": "",
     "Height": "6 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Cirsium discolor"
   },
   "Cirsium muticum": {
@@ -1369,9 +1546,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Swamp Thistle",
+    "Alternate common name": "",
     "Height": "7 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Cirsium muticum"
   },
   "Conoclinium coelstinum": {
@@ -1389,9 +1568,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Mistflower",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Conoclinium coelstinum"
   },
   "Coreopsis lanceolata": {
@@ -1412,9 +1593,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Lanceleaf coreopsis",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Coreopsis lanceolata"
   },
   "Coreopsis palmata": {
@@ -1436,9 +1619,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Prairie Coreopsis",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Coreopsis palmata"
   },
   "Coreopsis rosea": {
@@ -1458,9 +1643,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Pink tickseed",
+    "Alternate common name": "",
     "Height": "1-2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Coreopsis rosea"
   },
   "Coreopsis tripteris": {
@@ -1481,9 +1668,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Tall coreopsis",
+    "Alternate common name": "",
     "Height": "7 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Coreopsis tripteris"
   },
   "Coreopsis verticillata": {
@@ -1505,9 +1694,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Thread leaf coreopsis",
+    "Alternate common name": "",
     "Height": "1.5-2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Coreopsis verticillata"
   },
   "Corydalis sempervirens": {
@@ -1530,9 +1721,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Rock Harlequin",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Corydalis sempervirens"
   },
   "Cryptotaenia canadensis": {
@@ -1552,9 +1745,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Honewort",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Cryptotaenia canadensis"
   },
   "Dalea purpurea": {
@@ -1575,9 +1770,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Purple prairie clover",
+    "Alternate common name": "",
     "Height": "1-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Dalea purpurea"
   },
   "Delphinium exaltatum": {
@@ -1596,9 +1793,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Tall larkspur",
+    "Alternate common name": "",
     "Height": "3-5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Delphinium exaltatum"
   },
   "Desmanthus illinisoensis": {
@@ -1617,9 +1816,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Illinois Bundleflower",
+    "Alternate common name": "",
     "Height": "5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Desmanthus illinisoensis"
   },
   "Desmodium canandense": {
@@ -1638,9 +1839,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Showy tick trefoil",
+    "Alternate common name": "",
     "Height": "5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Desmodium canandense"
   },
   "Dicentra cucullaria": {
@@ -1658,9 +1861,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Dutchman's breeches",
+    "Alternate common name": "",
     "Height": "1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Dicentra cucullaria"
   },
   "Dicentra eximia": {
@@ -1681,9 +1886,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Wild bleedingheart",
+    "Alternate common name": "",
     "Height": "1-1.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Dicentra eximia"
   },
   "Dodecatheon meadia": {
@@ -1703,9 +1910,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Shooting star",
+    "Alternate common name": "",
     "Height": "1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Dodecatheon meadia"
   },
   "Doellingeria umbellata": {
@@ -1726,9 +1935,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Flat topped aster",
+    "Alternate common name": "",
     "Height": "5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Doellingeria umbellata"
   },
   "Echinacea angustifolia": {
@@ -1747,9 +1958,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Narrow-leaved Coneflower",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Echinacea angustifolia"
   },
   "Echinacea pallida": {
@@ -1769,9 +1982,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Pale Purple Coneflower",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Echinacea pallida"
   },
   "Echinacea paradoxa": {
@@ -1792,9 +2007,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Bush's Coneflower",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Echinacea paradoxa"
   },
   "Echinacea purpurea": {
@@ -1815,9 +2032,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Purple coneflower",
+    "Alternate common name": "",
     "Height": "2-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Echinacea purpurea"
   },
   "Epilobium glandulosum": {
@@ -1838,9 +2057,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Northern willow herb",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Epilobium glandulosum"
   },
   "Erigeron pulchellus": {
@@ -1860,9 +2081,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Robin's plantain",
+    "Alternate common name": "",
     "Height": "1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Erigeron pulchellus"
   },
   "Eryngium yuccifolium": {
@@ -1881,9 +2104,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Rattlesnake master",
+    "Alternate common name": "",
     "Height": "3-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Eryngium yuccifolium"
   },
   "Eupatorium altissimum": {
@@ -1903,9 +2128,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Tall boneset",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Eupatorium altissimum"
   },
   "Eupatorium fistulosum": {
@@ -1926,9 +2153,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Hollow Joe-pye weed",
+    "Alternate common name": "",
     "Height": "6 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Eupatorium fistulosum"
   },
   "Eupatorium hyssopifolium": {
@@ -1949,9 +2178,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Hyssop leaved boneset",
+    "Alternate common name": "",
     "Height": "1-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Eupatorium hyssopifolium"
   },
   "Eupatorium perfoliatum": {
@@ -1972,9 +2203,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Boneset",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Eupatorium perfoliatum"
   },
   "Eupatorium serotinum": {
@@ -1994,9 +2227,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Late boneset",
+    "Alternate common name": "",
     "Height": "5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Eupatorium serotinum"
   },
   "Eurybia divaricata": {
@@ -2017,9 +2252,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "White wood aster",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Eurybia divaricata"
   },
   "Eurybia macrophylla": {
@@ -2041,9 +2278,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Bigleaf aster",
+    "Alternate common name": "",
     "Height": "1-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Eurybia macrophylla"
   },
   "Eurybia shreberi": {
@@ -2064,9 +2303,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Shreber's Wood Aster",
+    "Alternate common name": "",
     "Height": "1-2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Eurybia shreberi"
   },
   "Eurybia spectabilis": {
@@ -2087,9 +2328,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Blue wood aster",
+    "Alternate common name": "",
     "Height": "1-2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Eurybia spectabilis"
   },
   "Euthamia graminifolia": {
@@ -2110,9 +2353,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Grass leaved goldenrod",
+    "Alternate common name": "",
     "Height": "3-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Euthamia graminifolia"
   },
   "Eutrochium dubium": {
@@ -2131,9 +2376,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Coastal Plain Joe Pye Weed",
+    "Alternate common name": "",
     "Height": "3-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Eutrochium dubium"
   },
   "Eutrochium fistulosum": {
@@ -2155,9 +2402,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Hollow Joe-Pye weed",
+    "Alternate common name": "",
     "Height": "3-8 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Eutrochium fistulosum"
   },
   "Eutrochium maculatum": {
@@ -2178,9 +2427,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Joe Pye weed",
+    "Alternate common name": "",
     "Height": "3-7 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Eutrochium maculatum"
   },
   "Eutrochium purpureum": {
@@ -2200,9 +2451,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Sweet Joe Pye weed",
+    "Alternate common name": "",
     "Height": "3-8 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Eutrochium purpureum"
   },
   "Filipendula rubra": {
@@ -2222,9 +2475,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Queen of the Prairie",
+    "Alternate common name": "",
     "Height": "6-7 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Filipendula rubra"
   },
   "Fragaria virginiana": {
@@ -2245,9 +2500,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Wild strawberry",
+    "Alternate common name": "",
     "Height": ".5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Fragaria virginiana"
   },
   "Fragaria vesca": {
@@ -2267,9 +2524,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Woodland strawberry",
+    "Alternate common name": "",
     "Height": ".25-.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Fragaria vesca"
   },
   "Gallardia grandifolia": {
@@ -2289,9 +2548,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Blanket flower",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Gallardia grandifolia"
   },
   "Gaura longiflora": {
@@ -2312,9 +2573,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Large-flowered Gaura",
+    "Alternate common name": "",
     "Height": "6 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Gaura longiflora"
   },
   "Gentiana andrewsii": {
@@ -2334,9 +2597,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Bottle gentian",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Gentiana andrewsii"
   },
   "Gentiana clausa": {
@@ -2355,9 +2620,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Closed Bottle Gentian",
+    "Alternate common name": "",
     "Height": ".75-1.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Gentiana clausa"
   },
   "Gentianopsis crinita": {
@@ -2377,9 +2644,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Fringed Gentian",
+    "Alternate common name": "",
     "Height": "1-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Gentianopsis crinita"
   },
   "Geranium maculatum": {
@@ -2401,9 +2670,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Wild geranium",
+    "Alternate common name": "",
     "Height": "1-1.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Geranium maculatum"
   },
   "Geum fragroides": {
@@ -2424,9 +2695,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Appalachian barren strawberry",
+    "Alternate common name": "",
     "Height": ".25-.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Geum fragroides"
   },
   "Geum rivale": {
@@ -2445,9 +2718,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Purple avens",
+    "Alternate common name": "",
     "Height": "2.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Geum rivale"
   },
   "Geum triflorum": {
@@ -2468,9 +2743,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Prairie smoke",
+    "Alternate common name": "",
     "Height": "1-1.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Geum triflorum"
   },
   "Gillenia trifoliata": {
@@ -2490,9 +2767,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Bowman's Root",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Gillenia trifoliata"
   },
   "Glycyrrhiza lepidota": {
@@ -2511,9 +2790,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "American Wild Licorice",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Glycyrrhiza lepidota"
   },
   "Helenium autumnale": {
@@ -2533,9 +2814,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Sneezeweed",
+    "Alternate common name": "",
     "Height": "3-5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Helenium autumnale"
   },
   "Helenium flexuosum": {
@@ -2556,9 +2839,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Purple-Headed Sneezeweed",
+    "Alternate common name": "",
     "Height": "1-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Helenium flexuosum"
   },
   "Helianthus angustifolius": {
@@ -2578,9 +2863,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Swamp sunflower",
+    "Alternate common name": "",
     "Height": "8 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Helianthus angustifolius"
   },
   "Helianthus divaricata": {
@@ -2601,9 +2888,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Woodland sunflower",
+    "Alternate common name": "",
     "Height": "2-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Helianthus divaricata"
   },
   "Helianthus grosseserratus": {
@@ -2623,9 +2912,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Sawtooth Sunflower",
+    "Alternate common name": "",
     "Height": "8 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Helianthus grosseserratus"
   },
   "Helianthus maximiliani": {
@@ -2644,9 +2935,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Maximilian sunflower",
+    "Alternate common name": "",
     "Height": "7 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Helianthus maximiliani"
   },
   "Helianthus mollis": {
@@ -2665,9 +2958,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Downy sunflower",
+    "Alternate common name": "",
     "Height": "5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Helianthus mollis"
   },
   "Helianthus occidentalis": {
@@ -2688,9 +2983,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Western sunflower",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Helianthus occidentalis"
   },
   "Heliopsis helianthoides": {
@@ -2712,9 +3009,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Oxeye sunflower",
+    "Alternate common name": "",
     "Height": "3-6 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Heliopsis helianthoides"
   },
   "Hepatica acutiloba": {
@@ -2734,9 +3033,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Sharp-lobed hepatica",
+    "Alternate common name": "",
     "Height": ".75 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Hepatica acutiloba"
   },
   "Heuchera americana": {
@@ -2757,9 +3058,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "American alumroot",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Heuchera americana"
   },
   "Hibiscus laevis": {
@@ -2780,9 +3083,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Smooth rose mallow",
+    "Alternate common name": "",
     "Height": "5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Hibiscus laevis"
   },
   "Hibiscus moscheutos": {
@@ -2802,9 +3107,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Swamp rose mallow",
+    "Alternate common name": "",
     "Height": "5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Hibiscus moscheutos"
   },
   "Houstonia caerulea": {
@@ -2825,9 +3132,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Bluets",
+    "Alternate common name": "",
     "Height": ".25 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Houstonia caerulea"
   },
   "Hydrophyllum virginianum": {
@@ -2846,9 +3155,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Virginia waterleaf",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Hydrophyllum virginianum"
   },
   "Hypericum ascyron (pyramidatum)": {
@@ -2867,9 +3178,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Great St. Johnswort",
+    "Alternate common name": "",
     "Height": "6 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Hypericum ascyron (pyramidatum)"
   },
   "Hypericum canadense": {
@@ -2880,9 +3193,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Hypericum canadense"
   },
   "Hypericum majus": {
@@ -2902,9 +3217,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Greater Canadian St. Johnswort",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Hypericum majus"
   },
   "Hypericum punctatum": {
@@ -2924,9 +3241,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Spotted St. Johnswort",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Hypericum punctatum"
   },
   "Hypericum virginicum": {
@@ -2946,9 +3265,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Marsh St. Johnswort",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Hypericum virginicum"
   },
   "Impatiens capensis": {
@@ -2969,9 +3290,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Jewelweed",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Impatiens capensis"
   },
   "Ionactis linariifolia": {
@@ -2992,9 +3315,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Stiff leaf aster",
+    "Alternate common name": "",
     "Height": "1-1.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Ionactis linariifolia"
   },
   "Iris cristata": {
@@ -3013,9 +3338,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Crested iris",
+    "Alternate common name": "",
     "Height": ".25-.75 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Iris cristata"
   },
   "Iris versicolor": {
@@ -3036,9 +3363,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Blue flag iris",
+    "Alternate common name": "",
     "Height": "1-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Iris versicolor"
   },
   "Lespedeza capitata": {
@@ -3058,9 +3387,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Round headed bush clover",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Lespedeza capitata"
   },
   "Lespedeza virginica": {
@@ -3079,9 +3410,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Slender Bush Clover",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Lespedeza virginica"
   },
   "Liatris aspera": {
@@ -3103,9 +3436,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Button blazing star",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Liatris aspera"
   },
   "Liatris ligulastylis": {
@@ -3125,9 +3460,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Meadow blazing star",
+    "Alternate common name": "",
     "Height": "3-5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Liatris ligulastylis"
   },
   "Liatris microcephala": {
@@ -3143,9 +3480,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Liatris microcephala"
   },
   "Liatris novae anglia": {
@@ -3165,9 +3504,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Northern Blazing Star",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Liatris novae anglia"
   },
   "Liatris scariosa var. nieuwlandii": {
@@ -3187,9 +3528,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Northern Blazing Star",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Liatris scariosa var. nieuwlandii"
   },
   "Liatris pycnostachya": {
@@ -3210,9 +3553,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Prairie Blazing Star",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Liatris pycnostachya"
   },
   "Liatris spicata": {
@@ -3233,9 +3578,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Blazing star",
+    "Alternate common name": "",
     "Height": "2-5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Liatris spicata"
   },
   "Lilum canadense": {
@@ -3255,9 +3602,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Canada lily",
+    "Alternate common name": "",
     "Height": "3-5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Lilum canadense"
   },
   "Lobelia cardinalis": {
@@ -3278,9 +3627,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Cardinal flower",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Lobelia cardinalis"
   },
   "Lobelia siphilitica": {
@@ -3302,9 +3653,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Great blue lobelia",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Lobelia siphilitica"
   },
   "Ludwigia alternifolia": {
@@ -3324,9 +3677,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Seedbox",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Ludwigia alternifolia"
   },
   "Lupinus perennis": {
@@ -3347,9 +3702,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Sundial Lupine",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Lupinus perennis"
   },
   "Lycopus uniflorus": {
@@ -3369,9 +3726,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Northern bugleweed",
+    "Alternate common name": "",
     "Height": "1-2.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Lycopus uniflorus"
   },
   "Lythrum alatum": {
@@ -3391,9 +3750,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Winged loosestrife",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Lythrum alatum"
   },
   "Maianthemum canadense": {
@@ -3412,9 +3773,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Canada mayflower",
+    "Alternate common name": "",
     "Height": ".75 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Maianthemum canadense"
   },
   "Maianthemum racemosum": {
@@ -3438,9 +3801,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Solomon's plume",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Maianthemum racemosum"
   },
   "Maianthemum stellatum": {
@@ -3462,9 +3827,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Starry Solomon's plume",
+    "Alternate common name": "",
     "Height": "1-2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Maianthemum stellatum"
   },
   "Meehania cordata": {
@@ -3482,9 +3849,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Meehania cordata"
   },
   "Mentha arvensis": {
@@ -3505,9 +3874,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Wild mint",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Mentha arvensis"
   },
   "Mentha canadensis": {
@@ -3528,9 +3899,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "American wild mint",
+    "Alternate common name": "",
     "Height": "1-1.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Mentha canadensis"
   },
   "Mertensia virginica": {
@@ -3549,9 +3922,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Virginia bluebells",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Mertensia virginica"
   },
   "Mimulus alatus": {
@@ -3573,9 +3948,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Winged Monkey Flower",
+    "Alternate common name": "",
     "Height": "1-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Mimulus alatus"
   },
   "Mimulus ringens": {
@@ -3597,9 +3974,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Monkey flower",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Mimulus ringens"
   },
   "Mitella diphylla": {
@@ -3619,9 +3998,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Bishop's cap",
+    "Alternate common name": "",
     "Height": "1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Mitella diphylla"
   },
   "Mitchella repens": {
@@ -3644,9 +4025,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Partridge-berry",
+    "Alternate common name": "",
     "Height": "1-2 in",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Mitchella repens"
   },
   "Monarda bradburiana": {
@@ -3665,9 +4048,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Bradbury's beebalm",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Monarda bradburiana"
   },
   "Monarda didyma": {
@@ -3688,9 +4073,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Scarlet bee balm",
+    "Alternate common name": "",
     "Height": "2-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Monarda didyma"
   },
   "Monarda didyma 'Colrain Red'": {
@@ -3706,9 +4093,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Monarda didyma 'Colrain Red'"
   },
   "Monarda fistulosa": {
@@ -3730,9 +4119,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Wild bee-balm",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Monarda fistulosa"
   },
   "Monarda punctata": {
@@ -3753,9 +4144,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Spotted Bee Balm",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Monarda punctata"
   },
   "Oclemena acuminata": {
@@ -3777,9 +4170,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Sharp leaved aster",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Oclemena acuminata"
   },
   "Oenothera fruticosa": {
@@ -3799,9 +4194,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Narrow leaf Evening primrose",
+    "Alternate common name": "",
     "Height": "1-2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Oenothera fruticosa"
   },
   "Oenethera pilosella": {
@@ -3820,9 +4217,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Prairie sundrops",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Oenethera pilosella"
   },
   "Oligoneuron album": {
@@ -3843,9 +4242,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Upland white goldenrod",
+    "Alternate common name": "",
     "Height": "1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Oligoneuron album"
   },
   "Oxalis violacea": {
@@ -3866,9 +4267,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Purple wood sorrel",
+    "Alternate common name": "",
     "Height": ".25 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Oxalis violacea"
   },
   "Pachysandra procumbens": {
@@ -3888,9 +4291,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Allegheny spurge",
+    "Alternate common name": "",
     "Height": ".5-1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Pachysandra procumbens"
   },
   "Packera aurea": {
@@ -3911,9 +4316,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Golden ragwort",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Packera aurea"
   },
   "Packera obovata": {
@@ -3933,9 +4340,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Running groundsel",
+    "Alternate common name": "",
     "Height": ".25-.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Packera obovata"
   },
   "Parthenium integrifolium": {
@@ -3955,9 +4364,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Wild Quinine",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Parthenium integrifolium"
   },
   "Pedicularis canadensis": {
@@ -3977,9 +4388,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Canadian wood-betony",
+    "Alternate common name": "",
     "Height": "1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Pedicularis canadensis"
   },
   "Penstemon calycosus": {
@@ -3999,9 +4412,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Calico Beardtongue",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Penstemon calycosus"
   },
   "Penstemon cobea": {
@@ -4022,9 +4437,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Showy beardtongue",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Penstemon cobea"
   },
   "Penstemon digitalis": {
@@ -4043,9 +4460,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Foxglove beardtongue",
+    "Alternate common name": "",
     "Height": "3-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Penstemon digitalis"
   },
   "Penstemon grandiflorus": {
@@ -4065,9 +4484,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Large flowered beardtongue",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Penstemon grandiflorus"
   },
   "Penstemon hirsutus": {
@@ -4089,9 +4510,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Northeastern beardtongue",
+    "Alternate common name": "",
     "Height": "1-2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Penstemon hirsutus"
   },
   "Penstemon laevigatus": {
@@ -4112,9 +4535,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Eastern beardtongue",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Penstemon laevigatus"
   },
   "Penstemon smallii": {
@@ -4133,9 +4558,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Small's Penstemon",
+    "Alternate common name": "",
     "Height": "1-2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Penstemon smallii"
   },
   "Phlox divaricata": {
@@ -4155,9 +4582,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Wild blue phlox",
+    "Alternate common name": "",
     "Height": "12 in",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Phlox divaricata"
   },
   "Phlox maculata": {
@@ -4177,9 +4606,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Wild Sweet William",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Phlox maculata"
   },
   "Phlox pilosa": {
@@ -4200,9 +4631,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Prairie phlox",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Phlox pilosa"
   },
   "Phlox stolonlifera": {
@@ -4222,9 +4655,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Woodland phlox",
+    "Alternate common name": "",
     "Height": ".75-1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Phlox stolonlifera"
   },
   "Phlox subulata": {
@@ -4243,9 +4678,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Moss phlox",
+    "Alternate common name": "",
     "Height": ".25-.75 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Phlox subulata"
   },
   "Physostegia virginiana": {
@@ -4265,9 +4702,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Obedient plant",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Physostegia virginiana"
   },
   "Podophyllum peltatum": {
@@ -4286,9 +4725,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "May apple",
+    "Alternate common name": "",
     "Height": "1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Podophyllum peltatum"
   },
   "Polemonium reptans": {
@@ -4309,9 +4750,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Jacobs ladder",
+    "Alternate common name": "",
     "Height": "1-1.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Polemonium reptans"
   },
   "Polygonatum biflorum": {
@@ -4331,9 +4774,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Solomon's seal",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Polygonatum biflorum"
   },
   "Pontederia cordata": {
@@ -4352,9 +4797,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Pickerelweed",
+    "Alternate common name": "",
     "Height": "1-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Pontederia cordata"
   },
   "Porteranthus stipulatus": {
@@ -4374,9 +4821,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "American Ipecac",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Porteranthus stipulatus"
   },
   "Prenanthes alba": {
@@ -4396,9 +4845,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "White Lettuce, Lion's Foot",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Prenanthes alba"
   },
   "Prunella vulgaris": {
@@ -4421,9 +4872,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Self-heal, Heal All",
+    "Alternate common name": "",
     "Height": ".5-1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Prunella vulgaris"
   },
   "Pycnanthemum incanum": {
@@ -4443,9 +4896,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Hoary Mountain mint",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Pycnanthemum incanum"
   },
   "Pycnanthemum muticum": {
@@ -4467,9 +4922,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Broad leaf mountain mint",
+    "Alternate common name": "",
     "Height": "2-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Pycnanthemum muticum"
   },
   "Pycnanthemum tenuifolium": {
@@ -4491,9 +4948,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Narrow leaf mountain mint",
+    "Alternate common name": "",
     "Height": ".75-1.25 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Pycnanthemum tenuifolium"
   },
   "Pycnanthemum verticillatum": {
@@ -4513,9 +4972,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Whorled mountain mint",
+    "Alternate common name": "",
     "Height": "1-1.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Pycnanthemum verticillatum"
   },
   "Pycnanthemum vert. pilosum": {
@@ -4534,9 +4995,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Hairy mountain mint",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Pycnanthemum vert. pilosum"
   },
   "Pyncnanthemum virginianum": {
@@ -4557,9 +5020,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Virginia mountain mint",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Pyncnanthemum virginianum"
   },
   "Ratibida columnifera": {
@@ -4580,9 +5045,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Long-headed Prairie Coneflower",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Ratibida columnifera"
   },
   "Ratibida pinnata": {
@@ -4602,9 +5069,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Yellow coneflower",
+    "Alternate common name": "",
     "Height": "3-5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Ratibida pinnata"
   },
   "Rhexia virginica": {
@@ -4625,9 +5094,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Virginia Meadow Beauty",
+    "Alternate common name": "",
     "Height": "1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rhexia virginica"
   },
   "Rubus hispidus": {
@@ -4649,9 +5120,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Creeping dewberry",
+    "Alternate common name": "",
     "Height": ".25 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rubus hispidus"
   },
   "Rudbeckia fulgida": {
@@ -4672,9 +5145,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Orange cone flower",
+    "Alternate common name": "",
     "Height": "1.5-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rudbeckia fulgida"
   },
   "Rudbeckia hirta": {
@@ -4697,9 +5172,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Black-eyed susan",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rudbeckia hirta"
   },
   "Rudbeckia laciniata": {
@@ -4721,9 +5198,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Green coneflower",
+    "Alternate common name": "",
     "Height": "3-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rudbeckia laciniata"
   },
   "Rudbeckia triloba": {
@@ -4743,9 +5222,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Brown eyed susan",
+    "Alternate common name": "",
     "Height": "5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rudbeckia triloba"
   },
   "Ruellia humilis": {
@@ -4766,9 +5247,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Wild petunia",
+    "Alternate common name": "",
     "Height": "1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Ruellia humilis"
   },
   "Rumex altissimus": {
@@ -4788,9 +5271,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Pale Dock",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rumex altissimus"
   },
   "Rumex orbiculatus": {
@@ -4810,9 +5295,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Greater Water Dock",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rumex orbiculatus"
   },
   "Sagittaria latifolia": {
@@ -4832,9 +5319,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Broadleaf Arrowhead",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Sagittaria latifolia"
   },
   "Salvia azurea": {
@@ -4855,9 +5344,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Blue sage",
+    "Alternate common name": "",
     "Height": "3-5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Salvia azurea"
   },
   "Salvia lyrata": {
@@ -4868,9 +5359,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Lyre-leaf Sage",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Salvia lyrata"
   },
   "Sanguinaria canadensis": {
@@ -4889,9 +5382,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Bloodroot",
+    "Alternate common name": "",
     "Height": "6-12 in",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Sanguinaria canadensis"
   },
   "Sanguisorba canadensis": {
@@ -4910,9 +5405,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "American Burnet",
+    "Alternate common name": "",
     "Height": "6 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Sanguisorba canadensis"
   },
   "Scrophularia lanceolata": {
@@ -4934,9 +5431,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Lance leafed figwort",
+    "Alternate common name": "",
     "Height": "5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Scrophularia lanceolata"
   },
   "Scutellaria incana": {
@@ -4958,9 +5457,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Downy skullcap",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Scutellaria incana"
   },
   "Scutelleria galericulata": {
@@ -4971,9 +5472,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Scutelleria galericulata"
   },
   "Scutellaria lateriflora": {
@@ -4994,9 +5497,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Mad dog skullcap",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Scutellaria lateriflora"
   },
   "Sedum pulchellum": {
@@ -5007,9 +5512,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Widow's Cross",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Sedum pulchellum"
   },
   "Sedum ternatum": {
@@ -5030,9 +5537,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Woodland stonecrop",
+    "Alternate common name": "",
     "Height": "8 in",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Sedum ternatum"
   },
   "Senna hebecarpa": {
@@ -5051,9 +5560,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Wild senna",
+    "Alternate common name": "",
     "Height": "5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Senna hebecarpa"
   },
   "Sibbaldiopsis tridentata": {
@@ -5071,9 +5582,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Three tooth cinqufoil",
+    "Alternate common name": "",
     "Height": ".25-.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Sibbaldiopsis tridentata"
   },
   "Silene regia": {
@@ -5092,9 +5605,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Royal catchfly",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Silene regia"
   },
   "Silene virginica": {
@@ -5114,9 +5629,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Fire pink",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Silene virginica"
   },
   "Silphium perfoliatum": {
@@ -5136,9 +5653,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Cup plant",
+    "Alternate common name": "",
     "Height": "6 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Silphium perfoliatum"
   },
   "Sisyrinchium albidum": {
@@ -5158,9 +5677,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Blue eyed grass",
+    "Alternate common name": "",
     "Height": "0.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Sisyrinchium albidum"
   },
   "Sisyrinchium augustifolium": {
@@ -5180,9 +5701,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Blue eyed grass",
+    "Alternate common name": "",
     "Height": ".5-1.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Sisyrinchium augustifolium"
   },
   "Sisyrinchium montanum": {
@@ -5193,9 +5716,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Sisyrinchium montanum"
   },
   "Solidago altissima": {
@@ -5206,9 +5731,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Tall goldenrod",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Solidago altissima"
   },
   "Solidago arguta": {
@@ -5219,9 +5746,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Forest goldenrod",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Solidago arguta"
   },
   "Solidago bicolor": {
@@ -5243,9 +5772,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "White goldenrod",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Solidago bicolor"
   },
   "Solidago caesia": {
@@ -5267,9 +5798,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Blue stemmed goldenrod",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Solidago caesia"
   },
   "Solidago canadensis": {
@@ -5280,9 +5813,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Canada goldenrod",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Solidago canadensis"
   },
   "Solidago flexicaulis": {
@@ -5304,9 +5839,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Zig zag goldenrod",
+    "Alternate common name": "",
     "Height": "3ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Solidago flexicaulis"
   },
   "Solidago gigantea": {
@@ -5326,9 +5863,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Late goldenrod",
+    "Alternate common name": "",
     "Height": "6 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Solidago gigantea"
   },
   "Solidago juncea": {
@@ -5348,9 +5887,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Early goldenrod",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Solidago juncea"
   },
   "Solidago nemoralis": {
@@ -5370,9 +5911,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Gray goldenrod",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Solidago nemoralis"
   },
   "Solidago odora": {
@@ -5392,9 +5935,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Sweet goldenrod",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Solidago odora"
   },
   "Solidago patula": {
@@ -5416,9 +5961,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Rough-leaved Goldenrod",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Solidago patula"
   },
   "Solidago ptarmicoides": {
@@ -5433,9 +5980,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Upland White Goldenrod",
+    "Alternate common name": "",
     "Height": "1-2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Solidago ptarmicoides"
   },
   "Solidago puberula": {
@@ -5456,9 +6005,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Downy goldenrod",
+    "Alternate common name": "",
     "Height": "1-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Solidago puberula"
   },
   "Solidago rigidum": {
@@ -5479,9 +6030,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Stiff goldenrod",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Solidago rigidum"
   },
   "Solidago rugosa": {
@@ -5503,9 +6056,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Rough goldenrod",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Solidago rugosa"
   },
   "Solidago sempervirens": {
@@ -5524,9 +6079,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Seaside goldenrod",
+    "Alternate common name": "",
     "Height": "2-3.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Solidago sempervirens"
   },
   "Solidago speciosa": {
@@ -5547,9 +6104,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Showy goldenrod",
+    "Alternate common name": "",
     "Height": "5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Solidago speciosa"
   },
   "Solidago uliginosa": {
@@ -5570,9 +6129,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Bog goldenrod",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Solidago uliginosa"
   },
   "Stylophorum diphyllum": {
@@ -5592,9 +6153,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Wood poppy",
+    "Alternate common name": "",
     "Height": "1.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Stylophorum diphyllum"
   },
   "Symphoricarpos orbiculatus": {
@@ -5613,9 +6176,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Coralberry",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Symphoricarpos orbiculatus"
   },
   "Symphyotrichum cordifolium": {
@@ -5635,9 +6200,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Blue wood aster",
+    "Alternate common name": "",
     "Height": "1-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Symphyotrichum cordifolium"
   },
   "Symphyotrichum dumosum": {
@@ -5658,9 +6225,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Long stalked aster",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Symphyotrichum dumosum"
   },
   "Symphyotrichum ericoides": {
@@ -5681,9 +6250,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Heath Aster",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Symphyotrichum ericoides"
   },
   "Symphyotrichum ericoides 'Snow Flurry'": {
@@ -5704,9 +6275,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Heath Aster",
+    "Alternate common name": "",
     "Height": ".25-.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Symphyotrichum ericoides 'Snow Flurry'"
   },
   "Symphyotrichum firmum": {
@@ -5717,9 +6290,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Symphyotrichum firmum"
   },
   "Symphyotrichum laeve": {
@@ -5740,9 +6315,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Smooth blue aster",
+    "Alternate common name": "",
     "Height": "1-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Symphyotrichum laeve"
   },
   "Symphyotrichum lateriflorum": {
@@ -5762,9 +6339,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Calico Aster",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Symphyotrichum lateriflorum"
   },
   "Symphyotrichum novae-angliae": {
@@ -5785,9 +6364,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "New England aster",
+    "Alternate common name": "",
     "Height": "2-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Symphyotrichum novae-angliae"
   },
   "Symphyotrichum novi-belgii": {
@@ -5807,9 +6388,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "New York aster",
+    "Alternate common name": "",
     "Height": "1-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Symphyotrichum novi-belgii"
   },
   "Symphyotrichum oblongifolium": {
@@ -5830,9 +6413,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Aromatic aster",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Symphyotrichum oblongifolium"
   },
   "Symphyotrichum oolentangiense": {
@@ -5853,9 +6438,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Sky blue aster",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Symphyotrichum oolentangiense"
   },
   "Symphyotrichum pilosum": {
@@ -5874,9 +6461,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Frost Aster",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Symphyotrichum pilosum"
   },
   "Symphyotrichum prenanthoides": {
@@ -5896,9 +6485,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Crooked stemmed aster",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Symphyotrichum prenanthoides"
   },
   "Symphyotrichum puniceum": {
@@ -5919,9 +6510,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Purple-stemmed Aster",
+    "Alternate common name": "",
     "Height": "4-6 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Symphyotrichum puniceum"
   },
   "Symphyotrichum sericeum": {
@@ -5941,9 +6534,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Silky aster",
+    "Alternate common name": "",
     "Height": "1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Symphyotrichum sericeum"
   },
   "Symphyotrichum shortii": {
@@ -5963,9 +6558,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Short's Aster",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Symphyotrichum shortii"
   },
   "Teucrium canadense": {
@@ -5985,9 +6582,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Germander",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Teucrium canadense"
   },
   "Thalictrum dasycarpum": {
@@ -6006,9 +6605,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Purple meadow rue",
+    "Alternate common name": "",
     "Height": "6 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Thalictrum dasycarpum"
   },
   "Thalictrum dioicum": {
@@ -6028,9 +6629,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Early meadow rue",
+    "Alternate common name": "",
     "Height": "1-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Thalictrum dioicum"
   },
   "Thalictrum pubescens": {
@@ -6051,9 +6654,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Tall meadow rue",
+    "Alternate common name": "",
     "Height": "1.5-5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Thalictrum pubescens"
   },
   "Thalictrum rochebrunianum": {
@@ -6064,9 +6669,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Thalictrum rochebrunianum"
   },
   "Thalictrum thalictroides": {
@@ -6086,9 +6693,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Rue anemone",
+    "Alternate common name": "",
     "Height": ".25-.75 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Thalictrum thalictroides"
   },
   "Thermopsis carolinia": {
@@ -6108,18 +6717,22 @@
       "Herbaceous perennial"
     ],
     "Common name": "Carolina Lupine",
+    "Alternate common name": "",
     "Height": "3-5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Thermopsis carolinia"
   },
   "Tiarella cordifolia": {
     "Sunlight": [
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
-      "Medium"
+      "Medium",
+      "Dry"
     ],
     "Bloom time": [
       "Apr",
@@ -6129,9 +6742,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Foam flower",
-    "Height": ".25-1 ft",
-    "Ecoregion": "",
-    "Native Range": "",
+    "Alternate common name": "",
+    "Height": "0.25-1 ft",
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": "Northeastern US, Eastern US, MA Native",
+    "Hosted Insects": "",
     "Latin name": "Tiarella cordifolia"
   },
   "Tradescantia bracteata": {
@@ -6151,9 +6766,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Prairie Spiderwort",
+    "Alternate common name": "",
     "Height": "1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Tradescantia bracteata"
   },
   "Tradescantia ohiensis": {
@@ -6174,9 +6791,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Ohio spiderwort",
+    "Alternate common name": "",
     "Height": "1.5-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Tradescantia ohiensis"
   },
   "Tradescantia virginiana": {
@@ -6197,9 +6816,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Virginia Spiderwort",
+    "Alternate common name": "",
     "Height": "1-2.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Tradescantia virginiana"
   },
   "Trillium erectum": {
@@ -6219,9 +6840,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Red trillium",
+    "Alternate common name": "",
     "Height": ".75-1.25 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Trillium erectum"
   },
   "Trillum grandiflorum": {
@@ -6240,9 +6863,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "White trillium",
+    "Alternate common name": "",
     "Height": ".5-1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Trillum grandiflorum"
   },
   "Triodanis perfoliata": {
@@ -6263,9 +6888,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Clasping Venus's Looking Glass",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Triodanis perfoliata"
   },
   "Uvularia grandiflora": {
@@ -6284,9 +6911,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Great merry bells",
+    "Alternate common name": "",
     "Height": "1-1.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Uvularia grandiflora"
   },
   "Uvularia sessilifolia": {
@@ -6306,9 +6935,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Sessile leaf bellwort",
+    "Alternate common name": "",
     "Height": "12 in",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Uvularia sessilifolia"
   },
   "Verbena hastata": {
@@ -6329,9 +6960,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Blue vervain",
+    "Alternate common name": "",
     "Height": "5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Verbena hastata"
   },
   "Verbena stricta": {
@@ -6353,9 +6986,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Hoary vervain",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Verbena stricta"
   },
   "Verbena urtifolia": {
@@ -6366,9 +7001,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Verbena urtifolia"
   },
   "Verbesina alternifolia": {
@@ -6389,9 +7026,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Wingstem",
+    "Alternate common name": "",
     "Height": "8 ft",
     "Ecoregion": "",
-    "Native Range": "",
+    "Native Range": "Eastern US, Southeastern US",
+    "Hosted Insects": "Agonopterix eupatoriiella (Chambers, 1878); Silvery Checkerspot (Chlosyne nycteis (Doubleday, [1847])",
     "Latin name": "Verbesina alternifolia"
   },
   "Vernonia fasciculata": {
@@ -6411,9 +7050,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Prairie ironweed",
+    "Alternate common name": "",
     "Height": "6 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Vernonia fasciculata"
   },
   "Vernonia gigantea": {
@@ -6433,9 +7074,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Tall Ironweed",
+    "Alternate common name": "",
     "Height": "5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Vernonia gigantea"
   },
   "Vernonia noveboracensis": {
@@ -6455,9 +7098,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "NY ironweed",
+    "Alternate common name": "",
     "Height": "4-7 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Vernonia noveboracensis"
   },
   "Veronicastrum virginicum": {
@@ -6477,9 +7122,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Culvers root",
+    "Alternate common name": "",
     "Height": "3-6 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Veronicastrum virginicum"
   },
   "Viola palmata": {
@@ -6490,9 +7137,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Viola palmata"
   },
   "Viola pedata": {
@@ -6513,9 +7162,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Bird's Foot Violet",
+    "Alternate common name": "",
     "Height": ".25-.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Viola pedata"
   },
   "Viola pedatifida": {
@@ -6535,9 +7186,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Prairie Violet",
+    "Alternate common name": "",
     "Height": "0.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Viola pedatifida"
   },
   "Viola pubescens": {
@@ -6557,9 +7210,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Downy yellow violet",
+    "Alternate common name": "",
     "Height": ".25-1.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Viola pubescens"
   },
   "Viola sororia": {
@@ -6580,9 +7235,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Common blue violet",
+    "Alternate common name": "",
     "Height": ".25 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Viola sororia"
   },
   "Viola sororia 'Freckles'": {
@@ -6593,9 +7250,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Freckles Violet",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Viola sororia 'Freckles'"
   },
   "Viola striata": {
@@ -6613,9 +7272,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Striped Cream Violet",
+    "Alternate common name": "",
     "Height": ".75-1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Viola striata"
   },
   "Zizia aptera": {
@@ -6634,9 +7295,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Heart leaved Alexanders",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Zizia aptera"
   },
   "Zizia aurea": {
@@ -6657,9 +7320,11 @@
       "Herbaceous perennial"
     ],
     "Common name": "Golden Alexander",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Zizia aurea"
   },
   "Agrostis perenns": {
@@ -6670,9 +7335,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Bentgrass",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Agrostis perenns"
   },
   "Andropogon gerardii": {
@@ -6688,9 +7355,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Big Blue Stem",
+    "Alternate common name": "",
     "Height": "2-5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Andropogon gerardii"
   },
   "Andropogon virginicus": {
@@ -6710,9 +7379,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Broom sedge",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Andropogon virginicus"
   },
   "Bouteloua curtipendula": {
@@ -6733,9 +7404,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Side oats grama",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Bouteloua curtipendula"
   },
   "Boutelua gracilis": {
@@ -6756,9 +7429,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Blue grama",
+    "Alternate common name": "",
     "Height": "1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Boutelua gracilis"
   },
   "Bromus ciliatus": {
@@ -6775,9 +7450,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Fringed Brome",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Bromus ciliatus"
   },
   "Bromus kalmii": {
@@ -6793,9 +7470,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Prairie Brome",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Bromus kalmii"
   },
   "Bromus pubescens": {
@@ -6815,9 +7494,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Hairy Wood Chess",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Bromus pubescens"
   },
   "Calamagrostis canadensis": {
@@ -6838,9 +7519,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Blue Joint Grass",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Calamagrostis canadensis"
   },
   "Calamagrostis cinnoides": {
@@ -6851,9 +7534,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Nuttall's reed grass",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Calamagrostis cinnoides"
   },
   "Carex appalachica": {
@@ -6873,9 +7558,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Appalachian sedge",
+    "Alternate common name": "",
     "Height": "1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carex appalachica"
   },
   "Carex blanda": {
@@ -6896,9 +7583,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Common wood sedge",
+    "Alternate common name": "",
     "Height": "1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carex blanda"
   },
   "Carex brevior": {
@@ -6919,9 +7608,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Plains oval sedge",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carex brevior"
   },
   "Carex cephalophora": {
@@ -6941,9 +7632,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Short headed bracted sedge",
+    "Alternate common name": "",
     "Height": "1.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carex cephalophora"
   },
   "Carex comosa": {
@@ -6961,9 +7654,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Bristly sedge",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carex comosa"
   },
   "Carex crinita": {
@@ -6982,9 +7677,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Fringed sedge",
+    "Alternate common name": "",
     "Height": "1-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carex crinita"
   },
   "Carex eburnea": {
@@ -7004,9 +7701,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Bristle-leaf sedge",
+    "Alternate common name": "",
     "Height": ".5-1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carex eburnea"
   },
   "Carex gracillima": {
@@ -7025,9 +7724,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Purple sheathed graceful sedge",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carex gracillima"
   },
   "Carex intumescens": {
@@ -7048,9 +7749,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Shining burr sedge",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carex intumescens"
   },
   "Carex lupalina": {
@@ -7071,9 +7774,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Common hop sedge",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carex lupalina"
   },
   "Carex muskingumensis": {
@@ -7093,15 +7798,18 @@
       "Grasses and sedges"
     ],
     "Common name": "Palm sedge",
+    "Alternate common name": "",
     "Height": ".5-.75 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carex muskingumensis"
   },
   "Carex pensylvanica": {
     "Sunlight": [
       "Sun",
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -7117,9 +7825,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Pennsylvania sedge",
+    "Alternate common name": "",
     "Height": "8 in",
     "Ecoregion": "",
-    "Native Range": "",
+    "Native Range": "Northeastern US, Eastern US, Midwestern US, MA Native",
+    "Hosted Insects": "Pink Sedge Moth (Amolita roseola (Smith, 1903); Plains Skipper (Hesperia assiniboia (Lyman, 1892, MA non-native); Calais Arctic (Oeneis calais (Scudder, 1865, MA non-native)",
     "Latin name": "Carex pensylvanica"
   },
   "Carex plantaginea": {
@@ -7139,9 +7849,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Plantain leaved sedge",
+    "Alternate common name": "",
     "Height": "12 in",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carex plantaginea"
   },
   "Carex platyphylla": {
@@ -7158,9 +7870,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Broad leaved sedge",
+    "Alternate common name": "",
     "Height": ".75-1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carex platyphylla"
   },
   "Carex radiata": {
@@ -7178,9 +7892,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Eastern star sedge",
+    "Alternate common name": "",
     "Height": "1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carex radiata"
   },
   "Carex scoparia": {
@@ -7199,9 +7915,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Lance-fruited oval sedge",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carex scoparia"
   },
   "Carex squarrosa": {
@@ -7222,9 +7940,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Narrow leaved cattail sedge",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carex squarrosa"
   },
   "Carex sprengelii": {
@@ -7245,9 +7965,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Long-beaked Sedge",
+    "Alternate common name": "",
     "Height": "1-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carex sprengelii"
   },
   "Carex stricta": {
@@ -7267,9 +7989,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Tussock Sedge",
+    "Alternate common name": "",
     "Height": "3-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carex stricta"
   },
   "Carex swanii": {
@@ -7287,9 +8011,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Swan's sedge",
+    "Alternate common name": "",
     "Height": ".75-1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carex swanii"
   },
   "Carex typhina": {
@@ -7309,9 +8035,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Common cattail sedge",
+    "Alternate common name": "",
     "Height": "1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carex typhina"
   },
   "Carex vulpinoidea": {
@@ -7331,9 +8059,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Fox Sedge",
+    "Alternate common name": "",
     "Height": "2-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carex vulpinoidea"
   },
   "Chasmanthium latifolium": {
@@ -7355,9 +8085,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Northern sea oats",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Chasmanthium latifolium"
   },
   "Danthonia spicata": {
@@ -7378,9 +8110,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Poverty Oat Grass",
+    "Alternate common name": "",
     "Height": "1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Danthonia spicata"
   },
   "Deschampsia flexuosa": {
@@ -7396,9 +8130,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Wavy hairgrass",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Deschampsia flexuosa"
   },
   "Diarrhena obovata": {
@@ -7419,9 +8155,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Beak grass",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Diarrhena obovata"
   },
   "Elymus canadensis": {
@@ -7443,9 +8181,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Canada Wild Rye",
+    "Alternate common name": "",
     "Height": "5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Elymus canadensis"
   },
   "Elymus hystrix": {
@@ -7466,9 +8206,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Bottlebrush grass",
+    "Alternate common name": "",
     "Height": "3-5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Elymus hystrix"
   },
   "Elymus riparius": {
@@ -7488,9 +8230,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Riverbank Wild Rye",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Elymus riparius"
   },
   "Elymus virginicus": {
@@ -7511,9 +8255,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Virginia Wild Rye",
+    "Alternate common name": "",
     "Height": "4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Elymus virginicus"
   },
   "Elymus villosus": {
@@ -7533,9 +8279,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Silky wild rye",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Elymus villosus"
   },
   "Eragrostis spectabilis": {
@@ -7555,9 +8303,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Purple lovegrass",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Eragrostis spectabilis"
   },
   "Glyceria striata": {
@@ -7580,9 +8330,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Fowl manna grass",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Glyceria striata"
   },
   "Hierochloe odorata": {
@@ -7603,9 +8355,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Sweetgrass",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Hierochloe odorata"
   },
   "Juncus tenuis": {
@@ -7622,9 +8376,11 @@
       "Grasses and sedges"
     ],
     "Common name": "",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Juncus tenuis"
   },
   "Muhlenbergia capillaris": {
@@ -7641,9 +8397,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Pink Hairgrass",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Muhlenbergia capillaris"
   },
   "Panicum acuminatum": {
@@ -7664,9 +8422,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Hairy panic grass",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Panicum acuminatum"
   },
   "Panicum virgatum": {
@@ -7686,9 +8446,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Switchgrass",
+    "Alternate common name": "",
     "Height": "3-6 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Panicum virgatum"
   },
   "Poa palustris": {
@@ -7710,9 +8472,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Fowl bluegrass",
+    "Alternate common name": "",
     "Height": "2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Poa palustris"
   },
   "Poa pratensis": {
@@ -7723,9 +8487,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Kentucky bluegrass",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Poa pratensis"
   },
   "Schizachyrium scoparium": {
@@ -7745,9 +8511,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Little bluestem",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Schizachyrium scoparium"
   },
   "Sorghastrum nutans": {
@@ -7767,9 +8535,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Indiangrass",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Sorghastrum nutans"
   },
   "Sphenopholis obtusata": {
@@ -7789,9 +8559,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Prairie Wedgegrass",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Sphenopholis obtusata"
   },
   "Sporobolus heterolepis": {
@@ -7811,9 +8583,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Prairie Dropseed",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Sporobolus heterolepis"
   },
   "Tridens flavus": {
@@ -7833,9 +8607,11 @@
       "Grasses and sedges"
     ],
     "Common name": "Purpletop",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Tridens flavus"
   },
   "Adiantum pedatum": {
@@ -7852,9 +8628,11 @@
       "Ferns"
     ],
     "Common name": "Maidenhair fern",
+    "Alternate common name": "",
     "Height": "1-2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Adiantum pedatum"
   },
   "Asplenium platyneuron": {
@@ -7871,9 +8649,11 @@
       "Ferns"
     ],
     "Common name": "Ebony spleenwort",
+    "Alternate common name": "",
     "Height": ".75-1.75 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Asplenium platyneuron"
   },
   "Athyrium felix-femina": {
@@ -7890,9 +8670,11 @@
       "Ferns"
     ],
     "Common name": "Lady fern",
+    "Alternate common name": "",
     "Height": "1-2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Athyrium felix-femina"
   },
   "Botrychium virginianum": {
@@ -7911,9 +8693,11 @@
       "Ferns"
     ],
     "Common name": "Rattlesnake Fern",
+    "Alternate common name": "",
     "Height": "1.4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Botrychium virginianum"
   },
   "Cryptogramma stelleri": {
@@ -7929,9 +8713,11 @@
       "Ferns"
     ],
     "Common name": "Slender rock brake",
+    "Alternate common name": "",
     "Height": ".25-.75 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Cryptogramma stelleri"
   },
   "Cystopteris fragilis": {
@@ -7948,9 +8734,11 @@
       "Ferns"
     ],
     "Common name": "Fragile fern",
+    "Alternate common name": "",
     "Height": "1.25 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Cystopteris fragilis"
   },
   "Dennstaedtia punctilobula": {
@@ -7968,9 +8756,11 @@
       "Ferns"
     ],
     "Common name": "Hayscented fern",
+    "Alternate common name": "",
     "Height": "1-2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Dennstaedtia punctilobula"
   },
   "Dryopteris cristata": {
@@ -7987,9 +8777,11 @@
       "Ferns"
     ],
     "Common name": "Crested wood fern",
+    "Alternate common name": "",
     "Height": "1-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Dryopteris cristata"
   },
   "Dryopteris filix-mas": {
@@ -8006,9 +8798,11 @@
       "Ferns"
     ],
     "Common name": "Male fern",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Dryopteris filix-mas"
   },
   "Dryopteris goldiana": {
@@ -8025,9 +8819,11 @@
       "Ferns"
     ],
     "Common name": "Goldie's fern",
+    "Alternate common name": "",
     "Height": "2.5-3.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Dryopteris goldiana"
   },
   "Dryopteris intermedia": {
@@ -8044,9 +8840,11 @@
       "Ferns"
     ],
     "Common name": "Evergreen wood fern",
+    "Alternate common name": "",
     "Height": "1.5-2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Dryopteris intermedia"
   },
   "Dryopteris marginalis": {
@@ -8063,9 +8861,11 @@
       "Ferns"
     ],
     "Common name": "Marginal woodfern",
+    "Alternate common name": "",
     "Height": "18-24 in",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Dryopteris marginalis"
   },
   "Gymnocarpium dryopteris": {
@@ -8081,9 +8881,11 @@
       "Ferns"
     ],
     "Common name": "Oak fern",
+    "Alternate common name": "",
     "Height": ".25-1.25 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Gymnocarpium dryopteris"
   },
   "Matteuccia struthiopteris": {
@@ -8101,9 +8903,11 @@
       "Ferns"
     ],
     "Common name": "Ostrich fern",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Matteuccia struthiopteris"
   },
   "Onoclea sensibilis": {
@@ -8121,9 +8925,11 @@
       "Ferns"
     ],
     "Common name": "Sensitive fern",
+    "Alternate common name": "",
     "Height": "1-2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Onoclea sensibilis"
   },
   "Osmunda cinnamomea": {
@@ -8140,9 +8946,11 @@
       "Ferns"
     ],
     "Common name": "Cinnamon fern",
+    "Alternate common name": "",
     "Height": "2-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Osmunda cinnamomea"
   },
   "Osmunda claytonia": {
@@ -8158,9 +8966,11 @@
       "Ferns"
     ],
     "Common name": "Interrupted fern",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Osmunda claytonia"
   },
   "Osmunda regalis": {
@@ -8176,9 +8986,11 @@
       "Ferns"
     ],
     "Common name": "Royal fern",
+    "Alternate common name": "",
     "Height": "2-3.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Osmunda regalis"
   },
   "Parathelypteris noveboracensis": {
@@ -8194,9 +9006,11 @@
       "Ferns"
     ],
     "Common name": "New York fern",
+    "Alternate common name": "",
     "Height": ".75-2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Parathelypteris noveboracensis"
   },
   "Pellaea atropurpurea": {
@@ -8212,9 +9026,11 @@
       "Ferns"
     ],
     "Common name": "Purple cliffbrake",
+    "Alternate common name": "",
     "Height": ".25-1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Pellaea atropurpurea"
   },
   "Phegopteris connectilis": {
@@ -8230,9 +9046,11 @@
       "Ferns"
     ],
     "Common name": "Narrow beech fern",
+    "Alternate common name": "",
     "Height": ".25-1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Phegopteris connectilis"
   },
   "Phegopteris hexagonoptera": {
@@ -8249,9 +9067,11 @@
       "Ferns"
     ],
     "Common name": "Broad beech fern",
+    "Alternate common name": "",
     "Height": "1-1.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Phegopteris hexagonoptera"
   },
   "Polypodium virginianum": {
@@ -8267,9 +9087,11 @@
       "Ferns"
     ],
     "Common name": "Rock polypody",
+    "Alternate common name": "",
     "Height": ".5-1 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Polypodium virginianum"
   },
   "Polystichum acrostoides": {
@@ -8286,9 +9108,11 @@
       "Ferns"
     ],
     "Common name": "Christmas fern",
+    "Alternate common name": "",
     "Height": ".75-1.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Polystichum acrostoides"
   },
   "Polystichum braunii": {
@@ -8304,9 +9128,11 @@
       "Ferns"
     ],
     "Common name": "Braun's holly fern",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Polystichum braunii"
   },
   "Thelypteris novaboracensis": {
@@ -8322,9 +9148,11 @@
       "Ferns"
     ],
     "Common name": "New York fern",
+    "Alternate common name": "",
     "Height": ".75-2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Thelypteris novaboracensis"
   },
   "Thelypteris palustris": {
@@ -8341,9 +9169,11 @@
       "Ferns"
     ],
     "Common name": "Marsh fern",
+    "Alternate common name": "",
     "Height": "1-1.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Thelypteris palustris"
   },
   "Woodsia obtusa": {
@@ -8360,9 +9190,11 @@
       "Ferns"
     ],
     "Common name": "Blunt-lobed woodsia",
+    "Alternate common name": "",
     "Height": "1-1.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Woodsia obtusa"
   },
   "Woodwardia areolata": {
@@ -8379,9 +9211,11 @@
       "Ferns"
     ],
     "Common name": "Netted chain fern",
+    "Alternate common name": "",
     "Height": "1.5-2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Woodwardia areolata"
   },
   "Woodwardia virginica": {
@@ -8399,10 +9233,33 @@
       "Ferns"
     ],
     "Common name": "Chain fern",
+    "Alternate common name": "",
     "Height": "2-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Woodwardia virginica"
+  },
+  "Amsonia tabernaemontana 'Blue Ice'": {
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [],
+    "Bloom time": [
+      "May"
+    ],
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Common name": "Eastern Bluestar 'Blue Ice'",
+    "Alternate common name": "",
+    "Height": "",
+    "Ecoregion": "",
+    "Native Range": "Southeastern US, Midwestern US, Southern US, Cultivar",
+    "Hosted Insects": "",
+    "Latin name": "Amsonia tabernaemontana 'Blue Ice'"
   },
   "Alnus incana": {
     "Sunlight": [
@@ -8423,9 +9280,11 @@
       "Trees"
     ],
     "Common name": "Speckled alder",
+    "Alternate common name": "",
     "Height": "6-15 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Alnus incana"
   },
   "Alnus serrulata": {
@@ -8446,9 +9305,11 @@
       "Trees"
     ],
     "Common name": "Smooth alder",
+    "Alternate common name": "",
     "Height": "10-15 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Alnus serrulata"
   },
   "Amelanchier canadensis": {
@@ -8470,9 +9331,11 @@
       "Trees"
     ],
     "Common name": "Serviceberry, Shadblow",
+    "Alternate common name": "",
     "Height": "10-18 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Amelanchier canadensis"
   },
   "Amorpha fruticosa": {
@@ -8493,9 +9356,11 @@
       "Shrubs"
     ],
     "Common name": "False Indigo Bush",
+    "Alternate common name": "",
     "Height": "10-12 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Amorpha fruticosa"
   },
   "Aronia arbutifolia": {
@@ -8516,9 +9381,11 @@
       "Shrubs"
     ],
     "Common name": "Red chokeberry",
+    "Alternate common name": "",
     "Height": "5-12 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Aronia arbutifolia"
   },
   "Aronia floribunda(prunifolia)": {
@@ -8538,9 +9405,11 @@
       "Shrubs"
     ],
     "Common name": "Purple chokeberry",
+    "Alternate common name": "",
     "Height": "6-8 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Aronia floribunda(prunifolia)"
   },
   "Aronia melanocarpa": {
@@ -8561,9 +9430,11 @@
       "Shrubs"
     ],
     "Common name": "Black chokeberry",
+    "Alternate common name": "",
     "Height": "3-10 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Aronia melanocarpa"
   },
   "Arctostaphylos uva-ursi": {
@@ -8579,9 +9450,11 @@
       "Shrubs"
     ],
     "Common name": "Red bearberry",
+    "Alternate common name": "",
     "Height": ".25-.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Arctostaphylos uva-ursi"
   },
   "Baccharis halimifolia": {
@@ -8597,9 +9470,11 @@
       "Shrubs"
     ],
     "Common name": "Eastern false willow",
+    "Alternate common name": "",
     "Height": "6-12 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Baccharis halimifolia"
   },
   "Calycanthus floridus": {
@@ -8619,9 +9494,11 @@
       "Shrubs"
     ],
     "Common name": "Carolina allspice",
+    "Alternate common name": "",
     "Height": "6-10 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Calycanthus floridus"
   },
   "Ceanothus americanus": {
@@ -8642,9 +9519,11 @@
       "Shrubs"
     ],
     "Common name": "New Jersey tea",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Ceanothus americanus"
   },
   "Ceanothus ovatus": {
@@ -8663,9 +9542,11 @@
       "Shrubs"
     ],
     "Common name": "Red Root",
+    "Alternate common name": "",
     "Height": "3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Ceanothus ovatus"
   },
   "Cephalanthus occidentalis": {
@@ -8684,9 +9565,11 @@
       "Shrubs"
     ],
     "Common name": "Buttonbush",
+    "Alternate common name": "",
     "Height": "3-8 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Cephalanthus occidentalis"
   },
   "Chamaedaphne calyculata": {
@@ -8704,9 +9587,11 @@
       "Shrubs"
     ],
     "Common name": "Leatherleaf",
+    "Alternate common name": "",
     "Height": "1-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Chamaedaphne calyculata"
   },
   "Chionanthus virginicus": {
@@ -8727,9 +9612,11 @@
       "Trees"
     ],
     "Common name": "Fringetree",
+    "Alternate common name": "",
     "Height": "10-20 ft",
     "Ecoregion": 58,
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Chionanthus virginicus"
   },
   "Clethra alnifolia": {
@@ -8746,9 +9633,11 @@
       "Shrubs"
     ],
     "Common name": "Sweet Pepperbush",
+    "Alternate common name": "",
     "Height": "4-8 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Clethra alnifolia"
   },
   "Comptonia peregrina": {
@@ -8765,9 +9654,11 @@
       "Shrubs"
     ],
     "Common name": "Sweetfern",
+    "Alternate common name": "",
     "Height": "1-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Comptonia peregrina"
   },
   "Cornus (Swida) amomum": {
@@ -8784,9 +9675,11 @@
       "Shrubs"
     ],
     "Common name": "Silky dogwood",
+    "Alternate common name": "",
     "Height": "3-8 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Cornus (Swida) amomum"
   },
   "Cornus canadensis": {
@@ -8804,9 +9697,11 @@
       "Shrubs"
     ],
     "Common name": "Bunchberry",
+    "Alternate common name": "",
     "Height": ".25-.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Cornus canadensis"
   },
   "Cornus (Swida) racemosa": {
@@ -8823,9 +9718,11 @@
       "Shrubs"
     ],
     "Common name": "Gray dogwood",
+    "Alternate common name": "",
     "Height": "3-8 ft",
     "Ecoregion": "",
-    "Native Range": "",
+    "Native Range": "Northeastern US, Mid-Atlantic US, Midwestern US, MA Native",
+    "Hosted Insects": "",
     "Latin name": "Cornus (Swida) racemosa"
   },
   "Cornus (Swida) sericea": {
@@ -8842,9 +9739,11 @@
       "Shrubs"
     ],
     "Common name": "Red Osier Dogwood",
+    "Alternate common name": "",
     "Height": "3-8 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Cornus (Swida) sericea"
   },
   "Corylus americana": {
@@ -8864,9 +9763,11 @@
       "Shrubs"
     ],
     "Common name": "American Hazelnut",
+    "Alternate common name": "",
     "Height": "5-9 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Corylus americana"
   },
   "Diervilla lonicera": {
@@ -8887,10 +9788,37 @@
       "Shrubs"
     ],
     "Common name": "Northern bush honeysuckle",
+    "Alternate common name": "",
     "Height": "2-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Diervilla lonicera"
+  },
+  "Diervilla X 'Kodiak Orange'": {
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "plantType": [
+      "Shrubs"
+    ],
+    "Common name": "Bush Honeysuckle 'Kodiak Orange'",
+    "Alternate common name": "",
+    "Height": "",
+    "Ecoregion": "",
+    "Native Range": "US Native, Cultivar",
+    "Hosted Insects": "",
+    "Latin name": "Diervilla X 'Kodiak Orange'"
   },
   "Dirca palustris": {
     "Sunlight": [
@@ -8904,9 +9832,11 @@
       "Shrubs"
     ],
     "Common name": "Leatherwood",
+    "Alternate common name": "",
     "Height": "3-6 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Dirca palustris"
   },
   "Euonymous atropurpurea": {
@@ -8917,9 +9847,11 @@
       "Shrubs"
     ],
     "Common name": "Eastern wahoo",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Euonymous atropurpurea"
   },
   "Fothergilla gardenii": {
@@ -8939,9 +9871,11 @@
       "Shrubs"
     ],
     "Common name": "Dwarf witch alder",
+    "Alternate common name": "",
     "Height": "3-6 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Fothergilla gardenii"
   },
   "Gaylussacia baccata": {
@@ -8959,29 +9893,37 @@
       "Shrubs"
     ],
     "Common name": "Black huckleberry",
+    "Alternate common name": "",
     "Height": "1-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Gaylussacia baccata"
   },
   "Hamamelis virginiana": {
     "Sunlight": [
       "Sun",
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
       "Wet",
       "Medium"
     ],
-    "Bloom time": [],
+    "Bloom time": [
+      "Oct",
+      "Nov"
+    ],
     "plantType": [
       "Shrubs"
     ],
     "Common name": "American Witch Hazel",
+    "Alternate common name": "",
     "Height": "6-15 ft",
-    "Ecoregion": "",
-    "Native Range": "",
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": "Northeastern US, Eastern US, Midwestern US, Southeastern US, Southern US, MA Native",
+    "Hosted Insects": "",
     "Latin name": "Hamamelis virginiana"
   },
   "Hydrangea arborescens": {
@@ -8997,9 +9939,11 @@
       "Shrubs"
     ],
     "Common name": "Smooth hydrangea",
+    "Alternate common name": "",
     "Height": "2-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Hydrangea arborescens"
   },
   "Hydrangea quercifolia": {
@@ -9020,9 +9964,11 @@
       "Shrubs"
     ],
     "Common name": "Oakleaf Hydrangea",
+    "Alternate common name": "",
     "Height": "6-10 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Hydrangea quercifolia"
   },
   "Hypericum kalmianum": {
@@ -9042,9 +9988,11 @@
       "Shrubs"
     ],
     "Common name": "Kalm's St John's Wort",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Hypericum kalmianum"
   },
   "Hypericum prolificum": {
@@ -9064,32 +10012,66 @@
       "Shrubs"
     ],
     "Common name": "Shrubby St. John's Wort",
+    "Alternate common name": "",
     "Height": "2-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Hypericum prolificum"
   },
   "Ilex glabra": {
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Wet",
       "Medium",
       "Dry"
     ],
-    "Bloom time": [],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
     "plantType": [
       "Shrubs"
     ],
     "Common name": "Inkberry",
+    "Alternate common name": "",
     "Height": "3-6 ft",
-    "Ecoregion": "",
-    "Native Range": "",
+    "Ecoregion": "59,82,84",
+    "Native Range": "Northeastern US, East Coast US, Southeastern US, MA Native",
+    "Hosted Insects": "",
     "Latin name": "Ilex glabra"
   },
-  "Ilex opaca": {
+  "Ilex glabra ": {
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "plantType": [
+      "Shrubs"
+    ],
+    "Common name": "Inkberry 'Compacta'",
+    "Alternate common name": "",
+    "Height": "",
+    "Ecoregion": "",
+    "Native Range": "Northeastern US, East Coast US, Southeastern US, MA Native, Cultivar",
+    "Hosted Insects": "",
+    "Latin name": "Ilex glabra "
+  },
+  "Ilex glabra 'Compacta'": {
     "Sunlight": [
       "Sun",
       "Part Sun"
@@ -9102,10 +10084,12 @@
       "Shrubs"
     ],
     "Common name": "American holly",
+    "Alternate common name": "",
     "Height": "12-30 ft",
     "Ecoregion": "",
     "Native Range": "",
-    "Latin name": "Ilex opaca"
+    "Hosted Insects": "",
+    "Latin name": "Ilex glabra 'Compacta'"
   },
   "Ilex verticillata": {
     "Sunlight": [
@@ -9126,9 +10110,11 @@
       "Shrubs"
     ],
     "Common name": "Winterberry",
+    "Alternate common name": "",
     "Height": "4-10 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Ilex verticillata"
   },
   "Itea virginica": {
@@ -9148,9 +10134,11 @@
       "Shrubs"
     ],
     "Common name": "Sweetspire",
+    "Alternate common name": "",
     "Height": "3-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Itea virginica"
   },
   "Iva frutescens": {
@@ -9165,9 +10153,11 @@
       "Shrubs"
     ],
     "Common name": "Marsh elder",
+    "Alternate common name": "",
     "Height": "4-8 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Iva frutescens"
   },
   "Juniperus horizontalis": {
@@ -9183,9 +10173,11 @@
       "Shrubs"
     ],
     "Common name": "Creeping juniper",
+    "Alternate common name": "",
     "Height": ".25-.5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Juniperus horizontalis"
   },
   "Kalmia angustifolia": {
@@ -9205,9 +10197,11 @@
       "Shrubs"
     ],
     "Common name": "Sheep laurel",
+    "Alternate common name": "",
     "Height": "1-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Kalmia angustifolia"
   },
   "Kalmia latifolia": {
@@ -9227,9 +10221,11 @@
       "Shrubs"
     ],
     "Common name": "Mountain laurel",
+    "Alternate common name": "",
     "Height": "4-10 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Kalmia latifolia"
   },
   "Leucothoe fontanesiana": {
@@ -9247,9 +10243,11 @@
       "Shrubs"
     ],
     "Common name": "Drooping leucothoe",
+    "Alternate common name": "",
     "Height": "2-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Leucothoe fontanesiana"
   },
   "Lindera benzoin": {
@@ -9267,15 +10265,18 @@
       "Shrubs"
     ],
     "Common name": "Spicebush",
+    "Alternate common name": "",
     "Height": "6-12 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Lindera benzoin"
   },
-  "Myrica pensylvanica (Morella caroliniensis)": {
+  "Myrica pensylvanica": {
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Medium",
@@ -9283,17 +10284,43 @@
     ],
     "Bloom time": [
       "Apr",
-      "May",
-      "Jun"
+      "May"
     ],
     "plantType": [
       "Shrubs"
     ],
     "Common name": "Bayberry",
+    "Alternate common name": "",
     "Height": "2-6 ft",
-    "Ecoregion": "",
-    "Native Range": "",
-    "Latin name": "Myrica pensylvanica (Morella caroliniensis)"
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": "Northeastern US, East Coast US, Southeastern US, MA Native",
+    "Hosted Insects": "",
+    "Latin name": "Myrica pensylvanica"
+  },
+  "Morella caroliniensis": {
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "plantType": [
+      "Shrubs"
+    ],
+    "Common name": "Bayberry",
+    "Alternate common name": "",
+    "Height": "2-6 ft",
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": "Northeastern US, East Coast US, Southeastern US, MA Native",
+    "Hosted Insects": "",
+    "Latin name": "Morella caroliniensis"
   },
   "Nemopanthus mucronata": {
     "Sunlight": [
@@ -9309,56 +10336,37 @@
       "Shrubs"
     ],
     "Common name": "American moutain holly",
+    "Alternate common name": "",
     "Height": "5-9 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Nemopanthus mucronata"
   },
-  "Photinia (Aronia) arbutifolia": {
+  "Aronia arbutifolia 'Brilliantissima'": {
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Wet",
-      "Medium",
-      "Dry"
+      "Medium"
     ],
     "Bloom time": [
-      "May",
-      "Jun"
+      "Apr",
+      "May"
     ],
     "plantType": [
       "Shrubs"
     ],
-    "Common name": "Red chokeberry",
-    "Height": "5-12 ft",
-    "Ecoregion": "",
-    "Native Range": "",
-    "Latin name": "Photinia (Aronia) arbutifolia"
-  },
-  "Photinia (Aronia) melanocarpa": {
-    "Sunlight": [
-      "Sun",
-      "Part Sun"
-    ],
-    "Moisture": [
-      "Wet",
-      "Medium",
-      "Dry"
-    ],
-    "Bloom time": [
-      "May",
-      "Jun"
-    ],
-    "plantType": [
-      "Shrubs"
-    ],
-    "Common name": "Black chokeberry",
-    "Height": "3-10 ft",
-    "Ecoregion": "",
-    "Native Range": "",
-    "Latin name": "Photinia (Aronia) melanocarpa"
+    "Common name": "Red Chokeberry 'Brilliantissima'",
+    "Alternate common name": "",
+    "Height": "",
+    "Ecoregion": "59,83,84",
+    "Native Range": "Northeastern US, Eastern US, Southeastern US, Southern US, Cultivar ",
+    "Hosted Insects": "",
+    "Latin name": "Aronia arbutifolia 'Brilliantissima'"
   },
   "Physocarpus opulifolius": {
     "Sunlight": [
@@ -9377,9 +10385,11 @@
       "Shrubs"
     ],
     "Common name": "Ninebark",
+    "Alternate common name": "",
     "Height": "4-9 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Physocarpus opulifolius"
   },
   "Prunus maritima": {
@@ -9395,9 +10405,11 @@
       "Shrubs"
     ],
     "Common name": "Beach plum",
+    "Alternate common name": "",
     "Height": "3-6 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Prunus maritima"
   },
   "Prunus pumila": {
@@ -9418,9 +10430,11 @@
       "Shrubs"
     ],
     "Common name": "Sand cherry",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Prunus pumila"
   },
   "Rhododendron arborescens": {
@@ -9439,9 +10453,11 @@
       "Shrubs"
     ],
     "Common name": "Sweet azalea",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rhododendron arborescens"
   },
   "Rhododendron canadense": {
@@ -9457,9 +10473,11 @@
       "Shrubs"
     ],
     "Common name": "Rhodora",
+    "Alternate common name": "",
     "Height": "2-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rhododendron canadense"
   },
   "Rhododendron maximum": {
@@ -9476,9 +10494,11 @@
       "Shrubs"
     ],
     "Common name": "Rosebay rhododendron",
+    "Alternate common name": "",
     "Height": "6-15 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rhododendron maximum"
   },
   "Rhododendron periclymenoides": {
@@ -9494,9 +10514,11 @@
       "Shrubs"
     ],
     "Common name": "Pinxterbloom azalea",
+    "Alternate common name": "",
     "Height": "3-8 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rhododendron periclymenoides"
   },
   "Rhododendron prinophyllum": {
@@ -9512,9 +10534,11 @@
       "Shrubs"
     ],
     "Common name": "Early azalea",
+    "Alternate common name": "",
     "Height": "3-8 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rhododendron prinophyllum"
   },
   "Rhododendron vaseyi": {
@@ -9531,9 +10555,11 @@
       "Shrubs"
     ],
     "Common name": "Pinkshell azalea",
+    "Alternate common name": "",
     "Height": "8-15 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rhododendron vaseyi"
   },
   "Rhododendron viscosum": {
@@ -9550,9 +10576,11 @@
       "Shrubs"
     ],
     "Common name": "Swamp azalea",
+    "Alternate common name": "",
     "Height": "3-5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rhododendron viscosum"
   },
   "Rhus aromatica": {
@@ -9569,9 +10597,11 @@
       "Shrubs"
     ],
     "Common name": "Fragrant sumac",
+    "Alternate common name": "",
     "Height": "3-7 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rhus aromatica"
   },
   "Rhus copallina": {
@@ -9588,9 +10618,11 @@
       "Shrubs"
     ],
     "Common name": "Winged sumac",
+    "Alternate common name": "",
     "Height": "5-8 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rhus copallina"
   },
   "Rhus glabra": {
@@ -9607,9 +10639,11 @@
       "Shrubs"
     ],
     "Common name": "Smooth sumac",
+    "Alternate common name": "",
     "Height": "8-15 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rhus glabra"
   },
   "Rhus typhina": {
@@ -9626,9 +10660,11 @@
       "Shrubs"
     ],
     "Common name": "Staghorn Sumac",
+    "Alternate common name": "",
     "Height": "8-15 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rhus typhina"
   },
   "Ribes cynosbati": {
@@ -9639,9 +10675,11 @@
       "Shrubs"
     ],
     "Common name": "Eastern prickly gooseberry",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Ribes cynosbati"
   },
   "Rosa blanda": {
@@ -9661,9 +10699,11 @@
       "Shrubs"
     ],
     "Common name": "Early wild rose",
+    "Alternate common name": "",
     "Height": "4-5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rosa blanda"
   },
   "Rosa carolina": {
@@ -9685,9 +10725,11 @@
       "Shrubs"
     ],
     "Common name": "Carolina rose",
+    "Alternate common name": "",
     "Height": "2-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rosa carolina"
   },
   "Rosa palustris": {
@@ -9707,9 +10749,11 @@
       "Shrubs"
     ],
     "Common name": "Swamp Rose",
+    "Alternate common name": "",
     "Height": "3-5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rosa palustris"
   },
   "Rosa virginiana": {
@@ -9726,9 +10770,11 @@
       "Shrubs"
     ],
     "Common name": "Virginia rose",
+    "Alternate common name": "",
     "Height": "2-4 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rosa virginiana"
   },
   "Rubus odoratus": {
@@ -9747,9 +10793,11 @@
       "Shrubs"
     ],
     "Common name": "Flowering raspberry",
+    "Alternate common name": "",
     "Height": "3-5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rubus odoratus"
   },
   "Rubus pensilvanicus": {
@@ -9760,9 +10808,11 @@
       "Shrubs"
     ],
     "Common name": "Pennsylvania blackberry",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rubus pensilvanicus"
   },
   "Rubuas idaeus": {
@@ -9783,9 +10833,11 @@
       "Shrubs"
     ],
     "Common name": "Red raspberry",
+    "Alternate common name": "",
     "Height": "2-5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rubuas idaeus"
   },
   "Rubus verrmontanus": {
@@ -9796,9 +10848,11 @@
       "Shrubs"
     ],
     "Common name": "Veromont blackberry",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Rubus verrmontanus"
   },
   "Salix discolor": {
@@ -9818,9 +10872,11 @@
       "Shrubs"
     ],
     "Common name": "American pussy willow",
+    "Alternate common name": "",
     "Height": "5-15 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Salix discolor"
   },
   "Salix bebbiana": {
@@ -9841,9 +10897,11 @@
       "Trees"
     ],
     "Common name": "Bebb's Willow",
+    "Alternate common name": "",
     "Height": "20-30 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Salix bebbiana"
   },
   "Salix cordata": {
@@ -9861,9 +10919,11 @@
       "Shrubs"
     ],
     "Common name": "Heartleaf willow",
+    "Alternate common name": "",
     "Height": "10 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Salix cordata"
   },
   "Salix eriocephala": {
@@ -9884,9 +10944,11 @@
       "Shrubs"
     ],
     "Common name": "Heart leaved willow",
+    "Alternate common name": "",
     "Height": "25 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Salix eriocephala"
   },
   "Salix humilis": {
@@ -9906,9 +10968,11 @@
       "Shrubs"
     ],
     "Common name": "Prairie willow",
+    "Alternate common name": "",
     "Height": "8 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Salix humilis"
   },
   "Salix lucida": {
@@ -9931,9 +10995,11 @@
       "Shrubs"
     ],
     "Common name": "Shining willow",
+    "Alternate common name": "",
     "Height": "12-20 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Salix lucida"
   },
   "Salix matsudana 'Tortuosa'": {
@@ -9944,9 +11010,11 @@
       "Shrubs"
     ],
     "Common name": "Corkscrew Willow",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Salix matsudana 'Tortuosa'"
   },
   "Salix occidentalis": {
@@ -9957,9 +11025,11 @@
       "Shrubs"
     ],
     "Common name": "Dwarf prairie willow",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Salix occidentalis"
   },
   "Salix petiolaris": {
@@ -9971,9 +11041,11 @@
       "Trees"
     ],
     "Common name": "Meadow willow",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Salix petiolaris"
   },
   "Salix sericea": {
@@ -9985,9 +11057,11 @@
       "Trees"
     ],
     "Common name": "Silky Willow",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Salix sericea"
   },
   "Sambucus nigra": {
@@ -10002,9 +11076,11 @@
       "Shrubs"
     ],
     "Common name": "Black elderberry",
+    "Alternate common name": "",
     "Height": "5-8 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Sambucus nigra"
   },
   "Sambucas racemosa": {
@@ -10021,9 +11097,11 @@
       "Shrubs"
     ],
     "Common name": "Red elderberry",
+    "Alternate common name": "",
     "Height": "4-8 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Sambucas racemosa"
   },
   "Spirea alba": {
@@ -10044,9 +11122,11 @@
       "Shrubs"
     ],
     "Common name": "White meadowsweet",
+    "Alternate common name": "",
     "Height": "2-5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Spirea alba"
   },
   "Spirea latifolia": {
@@ -10067,9 +11147,11 @@
       "Shrubs"
     ],
     "Common name": "Broadleaf meadowsweet",
+    "Alternate common name": "",
     "Height": "2-5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Spirea latifolia"
   },
   "Spiraea tomentosa": {
@@ -10090,9 +11172,11 @@
       "Shrubs"
     ],
     "Common name": "Steeplebush",
+    "Alternate common name": "",
     "Height": "2-5 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Spiraea tomentosa"
   },
   "Swida (Cornus) amomum": {
@@ -10109,9 +11193,11 @@
       "Shrubs"
     ],
     "Common name": "Silky dogwood",
+    "Alternate common name": "",
     "Height": "3-8 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Swida (Cornus) amomum"
   },
   "Swida (Cornus) racemosa": {
@@ -10129,9 +11215,11 @@
       "Trees"
     ],
     "Common name": "Gray dogwood",
+    "Alternate common name": "",
     "Height": "3-8 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Swida (Cornus) racemosa"
   },
   "Swida sericea": {
@@ -10148,9 +11236,11 @@
       "Shrubs"
     ],
     "Common name": "Red Osier Dogwood",
+    "Alternate common name": "",
     "Height": "3-8 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Swida sericea"
   },
   "Cornus sericea": {
@@ -10167,9 +11257,11 @@
       "Shrubs"
     ],
     "Common name": "Red Osier Dogwood",
+    "Alternate common name": "",
     "Height": "3-8 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Cornus sericea"
   },
   "Symphoricarpos albus": {
@@ -10187,9 +11279,11 @@
       "Shrubs"
     ],
     "Common name": "Snowberry",
+    "Alternate common name": "",
     "Height": "3-6 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Symphoricarpos albus"
   },
   "Taxus canadensis": {
@@ -10206,9 +11300,11 @@
       "Shrubs"
     ],
     "Common name": "American yew",
+    "Alternate common name": "",
     "Height": "2-3 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Taxus canadensis"
   },
   "Vaccinium augustifolium": {
@@ -10225,9 +11321,11 @@
       "Shrubs"
     ],
     "Common name": "Lowbush blueberrry",
+    "Alternate common name": "",
     "Height": "1-2 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Vaccinium augustifolium"
   },
   "Vaccinium corymbosum": {
@@ -10247,9 +11345,11 @@
       "Shrubs"
     ],
     "Common name": "Highbush blueberry",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Vaccinium corymbosum"
   },
   "Vaccinium macrocarpum": {
@@ -10264,9 +11364,11 @@
       "Shrubs"
     ],
     "Common name": "Large cranberry",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Vaccinium macrocarpum"
   },
   "Vaccinium oxycoccos": {
@@ -10277,9 +11379,11 @@
       "Shrubs"
     ],
     "Common name": "Small cranberry",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Vaccinium oxycoccos"
   },
   "Vaccinium pallidum": {
@@ -10290,9 +11394,11 @@
       "Shrubs"
     ],
     "Common name": "Hillside cranberry",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Vaccinium pallidum"
   },
   "Viburnum acerifolium": {
@@ -10315,9 +11421,11 @@
       "Shrubs"
     ],
     "Common name": "Mapleleaf viburnum",
+    "Alternate common name": "",
     "Height": "3-6 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Viburnum acerifolium"
   },
   "Viburnum dentatum": {
@@ -10336,9 +11444,11 @@
       "Shrubs"
     ],
     "Common name": "Arrowwood",
+    "Alternate common name": "",
     "Height": "6-10 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Viburnum dentatum"
   },
   "Viburnum lantanoides": {
@@ -10358,9 +11468,11 @@
       "Shrubs"
     ],
     "Common name": "Hobblebush",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Viburnum lantanoides"
   },
   "Viburnum nudum": {
@@ -10381,9 +11493,11 @@
       "Shrubs"
     ],
     "Common name": "Witherod",
+    "Alternate common name": "",
     "Height": "6-12 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Viburnum nudum"
   },
   "Viburnum nudum cassinoides": {
@@ -10403,9 +11517,11 @@
       "Shrubs"
     ],
     "Common name": "Witherod",
+    "Alternate common name": "",
     "Height": "6-12 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Viburnum nudum cassinoides"
   },
   "Viburnum lentago": {
@@ -10424,9 +11540,11 @@
       "Shrubs"
     ],
     "Common name": "Nannyberry",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Viburnum lentago"
   },
   "Viburnum prunifolium": {
@@ -10446,9 +11564,11 @@
       "Shrubs"
     ],
     "Common name": "Blackhaw viburnum",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Viburnum prunifolium"
   },
   "Viburnum trilobum": {
@@ -10465,9 +11585,11 @@
       "Shrubs"
     ],
     "Common name": "American Cranberry",
+    "Alternate common name": "",
     "Height": "5-12 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Viburnum trilobum"
   },
   "Abies balsamea": {
@@ -10484,9 +11606,11 @@
       "Trees"
     ],
     "Common name": "Balsam fir",
+    "Alternate common name": "",
     "Height": "35-60 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Abies balsamea"
   },
   "Acer negundo": {
@@ -10507,9 +11631,11 @@
       "Trees"
     ],
     "Common name": "Box elder",
+    "Alternate common name": "",
     "Height": "30-50 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Acer negundo"
   },
   "Acer nigrum": {
@@ -10526,9 +11652,11 @@
       "Trees"
     ],
     "Common name": "Black maple",
+    "Alternate common name": "",
     "Height": "100 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Acer nigrum"
   },
   "Acer pensylvanicum": {
@@ -10544,9 +11672,11 @@
       "Trees"
     ],
     "Common name": "Striped maple",
+    "Alternate common name": "",
     "Height": "15-25 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Acer pensylvanicum"
   },
   "Acer rubrum": {
@@ -10563,9 +11693,11 @@
       "Trees"
     ],
     "Common name": "Red maple",
+    "Alternate common name": "",
     "Height": "35-50 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Acer rubrum"
   },
   "Acer saccharinum": {
@@ -10582,9 +11714,11 @@
       "Trees"
     ],
     "Common name": "Silver maple",
+    "Alternate common name": "",
     "Height": "50-65 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Acer saccharinum"
   },
   "Acer saccharum": {
@@ -10601,9 +11735,11 @@
       "Trees"
     ],
     "Common name": "Sugar maple",
+    "Alternate common name": "",
     "Height": "60-80 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Acer saccharum"
   },
   "Acer spicatum": {
@@ -10619,9 +11755,11 @@
       "Trees"
     ],
     "Common name": "Mountain maple",
+    "Alternate common name": "",
     "Height": "12-25 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Acer spicatum"
   },
   "Amelanchier arborea": {
@@ -10641,9 +11779,11 @@
       "Trees"
     ],
     "Common name": "Downy serviceberry",
+    "Alternate common name": "",
     "Height": "15-25 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Amelanchier arborea"
   },
   "Amelanchier laevis": {
@@ -10664,9 +11804,11 @@
       "Trees"
     ],
     "Common name": "Allegheny serviceberry",
+    "Alternate common name": "",
     "Height": "15-30 ft",
     "Ecoregion": "all of MA",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Amelanchier laevis"
   },
   "Asimina triloba": {
@@ -10683,9 +11825,11 @@
       "Trees"
     ],
     "Common name": "Pawpaw",
+    "Alternate common name": "",
     "Height": "10-30 ft",
     "Ecoregion": "83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Asimina triloba"
   },
   "Betula alleghaniensis": {
@@ -10702,9 +11846,11 @@
       "Trees"
     ],
     "Common name": "Yellow birch",
+    "Alternate common name": "",
     "Height": "40-60 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Betula alleghaniensis"
   },
   "Betula lenta": {
@@ -10721,9 +11867,11 @@
       "Trees"
     ],
     "Common name": "Sweet or black birch",
+    "Alternate common name": "",
     "Height": "40-60 ft",
     "Ecoregion": "58, 59, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Betula lenta"
   },
   "Betula nigra": {
@@ -10740,9 +11888,11 @@
       "Trees"
     ],
     "Common name": "River Birch",
+    "Alternate common name": "",
     "Height": "25-45 ft",
     "Ecoregion": "58, 59, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Betula nigra"
   },
   "Betula papyrifera": {
@@ -10759,9 +11909,11 @@
       "Trees"
     ],
     "Common name": "Paper Birch",
+    "Alternate common name": "",
     "Height": "25-45 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Betula papyrifera"
   },
   "Betula populifolia": {
@@ -10778,9 +11930,11 @@
       "Trees"
     ],
     "Common name": "Gray birch",
+    "Alternate common name": "",
     "Height": "20-40 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Betula populifolia"
   },
   "Carpinus caroliniana": {
@@ -10797,9 +11951,11 @@
       "Trees"
     ],
     "Common name": "American Hornbeam",
+    "Alternate common name": "",
     "Height": "20-30 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carpinus caroliniana"
   },
   "Carya ovata": {
@@ -10816,9 +11972,11 @@
       "Trees"
     ],
     "Common name": "Shagbark hickory",
+    "Alternate common name": "",
     "Height": "50-100 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Carya ovata"
   },
   "Catalpa speciosa": {
@@ -10837,9 +11995,11 @@
       "Trees"
     ],
     "Common name": "Northern Catalpa",
+    "Alternate common name": "",
     "Height": "75-100 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Catalpa speciosa"
   },
   "Celtis occidentalis": {
@@ -10856,9 +12016,11 @@
       "Trees"
     ],
     "Common name": "Common hackberry",
+    "Alternate common name": "",
     "Height": "30-50 ft",
     "Ecoregion": "58, 59, 83",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Celtis occidentalis"
   },
   "Cercis canadensis": {
@@ -10878,9 +12040,11 @@
       "Trees"
     ],
     "Common name": "Redbud",
+    "Alternate common name": "",
     "Height": "12-25 ft",
     "Ecoregion": 58,
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Cercis canadensis"
   },
   "Chamaecyparis thyoides": {
@@ -10895,9 +12059,11 @@
       "Trees"
     ],
     "Common name": "Altantic white cedar",
+    "Alternate common name": "",
     "Height": "20-40 ft",
     "Ecoregion": "58, 59, 82, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Chamaecyparis thyoides"
   },
   "Cornus (Swida) alternifolia": {
@@ -10914,9 +12080,11 @@
       "Trees"
     ],
     "Common name": "Alternate leaf dogwood",
+    "Alternate common name": "",
     "Height": "10-20 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Cornus (Swida) alternifolia"
   },
   "Cornus florida (1)": {
@@ -10932,9 +12100,11 @@
       "Trees"
     ],
     "Common name": "Dogwood",
+    "Alternate common name": "",
     "Height": "15-25 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Cornus florida (1)"
   },
   "Cotinus obovatus": {
@@ -10950,9 +12120,11 @@
       "Trees"
     ],
     "Common name": "Smoketree",
+    "Alternate common name": "",
     "Height": "15-30 ft",
     "Ecoregion": "Deep south US",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Cotinus obovatus"
   },
   "Crataegus crus-galli": {
@@ -10971,9 +12143,11 @@
       "Trees"
     ],
     "Common name": "Cockspur hawthorn",
+    "Alternate common name": "",
     "Height": "15-30 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Crataegus crus-galli"
   },
   "Crataegus mollis": {
@@ -10984,9 +12158,11 @@
       "Trees"
     ],
     "Common name": "Downy hawthorn",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Crataegus mollis"
   },
   "Craetagus phaenopyrum": {
@@ -11007,9 +12183,11 @@
       "Trees"
     ],
     "Common name": "Washington hawthorn",
+    "Alternate common name": "",
     "Height": "20-35 ft",
     "Ecoregion": "parts of eastern MA",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Craetagus phaenopyrum"
   },
   "Crataegus punctata": {
@@ -11020,9 +12198,11 @@
       "Trees"
     ],
     "Common name": "Thicket hawthorn",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Crataegus punctata"
   },
   "Diospyros virginiana (2)": {
@@ -11038,9 +12218,11 @@
       "Trees"
     ],
     "Common name": "Persimmon",
+    "Alternate common name": "",
     "Height": "20-40 ft",
     "Ecoregion": 59,
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Diospyros virginiana (2)"
   },
   "Euonymus atropurpureus": {
@@ -11059,9 +12241,11 @@
       "Trees"
     ],
     "Common name": "Eastern wahoo",
+    "Alternate common name": "",
     "Height": "12-29 ft",
     "Ecoregion": "some MA counties",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Euonymus atropurpureus"
   },
   "Fagus grandifolia": {
@@ -11077,9 +12261,11 @@
       "Trees"
     ],
     "Common name": "American beech",
+    "Alternate common name": "",
     "Height": "50-70 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Fagus grandifolia"
   },
   "Fraxinus americana": {
@@ -11096,9 +12282,11 @@
       "Trees"
     ],
     "Common name": "White ash",
+    "Alternate common name": "",
     "Height": "50-80 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Fraxinus americana"
   },
   "Fraxinus nigra": {
@@ -11115,9 +12303,11 @@
       "Trees"
     ],
     "Common name": "Black ash",
+    "Alternate common name": "",
     "Height": "30-50 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Fraxinus nigra"
   },
   "Fraxinus pennsylvanica": {
@@ -11132,9 +12322,11 @@
       "Trees"
     ],
     "Common name": "Green ash",
+    "Alternate common name": "",
     "Height": "50-70 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Fraxinus pennsylvanica"
   },
   "Juglans cinera": {
@@ -11151,9 +12343,11 @@
       "Trees"
     ],
     "Common name": "Butternut",
+    "Alternate common name": "",
     "Height": "40-70 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Juglans cinera"
   },
   "Juglans nigra": {
@@ -11169,9 +12363,11 @@
       "Trees"
     ],
     "Common name": "Black walnut",
+    "Alternate common name": "",
     "Height": "50-80 ft",
     "Ecoregion": "58, 59, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Juglans nigra"
   },
   "Juniperus communis": {
@@ -11188,9 +12384,11 @@
       "Shrubs"
     ],
     "Common name": "Common juniper",
+    "Alternate common name": "",
     "Height": "5-25 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Juniperus communis"
   },
   "Juniperus virginiana": {
@@ -11207,9 +12405,11 @@
       "Trees"
     ],
     "Common name": "Red cedar",
+    "Alternate common name": "",
     "Height": "15-30 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Juniperus virginiana"
   },
   "Larix laricina": {
@@ -11226,9 +12426,11 @@
       "Trees"
     ],
     "Common name": "Tamarack",
+    "Alternate common name": "",
     "Height": "30-60 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Larix laricina"
   },
   "Liquidambar styraciflua": {
@@ -11245,9 +12447,11 @@
       "Trees"
     ],
     "Common name": "Sweet gum",
+    "Alternate common name": "",
     "Height": "60-90 ft",
     "Ecoregion": "59, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Liquidambar styraciflua"
   },
   "Liriodendron tulipifera": {
@@ -11267,9 +12471,11 @@
       "Trees"
     ],
     "Common name": "Tulip Tree",
+    "Alternate common name": "",
     "Height": "70-120 ft",
     "Ecoregion": "58, 59, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Liriodendron tulipifera"
   },
   "Magnolia tripelata": {
@@ -11285,9 +12491,11 @@
       "Trees"
     ],
     "Common name": "Umbrella tree",
+    "Alternate common name": "",
     "Height": "25-40 ft",
     "Ecoregion": "83, 58",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Magnolia tripelata"
   },
   "Magnolia virginiana": {
@@ -11306,9 +12514,11 @@
       "Trees"
     ],
     "Common name": "Sweet bay",
+    "Alternate common name": "",
     "Height": "10-20 ft",
     "Ecoregion": "84, 59",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Magnolia virginiana"
   },
   "Malus spp (1)": {
@@ -11319,9 +12529,11 @@
       "Trees"
     ],
     "Common name": "crabapples",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Malus spp (1)"
   },
   "Nyssa sylvatica": {
@@ -11342,9 +12554,11 @@
       "Trees"
     ],
     "Common name": "Black Tupelo, Black Gum",
+    "Alternate common name": "",
     "Height": "30-60 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Nyssa sylvatica"
   },
   "Ostrya virginiana": {
@@ -11361,9 +12575,11 @@
       "Trees"
     ],
     "Common name": "American hop hornbeam",
+    "Alternate common name": "",
     "Height": "20-30 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Ostrya virginiana"
   },
   "Picea glauca": {
@@ -11379,9 +12595,11 @@
       "Trees"
     ],
     "Common name": "White spruce",
+    "Alternate common name": "",
     "Height": "30-60 ft",
     "Ecoregion": "58, 59, 82",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Picea glauca"
   },
   "Pinus banksiana": {
@@ -11392,9 +12610,11 @@
       "Trees"
     ],
     "Common name": "Jack pine",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Pinus banksiana"
   },
   "Pinus resinosa": {
@@ -11405,9 +12625,11 @@
       "Trees"
     ],
     "Common name": "Red pine",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Pinus resinosa"
   },
   "Pinus ridgida": {
@@ -11424,9 +12646,11 @@
       "Trees"
     ],
     "Common name": "Pitch pine",
+    "Alternate common name": "",
     "Height": "30-60 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Pinus ridgida"
   },
   "Pinus strobus": {
@@ -11443,9 +12667,11 @@
       "Trees"
     ],
     "Common name": "White pine",
+    "Alternate common name": "",
     "Height": "60-90 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Pinus strobus"
   },
   "Platanus occidentalis": {
@@ -11462,9 +12688,11 @@
       "Trees"
     ],
     "Common name": "American sycamore",
+    "Alternate common name": "",
     "Height": "70-100 ft",
     "Ecoregion": "58, 59, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Platanus occidentalis"
   },
   "Populus deltoides": {
@@ -11483,9 +12711,11 @@
       "Trees"
     ],
     "Common name": "Easter cottonwood",
+    "Alternate common name": "",
     "Height": "50-100 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Populus deltoides"
   },
   "Populus tremuloides": {
@@ -11503,9 +12733,11 @@
       "Trees"
     ],
     "Common name": "Quaking aspen",
+    "Alternate common name": "",
     "Height": "20-50 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Populus tremuloides"
   },
   "Prunus americana": {
@@ -11523,9 +12755,11 @@
       "Shrubs"
     ],
     "Common name": "American plum",
+    "Alternate common name": "",
     "Height": "4-10 ft",
     "Ecoregion": "58, 59, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Prunus americana"
   },
   "Prunus pensylvanica": {
@@ -11542,9 +12776,11 @@
       "Trees"
     ],
     "Common name": "Pin cherry",
+    "Alternate common name": "",
     "Height": "15-35 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Prunus pensylvanica"
   },
   "Prunus serotina": {
@@ -11560,9 +12796,11 @@
       "Trees"
     ],
     "Common name": "Black cherry",
+    "Alternate common name": "",
     "Height": "30-60 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Prunus serotina"
   },
   "Prunus virginiana": {
@@ -11579,9 +12817,11 @@
       "Trees"
     ],
     "Common name": "Chokecherry",
+    "Alternate common name": "",
     "Height": "4-12 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Prunus virginiana"
   },
   "Ptela trifoliata": {
@@ -11592,9 +12832,11 @@
       "Trees"
     ],
     "Common name": "Hoptree",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Ptela trifoliata"
   },
   "Quercus alba": {
@@ -11611,9 +12853,11 @@
       "Trees"
     ],
     "Common name": "White oak",
+    "Alternate common name": "",
     "Height": "60-80 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Quercus alba"
   },
   "Quercus bicolor": {
@@ -11630,9 +12874,11 @@
       "Trees"
     ],
     "Common name": "Swamp oak",
+    "Alternate common name": "",
     "Height": "60-80 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Quercus bicolor"
   },
   "Quercus coccinea": {
@@ -11649,9 +12895,11 @@
       "Trees"
     ],
     "Common name": "Scarlet Oak",
+    "Alternate common name": "",
     "Height": "50-70 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Quercus coccinea"
   },
   "Quercus ilicifolia": {
@@ -11667,9 +12915,11 @@
       "Trees"
     ],
     "Common name": "Bear oak / scrub oak",
+    "Alternate common name": "",
     "Height": "3-30 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Quercus ilicifolia"
   },
   "Quercus macrocarpa": {
@@ -11688,9 +12938,11 @@
       "Trees"
     ],
     "Common name": "Bur Oak",
+    "Alternate common name": "",
     "Height": "150 ft",
     "Ecoregion": "Berkshire County MA",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Quercus macrocarpa"
   },
   "Quercus montana": {
@@ -11701,9 +12953,11 @@
       "Trees"
     ],
     "Common name": "Chesnut Oak",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Quercus montana"
   },
   "Quercus muehlenbergii": {
@@ -11714,9 +12968,11 @@
       "Trees"
     ],
     "Common name": "Chinkapin Oak",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Quercus muehlenbergii"
   },
   "Quercus palustris": {
@@ -11733,9 +12989,11 @@
       "Trees"
     ],
     "Common name": "Pin Oak",
+    "Alternate common name": "",
     "Height": "50-70 ft",
     "Ecoregion": "58, 59, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Quercus palustris"
   },
   "Quercus prinoides": {
@@ -11751,9 +13009,11 @@
       "Trees"
     ],
     "Common name": "Dwarf Chinkapin Oak",
+    "Alternate common name": "",
     "Height": "5-30 ft",
     "Ecoregion": "Berkshire County",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Quercus prinoides"
   },
   "Quercus prinus": {
@@ -11764,9 +13024,11 @@
       "Trees"
     ],
     "Common name": "Chestnut Oak",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Quercus prinus"
   },
   "Quercus rubra": {
@@ -11783,9 +13045,11 @@
       "Trees"
     ],
     "Common name": "Northern red oak",
+    "Alternate common name": "",
     "Height": "60-80 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Quercus rubra"
   },
   "Quercus stellata": {
@@ -11796,9 +13060,11 @@
       "Trees"
     ],
     "Common name": "Post Oak",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Quercus stellata"
   },
   "Quercus velutina": {
@@ -11814,9 +13080,11 @@
       "Trees"
     ],
     "Common name": "Black Oak",
+    "Alternate common name": "",
     "Height": "50-60 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Quercus velutina"
   },
   "Salix nigra": {
@@ -11833,9 +13101,11 @@
       "Trees"
     ],
     "Common name": "Black willow",
+    "Alternate common name": "",
     "Height": "10-60 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Salix nigra"
   },
   "Sassafras albidum": {
@@ -11853,9 +13123,11 @@
       "Trees"
     ],
     "Common name": "Sassafras",
+    "Alternate common name": "",
     "Height": "20-40 ft",
     "Ecoregion": "58, 59, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Sassafras albidum"
   },
   "Sorbus americana": {
@@ -11872,9 +13144,11 @@
       "Trees"
     ],
     "Common name": "American moutain ash",
+    "Alternate common name": "",
     "Height": "15-30 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Sorbus americana"
   },
   "Staphylea trifoliata": {
@@ -11885,9 +13159,11 @@
       "Trees"
     ],
     "Common name": "Bladdernut",
+    "Alternate common name": "",
     "Height": "",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Staphylea trifoliata"
   },
   "Swida alternifolia": {
@@ -11907,9 +13183,11 @@
       "Trees"
     ],
     "Common name": "Pagoda dogwood",
+    "Alternate common name": "",
     "Height": "10-20 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Swida alternifolia"
   },
   "Taxodium distichum": {
@@ -11927,9 +13205,11 @@
       "Trees"
     ],
     "Common name": "Bald cypress",
+    "Alternate common name": "",
     "Height": "35-120 ft",
     "Ecoregion": "NY and south",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Taxodium distichum"
   },
   "Thuja occidentalis": {
@@ -11947,9 +13227,11 @@
       "Trees"
     ],
     "Common name": "Arborvitae, Northern white cedar",
+    "Alternate common name": "",
     "Height": "40-60 ft",
     "Ecoregion": "",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Thuja occidentalis"
   },
   "Tilia americana": {
@@ -11965,9 +13247,11 @@
       "Trees"
     ],
     "Common name": "American linden / basswood",
+    "Alternate common name": "",
     "Height": "50-70 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Tilia americana"
   },
   "Ulmus americana": {
@@ -11984,9 +13268,11 @@
       "Trees"
     ],
     "Common name": "American Elm",
+    "Alternate common name": "",
     "Height": "60-100 ft",
     "Ecoregion": "58, 59, 82, 83, 84",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Ulmus americana"
   },
   "Zanthoxylum americanum": {
@@ -12006,9 +13292,11 @@
       "Trees"
     ],
     "Common name": "Pricklyash",
+    "Alternate common name": "",
     "Height": "15-20 ft",
     "Ecoregion": "W MA",
     "Native Range": "",
+    "Hosted Insects": "",
     "Latin name": "Zanthoxylum americanum"
   }
 }
