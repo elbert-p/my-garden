@@ -294,9 +294,10 @@ export default function PlantPage() {
 
   // Plant-level menu items
   const plantMenu = [
-    { icon: <FiEdit size={16} />, label: 'Edit', onClick: () => { setTemp({ ...plant }); setEditing(true); }},
+    { icon: <FiEdit size={16} />, label: 'Edit Plant', onClick: () => { setTemp({ ...plant }); setEditing(true); }},
     { icon: <FiDatabase size={16} />, label: 'Autofill', onClick: onAutofillClick },
     { icon: <FiEye size={16} />, label: 'Edit Privacy', onClick: startPlantPrivacy, visible: !!user },
+    { divider: true },
     { icon: <FiCopy size={16} />, label: 'Copy Plant', onClick: onCopyPlant },
     { icon: <FiShare2 size={16} />, label: 'Share Plant', onClick: handleShare, variant: 'share' },
     { divider: true },

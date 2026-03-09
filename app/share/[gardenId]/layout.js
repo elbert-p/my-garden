@@ -88,7 +88,8 @@ function SharedGardenLayoutContent({ children }) {
   ];
 
   const menuItems = [
-    { icon: <FiBookmark size={16} />, label: isSaved ? 'Unsave' : 'Save', onClick: handleToggleSave, variant: 'save' },
+    { icon: <FiBookmark size={16} fill={isSaved ? '#FFC107' : 'none'} color={isSaved ? '#b06000' : 'currentColor'} />, 
+      label: isSaved ? 'Unsave' : 'Save', onClick: handleToggleSave, variant: 'save' },
     { icon: <FiCopy size={16} />, label: 'Make a copy', onClick: handleCopyGarden },
   ];
 
