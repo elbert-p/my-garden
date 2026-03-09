@@ -24,7 +24,8 @@ export default function InfoField({
   placeholder = '',
   emptyText = 'Not set',
   size = 'normal',
-  formatDisplay
+  formatDisplay,
+  maxHeight
 }) {
   const [isFieldEditing, setIsFieldEditing] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -297,7 +298,10 @@ export default function InfoField({
       {isActive ? (
         renderInput()
       ) : type === 'textarea' && !isEmpty ? (
-        <div className={styles.text}>
+        <div
+          className={`${styles.text} ${maxHeight ? styles.textScrollable : ''}`}
+          style={maxHeight ? { maxHeight } : undefined}
+        >
           <RichText content={value} />
         </div>
       ) : (

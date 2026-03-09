@@ -21,8 +21,8 @@ const MULTI_FILTER_CATEGORIES = [
   { key: 'bloomTime', label: 'Bloom Time', options: BLOOM_OPTIONS },
   { key: 'sunlight', label: 'Sunlight', options: SUN_OPTIONS },
   { key: 'moisture', label: 'Moisture', options: MOISTURE_OPTIONS },
-  { key: 'nativeRange', label: 'Native Range', options: NATIVE_OPTIONS },
   { key: 'plantType', label: 'Plant Type', options: PLANT_TYPE_OPTIONS },
+  { key: 'nativeRange', label: 'Native Range', options: NATIVE_OPTIONS },
 ];
 
 const HEIGHT_OPS = [

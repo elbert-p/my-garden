@@ -155,9 +155,16 @@ export default function SharedPlantPage() {
             <Field label="Height" value={plant.height} fieldKey="height" />
             <Field label="Sunlight" value={plant.sunlight} fieldKey="sunlight" />
             <Field label="Moisture" value={plant.moisture} fieldKey="moisture" />
-            <Field label="Native Range" value={plant.nativeRange} fieldKey="nativeRange" />
             <Field label="Plant Type" value={plant.plantType} fieldKey="plantType" />
-            <Field label="Hosted Insects" value={plant.hostedInsects} fieldKey="hostedInsects" />
+            <Field label="Native Range" value={plant.nativeRange} fieldKey="nativeRange" />
+            {isFieldVisible('hostedInsects') && plant.hostedInsects && (
+              <div className={styles.field}>
+                <span className={styles.label}>Hosted Insects</span>
+                <div className={styles.value} style={{ maxHeight: '195px', overflowY: 'auto' }}>
+                  <RichText content={plant.hostedInsects} />
+                </div>
+              </div>
+            )}
             {isFieldVisible('notes') && plant.notes && (
               <div className={`${styles.field} ${styles.fieldLarge}`}>
                 <span className={styles.label}>Notes</span>

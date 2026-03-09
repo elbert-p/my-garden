@@ -6,7 +6,7 @@ import styles from './RichTextEditor.module.css';
  * RichTextEditor - A textarea with a formatting toolbar.
  * Supports bold (**), italic (*), bullet (- ), and heading (## ).
  */
-export default function RichTextEditor({ value, onChange, placeholder, minRows = 3, className }) {
+export default function RichTextEditor({ value, onChange, placeholder, minRows = 3, maxHeight, className }) {
   const ref = useRef(null);
 
   const applyFormat = (format) => {
@@ -69,6 +69,7 @@ export default function RichTextEditor({ value, onChange, placeholder, minRows =
         placeholder={placeholder}
         rows={minRows}
         className={styles.textarea}
+        style={maxHeight ? { maxHeight, overflowY: 'auto' } : undefined}
       />
     </div>
   );

@@ -85,6 +85,25 @@
   font-style: italic;
 }
 
+.textScrollable {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #dadce0 transparent;
+}
+
+.textScrollable::-webkit-scrollbar {
+  width: 6px;
+}
+
+.textScrollable::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.textScrollable::-webkit-scrollbar-thumb {
+  background-color: #dadce0;
+  border-radius: 3px;
+}
+
 /* Input styles - clean, no extra outlines */
 .input {
   width: 100%;
