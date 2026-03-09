@@ -24,8 +24,10 @@ import styles from './layout.module.css';
 const DEFAULT_CUSTOMIZATION = { columns: 4, bgColor: '#f4f4f9' };
 
 const SUGGESTED_COLORS = [
-  '#f4f4f9', '#f0f7f0', '#f5f0eb', '#eef2f7',
-  '#faf5f0', '#f0f0f0', '#fff8f0', '#f5f5dc',
+  '#f4f4f9', '#f0f7f0', '#ede8f5',
+  '#f5f0eb', '#eef2f7',
+  '#faf5f0', '#f0f0f0', 
+  '#fdf0f0', '#fff8f0', '#f5f5dc',
 ];
 
 const hexToRgb = (hex) => {
