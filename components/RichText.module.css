@@ -1,7 +1,7 @@
 .richText {
   font-size: 0.95rem;
-  line-height: 1.7;
-  color: #3c4043;
+  line-height: 1.5; /* Matched to infofield */
+  color: #202124;   /* Matched to infofield (was #3c4043) */
   overflow-wrap: break-word;
   word-break: break-word;
 }
@@ -45,7 +45,7 @@
 @media (max-width: 768px) {
   .richText {
     font-size: 0.92rem;
-    line-height: 1.6;
+    line-height: 1.5; /* Matched to infofield */
   }
 
   .heading {
@@ -61,7 +61,7 @@
 @media (max-width: 480px) {
   .richText {
     font-size: 0.88rem;
-    line-height: 1.55;
+    line-height: 1.45; /* Matched to infofield mobile */
   }
 
   .heading {
