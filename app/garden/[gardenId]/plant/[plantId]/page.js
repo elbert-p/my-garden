@@ -162,7 +162,12 @@ export default function PlantPage() {
   };
 
   const save = async (p) => {
-    const u = await updatePlant(plantId, p, user?.id);
+    const trimmed = {
+      ...p,
+      commonName: p.commonName?.trim() || '',
+      scientificName: p.scientificName?.trim() || '',
+    };
+    const u = await updatePlant(plantId, trimmed, user?.id);
     setPlant(u);
     setTemp(u);
     updatePlantInContext(u);
@@ -353,8 +358,8 @@ export default function PlantPage() {
 
           <div className={styles.infoGridWrapper}>
             <div className={`${styles.infoGrid} ${privacyMode ? styles.infoGridPrivacy : ''}`}>
-              {renderField('commonName', <InfoField label="Common Name" value={temp.commonName} onChange={v => setTemp({ ...temp, commonName: v.trim() })} onSave={() => save(temp)} isEditing={editing} type="text" />)}
-              {renderField('scientificName', <InfoField label="Scientific Name" value={temp.scientificName} onChange={v => setTemp({ ...temp, scientificName: v.trim() })} onSave={() => save(temp)} isEditing={editing} type="text" />)}
+              {renderField('commonName', <InfoField label="Common Name" value={temp.commonName} onChange={v => setTemp({ ...temp, commonName: v })} onSave={() => save(temp)} isEditing={editing} type="text" />)}
+              {renderField('scientificName', <InfoField label="Scientific Name" value={temp.scientificName} onChange={v => setTemp({ ...temp, scientificName: v })} onSave={() => save(temp)} isEditing={editing} type="text" />)}
               {renderField('datePlanted', <InfoField label="Date Planted" value={temp.datePlanted} onChange={v => setTemp({ ...temp, datePlanted: v })} onSave={() => save(temp)} isEditing={editing} type="date" formatDisplay={formatDateDisplay} />)}
               {renderField('bloomTime', <InfoField label="Bloom Time" value={temp.bloomTime} onChange={v => setTemp({ ...temp, bloomTime: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={BLOOM_OPTIONS} />)}
               {renderField('height', <InfoField label="Height" value={temp.height} onChange={v => setTemp({ ...temp, height: v })} onSave={() => save(temp)} isEditing={editing} type="text" placeholder="e.g., 2-3 ft" />)}
@@ -362,7 +367,8 @@ export default function PlantPage() {
               {renderField('moisture', <InfoField label="Moisture" value={temp.moisture} onChange={v => setTemp({ ...temp, moisture: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={MOISTURE_OPTIONS} />)}
               {renderField('plantType', <InfoField label="Plant Type" value={temp.plantType} onChange={v => { const updated = { ...temp, plantType: v }; setTemp(updated); if (!editing) save(updated); }} isEditing={editing} type="multiselect" options={PLANT_TYPE_OPTIONS} />)}
               {renderField('nativeRange', <InfoField label="Native Range" value={temp.nativeRange} onChange={v => setTemp({ ...temp, nativeRange: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={NATIVE_OPTIONS} />)}
-              {renderField('hostedInsects', <InfoField label="Hosted Insects" value={temp.hostedInsects} onChange={v => setTemp({ ...temp, hostedInsects: v })} onSave={() => save(temp)} isEditing={editing} type="textarea" maxHeight="195px" placeholder="e.g., Monarch; Swallowtail; Bumblebee" />)}              {renderField('notes', <InfoField label="Notes" value={temp.notes} onChange={v => setTemp({ ...temp, notes: v })} onSave={() => save(temp)} isEditing={editing} type="textarea" emptyText="No notes" size="large" />, true)}
+              {renderField('hostedInsects', <InfoField label="Hosted Insects" value={temp.hostedInsects} onChange={v => setTemp({ ...temp, hostedInsects: v })} onSave={() => save(temp)} isEditing={editing} type="textarea" maxHeight="195px" placeholder="e.g., Monarch; Swallowtail; Bumblebee" />)}
+              {renderField('notes', <InfoField label="Notes" value={temp.notes} onChange={v => setTemp({ ...temp, notes: v })} onSave={() => save(temp)} isEditing={editing} type="textarea" emptyText="No notes" size="large" />, true)}
             </div>
           </div>
 
