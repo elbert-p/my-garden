@@ -159,7 +159,7 @@ export default function SharedPlantPage() {
             <Field label="Native Range" value={plant.nativeRange} fieldKey="nativeRange" />
             {isFieldVisible('hostedInsects') && plant.hostedInsects && (
               <div className={styles.field}>
-                <span className={styles.label}>Hosted Insects</span>
+                <span className={styles.label}>Hosted Butterflies and Moths</span>
                 <div className={styles.value} style={{ maxHeight: '195px', overflowY: 'auto' }}>
                   <RichText content={plant.hostedInsects} />
                 </div>

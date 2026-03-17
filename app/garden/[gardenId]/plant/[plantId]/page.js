@@ -282,6 +282,7 @@ export default function PlantPage() {
       sunlight: autofillData['Sunlight'] || temp.sunlight,
       moisture: autofillData['Moisture'] || temp.moisture,
       plantType: autofillData['plantType'] || temp.plantType,
+      hostedInsects: autofillData['Hosted Butterflies and Moths'] || temp.hostedInsects,
       hasAutofilled: true
     });
     setShowAutofillModal(false);
@@ -367,7 +368,7 @@ export default function PlantPage() {
               {renderField('moisture', <InfoField label="Moisture" value={temp.moisture} onChange={v => setTemp({ ...temp, moisture: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={MOISTURE_OPTIONS} />)}
               {renderField('plantType', <InfoField label="Plant Type" value={temp.plantType} onChange={v => { const updated = { ...temp, plantType: v }; setTemp(updated); if (!editing) save(updated); }} isEditing={editing} type="multiselect" options={PLANT_TYPE_OPTIONS} />)}
               {renderField('nativeRange', <InfoField label="Native Range" value={temp.nativeRange} onChange={v => setTemp({ ...temp, nativeRange: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={NATIVE_OPTIONS} />)}
-              {renderField('hostedInsects', <InfoField label="Hosted Insects" value={temp.hostedInsects} onChange={v => setTemp({ ...temp, hostedInsects: v })} onSave={() => save(temp)} isEditing={editing} type="textarea" maxHeight="195px" placeholder="e.g., Monarch; Swallowtail; Bumblebee" />)}
+              {renderField('hostedInsects', <InfoField label="Hosted Butterflies and Moths" value={temp.hostedInsects} onChange={v => setTemp({ ...temp, hostedInsects: v })} onSave={() => save(temp)} isEditing={editing} type="textarea" maxHeight="195px" placeholder="e.g., Monarch; Swallowtail; Bumblebee" />)}
               {renderField('notes', <InfoField label="Notes" value={temp.notes} onChange={v => setTemp({ ...temp, notes: v })} onSave={() => save(temp)} isEditing={editing} type="textarea" emptyText="No notes" size="large" />, true)}
             </div>
           </div>

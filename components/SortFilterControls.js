@@ -14,7 +14,7 @@ const SORT_OPTIONS = [
   { key: 'bloomTime', label: 'Earliest Bloom' },
   { key: 'sunlight', label: 'Sunlight' },
   { key: 'moisture', label: 'Moisture' },
-  { key: 'hostedInsects', label: 'Hosted Insects' },
+  { key: 'hostedInsects', label: 'Hosted Butterflies and Moths' },
 ];
 
 const MULTI_FILTER_CATEGORIES = [
