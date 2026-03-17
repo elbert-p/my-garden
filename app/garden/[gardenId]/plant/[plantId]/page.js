@@ -282,6 +282,7 @@ export default function PlantPage() {
       sunlight: autofillData['Sunlight'] || temp.sunlight,
       moisture: autofillData['Moisture'] || temp.moisture,
       plantType: autofillData['plantType'] || temp.plantType,
+      nativeRange: autofillData['Native Range'] || temp.nativeRange,
       hostedInsects: autofillData['Hosted Butterflies and Moths'] || temp.hostedInsects,
       hasAutofilled: true
     });
