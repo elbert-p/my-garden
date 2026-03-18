@@ -300,7 +300,7 @@ export function getSortGroups(sortedPlants, sort) {
       moisture: (p) => comboLabel(p.moisture, MOISTURE_OPTIONS),
       hostedInsects: (p) => {
         const count = getHostedInsectCount(p.hostedInsects);
-        return `${count} insect${count !== 1 ? 's' : ''}`;
+        return `${count} butterfl${count !== 1 ? 'ies and ' : 'y/'}moth${count !== 1 ? 's' : ''}`;
       },
     }[sort.key];
 
