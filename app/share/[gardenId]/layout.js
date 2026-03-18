@@ -30,14 +30,17 @@ function SharedGardenLayoutContent({ children }) {
   const {
     garden, owner, filteredPlants, totalVisible, isLoading, plantsLoaded, error,
     searchQuery, setSearchQuery, sort, setSort, filters, setFilters,
+    hasVisibleAbout, isTodoVisible,
   } = useSharedGarden();
 
   const [isSaved, setIsSaved] = useState(false);
   const [hasRecordedView, setHasRecordedView] = useState(false);
 
   const isAboutPage = pathname.endsWith('/about');
+  const isTodoPage = pathname.endsWith('/todo');
   const isPlantPage = pathname.includes('/plant/');
-  const contentWidth = (isPlantPage || isAboutPage) ? 'medium' : 'large';
+  const isSubPage = isPlantPage || isAboutPage || isTodoPage;
+  const contentWidth = isSubPage ? 'medium' : 'large';
 
   // Record view when garden loads
   useEffect(() => {
@@ -82,10 +85,12 @@ function SharedGardenLayoutContent({ children }) {
     router.push('/');
   };
 
+  // Build tabs conditionally based on content visibility
   const tabs = [
-    { label: 'Plants', href: `/share/${gardenId}`, active: !isAboutPage },
-    { label: 'About', href: `/share/${gardenId}/about`, active: isAboutPage },
-  ];
+    { label: 'Plants', href: `/share/${gardenId}`, active: !isAboutPage && !isTodoPage },
+    hasVisibleAbout && { label: 'About', href: `/share/${gardenId}/about`, active: isAboutPage },
+    isTodoVisible && { label: 'To-Do', href: `/share/${gardenId}/todo`, active: isTodoPage },
+  ].filter(Boolean);
 
   const menuItems = [
     { icon: <FiBookmark size={16} fill={isSaved ? '#FFC107' : 'none'} color={isSaved ? '#FFC107' : 'currentColor'} />, 
@@ -128,11 +133,11 @@ function SharedGardenLayoutContent({ children }) {
         })() : null}
         showHome={true}
         tabs={tabs}
-        showSearch={!isPlantPage && !isAboutPage}
+        showSearch={!isSubPage}
         searchValue={searchQuery}
         onSearchChange={setSearchQuery}
         searchPlaceholder="Search plants..."
-        extraActions={!isPlantPage && !isAboutPage ? (
+        extraActions={!isSubPage ? (
           <SortFilterControls
             sort={sort}
             onSortChange={setSort}

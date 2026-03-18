@@ -64,7 +64,6 @@
   margin: 0;
 }
 
-/* editIconButton: 40px → 36px for tablet and smaller */
 @media (max-width: 768px) {
   .editIconButton {
     width: 36px;
@@ -73,8 +72,6 @@
 }
 
 @media (max-width: 480px) {
-  /* editIconButton stays 36px from 768px breakpoint */
-
   .page {
     padding: 1rem 1.25rem;
     border-radius: 12px;

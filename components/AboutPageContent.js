@@ -9,7 +9,7 @@ import RichText from './RichText';
 import RichTextEditor from './RichTextEditor';
 import styles from './AboutPageContent.module.css';
 
-export default function AboutPageContent({ blocks: savedBlocks, onSave, userId, title }) {
+export default function AboutPageContent({ blocks: savedBlocks, onSave, userId, title, headerActions }) {
   const [blocks, setBlocks] = useState(savedBlocks);
   const [editingAll, setEditingAll] = useState(false);
   const [activeBlockId, setActiveBlockId] = useState(null);
@@ -236,6 +236,8 @@ export default function AboutPageContent({ blocks: savedBlocks, onSave, userId, 
                 <Button variant="secondary" onClick={handleCancelAll}>Cancel</Button>
                 <Button onClick={handleSaveAll} disabled={saving}>{saving ? 'Saving...' : 'Done'}</Button>
               </div>
+            ) : typeof headerActions === 'function' ? (
+              headerActions(startEditAll)
             ) : (
               <button className={styles.editIconButton} onClick={startEditAll} aria-label="Edit page">
                 <FiEdit size={18} />

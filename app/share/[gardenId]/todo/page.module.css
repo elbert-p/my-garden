@@ -1,0 +1,21 @@
+/* Shared garden todo page — /app/share/[gardenId]/todo/page.module.css */
+
+.container {
+  max-width: var(--page-max-width-medium, 800px);
+  margin: 0 auto;
+  padding: var(--page-padding-block, 1.5rem) var(--page-padding-inline, 2rem);
+}
+
+.page {
+  background-color: #f8f9fa;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.25rem 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+  }
+}

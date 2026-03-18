@@ -70,6 +70,16 @@ export function SharedGardenProvider({ children }) {
   
   const filteredPlants = applySortAndFilter(searchFiltered, sort, filters);
 
+  // About block visibility (shown by default — only hidden when explicitly listed)
+  const hiddenAboutBlockIds = garden?.customization?.hiddenAboutBlockIds || [];
+  const visibleAboutBlocks = (garden?.aboutBlocks || []).filter(b =>
+    !hiddenAboutBlockIds.includes(b.id) && (b.content || b.title)
+  );
+  const hasVisibleAbout = visibleAboutBlocks.length > 0;
+
+  // Todo visibility (hidden by default — only visible when todoPrivate === false)
+  const isTodoVisible = garden?.customization?.todoPrivate === false && !!garden?.todoContent;
+
   const value = {
     garden,
     gardenId,
@@ -86,6 +96,10 @@ export function SharedGardenProvider({ children }) {
     setSort,
     filters,
     setFilters,
+    // About/todo visibility
+    visibleAboutBlocks,
+    hasVisibleAbout,
+    isTodoVisible,
   };
 
   return (

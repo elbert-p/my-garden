@@ -1,21 +1,25 @@
 'use client';
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { useSharedGarden } from '@/context/SharedGardenContext';
 import AboutPageContent from '@/components/AboutPageContent';
 
 export default function SharedGardenAboutPage() {
-  const { garden } = useSharedGarden();
+  const router = useRouter();
+  const { garden, gardenId, visibleAboutBlocks, hasVisibleAbout, isLoading } = useSharedGarden();
 
-  if (!garden) return null;
+  // Redirect to plants page if all about blocks are hidden
+  useEffect(() => {
+    if (!isLoading && garden && !hasVisibleAbout) {
+      router.replace(`/share/${gardenId}`);
+    }
+  }, [isLoading, garden, hasVisibleAbout, gardenId, router]);
 
-  const defaultBlocks = [
-    { id: 'default-img', type: 'image', content: garden.image || '/default-garden.jpg', title: 'Garden image' },
-  ];
-
-  const blocks = garden.aboutBlocks?.length > 0 ? garden.aboutBlocks : defaultBlocks;
+  if (!garden || !hasVisibleAbout) return null;
 
   return (
     <AboutPageContent
-      blocks={blocks}
+      blocks={visibleAboutBlocks}
       onSave={null}
       userId={null}
       title="About This Garden"
