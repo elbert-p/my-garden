@@ -18,7 +18,34 @@ import GoogleSignInButton from '@/components/GoogleSignInButton';
 import plantsData from '@/plants_dynamic.json';
 import styles from './page.module.css';
 
-const findData = (name) => { if (!name) return null; const key = Object.keys(plantsData).find(k => k.toLowerCase() === name.trim().toLowerCase()); return key ? plantsData[key] : null; };
+// ---- Autofill lookup helpers ----
+
+const findByScientific = (name) => {
+  if (!name) return null;
+  const key = Object.keys(plantsData).find(k => k.toLowerCase() === name.trim().toLowerCase());
+  return key ? plantsData[key] : null;
+};
+
+const findByCommon = (name) => {
+  if (!name) return null;
+  const normalized = name.trim().toLowerCase();
+  return Object.values(plantsData).find(entry => {
+    if ((entry['Common name'] || '').trim().toLowerCase() === normalized) return true;
+    const alts = entry['Alternate common names'];
+    if (Array.isArray(alts) && alts.some(a => a.trim().toLowerCase() === normalized)) return true;
+    return false;
+  }) || null;
+};
+
+// Scientific name takes priority; returns { data, matchedBy } or null
+const findData = (scientificName, commonName) => {
+  const byScientific = findByScientific(scientificName);
+  if (byScientific) return { data: byScientific, matchedBy: 'scientific' };
+  const byCommon = findByCommon(commonName);
+  if (byCommon) return { data: byCommon, matchedBy: 'common' };
+  return null;
+};
+
 const formatDateDisplay = (dateStr) => { if (!dateStr) return ''; const [y, m, d] = dateStr.split('-').map(Number); return new Date(y, m - 1, d).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }); };
 
 export default function PlantPage() {
@@ -39,6 +66,8 @@ export default function PlantPage() {
   const [photoToDelete, setPhotoToDelete] = useState(null);
   const [copied, setCopied] = useState(false);
   const [autofillData, setAutofillData] = useState(null);
+  const [autofillMatchedBy, setAutofillMatchedBy] = useState(null);
+  const [autofillDisplayName, setAutofillDisplayName] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
   // Privacy mode
@@ -72,16 +101,24 @@ export default function PlantPage() {
     })();
   }, [plantId, gardenId, user?.id, isInitialized, garden, router]);
 
+  const applyAutofillResult = (result) => {
+    setAutofillData(result.data);
+    setAutofillMatchedBy(result.matchedBy);
+    setAutofillDisplayName(
+      result.matchedBy === 'common'
+        ? result.data['Common name']
+        : result.data['Latin name']
+    );
+    setShowAutofillModal(true);
+  };
+
   // Auto-show autofill modal
   useEffect(() => {
-    if (plant?.scientificName && !plant.hasAutofilled) {
-      const d = findData(plant.scientificName);
-      if (d) {
-        setAutofillData(d);
-        setShowAutofillModal(true);
-      }
+    if (plant && !plant.hasAutofilled) {
+      const result = findData(plant.scientificName, plant.commonName);
+      if (result) applyAutofillResult(result);
     }
-  }, [plant?.scientificName, plant?.hasAutofilled]);
+  }, [plant?.scientificName, plant?.commonName, plant?.hasAutofilled]);
 
   // Escape key handler
   useEffect(() => {
@@ -225,7 +262,6 @@ export default function PlantPage() {
       images: plant.images,
       hasAutofilled: plant.hasAutofilled,
     });
-    // Brief visual feedback could be added here
   };
 
   const onRemove = async (img) => {
@@ -233,7 +269,6 @@ export default function PlantPage() {
     await save({ ...temp, images: temp.images.filter(x => x !== img) });
   };
 
-  // On tablet/mobile, show confirmation modal; on desktop, remove directly
   const handleRemoveClick = (img, e) => {
     e.stopPropagation();
     if (window.innerWidth <= 768) {
@@ -268,15 +303,36 @@ export default function PlantPage() {
   };
 
   const onAutofillClick = () => {
-    const d = findData(temp.scientificName);
-    d ? (setAutofillData(d), setShowAutofillModal(true)) : setShowNotFoundModal(true);
+    const result = findData(temp.scientificName, temp.commonName);
+    if (result) {
+      applyAutofillResult(result);
+    } else {
+      setShowNotFoundModal(true);
+    }
   };
 
   const onAutofill = async () => {
     if (!autofillData) return;
+
+    // Determine common name:
+    // - Matched by common name: keep the user's entered name (it's already recognized)
+    // - Matched by scientific name: replace with DB common name unless the user's
+    //   current common name matches the DB's common or alternate names
+    let commonName = temp.commonName?.trim() || '';
+    if (autofillMatchedBy === 'scientific' && autofillData['Common name']) {
+      const userCommon = commonName.toLowerCase();
+      const dbCommon = autofillData['Common name'].trim().toLowerCase();
+      const dbAlts = (autofillData['Alternate common names'] || []).map(a => a.trim().toLowerCase());
+      const isRecognized = userCommon && (userCommon === dbCommon || dbAlts.includes(userCommon));
+      if (!isRecognized) {
+        commonName = autofillData['Common name'].trim();
+      }
+    }
+
     await save({
       ...temp,
-      commonName: autofillData['Common name'].trim() || temp.commonName,
+      commonName,
+      scientificName: autofillData['Latin name']?.trim() || temp.scientificName,
       bloomTime: autofillData['Bloom time'] || temp.bloomTime,
       height: autofillData['Height'] || temp.height,
       sunlight: autofillData['Sunlight'] || temp.sunlight,
@@ -299,7 +355,6 @@ export default function PlantPage() {
     router.push(`/garden/${gardenId}`);
   };
 
-  // Plant-level menu items
   const plantMenu = [
     { icon: <FiEdit size={16} />, label: 'Edit Plant', onClick: () => { setTemp({ ...plant }); setEditing(true); }},
     { icon: <FiDatabase size={16} />, label: 'Autofill', onClick: onAutofillClick },
@@ -457,7 +512,7 @@ export default function PlantPage() {
         onClose={() => setShowAutofillModal(false)}
         onConfirm={onAutofill}
         title="Autofill Plant Data"
-        message={<>Found <strong>{autofillData?.['Latin name']}</strong> in database. Would you like to autofill?</>}
+        message={<>Found <strong>{autofillDisplayName}</strong> in database. Would you like to autofill?</>}
         confirmText="Yes"
         cancelText="No"
       />
@@ -467,7 +522,7 @@ export default function PlantPage() {
         onClose={() => setShowNotFoundModal(false)}
         onConfirm={() => setShowNotFoundModal(false)}
         title="Autofill not available"
-        message={<><strong>{temp?.scientificName || 'Plant'}</strong> has not been added to the database.</>}
+        message={<><strong>{temp?.scientificName || temp?.commonName || 'Plant'}</strong> has not been added to the database.</>}
         confirmText="OK"
         cancelText={null}
       />
