@@ -41,7 +41,7 @@ function SharedProfileLayoutContent({ children }) {
   return (
     <>
       <NavBar
-        title={isLoading ? '' : `${displayName}'s Gardens`}
+        title={isLoading ? '' : `${displayName}'s Profile`}
         showHome={true}
         tabs={tabs}
         sharedBy={owner}
