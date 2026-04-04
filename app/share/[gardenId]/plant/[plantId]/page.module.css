@@ -30,6 +30,7 @@
   border-radius: 12px;
   overflow: hidden;
   background-color: #f1f3f4;
+  cursor: pointer;
 }
 
 .mainImage {

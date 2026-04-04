@@ -11,6 +11,7 @@ import DropdownMenu from '@/components/DropdownMenu';
 import Modal from '@/components/Modal';
 import Button from '@/components/Button';
 import RichText from '@/components/RichText';
+import PlantBadges from '@/components/PlantBadges';
 import styles from './page.module.css';
 
 export default function SharedPlantPage() {
@@ -143,8 +144,9 @@ export default function SharedPlantPage() {
         />
 
         <div className={styles.details}>
-          <div className={styles.mainImageContainer}>
+          <div className={styles.mainImageContainer} onClick={() => setSelImg(plant.mainImage || '/placeholder-plant.jpg')}>
             <img src={plant.mainImage || '/placeholder-plant.jpg'} alt="" className={styles.mainImage} />
+            <PlantBadges commonName={plant.commonName} scientificName={plant.scientificName} />
           </div>
 
           <div className={`${styles.infoGrid} ${!visibleImages.length ? styles.infoGridNoMargin : ''}`}>

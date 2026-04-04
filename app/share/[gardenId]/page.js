@@ -2,6 +2,7 @@
 import { useSharedGarden } from '@/context/SharedGardenContext';
 import { isMissingSortField, getActiveFilterCount, getSortGroups } from '@/components/SortFilterControls';
 import ItemGrid from '@/components/ItemGrid';
+import PlantBadges from '@/components/PlantBadges';
 import styles from './page.module.css';
 
 export default function SharedGardenPage() {
@@ -27,6 +28,7 @@ export default function SharedGardenPage() {
         getItemImage={(p) => p.mainImage || '/placeholder-plant.jpg'}
         getItemName={(p) => p.commonName || p.scientificName}
         getItemStyle={(p) => ({ fontStyle: p.commonName ? 'normal' : 'italic' })}
+        renderOverlay={(p) => <PlantBadges commonName={p.commonName} scientificName={p.scientificName} />}
         getItemDimmed={sort.key ? (p) => isMissingSortField(p, sort) : undefined}
         columns={columns}
       />

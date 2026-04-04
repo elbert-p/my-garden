@@ -1,0 +1,60 @@
+.container {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  display: flex;
+  gap: 4px;
+  z-index: 1;
+}
+
+.badge {
+  position: relative;
+  cursor: pointer;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: contain;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip {
+  /* position, bottom, left, transform set via inline style */
+  background: rgba(32, 33, 36, 0.9);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 768px) {
+  .container {
+    bottom: 5px;
+    right: 5px;
+  }
+
+  .icon {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    bottom: 4px;
+    right: 4px;
+  }
+
+  .icon {
+    width: 22px;
+    height: 22px;
+  }
+}

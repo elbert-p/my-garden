@@ -17,6 +17,7 @@ export default function ItemGrid({
   getItemName = (item) => item.name,
   getItemStyle = () => ({}),
   getItemBadge,
+  renderOverlay,
   getItemDimmed,
   columns,
   // Selection mode props
@@ -67,6 +68,7 @@ export default function ItemGrid({
             <div className={`${styles.selectionCheckbox} ${isSelected ? styles.selectionChecked : ''}`}>
               {isSelected && <FiCheck size={16} strokeWidth={3.5} />}
             </div>
+            {renderOverlay?.(item)}
           </div>
           <span className={styles.name} style={getItemStyle(item)}>
             {getItemName(item)}
@@ -88,6 +90,7 @@ export default function ItemGrid({
             className={styles.image}
           />
           {badge != null && <span className={styles.badge}>{badge}</span>}
+          {renderOverlay?.(item)}
         </div>
         <span className={styles.name} style={getItemStyle(item)}>
           {getItemName(item)}

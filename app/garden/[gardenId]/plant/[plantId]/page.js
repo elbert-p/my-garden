@@ -15,6 +15,7 @@ import Modal, { ConfirmModal } from '@/components/Modal';
 import Button from '@/components/Button';
 import InfoField from '@/components/InfoField';
 import GoogleSignInButton from '@/components/GoogleSignInButton';
+import PlantBadges from '@/components/PlantBadges';
 import plantsData from '@/plants_dynamic.json';
 import styles from './page.module.css';
 
@@ -406,11 +407,16 @@ export default function PlantPage() {
 
           <div
             className={`${styles.mainImageContainer} ${editing ? styles.mainImageEditing : ''}`}
-            onClick={() => !privacyMode && mainRef.current?.click()}
+            onClick={() => {
+              if (privacyMode) return;
+              if (editing) { mainRef.current?.click(); return; }
+              setSelectedImage(temp.mainImage || '/placeholder-plant.jpg');
+            }}
           >
             <img src={temp.mainImage || '/placeholder-plant.jpg'} alt="" className={styles.mainImage} />
-            {!privacyMode && <button className={styles.mainImageEditButton}><FiEdit size={18} /></button>}
-            <input ref={mainRef} type="file" onChange={onMain} className={styles.fileInput} accept="image/*" />
+            {!privacyMode && <PlantBadges commonName={plant.commonName} scientificName={plant.scientificName} />}
+            {!privacyMode && <button className={styles.mainImageEditButton} onClick={(e) => { e.stopPropagation(); mainRef.current?.click(); }}><FiEdit size={18} /></button>}
+            <input ref={mainRef} type="file" onChange={onMain} className={styles.fileInput} accept="image/*" onClick={(e) => e.stopPropagation()} />
           </div>
 
           <div className={styles.infoGridWrapper}>
