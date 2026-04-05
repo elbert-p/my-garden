@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import { FiFilter, FiArrowUp, FiArrowDown, FiX, FiCheck } from 'react-icons/fi';
 import { TbArrowsSort } from 'react-icons/tb';
 import { BLOOM_OPTIONS, SUN_OPTIONS, MOISTURE_OPTIONS, NATIVE_OPTIONS, PLANT_TYPE_OPTIONS } from '@/lib/plantConstants';
+import { BADGE_DEFS, getPlantBadgeReasons } from '@/lib/plantBadges';
 import styles from './SortFilterControls.module.css';
 
 // ============ CONSTANTS ============
@@ -199,7 +200,7 @@ export function applySortAndFilter(plants, sort, filters) {
   let result = [...plants];
 
   for (const [key, values] of Object.entries(filters)) {
-    if (key === '_height' || key === '_date') continue;
+    if (key === '_height' || key === '_date' || key.startsWith('_badge_')) continue;
     if (!values?.length) continue;
     result = result.filter(p => {
       const plantVal = p[key];
@@ -210,6 +211,17 @@ export function applySortAndFilter(plants, sort, filters) {
 
   if (filters._height) result = result.filter(p => matchesHeightFilter(p, filters._height));
   if (filters._date) result = result.filter(p => matchesDateFilter(p, filters._date));
+
+  // Badge filters (e.g. _badge_bee)
+  for (const def of BADGE_DEFS) {
+    const selected = filters[`_badge_${def.key}`];
+    if (!selected?.length) continue;
+    result = result.filter(p => {
+      const reasons = getPlantBadgeReasons(p.commonName, p.scientificName);
+      const matched = reasons[def.key] || [];
+      return selected.some(c => matched.includes(c));
+    });
+  }
 
   if (sort.key) {
     result.sort((a, b) => {
@@ -621,6 +633,58 @@ export default function SortFilterControls({ sort, onSortChange, filters, onFilt
                             {activeValues.includes(opt) && <FiCheck size={12} />}
                           </span>
                           <span>{opt}</span>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+
+            {/* Badge filter categories (dynamic from BADGE_DEFS) */}
+            {BADGE_DEFS.map(def => {
+              const filterKey = `_badge_${def.key}`;
+              const activeValues = filters[filterKey] || [];
+              const isExpanded = expandedCategory === filterKey;
+              return (
+                <div key={filterKey} className={styles.filterCategory}>
+                  <div
+                    className={styles.categoryHeader}
+                    onClick={() => setExpandedCategory(isExpanded ? null : filterKey)}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    <span className={styles.categoryLabel}>
+                      {def.filterLabel}
+                      {activeValues.length > 0 && (
+                        <span className={styles.categoryCount}>{activeValues.length}</span>
+                      )}
+                    </span>
+                    {activeValues.length > 0 && (
+                      <span
+                        className={styles.categoryClear}
+                        onClick={(e) => clearCategoryFilters(filterKey, e)}
+                        role="button"
+                        tabIndex={0}
+                        aria-label={`Clear ${def.filterLabel} filters`}
+                      >
+                        <FiX size={12} />
+                      </span>
+                    )}
+                    <span className={`${styles.chevron} ${isExpanded ? styles.chevronOpen : ''}`}>›</span>
+                  </div>
+                  {isExpanded && (
+                    <div className={styles.filterOptions}>
+                      {def.criteria.map(c => (
+                        <button
+                          key={c.key}
+                          className={`${styles.filterOption} ${activeValues.includes(c.key) ? styles.filterOptionActive : ''}`}
+                          onClick={() => toggleFilter(filterKey, c.key)}
+                        >
+                          <span className={styles.checkbox}>
+                            {activeValues.includes(c.key) && <FiCheck size={12} />}
+                          </span>
+                          <span>{c.label}</span>
                         </button>
                       ))}
                     </div>

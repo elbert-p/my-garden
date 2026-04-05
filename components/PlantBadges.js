@@ -1,14 +1,10 @@
 'use client';
 import { useState, useCallback } from 'react';
 import { createPortal } from 'react-dom';
-import { getPlantBadges } from '@/lib/plantBadges';
+import { getPlantBadges, getBadgeTooltip } from '@/lib/plantBadges';
 import styles from './PlantBadges.module.css';
 
-const BADGE_LABELS = {
-  bee: 'Bee Badge',
-};
-
-export default function PlantBadges({ commonName, scientificName }) {
+export default function PlantBadges({ commonName, scientificName, size }) {
   const badges = getPlantBadges(commonName, scientificName);
   const [activeTip, setActiveTip] = useState(null);
   const [tipStyle, setTipStyle] = useState(null);
@@ -39,7 +35,7 @@ export default function PlantBadges({ commonName, scientificName }) {
   if (!badges.length) return null;
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${size === 'large' ? styles.containerLarge : ''}`}>
       {badges.map((b) => (
         <div
           key={b.key}
@@ -48,11 +44,11 @@ export default function PlantBadges({ commonName, scientificName }) {
           onMouseLeave={hideTip}
           onClick={(e) => handleClick(e, b.key)}
         >
-          <img src={b.icon} alt={BADGE_LABELS[b.key] || b.key} className={styles.icon} />
+          <img src={b.icon} alt={getBadgeTooltip(b.key, commonName, scientificName)} className={`${styles.icon} ${size === 'large' ? styles.iconLarge : ''}`} />
           {activeTip === b.key && typeof document !== 'undefined' &&
             createPortal(
               <span className={styles.tooltip} style={tipStyle}>
-                {BADGE_LABELS[b.key] || b.key}
+                {getBadgeTooltip(b.key, commonName, scientificName)}
               </span>,
               document.body
             )

@@ -146,7 +146,7 @@ export default function SharedPlantPage() {
         <div className={styles.details}>
           <div className={styles.mainImageContainer} onClick={() => setSelImg(plant.mainImage || '/placeholder-plant.jpg')}>
             <img src={plant.mainImage || '/placeholder-plant.jpg'} alt="" className={styles.mainImage} />
-            <PlantBadges commonName={plant.commonName} scientificName={plant.scientificName} />
+            <PlantBadges commonName={plant.commonName} scientificName={plant.scientificName} size="large" />
           </div>
 
           <div className={`${styles.infoGrid} ${!visibleImages.length ? styles.infoGridNoMargin : ''}`}>
