@@ -4,6 +4,10 @@ import { createPortal } from 'react-dom';
 import { getPlantBadges, getBadgeTooltip } from '@/lib/plantBadges';
 import styles from './PlantBadges.module.css';
 
+const BADGE_TITLES = {
+  bee: 'Supports Bees',
+};
+
 export default function PlantBadges({ commonName, scientificName, size }) {
   const badges = getPlantBadges(commonName, scientificName);
   const [activeTip, setActiveTip] = useState(null);
@@ -13,7 +17,7 @@ export default function PlantBadges({ commonName, scientificName, size }) {
     const rect = e.currentTarget.getBoundingClientRect();
     setTipStyle({
       position: 'fixed',
-      bottom: window.innerHeight - rect.top + 6,
+      bottom: window.innerHeight - rect.top + 10,
       left: rect.left + rect.width / 2,
       transform: 'translateX(-50%)',
     });
@@ -44,12 +48,23 @@ export default function PlantBadges({ commonName, scientificName, size }) {
           onMouseLeave={hideTip}
           onClick={(e) => handleClick(e, b.key)}
         >
-          <img src={b.icon} alt={getBadgeTooltip(b.key, commonName, scientificName)} className={`${styles.icon} ${size === 'large' ? styles.iconLarge : ''}`} />
+          <img src={b.icon} alt={getBadgeTooltip(b.key, commonName, scientificName).join(', ')} className={`${styles.icon} ${size === 'large' ? styles.iconLarge : ''}`} />
           {activeTip === b.key && typeof document !== 'undefined' &&
             createPortal(
-              <span className={styles.tooltip} style={tipStyle}>
-                {getBadgeTooltip(b.key, commonName, scientificName)}
-              </span>,
+              <div className={styles.tooltip} style={tipStyle}>
+                <div className={styles.tooltipHeader}>
+                  <img src={b.icon} alt="" className={styles.tooltipHeaderIcon} />
+                  {BADGE_TITLES[b.key] || b.key}
+                </div>
+                <div className={styles.tooltipBody}>
+                  {getBadgeTooltip(b.key, commonName, scientificName).map((line, i) => (
+                    <span key={i} className={styles.tooltipItem}>
+                      <span className={styles.tooltipDot} />
+                      {line}
+                    </span>
+                  ))}
+                </div>
+              </div>,
               document.body
             )
           }
