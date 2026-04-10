@@ -21,7 +21,7 @@ import Button from '@/components/Button';
 import GoogleSignInButton from '@/components/GoogleSignInButton';
 import styles from './layout.module.css';
 
-const DEFAULT_CUSTOMIZATION = { columns: 4, bgColor: '#f4f4f9' };
+const DEFAULT_CUSTOMIZATION = { columns: 4, bgColor: '#f4f4f9', hideBadges: false };
 
 const SUGGESTED_COLORS = [
   '#f4f4f9', '#f0f7f0', '#ede8f5',
@@ -70,6 +70,7 @@ function GardenLayoutContent({ children }) {
   // Customize form state
   const [customizeColumnsStr, setCustomizeColumnsStr] = useState('');
   const [customizeBgColor, setCustomizeBgColor] = useState(DEFAULT_CUSTOMIZATION.bgColor);
+  const [customizeHideBadges, setCustomizeHideBadges] = useState(DEFAULT_CUSTOMIZATION.hideBadges);
 
   // Privacy mode
   const [privacyMode, setPrivacyMode] = useState(false);
@@ -101,15 +102,17 @@ function GardenLayoutContent({ children }) {
       setPreviewCustomization({
         columns: previewColumns ?? customization.columns,
         bgColor: customizeBgColor,
+        hideBadges: customizeHideBadges,
       });
     }
-  }, [showCustomizeModal, previewColumns, customizeBgColor, setPreviewCustomization, customization.columns]);
+  }, [showCustomizeModal, previewColumns, customizeBgColor, customizeHideBadges, setPreviewCustomization, customization.columns]);
 
   const appliedBgColor = previewCustomization?.bgColor ?? customization.bgColor;
 
   const isCustomDefault =
     clampColumns(customizeColumnsStr) === DEFAULT_CUSTOMIZATION.columns &&
-    customizeBgColor === DEFAULT_CUSTOMIZATION.bgColor;
+    customizeBgColor === DEFAULT_CUSTOMIZATION.bgColor &&
+    customizeHideBadges === DEFAULT_CUSTOMIZATION.hideBadges;
 
   // Check for copied plant periodically
   useEffect(() => {
@@ -234,6 +237,7 @@ function GardenLayoutContent({ children }) {
   const openCustomizeModal = () => {
     setCustomizeColumnsStr(String(customization.columns));
     setCustomizeBgColor(customization.bgColor);
+    setCustomizeHideBadges(customization.hideBadges);
     setShowCustomizeModal(true);
   };
 
@@ -313,7 +317,7 @@ function GardenLayoutContent({ children }) {
     setCustomizeColumnsStr(String(clamped));
     try {
       const existing = garden?.customization || {};
-      await updateGardenCustomization({ ...existing, columns: clamped, bgColor: customizeBgColor });
+      await updateGardenCustomization({ ...existing, columns: clamped, bgColor: customizeBgColor, hideBadges: customizeHideBadges });
       setShowCustomizeModal(false);
       setPreviewCustomization(null);
     } catch (e) {
@@ -328,6 +332,7 @@ function GardenLayoutContent({ children }) {
   const resetCustomization = () => {
     setCustomizeColumnsStr(String(DEFAULT_CUSTOMIZATION.columns));
     setCustomizeBgColor(DEFAULT_CUSTOMIZATION.bgColor);
+    setCustomizeHideBadges(DEFAULT_CUSTOMIZATION.hideBadges);
   };
 
   const copyShareLink = async () => {
@@ -445,6 +450,16 @@ function GardenLayoutContent({ children }) {
                 style={{ backgroundColor: color }} onClick={() => setCustomizeBgColor(color)} title={color} type="button" />
             ))}
           </div>
+        </div>
+        <div className={`${styles.customizeField} ${styles.customizeFieldSpaced}`}>
+          <label className={styles.customizeLabel}>Plant Badges</label>
+          <label className={styles.toggleRow}>
+            <span className={`${styles.toggleTrack} ${customizeHideBadges ? styles.toggleTrackOff : ''}`}>
+              <span className={styles.toggleThumb} />
+              <input type="checkbox" checked={!customizeHideBadges} onChange={e => setCustomizeHideBadges(!e.target.checked)} className={styles.toggleInput} />
+            </span>
+            <span className={styles.toggleText}>{customizeHideBadges ? 'Hidden' : 'Visible'}</span>
+          </label>
         </div>
         <button onClick={resetCustomization} className={styles.resetButton} type="button" disabled={isCustomDefault}>Reset to Defaults</button>
         <div className={styles.modalButtons}>

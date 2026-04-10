@@ -12,6 +12,7 @@ export default function GardenPage() {
   const hasActiveFilters = !!(getActiveFilterCount(filters) > 0);
   const sortGroups = getSortGroups(filteredPlants, sort);
   const columns = previewCustomization?.columns ?? garden?.customization?.columns;
+  const hideBadges = previewCustomization?.hideBadges ?? garden?.customization?.hideBadges;
 
   const emptyMessage = searchQuery
     ? 'No plants match your current search.'
@@ -30,7 +31,7 @@ export default function GardenPage() {
         getItemImage={(p) => p.mainImage || '/placeholder-plant.jpg'}
         getItemName={(p) => p.commonName || p.scientificName}
         getItemStyle={(p) => ({ fontStyle: p.commonName ? 'normal' : 'italic' })}
-        renderOverlay={(p) => <PlantBadges commonName={p.commonName} scientificName={p.scientificName} />}
+        renderOverlay={hideBadges ? undefined : (p) => <PlantBadges commonName={p.commonName} scientificName={p.scientificName} />}
         getItemDimmed={sort.key ? (p) => isMissingSortField(p, sort) : undefined}
         columns={columns}
       />

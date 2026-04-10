@@ -193,6 +193,58 @@
   box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.3);
 }
 
+/* ---- Toggle switch ---- */
+.toggleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.toggleTrack {
+  position: relative;
+  width: 40px;
+  height: 22px;
+  border-radius: 11px;
+  background-color: #1a73e8;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease;
+}
+
+.toggleTrackOff {
+  background-color: #dadce0;
+}
+
+.toggleThumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.toggleTrack:not(.toggleTrackOff) .toggleThumb {
+  transform: translateX(18px);
+}
+
+.toggleInput {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  margin: 0;
+}
+
+.toggleText {
+  font-size: 1rem;
+  color: #202124;
+}
+
 /* ---- Reset button ---- */
 .resetButton {
   align-self: flex-start;

@@ -12,6 +12,7 @@ export default function SharedGardenPage() {
   const hasActiveFilters = !!(searchQuery || filterCount > 0 || sort.key);
   const sortGroups = getSortGroups(filteredPlants, sort);
   const columns = garden?.customization?.columns;
+  const hideBadges = garden?.customization?.hideBadges;
 
   const emptyMessage = hasActiveFilters
     ? 'No plants match your current filters.'
@@ -28,7 +29,7 @@ export default function SharedGardenPage() {
         getItemImage={(p) => p.mainImage || '/placeholder-plant.jpg'}
         getItemName={(p) => p.commonName || p.scientificName}
         getItemStyle={(p) => ({ fontStyle: p.commonName ? 'normal' : 'italic' })}
-        renderOverlay={(p) => <PlantBadges commonName={p.commonName} scientificName={p.scientificName} />}
+        renderOverlay={hideBadges ? undefined : (p) => <PlantBadges commonName={p.commonName} scientificName={p.scientificName} />}
         getItemDimmed={sort.key ? (p) => isMissingSortField(p, sort) : undefined}
         columns={columns}
       />

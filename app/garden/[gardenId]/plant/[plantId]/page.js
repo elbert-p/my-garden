@@ -414,7 +414,7 @@ export default function PlantPage() {
             }}
           >
             <img src={temp.mainImage || '/placeholder-plant.jpg'} alt="" className={styles.mainImage} />
-            {!privacyMode && <PlantBadges commonName={plant.commonName} scientificName={plant.scientificName} size="large" />}
+            {!privacyMode && !garden?.customization?.hideBadges && <PlantBadges commonName={plant.commonName} scientificName={plant.scientificName} size="large" />}
             {!privacyMode && <button className={styles.mainImageEditButton} onClick={(e) => { e.stopPropagation(); mainRef.current?.click(); }}><FiEdit size={18} /></button>}
             <input ref={mainRef} type="file" onChange={onMain} className={styles.fileInput} accept="image/*" onClick={(e) => e.stopPropagation()} />
           </div>
