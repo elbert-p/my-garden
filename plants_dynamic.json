@@ -2967,9 +2967,18 @@
   },
   "Eurybia divaricata": {
     "Common name": "White Wood Aster",
-    "Height": "2 ft",
+    "Height": "1-2 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Ecoregion": "58,59,82,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Southeastern US"
     ],
     "Bumblebees": 1,
     "Pollen Source": "American Bumble Bee, Golden Northern Bumblebee, Northern Aster Miner, Canada miner, Shiny-tailed Goldenrod Miner, Andrena (Cnemidandrena) robervalensis, Dull-tailed Goldenrod Miner, Orange-legged Furrow Bee, Band-footed Sweat Bee, Wide-mouthed Sweat Bee, Bristle Sweat Bee, White-haired Golden Sweat Bee, Densely Punctured Sweat Bee, Hairy Metallic-Sweat Bee, Truncate Sweat Bee, Short Leafcutter Bee, Frigid Leafcutter Bee, Frugal Leafcutter Bee, Unarmed Leafcutter Bee, Broad-handed Leafcutter Bee, Silver-tailed Petalcutter, Golden-tailed Leafcutter Bee, Drury?s Longhorn",
@@ -2977,6 +2986,7 @@
     "Sunlight": [
       "Sun",
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -3611,6 +3621,7 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
       "(83) Eastern Great Lakes Lowlands",
       "US Native"
     ],
@@ -3703,6 +3714,7 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
       "(83) Eastern Great Lakes Lowlands",
       "Northeastern US",
       "Midwestern US",
@@ -3741,6 +3753,7 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
       "(83) Eastern Great Lakes Lowlands",
       "Northeastern US",
       "Midwestern US",
@@ -3984,9 +3997,18 @@
   },
   "Hibiscus moscheutos": {
     "Common name": "Swamp Rose Mallow",
-    "Height": "5 ft",
+    "Height": "3-6 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Ecoregion": "59,84",
+    "Native Range": [
+      "MA Native",
+      "(59) Northeastern Coastal Zone",
+      "Northeastern US",
+      "Eastern US",
+      "Southeastern US",
+      "Southwestern US"
     ],
     "Key Host Plant": [
       "K"
@@ -3994,10 +4016,12 @@
     "Hosted Butterflies and Moths": "Saddleback Caterpillar Moth; Eight-Spot Moth; The Nutmeg; Yellow Scallop Moth; Tropical Anomis Moth; Velvetbean Caterpillar Moth; Io Moth; Hazel Tumbler; Common Checkered-Skipper; Tobacco Budworm Moth; Lesser Cornstalk Borer; Spiny Oak-Slug Moth; Pearly Wood-Nymph; Subterranean Dart; Corn Earworm Moth; Green Cloverworm Bomolocha; Fall Webworm; Glossy Black Idia; Southern Flannel Moth; White-Marked Tussock Moth; Stalk Borer; Hibiscus-leaf Caterpillar Moth; Beet Army Worm; Fall Armyworm Moth; Yellow-Striped Armyworm Moth; Gray Hairstreak; Exposed Bird-Dropping Moth; Evergreen Bagworm Moth",
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
-      "Wet"
+      "Wet",
+      "Medium"
     ],
     "Bloom time": [
       "Jul",
@@ -4086,6 +4110,7 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
       "(83) Eastern Great Lakes Lowlands",
       "Northeastern US",
       "Midwestern US",
@@ -4145,6 +4170,7 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
       "(83) Eastern Great Lakes Lowlands",
       "Northeastern US",
       "Midwestern US",
@@ -4177,6 +4203,7 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
       "(83) Eastern Great Lakes Lowlands",
       "Northeastern US",
       "Southeastern US"
@@ -4210,6 +4237,7 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
       "(83) Eastern Great Lakes Lowlands",
       "Northeastern US",
       "Midwestern US",
@@ -5519,6 +5547,10 @@
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Native Range": [
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Key Host Plant": [
       "K"
     ],
@@ -6685,8 +6717,36 @@
     ],
     "Latin name": "Sanguisorba canadensis"
   },
+  "Sarracenia purpurea": {
+    "Common name": "Purple Pitcher Plant",
+    "Height": "0.5-1 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Mid-Atlantic US"
+    ],
+    "Hosted Butterflies and Moths": "Verbena Bud Moth; Pitcherplant Looper Moth; Confused Woodgrain; Pitcher-Plant Borer Moth",
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Wet"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Latin name": "Sarracenia purpurea"
+  },
   "Scrophularia lanceolata": {
-    "Common name": "Lance -eafed Figwort",
+    "Common name": "Lance-leafed Figwort",
     "Height": "5 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -6792,9 +6852,18 @@
   },
   "Senna hebecarpa": {
     "Common name": "Wild Senna",
-    "Height": "5 ft",
+    "Height": "4-6 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Ecoregion": "58,59,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Eastern US"
     ],
     "Pollen Source": "American Bumble Bee, Golden Northern Bumblebee, Long-lipped Miner, W-marked Miner Bee, Short Leafcutter Bee, Frigid Leafcutter Bee, Frugal Leafcutter Bee, Unarmed Leafcutter Bee, Broad-handed Leafcutter Bee, Golden-tailed Leafcutter Bee",
     "Hosted Butterflies and Moths": "Orange Sulphur; Salt Marsh Moth; Bent-Line Gray; Common Tan Wave; Little Yellow; Fall Armyworm Moth; Gray Hairstreak; Genista Caterpillar",
@@ -6907,6 +6976,10 @@
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Native Range": [
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Sunlight": [
       "Sun",
       "Part Sun"
@@ -6921,25 +6994,31 @@
     ],
     "Latin name": "Sisyrinchium albidum"
   },
-  "Sisyrinchium augustifolium": {
-    "Common name": "Blue-eyed Grass",
-    "Height": ".5-1.5 ft",
+  "Sisyrinchium angustifolium": {
+    "Common name": "Stout Blue-eyed Grass",
+    "Height": "0.5 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "MA Native",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US",
+      "Southwestern US"
     ],
     "Sunlight": [
       "Sun",
       "Part Sun"
     ],
     "Moisture": [
-      "Wet",
       "Medium"
     ],
     "Bloom time": [
       "May",
       "Jun"
     ],
-    "Latin name": "Sisyrinchium augustifolium"
+    "Latin name": "Sisyrinchium angustifolium"
   },
   "Sisyrinchium montanum": {
     "plantType": [
@@ -8663,6 +8742,32 @@
       "May"
     ],
     "Latin name": "Uvularia sessilifolia"
+  },
+  "Verbena bonariensis": {
+    "Common name": "Tall Verbena",
+    "Alternate common names": [
+      "Brazilian Vervain"
+    ],
+    "Height": "2-4 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "South America"
+    ],
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Latin name": "Verbena bonariensis"
   },
   "Verbena hastata": {
     "Common name": "Blue Vervain",
