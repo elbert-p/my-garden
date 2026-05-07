@@ -2403,13 +2403,20 @@
     "Latin name": "Cypripedium parviflorum var. parviflorum"
   },
   "Cryptotaenia canadensis": {
-    "Common name": "Honewort",
-    "Height": "2 ft",
+    "Common name": "Canadian Honewort",
+    "Height": "1-3 ft",
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Native Range": [
+      "MA Native",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Hosted Butterflies and Moths": "Agonopterix clemensella; Black Swallowtail",
     "Sunlight": [
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -2498,11 +2505,21 @@
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US"
+    ],
     "Pollen Source": "American Bumble Bee, Golden Northern Bumblebee, Long-lipped Miner, W-marked Miner Bee, Short Leafcutter Bee, Frigid Leafcutter Bee, Frugal Leafcutter Bee, Unarmed Leafcutter Bee, Broad-handed Leafcutter Bee, Golden-tailed Leafcutter Bee",
     "Hosted Butterflies and Moths": "Pink-Washed Aristotelia; Southern Cloudywing; Hoary Edge; Northern Cloudywing; Tobacco Budworm Moth; The Batman Moth; Eastern Tailed-Blue; Black-Spotted Prominent; Silver-Spotted Skipper; Grapholita fana; Corn Earworm Moth; Green Cloverworm Bomolocha; Porphyrosela desmodiella; American Bordered Sallow; Fall Armyworm Moth; Gray Hairstreak; Long-Tailed Skipper",
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Medium"
@@ -2515,13 +2532,23 @@
   },
   "Dicentra cucullaria": {
     "Common name": "Dutchman's Breeches",
-    "Height": "1 ft",
+    "Height": "0.5 ft",
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Hosted Butterflies and Moths": "Scripted Arches",
     "Sunlight": [
-      "Shade"
+      "Part Shade"
     ],
     "Moisture": [
       "Medium"
@@ -2537,6 +2564,10 @@
     "Height": "1-1.5 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Mid-Atlantic US",
+      "Southeastern US"
     ],
     "Hosted Butterflies and Moths": "Scripted Arches",
     "Sunlight": [
@@ -2582,6 +2613,11 @@
     "Height": "1 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Mid-Atlantic US",
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Sunlight": [
       "Sun",
@@ -2734,12 +2770,42 @@
     ],
     "Latin name": "Echinacea purpurea"
   },
-  "Epigea repens": {
+  "Epigaea repens": {
     "Common name": "Mayflower",
+    "Alternate common names": [
+      "Trailing Arbutus"
+    ],
+    "Height": "4-6 ft",
+    "plantType": [
+      "Shrub"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Key Host Plant": [
       "K"
     ],
-    "Latin name": "Epigea repens"
+    "Hosted Butterflies and Moths": "Red-Striped Fireworm Moth; Hoary Elfin",
+    "Sunlight": [
+      "Part Sun",
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Latin name": "Epigaea repens"
   },
   "Epilobium glandulosum": {
     "Common name": "Northern Willow Herb",
@@ -4998,10 +5064,20 @@
     "Latin name": "Mimulus alatus"
   },
   "Mimulus ringens": {
-    "Common name": "Monkey Flower",
-    "Height": "2 ft",
+    "Common name": "Allegheny Monkey Flower",
+    "Height": "1-3 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Key Host Plant": [
       "K"
@@ -5009,7 +5085,8 @@
     "Hosted Butterflies and Moths": "Chalcedony Midget; The Baltimore; Common Buckeye; Bilobed Looper Moth; Painted Arches",
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Wet",
@@ -6010,6 +6087,11 @@
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Ecoregion": "58,83",
+    "Native Range": [
+      "Midwestern US",
+      "Mid-Atlantic US"
+    ],
     "Key Host Plant": [
       "K"
     ],
@@ -6017,8 +6099,7 @@
     "Sunlight": [
       "Sun",
       "Part Sun",
-      "Part Shade",
-      "Shade"
+      "Part Shade"
     ],
     "Moisture": [
       "Medium"
@@ -7739,10 +7820,13 @@
     "Latin name": "Stachys pilosa"
   },
   "Stylophorum diphyllum": {
-    "Common name": "Wood Poppy",
+    "Common name": "Celandine Poppy",
     "Height": "1.5 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Midwestern US"
     ],
     "Sunlight": [
       "Part Sun",
@@ -8374,6 +8458,13 @@
     "Height": "3 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "MA Native",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US",
+      "Southwestern US"
     ],
     "Hosted Butterflies and Moths": "Strawberry Leafroller; Verbena Bud Moth; Dusky Leafroller; Stalk Borer",
     "Sunlight": [
@@ -9328,7 +9419,7 @@
     "Latin name": "Andropogon gerardii"
   },
   "Andropogon virginicus": {
-    "Common name": "Broom sedge",
+    "Common name": "Broom Sedge",
     "Height": "4 ft",
     "plantType": [
       "Grasses and sedges"
@@ -9809,17 +9900,27 @@
     "Latin name": "Carex platyphylla"
   },
   "Carex radiata": {
-    "Common name": "Eastern star sedge",
+    "Common name": "Eastern Star Sedge",
     "Height": "1 ft",
     "plantType": [
       "Grasses and sedges"
     ],
+    "Ecoregion": "58,59,82,83",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Hosted Butterflies and Moths": "Henry's Marsh Moth; Pink Sedge Moth; American Ear Moth; Delaware Skipper; Ignorant Apamea; Bordered Apamea; Small Clouded Brindle Moth; Common Wood Nymph; Chain-Dotted Geometer; Common Ringlet; Cosmopterix clemensella; Fernald's Cosmopterix Moth; Virginia Ctenucha; Burnished Bog Moth; Donacaula dispersella; Elachista cucullata; Two-Spotted Skipper; Black Dash; Dion Skipper; Dun Skipper; American Crescent Borer; Leonard's Skipper; Sordid Wainscot; Appalachian Brown; Eyed Brown; Needle Wainscot; Long Dash; Veiled Ear Moth; Slant-Lined Owlet; Slant-Lined Fan-foot; Black-Dotted Lithacodia; Multicolored Sedgeminer; Lesser Wainscot; Green-Washed Culm Borer; Stalk Borer; Included Cordgrass Borer Moth; Putnam's Looper Moth; Mulberry Wing; Broad-Winged Skipper; Pink-Barred Lithacodia; Four-Lined Borer; Fall Armyworm Moth",
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
+      "Wet",
       "Medium"
     ],
     "Bloom time": [
@@ -10279,10 +10380,16 @@
     "Latin name": "Juncus tenuis"
   },
   "Muhlenbergia capillaris": {
-    "Common name": "Pink Hairgrass",
+    "Common name": "Pink Muhly Grass",
     "Height": "2-3 ft",
     "plantType": [
       "Grasses and sedges"
+    ],
+    "Native Range": [
+      "MA Native",
+      "Mid-Atlantic US",
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Key Host Plant": [
       "K"
@@ -10290,11 +10397,18 @@
     "Hosted Butterflies and Moths": "Green Cutworm Moth; Common Wood Nymph; Stalk Borer; Four-Lined Borer; Striped Garden Caterpillar Moth",
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Medium",
       "Dry"
+    ],
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov"
     ],
     "Latin name": "Muhlenbergia capillaris"
   },
@@ -10468,11 +10582,26 @@
   },
   "Sporobolus heterolepis": {
     "Common name": "Prairie Dropseed",
+    "Height": "1-3 ft",
     "plantType": [
       "Grasses and sedges"
     ],
+    "Ecoregion": "58,59,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Mid-Atlantic US"
+    ],
     "Hosted Butterflies and Moths": "Leonard's Skipper; Fall Armyworm Moth",
     "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -10480,9 +10609,9 @@
       "Medium"
     ],
     "Bloom time": [
-      "Sep",
-      "Oct",
-      "Nov"
+      "Jul",
+      "Aug",
+      "Sep"
     ],
     "Latin name": "Sporobolus heterolepis"
   },
@@ -10507,13 +10636,25 @@
     "Latin name": "Tridens flavus"
   },
   "Adiantum pedatum": {
-    "Common name": "Maidenhair fern",
+    "Common name": "Maidenhair Fern",
     "Height": "1-2 ft",
     "plantType": [
       "Fern"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "(82) Acadian Plains and Hills",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -10524,13 +10665,13 @@
   },
   "Asplenium platyneuron": {
     "Common name": "Ebony spleenwort",
-    "Height": ".75-1.75 ft",
+    "Height": "0.75-1.75 ft",
     "plantType": [
       "Fern"
     ],
     "Hosted Butterflies and Moths": "Beet Army Worm; Fall Armyworm Moth",
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -10540,10 +10681,22 @@
     "Latin name": "Asplenium platyneuron"
   },
   "Athyrium felix-femina": {
-    "Common name": "Lady fern",
+    "Common name": "Lady Fern",
     "Height": "1-2 ft",
     "plantType": [
       "Fern"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "(82) Acadian Plains and Hills",
+      "Northeastern US",
+      "Midwestern US",
+      "Mid-Atlantic US"
     ],
     "Key Host Plant": [
       "K"
@@ -10551,6 +10704,7 @@
     "Hosted Butterflies and Moths": "Blackberry Leafminer Moth; Ghostly Fern Moth; Conifer Swift Moth",
     "Sunlight": [
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -10609,10 +10763,22 @@
     "Latin name": "Cystopteris fragilis"
   },
   "Dennstaedtia punctilobula": {
-    "Common name": "Hayscented fern",
+    "Common name": "Hayscented Fern",
     "Height": "1-2 ft",
     "plantType": [
       "Fern"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "(82) Acadian Plains and Hills",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Key Host Plant": [
       "K"
@@ -10621,6 +10787,7 @@
     "Sunlight": [
       "Sun",
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -10630,18 +10797,28 @@
     "Latin name": "Dennstaedtia punctilobula"
   },
   "Dryopteris cristata": {
-    "Common name": "Crested wood fern",
+    "Common name": "Crested Wood Fern",
     "Height": "1-3 ft",
     "plantType": [
       "Fern"
+    ],
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "(82) Acadian Plains and Hills",
+      "Northeastern US",
+      "Midwestern US",
+      "Mid-Atlantic US"
     ],
     "Key Host Plant": [
       "K"
     ],
     "Hosted Butterflies and Moths": "Marsh Fern Moth; Ghostly Fern Moth; Conifer Swift Moth",
     "Sunlight": [
-      "Sun",
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -10650,37 +10827,55 @@
     "Latin name": "Dryopteris cristata"
   },
   "Dryopteris felix-mas": {
-    "Common name": "Male fern",
+    "Common name": "Male Fern",
     "Height": "2-3 ft",
     "plantType": [
       "Fern"
     ],
+    "Ecoregion": "58,59,82",
+    "Native Range": [
+      "Western US",
+      "Southwestern US",
+      "Northern US"
+    ],
     "Key Host Plant": [
       "K"
     ],
     "Hosted Butterflies and Moths": "Marsh Fern Moth; Ghostly Fern Moth; Conifer Swift Moth",
     "Sunlight": [
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
-      "Medium",
-      "Dry"
+      "Medium"
     ],
     "Latin name": "Dryopteris felix-mas"
   },
   "Dryopteris goldiana": {
-    "Common name": "Goldie's fern",
+    "Common name": "Goldie's Fern",
     "Height": "2.5-3.5 ft",
     "plantType": [
       "Fern"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "(82) Acadian Plains and Hills",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Key Host Plant": [
       "K"
     ],
     "Hosted Butterflies and Moths": "Marsh Fern Moth; Ghostly Fern Moth; Conifer Swift Moth",
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -10690,14 +10885,29 @@
     "Latin name": "Dryopteris goldiana"
   },
   "Dryopteris intermedia": {
-    "Common name": "Evergreen wood fern",
+    "Common name": "Intermediate Wood Fern",
+    "Alternate common names": [
+      "Evergreen Wood Fern"
+    ],
     "Height": "1.5-2 ft",
     "plantType": [
       "Fern"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "(82) Acadian Plains and Hills",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Hosted Butterflies and Moths": "Marsh Fern Moth; Ghostly Fern Moth; Conifer Swift Moth",
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -10707,17 +10917,29 @@
     "Latin name": "Dryopteris intermedia"
   },
   "Dryopteris marginalis": {
-    "Common name": "Marginal woodfern",
-    "Height": "18-24 in",
+    "Common name": "Marginal Woodfern",
+    "Height": "1.5-2 ft",
     "plantType": [
       "Fern"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "(82) Acadian Plains and Hills",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Key Host Plant": [
       "K"
     ],
     "Hosted Butterflies and Moths": "Marsh Fern Moth; Ghostly Fern Moth; Conifer Swift Moth",
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -10728,7 +10950,7 @@
   },
   "Gymnocarpium dryopteris": {
     "Common name": "Oak fern",
-    "Height": ".25-1.25 ft",
+    "Height": "0.25-1.25 ft",
     "plantType": [
       "Fern"
     ],
@@ -10742,10 +10964,25 @@
     "Latin name": "Gymnocarpium dryopteris"
   },
   "Matteuccia struthiopteris": {
-    "Common name": "Ostrich fern",
+    "Common name": "Ostrich Fern",
+    "Alternate common names": [
+      "Fiddlehead Fern"
+    ],
     "Height": "2-3 ft",
     "plantType": [
       "Fern"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "(82) Acadian Plains and Hills",
+      "Northeastern US",
+      "Midwestern US",
+      "Mid-Atlantic US"
     ],
     "Key Host Plant": [
       "K"
@@ -10754,6 +10991,7 @@
     "Sunlight": [
       "Sun",
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -10763,10 +11001,22 @@
     "Latin name": "Matteuccia struthiopteris"
   },
   "Onoclea sensibilis": {
-    "Common name": "Sensitive fern",
+    "Common name": "Sensitive Fern",
     "Height": "1-2 ft",
     "plantType": [
       "Fern"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "(82) Acadian Plains and Hills",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Key Host Plant": [
       "K"
@@ -10775,6 +11025,7 @@
     "Sunlight": [
       "Sun",
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -10783,11 +11034,23 @@
     ],
     "Latin name": "Onoclea sensibilis"
   },
-  "Osmunda cinnamomea": {
-    "Common name": "Cinnamon fern",
+  "Osmundastrum cinnamomeum": {
+    "Common name": "Cinnamon Fern",
     "Height": "2-4 ft",
     "plantType": [
       "Fern"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "(82) Acadian Plains and Hills",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Key Host Plant": [
       "K"
@@ -10796,75 +11059,121 @@
     "Sunlight": [
       "Sun",
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
       "Wet"
     ],
-    "Latin name": "Osmunda cinnamomea"
+    "Latin name": "Osmundastrum cinnamomeum"
   },
-  "Osmunda claytonia": {
-    "Common name": "Interrupted fern",
+  "Osmunda claytoniana": {
+    "Common name": "Interrupted Fern",
     "Height": "2-3 ft",
     "plantType": [
       "Fern"
     ],
+    "Ecoregion": "59,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "(82) Acadian Plains and Hills",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Key Host Plant": [
       "K"
     ],
     "Hosted Butterflies and Moths": "American Angle Shades; Marsh Fern Moth; Serpentine Webworm; Herpetogramma theseusalis; Black Arches; Fern Olethreutes; Three-Lined Leafroller Moth; Osmunda Borer",
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
       "Wet"
     ],
-    "Latin name": "Osmunda claytonia"
+    "Latin name": "Osmunda claytoniana"
   },
   "Osmunda regalis": {
-    "Common name": "Royal fern",
+    "Common name": "Royal Fern",
     "Height": "2-3.5 ft",
     "plantType": [
       "Fern"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "(82) Acadian Plains and Hills",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Key Host Plant": [
       "K"
     ],
     "Hosted Butterflies and Moths": "American Angle Shades; Marsh Fern Moth; Serpentine Webworm; Herpetogramma theseusalis; Black Arches; Fern Olethreutes; Three-Lined Leafroller Moth; Osmunda Borer",
     "Sunlight": [
+      "Sun",
       "Part Sun",
-      "Shade"
+      "Part Shade"
     ],
     "Moisture": [
       "Wet"
     ],
     "Latin name": "Osmunda regalis"
   },
-  "Parathelypteris noveboracensis": {
-    "Common name": "New York fern",
-    "Height": ".75-2 ft",
+  "Thelypteris noveboracensis": {
+    "Common name": "New York Fern",
+    "Height": "0.75-2 ft",
     "plantType": [
       "Fern"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "(82) Acadian Plains and Hills",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Sunlight": [
-      "Part Sun"
+      "Part Shade"
     ],
     "Moisture": [
       "Wet",
       "Medium"
     ],
-    "Latin name": "Parathelypteris noveboracensis"
+    "Latin name": "Thelypteris noveboracensis"
   },
   "Pellaea atropurpurea": {
-    "Common name": "Purple cliffbrake",
-    "Height": ".25-1 ft",
+    "Common name": "Purple Cliffbrake",
+    "Height": "0.25-1 ft",
     "plantType": [
       "Fern"
     ],
+    "Native Range": [
+      "MA Native",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US",
+      "Southwestern US"
+    ],
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Dry"
@@ -10872,13 +11181,24 @@
     "Latin name": "Pellaea atropurpurea"
   },
   "Phegopteris connectilis": {
-    "Common name": "Narrow beech fern",
-    "Height": ".25-1 ft",
+    "Common name": "Narrow Beech Fern",
+    "Height": "0.25-1 ft",
     "plantType": [
       "Fern"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "(82) Acadian Plains and Hills",
+      "Northeastern US",
+      "Northern US"
+    ],
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -10887,13 +11207,25 @@
     "Latin name": "Phegopteris connectilis"
   },
   "Phegopteris hexagonoptera": {
-    "Common name": "Broad beech fern",
+    "Common name": "Broad Beech Fern",
     "Height": "1-1.5 ft",
     "plantType": [
       "Fern"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "(82) Acadian Plains and Hills",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -10903,17 +11235,32 @@
     "Latin name": "Phegopteris hexagonoptera"
   },
   "Polypodium virginianum": {
-    "Common name": "Rock polypody",
-    "Height": ".5-1 ft",
+    "Common name": "Rock Polypody",
+    "Alternate common names": [
+      "Common Polypody"
+    ],
+    "Height": "0.5-1 ft",
     "plantType": [
       "Fern"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "(82) Acadian Plains and Hills",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Key Host Plant": [
       "K"
     ],
     "Hosted Butterflies and Moths": "Painted Arches",
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -10922,17 +11269,29 @@
     "Latin name": "Polypodium virginianum"
   },
   "Polystichum acrostoides": {
-    "Common name": "Christmas fern",
-    "Height": ".75-1.5 ft",
+    "Common name": "Christmas Fern",
+    "Height": "0.75-1.5 ft",
     "plantType": [
       "Fern"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "(82) Acadian Plains and Hills",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Key Host Plant": [
       "K"
     ],
     "Hosted Butterflies and Moths": "Reticulated Decantha Moth; Serpentine Webworm; Herpetogramma sphingealis; Brown Angle Shades",
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -10942,17 +11301,22 @@
     "Latin name": "Polystichum acrostoides"
   },
   "Polystichum braunii": {
-    "Common name": "Braun's holly fern",
+    "Common name": "Braun's Holly Fern",
     "Height": "2-3 ft",
     "plantType": [
       "Fern"
+    ],
+    "Native Range": [
+      "MA Native",
+      "Northeastern US",
+      "Northern US"
     ],
     "Key Host Plant": [
       "K"
     ],
     "Hosted Butterflies and Moths": "Reticulated Decantha Moth; Serpentine Webworm; Herpetogramma sphingealis; Brown Angle Shades",
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -10960,35 +11324,29 @@
     ],
     "Latin name": "Polystichum braunii"
   },
-  "Thelypteris novaboracensis": {
-    "Common name": "New York fern",
-    "Height": ".75-2 ft",
-    "plantType": [
-      "Fern"
-    ],
-    "Key Host Plant": [
-      "K"
-    ],
-    "Hosted Butterflies and Moths": "Pink-Shaded Fern Moth; American Angle Shades; Marsh Fern Moth; Ghostly Fern Moth; Herpetogramma theseusalis",
-    "Sunlight": [
-      "Part Sun"
-    ],
-    "Moisture": [
-      "Wet",
-      "Medium"
-    ],
-    "Latin name": "Thelypteris novaboracensis"
-  },
   "Thelypteris palustris": {
-    "Common name": "Marsh fern",
+    "Common name": "Marsh Fern",
     "Height": "1-1.5 ft",
     "plantType": [
       "Fern"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "(82) Acadian Plains and Hills",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Hosted Butterflies and Moths": "Pink-Shaded Fern Moth; American Angle Shades; Marsh Fern Moth; Ghostly Fern Moth; Herpetogramma theseusalis",
     "Sunlight": [
       "Sun",
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -10997,13 +11355,25 @@
     "Latin name": "Thelypteris palustris"
   },
   "Woodsia obtusa": {
-    "Common name": "Blunt-lobed woodsia",
+    "Common name": "Blunt-lobed Cliff Fern",
     "Height": "1-1.5 ft",
     "plantType": [
       "Fern"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "(82) Acadian Plains and Hills",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -11030,15 +11400,26 @@
     "Latin name": "Woodwardia areolata"
   },
   "Woodwardia virginica": {
-    "Common name": "Chain fern",
+    "Common name": "Chain Fern",
     "Height": "2-4 ft",
     "plantType": [
       "Fern"
+    ],
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "(82) Acadian Plains and Hills",
+      "Northeastern US",
+      "Southeastern US"
     ],
     "Hosted Butterflies and Moths": "Marsh Fern Moth; Serpentine Webworm; Herpetogramma theseusalis; Chain Fern Borer; Meadow Rue Borer",
     "Sunlight": [
       "Sun",
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -11132,9 +11513,18 @@
   },
   "Amorpha fruticosa": {
     "Common name": "False Indigo Bush",
+    "Alternate common names": [
+      "False Indigo"
+    ],
     "Height": "10-12 ft",
     "plantType": [
       "Shrub"
+    ],
+    "Native Range": [
+      "Mid-Atlantic US",
+      "Midwestern US",
+      "Southeastern US",
+      "Soutwestern US"
     ],
     "Hosted Butterflies and Moths": "Distinct Quaker; Clay-Colored Agonopterix; Fruit-Tree Leafroller Moth; Io Moth; Habilis Underwing; Magdalen Underwing; Hoary Edge; Northern Cloudywing; Oblique-Banded Leafroller Moth; Black-Spotted Prominent; Silver-Spotted Skipper; Solidago Root Moth; Green Cloverworm Bomolocha; Pale-Winged Gray; Ashen Pinion; Three-Lined Leafroller Moth; Locust Digitate Leafminer; Common Tan Wave; Sitochroa dasconalis; Gray Hairstreak; Genista Caterpillar",
     "Sunlight": [
@@ -11206,7 +11596,7 @@
     "Latin name": "Aronia arbutifolia 'Brilliantissima'"
   },
   "Aronia floribunda(prunifolia)": {
-    "Common name": "Purple chokeberry",
+    "Common name": "Purple Chokeberry",
     "Height": "6-8 ft",
     "plantType": [
       "Shrub"
@@ -11251,10 +11641,20 @@
     "Latin name": "Aronia melanocarpa"
   },
   "Arctostaphylos uva-ursi": {
-    "Common name": "Red bearberry",
-    "Height": ".25-.5 ft",
+    "Common name": "Red Bearberry",
+    "Height": "0.25-.5 ft",
     "plantType": [
       "Shrub"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northern US",
+      "Western US"
     ],
     "Pollen Source": "Blueberry Cellophane Bee",
     "Hosted Butterflies and Moths": "Miranda Underwing; Strawberry Leafroller; Fruit-Tree Leafroller Moth; Rose Tortrix; The Brown Elfin; Hoary Elfin; Zapulata Moth; Spotted Dantana; Cranberry Spanworm; Sumac Leaftier; Common Eupithacia; Sulphur Moth; Macaria occiduaria; Cranberry Span-Worm; Forest Tent Caterpillar; Southern Flannel Moth; Yellow-Washed Metarranthis; Filament Bearer; Manto Tussock Moth; Lappet Moth; Rhopobota finitimana; Blackheaded Fireworm",
@@ -11264,6 +11664,10 @@
     "Moisture": [
       "Medium",
       "Dry"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May"
     ],
     "Latin name": "Arctostaphylos uva-ursi"
   },
@@ -11339,10 +11743,20 @@
     "Latin name": "Calycanthus floridus"
   },
   "Ceanothus americanus": {
-    "Common name": "New Jersey tea",
+    "Common name": "New Jersey Tea",
     "Height": "2-3 ft",
     "plantType": [
       "Shrub"
+    ],
+    "Ecoregion": "58,59,83",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zones",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Pollen Source": "Ceanothus Mare-miner",
     "Hosted Butterflies and Moths": "\"North American\" Hasty Acleris; Common Gray; Half-Oval Ancylis; Barrens Carpet; Apterona helicoidella; Fruit-Tree Leafroller Moth; Rose Tortrix; Salt-and-Pepper Geometer; The Brown Elfin; Summer Azure; Cherry Gall Azure; Blackberry Looper Moth; Oblique-Banded Leafroller Moth; Zapulata Moth; White Triangle Tortrix; Unicorn Caterpillar Moth; The Small Engrailed; Broad-Lined Erastria; Thin-Lined Erastria; Ochre Euchlaena; Columbia Pug; Common Eupithacia; Insignificant Pug; Curved-Tooth Geometer; Mottled Duskywing; Leconte's Haploa; Harris's Three-Spot; Eastern Buckmoth; Sulphur Moth; Cecropia Silkmoth; Dimorphic Bomolocha; Green Cloverworm Bomolocha; Lithacodes fiskeanus; Thaxter's Pinion; Striped Bent-wing; Eastern Tent Caterpillar; Day Emerald; Filament Bearer; Red-Fronted Emerald; Red-Humped Caterpillar; Speckled Green Fruitworm Moth; Dark-Spotted Palthis; Lappet Moth; Tufted Apple-Bud Moth; White-Spotted Redactis; Morning-Glory Prominent; Sharp-Lined Yellow; Darling Mamestra; Gray Hairstreak; Wavy-Lined Emerald; Crocus Geometer; Colorful Zale",
@@ -11420,11 +11834,20 @@
     "plantType": [
       "Shrub"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US"
+    ],
     "Pollen Source": "Bradley?s Miner",
     "Hosted Butterflies and Moths": "Stained-Back Leafroller Moth; Acleris oxycoccana; Aroga argutiola; The Brown Elfin; Obsolete Leafroller; Parallel-Banded Leafroller; Chain-Dotted Geometer; Black-Fronted Dart; Major Datana; Alternate Woodling; Cranberry Spanworm; Round-Loaf Sallow; Thaxter's Pinion; Rhododendron Leaf Miner Moth; Cranberry Span-Worm; Black Arches; Yellow-Washed Metarranthis; Apple Sphinx; Darling Mamestra; Little Bride Looper; Dull Reddish Dart; Red Swordgrass Moth",
     "Sunlight": [
-      "Sun",
-      "Part Sun"
+      "Sun"
     ],
     "Moisture": [
       "Wet"
@@ -11442,10 +11865,14 @@
       "Tree"
     ],
     "Ecoregion": 58,
+    "Native Range": [
+      "Southeastern US"
+    ],
     "Hosted Butterflies and Moths": "Waved Sphinx; Royal Walnut Moth; Harris's Three-Spot; Fall Webworm; White-Marked Tussock Moth; Blinded Sphinx; Eastern Tiger Swallowtail; Lilac Borer Moth; Great Ash Sphinx; Fawn Sphinx; Fringed-Tree Sallow",
     "Sunlight": [
       "Sun",
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -11453,6 +11880,7 @@
       "Medium"
     ],
     "Bloom time": [
+      "May",
       "Jun"
     ],
     "Latin name": "Chionanthus virginicus"
@@ -11494,10 +11922,23 @@
     "plantType": [
       "Shrub"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "(82) Acadian Plains and Hills",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Hosted Butterflies and Moths": "Birch Tubemaker; Sweetfern Leaf Casebearer; Narrow-Winged Dagger; Black Army Worm; Agonopterix atrodorsella; Myrica Leaffolder; Fruit-Tree Leafroller Moth; Aroga argutiola; Red-Striped Fireworm Moth; Aspilanta argentifera; Io Moth; Salt-and-Pepper Geometer; Bucculatrix paroptila; Wayward Nymph; Bayberry Underwing; Scallop Moth; Chaetaglaea rhonda; Chionodes imber; Blackberry Looper Moth; Zapulata Moth; Chain-Dotted Geometer; Double-Lined Gray; White Triangle Tortrix; Coleophora persimplexella; Birch Casebearer; Norman's Quaker; Waxmyrtle Wave; Sweetfern Geometer; Dichomeris bipunctellus; The Small Engrailed; Maple Spanworm Moth; Effective Euchlaena; Least-Marked Euchlaena; Sharp-Lined Powder Moth; Gray Pug; Willow-and-Poplar Leatroller; Hypomecis buchholzaria; Pale-Winged Gray; Small Purplish Gray; Bent-Line Gray; Bridled Arches; Fireworm; Warm Gray Pinion; Thaxter's Pinion; Spongy Moth; Black Arches; Day Emerald; Two-Striped Emerald; White-Fringed Emerald; Red-Fronted Emerald; Olethreutes electrofuscum; Dusky Leafroller; Frosted Olethreutes; Purple Arches; Large Maple Spanworm Moth; Brown-Collared Dart; Pink-Spotted Dart; Purple-Lined Sallow; Spear-Marked Black Moth; Apple Sphinx; Northern Apple Sphinx; Bayberry Leaftier; Gray Hairstreak; Wavy-Lined Emerald; White Slant-Line; Evergreen Bagworm Moth; False Crocus Geometer; Spotted Cut-Worm; Greater Black-Letter Dart; Norman's Dart",
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Medium",
@@ -11659,6 +12100,17 @@
     "plantType": [
       "Shrub"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(83) Eastern Great Lakes Lowlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Hosted Butterflies and Moths": "Saddleback Caterpillar Moth; Acleris cervinana; Lesser Maple Leafroller Moth; Young's Acleris; Birch Tubemaker; Acrobasis coryliella; Acrobasis normella; Ironwood Tubemaker; American Dagger; Hazel Dagger; Funerary Dagger; Gray Dagger; Yellow-Haired Dagger; Impressive Dagger; Southern Oak Dagger; Narrow-Winged Dagger; Smeared Dagger; Splendid Dagger; Luna Moth; Clay-Colored Agonopterix; Walnut Sphinx; Miranda Underwing; Anacampsis tristrigella; Green Arches Dart; Oak Leafroller; Orange-Tipped Oakworm Moth; Spiny Oakworm Moth; Pink-striped Oakworm Moth; Polyphemus Moth; Spotted Apatelodes; Apotomis funerea; Cherry Tent Caterpillar; Exotic Leafroller Moth; Rose Tortrix; Hickory Leafroller; Io Moth; Hazel Tumbler; Eyed Baileya; Salt-and-Pepper Geometer; Bucculatrix fugitans; Almond Moth; Pale Beauty; Maple Prominent; Chionodes argentipunctella; Large Aspen Tortrix; Oblique-Banded Leafroller Moth; Morbid Owlet; Chain-Dotted Geometer; Royal Walnut Moth; White Triangle Tortrix; Angle-Lined Prominent; Unicorn Caterpillar Moth; Pistol Casebearer; American Dun-Bar; Norman's Quaker; Filbertworm; Sharp-Lined Tussock Moth; Variable Tussock Moth; Yellow-Necked Caterpillar Moth; Palmerworm; Dichomeris ventrellus; Lesser Cornstalk Borer; Elm Spanworm Moth; Birch Epinotia Moth; Epinotia walkerana; Linden Looper Moth; Early Hairstreak; Motted Euchlaena; Ferruginous Eulia; Sidus Sallow; Three-Spotted Sallow; Juvenal's Duskywing; Banded Tussock Moth; Eastern Buckmoth; Zigzag Herpetogramma; Cecropia Silkmoth; One-Spotted Variant; Mottled Bomolocha; Fall Webworm; Intractable Quaker; Fireworm; Hemina Pinion; Nameless Pinion; Spotted Tussock Moth; Twilight Moth; Stout Spanworm Moth; Spongy Moth; Speckled Granite; Gold-Striped Leaftier Moth; Eastern Tent Caterpillar; Forest Tent Caterpillar; Painted Arches; Menesta tortriciformella; Pale Metanema; Bicolored Woodgrain; Fluid Arches; White-Dotted Prominent; Nemapogon variatella; Filament Bearer; Nites atrocapitella; Blackdotted Birch Leaftier; Hazel Leaftier; Red-Humped Caterpillar; Black-Blotched Schizura; Serviceberry Leafroller; Divided Olethreutes; Olethreutes clavana; Olethreutes corylana; Slender Brown Budworm; Olethreutes merrickana; Olivaceous Olethreutes; Raspberry Leafroller; Olethreutes subnubilum; Bruce Spanworm; Winter Moth; Manto Tussock Moth; White-Marked Tussock Moth; Rustic Quaker; Striped Birch Pyralid; Speckled Green Fruitworm Moth; Dusky Leafroller; Three-Lined Leafroller Moth; Blinded Sphinx; Small-Eyed Sphinx; Small Phigalia; The Half-Wing Geometer; Brown Angle Shades; Straight-Lined Plagodis; American Barred Umber; Indian-Meal Moth; Aspen Webworm Moth; Friendly Probole; Aspen Leaftier; Tufted Thyatirid; Dotted Leaftier Moth; Eyed Mustard Sallow; Lesser Bud Moth; Spear-Marked Black Moth; Twin-Spotted Sphinx; Virginian Tiger Moth; Darling Mamestra; Stigmella corylifoliella; Dogwood Borer; Currant Clearwing; Red-Winged Sallow; Colorful Zale; Hazel Zale; Early Zanclognatha; Leopard Moth",
     "Sunlight": [
       "Sun",
@@ -11746,12 +12198,26 @@
     "plantType": [
       "Shrub"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Hosted Butterflies and Moths": "Oystershell Metrea; Harris's Three-Spot",
     "Sunlight": [
-      "Part Sun"
+      "Part Shade"
     ],
     "Moisture": [
       "Medium"
+    ],
+    "Bloom time": [
+      "Mar",
+      "Apr"
     ],
     "Latin name": "Dirca palustris"
   },
@@ -11763,23 +12229,27 @@
     "Latin name": "Euonymous atropurpurea"
   },
   "Fothergilla gardenii": {
-    "Common name": "Dwarf witch alder",
+    "Common name": "Dwarf Witch Alder",
     "Height": "3-6 ft",
     "plantType": [
       "Shrub"
     ],
+    "Native Range": [
+      "Southeastern US"
+    ],
     "Hosted Butterflies and Moths": "Drexel's Datana",
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Medium",
       "Dry"
     ],
     "Bloom time": [
-      "May",
-      "Jun"
+      "Apr",
+      "May"
     ],
     "Latin name": "Fothergilla gardenii"
   },
@@ -11908,6 +12378,7 @@
     "plantType": [
       "Shrub"
     ],
+    "Ecoregion": "58,83,84",
     "Hosted Butterflies and Moths": "Saddleback Caterpillar Moth; Miranda Underwing; Hydrangea Sphinx; Tobacco Moth; Salt Marsh Moth; Dark-Banded Geometer; Painted Arches; Hydrangea Leaftier; Virginian Tiger Moth",
     "Sunlight": [
       "Part Sun",
