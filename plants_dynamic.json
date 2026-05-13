@@ -12373,19 +12373,30 @@
     "Latin name": "Gaultheria procumbens"
   },
   "Hydrangea arborescens": {
-    "Common name": "Smooth hydrangea",
+    "Common name": "Smooth Hydrangea",
     "Height": "2-4 ft",
     "plantType": [
       "Shrub"
     ],
     "Ecoregion": "58,83,84",
+    "Native Range": [
+      "Midwestern US",
+      "Mid-Atlantic US",
+      "Southeastern US"
+    ],
     "Hosted Butterflies and Moths": "Saddleback Caterpillar Moth; Miranda Underwing; Hydrangea Sphinx; Tobacco Moth; Salt Marsh Moth; Dark-Banded Geometer; Painted Arches; Hydrangea Leaftier; Virginian Tiger Moth",
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
       "Medium"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
     ],
     "Latin name": "Hydrangea arborescens"
   },
@@ -12531,8 +12542,8 @@
     "Latin name": "Ilex glabra "
   },
   "Ilex glabra 'Compacta'": {
-    "Common name": "American holly",
-    "Height": "12-30 ft",
+    "Common name": "American Holly",
+    "Height": "3-4 ft",
     "plantType": [
       "Shrub"
     ],
@@ -12553,6 +12564,16 @@
     "plantType": [
       "Shrub"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Pollen Source": "Banks? Cellophane Bee",
     "Hosted Butterflies and Moths": "Saddleback Caterpillar Moth; Common Gray; Polyphemus Moth; Spotted Apatelodes; Exotic Leafroller Moth; Red-Banded Leafroller Moth; Io Moth; Henry's Elfin; Wavy-Lined Heterocampa; Reticulated Fruitworm Moth; Scallop Moth; Oblique-Banded Leafroller Moth; Unicorn Caterpillar Moth; Pawpaw Sphinx; Alternate Woodling; Maple Spanworm Moth; Maple Tip Borer; Spiny Oak-Slug Moth; Common Eupithacia; Subterranean Dart; Chickweed Geometer; Harris's Three-Spot; Bold-Feathered Grass Moth; Zigzag Herpetogramma; Fall Webworm; Black-Dotted Ruddy; Dark-Based Larisa; Ambiguous Moth; Pale Green Pinion; Spongy Moth; Forest Tent Caterpillar; Southern Flannel Moth; Holly Sallow; Confused Woodgrain; White-Marked Tussock Moth; Gray Quaker; Ruby Quaker; Skiff Moth; Porcelain Gray; Black-Fringed Leaftier; Winterberry Moth; Rhopobota finitimana; Blackheaded Fireworm; Morning-Glory Prominent; Fawn Sphinx; Clemens' Sphinx; Fall Armyworm Moth; Holly Clearwing Borer; Evergreen Bagworm Moth; Leopard Moth",
     "Sunlight": [
@@ -12564,31 +12585,34 @@
       "Medium"
     ],
     "Bloom time": [
-      "Mar",
-      "Apr",
       "May",
       "Jun"
     ],
     "Latin name": "Ilex verticillata"
   },
   "Itea virginica": {
-    "Common name": "Sweetspire",
+    "Common name": "Virginia Sweetspire",
     "Height": "3-4 ft",
     "plantType": [
       "Shrub"
     ],
+    "Native Range": [
+      "Mid-Atlantic US",
+      "Southeastern US"
+    ],
     "Hosted Butterflies and Moths": "Saddleback Caterpillar Moth; Angle-Lined Prominent",
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Medium",
       "Dry"
     ],
     "Bloom time": [
-      "May",
-      "Jun"
+      "Jun",
+      "Jul"
     ],
     "Latin name": "Itea virginica"
   },
@@ -12624,16 +12648,26 @@
     "Latin name": "Juniperus horizontalis"
   },
   "Kalmia angustifolia": {
-    "Common name": "Sheep laurel",
+    "Common name": "Sheep Laurel",
     "Height": "1-3 ft",
     "plantType": [
       "Shrub"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Mid-Atlantic US"
     ],
     "Pollen Source": "Bradley?s Miner, Sheep-Laurel Miner, Maine blueberry bee",
     "Hosted Butterflies and Moths": "Stained-Back Leafroller Moth; Lesser Apple Leaf Folder; Acrobasis amplexella; Narrow-Winged Dagger; Black Army Worm; Gray-Banded Leafroller Moth; The Brown Elfin; Promethea Silkmoth; Cenopis karacana; Chain-Dotted Geometer; Mottled Gray Carpet; Bog Yellow-Wing; Azalea Sphinx; Cranberry Spanworm; Sharp-Lined Powder Moth; White-Lined Pug; Sundew Dart; Fall Webworm; Spongy Moth; Bicolored Woodgrain; Red-Fronted Emerald; Olethreutes melanomesum; White-Marked Tussock Moth; Paralobesia rhoifructana; Brown Angle Shades; Clouded Veneer Moth; Friendly Probole; Heath Probole; Shagbark Hickory Leafroller; Fawn Sphinx; Bud Moth; Darling Mamestra; Blueberry Sallow; Rhododendron Borer; Inscribed Looper; White Slant-Line; Arcadian Sallow",
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Wet",
@@ -12646,16 +12680,26 @@
     "Latin name": "Kalmia angustifolia"
   },
   "Kalmia latifolia": {
-    "Common name": "Mountain laurel",
+    "Common name": "Mountain Laurel",
     "Height": "4-10 ft",
     "plantType": [
       "Shrub"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Southeastern US"
     ],
     "Pollen Source": "Bradley?s Miner, Sheep-Laurel Miner, Maine blueberry bee",
     "Hosted Butterflies and Moths": "Stained-Back Leafroller Moth; Lesser Apple Leaf Folder; Acrobasis amplexella; Narrow-Winged Dagger; Black Army Worm; Gray-Banded Leafroller Moth; The Brown Elfin; Promethea Silkmoth; Cenopis karacana; Chain-Dotted Geometer; Mottled Gray Carpet; Bog Yellow-Wing; Azalea Sphinx; Cranberry Spanworm; Sharp-Lined Powder Moth; White-Lined Pug; Sundew Dart; Fall Webworm; Spongy Moth; Bicolored Woodgrain; Red-Fronted Emerald; Olethreutes melanomesum; White-Marked Tussock Moth; Paralobesia rhoifructana; Brown Angle Shades; Clouded Veneer Moth; Friendly Probole; Heath Probole; Shagbark Hickory Leafroller; Fawn Sphinx; Bud Moth; Darling Mamestra; Blueberry Sallow; Rhododendron Borer; Inscribed Looper; White Slant-Line; Arcadian Sallow",
     "Sunlight": [
       "Sun",
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -12721,7 +12765,6 @@
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
-      "Mid-Atlantic US",
       "Southeastern US"
     ],
     "Hosted Butterflies and Moths": "Saddleback Caterpillar Moth; Acleris maccana; Lesser Apple Leaf Folder; \"North American\" Hasty Acleris; Birch Tubemaker; Sweetfern Leaf Casebearer; Impressive Dagger; Smeared Dagger; Luna Moth; Purple-Crested Slug; Myrica Leaffolder; Ancylis subaequana; Wide-Striped Leaf Roller; Fruit-Tree Leafroller Moth; Argyrotaenia repertana; Red-Banded Leafroller Moth; Aroga argutiola; Aspilanta argentifera; Large Looper Moth; Salt-and-Pepper Geometer; Mountain Bucculatrix; Bucculatrix paroptila; Poplar Caloptilia; Cameraria picturatella; Wayward Nymph; Bayberry Underwing; The Little Wife; Wavy-Lined Heterocampa; Cenopis karacana; Reticulated Fruitworm Moth; Chain-Dotted Geometer; Plain Schizura; Black-Fronted Dart; Birch Casebearer; Norman's Quaker; Sweetfern Geometer; Dichomeris bipunctellus; Maple Tip Borer; Spiny Oak-Slug Moth; Sharp-Lined Powder Moth; Common Eupithacia; Browntail Moth; Morrison's Sallow; Great Grey Dart; Curved-Tooth Geometer; Spotted Apple Budworm; Hypomecis buchholzaria; Intractable Quaker; Dark-Ribboned Wave; Thaxter's Pinion; Woolly Gray; Spongy Moth; Sulphur Angle; Southern Flannel Moth; Black Arches; Canadian Melanolphia; Day Emerald; Mniotype ducta; Confused Woodgrain; Filament Bearer; Two-Striped Emerald; White-Fringed Emerald; Red-Fronted Emerald; Red-Humped Caterpillar; Serviceberry Leafroller; Olethreutes electrofuscum; Raspberry Leafroller; Olethreutes sericoranum; Olethreutes valdanum; White-Marked Tussock Moth; Dusky Leafroller; Dark-Spotted Palthis; Three-Lined Leafroller Moth; Ruby Tiger Moth; American Barred Umber; Large Maple Spanworm Moth; Skiff Moth; Brown-Collared Dart; Spear-Marked Black Moth; White-Banded Black Moth; Fawn Sphinx; Northern Apple Sphinx; Bud Moth; Virginian Tiger Moth; Stigmella myricafoliella; Bayberry Leaftier; Inscribed Looper; Northern Pale Alder; White Slant-Line; Ornate Moth; False Crocus Geometer; Dull Reddish Dart; Norman's Dart; Red Swordgrass Moth",
@@ -12787,7 +12830,6 @@
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
-      "Mid-Atlantic US",
       "Southeastern US"
     ],
     "Hosted Butterflies and Moths": "Sweetfern Leaf Casebearer; Narrow-Winged Dagger; Luna Moth; Myrica Leaffolder; White-Lined Leafroller Moth; Common Gray; Polyphemus Moth; Spotted Apatelodes; Wide-Striped Leaf Roller; Fruit-Tree Leafroller Moth; Argyrotaenia repertana; Aspilanta argentifera; Io Moth; Promethea Silkmoth; Cameraria obstrictella; Cameraria picturatella; Bayberry Underwing; The Little Wife; Cenopis karacana; Chain-Dotted Geometer; Royal Walnut Moth; Poplar Tent Caterpillar Moth; Norman's Quaker; Waxmyrtle Wave; Sweetfern Geometer; Dichomeris bipunctellus; Imperial Moth; Cranberry Spanworm; Spiny Oak-Slug Moth; Browntail Moth; One-Spotted Variant; Small Purplish Gray; Crowned Slug; Yellow-Shouldered Slug; Spongy Moth; Southern Flannel Moth; Black Arches; Confused Woodgrain; Two-Striped Emerald; White-Fringed Emerald; Red-Fronted Emerald; Red-Humped Caterpillar; Olethreutes sericoranum; Olethreutes valdanum; White-Marked Tussock Moth; Maple Webworm; Skiff Moth; Porcelain Gray; Black-Fringed Leaftier; Spear-Marked Black Moth; White-Banded Black Moth; Apple Sphinx; Clemens' Sphinx; Stigmella myricafoliella; Bayberry Leaftier; Dogwood Borer; Fall Dead-Leaf Roller; Evergreen Bagworm Moth",
@@ -16507,5 +16549,35 @@
       "Aug"
     ],
     "Latin name": "Hemerocallis fulva"
+  },
+  "Lonicera sempervirens": {
+    "Common name": "Trumpet Honeysuckle",
+    "Height": "4-15 ft",
+    "plantType": [
+      "Woody Vine"
+    ],
+    "Ecoregion": "58, 59, 83, 84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Southeastern US"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Lonicera sempervirens"
   }
 }
