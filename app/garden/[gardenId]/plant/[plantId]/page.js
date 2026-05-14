@@ -19,6 +19,17 @@ import PlantBadges from '@/components/PlantBadges';
 import plantsData from '@/plants_dynamic.json';
 import styles from './page.module.css';
 
+// ---- Autofill image helpers ----
+
+const AUTOFILL_BUCKET = 'autofill_images';
+
+/** Build the public URL for an autofill reference image based on Latin name */
+const getAutofillImageUrl = (scientificName) => {
+  if (!scientificName) return null;
+  const fileName = scientificName.trim().replace(/\s+/g, '_') + '.jpg';
+  return `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/${AUTOFILL_BUCKET}/${fileName}`;
+};
+
 // ---- Autofill lookup helpers ----
 
 const findByScientific = (name) => {
@@ -330,9 +341,16 @@ export default function PlantPage() {
       }
     }
 
+    // Use a reference image if the user hasn't uploaded one
+    let mainImage = temp.mainImage;
+    if (!mainImage) {
+      mainImage = getAutofillImageUrl(autofillData['Latin name']) || '';
+    }
+
     await save({
       ...temp,
       commonName,
+      mainImage,
       scientificName: autofillData['Latin name']?.trim() || temp.scientificName,
       bloomTime: autofillData['Bloom time'] || temp.bloomTime,
       height: autofillData['Height'] || temp.height,
