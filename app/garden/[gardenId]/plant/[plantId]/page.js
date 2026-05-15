@@ -431,7 +431,7 @@ export default function PlantPage() {
               setSelectedImage(temp.mainImage || '/placeholder-plant.jpg');
             }}
           >
-            <img src={temp.mainImage || '/placeholder-plant.jpg'} alt="" className={styles.mainImage} />
+            <img src={temp.mainImage || '/placeholder-plant.jpg'} alt="" className={styles.mainImage} onError={(e) => { e.target.src = '/placeholder-plant.jpg'; }} />
             {!privacyMode && !garden?.customization?.hideBadges && <PlantBadges commonName={plant.commonName} scientificName={plant.scientificName} size="large" />}
             {!privacyMode && <button className={styles.mainImageEditButton} onClick={(e) => { e.stopPropagation(); mainRef.current?.click(); }}><FiEdit size={18} /></button>}
             <input ref={mainRef} type="file" onChange={onMain} className={styles.fileInput} accept="image/*" onClick={(e) => e.stopPropagation()} />
