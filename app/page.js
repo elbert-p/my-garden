@@ -366,6 +366,7 @@ export default function Home() {
                   linkPrefix="/garden"
                   getItemId={(g) => g.id}
                   getItemImage={(g) => g.image || DEFAULT_GARDEN_IMAGE}
+                  fallbackImage={DEFAULT_GARDEN_IMAGE}
                   getItemName={(g) => g.name}
                   getItemBadge={!privacyMode ? (g) => plantCounts[g.id] != null ? plantCounts[g.id] : null : undefined}
                   selectionMode={privacyMode}
@@ -390,6 +391,7 @@ export default function Home() {
                   linkPrefix="/share"
                   getItemId={(g) => g.id}
                   getItemImage={(g) => g.image || DEFAULT_GARDEN_IMAGE}
+                  fallbackImage={DEFAULT_GARDEN_IMAGE}
                   getItemName={(g) => g.name}
                   getItemBadge={!privacyMode ? (g) => plantCounts[g.id] != null ? plantCounts[g.id] : null : undefined}
                   selectionMode={privacyMode}
@@ -411,6 +413,7 @@ export default function Home() {
                   linkPrefix="/share"
                   getItemId={(g) => g.id}
                   getItemImage={(g) => g.image || DEFAULT_GARDEN_IMAGE}
+                  fallbackImage={DEFAULT_GARDEN_IMAGE}
                   getItemName={(g) => g.name}
                   getItemBadge={!privacyMode ? (g) => plantCounts[g.id] != null ? plantCounts[g.id] : null : undefined}
                   selectionMode={privacyMode}

@@ -22,6 +22,7 @@ export default function SharedProfilePage() {
             linkPrefix="/share"
             getItemId={(g) => g.id}
             getItemImage={(g) => g.image || DEFAULT_GARDEN_IMAGE}
+            fallbackImage={DEFAULT_GARDEN_IMAGE}
             getItemName={(g) => g.name}
             getItemBadge={getBadge}
           />
@@ -37,6 +38,7 @@ export default function SharedProfilePage() {
             linkPrefix="/share"
             getItemId={(g) => g.id}
             getItemImage={(g) => g.image || DEFAULT_GARDEN_IMAGE}
+            fallbackImage={DEFAULT_GARDEN_IMAGE}
             getItemName={(g) => g.name}
             getItemBadge={getBadge}
           />
@@ -50,6 +52,7 @@ export default function SharedProfilePage() {
             linkPrefix="/share"
             getItemId={(g) => g.id}
             getItemImage={(g) => g.image || DEFAULT_GARDEN_IMAGE}
+            fallbackImage={DEFAULT_GARDEN_IMAGE}
             getItemName={(g) => g.name}
             getItemBadge={getBadge}
           />

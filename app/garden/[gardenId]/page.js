@@ -29,6 +29,7 @@ export default function GardenPage() {
         linkPrefix={`/garden/${gardenId}/plant`}
         getItemId={(p) => p.id}
         getItemImage={(p) => p.mainImage || '/placeholder-plant.jpg'}
+        fallbackImage="/placeholder-plant.jpg"
         getItemName={(p) => p.commonName || p.scientificName}
         getItemStyle={(p) => ({ fontStyle: p.commonName ? 'normal' : 'italic' })}
         renderOverlay={hideBadges ? undefined : (p) => <PlantBadges commonName={p.commonName} scientificName={p.scientificName} />}

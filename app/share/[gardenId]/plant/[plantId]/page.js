@@ -145,7 +145,7 @@ export default function SharedPlantPage() {
 
         <div className={styles.details}>
           <div className={styles.mainImageContainer} onClick={() => setSelImg(plant.mainImage || '/placeholder-plant.jpg')}>
-            <img src={plant.mainImage || '/placeholder-plant.jpg'} alt="" className={styles.mainImage} />
+            <img src={plant.mainImage || '/placeholder-plant.jpg'} alt="" className={styles.mainImage} onError={(e) => { e.target.src = '/placeholder-plant.jpg'; }} />
             {!garden?.customization?.hideBadges && <PlantBadges commonName={plant.commonName} scientificName={plant.scientificName} size="large" />}
           </div>
 

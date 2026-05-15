@@ -14,6 +14,7 @@ export default function ItemGrid({
   linkPrefix = '',
   getItemId = (item) => item.id,
   getItemImage = (item) => item.image,
+  fallbackImage,
   getItemName = (item) => item.name,
   getItemStyle = () => ({}),
   getItemBadge,
@@ -64,6 +65,7 @@ export default function ItemGrid({
               src={getItemImage(item)}
               alt={getItemName(item)}
               className={styles.image}
+              onError={fallbackImage ? (e) => { if (e.target.src !== window.location.origin + fallbackImage) e.target.src = fallbackImage; } : undefined}
             />
             <div className={`${styles.selectionCheckbox} ${isSelected ? styles.selectionChecked : ''}`}>
               {isSelected && <FiCheck size={16} strokeWidth={3.5} />}
@@ -88,6 +90,7 @@ export default function ItemGrid({
             src={getItemImage(item)}
             alt={getItemName(item)}
             className={styles.image}
+            onError={fallbackImage ? (e) => { if (e.target.src !== window.location.origin + fallbackImage) e.target.src = fallbackImage; } : undefined}
           />
           {badge != null && <span className={styles.badge}>{badge}</span>}
           {renderOverlay?.(item)}
