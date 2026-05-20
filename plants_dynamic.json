@@ -937,7 +937,7 @@
   },
   "Antennaria parlinii": {
     "Common name": "Ladies' Tobacco",
-    "Height": ".5-1 ft",
+    "Height": "0.5-1 ft",
     "plantType": [
       "Herbaceous perennial"
     ],
@@ -1109,6 +1109,37 @@
       "Sep"
     ],
     "Latin name": "Arnoglossum reniforme"
+  },
+  "Aralia nudicaulis": {
+    "Common name": "Wild Sarsaparilla",
+    "Height": "1-2 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Mid-Atlantic US",
+      "Northern US"
+    ],
+    "Hosted Butterflies and Moths": "White-Lined Leafroller Moth; Spotted Apatelodes; Wide-Striped Leaf Roller; Argyrotaenia repertana; Spring Azure; Summer Azure; Cherry Gall Azure; The Batman Moth; Orange-Dotted Dichomeris; The Small Engrailed; Epermenia albapunctella; Satyr Pug; Zigzag Herpetogramma; Pale-Winged Gray; Spongy Moth; Gold-Striped Leaftier Moth; Ruby Quaker; Virginian Tiger Moth",
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Dry"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Latin name": "Aralia nudicaulis"
   },
   "Aralia racemosa": {
     "Common name": "Spikenard",
@@ -2873,12 +2904,17 @@
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Native Range": [
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Hosted Butterflies and Moths": "Black Swallowtail; Paralobesia rhoifructana; Fall Armyworm Moth; Celery Leaftier; Painted Lady",
     "Sunlight": [
       "Sun"
     ],
     "Moisture": [
-      "Medium"
+      "Medium",
+      "Dry"
     ],
     "Bloom time": [
       "Jul",
@@ -3071,11 +3107,21 @@
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Bumblebees": 1,
     "Pollen Source": "American Bumble Bee, Golden Northern Bumblebee, Northern Aster Miner, Canada miner, Shiny-tailed Goldenrod Miner, Andrena (Cnemidandrena) robervalensis, Dull-tailed Goldenrod Miner, Orange-legged Furrow Bee, Band-footed Sweat Bee, Wide-mouthed Sweat Bee, Bristle Sweat Bee, White-haired Golden Sweat Bee, Densely Punctured Sweat Bee, Hairy Metallic-Sweat Bee, Truncate Sweat Bee, Short Leafcutter Bee, Frigid Leafcutter Bee, Frugal Leafcutter Bee, Unarmed Leafcutter Bee, Broad-handed Leafcutter Bee, Silver-tailed Petalcutter, Golden-tailed Leafcutter Bee, Drury?s Longhorn",
     "Hosted Butterflies and Moths": "Wide-Striped Leaf Roller; Two-Spotted Dichomeris; Dichomeris levisella; Gray-Dusted Sallow; Northern Flower Moth",
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -3096,11 +3142,21 @@
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Mid-Atlantic US"
+    ],
     "Bumblebees": 1,
     "Pollen Source": "American Bumble Bee, Golden Northern Bumblebee, Northern Aster Miner, Canada miner, Shiny-tailed Goldenrod Miner, Andrena (Cnemidandrena) robervalensis, Dull-tailed Goldenrod Miner, Orange-legged Furrow Bee, Band-footed Sweat Bee, Wide-mouthed Sweat Bee, Bristle Sweat Bee, White-haired Golden Sweat Bee, Densely Punctured Sweat Bee, Hairy Metallic-Sweat Bee, Truncate Sweat Bee, Short Leafcutter Bee, Frigid Leafcutter Bee, Frugal Leafcutter Bee, Unarmed Leafcutter Bee, Broad-handed Leafcutter Bee, Silver-tailed Petalcutter, Golden-tailed Leafcutter Bee, Drury?s Longhorn",
     "Hosted Butterflies and Moths": "Wide-Striped Leaf Roller; Two-Spotted Dichomeris; Dichomeris levisella; Gray-Dusted Sallow; Northern Flower Moth",
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -3115,17 +3171,26 @@
     "Latin name": "Eurybia shreberi"
   },
   "Eurybia spectabilis": {
-    "Common name": "Blue Wood Aster",
+    "Common name": "Purple Wood Aster",
     "Height": "1-2 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Ecoregion": 84,
+    "Native Range": [
+      "MA Native",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Mid-Atlantic US",
+      "Southeastern US",
+      "East Coast US"
     ],
     "Bumblebees": 1,
     "Pollen Source": "American Bumble Bee, Golden Northern Bumblebee, Northern Aster Miner, Canada miner, Shiny-tailed Goldenrod Miner, Andrena (Cnemidandrena) robervalensis, Dull-tailed Goldenrod Miner, Orange-legged Furrow Bee, Band-footed Sweat Bee, Wide-mouthed Sweat Bee, Bristle Sweat Bee, White-haired Golden Sweat Bee, Densely Punctured Sweat Bee, Hairy Metallic-Sweat Bee, Truncate Sweat Bee, Short Leafcutter Bee, Frigid Leafcutter Bee, Frugal Leafcutter Bee, Unarmed Leafcutter Bee, Broad-handed Leafcutter Bee, Silver-tailed Petalcutter, Golden-tailed Leafcutter Bee, Drury?s Longhorn",
     "Hosted Butterflies and Moths": "Wide-Striped Leaf Roller; Two-Spotted Dichomeris; Dichomeris levisella; Gray-Dusted Sallow; Northern Flower Moth",
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Medium",
@@ -4863,13 +4928,37 @@
     ],
     "Latin name": "Lycopus uniflorus"
   },
-  "Lysimachia spp.": {
-    "Common name": "Loosestrife",
+  "Lysimachia borealis": {
+    "Common name": "Northern Starflower",
+    "Height": "0.25 ft",
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Mid-Atlantic US",
+      "Northern US"
+    ],
     "Pollen Source": "Ciliate Yellow Loosestrife Bee, Dark-footed Loosestrife Bee, Patellate Yellow Loosestrife Bee",
-    "Latin name": "Lysimachia spp."
+    "Hosted Butterflies and Moths": "Gray Pug; Bold-Feathered Grass Moth; Hitched Arches; Blurry-Patched Nola; Stalk Borer",
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "May"
+    ],
+    "Latin name": "Lysimachia borealis"
   },
   "Lythrum alatum": {
     "Common name": "Winged Loosestrife",
@@ -12507,45 +12596,20 @@
     ],
     "Latin name": "Ilex glabra"
   },
-  "Ilex glabra ": {
+  "Ilex glabra 'Compacta'": {
     "Common name": "Inkberry 'Compacta'",
     "Height": "3-4 ft",
     "plantType": [
       "Shrub"
     ],
-    "Ecoregion": "59,82,84",
     "Native Range": [
-      "Nativar",
+      "Cultivar",
       "MA Native",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
       "Mid-Atlantic US",
       "Southeastern US"
-    ],
-    "Pollen Source": "Banks? Cellophane Bee",
-    "Hosted Butterflies and Moths": "Saddleback Caterpillar Moth; Common Gray; Polyphemus Moth; Spotted Apatelodes; Exotic Leafroller Moth; Red-Banded Leafroller Moth; Io Moth; Henry's Elfin; Wavy-Lined Heterocampa; Reticulated Fruitworm Moth; Scallop Moth; Oblique-Banded Leafroller Moth; Unicorn Caterpillar Moth; Pawpaw Sphinx; Alternate Woodling; Maple Spanworm Moth; Maple Tip Borer; Spiny Oak-Slug Moth; Common Eupithacia; Subterranean Dart; Chickweed Geometer; Harris's Three-Spot; Bold-Feathered Grass Moth; Zigzag Herpetogramma; Fall Webworm; Black-Dotted Ruddy; Dark-Based Larisa; Ambiguous Moth; Pale Green Pinion; Spongy Moth; Forest Tent Caterpillar; Southern Flannel Moth; Holly Sallow; Confused Woodgrain; White-Marked Tussock Moth; Gray Quaker; Ruby Quaker; Skiff Moth; Porcelain Gray; Black-Fringed Leaftier; Winterberry Moth; Rhopobota finitimana; Blackheaded Fireworm; Morning-Glory Prominent; Fawn Sphinx; Clemens' Sphinx; Fall Armyworm Moth; Holly Clearwing Borer; Evergreen Bagworm Moth; Leopard Moth",
-    "Sunlight": [
-      "Sun",
-      "Part Sun",
-      "Part Shade"
-    ],
-    "Moisture": [
-      "Wet",
-      "Medium",
-      "Dry"
-    ],
-    "Bloom time": [
-      "May",
-      "Jun"
-    ],
-    "Latin name": "Ilex glabra "
-  },
-  "Ilex glabra 'Compacta'": {
-    "Common name": "American Holly",
-    "Height": "3-4 ft",
-    "plantType": [
-      "Shrub"
     ],
     "Pollen Source": "Banks? Cellophane Bee",
     "Hosted Butterflies and Moths": "Saddleback Caterpillar Moth; Common Gray; Polyphemus Moth; Spotted Apatelodes; Exotic Leafroller Moth; Red-Banded Leafroller Moth; Io Moth; Henry's Elfin; Wavy-Lined Heterocampa; Reticulated Fruitworm Moth; Scallop Moth; Oblique-Banded Leafroller Moth; Unicorn Caterpillar Moth; Pawpaw Sphinx; Alternate Woodling; Maple Spanworm Moth; Maple Tip Borer; Spiny Oak-Slug Moth; Common Eupithacia; Subterranean Dart; Chickweed Geometer; Harris's Three-Spot; Bold-Feathered Grass Moth; Zigzag Herpetogramma; Fall Webworm; Black-Dotted Ruddy; Dark-Based Larisa; Ambiguous Moth; Pale Green Pinion; Spongy Moth; Forest Tent Caterpillar; Southern Flannel Moth; Holly Sallow; Confused Woodgrain; White-Marked Tussock Moth; Gray Quaker; Ruby Quaker; Skiff Moth; Porcelain Gray; Black-Fringed Leaftier; Winterberry Moth; Rhopobota finitimana; Blackheaded Fireworm; Morning-Glory Prominent; Fawn Sphinx; Clemens' Sphinx; Fall Armyworm Moth; Holly Clearwing Borer; Evergreen Bagworm Moth; Leopard Moth",
@@ -12730,7 +12794,27 @@
     "Latin name": "Leucothoe fontanesiana"
   },
   "Ligustrum japonicum": {
-    "Common name": "Japanese privet",
+    "Common name": "Japanese Privet",
+    "Height": "6-12 ft",
+    "plantType": [
+      "Shrub",
+      "Tree"
+    ],
+    "Native Range": [
+      "Asia"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Jun"
+    ],
     "Latin name": "Ligustrum japonicum"
   },
   "Lindera benzoin": {
@@ -12739,16 +12823,32 @@
     "plantType": [
       "Shrub"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US",
+      "Southwestern US"
+    ],
     "Pollen Source": "Yellow-banded Bumblebee",
     "Hosted Butterflies and Moths": "Saddleback Caterpillar Moth; White-Lined Leafroller Moth; Polyphemus Moth; Spotted Apatelodes; Promethea Silkmoth; Imperial Moth; Morning-Glory Plume Moth; Tulip-Tree Beauty; Spongy Moth; Confused Woodgrain; Eastern Tiger Swallowtail; Spicebush Swallowtail; Macram? Moth; Yellow Slant-Line",
     "Sunlight": [
       "Sun",
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
       "Wet",
       "Medium"
+    ],
+    "Bloom time": [
+      "Mar",
+      "Apr"
     ],
     "Latin name": "Lindera benzoin"
   },
@@ -13917,7 +14017,8 @@
     "Hosted Butterflies and Moths": "Acleris busckana; Acleris macdunnoughi; Impressive Dagger; Narrow-Winged Dagger; Night-Wandering Dagger; Smeared Dagger; Black Army Worm; Common Gray; Wide-Striped Leaf Roller; Fruit-Tree Leafroller Moth; Exotic Leafroller Moth; Dusky-Back Leafroller; Omnivorous Leafroller Moth; Garden Tiger Moth; Io Moth; Salt-and-Pepper Geometer; Maple Prominent; Summer Azure; Reticulated Fruitworm Moth; Oblique-Banded Leafroller Moth; Chain-Dotted Geometer; Black-Patched Clepsis; Norman's Quaker; Catocaline Dart; Dark-Spotted Looper Moth; Cranberry Spanworm; Effective Euchlaena; Least-Marked Euchlaena; Johnson's Euchlaena; Ochre Euchlaena; The Saw-Wing; Sharp-Lined Powder Moth; Flower-Feeding Pug; Common Eupithacia; Insignificant Pug; Satyr Pug; Eupithecia strattonata; Browntail Moth; Great Brown Dart; Great Grey Dart; Spirea Leaftier; Blueberry Gray; Double Dart; Harris's Three-Spot; New England Buckmoth; Cecropia Silkmoth; Fall Webworm; Bridled Arches; False Pinion; American Brindle; Hoary Pinion; Fireworm; Thaxter's Pinion; Spotted Tussock Moth; Brick Dart; Spongy Moth; Canadian Melanolphia; Day Emerald; Ruddy Metarranthis; Common Metarranthis; Yellow-Washed Metarranthis; Bicolored Woodgrain; Olethreutes albiciliana; Raspberry Leafroller; Olethreutes valdanum; Manto Tussock Moth; White-Marked Tussock Moth; Subdued Quaker; Dark-Spotted Palthis; Blinded Sphinx; Stalk Borer; Morrison's Pero; Brown Angle Shades; Lined Ruby Tiger Moth; Purple Arches; Friendly Probole; Large Maple Spanworm Moth; Red-Breasted Dart; Pink-Spotted Dart; Isabella Tiger Moth; Spear-Marked Black Moth; Ferguson's Scallop Shell; Scallop Shell; Morning-Glory Prominent; Sharp-Lined Yellow; Twin-Spotted Sphinx; Apple Sphinx; Clemens' Sphinx; Northern Apple Sphinx; Virginian Tiger Moth; Darling Mamestra; Three Striped Oncocnemis; Inscribed Looper; Tacoma Cutworm; Crocus Geometer; False Crocus Geometer; Spotted Cut-Worm; Greater Black-Letter Dart; Norman's Dart; Gray Swordgrass Moth; Dot-and-Dash Swordgrass Moth; Red Swordgrass Moth",
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Wet",
@@ -13932,6 +14033,9 @@
   },
   "Spiraea tomentosa": {
     "Common name": "Steeplebush",
+    "Alternate common names": [
+      "Rose Meadowsweet"
+    ],
     "Height": "2-5 ft",
     "plantType": [
       "Shrub"
@@ -16565,6 +16669,7 @@
       "Northeastern US",
       "Southeastern US"
     ],
+    "Hosted Butterflies and Moths": "Smeared Dagger; Four-Barred Gray; White-Lined Leafroller Moth; Exotic Leafroller Moth; Garden Tiger Moth; Red-Banded Leafroller Moth; Gray Scoopwing; Choristoneura albaniana; Oblique-Banded Leafroller Moth; Marbled Carpet; The Small Engrailed; Alternate Woodling; Cranberry Spanworm; The Baltimore; Double Dart; Harris's Three-Spot; Corn Earworm Moth; Snowberry Clearwing; Hummingbird Clearwing; Zigzag Herpetogramma; Cecropia Silkmoth; White-Lined Sphinx; Giant Leopard Moth; Fall Webworm; Common Hyppa; Atlantic Arches; Ursula Wainscot; Southern Flannel Moth; Hitched Arches; Painted Arches; Opostegoides scioterma; White-Marked Tussock Moth; Speckled Green Fruitworm Moth; Dusky Leafroller; Dark-Spotted Palthis; Phyllonorycter fragilella; Purple Arches; Virginian Tiger Moth; Brown-Lined Sallow; Genista Caterpillar; European Honeysuckle Leaf Roller; Toothed Zanclognatha; Leopard Moth",
     "Sunlight": [
       "Sun",
       "Part Sun"
