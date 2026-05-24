@@ -851,7 +851,7 @@
     "Sunlight": [
       "Sun",
       "Part Sun",
-      "Shade"
+      "Part Shade"
     ],
     "Moisture": [
       "Medium",
@@ -1197,7 +1197,7 @@
     ],
     "Hosted Butterflies and Moths": "Pink-Legged Tiger Moth",
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -1653,6 +1653,7 @@
     "Hosted Butterflies and Moths": "Grey Marvel; Wide-Striped Leaf Roller; Chionodes fondella; Pink-Patched Looper Moth; Hermit Sphinx; Rustic Quaker; Stalk Borer; Orange Mint Moth; Raspberry Pyrausta; Sparganothis Fruitworm Moth; Xenotemna pallorana",
     "Sunlight": [
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -1751,11 +1752,39 @@
     ],
     "Latin name": "Caltha palustris"
   },
+  "Camassia leichtlinii": {
+    "Common name": "Leichtlin's Camass",
+    "Height": "2-3 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "West Coast US"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Latin name": "Camassia leichtlinii"
+  },
   "Camassia scilloides": {
     "Common name": "Wild Hyacinth",
     "Height": "2 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Midwestern US",
+      "Southeastern US",
+      "Southwestern US"
     ],
     "Sunlight": [
       "Sun",
@@ -1847,10 +1876,16 @@
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Native Range": [
+      "MA Native",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Pollen Source": "Mustard Miner Bee, Golden-tailed Leafcutter Bee",
     "Hosted Butterflies and Moths": "Purple-Backed Cabbageworm Moth; Mustard White; Cabbage White; West Virginia White; Beet Army Worm",
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -2067,13 +2102,18 @@
   },
   "Chrysogonum virginianum": {
     "Common name": "Green and Gold",
-    "Height": ".75-1 ft",
+    "Height": "0.75-1 ft",
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Native Range": [
+      "Mid-Atlantic US",
+      "Southeastern US"
+    ],
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Medium"
@@ -2394,9 +2434,18 @@
   },
   "Corydalis sempervirens": {
     "Common name": "Rock Harlequin",
+    "Alternate common names": [
+      "Pale Corydalis"
+    ],
     "Height": "3 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "MA Native",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Sunlight": [
       "Sun",
@@ -2701,6 +2750,10 @@
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Native Range": [
+      "Midwestern US",
+      "Southwestern US"
+    ],
     "Key Host Plant": [
       "Specialist Bees"
     ],
@@ -2752,6 +2805,12 @@
     "Height": "3 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "TX",
+      "OK",
+      "MO",
+      "AR"
     ],
     "Key Host Plant": [
       "Specialist Bees"
@@ -2844,6 +2903,11 @@
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Native Range": [
+      "Northeastern US",
+      "Northern US",
+      "Western US"
+    ],
     "Pollen Source": "Yellow-banded Bumblebee",
     "Hosted Butterflies and Moths": "Smeared Dagger; Fireweed Clearwing; Nessus Sphinx; Mouse-Colored Pyrophila; The Nutmeg; Black-Banded Carpet; Many-Lined Carpet; Aristotelia isopelta; Small Pheonix; Pearly Wood-Nymph; Ferruginous Eulia; Lesser Grapevine Looper Moth; Greater Grapevine Looper; Flower-Feeding Pug; Satyr Pug; Gray Pug; Hellinsia elliottii; Bedstraw Hawkmoth; White-Lined Sphinx; Common Hyppa; Canadian Melanolphia; Mompha locupletella; Eupatorium Plume Moth; Dusky Leafroller; Variegated Cutworm; Double-Banded Carpet; White-Striped Black; Tacoma Cutworm",
     "Sunlight": [
@@ -2929,6 +2993,10 @@
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Native Range": [
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Key Host Plant": [
       "K"
     ],
@@ -2948,11 +3016,21 @@
     ],
     "Latin name": "Eupatorium altissimum"
   },
-  "Eupatorium fistulosum": {
-    "Common name": "Hollow Joe-Pye Weed",
-    "Height": "6 ft",
+  "Eupatorium hyssopifolium": {
+    "Common name": "Hyssop-leaved Boneset",
+    "Height": "1-3 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Ecoregion": "58,59,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Key Host Plant": [
       "K"
@@ -2962,32 +3040,7 @@
     "Sunlight": [
       "Sun",
       "Part Sun",
-      "Shade"
-    ],
-    "Moisture": [
-      "Wet"
-    ],
-    "Bloom time": [
-      "Jul",
-      "Aug",
-      "Sep"
-    ],
-    "Latin name": "Eupatorium fistulosum"
-  },
-  "Eupatorium hyssopifolium": {
-    "Common name": "Hyssop-leaved Boneset",
-    "Height": "1-3 ft",
-    "plantType": [
-      "Herbaceous perennial"
-    ],
-    "Key Host Plant": [
-      "K"
-    ],
-    "Pollen Source": "American Bumble Bee, Golden Northern Bumblebee, Andrena (Cnemidandrena) robervalensis, Orange-legged Furrow Bee, Band-footed Sweat Bee, Wide-mouthed Sweat Bee, Bristle Sweat Bee, White-haired Golden Sweat Bee, Densely Punctured Sweat Bee, Hairy Metallic-Sweat Bee, Truncate Sweat Bee, Short Leafcutter Bee, Frigid Leafcutter Bee, Frugal Leafcutter Bee, Unarmed Leafcutter Bee, Broad-handed Leafcutter Bee, Silver-tailed Petalcutter, Golden-tailed Leafcutter Bee",
-    "Hosted Butterflies and Moths": "Agonopterix atrodorsella; Goldenrod Leaffolder; Common Gray; Eupatorium Borer Moth; Boneset Borer Moth; Summer Azure; Chionodes pseudofondella; Blackberry Looper Moth; Soybean Looper Moth; Yellow-Collared Scape Moth; Dusky Groundling; Curve-Lined Angle; Salt Marsh Moth; Common Eupithacia; White Spot Pug; Subgothic Dart; Confused Dart; Clymene Moth; Plain Plume Moth; Bold-Feathered Grass Moth; Snakeroot Leafminer; Red-Humped Caterpillar; Eupatorium Plume Moth; Rustic Quaker; Smartweed Borer; Burdock Border; Joe-Pye Weed Borer; Heracleum Stem Borer Moth; Herbivorous Patania; Variegated Cutworm; Red Groundling; Ruby Tiger Moth; Lined Ruby Tiger Moth; Black-Shaded Platynota; Common Tan Wave; Three-Lined Flower Moth; Wavy-Lined Emerald",
-    "Sunlight": [
-      "Sun",
-      "Part Sun"
+      "Part Shade"
     ],
     "Moisture": [
       "Medium",
@@ -3283,6 +3336,7 @@
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
+      "Midwestern US",
       "Southeastern US"
     ],
     "Bumblebees": 1,
@@ -3291,8 +3345,7 @@
     "Sunlight": [
       "Sun",
       "Part Sun",
-      "Part Shade",
-      "Shade"
+      "Part Shade"
     ],
     "Moisture": [
       "Wet",
@@ -3381,6 +3434,10 @@
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Native Range": [
+      "Midwestern US",
+      "Mid-Atlantic US"
+    ],
     "Hosted Butterflies and Moths": "Garden Tiger Moth; Gray Pug",
     "Sunlight": [
       "Sun"
@@ -3433,9 +3490,19 @@
   },
   "Fragaria vesca": {
     "Common name": "Woodland Strawberry",
-    "Height": ".25-.5 ft",
+    "Height": "0.25-.5 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Mid-Atlantic US",
+      "Midwestern US"
     ],
     "Key Host Plant": [
       "K"
@@ -3444,7 +3511,8 @@
     "Hosted Butterflies and Moths": "Greater Red Dart; Blueberry Budworm Moth; Garden Webworm Moth; Grass Tubeworm Moth; Eastern Grass Tubeworm; Smeared Dagger; Black Army Worm; Swordsman Dart; Ipsilon Dart; Miranda Underwing; Mouse-Colored Pyrophila; Peach Twig Borer; Common Gray; Raspberry Leaf Folder; Strawberry Leafroller; Red-Headed Ancylis; Nais Tiger Moth; Wide-Striped Leaf Roller; Exotic Leafroller Moth; Omnivorous Leafroller Moth; Garden Tiger Moth; Salt-and-Pepper Geometer; Celypha Moth; Blackberry Looper Moth; Obsolete Leafroller; Oblique-Banded Leafroller Moth; Zapulata Moth; Garden Tortrix; White Triangle Tortrix; The Batman Moth; Coleophora rupestrella; Orange-Dotted Dichomeris; Dark Marbled Carpet; Marbled Carpet; Lesser Cornstalk Borer; Scalloped Sallow; Attentive Dart; Two-Spot Dart; Browntail Moth; Morrison's Sallow; Three-Spotted Sallow; Great Brown Dart; Rubbed Dart; Reaper Dart; Master's Dart; Dingy Cutworm; Subgothic Dart; Himmelman's Plume Moth; Double Dart; Grapholita angleseana; Corn Earworm Moth; Spotted Straw Sun Moth; Bold-Feathered Grass Moth; Zigzag Herpetogramma; Green Cloverworm Bomolocha; Speckled Arches; Bridled Arches; Drab Brown Wave; Eastern Tent Caterpillar; Hitched Arches; Painted Arches; Day Emerald; Armyworm Moth; Filament Bearer; Bronzed Cutworm; Large Yellow Underwing; Olivaceous Olethreutes; Raspberry Leafroller; Speckled Green Fruitworm Moth; European Corn Borer Moth; Stalk Borer; Variegated Cutworm; Black-Shaded Platynota; Purple Arches; Miranda Moth; Isabella Tiger Moth; Purple-Lined Sallow; Clandestine Dart; Sparganothis Fruitworm Moth; Fall Armyworm Moth; Gray Hairstreak; Little Bride Looper; Painted Lady; Crocus Geometer; Xenotemna pallorana; Smith's Dart",
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Medium"
@@ -3508,10 +3576,15 @@
     "Latin name": "Gaura longiflora"
   },
   "Gentiana andrewsii": {
-    "Common name": "Bottle Gentian",
+    "Common name": "Andrew's Bottle Gentian",
     "Height": "2 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "MA Native",
+      "Northeastern US",
+      "Midwestern US"
     ],
     "Hosted Butterflies and Moths": "Verbena Bud Moth; Gray Pug",
     "Sunlight": [
@@ -3529,14 +3602,26 @@
     "Latin name": "Gentiana andrewsii"
   },
   "Gentiana clausa": {
-    "Common name": "Closed Bottle Gentian",
-    "Height": ".75-1.5 ft",
+    "Common name": "Bottle Gentian",
+    "Alternate common names": [
+      "Closed Bottle Gentian"
+    ],
+    "Height": "0.75-1.5 ft",
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Mid-Atlantic US"
+    ],
     "Hosted Butterflies and Moths": "Verbena Bud Moth; Gray Pug",
     "Sunlight": [
-      "Part Sun"
+      "Part Shade"
     ],
     "Moisture": [
       "Wet"
@@ -3549,18 +3634,29 @@
     "Latin name": "Gentiana clausa"
   },
   "Gentianopsis crinita": {
-    "Common name": "Fringed Gentian",
+    "Common name": "Greater Fringed Gentian",
+    "Alternate common names": [
+      "Fringed Gentian"
+    ],
     "Height": "1-3 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Mid-Atlantic US"
     ],
     "Hosted Butterflies and Moths": "Verbena Bud Moth",
     "Sunlight": [
       "Sun"
     ],
     "Moisture": [
-      "Wet",
-      "Medium"
+      "Wet"
     ],
     "Bloom time": [
       "Aug",
@@ -3606,6 +3702,33 @@
       "Jul"
     ],
     "Latin name": "Geranium maculatum"
+  },
+  "Geranium macrorrhizum 'Ingwersens Variety'": {
+    "Common name": "Cranesbill",
+    "Alternate common names": [
+      "Big-rooted Geranium"
+    ],
+    "Height": "1-1.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Europe"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Latin name": "Geranium macrorrhizum 'Ingwersens Variety'"
   },
   "Geum coccineum": {
     "Common name": "Avens",
@@ -3753,7 +3876,7 @@
       "MA Native",
       "(58) Northeastern Highlands",
       "(59) Northeastern Coastal Zone",
-      "(83) Eastern Great Lakes Lowlands",
+      "(84) Atlantic Coastal Pine Barrens",
       "US Native"
     ],
     "Key Host Plant": [
@@ -3846,7 +3969,7 @@
       "MA Native",
       "(58) Northeastern Highlands",
       "(59) Northeastern Coastal Zone",
-      "(83) Eastern Great Lakes Lowlands",
+      "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
@@ -3885,7 +4008,7 @@
       "MA Native",
       "(58) Northeastern Highlands",
       "(59) Northeastern Coastal Zone",
-      "(83) Eastern Great Lakes Lowlands",
+      "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
@@ -4033,7 +4156,7 @@
     "plantType": [
       "Herbaceous perennial"
     ],
-    "Ecoregion": "59,83.84",
+    "Ecoregion": "59,83,84",
     "Native Range": [
       "Midwestern US",
       "Mid-Atlantic US",
@@ -4063,12 +4186,20 @@
   },
   "Hepatica acutiloba": {
     "Common name": "Sharp-lobed Hepatica",
-    "Height": ".75 ft",
+    "Height": "0.25-0.5 ft",
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Ecoregion": "58,83",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -4136,6 +4267,7 @@
     "Native Range": [
       "MA Native",
       "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
       "Eastern US",
       "Southeastern US",
@@ -4163,13 +4295,24 @@
   },
   "Houstonia caerulea": {
     "Common name": "Bluets",
-    "Height": ".25 ft",
+    "Height": "0.25 ft",
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Wet",
@@ -4242,7 +4385,7 @@
       "MA Native",
       "(58) Northeastern Highlands",
       "(59) Northeastern Coastal Zone",
-      "(83) Eastern Great Lakes Lowlands",
+      "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
@@ -4302,7 +4445,7 @@
       "MA Native",
       "(58) Northeastern Highlands",
       "(59) Northeastern Coastal Zone",
-      "(83) Eastern Great Lakes Lowlands",
+      "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
@@ -4335,7 +4478,7 @@
       "MA Native",
       "(58) Northeastern Highlands",
       "(59) Northeastern Coastal Zone",
-      "(83) Eastern Great Lakes Lowlands",
+      "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
       "Southeastern US"
     ],
@@ -4369,7 +4512,7 @@
       "MA Native",
       "(58) Northeastern Highlands",
       "(59) Northeastern Coastal Zone",
-      "(83) Eastern Great Lakes Lowlands",
+      "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US",
@@ -9683,17 +9826,26 @@
     "Latin name": "Calamagrostis cinnoides"
   },
   "Carex appalachica": {
-    "Common name": "Appalachian sedge",
-    "Height": "1 ft",
+    "Common name": "Appalachian Sedge",
+    "Height": "0.75-1 ft",
     "plantType": [
       "Grasses and sedges"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeatern US",
+      "Southeastern US"
     ],
     "Key Host Plant": [
       "K"
     ],
     "Hosted Butterflies and Moths": "Henry's Marsh Moth; Pink Sedge Moth; American Ear Moth; Delaware Skipper; Ignorant Apamea; Bordered Apamea; Small Clouded Brindle Moth; Common Wood Nymph; Chain-Dotted Geometer; Common Ringlet; Cosmopterix clemensella; Fernald's Cosmopterix Moth; Virginia Ctenucha; Burnished Bog Moth; Donacaula dispersella; Elachista cucullata; Two-Spotted Skipper; Black Dash; Dion Skipper; Dun Skipper; American Crescent Borer; Leonard's Skipper; Sordid Wainscot; Appalachian Brown; Eyed Brown; Needle Wainscot; Long Dash; Veiled Ear Moth; Slant-Lined Owlet; Slant-Lined Fan-foot; Black-Dotted Lithacodia; Multicolored Sedgeminer; Lesser Wainscot; Green-Washed Culm Borer; Stalk Borer; Included Cordgrass Borer Moth; Putnam's Looper Moth; Mulberry Wing; Broad-Winged Skipper; Pink-Barred Lithacodia; Four-Lined Borer; Fall Armyworm Moth",
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -9861,6 +10013,7 @@
     "Sunlight": [
       "Sun",
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -9883,6 +10036,7 @@
     "Sunlight": [
       "Sun",
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -9908,6 +10062,7 @@
     "Sunlight": [
       "Sun",
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -9980,6 +10135,7 @@
     "Hosted Butterflies and Moths": "Henry's Marsh Moth; Pink Sedge Moth; American Ear Moth; Delaware Skipper; Ignorant Apamea; Bordered Apamea; Small Clouded Brindle Moth; Common Wood Nymph; Chain-Dotted Geometer; Common Ringlet; Cosmopterix clemensella; Fernald's Cosmopterix Moth; Virginia Ctenucha; Burnished Bog Moth; Donacaula dispersella; Elachista cucullata; Two-Spotted Skipper; Black Dash; Dion Skipper; Dun Skipper; American Crescent Borer; Leonard's Skipper; Sordid Wainscot; Appalachian Brown; Eyed Brown; Needle Wainscot; Long Dash; Veiled Ear Moth; Slant-Lined Owlet; Slant-Lined Fan-foot; Black-Dotted Lithacodia; Multicolored Sedgeminer; Lesser Wainscot; Green-Washed Culm Borer; Stalk Borer; Included Cordgrass Borer Moth; Putnam's Looper Moth; Mulberry Wing; Broad-Winged Skipper; Pink-Barred Lithacodia; Four-Lined Borer; Fall Armyworm Moth",
     "Sunlight": [
       "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
