@@ -1493,6 +1493,7 @@
       "Herbaceous perennial"
     ],
     "Native Range": [
+      "MA Native",
       "US Native"
     ],
     "Key Host Plant": [
@@ -6245,7 +6246,11 @@
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Ecoregion": "58,82,83,84",
     "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
       "Midwestern US"
     ],
@@ -11836,7 +11841,7 @@
     ],
     "Latin name": "Aronia arbutifolia 'Brilliantissima'"
   },
-  "Aronia floribunda(prunifolia)": {
+  "Aronia floribunda (prunifolia)": {
     "Common name": "Purple Chokeberry",
     "Height": "6-8 ft",
     "plantType": [
@@ -11856,7 +11861,7 @@
       "Apr",
       "May"
     ],
-    "Latin name": "Aronia floribunda(prunifolia)"
+    "Latin name": "Aronia floribunda (prunifolia)"
   },
   "Aronia melanocarpa": {
     "Common name": "Black chokeberry",
