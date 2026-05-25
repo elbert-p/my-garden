@@ -576,8 +576,8 @@ export default function PlantPage() {
       <Modal isOpen={showSignInModal} onClose={() => setShowSignInModal(false)} title="Sign in to Share" size="small">
         <p className={styles.shareText}>Sign in with Google to share your plants with others.</p>
         <div className={styles.signInButtons}>
-          <Button variant="secondary" onClick={() => setShowSignInModal(false)}>No thanks</Button>
-          <GoogleSignInButton />
+          <Button variant="secondary" onClick={() => setShowSignInModal(false)}>Close</Button>
+          <GoogleSignInButton variant="primary" />
         </div>
       </Modal>
     </>

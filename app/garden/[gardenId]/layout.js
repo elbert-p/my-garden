@@ -510,15 +510,15 @@ function GardenLayoutContent({ children }) {
       {/* Delete Confirmation */}
       <ConfirmModal isOpen={showDeleteGardenModal} onClose={() => setShowDeleteGardenModal(false)}
         onConfirm={handleDeleteGarden} title="Delete Garden"
-        message={<>Are you sure you want to delete <strong>{garden?.name}</strong> and all its plants? This cannot be undone.</>}
+        message={<>Are you sure you want to delete <strong>{garden?.name}</strong> and all its plants? <strong>This cannot be undone.</strong></>}
         confirmText="Delete" cancelText="Cancel" variant="danger" />
 
       {/* Sign In Modal */}
       <Modal isOpen={showSignInModal} onClose={() => setShowSignInModal(false)} title="Sign in to Share" size="small">
         <p className={styles.shareText}>Sign in with Google to share your garden with others.</p>
         <div className={styles.signInButtons}>
-          <Button variant="secondary" onClick={() => setShowSignInModal(false)}>No thanks</Button>
-          <GoogleSignInButton />
+          <Button variant="secondary" onClick={() => setShowSignInModal(false)}>Close</Button>
+          <GoogleSignInButton variant="primary" />
         </div>
       </Modal>
     </>

@@ -89,25 +89,25 @@
 .buttons {
   display: flex;
   gap: 0.75rem;
-  justify-content: center;
+  justify-content: flex-end;
   margin-top: 0.5rem;
 }
 
 .cancelButton {
-  background-color: #f1f3f4;
-  color: #5f6368;
+  background-color: #dadce0;
+  color: #202124;
   border: none;
   padding: 10px 20px;
   border-radius: 24px;
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease;
   font-family: inherit;
 }
 
 .cancelButton:hover {
-  background-color: #e8eaed;
+  background-color: #c6c8cc;
   color: #202124;
 }
 
@@ -136,7 +136,7 @@
   padding: 10px 20px;
   border-radius: 24px;
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
   font-family: inherit;

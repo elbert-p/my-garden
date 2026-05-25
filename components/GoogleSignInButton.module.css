@@ -26,6 +26,25 @@
   cursor: not-allowed;
 }
 
+.button.primary {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+  border: 1.5px solid #1a73e8;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 999px;
+}
+
+.button.primary:hover {
+  background-color: #d2e3fc;
+  color: #1a73e8;
+}
+
+.button.primary .logo {
+  width: 20px;
+  height: 20px;
+}
+
 .logo {
   width: 18px;
   height: 18px;

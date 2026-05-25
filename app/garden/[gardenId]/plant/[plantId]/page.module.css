@@ -338,11 +338,25 @@
   color: #202124;
 }
 
-.shareButtons,
-.signInButtons {
+.shareButtons {
   display: flex;
   justify-content: flex-end;
   gap: 0.75rem;
+}
+
+.signInButtons {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.signInButtons > :first-child {
+  justify-self: start;
+}
+
+.signInButtons button {
+  font-weight: 500;
 }
 
 /* ---- Responsive ---- */
