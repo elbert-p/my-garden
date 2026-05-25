@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useParams, useRouter, usePathname } from 'next/navigation';
-import { FiPlus, FiEdit, FiTrash2, FiShare2, FiSliders, FiBookmark, FiCopy, FiClipboard, FiEye } from 'react-icons/fi';
+import { FiPlus, FiEdit, FiTrash2, FiShare2, FiSliders, FiBookmark, FiCopy, FiClipboard, FiEye, FiMove } from 'react-icons/fi';
 import { GardenProvider, useGarden } from '@/context/GardenContext';
 import { uploadImage, isDataUrl } from '@/lib/imageStorage';
 import { getActiveFilterCount, getActiveSortCount } from '@/components/SortFilterControls';
@@ -56,6 +56,8 @@ function GardenLayoutContent({ children }) {
     showSignInModal, setShowSignInModal,
     showCustomizeModal, setShowCustomizeModal,
     previewCustomization, setPreviewCustomization,
+    rearrangeMode, rearrangeDraft, setRearrangeDraft, pendingDragId,
+    startRearrangeMode, cancelRearrangeMode, saveRearrangeMode,
   } = useGarden();
 
   // Form states
@@ -215,6 +217,7 @@ function GardenLayoutContent({ children }) {
     { icon: <FiEdit size={16} />, label: 'Edit Details', onClick: () => openEditModal() },
     { icon: <FiSliders size={16} />, label: 'Customize', onClick: () => openCustomizeModal() },
     { icon: <FiEye size={16} />, label: 'Edit Privacy', onClick: startPrivacyMode, visible: !isSubPage && !!user },
+    { icon: <FiMove size={16} />, label: 'Rearrange', onClick: startRearrangeMode, visible: !isSubPage },
     { divider: true },
     { icon: <FiClipboard size={16} />, label: 'Paste Plant', onClick: handlePastePlant, variant: 'success', visible: hasCopiedPlant },
     { icon: <FiShare2 size={16} />, label: 'Share Garden', onClick: handleShare, variant: 'share' },
@@ -345,7 +348,7 @@ function GardenLayoutContent({ children }) {
     <>
       <NavBar
         title={garden?.name || ''}
-        badge={plantsLoaded && !privacyMode ? (() => {
+        badge={plantsLoaded && !privacyMode && !rearrangeMode ? (() => {
           const filterCount = getActiveFilterCount(filters);
           const hasFilters = filterCount > 0 || !!searchQuery;
           if (hasFilters) return `${filteredPlants.length} / ${plants.length}`;
@@ -355,7 +358,7 @@ function GardenLayoutContent({ children }) {
         })() : null}
         showHome={true}
         tabs={tabs}
-        showSearch={!isSubPage && !privacyMode}
+        showSearch={!isSubPage && !privacyMode && !rearrangeMode}
         searchValue={searchQuery}
         onSearchChange={setSearchQuery}
         searchPlaceholder="Search plants..."
@@ -364,10 +367,15 @@ function GardenLayoutContent({ children }) {
             <Button variant="secondary" size="small" onClick={cancelPrivacyMode}>Cancel</Button>
             <Button size="small" onClick={savePrivacyMode}>Save</Button>
           </div>
+        ) : rearrangeMode ? (
+          <div className={styles.privacyActions}>
+            <Button variant="secondary" size="small" onClick={cancelRearrangeMode}>Cancel</Button>
+            <Button size="small" onClick={saveRearrangeMode}>Save</Button>
+          </div>
         ) : !isSubPage ? (
           <SortFilterControls sort={sort} onSortChange={setSort} filters={filters} onFiltersChange={setFilters} />
         ) : null}
-        menuItems={!privacyMode ? menuItems : undefined}
+        menuItems={!privacyMode && !rearrangeMode ? menuItems : undefined}
         contentWidth={contentWidth}
       />
 
@@ -394,6 +402,24 @@ function GardenLayoutContent({ children }) {
                 selectionMode={true}
                 selectedIds={privacySelectedIds}
                 onToggleSelection={togglePlantVisibility}
+              />
+            </div>
+          ) : rearrangeMode ? (
+            <div className={styles.privacyContent}>
+              <div className={styles.privacyBanner}>
+                Drag plants to set the default order. This order is shown when no sort is applied, including on the shared link.
+              </div>
+              <ItemGrid
+                items={plants}
+                getItemId={(p) => p.id}
+                getItemImage={(p) => p.mainImage || '/placeholder-plant.jpg'}
+                fallbackImage="/placeholder-plant.jpg"
+                getItemName={(p) => p.commonName || p.scientificName}
+                getItemStyle={(p) => ({ fontStyle: p.commonName ? 'normal' : 'italic' })}
+                columns={garden?.customization?.columns}
+                rearrangeMode={true}
+                onReorder={setRearrangeDraft}
+                initialDragId={pendingDragId}
               />
             </div>
           ) : children}

@@ -1,12 +1,12 @@
 'use client';
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import { FiPlus, FiShare2, FiEye, FiMenu } from 'react-icons/fi';
+import { FiPlus, FiShare2, FiEye, FiMenu, FiMove } from 'react-icons/fi';
 import { useAuth } from '@/context/AuthContext';
 import {
   getGardens, createGarden, getPlants, getSavedGardens,
   getRecentlyViewedGardens, getProfileVisibility, updateProfileVisibility,
-  copyGardenWithPlants,
+  copyGardenWithPlants, applyManualOrder,
 } from '@/lib/dataService';
 import { uploadImage } from '@/lib/imageStorage';
 import {
@@ -40,9 +40,18 @@ export default function Home() {
   // Visibility / privacy
   const [profileVisibility, setProfileVisibility] = useState({
     hiddenCreatedIds: [], visibleSavedIds: [], visibleRecentIds: [],
+    createdOrder: [], savedOrder: [], recentOrder: [],
   });
   const [privacyMode, setPrivacyMode] = useState(false);
   const [privacyDraft, setPrivacyDraft] = useState(null);
+
+  // Rearrange
+  const [rearrangeMode, setRearrangeMode] = useState(false);
+  // { created: [ids], saved: [ids], recent: [ids] }
+  const [rearrangeDraft, setRearrangeDraft] = useState(null);
+  // When entered via long-press on a tile: { section, id } so that section's
+  // ItemGrid can auto-start dragging the pressed tile in rearrange mode.
+  const [pendingDrag, setPendingDrag] = useState(null);
 
   // Modals
   const [showModal, setShowModal] = useState(false);
@@ -103,11 +112,13 @@ export default function Home() {
           setRecentGardens(loadedRecent);
         }
 
-        // Load visibility settings
-        if (user?.id) {
-          const vis = await getProfileVisibility(user.id);
-          setProfileVisibility(vis);
-        }
+        // Load visibility settings (includes section orders) and apply orders to loaded lists.
+        // Unauth users get their orders from localforage; auth users from the DB.
+        const vis = await getProfileVisibility(user?.id);
+        setProfileVisibility(vis);
+        setGardens(prev => applyManualOrder(prev, vis.createdOrder));
+        setSavedGardens(prev => applyManualOrder(prev, vis.savedOrder));
+        setRecentGardens(prev => applyManualOrder(prev, vis.recentOrder));
 
         setIsLoading(false);
 
@@ -187,6 +198,65 @@ export default function Home() {
     setPrivacyDraft(null);
     setPrivacyMode(false);
   };
+
+  // Rearrange mode helpers. `dragFrom` (optional) — when entered via long-press,
+  // identifies which section's tile to auto-start dragging.
+  const startRearrangeMode = (dragFrom) => {
+    setRearrangeDraft({
+      created: gardens.map(g => g.id),
+      saved: savedGardens.map(g => g.id),
+      recent: recentGardens.map(g => g.id),
+    });
+    setPendingDrag(
+      dragFrom && typeof dragFrom === 'object' && dragFrom.section && dragFrom.id
+        ? dragFrom
+        : null
+    );
+    setRearrangeMode(true);
+  };
+
+  const cancelRearrangeMode = () => {
+    setRearrangeDraft(null);
+    setPendingDrag(null);
+    setRearrangeMode(false);
+  };
+
+  const saveRearrangeMode = async () => {
+    if (rearrangeDraft) {
+      const newVis = {
+        ...profileVisibility,
+        createdOrder: rearrangeDraft.created,
+        savedOrder: rearrangeDraft.saved,
+        recentOrder: rearrangeDraft.recent,
+      };
+      await updateProfileVisibility(user?.id, newVis);
+      setProfileVisibility(newVis);
+      setGardens(prev => applyManualOrder(prev, rearrangeDraft.created));
+      setSavedGardens(prev => applyManualOrder(prev, rearrangeDraft.saved));
+      setRecentGardens(prev => applyManualOrder(prev, rearrangeDraft.recent));
+    }
+    setRearrangeDraft(null);
+    setPendingDrag(null);
+    setRearrangeMode(false);
+  };
+
+  const handleSectionReorder = (section, newIds) => {
+    setRearrangeDraft(prev => prev ? { ...prev, [section]: newIds } : prev);
+  };
+
+  // In rearrange mode, items follow the live draft order rather than the saved list
+  const rearrangedCreated = useMemo(
+    () => rearrangeMode && rearrangeDraft ? applyManualOrder(gardens, rearrangeDraft.created) : null,
+    [rearrangeMode, rearrangeDraft, gardens]
+  );
+  const rearrangedSaved = useMemo(
+    () => rearrangeMode && rearrangeDraft ? applyManualOrder(savedGardens, rearrangeDraft.saved) : null,
+    [rearrangeMode, rearrangeDraft, savedGardens]
+  );
+  const rearrangedRecent = useMemo(
+    () => rearrangeMode && rearrangeDraft ? applyManualOrder(recentGardens, rearrangeDraft.recent) : null,
+    [rearrangeMode, rearrangeDraft, recentGardens]
+  );
 
   // Build per-section selected IDs for privacy mode
   // Each section is independent so the same garden can be checked in Created but unchecked in Saved
@@ -322,6 +392,7 @@ export default function Home() {
   const menuItems = [
     { icon: <FiPlus size={16} />, label: 'New Garden', onClick: () => setShowModal(true), variant: 'success' },
     { icon: <FiEye size={16} />, label: 'Edit Privacy', onClick: startPrivacyMode, visible: isAuthenticated },
+    { icon: <FiMove size={16} />, label: 'Rearrange', onClick: startRearrangeMode },
     { divider: true },
     { icon: <FiShare2 size={16} />, label: 'Share Profile', onClick: handleShare, variant: 'share' },
   ];
@@ -332,15 +403,20 @@ export default function Home() {
         title="My Gardens"
         showHome={true}
         tabs={tabs}
-        showSearch={!privacyMode}
+        showSearch={!privacyMode && !rearrangeMode}
         searchValue={searchQuery}
         onSearchChange={setSearchQuery}
         searchPlaceholder="Search gardens..."
-        menuItems={!privacyMode ? menuItems : undefined}
+        menuItems={!privacyMode && !rearrangeMode ? menuItems : undefined}
         extraActions={privacyMode ? (
           <div className={styles.privacyActions}>
             <Button variant="secondary" size="small" onClick={cancelPrivacyMode}>Cancel</Button>
             <Button size="small" onClick={savePrivacyMode}>Save</Button>
+          </div>
+        ) : rearrangeMode ? (
+          <div className={styles.privacyActions}>
+            <Button variant="secondary" size="small" onClick={cancelRearrangeMode}>Cancel</Button>
+            <Button size="small" onClick={saveRearrangeMode}>Save</Button>
           </div>
         ) : undefined}
       />
@@ -352,6 +428,12 @@ export default function Home() {
           </div>
         )}
 
+        {rearrangeMode && (
+          <div className={styles.privacyBanner}>
+            Drag gardens to set the order within each section. This order is shown on your shared profile too.
+          </div>
+        )}
+
         {showLoading ? (
           <p className={styles.loading}>
             {isMigrating ? 'Migrating your gardens...' : 'Loading...'}
@@ -360,18 +442,22 @@ export default function Home() {
           <div className={styles.sections}>
             {/* Created Gardens */}
             <ItemGridSection title="Created">
-              {filteredCreated.length > 0 ? (
+              {(rearrangeMode ? rearrangedCreated : filteredCreated).length > 0 ? (
                 <ItemGrid
-                  items={filteredCreated}
+                  items={rearrangeMode ? rearrangedCreated : filteredCreated}
                   linkPrefix="/garden"
                   getItemId={(g) => g.id}
                   getItemImage={(g) => g.image || DEFAULT_GARDEN_IMAGE}
                   fallbackImage={DEFAULT_GARDEN_IMAGE}
                   getItemName={(g) => g.name}
-                  getItemBadge={!privacyMode ? (g) => plantCounts[g.id] != null ? plantCounts[g.id] : null : undefined}
+                  getItemBadge={!privacyMode && !rearrangeMode ? (g) => plantCounts[g.id] != null ? plantCounts[g.id] : null : undefined}
                   selectionMode={privacyMode}
                   selectedIds={createdSelectedIds}
                   onToggleSelection={(id) => togglePrivacySelection(id, 'created')}
+                  rearrangeMode={rearrangeMode}
+                  onReorder={(ids) => handleSectionReorder('created', ids)}
+                  initialDragId={rearrangeMode && pendingDrag?.section === 'created' ? pendingDrag.id : undefined}
+                  onLongPress={!privacyMode ? (id) => startRearrangeMode({ section: 'created', id }) : undefined}
                 />
               ) : (
                 <p className={styles.sectionEmpty}>
@@ -385,18 +471,22 @@ export default function Home() {
 
             {/* Saved Gardens */}
             <ItemGridSection title="Saved">
-              {filteredSaved.length > 0 ? (
+              {(rearrangeMode ? rearrangedSaved : filteredSaved).length > 0 ? (
                 <ItemGrid
-                  items={filteredSaved}
+                  items={rearrangeMode ? rearrangedSaved : filteredSaved}
                   linkPrefix="/share"
                   getItemId={(g) => g.id}
                   getItemImage={(g) => g.image || DEFAULT_GARDEN_IMAGE}
                   fallbackImage={DEFAULT_GARDEN_IMAGE}
                   getItemName={(g) => g.name}
-                  getItemBadge={!privacyMode ? (g) => plantCounts[g.id] != null ? plantCounts[g.id] : null : undefined}
+                  getItemBadge={!privacyMode && !rearrangeMode ? (g) => plantCounts[g.id] != null ? plantCounts[g.id] : null : undefined}
                   selectionMode={privacyMode}
                   selectedIds={savedSelectedIds}
                   onToggleSelection={(id) => togglePrivacySelection(id, 'saved')}
+                  rearrangeMode={rearrangeMode}
+                  onReorder={(ids) => handleSectionReorder('saved', ids)}
+                  initialDragId={rearrangeMode && pendingDrag?.section === 'saved' ? pendingDrag.id : undefined}
+                  onLongPress={!privacyMode ? (id) => startRearrangeMode({ section: 'saved', id }) : undefined}
                 />
               ) : (
                 <p className={styles.sectionEmpty}>
@@ -407,18 +497,22 @@ export default function Home() {
 
             {/* Recently Viewed */}
             <ItemGridSection title="Recently Viewed">
-              {filteredRecent.length > 0 ? (
+              {(rearrangeMode ? rearrangedRecent : filteredRecent).length > 0 ? (
                 <ItemGrid
-                  items={filteredRecent}
+                  items={rearrangeMode ? rearrangedRecent : filteredRecent}
                   linkPrefix="/share"
                   getItemId={(g) => g.id}
                   getItemImage={(g) => g.image || DEFAULT_GARDEN_IMAGE}
                   fallbackImage={DEFAULT_GARDEN_IMAGE}
                   getItemName={(g) => g.name}
-                  getItemBadge={!privacyMode ? (g) => plantCounts[g.id] != null ? plantCounts[g.id] : null : undefined}
+                  getItemBadge={!privacyMode && !rearrangeMode ? (g) => plantCounts[g.id] != null ? plantCounts[g.id] : null : undefined}
                   selectionMode={privacyMode}
                   selectedIds={recentSelectedIds}
                   onToggleSelection={(id) => togglePrivacySelection(id, 'recent')}
+                  rearrangeMode={rearrangeMode}
+                  onReorder={(ids) => handleSectionReorder('recent', ids)}
+                  initialDragId={rearrangeMode && pendingDrag?.section === 'recent' ? pendingDrag.id : undefined}
+                  onLongPress={!privacyMode ? (id) => startRearrangeMode({ section: 'recent', id }) : undefined}
                 />
               ) : (
                 <p className={styles.sectionEmpty}>

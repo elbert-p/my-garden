@@ -7,7 +7,7 @@ import styles from './page.module.css';
 import { FiMenu } from 'react-icons/fi';
 
 export default function GardenPage() {
-  const { gardenId, filteredPlants, plants, searchQuery, sort, filters, garden, previewCustomization } = useGarden();
+  const { gardenId, filteredPlants, plants, searchQuery, sort, filters, garden, previewCustomization, startRearrangeMode } = useGarden();
 
   const hasActiveFilters = !!(getActiveFilterCount(filters) > 0);
   const sortGroups = getSortGroups(filteredPlants, sort);
@@ -35,6 +35,7 @@ export default function GardenPage() {
         renderOverlay={hideBadges ? undefined : (p) => <PlantBadges commonName={p.commonName} scientificName={p.scientificName} />}
         getItemDimmed={sort.key ? (p) => isMissingSortField(p, sort) : undefined}
         columns={columns}
+        onLongPress={(id) => startRearrangeMode(id)}
       />
     </div>
   );

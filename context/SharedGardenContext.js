@@ -1,7 +1,7 @@
 'use client';
 import { createContext, useContext, useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
-import { getSharedGardenInfo, getSharedGardenPlants } from '@/lib/dataService';
+import { getSharedGardenInfo, getSharedGardenPlants, applyManualOrder } from '@/lib/dataService';
 import { applySortAndFilter } from '@/components/SortFilterControls';
 
 const SharedGardenContext = createContext();
@@ -51,11 +51,12 @@ export function SharedGardenProvider({ children }) {
     return () => { isMounted = false; };
   }, [gardenId]);
 
-  // Filter out hidden plants (garden-level privacy)
+  // Apply owner's manual rearrange order, then filter out hidden plants (garden-level privacy)
+  const orderedPlants = applyManualOrder(plants, garden?.customization?.plantOrder);
   const hiddenPlantIds = garden?.customization?.hiddenPlantIds || [];
   const visiblePlants = hiddenPlantIds.length > 0
-    ? plants.filter(p => !hiddenPlantIds.includes(p.id))
-    : plants;
+    ? orderedPlants.filter(p => !hiddenPlantIds.includes(p.id))
+    : orderedPlants;
   const totalVisible = visiblePlants.length;
 
   // Filter by search, then apply sort & filters

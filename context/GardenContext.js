@@ -1,8 +1,8 @@
 'use client';
-import { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { useAuth } from './AuthContext';
-import { getGarden, updateGarden, updateGardenAbout, updateGardenTodo, updateGardenCustomization, deleteGarden, createPlant, getPlants } from '@/lib/dataService';
+import { getGarden, updateGarden, updateGardenAbout, updateGardenTodo, updateGardenCustomization, deleteGarden, createPlant, getPlants, applyManualOrder } from '@/lib/dataService';
 import { applySortAndFilter } from '@/components/SortFilterControls';
 
 const GardenContext = createContext();
@@ -28,6 +28,13 @@ export function GardenProvider({ children }) {
   const [showShareModal, setShowShareModal] = useState(false);
   const [showSignInModal, setShowSignInModal] = useState(false);
   const [showCustomizeModal, setShowCustomizeModal] = useState(false);
+
+  // Rearrange mode (shared between layout and page so long-press can trigger it)
+  const [rearrangeMode, setRearrangeMode] = useState(false);
+  const [rearrangeDraft, setRearrangeDraft] = useState(null); // array of plant ids
+  // When entered via long-press: the item id to auto-start dragging in the
+  // rearrange-mode grid so the user doesn't have to press again.
+  const [pendingDragId, setPendingDragId] = useState(null);
 
   // Load garden and plants data in two phases
   useEffect(() => {
@@ -110,22 +117,57 @@ export function GardenProvider({ children }) {
     setShowShareModal(true);
   }, [user]);
 
+  // Apply manual rearrange order — this is the "no sort applied" default order.
+  // While dragging in rearrange mode the draft drives display so swaps render live.
+  const orderedPlants = useMemo(() => {
+    if (rearrangeMode && rearrangeDraft) {
+      return applyManualOrder(plants, rearrangeDraft);
+    }
+    return applyManualOrder(plants, garden?.customization?.plantOrder);
+  }, [plants, garden?.customization?.plantOrder, rearrangeMode, rearrangeDraft]);
+
   // Filter by search, then apply sort & filters
   const searchFiltered = searchQuery.trim()
-    ? plants.filter(plant => {
+    ? orderedPlants.filter(plant => {
         const query = searchQuery.toLowerCase();
         const commonName = (plant.commonName || '').toLowerCase();
         const scientificName = (plant.scientificName || '').toLowerCase();
         return commonName.includes(query) || scientificName.includes(query);
       })
-    : plants;
-  
+    : orderedPlants;
+
   const filteredPlants = applySortAndFilter(searchFiltered, sort, filters);
+
+  // Rearrange mode actions.
+  // `dragId` (optional) — when entered via long-press on a tile, primes that
+  // tile to auto-start dragging in the rearrange grid.
+  const startRearrangeMode = useCallback((dragId) => {
+    setRearrangeDraft(orderedPlants.map(p => p.id));
+    setPendingDragId(typeof dragId === 'string' ? dragId : null);
+    setRearrangeMode(true);
+  }, [orderedPlants]);
+
+  const cancelRearrangeMode = useCallback(() => {
+    setRearrangeMode(false);
+    setRearrangeDraft(null);
+    setPendingDragId(null);
+  }, []);
+
+  const saveRearrangeMode = useCallback(async () => {
+    if (rearrangeDraft) {
+      const existing = garden?.customization || {};
+      await handleUpdateGardenCustomization({ ...existing, plantOrder: rearrangeDraft });
+    }
+    setRearrangeMode(false);
+    setRearrangeDraft(null);
+    setPendingDragId(null);
+  }, [rearrangeDraft, garden?.customization, handleUpdateGardenCustomization]);
 
   const value = {
     garden,
     gardenId,
-    plants,
+    plants: orderedPlants,
+    rawPlants: plants,
     filteredPlants,
     isLoading,
     plantsLoaded,
@@ -164,6 +206,15 @@ export function GardenProvider({ children }) {
     setShowCustomizeModal,
     previewCustomization,
     setPreviewCustomization,
+
+    // Rearrange mode
+    rearrangeMode,
+    rearrangeDraft,
+    setRearrangeDraft,
+    pendingDragId,
+    startRearrangeMode,
+    cancelRearrangeMode,
+    saveRearrangeMode,
   };
 
   return (

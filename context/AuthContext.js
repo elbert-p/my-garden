@@ -245,8 +245,9 @@ export function AuthProvider({ children }) {
 
       const localGardens = (await localforage.getItem('gardens')) || [];
       const localPlants = (await localforage.getItem('plants')) || [];
+      const localVisibility = await localforage.getItem('profileVisibility');
 
-      if (localGardens.length === 0 && localPlants.length === 0) {
+      if (localGardens.length === 0 && localPlants.length === 0 && !localVisibility) {
         return;
       }
 
@@ -293,6 +294,8 @@ export function AuthProvider({ children }) {
         gardenIdMap[garden.id] = newGarden.id;
       }
 
+      const plantIdMap = {};
+
       for (const plant of localPlants) {
         const newGardenId = gardenIdMap[plant.gardenId];
         if (!newGardenId) continue;
@@ -307,7 +310,7 @@ export function AuthProvider({ children }) {
           );
         }
 
-        const { error } = await supabase
+        const { data: newPlant, error } = await supabase
           .from('plants')
           .insert({
             user_id: userId,
@@ -324,12 +327,57 @@ export function AuthProvider({ children }) {
             notes: plant.notes,
             images: galleryUrls,
             has_autofilled: plant.hasAutofilled || false,
-          });
+          })
+          .select()
+          .single();
 
         if (error) {
           if (error.message?.includes('AbortError')) return;
           console.error('[Auth] Error migrating plant:', error);
+          continue;
         }
+        if (newPlant) plantIdMap[plant.id] = newPlant.id;
+      }
+
+      // Translate local plant ids inside customization.plantOrder to new DB ids
+      for (const garden of localGardens) {
+        const order = garden.customization?.plantOrder;
+        if (!Array.isArray(order) || order.length === 0) continue;
+        const newGardenId = gardenIdMap[garden.id];
+        if (!newGardenId) continue;
+        const mappedOrder = order.map(pid => plantIdMap[pid]).filter(Boolean);
+        if (mappedOrder.length === 0) continue;
+        const newCustomization = { ...(garden.customization || {}), plantOrder: mappedOrder };
+        const { error: cErr } = await supabase
+          .from('gardens')
+          .update({ customization: newCustomization })
+          .eq('id', newGardenId);
+        if (cErr && !cErr.message?.includes('AbortError')) {
+          console.error('[Auth] Error migrating plantOrder:', cErr);
+        }
+      }
+
+      // Migrate local profile_visibility (section orders + hidden lists).
+      // Created-side ids are local — map them to the new DB ids; saved/recent
+      // ids are shared-garden ids that don't change.
+      if (localVisibility) {
+        const mapId = (id) => gardenIdMap[id];
+        const mappedVisibility = {
+          hiddenCreatedIds: (localVisibility.hiddenCreatedIds || []).map(mapId).filter(Boolean),
+          visibleSavedIds: localVisibility.visibleSavedIds || [],
+          visibleRecentIds: localVisibility.visibleRecentIds || [],
+          createdOrder: (localVisibility.createdOrder || []).map(mapId).filter(Boolean),
+          savedOrder: localVisibility.savedOrder || [],
+          recentOrder: localVisibility.recentOrder || [],
+        };
+        const { error: vErr } = await supabase
+          .from('profiles')
+          .update({ profile_visibility: mappedVisibility })
+          .eq('id', userId);
+        if (vErr && !vErr.message?.includes('AbortError')) {
+          console.error('[Auth] Error migrating profile visibility:', vErr);
+        }
+        await localforage.removeItem('profileVisibility');
       }
 
       console.log('[Auth] Migration complete!');
