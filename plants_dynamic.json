@@ -2012,7 +2012,6 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
@@ -2464,8 +2463,36 @@
     ],
     "Latin name": "Corydalis sempervirens"
   },
+  "Cypripedium acaule": {
+    "Common name": "Pink Lady's Slipper",
+    "Height": "0.5-1 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "MA Native",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
+    "Hosted Butterflies and Moths": "Reticulated Fruitworm Moth; Paralobesia cypripediana",
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Latin name": "Cypripedium acaule"
+  },
   "Cypripedium parviflorum var. parviflorum": {
-    "Common name": "Small Yellow Lady Slipper",
+    "Common name": "Small Yellow Lady's Slipper",
     "Height": "1 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -2480,6 +2507,7 @@
     "Key Host Plant": [
       "K"
     ],
+    "Hosted Butterflies and Moths": "Reticulated Fruitworm Moth; Paralobesia cypripediana",
     "Latin name": "Cypripedium parviflorum var. parviflorum"
   },
   "Cryptotaenia canadensis": {
@@ -5126,13 +5154,22 @@
   },
   "Maianthemum canadense": {
     "Common name": "Canada Mayflower",
-    "Height": ".75 ft",
+    "Height": "0.25 ft",
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Hosted Butterflies and Moths": "Omnivorous Leafroller Moth; White Triangle Tortrix; American Angle Shades; Burdock Border",
     "Sunlight": [
-      "Part Sun",
       "Part Shade",
       "Shade"
     ],
@@ -5146,26 +5183,32 @@
     "Latin name": "Maianthemum canadense"
   },
   "Maianthemum racemosum": {
-    "Common name": "Solomon's Plume",
+    "Common name": "False Solomon's Seal",
+    "Height": "1-3 ft",
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Hosted Butterflies and Moths": "Omnivorous Leafroller Moth; White Triangle Tortrix; American Angle Shades; Burdock Border",
     "Sunlight": [
-      "Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
-      "Wet",
       "Medium"
     ],
     "Bloom time": [
-      "Apr",
       "May",
-      "Jun",
-      "Sep",
-      "Oct",
-      "Nov"
+      "Jun"
     ],
     "Latin name": "Maianthemum racemosum"
   },
@@ -10536,10 +10579,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US",
@@ -10689,10 +10730,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US",
@@ -10757,7 +10796,6 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
@@ -10835,7 +10873,6 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
@@ -10890,10 +10927,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
@@ -10935,10 +10970,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Midwestern US",
       "Mid-Atlantic US"
@@ -11017,10 +11050,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
@@ -11050,10 +11081,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Midwestern US",
       "Mid-Atlantic US"
@@ -11107,10 +11136,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
@@ -11142,10 +11169,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
@@ -11171,10 +11196,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
@@ -11221,10 +11244,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Midwestern US",
       "Mid-Atlantic US"
@@ -11255,10 +11276,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
@@ -11289,10 +11308,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
@@ -11322,10 +11339,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
@@ -11353,10 +11368,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
@@ -11385,10 +11398,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
@@ -11435,10 +11446,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Northern US"
     ],
@@ -11461,10 +11470,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
@@ -11492,10 +11499,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
@@ -11523,10 +11528,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
@@ -11579,10 +11582,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
@@ -11609,10 +11610,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
@@ -11653,10 +11652,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Southeastern US"
     ],
@@ -11732,7 +11729,6 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
@@ -11895,7 +11891,6 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
       "Northern US",
@@ -11997,7 +11992,6 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zones",
       "Northeastern US",
       "Midwestern US",
@@ -12051,7 +12045,6 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
@@ -12083,7 +12076,6 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
@@ -12140,7 +12132,6 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
@@ -12171,10 +12162,8 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "(82) Acadian Plains and Hills",
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
@@ -12201,7 +12190,6 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
@@ -12234,7 +12222,6 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
@@ -12272,7 +12259,6 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
@@ -12311,7 +12297,6 @@
       "Cultivar",
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
@@ -12349,7 +12334,6 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
@@ -12381,7 +12365,6 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
@@ -12415,7 +12398,6 @@
       "Cultivar",
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
@@ -12598,7 +12580,6 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "Eastern US"
     ],
     "Hosted Butterflies and Moths": "Aroga argutiola; The Brown Elfin; Hemlock Looper; Blackheaded Fireworm",
@@ -12699,7 +12680,6 @@
     "Native Range": [
       "MA Native",
       "(58) Northeastern Highlands",
-      "(83) Eastern Great Lakes Lowlands",
       "Eastern US"
     ],
     "Bumblebees": 1,
@@ -14447,15 +14427,26 @@
     "Latin name": "Viburnum acerifolium"
   },
   "Viburnum dentatum": {
-    "Common name": "Arrowwood",
+    "Common name": "Smooth Arrowwood",
     "Height": "6-10 ft",
     "plantType": [
       "Shrub"
     ],
+    "Ecoregion": "58, 59, 82, 83, 84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Hosted Butterflies and Moths": "Olive-and-Black Carpet; Saddleback Caterpillar Moth; Distinct Quaker; Acleris placidana; \"North American\" Schaller's Acleris; The Green Marvel; Gray Dagger; Smeared Dagger; Purple-Crested Slug; Pale-Banded Dart; White-Lined Leafroller Moth; Miranda Underwing; Anacampsis rhoifructella; Celery Looper Moth; Crowned Anania; Common Gray; Variable Antepione; Spotted Apatelodes; Wide-Striped Leaf Roller; Fruit-Tree Leafroller Moth; Exotic Leafroller Moth; Omnivorous Leafroller Moth; Rose Tortrix; Hickory Leafroller; Gray-Banded Leafroller Moth; Red-Banded Leafroller Moth; Large Looper Moth; Io Moth; Brown Scoopwing; Henry's Elfin; Promethea Silkmoth; Maple Prominent; Spring Azure; Summer Azure; Cherry Gall Azure; Spring Dead-Leaf Roller Moth; Reticulated Fruitworm Moth; Parallel-Banded Leafroller; Oblique-Banded Leafroller Moth; Coleophora viburniella; Norman's Quaker; Azalea Sphinx; Imperial Moth; Elm Spanworm Moth; Sloping Sallow; The Autumnal Moth; Linden Looper Moth; Least-Marked Euchlaena; Ochre Euchlaena; Sharp-Lined Powder Moth; Ferruginous Eulia; The Baltimore; Common Eupithacia; Tawny Eupithecia; Satyr Pug; White Spot Pug; American Angle Shades; Browntail Moth; Morrison's Sallow; Great Brown Dart; Curved-Tooth Geometer; Viburnum Glyptocera; Banded Tussock Moth; Harris's Three-Spot; Spotted Apple Budworm; Snowberry Clearwing; Hummingbird Clearwing; Cecropia Silkmoth; Green Cloverworm Bomolocha; Fall Webworm; Pale-Winged Gray; Bent-Line Gray; Intractable Quaker; Bridled Arches; White Spring Moth; Brick Dart; Spongy Moth; Common Lytrosis; Gold-Striped Leaftier Moth; Southern Flannel Moth; Canadian Melanolphia; Unsalted Sallow; Footpath Sallow; Confused Woodgrain; Bicolored Woodgrain; Red-Humped Caterpillar; Serviceberry Leafroller; Olethreutes diallacta; Winter Moth; Rose Hooktip; Manto Tussock Moth; White-Marked Tussock Moth; Pale Viburnum Geometer; Yellow-Veined Geometer; Orthofidonia tinctaria; Ruby Quaker; Dusky Leafroller; Jeweled Tail Slug Moth; Three-Lined Leafroller Moth; Blinded Sphinx; Brown Angle Shades; Hollow-Spotted Plagodis; American Barred Umber; Tufted Apple-Bud Moth; Common Tan Wave; Purple Arches; Large Maple Spanworm Moth; Isabella Tiger Moth; Chestnut Schizura; Morning-Glory Prominent; Sparganothis Fruitworm Moth; Darling Mamestra; Lesser Viburnum Clearwing; Viburnum Borer; White Slant-Line; Evergreen Bagworm Moth; Crocus Geometer; Spotted Cut-Worm; Greater Black-Letter Dart; Horrid Zale; Leopard Moth",
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Medium"
