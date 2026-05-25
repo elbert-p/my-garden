@@ -32,7 +32,9 @@ export default function NavBar({
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [layoutMode, setLayoutMode] = useState('balanced');
   const [doubleCentered, setDoubleCentered] = useState(true);
+  const [navHeight, setNavHeight] = useState(0);
 
+  const navRef = useRef(null);
   const searchInputRef = useRef(null);
   const searchContainerRef = useRef(null);
   const leftRef = useRef(null);
@@ -196,14 +198,16 @@ export default function NavBar({
       rafId = requestAnimationFrame(() => {
         rafId = null;
         updateLayout();
+        if (navRef.current) setNavHeight(navRef.current.offsetHeight);
       });
     };
 
     const ro = new ResizeObserver(debouncedUpdate);
-    [leftRef, rightRef, titleGroupRef, tabsRef, actionsRef].forEach(r => {
+    [leftRef, rightRef, titleGroupRef, tabsRef, actionsRef, navRef].forEach(r => {
       if (r.current) ro.observe(r.current);
     });
     window.addEventListener('resize', debouncedUpdate);
+    if (navRef.current) setNavHeight(navRef.current.offsetHeight);
 
     return () => {
       ro.disconnect();
@@ -355,7 +359,10 @@ export default function NavBar({
   ) : null;
 
   return (
+    <>
+    <div className={styles.navbarPlaceholder} style={{ height: navHeight }} aria-hidden="true" />
     <nav
+      ref={navRef}
       className={`${styles.navbar} ${isDouble ? styles.navbarDouble : ''}`}
       data-layout={layoutMode}
     >
@@ -408,5 +415,6 @@ export default function NavBar({
         </div>
       )}
     </nav>
+    </>
   );
 }

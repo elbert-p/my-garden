@@ -8,7 +8,7 @@
    ================================================================ */
 
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -16,6 +16,12 @@
   background-color: #fff;
   border-bottom: 1px solid #e8eaed;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Reserves vertical space so page content flows below the fixed nav.
+   Height is set inline from the measured nav height. */
+.navbarPlaceholder {
+  flex-shrink: 0;
 }
 
 /* ============ PRIMARY ROW ============ */

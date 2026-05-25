@@ -37,7 +37,9 @@ body {
   }
 }
 
-/* Prevent horizontal overflow / scroll on mobile */
+/* Prevent horizontal overflow / scroll on mobile.
+   Use `clip` instead of `hidden` so we don't create a scroll container,
+   which would break `position: sticky` on the NavBar. */
 html, body {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
