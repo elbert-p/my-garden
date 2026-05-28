@@ -37,7 +37,7 @@ const hexToRgb = (hex) => {
   return `${r}, ${g}, ${b}`;
 };
 
-const clampColumns = (val) => Math.min(6, Math.max(1, parseInt(val) || DEFAULT_CUSTOMIZATION.columns));
+const clampColumns = (val) => Math.min(8, Math.max(1, parseInt(val) || DEFAULT_CUSTOMIZATION.columns));
 
 function GardenLayoutContent({ children }) {
   const { gardenId } = useParams();
@@ -96,7 +96,7 @@ function GardenLayoutContent({ children }) {
 
   const previewColumns = (() => {
     const n = parseInt(customizeColumnsStr);
-    return (!isNaN(n) && n >= 1 && n <= 6) ? n : null;
+    return (!isNaN(n) && n >= 1 && n <= 8) ? n : null;
   })();
 
   useEffect(() => {
@@ -454,7 +454,7 @@ function GardenLayoutContent({ children }) {
         <div className={styles.customizeField}>
           <label className={styles.customizeLabel}>Number of Columns</label>
           <div className={styles.columnsRow}>
-            <input type="number" min={1} max={6} step={1} value={customizeColumnsStr}
+            <input type="number" min={1} max={8} step={1} value={customizeColumnsStr}
               onChange={e => setCustomizeColumnsStr(e.target.value)} onBlur={handleColumnsBlur}
               className={styles.columnsInput} />
             <span className={styles.columnsText}>columns</span>

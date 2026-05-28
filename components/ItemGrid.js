@@ -46,12 +46,20 @@ export default function ItemGrid({
     const itemWidth = Math.floor(
       (REF_CONTENT_WIDTH - gapPx * (columns - 1)) / columns
     );
+    // Cap the grid's width just under the point where an (N+1)th auto-fill
+    // track would fit. Items can still grow with the container up to this
+    // cap; below it, auto-fill drops to fewer columns naturally on narrow
+    // screens. This decouples the upper bound from itemWidth so wide-laptop
+    // viewports can't sneak an extra column in.
+    const maxGridWidth = (columns + 1) * itemWidth + columns * gapPx - 1;
     const scale = Math.min(1, 4 / columns);
     const gapRem = (2 * gapScale).toFixed(2);
     return {
       gridTemplateColumns:
         `repeat(auto-fill, minmax(min(${itemWidth}px, calc(50% - 1rem)), 1fr))`,
       gap: `min(${gapRem}rem, var(--page-padding-inline, 2rem))`,
+      maxWidth: `${maxGridWidth}px`,
+      marginInline: 'auto',
       '--item-radius': `${Math.round(15 * scale)}px`,
       '--item-name-mt': `${(0.75 * scale).toFixed(2)}rem`,
       '--item-name-pb': `${(0.5 * scale).toFixed(2)}rem`,
