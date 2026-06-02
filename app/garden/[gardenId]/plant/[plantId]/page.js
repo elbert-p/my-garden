@@ -427,8 +427,8 @@ export default function PlantPage() {
             className={`${styles.mainImageContainer} ${editing ? styles.mainImageEditing : ''}`}
             onClick={() => {
               if (privacyMode) return;
-              if (editing) { mainRef.current?.click(); return; }
-              setSelectedImage(temp.mainImage || '/placeholder-plant.jpg');
+              if (editing || !temp.mainImage) { mainRef.current?.click(); return; }
+              setSelectedImage(temp.mainImage);
             }}
           >
             <img src={temp.mainImage || '/placeholder-plant.jpg'} alt="" className={styles.mainImage} onError={(e) => { e.target.src = '/placeholder-plant.jpg'; }} />
