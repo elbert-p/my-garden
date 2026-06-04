@@ -6,6 +6,7 @@ import { FiEdit, FiPlus, FiTrash2, FiDatabase, FiShare2, FiCopy, FiEye, FiCheck 
 import imageCompression from 'browser-image-compression';
 import { setCopiedPlant } from '@/lib/clipboardStorage';
 import { useGarden } from '@/context/GardenContext';
+import { SHARE_INTENT_KEY } from '@/context/AuthContext';
 import { getPlant, updatePlant, deletePlant } from '@/lib/dataService';
 import { uploadImage, deleteImage } from '@/lib/imageStorage';
 import { BLOOM_OPTIONS, SUN_OPTIONS, MOISTURE_OPTIONS, NATIVE_OPTIONS, PLANT_TYPE_OPTIONS } from '@/lib/plantConstants';
@@ -112,6 +113,24 @@ export default function PlantPage() {
       setIsLoading(false);
     })();
   }, [plantId, gardenId, user?.id, isInitialized, garden, router]);
+
+  // After signing in via the "Share Plant" prompt, reopen the share modal.
+  // The intent's ids were rewritten to the new DB ids during migration.
+  useEffect(() => {
+    if (!isInitialized || !user || !plant) return;
+    const raw = localStorage.getItem(SHARE_INTENT_KEY);
+    if (!raw) return;
+    try {
+      const intent = JSON.parse(raw);
+      if (intent?.type === 'plant' && intent.gardenId === gardenId && intent.plantId === plantId) {
+        localStorage.removeItem(SHARE_INTENT_KEY);
+        setShowShareModal(true);
+        setCopied(false);
+      }
+    } catch {
+      localStorage.removeItem(SHARE_INTENT_KEY);
+    }
+  }, [isInitialized, user, plant, gardenId, plantId]);
 
   const applyAutofillResult = (result) => {
     setAutofillData(result.data);
@@ -577,7 +596,7 @@ export default function PlantPage() {
         <p className={styles.shareText}>Sign in with Google to share your plants with others.</p>
         <div className={styles.signInButtons}>
           <Button variant="secondary" onClick={() => setShowSignInModal(false)}>Close</Button>
-          <GoogleSignInButton variant="primary" />
+          <GoogleSignInButton variant="primary" shareIntent={{ type: 'plant', gardenId, plantId }} />
         </div>
       </Modal>
     </>

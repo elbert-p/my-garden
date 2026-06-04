@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useRouter, usePathname } from 'next/navigation';
 import { FiPlus, FiEdit, FiTrash2, FiShare2, FiSliders, FiBookmark, FiCopy, FiClipboard, FiEye, FiMove } from 'react-icons/fi';
 import { GardenProvider, useGarden } from '@/context/GardenContext';
+import { SHARE_INTENT_KEY } from '@/context/AuthContext';
 import { uploadImage, isDataUrl } from '@/lib/imageStorage';
 import { getActiveFilterCount, getActiveSortCount } from '@/components/SortFilterControls';
 import { getCopiedPlant, setCopyGardenSource } from '@/lib/clipboardStorage';
@@ -133,6 +134,23 @@ function GardenLayoutContent({ children }) {
       setIsSaved(isLocalGardenSaved(gardenId));
     }
   }, [garden, gardenId, user?.id]);
+
+  // After signing in via the "Share Garden" prompt, reopen the share modal.
+  // The intent's gardenId was rewritten to the new DB id during migration.
+  useEffect(() => {
+    if (!isInitialized || !user || !garden) return;
+    const raw = localStorage.getItem(SHARE_INTENT_KEY);
+    if (!raw) return;
+    try {
+      const intent = JSON.parse(raw);
+      if (intent?.type === 'garden' && intent.gardenId === gardenId) {
+        localStorage.removeItem(SHARE_INTENT_KEY);
+        setShowShareModal(true);
+      }
+    } catch {
+      localStorage.removeItem(SHARE_INTENT_KEY);
+    }
+  }, [isInitialized, user, garden, gardenId, setShowShareModal]);
 
   const handleToggleSave = async () => {
     if (isSaved) {
@@ -518,7 +536,7 @@ function GardenLayoutContent({ children }) {
         <p className={styles.shareText}>Sign in with Google to share your garden with others.</p>
         <div className={styles.signInButtons}>
           <Button variant="secondary" onClick={() => setShowSignInModal(false)}>Close</Button>
-          <GoogleSignInButton variant="primary" />
+          <GoogleSignInButton variant="primary" shareIntent={{ type: 'garden', gardenId }} />
         </div>
       </Modal>
     </>

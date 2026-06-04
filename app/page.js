@@ -2,7 +2,7 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { FiPlus, FiShare2, FiEye, FiMenu, FiMove } from 'react-icons/fi';
-import { useAuth } from '@/context/AuthContext';
+import { useAuth, SHARE_INTENT_KEY } from '@/context/AuthContext';
 import {
   getGardens, createGarden, getPlants, getSavedGardens,
   getRecentlyViewedGardens, getProfileVisibility, updateProfileVisibility,
@@ -167,6 +167,23 @@ export default function Home() {
       setShowModal(true);
     }
   }, [isInitialized, isLoading]);
+
+  // After signing in via the "Share Profile" prompt, reopen the share modal.
+  useEffect(() => {
+    if (!isInitialized || isMigrating || !user) return;
+    const raw = localStorage.getItem(SHARE_INTENT_KEY);
+    if (!raw) return;
+    try {
+      const intent = JSON.parse(raw);
+      if (intent?.type === 'profile') {
+        localStorage.removeItem(SHARE_INTENT_KEY);
+        setShowShareModal(true);
+        setCopied(false);
+      }
+    } catch {
+      localStorage.removeItem(SHARE_INTENT_KEY);
+    }
+  }, [isInitialized, isMigrating, user]);
 
   // Filter gardens across all sections
   const filterBySearch = useCallback((list) => {
@@ -569,7 +586,7 @@ export default function Home() {
         <p className={styles.shareText}>Sign in with Google to share your profile with others.</p>
         <div className={styles.signInButtons}>
           <Button variant="secondary" onClick={() => setShowSignInModal(false)}>Close</Button>
-          <GoogleSignInButton variant="primary" />
+          <GoogleSignInButton variant="primary" shareIntent={{ type: 'profile' }} />
         </div>
       </Modal>
     </>

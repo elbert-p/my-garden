@@ -9,6 +9,10 @@ import { uploadImage } from '@/lib/imageStorage';
 const AuthContext = createContext();
 
 const RETURN_PATH_KEY = 'garden_auth_return_path';
+// Set when a logged-out user clicks a "share" button and signs in. After OAuth
+// (and the local→DB migration) we use it to reopen the right share modal on the
+// page they came from. Shape: { type: 'profile' | 'garden' | 'plant', gardenId?, plantId? }
+export const SHARE_INTENT_KEY = 'garden_share_intent';
 
 /**
  * AuthProvider - Robust auth handling inspired by working pattern
@@ -70,14 +74,15 @@ export function AuthProvider({ children }) {
         setLoading(false);
 
         // Handle initial session if user is signed in
+        let migrationMaps = null;
         if (initialSession?.user) {
           const newUserId = initialSession.user.id;
-          
+
           // Only do migration/sync if this is a DIFFERENT user than before
           if (newUserId !== storedPrevUserId) {
-            await handleNewUser(initialSession.user, isMounted);
+            migrationMaps = await handleNewUser(initialSession.user, isMounted);
           }
-          
+
           // Persist current user
           prevUserIdRef.current = newUserId;
           localStorage.setItem('garden_prevUserId', newUserId);
@@ -86,13 +91,10 @@ export function AuthProvider({ children }) {
         if (!isMounted) return;
         setIsInitialized(true);
 
-        // After sign-in OAuth redirect: check for stored return path
-        const returnPath = localStorage.getItem(RETURN_PATH_KEY);
-        if (returnPath) {
-          localStorage.removeItem(RETURN_PATH_KEY);
-          if (returnPath !== '/' && isMounted) {
-            router.replace(returnPath);
-          }
+        // After sign-in OAuth redirect: reopen a pending "share" modal on the
+        // page the user came from, or fall back to a stored return path.
+        if (isMounted) {
+          handlePostSignInRedirect(migrationMaps);
         }
 
         // Now attach the listener - ignore INITIAL_SESSION since we handled it
@@ -159,10 +161,75 @@ export function AuthProvider({ children }) {
       const hasMigrated = localStorage.getItem(`garden_migrated_${user.id}`);
       if (!hasMigrated && mounted) {
         setIsMigrating(true);
-        await migrateLocalDataToSupabase(user.id);
+        const maps = await migrateLocalDataToSupabase(user.id);
         if (mounted) {
           localStorage.setItem(`garden_migrated_${user.id}`, 'true');
           setIsMigrating(false);
+        }
+        // Return the local→DB id maps so a pending share intent can be resolved.
+        return maps;
+      }
+      return null;
+    }
+
+    /**
+     * After an OAuth redirect, send the user back where they came from.
+     * - "share" intents reopen the share modal on the original page. Local
+     *   garden/plant ids change during migration, so we map them to the new DB
+     *   ids (using `migrationMaps`) and redirect there; the destination page
+     *   reads the rewritten intent and opens its share modal. The 'profile'
+     *   intent needs no redirect (we land on '/') — the home page consumes it.
+     * - Otherwise honor a generic return path.
+     */
+    function handlePostSignInRedirect(migrationMaps) {
+      const rawShareIntent = localStorage.getItem(SHARE_INTENT_KEY);
+      if (rawShareIntent) {
+        let intent = null;
+        try { intent = JSON.parse(rawShareIntent); } catch { /* ignore */ }
+
+        if (intent?.type === 'profile') {
+          // Consumed by the home page once the user is available; no redirect.
+          return;
+        }
+
+        if (intent?.type === 'garden') {
+          const newGardenId = migrationMaps?.gardenIdMap?.[intent.gardenId];
+          if (newGardenId) {
+            localStorage.setItem(SHARE_INTENT_KEY, JSON.stringify({
+              type: 'garden', gardenId: String(newGardenId),
+            }));
+            router.replace(`/garden/${newGardenId}`);
+          } else {
+            localStorage.removeItem(SHARE_INTENT_KEY);
+          }
+          return;
+        }
+
+        if (intent?.type === 'plant') {
+          const newGardenId = migrationMaps?.gardenIdMap?.[intent.gardenId];
+          const newPlantId = migrationMaps?.plantIdMap?.[intent.plantId];
+          if (newGardenId && newPlantId) {
+            localStorage.setItem(SHARE_INTENT_KEY, JSON.stringify({
+              type: 'plant', gardenId: String(newGardenId), plantId: String(newPlantId),
+            }));
+            router.replace(`/garden/${newGardenId}/plant/${newPlantId}`);
+          } else {
+            localStorage.removeItem(SHARE_INTENT_KEY);
+          }
+          return;
+        }
+
+        // Unknown/invalid intent — clean up.
+        localStorage.removeItem(SHARE_INTENT_KEY);
+        return;
+      }
+
+      // No share intent: honor a generic return path.
+      const returnPath = localStorage.getItem(RETURN_PATH_KEY);
+      if (returnPath) {
+        localStorage.removeItem(RETURN_PATH_KEY);
+        if (returnPath !== '/') {
+          router.replace(returnPath);
         }
       }
     }
@@ -381,6 +448,7 @@ export function AuthProvider({ children }) {
       }
 
       console.log('[Auth] Migration complete!');
+      return { gardenIdMap, plantIdMap };
     } catch (err) {
       if (err?.message?.includes('AbortError') || err?.name === 'AbortError') {
         return;
@@ -389,13 +457,23 @@ export function AuthProvider({ children }) {
     }
   };
 
-  const signInWithGoogle = async () => {
-    // Store current path so we can return here after OAuth
-    // Local garden pages go to home (local IDs change during migration)
+  const signInWithGoogle = async (shareIntent = null) => {
     const currentPath = pathnameRef.current || '/';
-    const returnPath = currentPath.startsWith('/garden/') ? '/' : currentPath;
-    localStorage.setItem(RETURN_PATH_KEY, returnPath);
-    
+
+    if (shareIntent) {
+      // Came from a "share" prompt — reopen that share modal after OAuth.
+      // Local garden/plant ids change during migration, so they're resolved to
+      // the new DB ids once migration completes (see handlePostSignInRedirect).
+      localStorage.setItem(SHARE_INTENT_KEY, JSON.stringify(shareIntent));
+      localStorage.removeItem(RETURN_PATH_KEY);
+    } else {
+      // Generic sign-in — return to the page we were on.
+      // Local garden pages go to home (local ids change during migration).
+      const returnPath = currentPath.startsWith('/garden/') ? '/' : currentPath;
+      localStorage.setItem(RETURN_PATH_KEY, returnPath);
+      localStorage.removeItem(SHARE_INTENT_KEY);
+    }
+
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
@@ -404,6 +482,7 @@ export function AuthProvider({ children }) {
     });
     if (error) {
       localStorage.removeItem(RETURN_PATH_KEY);
+      localStorage.removeItem(SHARE_INTENT_KEY);
       console.error('Error signing in:', error);
       throw error;
     }
