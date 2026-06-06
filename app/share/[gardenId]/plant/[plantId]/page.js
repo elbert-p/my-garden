@@ -5,6 +5,7 @@ import { IoClose } from 'react-icons/io5';
 import { FiCopy, FiShare2 } from 'react-icons/fi';
 import { useSharedGarden } from '@/context/SharedGardenContext';
 import { getSharedPlant } from '@/lib/dataService';
+import { getImageCredit } from '@/lib/autofillImages';
 import { setCopiedPlant } from '@/lib/clipboardStorage';
 import PageHeader from '@/components/PageHeader';
 import DropdownMenu from '@/components/DropdownMenu';
@@ -194,6 +195,9 @@ export default function SharedPlantPage() {
         <div className={styles.photoModalOverlay} onClick={() => setSelImg(null)}>
           <div className={styles.photoModalContent} onClick={e => e.stopPropagation()}>
             <img src={selImg} alt="" className={styles.photoModalImage} />
+            {getImageCredit(selImg) && (
+              <div className={styles.photoModalCredit}>Photo: {getImageCredit(selImg)}</div>
+            )}
             <button className={styles.photoModalCloseButton} onClick={() => setSelImg(null)}>
               <IoClose size={24} />
             </button>

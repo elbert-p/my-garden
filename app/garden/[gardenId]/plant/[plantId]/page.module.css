@@ -81,6 +81,37 @@
   opacity: 1;
 }
 
+.mainImageDeleteButton {
+  position: absolute;
+  top: 56px;
+  right: 12px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.mainImageContainer:hover .mainImageDeleteButton {
+  opacity: 1;
+}
+
+.mainImageDeleteButton:hover {
+  background-color: #ea4335;
+}
+
+/* Edit mode: always show main image delete button */
+.mainImageEditing .mainImageDeleteButton {
+  opacity: 1;
+}
+
 .fileInput {
   display: none;
 }
@@ -316,6 +347,20 @@
   color: #202124;
 }
 
+.photoModalCredit {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  padding: 1.25rem 0.75rem 0.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: right;
+  border-radius: 0 0 8px 8px;
+  pointer-events: none;
+}
+
 /* ============ SHARE / SIGN-IN MODALS ============ */
 
 .shareText {
@@ -373,6 +418,11 @@
 
   .mainImageEditButton {
     top: 2px;
+    right: 2px;
+  }
+
+  .mainImageDeleteButton {
+    top: 44px;
     right: 2px;
   }
 

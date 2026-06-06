@@ -9,6 +9,7 @@ import { useGarden } from '@/context/GardenContext';
 import { SHARE_INTENT_KEY } from '@/context/AuthContext';
 import { getPlant, updatePlant, deletePlant } from '@/lib/dataService';
 import { uploadImage, deleteImage } from '@/lib/imageStorage';
+import { getAutofillImageUrl, getImageCredit, imageExists } from '@/lib/autofillImages';
 import { BLOOM_OPTIONS, SUN_OPTIONS, MOISTURE_OPTIONS, NATIVE_OPTIONS, PLANT_TYPE_OPTIONS } from '@/lib/plantConstants';
 import PageHeader from '@/components/PageHeader';
 import DropdownMenu from '@/components/DropdownMenu';
@@ -19,17 +20,6 @@ import GoogleSignInButton from '@/components/GoogleSignInButton';
 import PlantBadges from '@/components/PlantBadges';
 import plantsData from '@/plants_dynamic.json';
 import styles from './page.module.css';
-
-// ---- Autofill image helpers ----
-
-const AUTOFILL_BUCKET = 'autofill_images';
-
-/** Build the public URL for an autofill reference image based on Latin name */
-const getAutofillImageUrl = (scientificName) => {
-  if (!scientificName) return null;
-  const fileName = scientificName.trim().replace(/\s+/g, '_') + '.jpg';
-  return `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/${AUTOFILL_BUCKET}/${fileName}`;
-};
 
 // ---- Autofill lookup helpers ----
 
@@ -75,8 +65,8 @@ export default function PlantPage() {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
   const [showSignInModal, setShowSignInModal] = useState(false);
-  const [showDeletePhotoModal, setShowDeletePhotoModal] = useState(false);
-  const [photoToDelete, setPhotoToDelete] = useState(null);
+  // Image removal confirmation: null | { kind: 'main' } | { kind: 'additional', url }
+  const [imageToRemove, setImageToRemove] = useState(null);
   const [copied, setCopied] = useState(false);
   const [autofillData, setAutofillData] = useState(null);
   const [autofillMatchedBy, setAutofillMatchedBy] = useState(null);
@@ -161,7 +151,7 @@ export default function PlantPage() {
         setShowDeleteModal(false);
         setShowShareModal(false);
         setShowSignInModal(false);
-        setShowDeletePhotoModal(false);
+        setImageToRemove(null);
         if (privacyMode) { setPrivacyMode(false); }
       }
     };
@@ -295,27 +285,22 @@ export default function PlantPage() {
     });
   };
 
-  const onRemove = async (img) => {
+  const removeMainImage = async () => {
+    const oldImage = temp.mainImage;
+    await save({ ...temp, mainImage: '' });
+    if (user?.id) deleteImage(oldImage);
+  };
+
+  const removeAdditionalImage = async (img) => {
     if (user?.id) deleteImage(img);
     await save({ ...temp, images: temp.images.filter(x => x !== img) });
   };
 
-  const handleRemoveClick = (img, e) => {
-    e.stopPropagation();
-    if (window.innerWidth <= 768) {
-      setPhotoToDelete(img);
-      setShowDeletePhotoModal(true);
-    } else {
-      onRemove(img);
-    }
-  };
-
-  const confirmDeletePhoto = () => {
-    if (photoToDelete) {
-      onRemove(photoToDelete);
-      setPhotoToDelete(null);
-      setShowDeletePhotoModal(false);
-    }
+  const confirmRemoveImage = async () => {
+    if (!imageToRemove) return;
+    if (imageToRemove.kind === 'main') await removeMainImage();
+    else await removeAdditionalImage(imageToRemove.url);
+    setImageToRemove(null);
   };
 
   const handleShare = () => {
@@ -360,10 +345,14 @@ export default function PlantPage() {
       }
     }
 
-    // Use a reference image if the user hasn't uploaded one
+    // Use the reference image from the JSON (first path) if the user hasn't
+    // uploaded one — but only if it actually loads, so a wrong/missing path
+    // doesn't store a dead URL. No usable image leaves it empty, keeping the
+    // placeholder/click-to-upload behavior intact.
     let mainImage = temp.mainImage;
     if (!mainImage) {
-      mainImage = getAutofillImageUrl(autofillData['Latin name']) || '';
+      const candidate = getAutofillImageUrl(autofillData);
+      mainImage = (candidate && await imageExists(candidate)) ? candidate : '';
     }
 
     await save({
@@ -453,6 +442,7 @@ export default function PlantPage() {
             <img src={temp.mainImage || '/placeholder-plant.jpg'} alt="" className={styles.mainImage} onError={(e) => { e.target.src = '/placeholder-plant.jpg'; }} />
             {!privacyMode && !garden?.customization?.hideBadges && <PlantBadges commonName={plant.commonName} scientificName={plant.scientificName} size="large" />}
             {!privacyMode && <button className={styles.mainImageEditButton} onClick={(e) => { e.stopPropagation(); mainRef.current?.click(); }}><FiEdit size={18} /></button>}
+            {!privacyMode && temp.mainImage && <button className={styles.mainImageDeleteButton} onClick={(e) => { e.stopPropagation(); setImageToRemove({ kind: 'main' }); }}><FiTrash2 size={18} /></button>}
             <input ref={mainRef} type="file" onChange={onMain} className={styles.fileInput} accept="image/*" onClick={(e) => e.stopPropagation()} />
           </div>
 
@@ -498,8 +488,8 @@ export default function PlantPage() {
                 {temp.images.map((img, i) => (
                   <div key={i} className={styles.photoItem}>
                     <img src={img} alt="" className={styles.photo} onClick={() => setSelectedImage(img)} />
-                    <button onClick={e => handleRemoveClick(img, e)} className={styles.removeButton}>
-                      <IoClose size={16} />
+                    <button onClick={e => { e.stopPropagation(); setImageToRemove({ kind: 'additional', url: img }); }} className={styles.removeButton}>
+                      <FiTrash2 size={14} />
                     </button>
                   </div>
                 ))}
@@ -530,6 +520,9 @@ export default function PlantPage() {
         <div className={styles.photoModalOverlay} onClick={() => setSelectedImage(null)}>
           <div className={styles.photoModalContent} onClick={e => e.stopPropagation()}>
             <img src={selectedImage} alt="" className={styles.photoModalImage} />
+            {getImageCredit(selectedImage) && (
+              <div className={styles.photoModalCredit}>Photo: {getImageCredit(selectedImage)}</div>
+            )}
             <button className={styles.photoModalCloseButton} onClick={() => setSelectedImage(null)}>
               <IoClose size={24} />
             </button>
@@ -537,14 +530,14 @@ export default function PlantPage() {
         </div>
       )}
 
-      {/* Delete Photo Confirmation (tablet/mobile) */}
+      {/* Remove Image Confirmation */}
       <ConfirmModal
-        isOpen={showDeletePhotoModal}
-        onClose={() => { setShowDeletePhotoModal(false); setPhotoToDelete(null); }}
-        onConfirm={confirmDeletePhoto}
-        title="Delete Photo"
-        message="Remove this photo from your gallery?"
-        confirmText="Delete"
+        isOpen={!!imageToRemove}
+        onClose={() => setImageToRemove(null)}
+        onConfirm={confirmRemoveImage}
+        title="Remove Image"
+        message="Are you sure you want to remove this image?"
+        confirmText="Remove"
         cancelText="Cancel"
         variant="danger"
       />

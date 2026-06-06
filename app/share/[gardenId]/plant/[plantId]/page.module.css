@@ -169,6 +169,20 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+.photoModalCredit {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  padding: 1.25rem 0.75rem 0.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: right;
+  border-radius: 0 0 8px 8px;
+  pointer-events: none;
+}
+
 /* ============ SHARE MODAL ============ */
 
 .shareText {
