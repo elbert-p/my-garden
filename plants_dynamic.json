@@ -261,6 +261,12 @@
       "(82) Acadian Plains and Hills",
       "Northern US"
     ],
+    "Autofill image paths": [
+      "agastache_foeniculum.png"
+    ],
+    "Autofill image credits": [
+      "Missouri Botanical Garden"
+    ],
     "Hosted Butterflies and Moths": "Summer Azure; Splendid Brass Looper; Bold-Feathered Grass Moth; Stalk Borer",
     "Sunlight": [
       "Sun",
@@ -982,6 +988,12 @@
       "Northeastern US",
       "Southeastern US"
     ],
+    "Autofill image paths": [
+      "antennaria_plantaginaria.png"
+    ],
+    "Autofill image credits": [
+      "prairiemoon.com"
+    ],
     "Hosted Butterflies and Moths": "Agonopterix nebulosa; White-Spotted Midget; Bold-Feathered Grass Moth; Pussy's Toes Pyrausta; Oval Telethusia; American Lady",
     "Sunlight": [
       "Sun"
@@ -1078,9 +1090,11 @@
       "Southeastern US"
     ],
     "Autofill image paths": [
-      "aquilegia_canadensis.jpg"
+      "aquilegia_canadensis.jpg",
+      "aquilegia_canadensis2.jpeg"
     ],
     "Autofill image credits": [
+      "K. Elbert",
       "K. Elbert"
     ],
     "Key Host Plant": [
@@ -1451,6 +1465,12 @@
       "Southeastern US",
       "Southwestern US"
     ],
+    "Autofill image paths": [
+      "asclepias_tuberosa.png"
+    ],
+    "Autofill image credits": [
+      "Missouri Botanical Garden"
+    ],
     "Key Host Plant": [
       "K"
     ],
@@ -1716,6 +1736,36 @@
       "Oct"
     ],
     "Latin name": "Boltonia asteroides"
+  },
+  "Calamintha nepetoides": {
+    "Common name": "Lesser Calamint",
+    "Height": "1-1.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Europe"
+    ],
+    "Autofill image paths": [
+      "calamintha_nepetoides.png"
+    ],
+    "Autofill image credits": [
+      "bluestoneperennials.com"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Latin name": "Calamintha nepetoides"
   },
   "Callirhoe bushii": {
     "Common name": "Bush's Poppy Mallow",
@@ -2253,6 +2303,12 @@
       "Mid-Atlantic US",
       "Midwestern US",
       "Southeastern US"
+    ],
+    "Autofill image paths": [
+      "conoclinium_coelestinum"
+    ],
+    "Autofill image credits": [
+      "Missouri Botanical Garden"
     ],
     "Hosted Butterflies and Moths": "Wavy-Lined Emerald",
     "Sunlight": [
@@ -3409,6 +3465,12 @@
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
+    ],
+    "Autofill image paths": [
+      "eutrochium_fistulosum.png"
+    ],
+    "Autofill image credits": [
+      "Missouri Botanical Garden"
     ],
     "Bumblebees": 1,
     "Pollen Source": "Yellow-banded Bumblebee, Half-black Bumblebee",
@@ -4887,6 +4949,12 @@
       "Southeastern US",
       "Eastern US"
     ],
+    "Autofill image paths": [
+      "liatris_spicata.png"
+    ],
+    "Autofill image credits": [
+      "Missouri Botanical Garden"
+    ],
     "Key Host Plant": [
       "K"
     ],
@@ -5119,10 +5187,12 @@
       "Eastern US"
     ],
     "Autofill image paths": [
-      "lupinus_perennis.png"
+      "lupinus_perennis.png",
+      "lupinus_perennis.jpeg"
     ],
     "Autofill image credits": [
-      "prairiemoon.com"
+      "prairiemoon.com",
+      "K. Elbert"
     ],
     "Key Host Plant": [
       "K"
@@ -5523,6 +5593,12 @@
     "Native Range": [
       "Midatlantic US"
     ],
+    "Autofill image paths": [
+      "monarda_didyma.png"
+    ],
+    "Autofill image credits": [
+      "Mt. Cuba Center"
+    ],
     "Pollen Source": "Half-black Bumblebee, Beebalm Shortface Bee",
     "Hosted Butterflies and Moths": "Grey Marvel; Wide-Striped Leaf Roller; Chionodes fondella; Pink-Patched Looper Moth; Hermit Sphinx; Rustic Quaker; Stalk Borer; Orange Mint Moth; Raspberry Pyrausta; Sparganothis Fruitworm Moth; Xenotemna pallorana",
     "Sunlight": [
@@ -5541,8 +5617,8 @@
     ],
     "Latin name": "Monarda didyma"
   },
-  "Monarda didyma 'Jacob Kline'": {
-    "Common name": "Jacob Kline Beebalm",
+  "Monarda didyma 'Jacob Cline'": {
+    "Common name": "Jacob Cline Beebalm",
     "Height": "3-4 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -5550,6 +5626,12 @@
     "Native Range": [
       "Cultivar",
       "Midatlantic US"
+    ],
+    "Autofill image paths": [
+      "monarda_didyma.png"
+    ],
+    "Autofill image credits": [
+      "Mt. Cuba Center"
     ],
     "Pollen Source": "Half-black Bumblebee, Beebalm Shortface Bee",
     "Hosted Butterflies and Moths": "Grey Marvel; Wide-Striped Leaf Roller; Chionodes fondella; Pink-Patched Looper Moth; Hermit Sphinx; Rustic Quaker; Stalk Borer; Orange Mint Moth; Raspberry Pyrausta; Sparganothis Fruitworm Moth; Xenotemna pallorana",
@@ -5560,7 +5642,7 @@
     "Moisture": [
       "Medium"
     ],
-    "Latin name": "Monarda didyma 'Jacob Kline'"
+    "Latin name": "Monarda didyma 'Jacob Cline'"
   },
   "Monarda fistulosa": {
     "Common name": "Wild Bee Balm",
@@ -7115,6 +7197,37 @@
     ],
     "Latin name": "Salvia azurea"
   },
+  "Salvia nemorosa": {
+    "Common name": "Meadow Sage",
+    "Height": "1.5-2 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Europe",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "salvia_nemorosa.jpeg"
+    ],
+    "Autofill image credits": [
+      "K. Elbert"
+    ],
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Salvia nemorosa"
+  },
   "Salvia lyrata": {
     "Common name": "Lyre-leaf Sage",
     "plantType": [
@@ -8087,6 +8200,12 @@
       "Eastern US",
       "Midwestern US"
     ],
+    "Autofill image paths": [
+      "solidago_speciosa.png"
+    ],
+    "Autofill image credits": [
+      "Missouri Botanical Garden"
+    ],
     "Key Host Plant": [
       "Lepidoptera",
       "Specialist Bees"
@@ -8500,6 +8619,12 @@
       "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
       "Midwestern US"
+    ],
+    "Autofill image paths": [
+      "symphyotrichum_novae-angliae"
+    ],
+    "Autofill image credits": [
+      "Missouri Botanical Garden"
     ],
     "Key Host Plant": [
       "Lepidoptera",
@@ -15998,6 +16123,36 @@
       "Dry"
     ],
     "Latin name": "Ostrya virginiana"
+  },
+  "Perovskia atriplicifolia": {
+    "Common name": "Russian Sage",
+    "Height": "1.5-2 ft",
+    "plantType": [
+      "Shrub"
+    ],
+    "Native Range": [
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "perovskia_atriplicifolia.png"
+    ],
+    "Autofill image credits": [
+      "rhs.org.uk"
+    ],
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Latin name": "Perovskia atriplicifolia"
   },
   "Picea glauca": {
     "Common name": "White spruce",
