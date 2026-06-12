@@ -95,6 +95,38 @@
     ],
     "Latin name": "Achillea millefolium"
   },
+  "Achillea clypeolata x Achillea 'Taygetea'": {
+    "Common name": "Achillea 'Moonshine'",
+    "Height": "1-2 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Europe",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "achillea_moonshine.png"
+    ],
+    "Autofill image credits": [
+      "Missouri Botanical Garden"
+    ],
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Latin name": "Achillea clypeolata x Achillea 'Taygetea'"
+  },
   "Acorus americanus": {
     "Common name": "Sweet Flag",
     "Height": "2 ft",
@@ -1240,6 +1272,34 @@
       "Jul"
     ],
     "Latin name": "Arisaema tryphyllum"
+  },
+  "Artemisia schmidtiana": {
+    "Common name": "Silver Mound",
+    "Alternate common names": [
+      "Dwarf Wormwood"
+    ],
+    "Height": "0.75-1 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "artemisia_schmidtiana.jpeg"
+    ],
+    "Autofill image credits": [
+      "K. Elbert"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Artemisia schmidtiana"
   },
   "Aruncus dioicus": {
     "Common name": "Goat's Beard",
@@ -6729,6 +6789,12 @@
       "(84) Atlantic Coastal Pine Barrens",
       "Eastern US"
     ],
+    "Autofill image paths": [
+      "pycnanthemum_tenuifolium.png"
+    ],
+    "Autofill image credits": [
+      "bluestemnatives.com"
+    ],
     "Pollen Source": "Yellow-banded Bumblebee",
     "Hosted Butterflies and Moths": "Chionodes pseudofondella; Tobacco Budworm Moth; Curved-Tooth Geometer; Hermit Sphinx",
     "Sunlight": [
@@ -7068,6 +7134,12 @@
       "Mid-Atlantic US",
       "Midwestern US",
       "Southeastern US"
+    ],
+    "Autofill image paths": [
+      "rudbeckia_triloba.png"
+    ],
+    "Autofill image credits": [
+      "Missouri Botanical Garden"
     ],
     "Key Host Plant": [
       "Lepidoptera",
