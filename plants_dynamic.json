@@ -1172,6 +1172,34 @@
     ],
     "Latin name": "Arnoglossum reniforme"
   },
+  "Aralia hispida": {
+    "Common name": "Bristly Sarsaparilla",
+    "Height": "1-3 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "MA Native",
+      "Northeastern US",
+      "Mid-Atlantic US",
+      "Midwestern US"
+    ],
+    "Hosted Butterflies and Moths": "White-Lined Leafroller Moth; Spotted Apatelodes; Wide-Striped Leaf Roller; Argyrotaenia repertana; Spring Azure; Summer Azure; Cherry Gall Azure; The Batman Moth; Orange-Dotted Dichomeris; The Small Engrailed; Epermenia albapunctella; Satyr Pug; Zigzag Herpetogramma; Pale-Winged Gray; Spongy Moth; Gold-Striped Leaftier Moth; Ruby Quaker; Virginian Tiger Moth",
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Aralia hispida"
+  },
   "Aralia nudicaulis": {
     "Common name": "Wild Sarsaparilla",
     "Height": "1-2 ft",
@@ -1526,10 +1554,10 @@
       "Southwestern US"
     ],
     "Autofill image paths": [
-      "asclepias_tuberosa.png"
+      "butterfly_milkweed library.jpeg"
     ],
     "Autofill image credits": [
-      "Missouri Botanical Garden"
+      "K. Elbert"
     ],
     "Key Host Plant": [
       "K"
@@ -5328,6 +5356,34 @@
     ],
     "Latin name": "Lysimachia borealis"
   },
+  "Lysimachia lanceolata var. purpurea": {
+    "Common name": "Purple Lance-leaf Loosestrife",
+    "Height": "1-2 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Midwestern US",
+      "Southeastern US"
+    ],
+    "Pollen Source": "Ciliate Yellow Loosestrife Bee, Dark-footed Loosestrife Bee, Patellate Yellow Loosestrife Bee",
+    "Hosted Butterflies and Moths": "Gray Pug; Bold-Feathered Grass Moth; Hitched Arches; Blurry-Patched Nola; Stalk Borer",
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Lysimachia lanceolata var. purpurea"
+  },
   "Lythrum alatum": {
     "Common name": "Winged Loosestrife",
     "Height": "3 ft",
@@ -5749,6 +5805,12 @@
       "Midwestern US",
       "Southeastern US",
       "Southwestern US"
+    ],
+    "Autofill image paths": [
+      "monarda_punctata.png"
+    ],
+    "Autofill image credits": [
+      "bluestemnatives.com"
     ],
     "Pollen Source": "Half-black Bumblebee, Beebalm Shortface Bee",
     "Hosted Butterflies and Moths": "Grey Marvel; Wide-Striped Leaf Roller; Chionodes fondella; Pink-Patched Looper Moth; Hermit Sphinx; Rustic Quaker; Stalk Borer; Orange Mint Moth; Raspberry Pyrausta; Sparganothis Fruitworm Moth; Xenotemna pallorana",
@@ -6199,7 +6261,7 @@
   },
   "Penstemon digitalis": {
     "Common name": "Foxglove Beardtongue",
-    "Height": "3-4 ft",
+    "Height": "1-3 ft",
     "plantType": [
       "Herbaceous perennial"
     ],
@@ -6556,6 +6618,12 @@
     "Height": "1 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "MA Native",
+      "Mid-Atlantic US",
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Key Host Plant": [
       "K"
@@ -7225,6 +7293,34 @@
       "Aug"
     ],
     "Latin name": "Rumex orbiculatus"
+  },
+  "Ruta graveolens": {
+    "Common name": "Common Rue",
+    "Height": "2-3 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Europe"
+    ],
+    "Autofill image paths": [
+      "ruta_graveolens.jpeg"
+    ],
+    "Autofill image credits": [
+      "K. Elbert"
+    ],
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Latin name": "Ruta graveolens"
   },
   "Sagittaria latifolia": {
     "Common name": "Broadleaf Arrowhead",
