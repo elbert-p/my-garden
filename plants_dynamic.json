@@ -9473,6 +9473,39 @@
     ],
     "Latin name": "Triodanis perfoliata"
   },
+  "Typha latifolia": {
+    "Common name": "Broad-leaved Cattail",
+    "Height": "4-6 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "MA Native",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US",
+      "Southwestern US",
+      "Western US",
+      "US Native",
+      "Europe",
+      "Asia",
+      "Africa"
+    ],
+    "Hosted Butterflies and Moths": "Henry's Marsh Moth; Smeared Dagger; White-Tailed Diver; Cattail Border Moth; Obsolete Leafroller; Oblique-Banded Leafroller Moth; Julia's Dicymolomia; Verbena Bud Moth; Bidens Borer Moth; Oblong Sedge Borer Moth; Yellow Sedge Borer; False Wainscot; Shy Cosmet; Ruby Quaker; Stalk Borer; Potato Tuberworm Moth",
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Wet"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Latin name": "Typha latifolia"
+  },
   "Uvularia grandiflora": {
     "Common name": "Great Merry Bells",
     "Height": "1-1.5 ft",
