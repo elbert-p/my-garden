@@ -100,13 +100,14 @@ export default function SharedPlantPage() {
     });
   };
 
+  const isWildlife = plant?.type === 'wildlife';
+  const itemLabel = isWildlife ? 'Wildlife' : 'Plant';
+
   const menuItems = [
     { icon: <FiCopy size={16} />, label: 'Copy Plant', onClick: onCopyPlant, visible: !isWildlife },
     { icon: <FiShare2 size={16} />, label: `Share ${itemLabel}`, onClick: () => { setShowShareModal(true); setCopied(false); } },
   ];
 
-  const isWildlife = plant?.type === 'wildlife';
-  const itemLabel = isWildlife ? 'Wildlife' : 'Plant';
   const hiddenFields = plant?.plantPrivacy?.hiddenFields || [];
   const hiddenImages = plant?.plantPrivacy?.hiddenImages || [];
   const isFieldVisible = (key) => !hiddenFields.includes(key);
