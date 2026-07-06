@@ -5,12 +5,13 @@ import { FiPlus, FiEdit, FiTrash2, FiShare2, FiSliders, FiBookmark, FiCopy, FiCl
 import { GardenProvider, useGarden } from '@/context/GardenContext';
 import { SHARE_INTENT_KEY } from '@/context/AuthContext';
 import { uploadImage, isDataUrl } from '@/lib/imageStorage';
-import { getActiveFilterCount, getActiveSortCount } from '@/components/SortFilterControls';
+import { getActiveFilterCount, getActiveSortCount, MULTI_FILTER_CATEGORIES } from '@/components/SortFilterControls';
 import { getCopiedPlant, setCopyGardenSource } from '@/lib/clipboardStorage';
 import { addLocalSavedGarden, removeLocalSavedGarden, isLocalGardenSaved } from '@/lib/clipboardStorage';
 import {
   saveGarden as saveGardenDb, unsaveGarden as unsaveGardenDb,
   isGardenSaved as isGardenSavedDb,
+  getPlantDisplay, getWildlifeDisplay,
 } from '@/lib/dataService';
 import NavBar from '@/components/NavBar';
 import SortFilterControls from '@/components/SortFilterControls';
@@ -23,6 +24,9 @@ import GoogleSignInButton from '@/components/GoogleSignInButton';
 import styles from './layout.module.css';
 
 const DEFAULT_CUSTOMIZATION = { columns: 4, bgColor: '#f4f4f9', hideBadges: false };
+
+// The wildlife tab exposes only a Native Range filter (no sort).
+const WILDLIFE_FILTER_CATEGORIES = MULTI_FILTER_CATEGORIES.filter(c => c.key === 'nativeRange');
 
 const SUGGESTED_COLORS = [
   '#f4f4f9', '#f0f7f0', '#ede8f5',
@@ -47,7 +51,9 @@ function GardenLayoutContent({ children }) {
 
   const {
     garden, plants, filteredPlants, isLoading, plantsLoaded, isInitialized, user,
+    wildlife, filteredWildlife, hasWildlife, activeType, activeItems,
     searchQuery, setSearchQuery, sort, setSort, filters, setFilters,
+    wildlifeFilters, setWildlifeFilters,
     updateGarden, deleteGarden, createPlant, handleShare,
     updateGardenCustomization,
     showAddPlantModal, setShowAddPlantModal,
@@ -65,6 +71,7 @@ function GardenLayoutContent({ children }) {
   const [newPlantName, setNewPlantName] = useState('');
   const [newScientificName, setNewScientificName] = useState('');
   const [newPlantImage, setNewPlantImage] = useState(null);
+  const [addType, setAddType] = useState('plant');
   const [editName, setEditName] = useState('');
   const [editImage, setEditImage] = useState(null);
   const [error, setError] = useState('');
@@ -89,11 +96,22 @@ function GardenLayoutContent({ children }) {
   // Page state
   const isAboutPage = pathname.endsWith('/about');
   const isTodoPage = pathname.endsWith('/todo');
+  const isWildlifePage = pathname.endsWith('/wildlife');
   const isPlantPage = pathname.includes('/plant/');
   const isSubPage = isPlantPage || isAboutPage || isTodoPage;
   const contentWidth = isSubPage ? 'medium' : 'large';
 
-  const customization = { ...DEFAULT_CUSTOMIZATION, ...garden?.customization };
+  // The plant detail route (/plant/[id]) is reused for wildlife. Look the item up
+  // by id so the Wildlife tab highlights when viewing a wildlife detail page.
+  const currentItemId = isPlantPage ? pathname.split('/plant/')[1]?.split('/')[0] : null;
+  const isWildlifeDetail = !!currentItemId && wildlife.some(w => w.id === currentItemId);
+  const onWildlife = isWildlifePage || isWildlifeDetail;
+
+  // Display settings per tab. Wildlife derives from plant settings (columns=4)
+  // until it has been customized separately.
+  const plantDisplay = getPlantDisplay(garden?.customization);
+  const wildlifeDisplay = getWildlifeDisplay(garden?.customization);
+  const activeDisplay = activeType === 'wildlife' ? wildlifeDisplay : plantDisplay;
 
   const previewColumns = (() => {
     const n = parseInt(customizeColumnsStr);
@@ -103,19 +121,26 @@ function GardenLayoutContent({ children }) {
   useEffect(() => {
     if (showCustomizeModal) {
       setPreviewCustomization({
-        columns: previewColumns ?? customization.columns,
+        columns: previewColumns ?? activeDisplay.columns,
         bgColor: customizeBgColor,
         hideBadges: customizeHideBadges,
       });
     }
-  }, [showCustomizeModal, previewColumns, customizeBgColor, customizeHideBadges, setPreviewCustomization, customization.columns]);
+  }, [showCustomizeModal, previewColumns, customizeBgColor, customizeHideBadges, setPreviewCustomization, activeDisplay.columns]);
 
-  const appliedBgColor = previewCustomization?.bgColor ?? customization.bgColor;
+  const appliedBgColor = previewCustomization?.bgColor ?? (onWildlife ? wildlifeDisplay : plantDisplay).bgColor;
 
   const isCustomDefault =
     clampColumns(customizeColumnsStr) === DEFAULT_CUSTOMIZATION.columns &&
     customizeBgColor === DEFAULT_CUSTOMIZATION.bgColor &&
     customizeHideBadges === DEFAULT_CUSTOMIZATION.hideBadges;
+
+  // "Use Plants Customization" (wildlife modal): disabled when the wildlife form
+  // already matches the plant settings.
+  const matchesPlantsCustomization =
+    clampColumns(customizeColumnsStr) === plantDisplay.columns &&
+    customizeBgColor === plantDisplay.bgColor &&
+    customizeHideBadges === plantDisplay.hideBadges;
 
   // Check for copied plant periodically
   useEffect(() => {
@@ -165,15 +190,22 @@ function GardenLayoutContent({ children }) {
   };
 
   const tabs = [
-    { label: 'Plants', href: `/garden/${gardenId}`, active: !isAboutPage && !isTodoPage },
+    { label: 'Plants', href: `/garden/${gardenId}`, active: !isAboutPage && !isTodoPage && !onWildlife },
+    hasWildlife && { label: 'Wildlife', href: `/garden/${gardenId}/wildlife`, active: onWildlife },
     { label: 'About', href: `/garden/${gardenId}/about`, active: isAboutPage },
     { label: 'To-Do', href: `/garden/${gardenId}/todo`, active: isTodoPage },
-  ];
+  ].filter(Boolean);
+
+  const openAddModal = (type) => {
+    setAddType(type);
+    setShowAddPlantModal(true);
+  };
 
   const handlePastePlant = () => {
     const data = getCopiedPlant();
     if (data) {
       setPasteData(data);
+      setAddType('plant');
       setNewPlantName(data.commonName || '');
       setNewScientificName(data.scientificName || '');
       setNewPlantImage(data.mainImage || null);
@@ -224,20 +256,21 @@ function GardenLayoutContent({ children }) {
   const privacySelectedIds = (() => {
     if (!privacyMode) return null;
     const selected = new Set();
-    plants.forEach(p => {
+    activeItems.forEach(p => {
       if (!hiddenPlantIdsDraft.has(p.id)) selected.add(p.id);
     });
     return selected;
   })();
 
   const menuItems = [
-    { icon: <FiPlus size={16} />, label: 'Add Plant', onClick: () => setShowAddPlantModal(true), variant: 'success' },
+    { icon: <FiPlus size={16} />, label: 'Add Plant', onClick: () => openAddModal('plant'), variant: 'success' },
+    { icon: <FiPlus size={16} />, label: 'Add Wildlife', onClick: () => openAddModal('wildlife'), variant: 'success' },
     { icon: <FiEdit size={16} />, label: 'Edit Details', onClick: () => openEditModal() },
     { icon: <FiSliders size={16} />, label: 'Customize', onClick: () => openCustomizeModal() },
     { icon: <FiEye size={16} />, label: 'Edit Privacy', onClick: startPrivacyMode, visible: !isSubPage && !!user },
     { icon: <FiMove size={16} />, label: 'Rearrange', onClick: startRearrangeMode, visible: !isSubPage },
     { divider: true },
-    { icon: <FiClipboard size={16} />, label: 'Paste Plant', onClick: handlePastePlant, variant: 'success', visible: hasCopiedPlant },
+    { icon: <FiClipboard size={16} />, label: 'Paste Plant', onClick: handlePastePlant, variant: 'success', visible: hasCopiedPlant && activeType === 'plant' },
     { icon: <FiShare2 size={16} />, label: 'Share Garden', onClick: handleShare, variant: 'share' },
     { icon: <FiBookmark size={16} fill={isSaved ? '#FFC107' : 'none'} color={isSaved ? '#FFC107' : 'currentColor'} />, 
       label: isSaved ? 'Unsave' : 'Save', onClick: handleToggleSave, variant: 'save' },
@@ -256,9 +289,9 @@ function GardenLayoutContent({ children }) {
   };
 
   const openCustomizeModal = () => {
-    setCustomizeColumnsStr(String(customization.columns));
-    setCustomizeBgColor(customization.bgColor);
-    setCustomizeHideBadges(customization.hideBadges);
+    setCustomizeColumnsStr(String(activeDisplay.columns));
+    setCustomizeBgColor(activeDisplay.bgColor);
+    setCustomizeHideBadges(activeDisplay.hideBadges);
     setShowCustomizeModal(true);
   };
 
@@ -274,6 +307,7 @@ function GardenLayoutContent({ children }) {
     setNewPlantImage(null);
     setError('');
     setPasteData(null);
+    setAddType('plant');
   };
 
   const handleAddPlant = async () => {
@@ -289,6 +323,7 @@ function GardenLayoutContent({ children }) {
 
       // If pasting, include all the extra data
       const plantData = {
+        type: addType,
         commonName: newPlantName.trim(),
         mainImage: imageUrl,
         scientificName: newScientificName.trim(),
@@ -338,7 +373,11 @@ function GardenLayoutContent({ children }) {
     setCustomizeColumnsStr(String(clamped));
     try {
       const existing = garden?.customization || {};
-      await updateGardenCustomization({ ...existing, columns: clamped, bgColor: customizeBgColor, hideBadges: customizeHideBadges });
+      const display = { columns: clamped, bgColor: customizeBgColor, hideBadges: customizeHideBadges };
+      const updated = activeType === 'wildlife'
+        ? { ...existing, wildlife: display }
+        : { ...existing, ...display };
+      await updateGardenCustomization(updated);
       setShowCustomizeModal(false);
       setPreviewCustomization(null);
     } catch (e) {
@@ -356,6 +395,13 @@ function GardenLayoutContent({ children }) {
     setCustomizeHideBadges(DEFAULT_CUSTOMIZATION.hideBadges);
   };
 
+  // Wildlife modal: copy the current plant display settings into the form.
+  const usePlantsCustomization = () => {
+    setCustomizeColumnsStr(String(plantDisplay.columns));
+    setCustomizeBgColor(plantDisplay.bgColor);
+    setCustomizeHideBadges(plantDisplay.hideBadges);
+  };
+
   const copyShareLink = async () => {
     await navigator.clipboard.writeText(`${window.location.origin}/share/${gardenId}`);
     setCopied(true);
@@ -367,6 +413,14 @@ function GardenLayoutContent({ children }) {
       <NavBar
         title={garden?.name || ''}
         badge={plantsLoaded && !privacyMode && !rearrangeMode ? (() => {
+          // About / To-Do: show the whole garden's total (plants + wildlife).
+          if (isAboutPage || isTodoPage) return plants.length + wildlife.length;
+          if (isWildlifePage) {
+            const hasWildlifeFilters = getActiveFilterCount(wildlifeFilters) > 0 || !!searchQuery;
+            if (hasWildlifeFilters) return `${filteredWildlife.length} / ${wildlife.length}`;
+            return wildlife.length;
+          }
+          if (isWildlifeDetail) return wildlife.length;
           const filterCount = getActiveFilterCount(filters);
           const hasFilters = filterCount > 0 || !!searchQuery;
           if (hasFilters) return `${filteredPlants.length} / ${plants.length}`;
@@ -379,7 +433,7 @@ function GardenLayoutContent({ children }) {
         showSearch={!isSubPage && !privacyMode && !rearrangeMode}
         searchValue={searchQuery}
         onSearchChange={setSearchQuery}
-        searchPlaceholder="Search plants..."
+        searchPlaceholder={isWildlifePage ? 'Search wildlife...' : 'Search plants...'}
         extraActions={privacyMode ? (
           <div className={styles.privacyActions}>
             <Button variant="secondary" size="small" onClick={cancelPrivacyMode}>Cancel</Button>
@@ -390,8 +444,20 @@ function GardenLayoutContent({ children }) {
             <Button variant="secondary" size="small" onClick={cancelRearrangeMode}>Cancel</Button>
             <Button size="small" onClick={saveRearrangeMode}>Save</Button>
           </div>
-        ) : !isSubPage ? (
+        ) : (!isSubPage && activeType === 'plant') ? (
           <SortFilterControls sort={sort} onSortChange={setSort} filters={filters} onFiltersChange={setFilters} />
+        ) : (!isSubPage && activeType === 'wildlife') ? (
+          <SortFilterControls
+            sort={{ key: null, dir: 'asc' }}
+            onSortChange={() => {}}
+            filters={wildlifeFilters}
+            onFiltersChange={setWildlifeFilters}
+            enableSort={false}
+            enableDate={false}
+            enableHeight={false}
+            enableBadges={false}
+            multiCategories={WILDLIFE_FILTER_CATEGORIES}
+          />
         ) : null}
         menuItems={!privacyMode && !rearrangeMode ? menuItems : undefined}
         contentWidth={contentWidth}
@@ -406,17 +472,17 @@ function GardenLayoutContent({ children }) {
           {privacyMode ? (
             <div className={styles.privacyContent}>
               <div className={styles.privacyBanner}>
-                Select which plants are visible when this garden is shared. Checked plants will be visible to viewers.
+                Select which {activeType === 'wildlife' ? 'wildlife' : 'plants'} are visible when this garden is shared. Checked items will be visible to viewers.
               </div>
               <ItemGrid
-                items={plants}
+                items={activeItems}
                 linkPrefix={`/garden/${gardenId}/plant`}
                 getItemId={(p) => p.id}
                 getItemImage={(p) => p.mainImage || '/placeholder-plant.jpg'}
                 fallbackImage="/placeholder-plant.jpg"
                 getItemName={(p) => p.commonName || p.scientificName}
                 getItemStyle={(p) => ({ fontStyle: p.commonName ? 'normal' : 'italic' })}
-                columns={garden?.customization?.columns}
+                columns={activeDisplay.columns}
                 selectionMode={true}
                 selectedIds={privacySelectedIds}
                 onToggleSelection={togglePlantVisibility}
@@ -425,16 +491,16 @@ function GardenLayoutContent({ children }) {
           ) : rearrangeMode ? (
             <div className={styles.privacyContent}>
               <div className={styles.privacyBanner}>
-                Drag plants to set the default order. This order is shown when no sort is applied, including on the shared link.
+                Drag {activeType === 'wildlife' ? 'wildlife' : 'plants'} to set the default order. This order is shown when no sort is applied, including on the shared link.
               </div>
               <ItemGrid
-                items={plants}
+                items={activeItems}
                 getItemId={(p) => p.id}
                 getItemImage={(p) => p.mainImage || '/placeholder-plant.jpg'}
                 fallbackImage="/placeholder-plant.jpg"
                 getItemName={(p) => p.commonName || p.scientificName}
                 getItemStyle={(p) => ({ fontStyle: p.commonName ? 'normal' : 'italic' })}
-                columns={garden?.customization?.columns}
+                columns={activeDisplay.columns}
                 rearrangeMode={true}
                 onReorder={setRearrangeDraft}
                 initialDragId={pendingDragId}
@@ -445,10 +511,10 @@ function GardenLayoutContent({ children }) {
       )}
 
       {/* Add Plant Modal */}
-      <Modal isOpen={showAddPlantModal} onClose={handleCloseAddModal} title={pasteData ? 'Paste Plant' : 'Add New Plant'} size="medium">
+      <Modal isOpen={showAddPlantModal} onClose={handleCloseAddModal} title={pasteData ? 'Paste Plant' : addType === 'wildlife' ? 'Add New Wildlife' : 'Add New Plant'} size="medium">
         <ErrorMessage message={error} />
         <FormInput value={newPlantName} onChange={setNewPlantName} placeholder="Common name" />
-        <FormInput value={newScientificName} onChange={setNewScientificName} placeholder="Scientific name (for autofill)" />
+        <FormInput value={newScientificName} onChange={setNewScientificName} placeholder={addType === 'wildlife' ? 'Scientific name' : 'Scientific name (for autofill)'} />
         <ImageUpload image={newPlantImage} onImageChange={setNewPlantImage} onError={setError} placeholder="Select Main Image" size="large" />
         <div className={styles.modalButtons}>
           <Button variant="secondary" onClick={handleCloseAddModal}>Cancel</Button>
@@ -468,7 +534,7 @@ function GardenLayoutContent({ children }) {
       </Modal>
 
       {/* Customize Garden Modal */}
-      <Modal isOpen={showCustomizeModal} onClose={closeCustomizeModal} title="Customize Garden" size="medium">
+      <Modal isOpen={showCustomizeModal} onClose={closeCustomizeModal} title={activeType === 'wildlife' ? 'Customize Wildlife' : 'Customize Garden'} size="medium">
         <div className={styles.customizeField}>
           <label className={styles.customizeLabel}>Number of Columns</label>
           <div className={styles.columnsRow}>
@@ -506,6 +572,9 @@ function GardenLayoutContent({ children }) {
             <span className={styles.toggleText}>{customizeHideBadges ? 'Hidden' : 'Visible'}</span>
           </label>
         </div>
+        {activeType === 'wildlife' && (
+          <button onClick={usePlantsCustomization} className={styles.resetButton} type="button" disabled={matchesPlantsCustomization}>Use Plants Customization</button>
+        )}
         <button onClick={resetCustomization} className={styles.resetButton} type="button" disabled={isCustomDefault}>Reset to Defaults</button>
         <div className={styles.modalButtons}>
           <Button variant="secondary" onClick={closeCustomizeModal}>Cancel</Button>

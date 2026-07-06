@@ -1,6 +1,6 @@
 'use client';
 import { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams, useRouter, usePathname } from 'next/navigation';
 import { useAuth } from './AuthContext';
 import { getGarden, updateGarden, updateGardenAbout, updateGardenTodo, updateGardenCustomization, deleteGarden, createPlant, getPlants, applyManualOrder } from '@/lib/dataService';
 import { applySortAndFilter } from '@/components/SortFilterControls';
@@ -10,7 +10,11 @@ const GardenContext = createContext();
 export function GardenProvider({ children }) {
   const { gardenId } = useParams();
   const router = useRouter();
+  const pathname = usePathname();
   const { user, isInitialized } = useAuth();
+
+  // Which tab's items are active — drives ordering, rearrange, and privacy.
+  const activeType = pathname?.endsWith('/wildlife') ? 'wildlife' : 'plant';
   
   const [garden, setGarden] = useState(null);
   const [plants, setPlants] = useState([]);
@@ -19,6 +23,7 @@ export function GardenProvider({ children }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [sort, setSort] = useState({ key: null, dir: 'asc' });
   const [filters, setFilters] = useState({});
+  const [wildlifeFilters, setWildlifeFilters] = useState({});
   const [previewCustomization, setPreviewCustomization] = useState(null);
   
   // Modal states
@@ -117,35 +122,53 @@ export function GardenProvider({ children }) {
     setShowShareModal(true);
   }, [user]);
 
+  // Split by type — wildlife are plants with type='wildlife' in the same table.
+  const plantList = useMemo(() => plants.filter(p => p.type !== 'wildlife'), [plants]);
+  const wildlifeList = useMemo(() => plants.filter(p => p.type === 'wildlife'), [plants]);
+
   // Apply manual rearrange order — this is the "no sort applied" default order.
-  // While dragging in rearrange mode the draft drives display so swaps render live.
+  // While dragging in rearrange mode the draft drives display for the active tab
+  // so swaps render live.
   const orderedPlants = useMemo(() => {
-    if (rearrangeMode && rearrangeDraft) {
-      return applyManualOrder(plants, rearrangeDraft);
+    if (rearrangeMode && rearrangeDraft && activeType === 'plant') {
+      return applyManualOrder(plantList, rearrangeDraft);
     }
-    return applyManualOrder(plants, garden?.customization?.plantOrder);
-  }, [plants, garden?.customization?.plantOrder, rearrangeMode, rearrangeDraft]);
+    return applyManualOrder(plantList, garden?.customization?.plantOrder);
+  }, [plantList, garden?.customization?.plantOrder, rearrangeMode, rearrangeDraft, activeType]);
 
-  // Filter by search, then apply sort & filters
-  const searchFiltered = searchQuery.trim()
-    ? orderedPlants.filter(plant => {
-        const query = searchQuery.toLowerCase();
-        const commonName = (plant.commonName || '').toLowerCase();
-        const scientificName = (plant.scientificName || '').toLowerCase();
-        return commonName.includes(query) || scientificName.includes(query);
-      })
-    : orderedPlants;
+  const orderedWildlife = useMemo(() => {
+    if (rearrangeMode && rearrangeDraft && activeType === 'wildlife') {
+      return applyManualOrder(wildlifeList, rearrangeDraft);
+    }
+    return applyManualOrder(wildlifeList, garden?.customization?.wildlifeOrder);
+  }, [wildlifeList, garden?.customization?.wildlifeOrder, rearrangeMode, rearrangeDraft, activeType]);
 
+  const matchesSearch = (item) => {
+    const query = searchQuery.toLowerCase();
+    const commonName = (item.commonName || '').toLowerCase();
+    const scientificName = (item.scientificName || '').toLowerCase();
+    return commonName.includes(query) || scientificName.includes(query);
+  };
+
+  // Plants: filter by search, then apply sort & filters
+  const searchFiltered = searchQuery.trim() ? orderedPlants.filter(matchesSearch) : orderedPlants;
   const filteredPlants = applySortAndFilter(searchFiltered, sort, filters);
+
+  // Wildlife: search + a Native Range filter only (no sort on the wildlife tab)
+  const searchFilteredWildlife = searchQuery.trim() ? orderedWildlife.filter(matchesSearch) : orderedWildlife;
+  const filteredWildlife = applySortAndFilter(searchFilteredWildlife, { key: null, dir: 'asc' }, wildlifeFilters);
+
+  // Items for the currently-active tab — used by the layout's privacy/rearrange grids.
+  const activeItems = activeType === 'wildlife' ? orderedWildlife : orderedPlants;
 
   // Rearrange mode actions.
   // `dragId` (optional) — when entered via long-press on a tile, primes that
   // tile to auto-start dragging in the rearrange grid.
   const startRearrangeMode = useCallback((dragId) => {
-    setRearrangeDraft(orderedPlants.map(p => p.id));
+    setRearrangeDraft(activeItems.map(p => p.id));
     setPendingDragId(typeof dragId === 'string' ? dragId : null);
     setRearrangeMode(true);
-  }, [orderedPlants]);
+  }, [activeItems]);
 
   const cancelRearrangeMode = useCallback(() => {
     setRearrangeMode(false);
@@ -156,12 +179,13 @@ export function GardenProvider({ children }) {
   const saveRearrangeMode = useCallback(async () => {
     if (rearrangeDraft) {
       const existing = garden?.customization || {};
-      await handleUpdateGardenCustomization({ ...existing, plantOrder: rearrangeDraft });
+      const orderKey = activeType === 'wildlife' ? 'wildlifeOrder' : 'plantOrder';
+      await handleUpdateGardenCustomization({ ...existing, [orderKey]: rearrangeDraft });
     }
     setRearrangeMode(false);
     setRearrangeDraft(null);
     setPendingDragId(null);
-  }, [rearrangeDraft, garden?.customization, handleUpdateGardenCustomization]);
+  }, [rearrangeDraft, garden?.customization, handleUpdateGardenCustomization, activeType]);
 
   const value = {
     garden,
@@ -169,6 +193,11 @@ export function GardenProvider({ children }) {
     plants: orderedPlants,
     rawPlants: plants,
     filteredPlants,
+    wildlife: orderedWildlife,
+    filteredWildlife,
+    hasWildlife: wildlifeList.length > 0,
+    activeType,
+    activeItems,
     isLoading,
     plantsLoaded,
     user,
@@ -179,7 +208,9 @@ export function GardenProvider({ children }) {
     setSort,
     filters,
     setFilters,
-    
+    wildlifeFilters,
+    setWildlifeFilters,
+
     // Actions
     updateGarden: handleUpdateGarden,
     updateGardenAbout: handleUpdateGardenAbout,

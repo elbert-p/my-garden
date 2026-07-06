@@ -18,7 +18,7 @@ const SORT_OPTIONS = [
   { key: 'hostedInsects', label: 'Hosted Butterflies and Moths' },
 ];
 
-const MULTI_FILTER_CATEGORIES = [
+export const MULTI_FILTER_CATEGORIES = [
   { key: 'bloomTime', label: 'Bloom Time', options: BLOOM_OPTIONS },
   { key: 'sunlight', label: 'Sunlight', options: SUN_OPTIONS },
   { key: 'moisture', label: 'Moisture', options: MOISTURE_OPTIONS },
@@ -334,12 +334,36 @@ export function getActiveSortCount(plants, sort) {
 
 // ============ COMPONENT ============
 
-export default function SortFilterControls({ sort, onSortChange, filters, onFiltersChange }) {
+export default function SortFilterControls({
+  sort, onSortChange, filters, onFiltersChange,
+  enableSort = true,
+  multiCategories = MULTI_FILTER_CATEGORIES,
+  enableDate = true,
+  enableHeight = true,
+  enableBadges = true,
+}) {
   const [sortOpen, setSortOpen] = useState(false);
   const [filterOpen, setFilterOpen] = useState(false);
   const [expandedCategory, setExpandedCategory] = useState(null);
   const sortRef = useRef(null);
   const filterRef = useRef(null);
+  const filterDropdownRef = useRef(null);
+
+  // Expand a filter category and scroll it up to the top of the (scrollable)
+  // dropdown so its options are immediately visible — or as far up as the
+  // remaining content allows.
+  const toggleCategory = (key, e) => {
+    const willExpand = expandedCategory !== key;
+    const headerEl = e.currentTarget;
+    setExpandedCategory(willExpand ? key : null);
+    if (willExpand && headerEl) {
+      requestAnimationFrame(() => {
+        const dd = filterDropdownRef.current;
+        if (!dd) return;
+        dd.scrollTop += headerEl.getBoundingClientRect().top - dd.getBoundingClientRect().top;
+      });
+    }
+  };
 
   const filterCount = getActiveFilterCount(filters);
 
@@ -423,6 +447,7 @@ export default function SortFilterControls({ sort, onSortChange, filters, onFilt
   return (
     <>
       {/* Sort Button */}
+      {enableSort && (
       <div className={styles.container} ref={sortRef}>
         <div
           className={`${styles.controlButton} ${sort.key ? styles.active : ''}`}
@@ -470,6 +495,7 @@ export default function SortFilterControls({ sort, onSortChange, filters, onFilt
           </div>
         )}
       </div>
+      )}
 
       {/* Filter Button */}
       <div className={styles.container} ref={filterRef}>
@@ -492,7 +518,7 @@ export default function SortFilterControls({ sort, onSortChange, filters, onFilt
         </div>
 
         {filterOpen && (
-          <div className={styles.dropdown}>
+          <div className={styles.dropdown} ref={filterDropdownRef}>
             <div className={styles.dropdownHeader}>
               <span>Filter by</span>
               {filterCount > 0 && (
@@ -501,10 +527,11 @@ export default function SortFilterControls({ sort, onSortChange, filters, onFilt
             </div>
 
             {/* Date planted filter */}
+            {enableDate && (
             <div className={styles.filterCategory}>
               <div
                 className={styles.categoryHeader}
-                onClick={() => setExpandedCategory(expandedCategory === '_date' ? null : '_date')}
+                onClick={(e) => toggleCategory('_date', e)}
                 role="button"
                 tabIndex={0}
               >
@@ -541,12 +568,14 @@ export default function SortFilterControls({ sort, onSortChange, filters, onFilt
                 </div>
               )}
             </div>
+            )}
 
             {/* Height filter */}
+            {enableHeight && (
             <div className={styles.filterCategory}>
               <div
                 className={styles.categoryHeader}
-                onClick={() => setExpandedCategory(expandedCategory === '_height' ? null : '_height')}
+                onClick={(e) => toggleCategory('_height', e)}
                 role="button"
                 tabIndex={0}
               >
@@ -589,16 +618,17 @@ export default function SortFilterControls({ sort, onSortChange, filters, onFilt
                 </div>
               )}
             </div>
+            )}
 
             {/* Multi-select categories */}
-            {MULTI_FILTER_CATEGORIES.map(cat => {
+            {multiCategories.map(cat => {
               const activeValues = filters[cat.key] || [];
               const isExpanded = expandedCategory === cat.key;
               return (
                 <div key={cat.key} className={styles.filterCategory}>
                   <div
                     className={styles.categoryHeader}
-                    onClick={() => setExpandedCategory(isExpanded ? null : cat.key)}
+                    onClick={(e) => toggleCategory(cat.key, e)}
                     role="button"
                     tabIndex={0}
                   >
@@ -642,7 +672,7 @@ export default function SortFilterControls({ sort, onSortChange, filters, onFilt
             })}
 
             {/* Badge filter categories (dynamic from BADGE_DEFS) */}
-            {BADGE_DEFS.map(def => {
+            {enableBadges && BADGE_DEFS.map(def => {
               const filterKey = `_badge_${def.key}`;
               const activeValues = filters[filterKey] || [];
               const isExpanded = expandedCategory === filterKey;
@@ -650,7 +680,7 @@ export default function SortFilterControls({ sort, onSortChange, filters, onFilt
                 <div key={filterKey} className={styles.filterCategory}>
                   <div
                     className={styles.categoryHeader}
-                    onClick={() => setExpandedCategory(isExpanded ? null : filterKey)}
+                    onClick={(e) => toggleCategory(filterKey, e)}
                     role="button"
                     tabIndex={0}
                   >

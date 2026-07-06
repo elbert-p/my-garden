@@ -54,7 +54,7 @@ const formatDateDisplay = (dateStr) => { if (!dateStr) return ''; const [y, m, d
 export default function PlantPage() {
   const router = useRouter();
   const { plantId } = useParams();
-  const { gardenId, user, isInitialized, garden, updatePlantInContext, removePlantFromContext } = useGarden();
+  const { gardenId, user, isInitialized, garden, wildlife, updatePlantInContext, removePlantFromContext } = useGarden();
 
   const [plant, setPlant] = useState(null);
   const [editing, setEditing] = useState(false);
@@ -80,6 +80,10 @@ export default function PlantPage() {
 
   const mainRef = useRef(null);
   const addRef = useRef(null);
+
+  // Wildlife are stored in the plants table with type='wildlife'. They reuse this
+  // detail page but show only name/notes/photos (no autofill or plant attributes).
+  const isWildlife = plant?.type === 'wildlife';
 
   // Scroll to top on mount
   useEffect(() => { window.scrollTo(0, 0); }, []);
@@ -133,13 +137,13 @@ export default function PlantPage() {
     setShowAutofillModal(true);
   };
 
-  // Auto-show autofill modal
+  // Auto-show autofill modal (plants only — wildlife have no reference data)
   useEffect(() => {
-    if (plant && !plant.hasAutofilled) {
+    if (plant && plant.type !== 'wildlife' && !plant.hasAutofilled) {
       const result = findData(plant.scientificName, plant.commonName);
       if (result) applyAutofillResult(result);
     }
-  }, [plant?.scientificName, plant?.commonName, plant?.hasAutofilled]);
+  }, [plant?.scientificName, plant?.commonName, plant?.hasAutofilled, plant?.type]);
 
   // Escape key handler
   useEffect(() => {
@@ -379,16 +383,19 @@ export default function PlantPage() {
     }
     await deletePlant(plantId, user?.id);
     removePlantFromContext(plantId);
-    router.push(`/garden/${gardenId}`);
+    // Return to the wildlife grid if other wildlife remain, else the plants grid.
+    const otherWildlifeRemain = isWildlife && wildlife.some(w => w.id !== plantId);
+    router.push(otherWildlifeRemain ? `/garden/${gardenId}/wildlife` : `/garden/${gardenId}`);
   };
 
+  const label = isWildlife ? 'Wildlife' : 'Plant';
   const plantMenu = [
-    { icon: <FiEdit size={16} />, label: 'Edit Plant', onClick: () => { setTemp({ ...plant }); setEditing(true); }},
-    { icon: <FiDatabase size={16} />, label: 'Autofill', onClick: onAutofillClick },
+    { icon: <FiEdit size={16} />, label: `Edit ${label}`, onClick: () => { setTemp({ ...plant }); setEditing(true); }},
+    { icon: <FiDatabase size={16} />, label: 'Autofill', onClick: onAutofillClick, visible: !isWildlife },
     { icon: <FiEye size={16} />, label: 'Edit Privacy', onClick: startPlantPrivacy, visible: !!user },
     { divider: true },
-    { icon: <FiCopy size={16} />, label: 'Copy Plant', onClick: onCopyPlant },
-    { icon: <FiShare2 size={16} />, label: 'Share Plant', onClick: handleShare, variant: 'share' },
+    { icon: <FiCopy size={16} />, label: 'Copy Plant', onClick: onCopyPlant, visible: !isWildlife },
+    { icon: <FiShare2 size={16} />, label: `Share ${label}`, onClick: handleShare, variant: 'share' },
     { divider: true },
     { icon: <FiTrash2 size={16} />, label: 'Delete', onClick: () => setShowDeleteModal(true), danger: true },
   ];
@@ -406,8 +413,8 @@ export default function PlantPage() {
       <div className={styles.container}>
         <PageHeader
             title={plant.commonName ? (plant.commonName) : plant.scientificName ? (
-            <em>{plant.scientificName}</em>) : ('Plant')}
-          onBack={() => router.back()}
+            <em>{plant.scientificName}</em>) : (label)}
+          onBack={() => isWildlife ? router.push(`/garden/${gardenId}/wildlife`) : router.back()}
           actions={
             privacyMode ? (
               <div className={styles.privacyActions}>
@@ -440,7 +447,7 @@ export default function PlantPage() {
             }}
           >
             <img src={temp.mainImage || '/placeholder-plant.jpg'} alt="" className={styles.mainImage} onError={(e) => { e.target.src = '/placeholder-plant.jpg'; }} />
-            {!privacyMode && !garden?.customization?.hideBadges && <PlantBadges commonName={plant.commonName} scientificName={plant.scientificName} size="large" />}
+            {!privacyMode && !isWildlife && !garden?.customization?.hideBadges && <PlantBadges commonName={plant.commonName} scientificName={plant.scientificName} size="large" />}
             {!privacyMode && <button className={styles.mainImageEditButton} onClick={(e) => { e.stopPropagation(); mainRef.current?.click(); }}><FiEdit size={18} /></button>}
             {!privacyMode && temp.mainImage && <button className={styles.mainImageDeleteButton} onClick={(e) => { e.stopPropagation(); setImageToRemove({ kind: 'main' }); }}><FiTrash2 size={18} /></button>}
             <input ref={mainRef} type="file" onChange={onMain} className={styles.fileInput} accept="image/*" onClick={(e) => e.stopPropagation()} />
@@ -450,14 +457,19 @@ export default function PlantPage() {
             <div className={`${styles.infoGrid} ${privacyMode ? styles.infoGridPrivacy : ''}`}>
               {renderField('commonName', <InfoField label="Common Name" value={temp.commonName} onChange={v => setTemp({ ...temp, commonName: v })} onSave={() => save(temp)} isEditing={editing} type="text" />)}
               {renderField('scientificName', <InfoField label="Scientific Name" value={temp.scientificName} onChange={v => setTemp({ ...temp, scientificName: v })} onSave={() => save(temp)} isEditing={editing} type="text" />)}
-              {renderField('datePlanted', <InfoField label="Date Planted" value={temp.datePlanted} onChange={v => setTemp({ ...temp, datePlanted: v })} onSave={() => save(temp)} isEditing={editing} type="date" formatDisplay={formatDateDisplay} />)}
-              {renderField('bloomTime', <InfoField label="Bloom Time" value={temp.bloomTime} onChange={v => setTemp({ ...temp, bloomTime: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={BLOOM_OPTIONS} />)}
-              {renderField('height', <InfoField label="Height" value={temp.height} onChange={v => setTemp({ ...temp, height: v })} onSave={() => save(temp)} isEditing={editing} type="text" placeholder="e.g., 2-3 ft" />)}
-              {renderField('sunlight', <InfoField label="Sunlight" value={temp.sunlight} onChange={v => setTemp({ ...temp, sunlight: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={SUN_OPTIONS} />)}
-              {renderField('moisture', <InfoField label="Moisture" value={temp.moisture} onChange={v => setTemp({ ...temp, moisture: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={MOISTURE_OPTIONS} />)}
-              {renderField('plantType', <InfoField label="Plant Type" value={temp.plantType} onChange={v => { const updated = { ...temp, plantType: v }; setTemp(updated); if (!editing) save(updated); }} isEditing={editing} type="multiselect" options={PLANT_TYPE_OPTIONS} />)}
-              {renderField('nativeRange', <InfoField label="Native Range" value={temp.nativeRange} onChange={v => setTemp({ ...temp, nativeRange: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={NATIVE_OPTIONS} />)}
-              {renderField('hostedInsects', <InfoField label="Hosted Butterflies and Moths" value={temp.hostedInsects} onChange={v => setTemp({ ...temp, hostedInsects: v })} onSave={() => save(temp)} isEditing={editing} type="textarea" maxHeight="195px" placeholder="e.g., Monarch; Swallowtail; Bumblebee" />)}
+              {!isWildlife && (
+                <>
+                  {renderField('datePlanted', <InfoField label="Date Planted" value={temp.datePlanted} onChange={v => setTemp({ ...temp, datePlanted: v })} onSave={() => save(temp)} isEditing={editing} type="date" formatDisplay={formatDateDisplay} />)}
+                  {renderField('bloomTime', <InfoField label="Bloom Time" value={temp.bloomTime} onChange={v => setTemp({ ...temp, bloomTime: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={BLOOM_OPTIONS} />)}
+                  {renderField('height', <InfoField label="Height" value={temp.height} onChange={v => setTemp({ ...temp, height: v })} onSave={() => save(temp)} isEditing={editing} type="text" placeholder="e.g., 2-3 ft" />)}
+                  {renderField('sunlight', <InfoField label="Sunlight" value={temp.sunlight} onChange={v => setTemp({ ...temp, sunlight: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={SUN_OPTIONS} />)}
+                  {renderField('moisture', <InfoField label="Moisture" value={temp.moisture} onChange={v => setTemp({ ...temp, moisture: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={MOISTURE_OPTIONS} />)}
+                  {renderField('plantType', <InfoField label="Plant Type" value={temp.plantType} onChange={v => { const updated = { ...temp, plantType: v }; setTemp(updated); if (!editing) save(updated); }} isEditing={editing} type="multiselect" options={PLANT_TYPE_OPTIONS} />)}
+                  {renderField('nativeRange', <InfoField label="Native Range" value={temp.nativeRange} onChange={v => setTemp({ ...temp, nativeRange: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={NATIVE_OPTIONS} />)}
+                  {renderField('hostedInsects', <InfoField label="Hosted Butterflies and Moths" value={temp.hostedInsects} onChange={v => setTemp({ ...temp, hostedInsects: v })} onSave={() => save(temp)} isEditing={editing} type="textarea" maxHeight="195px" placeholder="e.g., Monarch; Swallowtail; Bumblebee" />)}
+                </>
+              )}
+              {isWildlife && renderField('nativeRange', <InfoField label="Native Range" value={temp.nativeRange} onChange={v => setTemp({ ...temp, nativeRange: v })} onSave={() => save(temp)} isEditing={editing} type="multiselect" options={NATIVE_OPTIONS} />)}
               {renderField('notes', <InfoField label="Notes" value={temp.notes} onChange={v => setTemp({ ...temp, notes: v })} onSave={() => save(temp)} isEditing={editing} type="textarea" emptyText="No notes" size="large" />, true)}
             </div>
           </div>
@@ -567,15 +579,15 @@ export default function PlantPage() {
         isOpen={showDeleteModal}
         onClose={() => setShowDeleteModal(false)}
         onConfirm={onDelete}
-        title="Delete Plant"
+        title={`Delete ${label}`}
         message={<>Delete <strong>{plant.commonName || plant.scientificName}</strong>?</>}
         confirmText="Delete"
         cancelText="Cancel"
         variant="danger"
       />
 
-      <Modal isOpen={showShareModal} onClose={() => setShowShareModal(false)} title="Share Plant" size="small">
-        <p className={styles.shareText}>Anyone with this link can view this plant:</p>
+      <Modal isOpen={showShareModal} onClose={() => setShowShareModal(false)} title={`Share ${label}`} size="small">
+        <p className={styles.shareText}>Anyone with this link can view this {label.toLowerCase()}:</p>
         <div className={styles.shareLink}>
           <code>{`${typeof window !== 'undefined' ? window.location.origin : ''}/share/${gardenId}/plant/${plantId}`}</code>
         </div>

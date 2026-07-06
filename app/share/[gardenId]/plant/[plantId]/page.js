@@ -65,7 +65,9 @@ export default function SharedPlantPage() {
   };
 
   const handleBack = () => {
-    if (hadContextOnMount.current) {
+    if (plant?.type === 'wildlife') {
+      router.push(`/share/${gardenId}/wildlife`);
+    } else if (hadContextOnMount.current) {
       router.back();
     } else {
       router.push(`/share/${gardenId}`);
@@ -99,10 +101,12 @@ export default function SharedPlantPage() {
   };
 
   const menuItems = [
-    { icon: <FiCopy size={16} />, label: 'Copy Plant', onClick: onCopyPlant },
-    { icon: <FiShare2 size={16} />, label: 'Share Plant', onClick: () => { setShowShareModal(true); setCopied(false); } },
+    { icon: <FiCopy size={16} />, label: 'Copy Plant', onClick: onCopyPlant, visible: !isWildlife },
+    { icon: <FiShare2 size={16} />, label: `Share ${itemLabel}`, onClick: () => { setShowShareModal(true); setCopied(false); } },
   ];
 
+  const isWildlife = plant?.type === 'wildlife';
+  const itemLabel = isWildlife ? 'Wildlife' : 'Plant';
   const hiddenFields = plant?.plantPrivacy?.hiddenFields || [];
   const hiddenImages = plant?.plantPrivacy?.hiddenImages || [];
   const isFieldVisible = (key) => !hiddenFields.includes(key);
@@ -139,7 +143,7 @@ export default function SharedPlantPage() {
     <>
       <div className={styles.container}>
         <PageHeader
-          title={plant.commonName || plant.scientificName || 'Plant'}
+          title={plant.commonName || plant.scientificName || itemLabel}
           onBack={handleBack}
           actions={<DropdownMenu items={menuItems} />}
         />
@@ -147,27 +151,32 @@ export default function SharedPlantPage() {
         <div className={styles.details}>
           <div className={styles.mainImageContainer} onClick={() => setSelImg(plant.mainImage || '/placeholder-plant.jpg')}>
             <img src={plant.mainImage || '/placeholder-plant.jpg'} alt="" className={styles.mainImage} onError={(e) => { e.target.src = '/placeholder-plant.jpg'; }} />
-            {!garden?.customization?.hideBadges && <PlantBadges commonName={plant.commonName} scientificName={plant.scientificName} size="large" />}
+            {!isWildlife && !garden?.customization?.hideBadges && <PlantBadges commonName={plant.commonName} scientificName={plant.scientificName} size="large" />}
           </div>
 
           <div className={`${styles.infoGrid} ${!visibleImages.length ? styles.infoGridNoMargin : ''}`}>
             <Field label="Common Name" value={plant.commonName} fieldKey="commonName" />
             <Field label="Scientific Name" value={plant.scientificName} fieldKey="scientificName" />
-            <Field label="Date Planted" value={formatDate(plant.datePlanted)} fieldKey="datePlanted" />
-            <Field label="Bloom Time" value={plant.bloomTime} fieldKey="bloomTime" />
-            <Field label="Height" value={plant.height} fieldKey="height" />
-            <Field label="Sunlight" value={plant.sunlight} fieldKey="sunlight" />
-            <Field label="Moisture" value={plant.moisture} fieldKey="moisture" />
-            <Field label="Plant Type" value={plant.plantType} fieldKey="plantType" />
-            <Field label="Native Range" value={plant.nativeRange} fieldKey="nativeRange" />
-            {isFieldVisible('hostedInsects') && plant.hostedInsects && (
-              <div className={styles.field}>
-                <span className={styles.label}>Hosted Butterflies and Moths</span>
-                <div className={styles.value} style={{ maxHeight: '195px', overflowY: 'auto' }}>
-                  <RichText content={plant.hostedInsects} />
-                </div>
-              </div>
+            {!isWildlife && (
+              <>
+                <Field label="Date Planted" value={formatDate(plant.datePlanted)} fieldKey="datePlanted" />
+                <Field label="Bloom Time" value={plant.bloomTime} fieldKey="bloomTime" />
+                <Field label="Height" value={plant.height} fieldKey="height" />
+                <Field label="Sunlight" value={plant.sunlight} fieldKey="sunlight" />
+                <Field label="Moisture" value={plant.moisture} fieldKey="moisture" />
+                <Field label="Plant Type" value={plant.plantType} fieldKey="plantType" />
+                <Field label="Native Range" value={plant.nativeRange} fieldKey="nativeRange" />
+                {isFieldVisible('hostedInsects') && plant.hostedInsects && (
+                  <div className={styles.field}>
+                    <span className={styles.label}>Hosted Butterflies and Moths</span>
+                    <div className={styles.value} style={{ maxHeight: '195px', overflowY: 'auto' }}>
+                      <RichText content={plant.hostedInsects} />
+                    </div>
+                  </div>
+                )}
+              </>
             )}
+            {isWildlife && <Field label="Native Range" value={plant.nativeRange} fieldKey="nativeRange" />}
             {isFieldVisible('notes') && plant.notes && (
               <div className={`${styles.field} ${styles.fieldLarge}`}>
                 <span className={styles.label}>Notes</span>
@@ -205,8 +214,8 @@ export default function SharedPlantPage() {
         </div>
       )}
 
-      <Modal isOpen={showShareModal} onClose={() => setShowShareModal(false)} title="Share Plant" size="small">
-        <p className={styles.shareText}>Anyone with this link can view this plant:</p>
+      <Modal isOpen={showShareModal} onClose={() => setShowShareModal(false)} title={`Share ${itemLabel}`} size="small">
+        <p className={styles.shareText}>Anyone with this link can view this {itemLabel.toLowerCase()}:</p>
         <div className={styles.shareLink}>
           <code>{`${typeof window !== 'undefined' ? window.location.origin : ''}/share/${gardenId}/plant/${plantId}`}</code>
         </div>

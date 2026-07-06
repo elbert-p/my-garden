@@ -4,11 +4,12 @@ import { useParams, usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { FiBookmark, FiCopy } from 'react-icons/fi';
 import { SharedGardenProvider, useSharedGarden } from '@/context/SharedGardenContext';
-import { getActiveFilterCount, getActiveSortCount } from '@/components/SortFilterControls';
+import { getActiveFilterCount, getActiveSortCount, MULTI_FILTER_CATEGORIES } from '@/components/SortFilterControls';
 import { useAuth } from '@/context/AuthContext';
 import {
   saveGarden as saveGardenDb, unsaveGarden as unsaveGardenDb,
   isGardenSaved as isGardenSavedDb, recordGardenView,
+  getPlantDisplay, getWildlifeDisplay,
 } from '@/lib/dataService';
 import {
   addLocalRecentlyViewed, addLocalSavedGarden,
@@ -19,7 +20,8 @@ import NavBar from '@/components/NavBar';
 import SortFilterControls from '@/components/SortFilterControls';
 import styles from './layout.module.css';
 
-const DEFAULT_CUSTOMIZATION = { columns: 4, bgColor: '#f4f4f9' };
+// The wildlife tab exposes only a Native Range filter (no sort).
+const WILDLIFE_FILTER_CATEGORIES = MULTI_FILTER_CATEGORIES.filter(c => c.key === 'nativeRange');
 
 function SharedGardenLayoutContent({ children }) {
   const { gardenId } = useParams();
@@ -29,7 +31,9 @@ function SharedGardenLayoutContent({ children }) {
   
   const {
     garden, owner, filteredPlants, totalVisible, isLoading, plantsLoaded, error,
+    wildlife, filteredWildlife, totalVisibleWildlife, hasVisibleWildlife,
     searchQuery, setSearchQuery, sort, setSort, filters, setFilters,
+    wildlifeFilters, setWildlifeFilters,
     hasVisibleAbout, isTodoVisible,
   } = useSharedGarden();
 
@@ -38,9 +42,16 @@ function SharedGardenLayoutContent({ children }) {
 
   const isAboutPage = pathname.endsWith('/about');
   const isTodoPage = pathname.endsWith('/todo');
+  const isWildlifePage = pathname.endsWith('/wildlife');
   const isPlantPage = pathname.includes('/plant/');
   const isSubPage = isPlantPage || isAboutPage || isTodoPage;
   const contentWidth = isSubPage ? 'medium' : 'large';
+
+  // The plant detail route is reused for wildlife — highlight the Wildlife tab
+  // when viewing a wildlife detail page.
+  const currentItemId = isPlantPage ? pathname.split('/plant/')[1]?.split('/')[0] : null;
+  const isWildlifeDetail = !!currentItemId && wildlife.some(w => w.id === currentItemId);
+  const onWildlife = isWildlifePage || isWildlifeDetail;
 
   // Record view when garden loads
   useEffect(() => {
@@ -87,7 +98,8 @@ function SharedGardenLayoutContent({ children }) {
 
   // Build tabs conditionally based on content visibility
   const tabs = [
-    { label: 'Plants', href: `/share/${gardenId}`, active: !isAboutPage && !isTodoPage },
+    { label: 'Plants', href: `/share/${gardenId}`, active: !isAboutPage && !isTodoPage && !onWildlife },
+    hasVisibleWildlife && { label: 'Wildlife', href: `/share/${gardenId}/wildlife`, active: onWildlife },
     hasVisibleAbout && { label: 'About', href: `/share/${gardenId}/about`, active: isAboutPage },
     isTodoVisible && { label: 'To-Do', href: `/share/${gardenId}/todo`, active: isTodoPage },
   ].filter(Boolean);
@@ -98,10 +110,9 @@ function SharedGardenLayoutContent({ children }) {
     { icon: <FiCopy size={16} />, label: 'Make a copy', onClick: handleCopyGarden },
   ];
 
-  const customization = {
-    ...DEFAULT_CUSTOMIZATION,
-    ...garden?.customization,
-  };
+  const activeBgColor = onWildlife
+    ? getWildlifeDisplay(garden?.customization).bgColor
+    : getPlantDisplay(garden?.customization).bgColor;
 
   if (!isLoading && error) {
     return (
@@ -120,6 +131,14 @@ function SharedGardenLayoutContent({ children }) {
       <NavBar
         title={garden?.name || ''}
         badge={plantsLoaded ? (() => {
+          // About / To-Do: show the whole garden's total (plants + wildlife).
+          if (isAboutPage || isTodoPage) return totalVisible + totalVisibleWildlife;
+          if (isWildlifePage) {
+            const hasWildlifeFilters = getActiveFilterCount(wildlifeFilters) > 0 || !!searchQuery;
+            if (hasWildlifeFilters) return `${filteredWildlife.length} / ${totalVisibleWildlife}`;
+            return totalVisibleWildlife;
+          }
+          if (isWildlifeDetail) return totalVisibleWildlife;
           const filterCount = getActiveFilterCount(filters);
           const hasFilters = filterCount > 0 || !!searchQuery;
           if (hasFilters) {
@@ -136,8 +155,20 @@ function SharedGardenLayoutContent({ children }) {
         showSearch={!isSubPage}
         searchValue={searchQuery}
         onSearchChange={setSearchQuery}
-        searchPlaceholder="Search plants..."
-        extraActions={!isSubPage ? (
+        searchPlaceholder={isWildlifePage ? 'Search wildlife...' : 'Search plants...'}
+        extraActions={(!isSubPage && isWildlifePage) ? (
+          <SortFilterControls
+            sort={{ key: null, dir: 'asc' }}
+            onSortChange={() => {}}
+            filters={wildlifeFilters}
+            onFiltersChange={setWildlifeFilters}
+            enableSort={false}
+            enableDate={false}
+            enableHeight={false}
+            enableBadges={false}
+            multiCategories={WILDLIFE_FILTER_CATEGORIES}
+          />
+        ) : (!isSubPage) ? (
           <SortFilterControls
             sort={sort}
             onSortChange={setSort}
@@ -156,7 +187,7 @@ function SharedGardenLayoutContent({ children }) {
       ) : (
         <div
           className={styles.gardenBackground}
-          style={{ backgroundColor: customization.bgColor }}
+          style={{ backgroundColor: activeBgColor }}
         >
           {children}
         </div>

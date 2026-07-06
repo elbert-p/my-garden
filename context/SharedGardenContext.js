@@ -18,6 +18,7 @@ export function SharedGardenProvider({ children }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [sort, setSort] = useState({ key: null, dir: 'asc' });
   const [filters, setFilters] = useState({});
+  const [wildlifeFilters, setWildlifeFilters] = useState({});
 
   useEffect(() => {
     let isMounted = true;
@@ -51,25 +52,34 @@ export function SharedGardenProvider({ children }) {
     return () => { isMounted = false; };
   }, [gardenId]);
 
-  // Apply owner's manual rearrange order, then filter out hidden plants (garden-level privacy)
-  const orderedPlants = applyManualOrder(plants, garden?.customization?.plantOrder);
+  // Wildlife are plants with type='wildlife' in the same table — split them out.
+  const plantList = plants.filter(p => p.type !== 'wildlife');
+  const wildlifeList = plants.filter(p => p.type === 'wildlife');
   const hiddenPlantIds = garden?.customization?.hiddenPlantIds || [];
-  const visiblePlants = hiddenPlantIds.length > 0
-    ? orderedPlants.filter(p => !hiddenPlantIds.includes(p.id))
-    : orderedPlants;
-  const totalVisible = visiblePlants.length;
+  const hideHidden = (items) => hiddenPlantIds.length > 0
+    ? items.filter(p => !hiddenPlantIds.includes(p.id))
+    : items;
+  const matchesSearch = (item) => {
+    const query = searchQuery.toLowerCase();
+    const commonName = (item.commonName || '').toLowerCase();
+    const scientificName = (item.scientificName || '').toLowerCase();
+    return commonName.includes(query) || scientificName.includes(query);
+  };
 
-  // Filter by search, then apply sort & filters
-  const searchFiltered = searchQuery.trim()
-    ? visiblePlants.filter(plant => {
-        const query = searchQuery.toLowerCase();
-        const commonName = (plant.commonName || '').toLowerCase();
-        const scientificName = (plant.scientificName || '').toLowerCase();
-        return commonName.includes(query) || scientificName.includes(query);
-      })
-    : visiblePlants;
-  
+  // Plants: apply owner's manual order, drop hidden, then search + sort/filter.
+  const orderedPlants = applyManualOrder(plantList, garden?.customization?.plantOrder);
+  const visiblePlants = hideHidden(orderedPlants);
+  const totalVisible = visiblePlants.length;
+  const searchFiltered = searchQuery.trim() ? visiblePlants.filter(matchesSearch) : visiblePlants;
   const filteredPlants = applySortAndFilter(searchFiltered, sort, filters);
+
+  // Wildlife: same visibility rules, but search only (no sort/filter on that tab).
+  const orderedWildlife = applyManualOrder(wildlifeList, garden?.customization?.wildlifeOrder);
+  const visibleWildlife = hideHidden(orderedWildlife);
+  const totalVisibleWildlife = visibleWildlife.length;
+  const hasVisibleWildlife = totalVisibleWildlife > 0;
+  const searchFilteredWildlife = searchQuery.trim() ? visibleWildlife.filter(matchesSearch) : visibleWildlife;
+  const filteredWildlife = applySortAndFilter(searchFilteredWildlife, { key: null, dir: 'asc' }, wildlifeFilters);
 
   // About block visibility (shown by default — only hidden when explicitly listed)
   const hiddenAboutBlockIds = garden?.customization?.hiddenAboutBlockIds || [];
@@ -87,6 +97,10 @@ export function SharedGardenProvider({ children }) {
     plants,
     filteredPlants,
     totalVisible,
+    wildlife: orderedWildlife,
+    filteredWildlife,
+    totalVisibleWildlife,
+    hasVisibleWildlife,
     owner,
     isLoading: gardenLoading,
     plantsLoaded,
@@ -97,6 +111,8 @@ export function SharedGardenProvider({ children }) {
     setSort,
     filters,
     setFilters,
+    wildlifeFilters,
+    setWildlifeFilters,
     // About/todo visibility
     visibleAboutBlocks,
     hasVisibleAbout,
