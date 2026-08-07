@@ -1,0 +1,132 @@
+/* Welcome / landing page — /app/welcome/page.module.css */
+
+.page {
+  min-height: 100vh;
+  color: #333;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem var(--page-padding-inline, 2rem) 3rem;
+  background: linear-gradient(180deg, #f0f7f0 0%, #f4f4f9 100%);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  color: #4CAF50;
+  margin: 0 auto 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: #1a1a1a;
+}
+
+.tagline {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #555;
+  max-width: 620px;
+  margin: 0 auto 1.75rem;
+}
+
+.ctaRow {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.15s ease;
+}
+
+.ctaPrimary:hover {
+  background-color: #43a047;
+}
+
+.ctaSecondary {
+  color: #4CAF50;
+  padding: 0.7rem 1.25rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #cfe3d0;
+  transition: background-color 0.15s ease;
+}
+
+.ctaSecondary:hover {
+  background-color: #f0f7f0;
+}
+
+.container {
+  max-width: var(--page-max-width-medium, 800px);
+  margin: 0 auto;
+  padding: var(--page-padding-block, 2rem) var(--page-padding-inline, 2rem);
+  line-height: 1.7;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.heading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  color: #1a1a1a;
+}
+
+.list {
+  margin: 0.5rem 0;
+  padding-left: 1.4rem;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+}
+
+.link {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  border-top: 1px solid #e5e7eb;
+  padding: 2rem var(--page-padding-inline, 2rem);
+  text-align: center;
+  background-color: #fafafa;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.footerNote {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 0;
+}
