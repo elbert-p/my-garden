@@ -17613,5 +17613,37 @@
       "Jun"
     ],
     "Latin name": "Vitis riparia"
+  },
+  "Clematis virginiana": {
+    "Common name": "Virgin's Bower",
+    "Height": "Up to 10 ft",
+    "plantType": [
+      "Woody Vine"
+    ],
+    "Ecoregion": "58, 59, 82, 83, 84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
+    "Hosted Butterflies and Moths": "Clematis Borer; Insignificant Pug; Satyr Pug; Gray Pug; Curved-Tooth Geometer; Brown Bark Carpet; Fall Webworm; White-Marked Tussock Moth; Tufted Apple-Bud Moth; Common Tan Wave; Mournful Thyris; Evergreen Bagworm Moth",
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Latin name": "Clematis virginiana"
   }
 }

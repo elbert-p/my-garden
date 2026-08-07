@@ -5,6 +5,9 @@ import './globals.css';
 export const metadata = {
   title: 'My Garden',
   description: 'Track and manage your garden plants',
+  verification: {
+    google: 'D-Il023ESJ7fvPfnBR3P524PJXSvPFCZQ3ZZnhNfGXs',
+  },
 };
 
 export const viewport = {

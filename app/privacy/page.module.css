@@ -1,0 +1,71 @@
+/* Legal page — /app/privacy/page.module.css */
+
+.page {
+  min-height: 100vh;
+  padding: var(--page-padding-block, 2rem) var(--page-padding-inline, 2rem);
+}
+
+.container {
+  max-width: var(--page-max-width-medium, 800px);
+  margin: 0 auto;
+  color: #333;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+  color: #1a1a1a;
+}
+
+.updated {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 0 0 2rem;
+}
+
+.heading {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 2rem 0 0.5rem;
+  color: #1a1a1a;
+}
+
+.subheading {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 1.25rem 0 0.25rem;
+  color: #333;
+}
+
+.list {
+  margin: 0.5rem 0;
+  padding-left: 1.4rem;
+}
+
+.list li {
+  margin-bottom: 0.4rem;
+}
+
+.link {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
