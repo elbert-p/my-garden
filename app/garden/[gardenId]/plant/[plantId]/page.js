@@ -9,7 +9,8 @@ import { useGarden } from '@/context/GardenContext';
 import { SHARE_INTENT_KEY } from '@/context/AuthContext';
 import { getPlant, updatePlant, deletePlant } from '@/lib/dataService';
 import { uploadImage, deleteImage } from '@/lib/imageStorage';
-import { getAutofillImageUrl, getImageCredit, imageExists } from '@/lib/autofillImages';
+import { getImageCredit } from '@/lib/autofillImages';
+import { findData, buildAutofillUpdates } from '@/lib/plantAutofill';
 import { BLOOM_OPTIONS, SUN_OPTIONS, MOISTURE_OPTIONS, NATIVE_OPTIONS, PLANT_TYPE_OPTIONS } from '@/lib/plantConstants';
 import PageHeader from '@/components/PageHeader';
 import DropdownMenu from '@/components/DropdownMenu';
@@ -18,36 +19,7 @@ import Button from '@/components/Button';
 import InfoField from '@/components/InfoField';
 import GoogleSignInButton from '@/components/GoogleSignInButton';
 import PlantBadges from '@/components/PlantBadges';
-import plantsData from '@/plants_dynamic.json';
 import styles from './page.module.css';
-
-// ---- Autofill lookup helpers ----
-
-const findByScientific = (name) => {
-  if (!name) return null;
-  const key = Object.keys(plantsData).find(k => k.toLowerCase() === name.trim().toLowerCase());
-  return key ? plantsData[key] : null;
-};
-
-const findByCommon = (name) => {
-  if (!name) return null;
-  const normalized = name.trim().toLowerCase();
-  return Object.values(plantsData).find(entry => {
-    if ((entry['Common name'] || '').trim().toLowerCase() === normalized) return true;
-    const alts = entry['Alternate common names'];
-    if (Array.isArray(alts) && alts.some(a => a.trim().toLowerCase() === normalized)) return true;
-    return false;
-  }) || null;
-};
-
-// Scientific name takes priority; returns { data, matchedBy } or null
-const findData = (scientificName, commonName) => {
-  const byScientific = findByScientific(scientificName);
-  if (byScientific) return { data: byScientific, matchedBy: 'scientific' };
-  const byCommon = findByCommon(commonName);
-  if (byCommon) return { data: byCommon, matchedBy: 'common' };
-  return null;
-};
 
 const formatDateDisplay = (dateStr) => { if (!dateStr) return ''; const [y, m, d] = dateStr.split('-').map(Number); return new Date(y, m - 1, d).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }); };
 
@@ -333,46 +305,8 @@ export default function PlantPage() {
 
   const onAutofill = async () => {
     if (!autofillData) return;
-
-    // Determine common name:
-    // - Matched by common name: keep the user's entered name (it's already recognized)
-    // - Matched by scientific name: replace with DB common name unless the user's
-    //   current common name matches the DB's common or alternate names
-    let commonName = temp.commonName?.trim() || '';
-    if (autofillMatchedBy === 'scientific' && autofillData['Common name']) {
-      const userCommon = commonName.toLowerCase();
-      const dbCommon = autofillData['Common name'].trim().toLowerCase();
-      const dbAlts = (autofillData['Alternate common names'] || []).map(a => a.trim().toLowerCase());
-      const isRecognized = userCommon && (userCommon === dbCommon || dbAlts.includes(userCommon));
-      if (!isRecognized) {
-        commonName = autofillData['Common name'].trim();
-      }
-    }
-
-    // Use the reference image from the JSON (first path) if the user hasn't
-    // uploaded one — but only if it actually loads, so a wrong/missing path
-    // doesn't store a dead URL. No usable image leaves it empty, keeping the
-    // placeholder/click-to-upload behavior intact.
-    let mainImage = temp.mainImage;
-    if (!mainImage) {
-      const candidate = getAutofillImageUrl(autofillData);
-      mainImage = (candidate && await imageExists(candidate)) ? candidate : '';
-    }
-
-    await save({
-      ...temp,
-      commonName,
-      mainImage,
-      scientificName: autofillData['Latin name']?.trim() || temp.scientificName,
-      bloomTime: autofillData['Bloom time'] || temp.bloomTime,
-      height: autofillData['Height'] || temp.height,
-      sunlight: autofillData['Sunlight'] || temp.sunlight,
-      moisture: autofillData['Moisture'] || temp.moisture,
-      plantType: autofillData['plantType'] || temp.plantType,
-      nativeRange: autofillData['Native Range'] || temp.nativeRange,
-      hostedInsects: autofillData['Hosted Butterflies and Moths'] || temp.hostedInsects,
-      hasAutofilled: true
-    });
+    const updates = await buildAutofillUpdates(temp, { data: autofillData, matchedBy: autofillMatchedBy });
+    await save({ ...temp, ...updates });
     setShowAutofillModal(false);
   };
 

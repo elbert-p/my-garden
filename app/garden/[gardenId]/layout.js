@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useParams, useRouter, usePathname } from 'next/navigation';
-import { FiPlus, FiEdit, FiTrash2, FiShare2, FiSliders, FiBookmark, FiCopy, FiClipboard, FiEye, FiMove } from 'react-icons/fi';
+import { FiPlus, FiEdit, FiTrash2, FiShare2, FiSliders, FiBookmark, FiCopy, FiClipboard, FiEye, FiMove, FiUploadCloud } from 'react-icons/fi';
 import { GardenProvider, useGarden } from '@/context/GardenContext';
 import { SHARE_INTENT_KEY } from '@/context/AuthContext';
 import { uploadImage, isDataUrl } from '@/lib/imageStorage';
@@ -20,6 +20,7 @@ import Modal, { ConfirmModal } from '@/components/Modal';
 import FormInput, { ErrorMessage } from '@/components/FormInput';
 import ImageUpload from '@/components/ImageUpload';
 import Button from '@/components/Button';
+import BulkUploadModal from '@/components/BulkUploadModal';
 import GoogleSignInButton from '@/components/GoogleSignInButton';
 import styles from './layout.module.css';
 
@@ -54,7 +55,7 @@ function GardenLayoutContent({ children }) {
     wildlife, filteredWildlife, hasWildlife, activeType, activeItems,
     searchQuery, setSearchQuery, sort, setSort, filters, setFilters,
     wildlifeFilters, setWildlifeFilters,
-    updateGarden, deleteGarden, createPlant, handleShare,
+    updateGarden, deleteGarden, createPlant, createPlants, handleShare,
     updateGardenCustomization,
     showAddPlantModal, setShowAddPlantModal,
     showEditGardenModal, setShowEditGardenModal,
@@ -76,6 +77,7 @@ function GardenLayoutContent({ children }) {
   const [editImage, setEditImage] = useState(null);
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
+  const [showBulkUploadModal, setShowBulkUploadModal] = useState(false);
 
   // Customize form state
   const [customizeColumnsStr, setCustomizeColumnsStr] = useState('');
@@ -269,6 +271,7 @@ function GardenLayoutContent({ children }) {
     { icon: <FiSliders size={16} />, label: 'Customize', onClick: () => openCustomizeModal() },
     { icon: <FiEye size={16} />, label: 'Edit Privacy', onClick: startPrivacyMode, visible: !isSubPage && !!user },
     { icon: <FiMove size={16} />, label: 'Rearrange', onClick: startRearrangeMode, visible: !isSubPage },
+    { icon: <FiUploadCloud size={16} />, label: 'Bulk Upload', onClick: () => setShowBulkUploadModal(true), visible: !isSubPage },
     { divider: true },
     { icon: <FiClipboard size={16} />, label: 'Paste Plant', onClick: handlePastePlant, variant: 'success', visible: hasCopiedPlant && activeType === 'plant' },
     { icon: <FiShare2 size={16} />, label: 'Share Garden', onClick: handleShare, variant: 'share' },
@@ -521,6 +524,15 @@ function GardenLayoutContent({ children }) {
           <Button onClick={handleAddPlant}>Save</Button>
         </div>
       </Modal>
+
+      {/* Bulk Upload Modal */}
+      <BulkUploadModal
+        isOpen={showBulkUploadModal}
+        onClose={() => setShowBulkUploadModal(false)}
+        type={activeType === 'wildlife' ? 'wildlife' : 'plant'}
+        createPlants={createPlants}
+        existingItems={activeType === 'wildlife' ? wildlife : plants}
+      />
 
       {/* Edit Garden Modal */}
       <Modal isOpen={showEditGardenModal} onClose={() => { setShowEditGardenModal(false); setError(''); }} title="Edit Garden Details" size="medium">

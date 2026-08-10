@@ -7,6 +7,12 @@
   font-family: inherit;
 }
 
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
 /* Sizes */
 .small {
   padding: 8px 16px;

@@ -2,7 +2,7 @@
 import { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
 import { useParams, useRouter, usePathname } from 'next/navigation';
 import { useAuth } from './AuthContext';
-import { getGarden, updateGarden, updateGardenAbout, updateGardenTodo, updateGardenCustomization, deleteGarden, createPlant, getPlants, applyManualOrder } from '@/lib/dataService';
+import { getGarden, updateGarden, updateGardenAbout, updateGardenTodo, updateGardenCustomization, deleteGarden, createPlant, createPlants, getPlants, applyManualOrder } from '@/lib/dataService';
 import { applySortAndFilter } from '@/components/SortFilterControls';
 
 const GardenContext = createContext();
@@ -104,6 +104,15 @@ export function GardenProvider({ children }) {
     }, user?.id);
     setPlants(prev => [...prev, newPlant]);
     return newPlant;
+  }, [gardenId, user?.id]);
+
+  const handleCreatePlants = useCallback(async (plantDataList) => {
+    const newPlants = await createPlants(
+      plantDataList.map(p => ({ gardenId, ...p })),
+      user?.id
+    );
+    setPlants(prev => [...prev, ...newPlants]);
+    return newPlants;
   }, [gardenId, user?.id]);
 
   const handleUpdatePlantInContext = useCallback((updatedPlant) => {
@@ -218,6 +227,7 @@ export function GardenProvider({ children }) {
     updateGardenCustomization: handleUpdateGardenCustomization,
     deleteGarden: handleDeleteGarden,
     createPlant: handleCreatePlant,
+    createPlants: handleCreatePlants,
     updatePlantInContext: handleUpdatePlantInContext,
     removePlantFromContext: handleRemovePlantFromContext,
     handleShare,
