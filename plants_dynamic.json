@@ -3649,6 +3649,44 @@
     ],
     "Latin name": "Eutrochium purpureum"
   },
+  "Erythronium americanum": {
+    "Common name": "Trout Lily",
+    "Alternate common names": [
+      "Dog-tooth Violet"
+    ],
+    "Height": "0.25 ft",
+    "plantType": [
+      "Herbaceous perennial",
+      "bulb"
+    ],
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
+    "Autofill image paths": [
+      "erythronium_americanum.png"
+    ],
+    "Autofill image credits": [
+      "Missouri Botanical Garden"
+    ],
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Latin name": "Erythronium americanum"
+  },
   "Filipendula rubra": {
     "Common name": "Queen of the Prairie",
     "Height": "6-7 ft",
@@ -6443,6 +6481,33 @@
       "Aug"
     ],
     "Latin name": "Phlox maculata"
+  },
+  "Phlox paniculata": {
+    "Common name": "Garden Phlox",
+    "Alternate common names": [
+      "Tall Phlox"
+    ],
+    "Height": "2-4 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Southeastern US"
+    ],
+    "Hosted Butterflies and Moths": "Corn Earworm Moth; Spotted Straw Sun Moth; Common Idia; Olive Arches; Hitched Arches; Stalk Borer; Purple-Lined Sallow; Mosaic Sparganothis",
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Latin name": "Phlox paniculata"
   },
   "Phlox pilosa": {
     "Common name": "Prairie Phlox",
@@ -13151,6 +13216,32 @@
     ],
     "Latin name": "Gaultheria procumbens"
   },
+  "Hibiscus syriacus": {
+    "Common name": "Rose of Sharon ",
+    "Height": "8-12 ft",
+    "plantType": [
+      "Shrub",
+      "Tree"
+    ],
+    "Native Range": [
+      "Asia"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Latin name": "Hibiscus syriacus"
+  },
   "Hydrangea arborescens": {
     "Common name": "Smooth Hydrangea",
     "Height": "2-4 ft",
@@ -13309,7 +13400,42 @@
     "Moisture": [
       "Medium"
     ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
     "Latin name": "Ilex glabra 'Compacta'"
+  },
+  "Ilex opaca": {
+    "Common name": "American Holly",
+    "Height": "12-30 ft",
+    "plantType": [
+      "Shrub"
+    ],
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
+    "Pollen Source": "Banks? Cellophane Bee",
+    "Hosted Butterflies and Moths": "Saddleback Caterpillar Moth; Common Gray; Polyphemus Moth; Spotted Apatelodes; Exotic Leafroller Moth; Red-Banded Leafroller Moth; Io Moth; Henry's Elfin; Wavy-Lined Heterocampa; Reticulated Fruitworm Moth; Scallop Moth; Oblique-Banded Leafroller Moth; Unicorn Caterpillar Moth; Pawpaw Sphinx; Alternate Woodling; Maple Spanworm Moth; Maple Tip Borer; Spiny Oak-Slug Moth; Common Eupithacia; Subterranean Dart; Chickweed Geometer; Harris's Three-Spot; Bold-Feathered Grass Moth; Zigzag Herpetogramma; Fall Webworm; Black-Dotted Ruddy; Dark-Based Larisa; Ambiguous Moth; Pale Green Pinion; Spongy Moth; Forest Tent Caterpillar; Southern Flannel Moth; Holly Sallow; Confused Woodgrain; White-Marked Tussock Moth; Gray Quaker; Ruby Quaker; Skiff Moth; Porcelain Gray; Black-Fringed Leaftier; Winterberry Moth; Rhopobota finitimana; Blackheaded Fireworm; Morning-Glory Prominent; Fawn Sphinx; Clemens' Sphinx; Fall Armyworm Moth; Holly Clearwing Borer; Evergreen Bagworm Moth; Leopard Moth",
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Latin name": "Ilex opaca"
   },
   "Ilex verticillata": {
     "Common name": "Winterberry",
@@ -15076,10 +15202,16 @@
     "Latin name": "Viburnum lantanoides"
   },
   "Viburnum nudum": {
-    "Common name": "Witherod",
+    "Common name": "Witherod, Wild Raisin",
     "Height": "6-12 ft",
     "plantType": [
       "Shrub"
+    ],
+    "Native Range": [
+      "MA Native",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Hosted Butterflies and Moths": "Olive-and-Black Carpet; Saddleback Caterpillar Moth; Distinct Quaker; Acleris placidana; \"North American\" Schaller's Acleris; The Green Marvel; Gray Dagger; Smeared Dagger; Purple-Crested Slug; Pale-Banded Dart; White-Lined Leafroller Moth; Miranda Underwing; Anacampsis rhoifructella; Celery Looper Moth; Crowned Anania; Common Gray; Variable Antepione; Spotted Apatelodes; Wide-Striped Leaf Roller; Fruit-Tree Leafroller Moth; Exotic Leafroller Moth; Omnivorous Leafroller Moth; Rose Tortrix; Hickory Leafroller; Gray-Banded Leafroller Moth; Red-Banded Leafroller Moth; Large Looper Moth; Io Moth; Brown Scoopwing; Henry's Elfin; Promethea Silkmoth; Maple Prominent; Spring Azure; Summer Azure; Cherry Gall Azure; Spring Dead-Leaf Roller Moth; Reticulated Fruitworm Moth; Parallel-Banded Leafroller; Oblique-Banded Leafroller Moth; Coleophora viburniella; Norman's Quaker; Azalea Sphinx; Imperial Moth; Elm Spanworm Moth; Sloping Sallow; The Autumnal Moth; Linden Looper Moth; Least-Marked Euchlaena; Ochre Euchlaena; Sharp-Lined Powder Moth; Ferruginous Eulia; The Baltimore; Common Eupithacia; Tawny Eupithecia; Satyr Pug; White Spot Pug; American Angle Shades; Browntail Moth; Morrison's Sallow; Great Brown Dart; Curved-Tooth Geometer; Viburnum Glyptocera; Banded Tussock Moth; Harris's Three-Spot; Spotted Apple Budworm; Snowberry Clearwing; Hummingbird Clearwing; Cecropia Silkmoth; Green Cloverworm Bomolocha; Fall Webworm; Pale-Winged Gray; Bent-Line Gray; Intractable Quaker; Bridled Arches; White Spring Moth; Brick Dart; Spongy Moth; Common Lytrosis; Gold-Striped Leaftier Moth; Southern Flannel Moth; Canadian Melanolphia; Unsalted Sallow; Footpath Sallow; Confused Woodgrain; Bicolored Woodgrain; Red-Humped Caterpillar; Serviceberry Leafroller; Olethreutes diallacta; Winter Moth; Rose Hooktip; Manto Tussock Moth; White-Marked Tussock Moth; Pale Viburnum Geometer; Yellow-Veined Geometer; Orthofidonia tinctaria; Ruby Quaker; Dusky Leafroller; Jeweled Tail Slug Moth; Three-Lined Leafroller Moth; Blinded Sphinx; Brown Angle Shades; Hollow-Spotted Plagodis; American Barred Umber; Tufted Apple-Bud Moth; Common Tan Wave; Purple Arches; Large Maple Spanworm Moth; Isabella Tiger Moth; Chestnut Schizura; Morning-Glory Prominent; Sparganothis Fruitworm Moth; Darling Mamestra; Lesser Viburnum Clearwing; Viburnum Borer; White Slant-Line; Evergreen Bagworm Moth; Crocus Geometer; Spotted Cut-Worm; Greater Black-Letter Dart; Horrid Zale; Leopard Moth",
     "Sunlight": [

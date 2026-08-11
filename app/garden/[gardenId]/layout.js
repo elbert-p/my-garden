@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { useParams, useRouter, usePathname } from 'next/navigation';
 import { FiPlus, FiEdit, FiTrash2, FiShare2, FiSliders, FiBookmark, FiCopy, FiClipboard, FiEye, FiMove, FiUploadCloud } from 'react-icons/fi';
 import { GardenProvider, useGarden } from '@/context/GardenContext';
@@ -11,8 +11,10 @@ import { addLocalSavedGarden, removeLocalSavedGarden, isLocalGardenSaved } from 
 import {
   saveGarden as saveGardenDb, unsaveGarden as unsaveGardenDb,
   isGardenSaved as isGardenSavedDb,
-  getPlantDisplay, getWildlifeDisplay,
+  getPlantDisplay, getWildlifeDisplay, updatePlant,
 } from '@/lib/dataService';
+import { getAutofillDbState, norm } from '@/lib/autofillDb';
+import { findData, buildAutofillUpdates } from '@/lib/plantAutofill';
 import NavBar from '@/components/NavBar';
 import SortFilterControls from '@/components/SortFilterControls';
 import ItemGrid from '@/components/ItemGrid';
@@ -21,6 +23,7 @@ import FormInput, { ErrorMessage } from '@/components/FormInput';
 import ImageUpload from '@/components/ImageUpload';
 import Button from '@/components/Button';
 import BulkUploadModal from '@/components/BulkUploadModal';
+import AutofillPromptModal from '@/components/AutofillPromptModal';
 import GoogleSignInButton from '@/components/GoogleSignInButton';
 import styles from './layout.module.css';
 
@@ -56,7 +59,7 @@ function GardenLayoutContent({ children }) {
     searchQuery, setSearchQuery, sort, setSort, filters, setFilters,
     wildlifeFilters, setWildlifeFilters,
     updateGarden, deleteGarden, createPlant, createPlants, handleShare,
-    updateGardenCustomization,
+    updateGardenCustomization, updatePlantInContext,
     showAddPlantModal, setShowAddPlantModal,
     showEditGardenModal, setShowEditGardenModal,
     showDeleteGardenModal, setShowDeleteGardenModal,
@@ -78,6 +81,11 @@ function GardenLayoutContent({ children }) {
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
   const [showBulkUploadModal, setShowBulkUploadModal] = useState(false);
+
+  // Autofill prompt for garden plants that match newly added reference data.
+  const [autofillPrompt, setAutofillPrompt] = useState(null); // { candidates, version } | null
+  const [autofillProcessing, setAutofillProcessing] = useState(false);
+  const autofillCheckedRef = useRef(null); // `${gardenId}:${version}` already handled this session
 
   // Customize form state
   const [customizeColumnsStr, setCustomizeColumnsStr] = useState('');
@@ -188,6 +196,87 @@ function GardenLayoutContent({ children }) {
       if (user?.id) await saveGardenDb(gardenId, user.id);
       else addLocalSavedGarden(gardenId);
       setIsSaved(true);
+    }
+  };
+
+  // Record that this garden has reconciled the current reference-DB version, so
+  // we don't re-check it until the database changes again.
+  const persistAutofillVersion = useCallback(async (version) => {
+    const existing = garden?.customization || {};
+    if (existing.autofillDbVersion === version) return;
+    await updateGardenCustomization({ ...existing, autofillDbVersion: version });
+  }, [garden?.customization, updateGardenCustomization]);
+
+  // When viewing the plants grid, check (at most once per DB change per garden)
+  // whether any plant matches newly added reference data and still needs
+  // autofill. If so, prompt; otherwise silently mark this garden reconciled.
+  useEffect(() => {
+    if (!garden || !plantsLoaded || isSubPage || activeType !== 'plant') return;
+
+    let cancelled = false;
+    (async () => {
+      const { version, changedTokens } = await getAutofillDbState();
+      if (cancelled) return;
+
+      const gardenVersion = garden.customization?.autofillDbVersion;
+      if (gardenVersion === version) return;                 // already up to date
+
+      // Skip repeat work within a session between the prompt and its resolution.
+      const guard = `${gardenId}:${version}`;
+      if (autofillCheckedRef.current === guard) return;
+      autofillCheckedRef.current = guard;
+
+      // First time we've seen this garden: baseline silently — existing plants
+      // are handled by the per-plant flow; only later DB changes prompt here.
+      if (gardenVersion == null) { await persistAutofillVersion(version); return; }
+
+      // Any plant matching an added or updated entry — including ones already
+      // autofilled, so database changes can be re-applied.
+      const changed = new Set(changedTokens);
+      const candidates = plants.filter(p =>
+        p.type !== 'wildlife' &&
+        (changed.has(norm(p.scientificName)) || changed.has(norm(p.commonName)))
+      );
+
+      if (candidates.length === 0) { await persistAutofillVersion(version); return; }
+      setAutofillPrompt({ candidates, version });
+    })();
+
+    return () => { cancelled = true; };
+  }, [garden, gardenId, plants, plantsLoaded, isSubPage, activeType, persistAutofillVersion]);
+
+  const handleAutofillAccept = async () => {
+    if (!autofillPrompt) return;
+    setAutofillProcessing(true);
+    try {
+      for (const p of autofillPrompt.candidates) {
+        const result = findData(p.scientificName, p.commonName);
+        const updates = result
+          ? await buildAutofillUpdates(p, result)
+          : { hasAutofilled: true }; // matched a token but no data — just resolve
+        const updated = await updatePlant(p.id, { ...p, ...updates }, user?.id);
+        updatePlantInContext(updated);
+      }
+      await persistAutofillVersion(autofillPrompt.version);
+    } finally {
+      setAutofillProcessing(false);
+      setAutofillPrompt(null);
+    }
+  };
+
+  const handleAutofillDismiss = async () => {
+    if (!autofillPrompt) return;
+    setAutofillProcessing(true);
+    try {
+      // Mark as handled so these plants aren't prompted again (ask once).
+      for (const p of autofillPrompt.candidates) {
+        const updated = await updatePlant(p.id, { ...p, hasAutofilled: true }, user?.id);
+        updatePlantInContext(updated);
+      }
+      await persistAutofillVersion(autofillPrompt.version);
+    } finally {
+      setAutofillProcessing(false);
+      setAutofillPrompt(null);
     }
   };
 
@@ -532,6 +621,15 @@ function GardenLayoutContent({ children }) {
         type={activeType === 'wildlife' ? 'wildlife' : 'plant'}
         createPlants={createPlants}
         existingItems={activeType === 'wildlife' ? wildlife : plants}
+      />
+
+      {/* Autofill prompt for plants matched by newly added reference data */}
+      <AutofillPromptModal
+        isOpen={!!autofillPrompt}
+        candidates={autofillPrompt?.candidates || []}
+        processing={autofillProcessing}
+        onAutofill={handleAutofillAccept}
+        onDismiss={handleAutofillDismiss}
       />
 
       {/* Edit Garden Modal */}

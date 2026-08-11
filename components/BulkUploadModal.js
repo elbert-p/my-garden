@@ -9,11 +9,13 @@ import styles from './BulkUploadModal.module.css';
 
 const EXAMPLE = 'Common Milkweed\tAsclepias syriaca\nWild Bergamot\tMonarda fistulosa\nPurple Coneflower\tEchinacea purpurea';
 
-// A plant's identity for duplicate detection: its common + scientific name
-// together (both normalized), so distinct cultivars that share a scientific
-// name (e.g. "Black cohosh" vs "Black cohosh 'Black Beauty'") are kept.
+// A plant's identity for duplicate detection: its scientific name if it has one
+// (so a plant with the same scientific name already in the garden is caught,
+// even under a different common name), otherwise its common name. Cultivars
+// stay distinct by carrying their cultivar in the scientific name, e.g.
+// "Actaea racemosa 'Black Beauty'" vs "Actaea racemosa".
 const norm = (s) => (s || '').trim().toLowerCase();
-const identityKey = (item) => `${norm(item.commonName)}|${norm(item.scientificName)}`;
+const identityKey = (item) => norm(item.scientificName) || norm(item.commonName);
 
 // Empty plant scaffold matching the manual "Add Plant" flow.
 const emptyPlant = (type, commonName, scientificName) => ({
@@ -138,7 +140,7 @@ export default function BulkUploadModal({ isOpen, onClose, type = 'plant', creat
   const renderIdle = () => (
     <>
       <p className={styles.intro}>
-        <strong>Copy and paste</strong> directly from your spreadsheet or table. A live preview table will show the data you entered.
+        <strong>Copy and paste</strong> directly from your spreadsheet (best) or table. A live preview table will show the data you entered.
         {isPlant && ' Information for plants found in the database will be autofilled.'}
       </p>
       <p className={styles.hint}>

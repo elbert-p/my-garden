@@ -310,6 +310,16 @@ export default function PlantPage() {
     setShowAutofillModal(false);
   };
 
+  // Declining the prompt marks the plant as handled so it isn't asked again
+  // (autofill is still available on demand from the menu). Aligns with the
+  // garden-level prompt: once asked — filled or not — we don't re-ask.
+  const onAutofillDecline = () => {
+    setShowAutofillModal(false);
+    if (plant && plant.type !== 'wildlife' && !plant.hasAutofilled) {
+      save({ ...plant, hasAutofilled: true });
+    }
+  };
+
   const onDelete = async () => {
     if (user?.id && plant) {
       deleteImage(plant.mainImage);
@@ -491,7 +501,7 @@ export default function PlantPage() {
       {/* Plant-specific Modals */}
       <ConfirmModal
         isOpen={showAutofillModal}
-        onClose={() => setShowAutofillModal(false)}
+        onClose={onAutofillDecline}
         onConfirm={onAutofill}
         title="Autofill Plant Data"
         message={<>Found <strong>{autofillDisplayName}</strong> in database. Would you like to autofill?</>}
