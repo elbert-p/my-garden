@@ -14,6 +14,7 @@ import {
   getCopyGardenSource, clearCopyGardenSource,
 } from '@/lib/clipboardStorage';
 import { getSharedGardenInfo, getSharedGardenPlants } from '@/lib/dataService';
+import { FEATURED_GARDEN_IDS } from '@/lib/featuredGardens';
 import NavBar from '@/components/NavBar';
 import ItemGrid, { ItemGridSection } from '@/components/ItemGrid';
 import Modal from '@/components/Modal';
@@ -31,6 +32,7 @@ export default function Home() {
 
   // Data
   const [gardens, setGardens] = useState([]);
+  const [featuredGardens, setFeaturedGardens] = useState([]);
   const [savedGardens, setSavedGardens] = useState([]);
   const [recentGardens, setRecentGardens] = useState([]);
   const [plantCounts, setPlantCounts] = useState({});
@@ -78,6 +80,17 @@ export default function Home() {
 
         // If user was redirected to create a default, don't auto-redirect anymore
         // Just show the empty state
+
+        // Load featured gardens (handpicked, shown to everyone).
+        // Order follows FEATURED_GARDEN_IDS; missing/private gardens are skipped.
+        let loadedFeatured = [];
+        for (const id of FEATURED_GARDEN_IDS) {
+          try {
+            const info = await getSharedGardenInfo(id);
+            if (info?.garden) loadedFeatured.push(info.garden);
+          } catch { /* skip */ }
+        }
+        setFeaturedGardens(loadedFeatured);
 
         // Load saved gardens
         let loadedSaved = [];
@@ -134,7 +147,7 @@ export default function Home() {
 
         // Load counts for saved & recently viewed gardens (shared endpoint)
         const sharedIds = new Set();
-        [...loadedSaved, ...loadedRecent].forEach(g => {
+        [...loadedFeatured, ...loadedSaved, ...loadedRecent].forEach(g => {
           if (!counts[g.id]) sharedIds.add(g.id);
         });
         const sharedCounts = {};
@@ -193,6 +206,7 @@ export default function Home() {
   }, [searchQuery]);
 
   const filteredCreated = useMemo(() => filterBySearch(gardens), [gardens, filterBySearch]);
+  const filteredFeatured = useMemo(() => filterBySearch(featuredGardens), [featuredGardens, filterBySearch]);
   const filteredSaved = useMemo(() => filterBySearch(savedGardens), [savedGardens, filterBySearch]);
   const filteredRecent = useMemo(() => filterBySearch(recentGardens), [recentGardens, filterBySearch]);
 
@@ -485,6 +499,21 @@ export default function Home() {
                 </p>
               )}
             </ItemGridSection>
+
+            {/* Featured Gardens (handpicked, read-only, shown to everyone) */}
+            {filteredFeatured.length > 0 && (
+              <ItemGridSection title="Featured">
+                <ItemGrid
+                  items={filteredFeatured}
+                  linkPrefix="/share"
+                  getItemId={(g) => g.id}
+                  getItemImage={(g) => g.image || DEFAULT_GARDEN_IMAGE}
+                  fallbackImage={DEFAULT_GARDEN_IMAGE}
+                  getItemName={(g) => g.name}
+                  getItemBadge={!privacyMode && !rearrangeMode ? (g) => plantCounts[g.id] != null ? plantCounts[g.id] : null : undefined}
+                />
+              </ItemGridSection>
+            )}
 
             {/* Saved Gardens */}
             <ItemGridSection title="Saved">
