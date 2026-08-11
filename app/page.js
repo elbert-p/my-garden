@@ -78,9 +78,6 @@ export default function Home() {
         const result = await getGardens(user?.id);
         setGardens(result);
 
-        // If user was redirected to create a default, don't auto-redirect anymore
-        // Just show the empty state
-
         // Load featured gardens (handpicked, shown to everyone).
         // Order follows FEATURED_GARDEN_IDS; missing/private gardens are skipped.
         let loadedFeatured = [];

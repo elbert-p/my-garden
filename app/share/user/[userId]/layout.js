@@ -2,6 +2,7 @@
 import { useParams, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { SharedProfileProvider, useSharedProfile } from '@/context/SharedProfileContext';
+import { hasPublicAboutContent } from '@/lib/dataService';
 import NavBar from '@/components/NavBar';
 import styles from './layout.module.css';
 
@@ -11,10 +12,13 @@ function SharedProfileLayoutContent({ children }) {
   const { profile, isLoading, error } = useSharedProfile();
 
   const isAboutPage = pathname.endsWith('/about');
+  const showAboutTab = hasPublicAboutContent(profile?.about_blocks);
 
   const tabs = [
     { label: 'Gardens', href: `/share/user/${userId}`, active: !isAboutPage },
-    { label: 'About', href: `/share/user/${userId}/about`, active: isAboutPage },
+    ...(showAboutTab
+      ? [{ label: 'About', href: `/share/user/${userId}/about`, active: isAboutPage }]
+      : []),
   ];
 
   const owner = profile ? {
