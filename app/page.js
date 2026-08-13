@@ -491,7 +491,7 @@ export default function Home() {
                 <p className={styles.sectionEmpty}>
                   {searchQuery
                     ? 'No gardens match your search.'
-                    : <>No gardens yet. Click the menu <FiMenu size={16} style={{ verticalAlign: 'text-bottom', display: 'inline-block', margin: '0 2px' }} /> to create one!</>
+                    : <>No gardens created yet. Click the menu <FiMenu size={16} style={{ verticalAlign: 'text-bottom', display: 'inline-block', margin: '0 2px' }} /> to create one!</>
                   }
                 </p>
               )}
