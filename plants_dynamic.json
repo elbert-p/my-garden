@@ -1253,6 +1253,12 @@
       "Southeastern US",
       "Southwestern US"
     ],
+    "Autofill image paths": [
+      "aralia_racemosa.jpeg"
+    ],
+    "Autofill image credits": [
+      "K. Elbert"
+    ],
     "Key Host Plant": [
       "K"
     ],
@@ -5770,6 +5776,12 @@
     "Native Range": [
       "Midatlantic US"
     ],
+    "Autofill image paths": [
+      "monarda_didyma2.png"
+    ],
+    "Autofill image credits": [
+      "prairiemoon.com"
+    ],
     "Pollen Source": "Half-black Bumblebee, Beebalm Shortface Bee",
     "Hosted Butterflies and Moths": "Grey Marvel; Wide-Striped Leaf Roller; Chionodes fondella; Pink-Patched Looper Moth; Hermit Sphinx; Rustic Quaker; Stalk Borer; Orange Mint Moth; Raspberry Pyrausta; Sparganothis Fruitworm Moth; Xenotemna pallorana",
     "Sunlight": [
@@ -5789,7 +5801,7 @@
     "Latin name": "Monarda didyma"
   },
   "Monarda didyma 'Jacob Cline'": {
-    "Common name": "Jacob Cline Beebalm",
+    "Common name": "Beebalm 'Jacob Cline'",
     "Height": "3-4 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -7861,6 +7873,39 @@
       "Herbaceous perennial"
     ],
     "Latin name": "Sisyrinchium montanum"
+  },
+  "Solanum ptycanthum": {
+    "Common name": "Eastern Black Nightshade",
+    "Height": "1-3 ft",
+    "plantType": [
+      "Annual"
+    ],
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
+    "Hosted Butterflies and Moths": "Greater Red Dart; Swordsman Dart; Ipsilon Dart; Old Man Dart; Eight-Spot Moth; The Nutmeg; Green Cutworm Moth; Tropical Anomis Moth; Apterona helicoidella; Io Moth; Cattail Border Moth; Subflexus Straw; Tobacco Budworm Moth; Soybean Looper Moth; Garden Tortrix; Lesser Cornstalk Borer; Pink-Washed Looper Moth; Salt Marsh Moth; White-Winged Dart; Clear Dart; Rubbed Dart; Reaper Dart; Tessellate Dart; Master's Dart; Dingy Cutworm; Subgothic Dart; Subterranean Dart; Mottled Twirler; Corn Earworm Moth; Spotted Straw Sun Moth; Rosy Rustic; White-Lined Sphinx; Spotted Beet Webworm; Green Cloverworm Bomolocha; Speckled Arches; Brown-Banded Lipocosmodes; Beet Webworm; Five-Spotted Hawkmoth; Carolina Sphinx; Painted Arches; Armyworm Moth; Bronzed Cutworm; Large Yellow Underwing; European Corn Borer Moth; Burdock Border; Stalk Borer; Coneflower Borer; Variegated Cutworm; Potato Tuberworm Moth; Tufted Apple-Bud Moth; Indian-Meal Moth; Isabella Tiger Moth; Sparganothis Fruitworm Moth; Virginian Tiger Moth; Beet Army Worm; Fall Armyworm Moth; Yellow-Striped Armyworm Moth; Ni Moth; Long-Tailed Skipper; Painted Lady; Spotted Cut-Worm; Greater Black-Letter Dart",
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Latin name": "Solanum ptycanthum"
   },
   "Solidago altissima": {
     "Common name": "Tall Goldenrod",
