@@ -14,7 +14,7 @@ import {
   getPlantDisplay, getWildlifeDisplay, updatePlant,
 } from '@/lib/dataService';
 import { getReferenceVersion, entrySignature } from '@/lib/autofillDb';
-import { findData, buildAutofillUpdates, autofillWouldChange } from '@/lib/plantAutofill';
+import { findData, buildAutofillUpdates, buildAutofillDataUpdates, autofillWouldChange } from '@/lib/plantAutofill';
 import NavBar from '@/components/NavBar';
 import SortFilterControls from '@/components/SortFilterControls';
 import ItemGrid from '@/components/ItemGrid';
@@ -233,6 +233,21 @@ function GardenLayoutContent({ children }) {
         const sig = entrySignature(result.data);
         if (p.autofillSig === sig) continue;         // already resolved at this state
         if (!autofillWouldChange(p, result)) continue; // nothing to apply
+
+        // TEMP DEBUG: log why this plant is being surfaced (which fields differ).
+        // Remove once the over-prompting cause is identified.
+        try {
+          const u = buildAutofillDataUpdates(p, result);
+          const diffs = {};
+          for (const f of ['commonName', 'scientificName', 'height', 'hostedInsects', 'bloomTime', 'sunlight', 'moisture', 'plantType', 'nativeRange']) {
+            if (JSON.stringify(u[f]) !== JSON.stringify(p[f])) diffs[f] = { stored: p[f], db: u[f] };
+          }
+          console.log('[autofill-debug] prompting', p.commonName || p.scientificName,
+            '| matchedBy:', result.matchedBy,
+            '| autofillSig:', p.autofillSig === undefined ? 'undefined' : p.autofillSig === null ? 'null' : 'set',
+            '| differing fields:', diffs);
+        } catch (e) { console.log('[autofill-debug] error', e); }
+
         items.push({ plant: p, result, sig });
       }
       if (cancelled) return;
