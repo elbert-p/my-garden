@@ -18,12 +18,12 @@ import styles from './AutofillPromptModal.module.css';
 export default function AutofillPromptModal({ isOpen, onDismiss, onAutofill, candidates = [], processing = false }) {
   const count = candidates.length;
   return (
-    <Modal isOpen={isOpen} onClose={processing ? () => {} : onDismiss} title="New plant data available" size="medium">
+    <Modal isOpen={isOpen} onClose={processing ? () => {} : onDismiss} title="New Plant Data Available" size="medium">
       <p className={styles.intro}>
         {count === 1
-          ? '1 plant in this garden matches'
-          : `${count} plants in this garden match`}{' '}
-        new or updated information in the plant database. Autofill their details?
+          ? '1 plant in this garden has'
+          : `${count} plants in this garden have`}{' '}
+        new or updated information in the plant database. Would you like to autofill their updated information?
       </p>
 
       <div className={styles.list}>
@@ -35,7 +35,7 @@ export default function AutofillPromptModal({ isOpen, onDismiss, onAutofill, can
         ))}
       </div>
 
-      <p className={styles.note}>Existing photos and notes are kept. You won&rsquo;t be asked again for these plants.</p>
+      <p className={styles.note}>Uploaded photos and notes will be kept. You can always autofill anytime from the plant page.</p>
 
       <div className={styles.footer}>
         <Button variant="secondary" onClick={onDismiss} disabled={processing}>No thanks</Button>

@@ -5,6 +5,7 @@ import Button from './Button';
 import { ErrorMessage } from './FormInput';
 import { parseBulkInput } from '@/lib/bulkPlantImport';
 import { findData, buildAutofillUpdates } from '@/lib/plantAutofill';
+import { entrySignature } from '@/lib/autofillDb';
 import styles from './BulkUploadModal.module.css';
 
 const EXAMPLE = 'Common Milkweed\tAsclepias syriaca\nWild Bergamot\tMonarda fistulosa\nPurple Coneflower\tEchinacea purpurea';
@@ -121,7 +122,7 @@ export default function BulkUploadModal({ isOpen, onClose, type = 'plant', creat
           const match = findData(row.scientificName, row.commonName);
           if (match) {
             const updates = await buildAutofillUpdates(plant, match);
-            Object.assign(plant, updates);
+            Object.assign(plant, updates, { autofillSig: entrySignature(match.data) });
             autofilled++;
           }
         }

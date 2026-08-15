@@ -13,8 +13,8 @@ import {
   isGardenSaved as isGardenSavedDb,
   getPlantDisplay, getWildlifeDisplay, updatePlant,
 } from '@/lib/dataService';
-import { getAutofillDbState, norm } from '@/lib/autofillDb';
-import { findData, buildAutofillUpdates } from '@/lib/plantAutofill';
+import { getReferenceVersion, entrySignature } from '@/lib/autofillDb';
+import { findData, buildAutofillUpdates, autofillWouldChange } from '@/lib/plantAutofill';
 import NavBar from '@/components/NavBar';
 import SortFilterControls from '@/components/SortFilterControls';
 import ItemGrid from '@/components/ItemGrid';
@@ -207,39 +207,37 @@ function GardenLayoutContent({ children }) {
     await updateGardenCustomization({ ...existing, autofillDbVersion: version });
   }, [garden?.customization, updateGardenCustomization]);
 
-  // When viewing the plants grid, check (at most once per DB change per garden)
-  // whether any plant matches newly added reference data and still needs
-  // autofill. If so, prompt; otherwise silently mark this garden reconciled.
+  // When viewing the plants grid, check (only when the database version differs
+  // from what this garden last reconciled) whether any plant is out of date with
+  // its reference entry and hasn't been prompted for that state yet. Each plant
+  // compares its own recorded signature against the entry's current one, so this
+  // works even for gardens created before this system — a plant added before its
+  // entry existed is surfaced once the entry shows up.
   useEffect(() => {
     if (!garden || !plantsLoaded || isSubPage || activeType !== 'plant') return;
 
+    const version = getReferenceVersion();
+    if (garden.customization?.autofillDbVersion === version) return; // nothing changed
+
+    const guard = `${gardenId}:${version}`;
+    if (autofillCheckedRef.current === guard) return;
+    autofillCheckedRef.current = guard;
+
     let cancelled = false;
     (async () => {
-      const { version, changedTokens } = await getAutofillDbState();
+      const items = [];
+      for (const p of plants) {
+        if (p.type === 'wildlife') continue;
+        const result = findData(p.scientificName, p.commonName);
+        if (!result) continue;
+        const sig = entrySignature(result.data);
+        if (p.autofillSig === sig) continue;         // already resolved at this state
+        if (!autofillWouldChange(p, result)) continue; // nothing to apply
+        items.push({ plant: p, result, sig });
+      }
       if (cancelled) return;
-
-      const gardenVersion = garden.customization?.autofillDbVersion;
-      if (gardenVersion === version) return;                 // already up to date
-
-      // Skip repeat work within a session between the prompt and its resolution.
-      const guard = `${gardenId}:${version}`;
-      if (autofillCheckedRef.current === guard) return;
-      autofillCheckedRef.current = guard;
-
-      // First time we've seen this garden: baseline silently — existing plants
-      // are handled by the per-plant flow; only later DB changes prompt here.
-      if (gardenVersion == null) { await persistAutofillVersion(version); return; }
-
-      // Any plant matching an added or updated entry — including ones already
-      // autofilled, so database changes can be re-applied.
-      const changed = new Set(changedTokens);
-      const candidates = plants.filter(p =>
-        p.type !== 'wildlife' &&
-        (changed.has(norm(p.scientificName)) || changed.has(norm(p.commonName)))
-      );
-
-      if (candidates.length === 0) { await persistAutofillVersion(version); return; }
-      setAutofillPrompt({ candidates, version });
+      if (items.length === 0) { await persistAutofillVersion(version); return; }
+      setAutofillPrompt({ items, version });
     })();
 
     return () => { cancelled = true; };
@@ -249,12 +247,9 @@ function GardenLayoutContent({ children }) {
     if (!autofillPrompt) return;
     setAutofillProcessing(true);
     try {
-      for (const p of autofillPrompt.candidates) {
-        const result = findData(p.scientificName, p.commonName);
-        const updates = result
-          ? await buildAutofillUpdates(p, result)
-          : { hasAutofilled: true }; // matched a token but no data — just resolve
-        const updated = await updatePlant(p.id, { ...p, ...updates }, user?.id);
+      for (const { plant, result, sig } of autofillPrompt.items) {
+        const updates = await buildAutofillUpdates(plant, result);
+        const updated = await updatePlant(plant.id, { ...plant, ...updates, autofillSig: sig }, user?.id);
         updatePlantInContext(updated);
       }
       await persistAutofillVersion(autofillPrompt.version);
@@ -268,9 +263,10 @@ function GardenLayoutContent({ children }) {
     if (!autofillPrompt) return;
     setAutofillProcessing(true);
     try {
-      // Mark as handled so these plants aren't prompted again (ask once).
-      for (const p of autofillPrompt.candidates) {
-        const updated = await updatePlant(p.id, { ...p, hasAutofilled: true }, user?.id);
+      // Record the entry state so these plants aren't prompted again until it
+      // changes; mark handled so the per-plant detail prompt stays quiet too.
+      for (const { plant, sig } of autofillPrompt.items) {
+        const updated = await updatePlant(plant.id, { ...plant, hasAutofilled: true, autofillSig: sig }, user?.id);
         updatePlantInContext(updated);
       }
       await persistAutofillVersion(autofillPrompt.version);
@@ -626,7 +622,7 @@ function GardenLayoutContent({ children }) {
       {/* Autofill prompt for plants matched by newly added reference data */}
       <AutofillPromptModal
         isOpen={!!autofillPrompt}
-        candidates={autofillPrompt?.candidates || []}
+        candidates={autofillPrompt?.items.map(i => i.plant) || []}
         processing={autofillProcessing}
         onAutofill={handleAutofillAccept}
         onDismiss={handleAutofillDismiss}

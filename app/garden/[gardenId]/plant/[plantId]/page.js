@@ -11,6 +11,7 @@ import { getPlant, updatePlant, deletePlant } from '@/lib/dataService';
 import { uploadImage, deleteImage } from '@/lib/imageStorage';
 import { getImageCredit } from '@/lib/autofillImages';
 import { findData, buildAutofillUpdates } from '@/lib/plantAutofill';
+import { entrySignature } from '@/lib/autofillDb';
 import { BLOOM_OPTIONS, SUN_OPTIONS, MOISTURE_OPTIONS, NATIVE_OPTIONS, PLANT_TYPE_OPTIONS } from '@/lib/plantConstants';
 import PageHeader from '@/components/PageHeader';
 import DropdownMenu from '@/components/DropdownMenu';
@@ -306,17 +307,20 @@ export default function PlantPage() {
   const onAutofill = async () => {
     if (!autofillData) return;
     const updates = await buildAutofillUpdates(temp, { data: autofillData, matchedBy: autofillMatchedBy });
-    await save({ ...temp, ...updates });
+    // Record the entry state we filled from so the garden prompt won't re-ask
+    // until this entry changes again.
+    await save({ ...temp, ...updates, autofillSig: entrySignature(autofillData) });
     setShowAutofillModal(false);
   };
 
   // Declining the prompt marks the plant as handled so it isn't asked again
   // (autofill is still available on demand from the menu). Aligns with the
-  // garden-level prompt: once asked — filled or not — we don't re-ask.
+  // garden-level prompt: once asked — filled or not — we don't re-ask until the
+  // reference entry changes (tracked via autofillSig).
   const onAutofillDecline = () => {
     setShowAutofillModal(false);
-    if (plant && plant.type !== 'wildlife' && !plant.hasAutofilled) {
-      save({ ...plant, hasAutofilled: true });
+    if (plant && plant.type !== 'wildlife') {
+      save({ ...plant, hasAutofilled: true, autofillSig: entrySignature(autofillData) });
     }
   };
 
