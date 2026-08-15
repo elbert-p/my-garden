@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useState, useRef } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { supabase } from '@/lib/supabaseClient';
 import localforage from 'localforage';
-import { clearAllCaches } from '@/lib/dataService';
+import { clearAllCaches, getGardenOwnerId } from '@/lib/dataService';
 import { uploadImage } from '@/lib/imageStorage';
 
 const AuthContext = createContext();
@@ -44,6 +44,23 @@ export function AuthProvider({ children }) {
       return currentPath.replace(/^\/garden\//, '/share/');
     }
     return null;
+  };
+
+  // Helper: determine sign-in destination (mirror of getSignOutRedirect).
+  // Someone who signs in while on the shared page of a garden they own — e.g.
+  // after being logged out by inactivity — should land on the editable version
+  // of that same page instead of the read-only one.
+  const getSignInRedirect = async (returnPath, userId) => {
+    if (!userId) return returnPath;
+    // /share/<gardenId>[/about|/todo|/wildlife|/plant/<id>] — the /share and
+    // /garden trees mirror each other, so the subpath carries over as-is.
+    const match = returnPath.match(/^\/share\/([^/?#]+)(\/.*)?$/);
+    // '/share/user/...' is a profile page, not a garden.
+    if (!match || match[1] === 'user') return returnPath;
+
+    const ownerId = await getGardenOwnerId(match[1]);
+    if (ownerId !== userId) return returnPath;
+    return `/garden/${match[1]}${match[2] || ''}`;
   };
 
   useEffect(() => {
@@ -94,7 +111,7 @@ export function AuthProvider({ children }) {
         // After sign-in OAuth redirect: reopen a pending "share" modal on the
         // page the user came from, or fall back to a stored return path.
         if (isMounted) {
-          handlePostSignInRedirect(migrationMaps);
+          handlePostSignInRedirect(migrationMaps, initialSession?.user);
         }
 
         // Now attach the listener - ignore INITIAL_SESSION since we handled it
@@ -179,9 +196,10 @@ export function AuthProvider({ children }) {
      *   ids (using `migrationMaps`) and redirect there; the destination page
      *   reads the rewritten intent and opens its share modal. The 'profile'
      *   intent needs no redirect (we land on '/') — the home page consumes it.
-     * - Otherwise honor a generic return path.
+     * - Otherwise honor a generic return path, upgrading a shared garden page
+     *   to its editable equivalent when the signed-in user owns that garden.
      */
-    function handlePostSignInRedirect(migrationMaps) {
+    async function handlePostSignInRedirect(migrationMaps, user) {
       const rawShareIntent = localStorage.getItem(SHARE_INTENT_KEY);
       if (rawShareIntent) {
         let intent = null;
@@ -229,7 +247,9 @@ export function AuthProvider({ children }) {
       if (returnPath) {
         localStorage.removeItem(RETURN_PATH_KEY);
         if (returnPath !== '/') {
-          router.replace(returnPath);
+          const destination = await getSignInRedirect(returnPath, user?.id);
+          if (!isMounted) return;
+          router.replace(destination);
         }
       }
     }
