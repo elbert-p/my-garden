@@ -882,6 +882,37 @@
     ],
     "Latin name": "Anemone cylindrica"
   },
+  "Anemone hupehensis var. japonica 'Pamina'": {
+    "Common name": "Pamina Japanese Anemone",
+    "Height": "2.5-3 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "anemone-Pamina.png"
+    ],
+    "Autofill image credits": [
+      "Missouri Botanical Garden"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Latin name": "Anemone hupehensis var. japonica 'Pamina'"
+  },
   "Anemone virginiana": {
     "Common name": "Tall Thimbleweed",
     "Alternate common names": [
@@ -1154,6 +1185,96 @@
       "Jun"
     ],
     "Latin name": "Aquilegia canadensis"
+  },
+  "Aquilegia caerulea 'Kirigami Deep Rose & Pink'": {
+    "Common name": "Kirigami Deep Rose & Pink Columbine",
+    "Height": "2 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Western US"
+    ],
+    "Autofill image paths": [
+      "aquilegia_caerulea-Deep-Rose&Pink.png"
+    ],
+    "Autofill image credits": [
+      "gardenia.net"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Latin name": "Aquilegia caerulea 'Kirigami Deep Rose & Pink'"
+  },
+  "Aquilegia caerulea 'Kirigami Deep Blue & White'": {
+    "Common name": "Kirigami Deep Blue & White Columbine",
+    "Height": "2 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Western US"
+    ],
+    "Autofill image paths": [
+      "aquilegia_caerulea-Deep-Blue&White.png"
+    ],
+    "Autofill image credits": [
+      "provenwinners.com"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Latin name": "Aquilegia caerulea 'Kirigami Deep Blue & White'"
+  },
+  "Aquilegia flabellata var. pumila": {
+    "Common name": "Dwarf Fan Columbine",
+    "Height": "0.75-1 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "aquilegia_flabellata.png"
+    ],
+    "Autofill image credits": [
+      "olddairynursery.com"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Latin name": "Aquilegia flabellata var. pumila"
   },
   "Arnoglossum reniforme": {
     "Common name": "Great Indian Plantain",
@@ -1657,6 +1778,36 @@
     ],
     "Latin name": "Astragalus canadensis"
   },
+  "Astrantia major 'Roma'": {
+    "Common name": "Great Masterwort",
+    "Height": "1-2 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Europe"
+    ],
+    "Autofill image paths": [
+      "astrantia_major-Roma.png"
+    ],
+    "Autofill image credits": [
+      "gardenia.net"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Latin name": "Astrantia major 'Roma'"
+  },
   "Baptisia alba": {
     "Common name": "White Wild Indigo",
     "Height": "2-4 ft",
@@ -1836,6 +1987,36 @@
       "Oct"
     ],
     "Latin name": "Boltonia asteroides"
+  },
+  "Brunnera macrophylla 'Alexandria'": {
+    "Common name": "Siberian Bugloss",
+    "Height": "1-1.25 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Europe",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "Brunnera_macrophylla-Alexandria.png"
+    ],
+    "Autofill image credits": [
+      "terranovanurseries.com"
+    ],
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Latin name": "Brunnera macrophylla 'Alexandria'"
   },
   "Calamintha nepetoides": {
     "Common name": "Lesser Calamint",
@@ -2684,6 +2865,34 @@
     "Hosted Butterflies and Moths": "Reticulated Fruitworm Moth; Paralobesia cypripediana",
     "Latin name": "Cypripedium parviflorum var. parviflorum"
   },
+  "Crocosmia ? crocosmiiflora 'Red King'": {
+    "Height": "1-2 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Africa"
+    ],
+    "Autofill image paths": [
+      "Crocosmia-Red-King.png"
+    ],
+    "Autofill image credits": [
+      "https://www.crocus.co.uk/plants"
+    ],
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Latin name": "Crocosmia ? crocosmiiflora 'Red King'"
+  },
   "Cryptotaenia canadensis": {
     "Common name": "Canadian Honewort",
     "Height": "1-3 ft",
@@ -3066,7 +3275,8 @@
     ],
     "Native Range": [
       "Midwestern US",
-      "Southern US"
+      "Southeastern US",
+      "Southwestern US"
     ],
     "Key Host Plant": [
       "Specialist Bees"
@@ -3086,6 +3296,62 @@
       "Sep"
     ],
     "Latin name": "Echinacea purpurea"
+  },
+  "Echinacea purpurea 'Fiery Meadow Mama'": {
+    "Common name": "Fiery Meadow Mama Coneflower",
+    "Height": "2 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Midwestern US",
+      "Southeastern US",
+      "Southwestern US"
+    ],
+    "Autofill image paths": [
+      "echinacea-Fiery-Meadow-Mama.png"
+    ],
+    "Autofill image credits": [
+      "Mt. Cuba Center"
+    ],
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Latin name": "Echinacea purpurea 'Fiery Meadow Mama'"
+  },
+  "Echinops bannaticus 'Star Frost'": {
+    "Common name": "Star Frost Globe Thistle",
+    "Height": "2.5-3.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Europe"
+    ],
+    "Autofill image paths": [
+      "echinops_bannatus-Star-Frost.png"
+    ],
+    "Autofill image credits": [
+      "selectseeds.com"
+    ],
+    "Sunlight": [
+      "Sun"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Latin name": "Echinops bannaticus 'Star Frost'"
   },
   "Epigaea repens": {
     "Common name": "Mayflower",
@@ -3153,7 +3419,10 @@
     "Latin name": "Epilobium glandulosum"
   },
   "Erigeron pulchellus": {
-    "Common name": "Robin's Plantain Fleabane",
+    "Common name": "Fleabane",
+    "Alternate common names": [
+      "Robin's Plantain"
+    ],
     "Height": "1-1.5 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -3188,6 +3457,50 @@
       "Jun"
     ],
     "Latin name": "Erigeron pulchellus"
+  },
+  "Erigeron pulchellus var. pulchellus 'Lynnhaven Carpet'": {
+    "Common name": "Lynnhaven Carpet Fleabane",
+    "Height": "1-1.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "Cultivar",
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
+    "Autofill image paths": [
+      "erigeron_pulchellus-Lynnhaven-Carpet.png"
+    ],
+    "Autofill image credits": [
+      "cavanos.com"
+    ],
+    "Key Host Plant": [
+      "K",
+      "Specialist Bees"
+    ],
+    "Pollen Source": "American Bumble Bee, Andrena (Cnemidandrena) robervalensis, Band-footed Sweat Bee, Wide-mouthed Sweat Bee, Bristle Sweat Bee, White-haired Golden Sweat Bee, Densely Punctured Sweat Bee, Hairy Metallic-Sweat Bee, Truncate Sweat Bee, Short Leafcutter Bee, Hostile Leafcutter, Pugnacious Leafcutter, Sunflower Burrowing-Resin Bee, Aestival Bare-Miner",
+    "Hosted Butterflies and Moths": "One-Dotted Dart; Williams' Tiger Moth; Exotic Leafroller Moth; Omnivorous Leafroller Moth; Common Looper Moth; Narrow Bucculatrix; Blackberry Looper Moth; Silvery Checkerspot; Sharp-Stigma Looper Moth; Gray Hooded Owlet; Rusted Paint; Speyer's Cucullia; Common Eupithacia; Bold-Feathered Grass Moth; Zigzag Herpetogramma; White-Lined Sphinx; Green Leuconycta; Stalk Borer; Variegated Cutworm; Pearl Crescent; Arcigera Flower Moth; Lynx Flower Moth; Sparganothis Fruitworm Moth; Fall Armyworm Moth; Yellow-Striped Armyworm Moth; Wavy-Lined Emerald; Evergreen Bagworm Moth; Xenotemna pallorana",
+    "Sunlight": [
+      "Part Sun",
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Latin name": "Erigeron pulchellus var. pulchellus 'Lynnhaven Carpet'"
   },
   "Eryngium yuccifolium": {
     "Common name": "Rattlesnake Master",
@@ -4140,6 +4453,38 @@
     ],
     "Latin name": "Glycyrrhiza lepidota"
   },
+  "Gypsophilia cerastioides 'Pixie Splash'": {
+    "Common name": "Pixie Splash Alpine Baby's Breath",
+    "Height": "0.25-0.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "gypsophilia_cerastoides-Pixi-Splash.png"
+    ],
+    "Autofill image credits": [
+      "bluestoneperennials.com"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Latin name": "Gypsophilia cerastioides 'Pixie Splash'"
+  },
   "Helenium autumnale": {
     "Common name": "Sneezeweed",
     "Height": "3-5 ft",
@@ -4178,6 +4523,45 @@
       "Oct"
     ],
     "Latin name": "Helenium autumnale"
+  },
+  "Helenium autumnale 'HayDay Orange'": {
+    "Common name": "HayDay Orange Sneezeweed",
+    "Height": "1-1.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "Cultivar",
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "US Native"
+    ],
+    "Autofill image paths": [
+      "helenium_autumnale-HayDay-Orange.jpeg"
+    ],
+    "Autofill image credits": [
+      "groveperennials.com"
+    ],
+    "Key Host Plant": [
+      "Specialist Bees"
+    ],
+    "Hosted Butterflies and Moths": "Blackberry Looper Moth; The Cobbler; White-Dotted Groundling; Aster Borer; Rigid Sunflower Borer; Sparganothis Fruitworm Moth",
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Latin name": "Helenium autumnale 'HayDay Orange'"
   },
   "Helenium flexuosum": {
     "Common name": "Purple-Headed Sneezeweed",
@@ -4471,6 +4855,47 @@
     ],
     "Latin name": "Heliopsis helianthoides"
   },
+  "Heliopsis helianthoides 'Bleeding Hearts'": {
+    "Common name": "Bleeding Hearts Oxeye Sunflower",
+    "Height": "3-4.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Ecoregion": "59,83,84",
+    "Native Range": [
+      "Cultivar",
+      "Midwestern US",
+      "Mid-Atlantic US",
+      "Southeastern US",
+      "Southwestern US"
+    ],
+    "Autofill image paths": [
+      "heliopsis_helianthoides-Bleeding-Heart.png"
+    ],
+    "Autofill image credits": [
+      "bluestoneperennials.com"
+    ],
+    "Key Host Plant": [
+      "Specialist Bees"
+    ],
+    "Pollen Source": "Dark-veined Longhorn",
+    "Hosted Butterflies and Moths": "Rigid Sunflower Borer",
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Latin name": "Heliopsis helianthoides 'Bleeding Hearts'"
+  },
   "Hepatica acutiloba": {
     "Common name": "Sharp-lobed Hepatica",
     "Height": "0.25-0.5 ft",
@@ -4527,6 +4952,41 @@
       "Aug"
     ],
     "Latin name": "Heuchera americana"
+  },
+  "Heuchera micrantha 'Lime Marmalade'": {
+    "Common name": "Lime Marmalade Coral Bells",
+    "Alternate common names": [
+      "Alumn Root"
+    ],
+    "Height": "1 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Western US"
+    ],
+    "Autofill image paths": [
+      "heuchera_micrantha lime marmalade.png"
+    ],
+    "Autofill image credits": [
+      "bluestoneperennials.com"
+    ],
+    "Pollen Source": "Alumroot Cellophane Bee",
+    "Hosted Butterflies and Moths": "Macaria occiduaria",
+    "Sunlight": [
+      "Part Sun",
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Latin name": "Heuchera micrantha 'Lime Marmalade'"
   },
   "Hibiscus laevis": {
     "Common name": "Smooth Rose Mallow",
@@ -4585,6 +5045,88 @@
       "Sep"
     ],
     "Latin name": "Hibiscus moscheutos"
+  },
+  "Hosta 'Blue Mouse Ears'": {
+    "Common name": "Blue Mouse Ears Hosta",
+    "Height": "0.5-1 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "hosta_bluemouseears.png"
+    ],
+    "Autofill image credits": [
+      "bluestoneperennials.com"
+    ],
+    "Sunlight": [
+      "Part Sun",
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Hosta 'Blue Mouse Ears'"
+  },
+  "Hosta ": {
+    "Common name": "Hosta",
+    "Height": "0.5-4 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Asia"
+    ],
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Hosta "
+  },
+  "Hosta 'Shadowland Coast to Coast'": {
+    "Common name": "Shadowland Hosta",
+    "Height": "2.5-3 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "hosta-Shadowland.png"
+    ],
+    "Autofill image credits": [
+      "provenwinners.com"
+    ],
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Hosta 'Shadowland Coast to Coast'"
   },
   "Houstonia caerulea": {
     "Common name": "Bluets",
@@ -5239,6 +5781,48 @@
     ],
     "Latin name": "Lobelia cardinalis"
   },
+  "Lobelia cardinalis 'Black Truffle'": {
+    "Common name": "Black Truffle Cardinal Flower",
+    "Height": "3-4 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "Cultivar",
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Eastern US",
+      "Midwestern US",
+      "Southeastern US",
+      "Southwestern US"
+    ],
+    "Autofill image paths": [
+      "lobelia_cardinalis-black-truffle.png"
+    ],
+    "Autofill image credits": [
+      "perennialfarmmarketplace.com"
+    ],
+    "Hosted Butterflies and Moths": "Red-Banded Leafroller Moth; Pink-Washed Looper Moth; Plevie's Aquatic Moth; Dark-Spotted Palthis; Spotted Cut-Worm; Greater Black-Letter Dart",
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Latin name": "Lobelia cardinalis 'Black Truffle'"
+  },
   "Lobelia siphilitica": {
     "Common name": "Great Blue Lobelia",
     "Height": "3 ft",
@@ -5423,8 +6007,8 @@
     ],
     "Latin name": "Lysimachia borealis"
   },
-  "Lysimachia lanceolata var. purpurea": {
-    "Common name": "Purple Lance-leaf Loosestrife",
+  "Lysimachia lanceolata var. purpurea 'Burgundy Mist'": {
+    "Common name": "Purple Lance-leaf Loosestrife ",
     "Height": "1-2 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -5433,6 +6017,12 @@
       "Cultivar",
       "Midwestern US",
       "Southeastern US"
+    ],
+    "Autofill image paths": [
+      "lysimachia_lanceolata-Burgundy-Mist.png"
+    ],
+    "Autofill image credits": [
+      "stonehousenursery.com"
     ],
     "Pollen Source": "Ciliate Yellow Loosestrife Bee, Dark-footed Loosestrife Bee, Patellate Yellow Loosestrife Bee",
     "Hosted Butterflies and Moths": "Gray Pug; Bold-Feathered Grass Moth; Hitched Arches; Blurry-Patched Nola; Stalk Borer",
@@ -5449,7 +6039,7 @@
       "Jul",
       "Aug"
     ],
-    "Latin name": "Lysimachia lanceolata var. purpurea"
+    "Latin name": "Lysimachia lanceolata var. purpurea 'Burgundy Mist'"
   },
   "Lythrum alatum": {
     "Common name": "Winged Loosestrife",
@@ -5801,7 +6391,7 @@
     "Latin name": "Monarda didyma"
   },
   "Monarda didyma 'Jacob Cline'": {
-    "Common name": "Beebalm 'Jacob Cline'",
+    "Common name": "Jacob Cline Beebalm",
     "Height": "3-4 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -5830,6 +6420,37 @@
       "Aug"
     ],
     "Latin name": "Monarda didyma 'Jacob Cline'"
+  },
+  "Monarda didyma 'Pardon My Lavender II'": {
+    "Common name": "Pardon My Lavender II Beebalm",
+    "Height": "1-1.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Midatlantic US"
+    ],
+    "Autofill image paths": [
+      "monarda_didyma-Pardon-My-Lavender-II.png"
+    ],
+    "Autofill image credits": [
+      "provenwinners.com"
+    ],
+    "Pollen Source": "Half-black Bumblebee, Beebalm Shortface Bee",
+    "Hosted Butterflies and Moths": "Grey Marvel; Wide-Striped Leaf Roller; Chionodes fondella; Pink-Patched Looper Moth; Hermit Sphinx; Rustic Quaker; Stalk Borer; Orange Mint Moth; Raspberry Pyrausta; Sparganothis Fruitworm Moth; Xenotemna pallorana",
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Monarda didyma 'Pardon My Lavender II'"
   },
   "Monarda fistulosa": {
     "Common name": "Wild Bee Balm",
@@ -6615,7 +7236,7 @@
   },
   "Phlox stolonlifera": {
     "Common name": "Woodland Phlox",
-    "Height": ".75-1 ft",
+    "Height": "0.75-1 ft",
     "plantType": [
       "Herbaceous perennial"
     ],
@@ -6639,9 +7260,13 @@
   },
   "Phlox subulata": {
     "Common name": "Moss Phlox",
-    "Height": ".25-.75 ft",
+    "Height": "0.25-0.75 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Ecoregion": "58, 84",
+    "Native Range": [
+      "Mid-Atlantic US"
     ],
     "Key Host Plant": [
       "K"
@@ -6655,10 +7280,76 @@
       "Dry"
     ],
     "Bloom time": [
-      "May",
-      "Jun"
+      "Apr",
+      "May"
     ],
     "Latin name": "Phlox subulata"
+  },
+  "Phlox subulata 'Emerald Pink'": {
+    "Common name": "Emerald Pink Moss Phlox",
+    "Height": "0.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Mid-Atlantic US"
+    ],
+    "Autofill image paths": [
+      "phlox_subulata-Emerald_Pink.png"
+    ],
+    "Autofill image credits": [
+      "gardenia.net"
+    ],
+    "Key Host Plant": [
+      "K"
+    ],
+    "Hosted Butterflies and Moths": "Corn Earworm Moth; Spotted Straw Sun Moth; Common Idia; Olive Arches; Hitched Arches; Stalk Borer; Purple-Lined Sallow; Mosaic Sparganothis",
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Latin name": "Phlox subulata 'Emerald Pink'"
+  },
+  "Phlox subulata 'Amazing Grace'": {
+    "Common name": "Amazing Grace Moss Phlox",
+    "Height": "0.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Mid-Atlantic US"
+    ],
+    "Autofill image paths": [
+      "phlox_subulata-Amazing-Grace.png"
+    ],
+    "Autofill image credits": [
+      "bluestoneperennials.com"
+    ],
+    "Key Host Plant": [
+      "K"
+    ],
+    "Hosted Butterflies and Moths": "Corn Earworm Moth; Spotted Straw Sun Moth; Common Idia; Olive Arches; Hitched Arches; Stalk Borer; Purple-Lined Sallow; Mosaic Sparganothis",
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Latin name": "Phlox subulata 'Amazing Grace'"
   },
   "Physostegia virginiana": {
     "Common name": "Obedient Plant",
@@ -7483,6 +8174,33 @@
     ],
     "Latin name": "Ruta graveolens"
   },
+  "Sagina subulata": {
+    "Common name": "Irish Moss",
+    "Height": "0.1 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Europe"
+    ],
+    "Autofill image paths": [
+      "Sagina_subulata.png"
+    ],
+    "Autofill image credits": [
+      "gardenia.net"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Latin name": "Sagina subulata"
+  },
   "Sagittaria latifolia": {
     "Common name": "Broadleaf Arrowhead",
     "Height": "3 ft",
@@ -7525,6 +8243,29 @@
       "Oct"
     ],
     "Latin name": "Salvia azurea"
+  },
+  "Salvia farinacea 'Sallyfun Blue Lagoon'": {
+    "Common name": "Mealycup Sage",
+    "Height": "1-2.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Southwestern US"
+    ],
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Salvia farinacea 'Sallyfun Blue Lagoon'"
   },
   "Salvia nemorosa": {
     "Common name": "Meadow Sage",
@@ -7724,7 +8465,7 @@
   },
   "Sedum ternatum": {
     "Common name": "Woodland Stonecrop",
-    "Height": "8 in",
+    "Height": "0.5-0.75 ft",
     "plantType": [
       "Herbaceous perennial"
     ],
@@ -7743,6 +8484,60 @@
       "Jun"
     ],
     "Latin name": "Sedum ternatum"
+  },
+  "Sedum middendorffianum 'Yellow Diamonds'": {
+    "Common name": "Yellow Diamonds Stonecrop",
+    "Height": "0.5-0.75 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Asia"
+    ],
+    "Hosted Butterflies and Moths": "Omnivorous Leafroller Moth; The Brown Elfin; Common Buckeye; Filament Bearer; Yellow-Striped Armyworm Moth; Gray Hairstreak",
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Sedum middendorffianum 'Yellow Diamonds'"
+  },
+  "Sedum hybridum 'Sunsparkler Lime Zinger'": {
+    "Common name": "Lime Zinger Stonecrop",
+    "Height": "0.25-0.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar"
+    ],
+    "Autofill image paths": [
+      "sedum-Lime-Zinger.png"
+    ],
+    "Autofill image credits": [
+      "bluestoneperennials.com"
+    ],
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Latin name": "Sedum hybridum 'Sunsparkler Lime Zinger'"
   },
   "Senna hebecarpa": {
     "Common name": "Wild Senna",
@@ -8673,8 +9468,43 @@
     ],
     "Latin name": "Solidago ulmifolia"
   },
+  "Spigelia marilandica 'Little Redhead'": {
+    "Common name": "Indian Pink",
+    "Height": "2 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Southeastern US"
+    ],
+    "Autofill image paths": [
+      "spigelia_marilandica-Little-Redhead.png"
+    ],
+    "Autofill image credits": [
+      "whiteflowerfarm.com"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Latin name": "Spigelia marilandica 'Little Redhead'"
+  },
   "Stachys pilosa": {
     "Common name": "Hairy Hedge-Nettle",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
     "Latin name": "Stachys pilosa"
   },
   "Stylophorum diphyllum": {
@@ -9507,6 +10337,84 @@
     ],
     "Latin name": "Thermopsis carolinia"
   },
+  "Thymus citriodorus 'Archer's Gold'": {
+    "Common name": "Archer's Gold Thyme",
+    "Height": "0.25-0.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Europe"
+    ],
+    "Hosted Butterflies and Moths": "Strawberry Leafroller; Common Eupithacia",
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Thymus citriodorus 'Archer's Gold'"
+  },
+  "Thymus coccineus": {
+    "Common name": "Creeping Thyme",
+    "Height": "0.25-0.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Europe"
+    ],
+    "Hosted Butterflies and Moths": "Strawberry Leafroller; Common Eupithacia",
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Thymus coccineus"
+  },
+  "Thymus pseudolanuginosus": {
+    "Common name": "Woolly Thyme",
+    "Height": "0.25 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Europe"
+    ],
+    "Autofill image paths": [
+      "thymus_pseudolanuginosus.png"
+    ],
+    "Autofill image credits": [
+      "Missouri Botanical Garden"
+    ],
+    "Hosted Butterflies and Moths": "Strawberry Leafroller; Common Eupithacia",
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Latin name": "Thymus pseudolanuginosus"
+  },
   "Tiarella cordifolia": {
     "Common name": "Foam Flower",
     "Height": "0.25-1 ft",
@@ -9672,6 +10580,38 @@
       "Aug"
     ],
     "Latin name": "Triodanis perfoliata"
+  },
+  "Trollius x cultorum 'New Moon'": {
+    "Common name": "New Moon Globe Flower",
+    "Height": "2 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Europe",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "trollius-New_Moon.png"
+    ],
+    "Autofill image credits": [
+      "bluestoneperennials.com"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Latin name": "Trollius x cultorum 'New Moon'"
   },
   "Typha latifolia": {
     "Common name": "Broad-leaved Cattail",
@@ -10003,6 +10943,65 @@
       "Sep"
     ],
     "Latin name": "Vernonia noveboracensis"
+  },
+  "Veronica peduncularis 'Georgia Blue'": {
+    "Common name": "Georgia Blue Creeping Speedwell",
+    "Height": "0.5-0.75 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Europe",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "veronica_peduncularis-Georgia-Blue.png"
+    ],
+    "Autofill image credits": [
+      "cavanos.com"
+    ],
+    "Hosted Butterflies and Moths": "Carmenta corni; Metallic Coleophora; Verbena Bud Moth; The Baltimore; Bold-Feathered Grass Moth; Dotted Wave; Common Buckeye; Dusky Leafroller; Burdock Border; Stalk Borer; Black-Shaded Platynota; One-Lined Sparganothis",
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Latin name": "Veronica peduncularis 'Georgia Blue'"
+  },
+  "Veronica peduncularis 'Waterperry Blue'": {
+    "Common name": "Waterperry Blue Creeping Speedwell",
+    "Height": "0.25-0.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Europe",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "veronica_peduncularis-Waterperry-Blue.png"
+    ],
+    "Autofill image credits": [
+      "chicagobotanic.org"
+    ],
+    "Hosted Butterflies and Moths": "Carmenta corni; Metallic Coleophora; Verbena Bud Moth; The Baltimore; Bold-Feathered Grass Moth; Dotted Wave; Common Buckeye; Dusky Leafroller; Burdock Border; Stalk Borer; Black-Shaded Platynota; One-Lined Sparganothis",
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "Latin name": "Veronica peduncularis 'Waterperry Blue'"
   },
   "Veronicastrum virginicum": {
     "Common name": "Culver's Root",
