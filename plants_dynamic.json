@@ -62,6 +62,48 @@
     ],
     "Latin name": "Bidens cernua"
   },
+  "Acalypha rhomboidea": {
+    "Common name": "Common Three-seeded Mercury",
+    "Height": "0.5-2 ft",
+    "plantType": [
+      "Annual"
+    ],
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US",
+      "Southwestern US"
+    ],
+    "Autofill image paths": [
+      "Acalypha_rhomboidea.png"
+    ],
+    "Autofill image credits": [
+      "illinoiswildflowers.info"
+    ],
+    "Hosted Butterflies and Moths": "Saddleback Caterpillar Moth; The Gem; Large Lace-Border; Fall Armyworm Moth",
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Latin name": "Acalypha rhomboidea"
+  },
   "Achillea millefolium": {
     "Common name": "Common Yarrow",
     "Height": "1-3 ft",
@@ -204,6 +246,12 @@
       "Eastern US",
       "Southeastern US"
     ],
+    "Autofill image paths": [
+      "actaea_racemosa.png"
+    ],
+    "Autofill image credits": [
+      "https://www.mass.gov/info-details/black-cohosh"
+    ],
     "Hosted Butterflies and Moths": "Summer Azure; Baneberry Pug; Eupithecia strattonata",
     "Sunlight": [
       "Part Sun",
@@ -221,6 +269,38 @@
       "Sep"
     ],
     "Latin name": "Actaea racemosa"
+  },
+  "Actaea simplex 'Hillside Black Beauty'": {
+    "Common name": "Bugbane 'Hillside Black Beauty'",
+    "Height": "4-7 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "actaea-Hillside-Black-Beauty.png"
+    ],
+    "Autofill image credits": [
+      "Missouri Botanical Garden"
+    ],
+    "Hosted Butterflies and Moths": "Summer Azure; Baneberry Pug; Eupithecia strattonata",
+    "Sunlight": [
+      "Part Sun",
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Latin name": "Actaea simplex 'Hillside Black Beauty'"
   },
   "Actaea rubra": {
     "Common name": "Red Baneberry",
@@ -515,6 +595,12 @@
       "Europe",
       "Africa",
       "Asia"
+    ],
+    "Autofill image paths": [
+      "ajuga_reptans.png"
+    ],
+    "Autofill image credits": [
+      "gardenia.net"
     ],
     "Sunlight": [
       "Sun",
@@ -3459,7 +3545,7 @@
     "Latin name": "Erigeron pulchellus"
   },
   "Erigeron pulchellus var. pulchellus 'Lynnhaven Carpet'": {
-    "Common name": "Lynnhaven Carpet Fleabane",
+    "Common name": "Fleabane 'Lynnhaven Carpet' ",
     "Height": "1-1.5 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -4108,6 +4194,38 @@
     ],
     "Latin name": "Fragaria vesca"
   },
+  "Galium odoratum": {
+    "Common name": "Sweet Woodruff",
+    "Height": "0.5-1 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Europe",
+      "Africa",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "galium_odoratum.png"
+    ],
+    "Autofill image credits": [
+      "americanmeadows.com"
+    ],
+    "Hosted Butterflies and Moths": "Mouse-Colored Pyrophila; Phyllira Tiger Moth; Virgin Tiger Moth; Bent-Lined Carpet; White-Banded Toothed Carpet; Gray Pug; Bedstraw Hawkmoth; White-Lined Sphinx; Dotted Wave; Drab Brown Wave; The Gem; Common Tan Wave; Large Lace-Border; Faded Grey; Red Carpet; Red Twin-Spot",
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Latin name": "Galium odoratum"
+  },
   "Gallardia pulchella": {
     "Common name": "Indian Blanket",
     "Height": "1-1.5 ft",
@@ -4288,7 +4406,7 @@
     "Latin name": "Geranium maculatum"
   },
   "Geranium macrorrhizum 'Ingwersens Variety'": {
-    "Common name": "Cranesbill",
+    "Common name": "Cranesbill 'Ingwersens Variety'",
     "Alternate common names": [
       "Big-rooted Geranium"
     ],
@@ -4454,7 +4572,7 @@
     "Latin name": "Glycyrrhiza lepidota"
   },
   "Gypsophilia cerastioides 'Pixie Splash'": {
-    "Common name": "Pixie Splash Alpine Baby's Breath",
+    "Common name": "Alpine Baby's Breath 'Pixie Splash'",
     "Height": "0.25-0.5 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -4525,7 +4643,7 @@
     "Latin name": "Helenium autumnale"
   },
   "Helenium autumnale 'HayDay Orange'": {
-    "Common name": "HayDay Orange Sneezeweed",
+    "Common name": "Sneezeweed 'HayDay Orange'",
     "Height": "1-1.5 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -4954,7 +5072,7 @@
     "Latin name": "Heuchera americana"
   },
   "Heuchera micrantha 'Lime Marmalade'": {
-    "Common name": "Lime Marmalade Coral Bells",
+    "Common name": "Coral Bells 'Lime Marmalade'",
     "Alternate common names": [
       "Alumn Root"
     ],
@@ -5412,6 +5530,36 @@
       "May"
     ],
     "Latin name": "Iris cristata"
+  },
+  "Iris sibirica": {
+    "Common name": "Siberian Iris",
+    "Height": "2-4 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Europe",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "iris_sibirica.png"
+    ],
+    "Autofill image credits": [
+      "gardenia.net"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Latin name": "Iris sibirica"
   },
   "Iris versicolor": {
     "Common name": "Blue Flag Iris",
@@ -6827,6 +6975,34 @@
     ],
     "Latin name": "Packera obovata"
   },
+  "Paeonia lactiflora": {
+    "Common name": "Chinese Peony",
+    "Height": "2-3 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "paeonia_lactiflora.png"
+    ],
+    "Autofill image credits": [
+      "gardenia.net"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Latin name": "Paeonia lactiflora"
+  },
   "Parnassia glauca": {
     "Common name": "Fen Grass-of-Parnassus",
     "Height": "0.5-1 ft",
@@ -6989,7 +7165,7 @@
     "Latin name": "Penstemon digitalis"
   },
   "Penstemon digitalis 'Husker Red'": {
-    "Common name": "Husker Red Foxglove Beardtongue",
+    "Common name": "Foxglove Beardtongue 'Husker Red'",
     "Height": "2-3 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -7286,7 +7462,7 @@
     "Latin name": "Phlox subulata"
   },
   "Phlox subulata 'Emerald Pink'": {
-    "Common name": "Emerald Pink Moss Phlox",
+    "Common name": "Moss Phlox 'Emerald Pink'",
     "Height": "0.5 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -7319,7 +7495,7 @@
     "Latin name": "Phlox subulata 'Emerald Pink'"
   },
   "Phlox subulata 'Amazing Grace'": {
-    "Common name": "Amazing Grace Moss Phlox",
+    "Common name": "Moss Phlox 'Amazing Grace'",
     "Height": "0.5 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -13388,6 +13564,12 @@
     "Native Range": [
       "Southeastern US"
     ],
+    "Autofill image paths": [
+      "aesculus_parviflora.png"
+    ],
+    "Autofill image credits": [
+      "hgic.clemson.edu"
+    ],
     "Hosted Butterflies and Moths": "Distinct Quaker; American Dagger; Luna Moth; Polyphemus Moth; Fruit-Tree Leafroller Moth; Wavy-Lined Heterocampa; Maple Prominent; Celypha Moth; Oblique-Banded Leafroller Moth; Chain-Dotted Geometer; Sharp-Lined Tussock Moth; Imperial Moth; Alternate Woodling; Elm Spanworm Moth; Sloping Sallow; Banded Tussock Moth; Cecropia Silkmoth; Fall Webworm; Crowned Slug; Ashen Pinion; Bailey's Pinion; Grote's Pinion; Hickory Tussock Moth; Confused Woodgrain; Filament Bearer; White-Marked Tussock Moth; Speckled Green Fruitworm Moth; Maple Seed Caterpillar; Roland's Sallow; Bare-Patched Leafroller; Evergreen Bagworm Moth; Leopard Moth",
     "Sunlight": [
       "Sun",
@@ -14986,6 +15168,12 @@
       "(84) Atlantic Coastal Pine Barrens",
       "Northeastern US",
       "Mid-Atlantic US"
+    ],
+    "Autofill image paths": [
+      "prunus_maritima.png"
+    ],
+    "Autofill image credits": [
+      "wildseedproject.net"
     ],
     "Key Host Plant": [
       "Lepidoptera"
@@ -16690,6 +16878,12 @@
       "Midwestern US",
       "Southeastern US"
     ],
+    "Autofill image paths": [
+      "acer_rubrum.png"
+    ],
+    "Autofill image credits": [
+      "mtcubacenter.org"
+    ],
     "Key Host Plant": [
       "Lepidoptera"
     ],
@@ -17436,20 +17630,40 @@
     "Latin name": "Fagus grandifolia"
   },
   "Fraxinus americana": {
-    "Common name": "White ash",
+    "Common name": "White Ash",
     "Height": "50-80 ft",
     "plantType": [
       "Tree"
     ],
     "Ecoregion": "58, 59, 82, 83, 84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
+    "Autofill image paths": [
+      "fraxinus.americana.png"
+    ],
+    "Autofill image credits": [
+      "https://research.fs.usda.gov/"
+    ],
     "Hosted Butterflies and Moths": "Greater Red Dart; Distinct Quaker; Pecan Nursery Casemaker; American Dagger; Doll's Dagger; Yellow-Haired Dagger; Interrupted Dagger; Fall Cankerworm Moth; White-Lined Leafroller Moth; Smooth Amphipyra; Miranda Underwing; Common Gray; Well-Marked Leaf Tier; Polyphemus Moth; Spotted Apatelodes; Wide-Striped Leaf Roller; Fruit-Tree Leafroller Moth; Cherry Tent Caterpillar; Exotic Leafroller Moth; Omnivorous Leafroller Moth; Oak Leafroller Moth; Stripe-Backed Moth; Io Moth; Sleeping Baileya; Salt-and-Pepper Geometer; Bucculatrix packardella; Promethea Silkmoth; Privet Leafminer; Pale Beauty; Habilis Underwing; The Penitent; Maple Prominent; Spring Dead-Leaf Roller Moth; Reticulated Fruitworm Moth; Elm Sphinx; Waved Sphinx; Oblique-Banded Leafroller Moth; Chain-Dotted Geometer; Royal Walnut Moth; White Triangle Tortrix; European Elm-Casebearer; Grote's Sallow; Norman's Quaker; Yellow-Necked Caterpillar Moth; The Small Engrailed; Maple Spanworm Moth; Elm Spanworm Moth; Linden Looper Moth; Effective Euchlaena; Johnson's Euchlaena; Ochre Euchlaena; Spiny Oak-Slug Moth; Ferruginous Eulia; The Baltimore; Eupithecia swettii; Browntail Moth; Curved-Tooth Geometer; American Plum Borer; Lilac Leafminer; Banded Tussock Moth; Confused Haploa; Harris's Three-Spot; Spotted Apple Budworm; Cecropia Silkmoth; One-Spotted Variant; Fall Webworm; Pale-Winged Gray; Small Purplish Gray; Bent-Line Gray; Curve-Lined Looper Moth; Ashen Pinion; Bethune's Pinion; Fireworm; Nameless Pinion; Broad Ashen Pinion; Wanton Pinion; Shivering Pinion; White Spring Moth; Hickory Tussock Moth; Spotted Tussock Moth; Stout Spanworm Moth; Woolly Gray; Spongy Moth; Gold-Striped Leaftier Moth; Eastern Tent Caterpillar; Forest Tent Caterpillar; Ash Sphinx; Southern Flannel Moth; Black Arches; Canadian Melanolphia; Signate Melanolphia; Dark Metanema; Confused Woodgrain; White-Dotted Prominent; Filament Bearer; White-Fringed Emerald; Mourning Cloak; Red-Humped Caterpillar; The Angel; Winter Moth; Manto Tussock Moth; Definite Tussock Moth; White-Marked Tussock Moth; Garman's Quaker; Speckled Green Fruitworm Moth; Subdued Quaker; Dusky Leafroller; Spring Cankerworm Moth; Splendid Palpita; Dark-Spotted Palthis; Woodgrain Leafroller; Blinded Sphinx; Ash-Tip Borer; Stalk Borer; Eastern Giant Swallowtail; Eastern Tiger Swallowtail; Oak Stump Borer Moth; Oak Beauty Moth; The Half-Wing Geometer; Hag Moth; Ruby Tiger Moth; Lappet Moth; Fervid Plagodis; Purple Plagodis; Tufted Apple-Bud Moth; Lilac Borer Moth; Little Carpenterworm; Carpenterworm Moth; Dogwood Probole; Friendly Probole; Porcelain Gray; Fawn Sallow; Aspen Leaftier; Blackheaded Fireworm; Banded Hairstreak; Hickory Hairstreak; Striped Hairstreak; Morning-Glory Prominent; Sharp-Lined Yellow; Twin-Spotted Sphinx; One-Lined Sparganothis; Canadian Sphinx; Great Ash Sphinx; Apple Sphinx; Fawn Sphinx; Pink-Legged Tiger Moth; Virginian Tiger Moth; Fringed-Tree Sallow; White Slant-Line; Evergreen Bagworm Moth; Large Tolype; Leopard Moth",
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Wet",
       "Medium"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May"
     ],
     "Latin name": "Fraxinus americana"
   },
