@@ -497,9 +497,9 @@ export default function Home() {
               )}
             </ItemGridSection>
 
-            {/* Featured Gardens (handpicked, read-only, shown to everyone) */}
+            {/* Featured Gardens (handpicked, read-only, shown to everyone) Change back to featured*/}
             {filteredFeatured.length > 0 && (
-              <ItemGridSection title="Featured">
+              <ItemGridSection title="4th Annual Newton Pollinator Garden Tour 9/19/2026">
                 <ItemGrid
                   items={filteredFeatured}
                   linkPrefix="/share"
