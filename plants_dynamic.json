@@ -1557,6 +1557,12 @@
     "Native Range": [
       "Southeastern US"
     ],
+    "Autofill image paths": [
+      "aruncus_dioicus.png"
+    ],
+    "Autofill image credits": [
+      "mtcubacenter.org"
+    ],
     "Key Host Plant": [
       "K"
     ],
@@ -1611,6 +1617,35 @@
       "Jun"
     ],
     "Latin name": "Asarum canadense"
+  },
+  "Asarum europaeum": {
+    "Common name": "European Wild Ginger",
+    "Height": "0.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Europe",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "asarum_europaeum.png"
+    ],
+    "Autofill image credits": [
+      "gardenia.net"
+    ],
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Latin name": "Asarum europaeum"
   },
   "Asclepias exaltata": {
     "Common name": "Poke Milkweed",
@@ -3065,6 +3100,12 @@
     ],
     "Native Range": [
       "Mid-Atlantic US"
+    ],
+    "Autofill image paths": [
+      "delphinium_exaltatum.png"
+    ],
+    "Autofill image credits": [
+      "prairienursery.com"
     ],
     "Hosted Butterflies and Moths": "Williams' Tiger Moth; Verbena Bud Moth; Great Grey Dart; Pink-Washed Leafroller Moth; Spotted Straw Sun Moth; Scripted Arches; Bilobed Looper Moth; Burdock Border; Stalk Borer; American Bordered Sallow; Purple-Lined Sallow; One-Lined Sparganothis; Celery Leaftier",
     "Sunlight": [
@@ -5144,6 +5185,12 @@
       "Southeastern US",
       "Southwestern US"
     ],
+    "Autofill image paths": [
+      "hibiscus_moschedutos.jpeg"
+    ],
+    "Autofill image credits": [
+      "K. Elbert"
+    ],
     "Key Host Plant": [
       "K"
     ],
@@ -5887,6 +5934,15 @@
       "Aug"
     ],
     "Latin name": "Lilium canadense"
+  },
+  "Ligularia stenocephala": {
+    "Autofill image paths": [
+      "ligularia_stenocephala-Bottle-Rocket.png"
+    ],
+    "Autofill image credits": [
+      "provenwinners.com"
+    ],
+    "Latin name": "Ligularia stenocephala"
   },
   "Lobelia cardinalis": {
     "Common name": "Cardinal Flower",
