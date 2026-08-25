@@ -4446,6 +4446,38 @@
     ],
     "Latin name": "Geranium maculatum"
   },
+  "Geranium 'Rozanne'": {
+    "Common name": "Geranium 'Rozanne'",
+    "Height": "1-1.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "geranium-Rozanne.png"
+    ],
+    "Autofill image credits": [
+      "bluestoneperennials.com"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Latin name": "Geranium 'Rozanne'"
+  },
   "Geranium macrorrhizum 'Ingwersens Variety'": {
     "Common name": "Cranesbill 'Ingwersens Variety'",
     "Alternate common names": [
@@ -7424,6 +7456,8 @@
       "Herbaceous perennial"
     ],
     "Native Range": [
+      "Mid-Atlantic US",
+      "Midwestern US",
       "Southeastern US"
     ],
     "Hosted Butterflies and Moths": "Corn Earworm Moth; Spotted Straw Sun Moth; Common Idia; Olive Arches; Hitched Arches; Stalk Borer; Purple-Lined Sallow; Mosaic Sparganothis",
@@ -7440,6 +7474,72 @@
       "Sep"
     ],
     "Latin name": "Phlox paniculata"
+  },
+  "Phlox paniculata 'David'": {
+    "Common name": "Garden Phlox 'David'",
+    "Height": "2-4 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Mid-Atlantic US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
+    "Autofill image paths": [
+      "phlox_paniculata-David.png"
+    ],
+    "Autofill image credits": [
+      "provenwinners.com"
+    ],
+    "Hosted Butterflies and Moths": "Corn Earworm Moth; Spotted Straw Sun Moth; Common Idia; Olive Arches; Hitched Arches; Stalk Borer; Purple-Lined Sallow; Mosaic Sparganothis",
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Latin name": "Phlox paniculata 'David'"
+  },
+  "Phlox paniculata 'Jeana'": {
+    "Common name": "Garden Phlox 'Jeana'",
+    "Height": "2-4 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Mid-Atlantic US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
+    "Autofill image paths": [
+      "phlox_paniculata-Jeana.jpeg"
+    ],
+    "Autofill image credits": [
+      "K. Elbert"
+    ],
+    "Hosted Butterflies and Moths": "Corn Earworm Moth; Spotted Straw Sun Moth; Common Idia; Olive Arches; Hitched Arches; Stalk Borer; Purple-Lined Sallow; Mosaic Sparganothis",
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Latin name": "Phlox paniculata 'Jeana'"
   },
   "Phlox pilosa": {
     "Common name": "Prairie Phlox",
@@ -7471,6 +7571,12 @@
     "Height": "0.75-1 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Ecoregion": "58,59,83",
+    "Native Range": [
+      "Mid-Atlantic US",
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Key Host Plant": [
       "K"
@@ -13964,6 +14070,33 @@
       "Aug"
     ],
     "Latin name": "Calycanthus floridus"
+  },
+  "Caryopteris x clandonensis": {
+    "Common name": "Bluebeard",
+    "Alternate common names": [
+      "Blue Mist Shrub"
+    ],
+    "Height": "2-3 ft",
+    "plantType": [
+      "Shrub"
+    ],
+    "Native Range": [
+      "Asia"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Latin name": "Caryopteris x clandonensis"
   },
   "Ceanothus americanus": {
     "Common name": "New Jersey Tea",
