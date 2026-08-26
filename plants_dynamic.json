@@ -2082,6 +2082,35 @@
     ],
     "Latin name": "Blephilia hirsuta"
   },
+  "Boehmeria cylindrica": {
+    "Common name": "Small-spiked False Nettle",
+    "Height": "2-4 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "MA Native",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
+    "Hosted Butterflies and Moths": "Salt Marsh Moth; Flowing-Line Bomolocha; Herbivorous Patania; Scraped Pilocrocis; Eastern Comma; Question Mark; Red Admiral; Painted Lady",
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Latin name": "Boehmeria cylindrica"
+  },
   "Boltonia asteroides": {
     "Common name": "False Aster",
     "Alternate common names": [
