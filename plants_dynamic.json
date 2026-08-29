@@ -1520,10 +1520,10 @@
     ],
     "Latin name": "Arisaema tryphyllum"
   },
-  "Artemisia schmidtiana": {
-    "Common name": "Silver Mound",
+  "Artemisia schmidtiana 'Silver Mound'": {
+    "Common name": "Artemisia 'Silver Mound'",
     "Alternate common names": [
-      "Dwarf Wormwood"
+      "Dwarf Wormwood 'Silver Mound'"
     ],
     "Height": "0.75-1 ft",
     "plantType": [
@@ -1546,7 +1546,7 @@
       "Jul",
       "Aug"
     ],
-    "Latin name": "Artemisia schmidtiana"
+    "Latin name": "Artemisia schmidtiana 'Silver Mound'"
   },
   "Aruncus dioicus": {
     "Common name": "Goat's Beard",
@@ -2334,6 +2334,9 @@
       "Oct"
     ],
     "Latin name": "Campanula americana"
+  },
+  "Campanula percifolia 'Takion White'": {
+    "Latin name": "Campanula percifolia 'Takion White'"
   },
   "Campanula rotundifolia": {
     "Common name": "Harebell",
@@ -3574,6 +3577,33 @@
     ],
     "Latin name": "Epilobium glandulosum"
   },
+  "Epimedium 'Pink-Champagne'": {
+    "Common name": "Barrenwort 'Pink Champagne'",
+    "Height": "1-2 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Europe",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "Epimedium-Pink-Champagne.png"
+    ],
+    "Autofill image credits": [
+      "vanberkumnursery.com"
+    ],
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Latin name": "Epimedium 'Pink-Champagne'"
+  },
   "Erigeron pulchellus": {
     "Common name": "Fleabane",
     "Alternate common names": [
@@ -4543,6 +4573,7 @@
     "Native Range": [
       "Europe"
     ],
+    "Hosted Butterflies and Moths": "Garden Tiger Moth; Reticulated Fruitworm Moth; Dark Marbled Carpet; Marbled Carpet; Day Emerald",
     "Sunlight": [
       "Sun",
       "Part Sun",
@@ -4557,6 +4588,37 @@
       "Jul"
     ],
     "Latin name": "Geum coccineum"
+  },
+  "Geum flora plena 'Blazing Sunset'": {
+    "Common name": "Avens 'Blazing Sunset'",
+    "Height": "1-1.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "South America"
+    ],
+    "Autofill image paths": [
+      "geum_flora_plena-Blazing-Sunset.png"
+    ],
+    "Autofill image credits": [
+      "provenwinners.com"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Geum flora plena 'Blazing Sunset'"
   },
   "Geum fragroides": {
     "Common name": "Appalachian Barren Strawberry",
@@ -5115,6 +5177,39 @@
       "Oct"
     ],
     "Latin name": "Heliopsis helianthoides 'Bleeding Hearts'"
+  },
+  "Helleborus orientalis": {
+    "Common name": "Lenten Rose",
+    "Alternate common names": [
+      "Christmas Rose"
+    ],
+    "Height": "1-2 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Europe",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "helleborus.png"
+    ],
+    "Autofill image credits": [
+      "gardenerspath.com"
+    ],
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Feb",
+      "Mar",
+      "Apr"
+    ],
+    "Latin name": "Helleborus orientalis"
   },
   "Hepatica acutiloba": {
     "Common name": "Sharp-lobed Hepatica",
@@ -8621,6 +8716,12 @@
       "Cultivar",
       "Southwestern US"
     ],
+    "Autofill image paths": [
+      "salvia_farinacea-Blue-Lagoon.png"
+    ],
+    "Autofill image credits": [
+      "Brandon Friend-Solis for monrovia.com"
+    ],
     "Sunlight": [
       "Sun"
     ],
@@ -11102,6 +11203,12 @@
       "(84) Atlantic Coastal Pine Barrens",
       "US Native"
     ],
+    "Autofill image paths": [
+      "Verbena hastata home.jpeg"
+    ],
+    "Autofill image credits": [
+      "K. Elbert"
+    ],
     "Key Host Plant": [
       "K"
     ],
@@ -11576,6 +11683,41 @@
       "Jun"
     ],
     "Latin name": "Viola striata"
+  },
+  "Viola walteri 'Silver Gem'": {
+    "Common name": "Walter's Violet 'Silver Gem'",
+    "Height": "0.25 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Mid-Atlantic US",
+      "Southeastern US"
+    ],
+    "Autofill image paths": [
+      "viola_walteri-Silver-Gem.png"
+    ],
+    "Autofill image credits": [
+      "mtcubacenter.org"
+    ],
+    "Pollen Source": "Violet Miner, Quebec Sweat Bee",
+    "Hosted Butterflies and Moths": "Swordsman Dart; Venerable Dart; Nais Tiger Moth; Apterona helicoidella; Omnivorous Leafroller Moth; Aphrodite Fritillary; Mountain Silver-Spot; Great Spangled Fritillary; Regal Fritillary; Red-Banded Leafroller Moth; Silver-Bordered Fritillary; Atlantis Fritillary; Grateful Midget; Waterlily Leafcutter Moth; Cranberry Spanworm; The Beggar; Straight-Toothed Sallow; Bold-Feathered Grass Moth; Zigzag Herpetogramma; Giant Leopard Moth; Speckled Arches; Large Yellow Underwing; European Corn Borer Moth; Variegated Cutworm; Virginian Tiger Moth; Fall Armyworm Moth; Yellow-Striped Armyworm Moth; Striped Garden Caterpillar Moth; Celery Leaftier; Spotted Cut-Worm; Greater Black-Letter Dart; Smith's Dart",
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May",
+      "Jun",
+      "Aug",
+      "Sep"
+    ],
+    "Latin name": "Viola walteri 'Silver Gem'"
   },
   "Waldsteinia fragarioides": {
     "Common name": "Barren Strawberry",
