@@ -79,7 +79,7 @@
       "Southwestern US"
     ],
     "Autofill image paths": [
-      "Acalypha_rhomboidea.png"
+      "acalypha_rhomboidea.png"
     ],
     "Autofill image credits": [
       "illinoiswildflowers.info"
@@ -5827,6 +5827,10 @@
       "Jul"
     ],
     "Latin name": "Iris versicolor"
+  },
+  "Kniphofia 'Lady Luck'": {
+    "Common name": "Red Hot Poker 'Lady Luck'",
+    "Latin name": "Kniphofia 'Lady Luck'"
   },
   "Lespedeza capitata": {
     "Common name": "Round-headed Bush Clover",
@@ -18095,7 +18099,7 @@
       "Southeastern US"
     ],
     "Autofill image paths": [
-      "fraxinus.americana.png"
+      "fraxinus_americana.png"
     ],
     "Autofill image credits": [
       "https://research.fs.usda.gov/"
