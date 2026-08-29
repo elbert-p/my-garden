@@ -14,7 +14,8 @@ import {
   getPlantDisplay, getWildlifeDisplay, updatePlant,
 } from '@/lib/dataService';
 import { getReferenceVersion, entrySignature } from '@/lib/autofillDb';
-import { findData, buildAutofillUpdates, buildAutofillDataUpdates, autofillWouldChange } from '@/lib/plantAutofill';
+import { findData, buildAutofillUpdates, buildAutofillDataUpdates, autofillWouldChange, autofillWouldAddImage } from '@/lib/plantAutofill';
+import { getAutofillImageUrl } from '@/lib/autofillImages';
 import NavBar from '@/components/NavBar';
 import SortFilterControls from '@/components/SortFilterControls';
 import ItemGrid from '@/components/ItemGrid';
@@ -241,6 +242,9 @@ function GardenLayoutContent({ children }) {
           const diffs = {};
           for (const f of ['commonName', 'scientificName', 'height', 'hostedInsects', 'bloomTime', 'sunlight', 'moisture', 'plantType', 'nativeRange']) {
             if (JSON.stringify(u[f]) !== JSON.stringify(p[f])) diffs[f] = { stored: p[f], db: u[f] };
+          }
+          if (autofillWouldAddImage(p, result)) {
+            diffs.mainImage = { stored: p.mainImage || '', db: getAutofillImageUrl(result.data) };
           }
           console.log('[autofill-debug] prompting', p.commonName || p.scientificName,
             '| matchedBy:', result.matchedBy,
