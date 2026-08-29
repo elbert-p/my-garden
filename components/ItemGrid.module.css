@@ -72,6 +72,12 @@
   border-radius: var(--item-radius, 15px);
 }
 
+/* The container has no radius of its own, so the loading skeleton has to
+   repeat the image's to line up with it. */
+.imageSkeleton {
+  border-radius: var(--item-radius, 15px);
+}
+
 .badge {
   position: absolute;
   top: 8px;

@@ -2,6 +2,7 @@
 import { useRef } from 'react';
 import { FiEdit } from 'react-icons/fi';
 import imageCompression from 'browser-image-compression';
+import { IMAGE_COMPRESSION_OPTIONS } from '@/lib/imageStorage';
 import styles from './ImageUpload.module.css';
 
 /**
@@ -22,13 +23,8 @@ export default function ImageUpload({
   const inputRef = useRef(null);
 
   const compressImage = async (file) => {
-    const options = {
-      maxSizeMB: 1,
-      maxWidthOrHeight: 1920,
-      useWebWorker: true,
-    };
     try {
-      const compressedFile = await imageCompression(file, options);
+      const compressedFile = await imageCompression(file, IMAGE_COMPRESSION_OPTIONS);
       return await imageCompression.getDataUrlFromFile(compressedFile);
     } catch (error) {
       console.error('Image compression error:', error);

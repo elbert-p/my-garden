@@ -2,11 +2,19 @@
 import { useRef, useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { FiCheck, FiMove } from 'react-icons/fi';
+import LazyImage from './LazyImage';
 import styles from './ItemGrid.module.css';
 
 // Reference content width for calibrating column count:
 const REF_CONTENT_WIDTH = 1136;
 const REF_GAP = 32;
+
+// Tiles below this index load eagerly. Everything after them waits until it
+// scrolls into view, which is what keeps a 200-plant garden from fetching 200
+// photos up front. Lazy images are fetched at low priority, so exempting the
+// first rows avoids pushing back the largest paint. With grouped sorts the
+// index restarts per group, which just means a few extra eager tiles.
+const EAGER_TILE_COUNT = 8;
 
 const LONG_PRESS_MS = 500;
 const PRESS_MOVE_TOLERANCE = 10;
@@ -194,8 +202,9 @@ export default function ItemGrid({
     }
   };
 
-  const renderItem = (item) => {
+  const renderItem = (item, index) => {
     const id = getItemId(item);
+    const eager = index < EAGER_TILE_COUNT;
 
     // ----- Rearrange mode -----
     if (rearrangeMode) {
@@ -209,10 +218,12 @@ export default function ItemGrid({
           style={{ touchAction: 'none' }}
         >
           <div className={styles.imageContainer}>
-            <img
+            <LazyImage
               src={getItemImage(item)}
               alt={getItemName(item)}
               className={styles.image}
+              skeletonClassName={styles.imageSkeleton}
+              eager={eager}
               draggable={false}
               onError={fallbackImage ? (e) => { if (e.target.src !== window.location.origin + fallbackImage) e.target.src = fallbackImage; } : undefined}
             />
@@ -242,10 +253,12 @@ export default function ItemGrid({
           onClick={() => onToggleSelection?.(id)}
         >
           <div className={styles.imageContainer}>
-            <img
+            <LazyImage
               src={getItemImage(item)}
               alt={getItemName(item)}
               className={styles.image}
+              skeletonClassName={styles.imageSkeleton}
+              eager={eager}
               onError={fallbackImage ? (e) => { if (e.target.src !== window.location.origin + fallbackImage) e.target.src = fallbackImage; } : undefined}
             />
             <div className={`${styles.selectionCheckbox} ${isSelected ? styles.selectionChecked : ''}`}>
@@ -273,10 +286,12 @@ export default function ItemGrid({
         onClick={onLongPress ? handleLongPressClick : undefined}
       >
         <div className={styles.imageContainer}>
-          <img
+          <LazyImage
             src={getItemImage(item)}
             alt={getItemName(item)}
             className={styles.image}
+            skeletonClassName={styles.imageSkeleton}
+            eager={eager}
             onError={fallbackImage ? (e) => { if (e.target.src !== window.location.origin + fallbackImage) e.target.src = fallbackImage; } : undefined}
           />
           {badge != null && <span className={styles.badge}>{badge}</span>}

@@ -2335,8 +2335,36 @@
     ],
     "Latin name": "Campanula americana"
   },
-  "Campanula percifolia 'Takion White'": {
-    "Latin name": "Campanula percifolia 'Takion White'"
+  "Campanula persicifolia 'Takion White'": {
+    "Common name": "Peach-leaved Bellflower 'Takion White'",
+    "Height": "1.5-2 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Europe",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "campanula_persicifolia-Takion-White.png"
+    ],
+    "Autofill image credits": [
+      "gardenia.net"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul"
+    ],
+    "Latin name": "Campanula persicifolia 'Takion White'"
   },
   "Campanula rotundifolia": {
     "Common name": "Harebell",
@@ -8058,6 +8086,31 @@
     ],
     "Latin name": "Prenanthes alba"
   },
+  "Primula acaulis 'Early Series'": {
+    "Common name": "Primrose 'Early Series'",
+    "Height": "0.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Europe",
+      "Asia",
+      "Africa"
+    ],
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Mar",
+      "Apr"
+    ],
+    "Latin name": "Primula acaulis 'Early Series'"
+  },
   "Prunella vulgaris": {
     "Common name": "Self-heal",
     "Alternate common names": [
@@ -10627,6 +10680,7 @@
       "Midwestern US",
       "Mid-Atlantic US"
     ],
+    "Hosted Butterflies and Moths": "Cattail Border Moth; Spongy Moth; Ruby Tiger Moth",
     "Sunlight": [
       "Part Shade",
       "Shade"
@@ -10638,6 +10692,41 @@
       "Mar"
     ],
     "Latin name": "Symplocarpus foetidus"
+  },
+  "Sisyrinchium angustifolium 'Lucerne Blue Eyes'": {
+    "Common name": "Blue-Eyed Grass 'Lucerne'",
+    "Height": "0.5-1 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "MA Native",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US",
+      "Southwestern US"
+    ],
+    "Autofill image paths": [
+      "blue-eyed grass home. jpeg"
+    ],
+    "Autofill image credits": [
+      "K.Elbert"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Latin name": "Sisyrinchium angustifolium 'Lucerne Blue Eyes'"
   },
   "Teucrium canadense": {
     "Common name": "Germander",

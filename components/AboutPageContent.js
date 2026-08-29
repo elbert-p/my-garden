@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { FiEdit, FiPlus, FiTrash2, FiArrowUp, FiArrowDown, FiType, FiImage } from 'react-icons/fi';
 import imageCompression from 'browser-image-compression';
-import { uploadImage, deleteImage } from '@/lib/imageStorage';
+import { uploadImage, deleteImage, IMAGE_COMPRESSION_OPTIONS } from '@/lib/imageStorage';
 import PageHeader from './PageHeader';
 import Button from './Button';
 import RichText from './RichText';
@@ -104,7 +104,7 @@ export default function AboutPageContent({ blocks: savedBlocks, onSave, userId, 
   const handleImageChange = async (blockId, file) => {
     if (!file?.type.startsWith('image/')) return;
     try {
-      const compressed = await imageCompression(file, { maxSizeMB: 1, maxWidthOrHeight: 1920, useWebWorker: true });
+      const compressed = await imageCompression(file, IMAGE_COMPRESSION_OPTIONS);
       const dataUrl = await imageCompression.getDataUrlFromFile(compressed);
       const url = userId ? await uploadImage(dataUrl, userId, 'about') : dataUrl;
       updateBlock(blockId, { content: url });

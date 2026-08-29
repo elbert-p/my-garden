@@ -8,7 +8,7 @@ import { setCopiedPlant } from '@/lib/clipboardStorage';
 import { useGarden } from '@/context/GardenContext';
 import { SHARE_INTENT_KEY } from '@/context/AuthContext';
 import { getPlant, updatePlant, deletePlant } from '@/lib/dataService';
-import { uploadImage, deleteImage } from '@/lib/imageStorage';
+import { uploadImage, deleteImage, IMAGE_COMPRESSION_OPTIONS } from '@/lib/imageStorage';
 import { getImageCredit } from '@/lib/autofillImages';
 import { findData, buildAutofillUpdates } from '@/lib/plantAutofill';
 import { entrySignature } from '@/lib/autofillDb';
@@ -20,6 +20,7 @@ import Button from '@/components/Button';
 import InfoField from '@/components/InfoField';
 import GoogleSignInButton from '@/components/GoogleSignInButton';
 import PlantBadges from '@/components/PlantBadges';
+import LazyImage from '@/components/LazyImage';
 import styles from './page.module.css';
 
 const formatDateDisplay = (dateStr) => { if (!dateStr) return ''; const [y, m, d] = dateStr.split('-').map(Number); return new Date(y, m - 1, d).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }); };
@@ -210,7 +211,7 @@ export default function PlantPage() {
 
   const compress = async (f) => {
     try {
-      const c = await imageCompression(f, { maxSizeMB: 1, maxWidthOrHeight: 1920, useWebWorker: true });
+      const c = await imageCompression(f, IMAGE_COMPRESSION_OPTIONS);
       return await imageCompression.getDataUrlFromFile(c);
     } catch {
       return null;
@@ -432,7 +433,7 @@ export default function PlantPage() {
                     return (
                       <div key={i} className={`${styles.photoItem} ${isImgHidden ? styles.privacyFieldDimmed : ''}`}
                         onClick={() => toggleImageVisibility(img)}>
-                        <img src={img} alt="" className={styles.photo} />
+                        <LazyImage src={img} alt="" className={styles.photo} />
                         <div className={`${styles.privacyCheckbox} ${!isImgHidden ? styles.privacyChecked : ''}`}>
                           {!isImgHidden && <FiCheck size={14} strokeWidth={3.5} />}
                         </div>
@@ -447,7 +448,7 @@ export default function PlantPage() {
               <div className={styles.imageGrid}>
                 {temp.images.map((img, i) => (
                   <div key={i} className={styles.photoItem}>
-                    <img src={img} alt="" className={styles.photo} onClick={() => setSelectedImage(img)} />
+                    <LazyImage src={img} alt="" className={styles.photo} onClick={() => setSelectedImage(img)} />
                     <button onClick={e => { e.stopPropagation(); setImageToRemove({ kind: 'additional', url: img }); }} className={styles.removeButton}>
                       <FiTrash2 size={14} />
                     </button>

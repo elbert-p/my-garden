@@ -13,6 +13,7 @@ import Modal from '@/components/Modal';
 import Button from '@/components/Button';
 import RichText from '@/components/RichText';
 import PlantBadges from '@/components/PlantBadges';
+import LazyImage from '@/components/LazyImage';
 import styles from './page.module.css';
 
 export default function SharedPlantPage() {
@@ -192,7 +193,7 @@ export default function SharedPlantPage() {
               <div className={styles.imageGrid}>
                 {visibleImages.map((img, i) => (
                   <div key={i} className={styles.photoItem} onClick={() => setSelImg(img)}>
-                    <img src={img} alt="" className={styles.photo} />
+                    <LazyImage src={img} alt="" className={styles.photo} />
                   </div>
                 ))}
               </div>
