@@ -8,7 +8,7 @@ import { setCopiedPlant } from '@/lib/clipboardStorage';
 import { useGarden } from '@/context/GardenContext';
 import { SHARE_INTENT_KEY } from '@/context/AuthContext';
 import { getPlant, updatePlant, deletePlant } from '@/lib/dataService';
-import { uploadImage, deleteImage, IMAGE_COMPRESSION_OPTIONS } from '@/lib/imageStorage';
+import { uploadImage, deleteImage, tileUrl, tileSrcSet, IMAGE_COMPRESSION_OPTIONS } from '@/lib/imageStorage';
 import { getImageCredit } from '@/lib/autofillImages';
 import { findData, buildAutofillUpdates } from '@/lib/plantAutofill';
 import { entrySignature } from '@/lib/autofillDb';
@@ -22,6 +22,10 @@ import GoogleSignInButton from '@/components/GoogleSignInButton';
 import PlantBadges from '@/components/PlantBadges';
 import LazyImage from '@/components/LazyImage';
 import styles from './page.module.css';
+
+// Additional Photos tiles are square, minmax(100px, 1fr), dropping to 80px
+// under 480px. At 3x that asks for ~360px, so srcset picks the 400 rendition.
+const PHOTO_TILE_SIZES = '(max-width: 480px) 90px, 120px';
 
 const formatDateDisplay = (dateStr) => { if (!dateStr) return ''; const [y, m, d] = dateStr.split('-').map(Number); return new Date(y, m - 1, d).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }); };
 
@@ -433,7 +437,7 @@ export default function PlantPage() {
                     return (
                       <div key={i} className={`${styles.photoItem} ${isImgHidden ? styles.privacyFieldDimmed : ''}`}
                         onClick={() => toggleImageVisibility(img)}>
-                        <LazyImage src={img} alt="" className={styles.photo} />
+                        <LazyImage src={tileUrl(img)} srcSet={tileSrcSet(img)} sizes={PHOTO_TILE_SIZES} fallbackSrc={img} alt="" className={styles.photo} />
                         <div className={`${styles.privacyCheckbox} ${!isImgHidden ? styles.privacyChecked : ''}`}>
                           {!isImgHidden && <FiCheck size={14} strokeWidth={3.5} />}
                         </div>
@@ -448,7 +452,7 @@ export default function PlantPage() {
               <div className={styles.imageGrid}>
                 {temp.images.map((img, i) => (
                   <div key={i} className={styles.photoItem}>
-                    <LazyImage src={img} alt="" className={styles.photo} onClick={() => setSelectedImage(img)} />
+                    <LazyImage src={tileUrl(img)} srcSet={tileSrcSet(img)} sizes={PHOTO_TILE_SIZES} fallbackSrc={img} alt="" className={styles.photo} onClick={() => setSelectedImage(img)} />
                     <button onClick={e => { e.stopPropagation(); setImageToRemove({ kind: 'additional', url: img }); }} className={styles.removeButton}>
                       <FiTrash2 size={14} />
                     </button>

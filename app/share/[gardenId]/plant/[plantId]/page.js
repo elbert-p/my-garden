@@ -6,6 +6,7 @@ import { FiCopy, FiShare2 } from 'react-icons/fi';
 import { useSharedGarden } from '@/context/SharedGardenContext';
 import { getSharedPlant } from '@/lib/dataService';
 import { getImageCredit } from '@/lib/autofillImages';
+import { tileUrl, tileSrcSet } from '@/lib/imageStorage';
 import { setCopiedPlant } from '@/lib/clipboardStorage';
 import PageHeader from '@/components/PageHeader';
 import DropdownMenu from '@/components/DropdownMenu';
@@ -15,6 +16,10 @@ import RichText from '@/components/RichText';
 import PlantBadges from '@/components/PlantBadges';
 import LazyImage from '@/components/LazyImage';
 import styles from './page.module.css';
+
+// Additional Photos tiles are square, minmax(100px, 1fr), dropping to 80px
+// under 480px. At 3x that asks for ~360px, so srcset picks the 400 rendition.
+const PHOTO_TILE_SIZES = '(max-width: 480px) 90px, 120px';
 
 export default function SharedPlantPage() {
   const { gardenId, plantId } = useParams();
@@ -193,7 +198,7 @@ export default function SharedPlantPage() {
               <div className={styles.imageGrid}>
                 {visibleImages.map((img, i) => (
                   <div key={i} className={styles.photoItem} onClick={() => setSelImg(img)}>
-                    <LazyImage src={img} alt="" className={styles.photo} />
+                    <LazyImage src={tileUrl(img)} srcSet={tileSrcSet(img)} sizes={PHOTO_TILE_SIZES} fallbackSrc={img} alt="" className={styles.photo} />
                   </div>
                 ))}
               </div>

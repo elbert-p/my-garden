@@ -2,12 +2,19 @@
 import { useRef, useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { FiCheck, FiMove } from 'react-icons/fi';
+import { tileUrl, tileSrcSet } from '@/lib/imageStorage';
 import LazyImage from './LazyImage';
 import styles from './ItemGrid.module.css';
 
 // Reference content width for calibrating column count:
 const REF_CONTENT_WIDTH = 1136;
 const REF_GAP = 32;
+// Track width when no column count is set, mirroring the CSS default in
+// ItemGrid.module.css (`minmax(min(250px, calc(50% - 1rem)), 1fr)`).
+const DEFAULT_TRACK_WIDTH = 250;
+// --page-max-width-large is `max(1200px, calc(100vw - 300px))`, so content
+// stops being pinned at 1200 and starts tracking the window at 1500px.
+const STRETCH_VIEWPORT = 1500;
 
 // Tiles below this index load eagerly. Everything after them waits until it
 // scrolls into view, which is what keeps a 200-plant garden from fetching 200
@@ -47,13 +54,39 @@ export default function ItemGrid({
   // Receives the long-pressed item id so the parent can prime an immediate drag.
   onLongPress,
 }) {
+  // Width of one grid track at the reference content width. Hoisted out of
+  // gridStyle because the srcset `sizes` below needs the same number.
+  const gapScale = columns ? Math.min(1, 4 / columns) : 1;
+  const itemWidth = columns
+    ? Math.floor((REF_CONTENT_WIDTH - REF_GAP * gapScale * (columns - 1)) / columns)
+    : DEFAULT_TRACK_WIDTH;
+
+  // Past maxGridWidth the grid can hold one more track than `columns`, so
+  // tiles stretch to about itemWidth * (n+1)/n before another column fits.
+  const wideTileWidth = Math.ceil(itemWidth * (columns ? (columns + 1) / columns : 1.25));
+
+  // Describes the tile's width to the browser so srcset can pick a size,
+  // factoring in screen density on top. Three regimes, matching the CSS:
+  //   narrow  — the min() clause in gridTemplateColumns collapses auto-fill to
+  //             two columns. Page padding and the gap put a tile at a
+  //             consistent ~44% of the viewport, so 46vw leaves a little
+  //             margin without tipping into the next candidate up. The 480px
+  //             floor covers high column counts, where tracks are slim enough
+  //             that phones still fit only two but stretch them to fill.
+  //   normal  — content is pinned at --page-max-width-large's 1200px floor, so
+  //             tiles sit at itemWidth.
+  //   wide    — past STRETCH_VIEWPORT the page grows with the window and tiles
+  //             stretch toward wideTileWidth.
+  // Overshooting is the safe direction: the browser picks the sharper candidate.
+  const imageSizes = [
+    `(max-width: ${Math.max(480, itemWidth * 2 + 96)}px) 46vw`,
+    `(max-width: ${STRETCH_VIEWPORT}px) ${itemWidth}px`,
+    `${wideTileWidth}px`,
+  ].join(', ');
+
   const gridStyle = (() => {
     if (!columns) return {};
-    const gapScale = Math.min(1, 4 / columns);
     const gapPx = REF_GAP * gapScale;
-    const itemWidth = Math.floor(
-      (REF_CONTENT_WIDTH - gapPx * (columns - 1)) / columns
-    );
     // Cap the grid's width just under the point where an (N+1)th auto-fill
     // track would fit. Items can still grow with the container up to this
     // cap; below it, auto-fill drops to fewer columns naturally on narrow
@@ -205,6 +238,10 @@ export default function ItemGrid({
   const renderItem = (item, index) => {
     const id = getItemId(item);
     const eager = index < EAGER_TILE_COUNT;
+    // Tiles ask Supabase for a square crop at each srcset size and keep the
+    // untransformed original as a fallback. Deriving this here rather than in
+    // getItemImage means every grid in the app benefits without changes.
+    const fullImage = getItemImage(item);
 
     // ----- Rearrange mode -----
     if (rearrangeMode) {
@@ -219,7 +256,10 @@ export default function ItemGrid({
         >
           <div className={styles.imageContainer}>
             <LazyImage
-              src={getItemImage(item)}
+              src={tileUrl(fullImage)}
+              srcSet={tileSrcSet(fullImage)}
+              sizes={imageSizes}
+              fallbackSrc={fullImage}
               alt={getItemName(item)}
               className={styles.image}
               skeletonClassName={styles.imageSkeleton}
@@ -254,7 +294,10 @@ export default function ItemGrid({
         >
           <div className={styles.imageContainer}>
             <LazyImage
-              src={getItemImage(item)}
+              src={tileUrl(fullImage)}
+              srcSet={tileSrcSet(fullImage)}
+              sizes={imageSizes}
+              fallbackSrc={fullImage}
               alt={getItemName(item)}
               className={styles.image}
               skeletonClassName={styles.imageSkeleton}
@@ -287,7 +330,10 @@ export default function ItemGrid({
       >
         <div className={styles.imageContainer}>
           <LazyImage
-            src={getItemImage(item)}
+            src={tileUrl(fullImage)}
+            srcSet={tileSrcSet(fullImage)}
+            sizes={imageSizes}
+            fallbackSrc={fullImage}
             alt={getItemName(item)}
             className={styles.image}
             skeletonClassName={styles.imageSkeleton}
