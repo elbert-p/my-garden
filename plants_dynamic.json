@@ -14,6 +14,13 @@
       "Southeastern US",
       "Southwestern US"
     ],
+    "Autofill image paths": [
+      "opuntia_humifusa.png"
+    ],
+    "Autofill image credits": [
+      "https://www.rosekennedygreenway.org/"
+    ],
+    "Hosted Butterflies and Moths": "Julia's Dicymolomia; Menesta tortriciformella",
     "Sunlight": [
       "Sun"
     ],
@@ -615,6 +622,37 @@
       "Jun"
     ],
     "Latin name": "Ajuga reptans"
+  },
+  "Ajuga reptans 'Burgundy Glow'": {
+    "Common name": "Bugleweed 'Burgundy Glow'",
+    "Height": "0.25-0.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Europe",
+      "Africa",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "ajuga_reptans-Burgundy-Glow.png"
+    ],
+    "Autofill image credits": [
+      "gardenia.net"
+    ],
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Latin name": "Ajuga reptans 'Burgundy Glow'"
   },
   "Alchemilla mollis": {
     "Common name": "Lady's Mantle",
@@ -2138,8 +2176,38 @@
     ],
     "Latin name": "Boltonia asteroides"
   },
+  "Brunnera macrophylla 'Alexander's Great'": {
+    "Common name": "Siberian Bugloss \"Alexander's Great'",
+    "Height": "1-1.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Europe",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "brunnera_macrophylla-Alexanders-Great.png"
+    ],
+    "Autofill image credits": [
+      "bluestoneperennials.com"
+    ],
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Latin name": "Brunnera macrophylla 'Alexander's Great'"
+  },
   "Brunnera macrophylla 'Alexandria'": {
-    "Common name": "Siberian Bugloss",
+    "Common name": "Siberian Bugloss \"Alexandria'",
     "Height": "1-1.25 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -5830,6 +5898,31 @@
   },
   "Kniphofia 'Lady Luck'": {
     "Common name": "Red Hot Poker 'Lady Luck'",
+    "Height": "5-5.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Africa"
+    ],
+    "Autofill image paths": [
+      "kniphofia-Lady-Luck.png"
+    ],
+    "Autofill image credits": [
+      "gardenia.net"
+    ],
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
     "Latin name": "Kniphofia 'Lady Luck'"
   },
   "Lespedeza capitata": {
@@ -6123,14 +6216,34 @@
     ],
     "Latin name": "Lilium canadense"
   },
-  "Ligularia stenocephala": {
+  "Ligularia stenocephala 'The Rocket'": {
+    "Common name": "Leopard Plant 'The Rocket'",
+    "Height": "3-5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Asia"
+    ],
     "Autofill image paths": [
-      "ligularia_stenocephala-Bottle-Rocket.png"
+      "ligularia_stenocephala-The-Rocket.png"
     ],
     "Autofill image credits": [
-      "provenwinners.com"
+      "gardengoodsdirect.com"
     ],
-    "Latin name": "Ligularia stenocephala"
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Ligularia stenocephala 'The Rocket'"
   },
   "Lobelia cardinalis": {
     "Common name": "Cardinal Flower",
@@ -8870,6 +8983,35 @@
       "Oct"
     ],
     "Latin name": "Sanguisorba canadensis"
+  },
+  "Santolina chamaecyparissus": {
+    "Common name": "Gray Lavender Cotton",
+    "Height": "1-2 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Europe",
+      "Africa"
+    ],
+    "Autofill image paths": [
+      "santolina_chamaecyparissus.png"
+    ],
+    "Autofill image credits": [
+      "plantmaster.com"
+    ],
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Santolina chamaecyparissus"
   },
   "Sarracenia purpurea": {
     "Common name": "Purple Pitcher Plant",
@@ -12887,6 +13029,35 @@
     ],
     "Latin name": "Glyceria striata"
   },
+  "Hakonechloa macra 'All Gold'": {
+    "Common name": "Japanese Forest Grass 'All Gold'",
+    "Height": "1-1.5 ft",
+    "plantType": [
+      "Grasses and sedges"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "hakonechloa_macra-All-Gold.png"
+    ],
+    "Autofill image credits": [
+      "https://gardengoodsdirect.com/"
+    ],
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Aug",
+      "Sep"
+    ],
+    "Latin name": "Hakonechloa macra 'All Gold'"
+  },
   "Hierochloe odorata": {
     "Common name": "Sweetgrass",
     "Height": "2 ft",
@@ -13596,6 +13767,12 @@
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
+    ],
+    "Autofill image paths": [
+      "osmundastrum_cinnamomeum.jpeg"
+    ],
+    "Autofill image credits": [
+      "K. Elbert"
     ],
     "Key Host Plant": [
       "K"
