@@ -9389,9 +9389,19 @@
   },
   "Sibbaldiopsis tridentata": {
     "Common name": "Three Tooth Cinqufoil",
-    "Height": ".25-.5 ft",
+    "Height": "0.25-0.5 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Ecoregion": "58,59,84,82,83",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Key Host Plant": [
       "K"
@@ -18489,22 +18499,33 @@
     "Hosted Butterflies and Moths": "Placid Dart; Leaf Crumpler; American Dagger; Clear Dagger; Fragile Dagger; Funerary Dagger; Yellow-Haired Dagger; Interrupted Dagger; Radcliffe's Dagger; Splendid Dagger; Fall Cankerworm Moth; White-Lined Leafroller Moth; Miranda Underwing; Mouse-Colored Pyrophila; Common Gray; Raspberry Leaf Folder; Apple Leaf Folder; Ancylis tineana; Polyphemus Moth; Wide-Striped Leaf Roller; Fruit-Tree Leafroller Moth; Cherry Tent Caterpillar; Exotic Leafroller Moth; Gray Archips; Dusky-Back Leafroller; Rose Tortrix; Garden Tiger Moth; Apple Fruit Moth; Cherry Shoot Borer; Short-Lined Chocolate; Lesser All-Green Leaf Roller; Io Moth; White-Blotched Balsa; Three-Lined Balsa; Salt-and-Pepper Geometer; Bucculatrix pomifoliella; Currant Fruitworm Moth; Maple Trumpet Skeletonizer; Charming Underwing; Clinton's Underwing; Hawthorne Underwing; Woody Underwing; Wonderful Underwing; Praeclara Underwing; Precious Underwing; Ultronia Underwing; Maple Prominent; Spring Dead-Leaf Roller Moth; Waved Sphinx; Tufted Bird-Dropping Moth; The Agate; Apple-and-Thorn Skeletonizer; Oblique-Banded Leafroller Moth; Chain-Dotted Geometer; Unicorn Caterpillar Moth; Apple & Plum Casebearer Moth; Resplendent Shield Bearer; Apple Leaf Trumpet Miner Moth; Codling Moth; Variable Tussock Moth; Yellow-Necked Caterpillar Moth; Dark Marbled Carpet; Imperial Moth; Maple Spanworm Moth; Elm Spanworm Moth; Epinotia vertumnana; Epinotia zandana; The Autumnal Moth; Sumac Leaftier; Linden Looper Moth; Johnson's Euchlaena; Motted Euchlaena; Spiny Oak-Slug Moth; Sharp-Lined Powder Moth; Greater Grapevine Looper; Brown-Bordered Geometer; Sharp-Angled Carpet Moth; Gray Pug; Browntail Moth; Straight-Toothed Sallow; Double Dart; Oriental Fruit Moth; Cherry Fruit Worm; Lesser Apple Worm; Banded Tussock Moth; Twin-Spotted Budworm; Spotted Apple Budworm; Pink-Washed Leafroller Moth; Hummingbird Clearwing; Cecropia Silkmoth; One-Spotted Variant; Fall Webworm; Bent-Line Gray; Intractable Quaker; Hemlock Looper; Viceroy; Banded Purple; Ashen Pinion; Bethune's Pinion; Fireworm; Nameless Pinion; Broad Ashen Pinion; Variable Oakleaf Caterpillar Moth; Gray Spring Moth; Bluish Spring Moth; White Spring Moth; Hickory Tussock Moth; Stout Spanworm Moth; Spongy Moth; Striped Bent-wing; Common Lytrosis; Four-Spotted Angle; Speckled Granite; Gold-Striped Leaftier Moth; Eastern Tent Caterpillar; Forest Tent Caterpillar; Day Emerald; Ruddy Metarranthis; Gray Woodgrain; Filament Bearer; White-Fringed Emerald; Doubleday's Notocelia Moth; Red-Humped Caterpillar; Red-Washed Prominent; Ladder-Marked Caterpillar; Manto Tussock Moth; White-Marked Tussock Moth; Garman's Quaker; Speckled Green Fruitworm Moth; Subdued Quaker; Spring Cankerworm Moth; Blinded Sphinx; Small-Eyed Sphinx; Stalk Borer; Eastern Tiger Swallowtail; Green Pug Moth; Labyrinth Moth; Oak Beauty Moth; Small Phigalia; The Half-Wing Geometer; Lappet Moth; Apple Leaf Miner; Dogwood Probole; Skiff Moth; Tufted Thyatirid; Apple Leaf Skeletonizar; Lesser Bud Moth; Winterberry Moth; Blackheaded Fireworm; Striped Hairstreak; Morning-Glory Prominent; Northern Selenia; Packard's Concealer Moth; Sparganothis Fruitworm Moth; One-Lined Sparganothis; Abbott's Sphinx; Bud Moth; Stigmella castaneaefoliella; Stigmella crataegifoliella; Serpentine Leafminer; Gray Hairstreak; Lesser Peachtree Borer Moth; Apple Bark Borer; Dogwood Borer; Fall Dead-Leaf Roller; Evergreen Bagworm Moth; Tissue Moth; Toothed Brown Carpet; Lunate Zale; Colorful Zale; Leopard Moth",
     "Latin name": "Crataegus punctata"
   },
-  "Diospyros virginiana (2)": {
+  "Diospyros virginiana": {
     "Common name": "Persimmon",
-    "Height": "20-40 ft",
+    "Height": "25-40 ft",
     "plantType": [
       "Tree"
     ],
     "Ecoregion": 59,
+    "Native Range": [
+      "Mid-Atlantic US",
+      "Midwestern US",
+      "Southeastern US",
+      "Southwestern US"
+    ],
     "Hosted Butterflies and Moths": "Long-Winged Dagger; Luna Moth; Purple-Crested Slug; Variable Antepione; Exotic Leafroller Moth; Io Moth; Henry's Elfin; Promethea Silkmoth; The Penitent; Maple Prominent; Reticulated Fruitworm Moth; Royal Walnut Moth; Angle-Lined Prominent; Oriental Moth; Unicorn Caterpillar Moth; Peppered Tussock Moth; Imperial Moth; Tobacco Moth; Ochre Euchlaena; Spiny Oak-Slug Moth; Sculptured Moth; Franclemont's Sallow; American Plum Borer; Oriental Fruit Moth; Harris's Three-Spot; Cecropia Silkmoth; Fall Webworm; Hypocala Moth; Small Necklace Moth; Small Purplish Gray; Bent-Line Gray; Variable Oakleaf Caterpillar Moth; Spongy Moth; Southern Flannel Moth; Common Metarranthis; Red-Humped Caterpillar; White-Marked Tussock Moth; Hag Moth; Skiff Moth; Speckled Renia; Fall Armyworm Moth; Gray Hairstreak; Peachtree Borer Moth; Currant Clearwing; Evergreen Bagworm Moth; Large Tolype; American Lady",
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Medium"
     ],
-    "Latin name": "Diospyros virginiana (2)"
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Latin name": "Diospyros virginiana"
   },
   "Euonymus atropurpureus": {
     "Common name": "Eastern wahoo",
