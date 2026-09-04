@@ -350,7 +350,7 @@ export default function PlantPage() {
     { icon: <FiCopy size={16} />, label: 'Copy Plant', onClick: onCopyPlant, visible: !isWildlife },
     { icon: <FiShare2 size={16} />, label: `Share ${label}`, onClick: handleShare, variant: 'share' },
     { divider: true },
-    { icon: <FiTrash2 size={16} />, label: 'Delete', onClick: () => setShowDeleteModal(true), danger: true },
+    { icon: <FiTrash2 size={16} />, label: `Delete ${label}`, onClick: () => setShowDeleteModal(true), danger: true },
   ];
 
   if (isLoading || !plant) {
@@ -534,7 +534,7 @@ export default function PlantPage() {
         onConfirm={onDelete}
         title={`Delete ${label}`}
         message={<>Delete <strong>{plant.commonName || plant.scientificName}</strong>?</>}
-        confirmText="Delete"
+        confirmText={`Delete ${label}`}
         cancelText="Cancel"
         variant="danger"
       />

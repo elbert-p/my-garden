@@ -147,6 +147,49 @@
   box-shadow: 0 2px 8px rgba(217, 48, 37, 0.3);
 }
 
+.confirmButton:disabled,
+.deleteButton:disabled {
+  background-color: #dadce0;
+  color: #80868b;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ---- Confirm countdown ---- */
+
+.countdownTrack {
+  height: 4px;
+  border-radius: 999px;
+  background-color: #f1f3f4;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.countdownDone {
+  opacity: 0;
+}
+
+.countdownFill {
+  height: 100%;
+  width: 100%;
+  border-radius: 999px;
+  background-color: #d93025;
+  transform-origin: left center;
+  animation: countdownGrow linear forwards;
+}
+
+@keyframes countdownGrow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .countdownFill {
+    animation: none;
+    transform: scaleX(1);
+  }
+}
+
 /* ---- Responsive ---- */
 
 @media (max-width: 768px) {

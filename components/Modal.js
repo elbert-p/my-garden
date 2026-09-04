@@ -1,5 +1,5 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { IoClose } from 'react-icons/io5';
 import styles from './Modal.module.css';
 
@@ -55,6 +55,9 @@ export default function Modal({
 }
 
 // Confirmation Modal - for delete, autofill confirmations, etc.
+// `confirmDelaySeconds` locks the confirm button for a few seconds after the
+// modal opens (with a countdown + progress bar) so destructive actions can't be
+// triggered by a reflexive click on the wrong menu item.
 export function ConfirmModal({
   isOpen,
   onClose,
@@ -63,22 +66,50 @@ export function ConfirmModal({
   message,
   confirmText = 'Confirm',
   cancelText = 'Cancel',
-  variant = 'primary' // 'primary' | 'danger'
+  variant = 'primary', // 'primary' | 'danger'
+  confirmDelaySeconds = 0
 }) {
+  const [secondsLeft, setSecondsLeft] = useState(0);
+
+  useEffect(() => {
+    if (!isOpen || !confirmDelaySeconds) {
+      setSecondsLeft(0);
+      return;
+    }
+    setSecondsLeft(confirmDelaySeconds);
+    const openedAt = Date.now();
+    const interval = setInterval(() => {
+      const remaining = Math.ceil((confirmDelaySeconds * 1000 - (Date.now() - openedAt)) / 1000);
+      setSecondsLeft(remaining > 0 ? remaining : 0);
+    }, 100);
+    return () => clearInterval(interval);
+  }, [isOpen, confirmDelaySeconds]);
+
+  const locked = secondsLeft > 0;
+
   return (
     <Modal isOpen={isOpen} onClose={onClose} title={title} size="small">
       <p className={styles.message}>{message}</p>
+      {confirmDelaySeconds > 0 && (
+        <div className={`${styles.countdownTrack} ${locked ? '' : styles.countdownDone}`}>
+          <div
+            className={styles.countdownFill}
+            style={{ animationDuration: `${confirmDelaySeconds}s` }}
+          />
+        </div>
+      )}
       <div className={styles.buttons}>
         {cancelText && (
           <button onClick={onClose} className={styles.cancelButton}>
             {cancelText}
           </button>
         )}
-        <button 
-          onClick={onConfirm} 
+        <button
+          onClick={onConfirm}
+          disabled={locked}
           className={variant === 'danger' ? styles.deleteButton : styles.confirmButton}
         >
-          {confirmText}
+          {locked ? `${confirmText} (${secondsLeft})` : confirmText}
         </button>
       </div>
     </Modal>

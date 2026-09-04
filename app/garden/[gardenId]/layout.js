@@ -723,7 +723,7 @@ function GardenLayoutContent({ children }) {
       <ConfirmModal isOpen={showDeleteGardenModal} onClose={() => setShowDeleteGardenModal(false)}
         onConfirm={handleDeleteGarden} title="Delete Garden"
         message={<>Are you sure you want to delete <strong>{garden?.name}</strong> and all its plants? <strong>This cannot be undone.</strong></>}
-        confirmText="Delete" cancelText="Cancel" variant="danger" />
+        confirmText="Delete Garden" cancelText="Cancel" variant="danger" confirmDelaySeconds={5} />
 
       {/* Sign In Modal */}
       <Modal isOpen={showSignInModal} onClose={() => setShowSignInModal(false)} title="Sign in to Share" size="small">
