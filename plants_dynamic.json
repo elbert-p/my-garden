@@ -686,6 +686,12 @@
     "Native Range": [
       "US Native"
     ],
+    "Autofill image paths": [
+      "allium_cernuum.png"
+    ],
+    "Autofill image credits": [
+      "prairiemoon.com"
+    ],
     "Hosted Butterflies and Moths": "Black Army Worm; Swordsman Dart; Ipsilon Dart; The Nutmeg; Green Cutworm Moth; Fruit-Tree Leafroller Moth; Garden Tiger Moth; Almond Moth; Soybean Looper Moth; Lesser Cornstalk Borer; Tobacco Moth; Salt Marsh Moth; Reaper Dart; Tessellate Dart; Subterranean Dart; Double Dart; Beet Webworm; Painted Arches; Armyworm Moth; Variegated Cutworm; Meal Moth; Virginian Tiger Moth; Beet Army Worm; Fall Armyworm Moth; Yellow-Striped Armyworm Moth; Spotted Cut-Worm; Greater Black-Letter Dart",
     "Sunlight": [
       "Sun",
@@ -747,6 +753,12 @@
       "Northeastern US",
       "Midwestern US",
       "Mid-Atlantic US"
+    ],
+    "Autofill image paths": [
+      "allium-tricoccum.png"
+    ],
+    "Autofill image credits": [
+      "prairiemoon.com"
     ],
     "Hosted Butterflies and Moths": "Black Army Worm; Swordsman Dart; Ipsilon Dart; The Nutmeg; Green Cutworm Moth; Fruit-Tree Leafroller Moth; Garden Tiger Moth; Almond Moth; Soybean Looper Moth; Lesser Cornstalk Borer; Tobacco Moth; Salt Marsh Moth; Reaper Dart; Tessellate Dart; Subterranean Dart; Double Dart; Beet Webworm; Painted Arches; Armyworm Moth; Variegated Cutworm; Meal Moth; Virginian Tiger Moth; Beet Army Worm; Fall Armyworm Moth; Yellow-Striped Armyworm Moth; Spotted Cut-Worm; Greater Black-Letter Dart",
     "Sunlight": [
@@ -842,6 +854,9 @@
   },
   "Amsonia tabernaemontana": {
     "Common name": "Eastern Bluestar",
+    "Alternate common names": [
+      "Blue Dogbane"
+    ],
     "Height": "2-3 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -855,6 +870,12 @@
       "Northeastern US",
       "Mid-Atlantic US",
       "Southeastern US"
+    ],
+    "Autofill image paths": [
+      "amsonia_tabernaemontana.png"
+    ],
+    "Autofill image credits": [
+      "J. Daderot for plantmaster.com"
     ],
     "Hosted Butterflies and Moths": "Snowberry Clearwing",
     "Sunlight": [
@@ -4281,6 +4302,11 @@
     "Autofill image credits": [
       "Missouri Botanical Garden"
     ],
+    "Key Host Plant": [
+      "Specialist Bees"
+    ],
+    "Pollen Source": "Trout-Lily miner",
+    "Hosted Butterflies and Moths": "Garden Tiger Moth; Morning-Glory Plume Moth; Common Eupithacia; Plain Plume Moth; Bold-Feathered Grass Moth; Eupatorium Plume Moth; Joe-Pye Weed Borer; Paralobesia rhoifructana; Red Groundling; Ruby Tiger Moth; Lined Ruby Tiger Moth; Iva Flower Moth",
     "Sunlight": [
       "Part Shade",
       "Shade"
@@ -4643,6 +4669,7 @@
       "Herbaceous perennial"
     ],
     "Native Range": [
+      "Cultivar",
       "Europe"
     ],
     "Sunlight": [
@@ -4659,6 +4686,37 @@
       "Jun"
     ],
     "Latin name": "Geranium macrorrhizum 'Ingwersens Variety'"
+  },
+  "Geranium sanguineum 'Max Frei'": {
+    "Common name": "Bloody Cranesbill 'Max Frei'",
+    "Height": "0.5-1 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Europe",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "geranium_sanguineum-Max-Frei.png"
+    ],
+    "Autofill image credits": [
+      "Missouri Botanical Garden"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Latin name": "Geranium sanguineum 'Max Frei'"
   },
   "Geum coccineum": {
     "Common name": "Avens",
@@ -5896,6 +5954,31 @@
     ],
     "Latin name": "Iris versicolor"
   },
+  "Jeffersonia diphylla": {
+    "Common name": "Twinleaf",
+    "Height": "1-1.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Ecoregion": "58,83",
+    "Native Range": [
+      "Mid-Atlantic",
+      "Midwestern US",
+      "Southeasern US"
+    ],
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Latin name": "Jeffersonia diphylla"
+  },
   "Kniphofia 'Lady Luck'": {
     "Common name": "Red Hot Poker 'Lady Luck'",
     "Height": "5-5.5 ft",
@@ -6715,9 +6798,14 @@
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Ecoregion": "58,83",
+    "Native Range": [
+      "Mid-Atlantic US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Hosted Butterflies and Moths": "Dark Marbled Carpet; Great Brown Dart; Large Ruby Tiger Moth; Ni Moth",
     "Sunlight": [
-      "Part Sun",
       "Part Shade",
       "Shade"
     ],
@@ -7092,6 +7180,39 @@
     ],
     "Latin name": "Oclemena acuminata"
   },
+  "Oenothera berlandieri 'Siskiyou'": {
+    "Common name": "Mexican Evening Primrose 'Siskiyou'",
+    "Height": "2 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Southwestern US"
+    ],
+    "Autofill image paths": [
+      "oenothera_berlandieri-Siskiyou.png"
+    ],
+    "Autofill image credits": [
+      "gardenia.net"
+    ],
+    "Key Host Plant": [
+      "Specialist Bees"
+    ],
+    "Pollen Source": "Eastern Evening Primrose Sweat Bee",
+    "Hosted Butterflies and Moths": "Fireweed Clearwing; Nessus Sphinx; Arge Tiger Moth; Aristotelia isopelta; Primrose Cochylid; Grape Leaffolder Moth; Dichomeris agonia; Pearly Wood-Nymph; Common Eupithacia; Bedstraw Hawkmoth; White-Lined Sphinx; Mompha argentimaculella; Mompha brevivittella; Red-Streaked Mompha; Mompha locupletella; Mompha stellella; Neocaloreas leucobasis; Large Yellow Underwing; Stalk Borer; Primrose Flower Moth; Double-Banded Carpet; Sparganothis boweri; Sparganothis Fruitworm Moth",
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Latin name": "Oenothera berlandieri 'Siskiyou'"
+  },
   "Oenothera biennis": {
     "Common name": "Common Evening Primrose",
     "Height": "2-6 ft",
@@ -7113,6 +7234,7 @@
       "Specialist Bees"
     ],
     "Pollen Source": "Eastern Evening Primrose Sweat Bee",
+    "Hosted Butterflies and Moths": "Fireweed Clearwing; Nessus Sphinx; Arge Tiger Moth; Aristotelia isopelta; Primrose Cochylid; Grape Leaffolder Moth; Dichomeris agonia; Pearly Wood-Nymph; Common Eupithacia; Bedstraw Hawkmoth; White-Lined Sphinx; Mompha argentimaculella; Mompha brevivittella; Red-Streaked Mompha; Mompha locupletella; Mompha stellella; Neocaloreas leucobasis; Large Yellow Underwing; Stalk Borer; Primrose Flower Moth; Double-Banded Carpet; Sparganothis boweri; Sparganothis Fruitworm Moth",
     "Sunlight": [
       "Sun",
       "Part Sun",
@@ -7313,14 +7435,31 @@
   },
   "Packera obovata": {
     "Common name": "Running Groundsel",
-    "Height": ".25-.5 ft",
+    "Height": "0.25-0.5 ft",
     "plantType": [
       "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US",
+      "Southwestern US"
+    ],
+    "Autofill image paths": [
+      "packera_obovata.png"
+    ],
+    "Autofill image credits": [
+      "gardenia.net"
     ],
     "Hosted Butterflies and Moths": "Saddleback Caterpillar Moth; Little Metalmark; Serpentine Webworm",
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Wet",
@@ -8950,12 +9089,24 @@
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US",
+      "Southwestern US"
+    ],
     "Hosted Butterflies and Moths": "Tufted Apple-Bud Moth",
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
+      "Wet",
       "Medium"
     ],
     "Bloom time": [
@@ -11219,7 +11370,7 @@
   },
   "Trillium erectum": {
     "Common name": "Red Trillium",
-    "Height": ".75-1.25 ft",
+    "Height": "0.75-1.25 ft",
     "plantType": [
       "Herbaceous perennial"
     ],
@@ -11243,13 +11394,14 @@
   },
   "Trillum grandiflorum": {
     "Common name": "White Trillium",
-    "Height": ".5-1 ft",
+    "Height": "0.5-1 ft",
     "plantType": [
       "Herbaceous perennial"
     ],
     "Key Host Plant": [
       "K"
     ],
+    "Hosted Butterflies and Moths": "Black-Patched Clepsis; American Angle Shades",
     "Sunlight": [
       "Part Sun"
     ],
@@ -11262,6 +11414,30 @@
       "Jun"
     ],
     "Latin name": "Trillum grandiflorum"
+  },
+  "Trillium luteum": {
+    "Common name": "Yellow Trillium",
+    "Height": "1-1.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Southeastern US"
+    ],
+    "Hosted Butterflies and Moths": "Black-Patched Clepsis; American Angle Shades",
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Latin name": "Trillium luteum"
   },
   "Triodanis perfoliata": {
     "Common name": "Clasping Venus's Looking Glass",
@@ -11277,6 +11453,7 @@
       "Dry"
     ],
     "Bloom time": [
+      "Apr",
       "May",
       "Jun",
       "Jul",
@@ -12806,6 +12983,37 @@
     ],
     "Latin name": "Danthonia spicata"
   },
+  "Deschampsia cespitosa": {
+    "Common name": "Tufted Hairgrass",
+    "Height": "2-4 ft",
+    "plantType": [
+      "Grasses and sedges"
+    ],
+    "Native Range": [
+      "MA Native",
+      "Northeastern US",
+      "Midwestern US",
+      "Mid-Atlantic US",
+      "Western US",
+      "Europe",
+      "Asia"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Deschampsia cespitosa"
+  },
   "Deschampsia flexuosa": {
     "Common name": "Wavy Hair Grass",
     "Alternate common names": [
@@ -12821,7 +13029,9 @@
       "(58) Northeastern Highlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "Eastern US"
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Hosted Butterflies and Moths": "Bordered Apamea; Small Clouded Brindle Moth; Immaculate Grass-Veneer; Green-Washed Culm Borer",
     "Sunlight": [
@@ -12843,7 +13053,6 @@
     "Common name": "Beak grass",
     "Height": "2 ft",
     "plantType": [
-      "Herbaceous perennial",
       "Grasses and sedges"
     ],
     "Sunlight": [
@@ -13656,6 +13865,12 @@
       "Midwestern US",
       "Southeastern US"
     ],
+    "Autofill image paths": [
+      "dryopteris_marginalis.png"
+    ],
+    "Autofill image credits": [
+      "americanmeadows.com"
+    ],
     "Key Host Plant": [
       "K"
     ],
@@ -14252,6 +14467,12 @@
       "Northeastern US",
       "Southeastern US"
     ],
+    "Autofill image paths": [
+      "amelanchier_canadensis.png"
+    ],
+    "Autofill image credits": [
+      "gardenia.net"
+    ],
     "Pollen Source": "Half-black Bumblebee, Carlin's Mining Bee, Hawthorn Mining Bee, Forbes' Mining Bee, Imitator Miner Bee, Miserable Mining Bee, Regular Mining Bee",
     "Hosted Butterflies and Moths": "Distinct Quaker; American Dagger; Clear Dagger; Fragile Dagger; Gray Dagger; Impressive Dagger; Unmarked Dagger; Interrupted Dagger; Radcliffe's Dagger; Splendid Dagger; Luna Moth; Purple-Crested Slug; Fall Cankerworm Moth; Miranda Underwing; Raspberry Leaf Folder; Apple Leaf Folder; Canadian Giant Moth; Pink-striped Oakworm Moth; Polyphemus Moth; Cherry Tent Caterpillar; Exotic Leafroller Moth; Rose Tortrix; Cherry Shoot Borer; Lesser All-Green Leaf Roller; Large Looper Moth; Io Moth; White-Blotched Balsa; Many-Dotted Balsa; Salt-and-Pepper Geometer; Bucculatrix pomifoliella; Pale Beauty; Charming Underwing; Praeclara Underwing; Precious Underwing; Wavy-Lined Heterocampa; Maple Prominent; Chokecherry Leafroller Moth; Large Aspen Tortrix; Oblique-Banded Leafroller Moth; Mottled Gray Carpet; White Triangle Tortrix; Unicorn Caterpillar Moth; Norman's Quaker; Sharp-Lined Tussock Moth; Variable Tussock Moth; Yellow-Necked Caterpillar Moth; Ectoedemia nyssaefoliella; Elm Spanworm Moth; Linden Looper Moth; Ochre Euchlaena; Motted Euchlaena; Spiny Oak-Slug Moth; Columbia Pug; Common Eupithacia; Browntail Moth; Morrison's Sallow; Three-Spotted Sallow; Curved-Tooth Geometer; Dotted Gray; Lesser Apple Worm; Banded Tussock Moth; Leconte's Haploa; Twin-Spotted Budworm; Spotted Apple Budworm; Pink-Washed Leafroller Moth; Sulphur Moth; Cecropia Silkmoth; Sharp Green Hydriomena; One-Spotted Variant; Fall Webworm; Common Hyppa; Viceroy; Banded Purple; False Pinion; Amanda's Pinion; Ashen Pinion; Bethune's Pinion; Hoary Pinion; Fireworm; Diomorphic Pinion; Bluish Spring Moth; Spotted Tussock Moth; Twilight Moth; Stout Spanworm Moth; Spongy Moth; Common Lytrosis; Speckled Granite; Macaria occiduaria; Gold-Striped Leaftier Moth; Eastern Tent Caterpillar; Forest Tent Caterpillar; Canadian Melanolphia; Signate Melanolphia; Day Emerald; Ruddy Metarranthis; White-Dotted Prominent; Filament Bearer; Red-Humped Caterpillar; Red-Washed Prominent; Serviceberry Leafroller; Bruce Spanworm; Manto Tussock Moth; White-Marked Tussock Moth; Disparaged Arches; Gray Quaker; Speckled Green Fruitworm Moth; Dusky Leafroller; Spring Cankerworm Moth; Dark-Spotted Palthis; Blinded Sphinx; Small-Eyed Sphinx; Eastern Tiger Swallowtail; Maple Leafcutter; Green Pug Moth; Variegated Cutworm; Small Phigalia; Hag Moth; Lappet Moth; Apple Leaf Miner; American Barred Umber; Friendly Probole; Tufted Thyatirid; Lesser Bud Moth; Striped Hairstreak; Coral Hairstreak; Morning-Glory Prominent; Merrick's Semioscopis; Three-Streaked Sparganothis; Wild Cherry Sphinx; Stigmella amelanchierella; Serpentine Leafminer; Peachtree Borer Moth; Lesser Peachtree Borer Moth; Apple Bark Borer; Inscribed Looper; Evergreen Bagworm Moth; The Welsh Wave; Gray Swordgrass Moth; Red Swordgrass Moth",
     "Sunlight": [
@@ -14478,6 +14699,7 @@
     "Native Range": [
       "Asia"
     ],
+    "Hosted Butterflies and Moths": "Summer Azure",
     "Sunlight": [
       "Sun"
     ],
@@ -14491,16 +14713,21 @@
     ],
     "Latin name": "Buddleja davidii"
   },
-  "Calycanthus floridus": {
-    "Common name": "Carolina allspice",
-    "Height": "6-10 ft",
+  "Callicarpa americana": {
+    "Common name": "American Beautyberry",
+    "Height": "3-8 ft",
     "plantType": [
       "Shrub"
     ],
-    "Hosted Butterflies and Moths": "Saddleback Caterpillar Moth; Oblique-Banded Leafroller Moth",
+    "Native Range": [
+      "Southeastern US",
+      "Southwestern US"
+    ],
+    "Hosted Butterflies and Moths": "Common Gray",
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Medium"
@@ -14509,6 +14736,30 @@
       "Jun",
       "Jul",
       "Aug"
+    ],
+    "Latin name": "Callicarpa americana"
+  },
+  "Calycanthus floridus": {
+    "Common name": "Carolina Allspice",
+    "Height": "6-10 ft",
+    "plantType": [
+      "Shrub"
+    ],
+    "Native Range": [
+      "Southeastern US"
+    ],
+    "Hosted Butterflies and Moths": "Saddleback Caterpillar Moth; Oblique-Banded Leafroller Moth",
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
     ],
     "Latin name": "Calycanthus floridus"
   },
@@ -15253,6 +15504,9 @@
     "plantType": [
       "Shrub"
     ],
+    "Native Range": [
+      "Southeastern US"
+    ],
     "Hosted Butterflies and Moths": "Saddleback Caterpillar Moth; Miranda Underwing; Hydrangea Sphinx; Tobacco Moth; Salt Marsh Moth; Dark-Banded Geometer; Painted Arches; Hydrangea Leaftier; Virginian Tiger Moth",
     "Sunlight": [
       "Sun",
@@ -15551,7 +15805,6 @@
       "Southeastern US"
     ],
     "Pollen Source": "Bradley?s Miner, Sheep-Laurel Miner, Maine blueberry bee",
-    "Hosted Butterflies and Moths": "Stained-Back Leafroller Moth; Lesser Apple Leaf Folder; Acrobasis amplexella; Narrow-Winged Dagger; Black Army Worm; Gray-Banded Leafroller Moth; The Brown Elfin; Promethea Silkmoth; Cenopis karacana; Chain-Dotted Geometer; Mottled Gray Carpet; Bog Yellow-Wing; Azalea Sphinx; Cranberry Spanworm; Sharp-Lined Powder Moth; White-Lined Pug; Sundew Dart; Fall Webworm; Spongy Moth; Bicolored Woodgrain; Red-Fronted Emerald; Olethreutes melanomesum; White-Marked Tussock Moth; Paralobesia rhoifructana; Brown Angle Shades; Clouded Veneer Moth; Friendly Probole; Heath Probole; Shagbark Hickory Leafroller; Fawn Sphinx; Bud Moth; Darling Mamestra; Blueberry Sallow; Rhododendron Borer; Inscribed Looper; White Slant-Line; Arcadian Sallow",
     "Sunlight": [
       "Sun",
       "Part Sun",
@@ -15566,6 +15819,29 @@
       "Jun"
     ],
     "Latin name": "Kalmia latifolia"
+  },
+  "Leucothoe axillaris": {
+    "Common name": "Coastal Doghobble",
+    "Height": "2-4 ft",
+    "plantType": [
+      "Shrub"
+    ],
+    "Native Range": [
+      "Southeastern US"
+    ],
+    "Hosted Butterflies and Moths": "Graceful Underwing; Major Datana; Yellow-Necked Caterpillar Moth; Pale Green Pinion; Spongy Moth",
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Bloom time": [
+      "May"
+    ],
+    "Latin name": "Leucothoe axillaris"
   },
   "Leucothoe fontanesiana": {
     "Common name": "Drooping leucothoe",
@@ -16024,7 +16300,7 @@
     "Latin name": "Rhododendron vaseyi"
   },
   "Rhododendron viscosum": {
-    "Common name": "Swamp azalea",
+    "Common name": "Swamp Azalea",
     "Height": "3-5 ft",
     "plantType": [
       "Shrub"
@@ -16056,16 +16332,25 @@
     "Latin name": "Rhododendron viscosum"
   },
   "Rhus aromatica": {
-    "Common name": "Fragrant sumac",
+    "Common name": "Fragrant Sumac",
     "Height": "3-7 ft",
     "plantType": [
       "Shrub"
+    ],
+    "Ecoregion": "58,59,83",
+    "Native Range": [
+      "Mid-Atlantic US",
+      "Midwestern US",
+      "Southeastern US",
+      "Southwestern US",
+      "Weestern US"
     ],
     "Pollen Source": "Short-tongued Miner Bee, Andrena (Cnemidandrena) robervalensis, Band-footed Sweat Bee",
     "Hosted Butterflies and Moths": "Distinct Quaker; Long-Winged Dagger; Black Army Worm; Luna Moth; White-Lined Leafroller Moth; Variable Antepione; Fruit-Tree Leafroller Moth; Omnivorous Leafroller Moth; Yellow-Winged Oak Leafroller Moth; Salt-and-Pepper Geometer; Maple Prominent; Summer Azure; Oblique-Banded Leafroller Moth; Chain-Dotted Geometer; Royal Walnut Moth; Double-Lined Gray; Yellow-Necked Caterpillar Moth; Spotted Dantana; Pink Star; Showy Emerald; Imperial Moth; Dimorphic Epipaschia; Sumac Leaftier; Common Eupithacia; Cecropia Silkmoth; Hickory Tussock Moth; Spongy Moth; Light Marathyssa; Dark Marathyssa; Beautiful Eutelia; Canadian Melanolphia; Darker Moodna; Confused Woodgrain; Red-Fronted Emerald; Serviceberry Leafroller; Raspberry Leafroller; Eyed Paectes; Pygmy Paectes; Stalk Borer; Paralobesia cypripediana; Paralobesia rhoifructana; Variegated Cutworm; Common Tan Wave; Maple Webworm; American Bordered Sallow; Striped Sumac Leafroller; Bud Moth; Virginian Tiger Moth; Darling Mamestra; Y-Backed Telphusa; Yellow Slant-Line; Evergreen Bagworm Moth",
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Medium",
