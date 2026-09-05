@@ -4976,7 +4976,7 @@
       "US Native"
     ],
     "Autofill image paths": [
-      "helenium_autumnale-HayDay-Orange.jpeg"
+      "helenium_autumnale-HayDay-Orange.png"
     ],
     "Autofill image credits": [
       "groveperennials.com"
@@ -5306,7 +5306,7 @@
       "Southwestern US"
     ],
     "Autofill image paths": [
-      "heliopsis_helianthoides-Bleeding-Heart.png"
+      "heliopsis_helianthoides-Bleeding-Hearts.png"
     ],
     "Autofill image credits": [
       "bluestoneperennials.com"
@@ -5436,7 +5436,7 @@
       "Western US"
     ],
     "Autofill image paths": [
-      "heuchera_micrantha lime marmalade.png"
+      "heuchera_micrantha-lime-marmalade.png"
     ],
     "Autofill image credits": [
       "bluestoneperennials.com"
@@ -7697,6 +7697,44 @@
       "Jun"
     ],
     "Latin name": "Penstemon digitalis 'Husker Red'"
+  },
+  "Penstemon digitalis `Husker Red'": {
+    "Common name": "Foxglove Beardtongue 'Husker Red'",
+    "Height": "2-3 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Mid-Atlantic US",
+      "Southeastern US",
+      "Southwestern US"
+    ],
+    "Autofill image paths": [
+      "penstemon_digitalis_huskerred.png"
+    ],
+    "Autofill image credits": [
+      "Missouri Botanical Garden"
+    ],
+    "Key Host Plant": [
+      "K"
+    ],
+    "Pollen Source": "Golden Northern Bumblebee, Broad-handed Leafcutter Bee, Beardtongue Mason",
+    "Hosted Butterflies and Moths": "Mouse-Colored Pyrophila; Chalcedony Midget; Verbena Bud Moth; The Baltimore; Confused Haploa; Common Buckeye; American Bordered Sallow; Purple-Lined Sallow; Sparganothis Fruitworm Moth; Saunders's Sallow",
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Latin name": "Penstemon digitalis `Husker Red'"
   },
   "Penstemon grandiflorus": {
     "Common name": "Large-flowered Beardtongue",
@@ -11483,7 +11521,7 @@
       "Asia"
     ],
     "Autofill image paths": [
-      "trollius-New_Moon.png"
+      "trollius-New-Moon.png"
     ],
     "Autofill image credits": [
       "bluestoneperennials.com"
@@ -11852,7 +11890,7 @@
       "Asia"
     ],
     "Autofill image paths": [
-      "veronica_peduncularis-Georgia-Blue.png"
+      "veronica peduncularis-Georgia-Blue.png"
     ],
     "Autofill image credits": [
       "cavanos.com"
@@ -19821,10 +19859,19 @@
     "Latin name": "Taxodium distichum"
   },
   "Thuja occidentalis": {
-    "Common name": "Arborvitae, Northern white cedar",
+    "Common name": "Arborvitae",
+    "Alternate common names": [
+      "Northern white cedar"
+    ],
     "Height": "40-60 ft",
     "plantType": [
       "Tree"
+    ],
+    "Native Range": [
+      "MA Native",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Hosted Butterflies and Moths": "Eastern Blackheaded Budworm; White-Lined Leafroller Moth; Common Gray; Arborvitae Leafminer; Pine Tube Moth; Io Moth; Olive Hairstreak; Pale Beauty; Gray Spruce Looper Moth; Spruce Budworm Moth; Chain-Dotted Geometer; Mottled Gray Carpet; Brown Cedar Leafminer Moth; Northern Conifer Tussock Moth; Curve-Lined Angle; The Small Engrailed; Variegated Midget; Cranberry Spanworm; Eupithecia annulata; Freyer's Pug; Eupithecia lariciata; Small Pine Looper; Jocose Sallow; Renounced Hydriomena; Pine Measuringworm Moth; Common Idia; Hemlock Looper; Lemmer's Pinion; Spongy Moth; Filament Bearer; False Hemlock Looper Moth; Manto Tussock Moth; Speckled Green Fruitworm Moth; Dark-Spotted Palthis; Juniper Geometer; Morrison's Pero; Brown Angle Shades; Large Maple Spanworm Moth; Porcelain Gray; Sparganothis Fruitworm Moth; Three-Streaked Sparganothis; Darling Mamestra; Spruce Looper; Chosen Looper; White Slant-Line; Evergreen Bagworm Moth; Southern Variable Dart; Early Zanclognatha",
     "Sunlight": [
@@ -19836,7 +19883,42 @@
       "Wet",
       "Medium"
     ],
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
     "Latin name": "Thuja occidentalis"
+  },
+  "Thuja occidentalis 'Nigra'": {
+    "Common name": "Arborvitae 'Nigra'",
+    "Alternate common names": [
+      "Northern white cedar 'Nigra'"
+    ],
+    "Height": "20-30 ft",
+    "plantType": [
+      "Tree"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "MA Native",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
+    "Hosted Butterflies and Moths": "Eastern Blackheaded Budworm; White-Lined Leafroller Moth; Common Gray; Arborvitae Leafminer; Pine Tube Moth; Io Moth; Olive Hairstreak; Pale Beauty; Gray Spruce Looper Moth; Spruce Budworm Moth; Chain-Dotted Geometer; Mottled Gray Carpet; Brown Cedar Leafminer Moth; Northern Conifer Tussock Moth; Curve-Lined Angle; The Small Engrailed; Variegated Midget; Cranberry Spanworm; Eupithecia annulata; Freyer's Pug; Eupithecia lariciata; Small Pine Looper; Jocose Sallow; Renounced Hydriomena; Pine Measuringworm Moth; Common Idia; Hemlock Looper; Lemmer's Pinion; Spongy Moth; Filament Bearer; False Hemlock Looper Moth; Manto Tussock Moth; Speckled Green Fruitworm Moth; Dark-Spotted Palthis; Juniper Geometer; Morrison's Pero; Brown Angle Shades; Large Maple Spanworm Moth; Porcelain Gray; Sparganothis Fruitworm Moth; Three-Streaked Sparganothis; Darling Mamestra; Spruce Looper; Chosen Looper; White Slant-Line; Evergreen Bagworm Moth; Southern Variable Dart; Early Zanclognatha",
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Latin name": "Thuja occidentalis 'Nigra'"
   },
   "Tilia americana": {
     "Common name": "American linden / basswood",
