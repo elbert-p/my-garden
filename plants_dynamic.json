@@ -6076,6 +6076,36 @@
     ],
     "Latin name": "Liatris aspera"
   },
+  "Liatris cylindracea": {
+    "Common name": "Dwarf Blazing Star",
+    "Height": "1-2 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Midwestern US",
+      "Southeasern US"
+    ],
+    "Autofill image paths": [
+      "liatris_cylindracea.png"
+    ],
+    "Autofill image credits": [
+      "prairiemoon.com"
+    ],
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Latin name": "Liatris cylindracea"
+  },
   "Liatris ligulastylis": {
     "Common name": "Meadow Blazing Star",
     "Height": "3-5 ft",
@@ -7698,7 +7728,7 @@
     ],
     "Latin name": "Penstemon digitalis 'Husker Red'"
   },
-  "Penstemon digitalis `Husker Red'": {
+  "Penstemon digitalis ?Husker Red'": {
     "Common name": "Foxglove Beardtongue 'Husker Red'",
     "Height": "2-3 ft",
     "plantType": [
@@ -7734,7 +7764,7 @@
       "May",
       "Jun"
     ],
-    "Latin name": "Penstemon digitalis `Husker Red'"
+    "Latin name": "Penstemon digitalis ?Husker Red'"
   },
   "Penstemon grandiflorus": {
     "Common name": "Large-flowered Beardtongue",
@@ -9173,7 +9203,7 @@
     ],
     "Latin name": "Sanguisorba canadensis"
   },
-  "Santolina chamaecyparissus": {
+  "Santolina chamaecyparissus 'Gray'": {
     "Common name": "Gray Lavender Cotton",
     "Height": "1-2 ft",
     "plantType": [
@@ -9200,7 +9230,7 @@
       "Jul",
       "Aug"
     ],
-    "Latin name": "Santolina chamaecyparissus"
+    "Latin name": "Santolina chamaecyparissus 'Gray'"
   },
   "Sarracenia purpurea": {
     "Common name": "Purple Pitcher Plant",
@@ -9925,9 +9955,9 @@
     "Latin name": "Solidago juncea"
   },
   "Solidago nemoralis": {
-    "Common name": "Gray Goldenrod",
+    "Common name": "Old Field Goldenrod",
     "Alternate common names": [
-      "Old Field Goldenrod"
+      "Gray Goldenrod"
     ],
     "Height": "1-2 ft",
     "plantType": [
