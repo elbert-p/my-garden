@@ -161,6 +161,7 @@
     "Autofill image credits": [
       "Missouri Botanical Garden"
     ],
+    "Hosted Butterflies and Moths": "Smeathmann's Aethes Moth; Agrotis stigmosa; Voluble Dart; Garden Tiger Moth; Blackberry Looper Moth; Catocaline Dart; Depressaria alienella; Wormwood Pug; Common Eupithacia; Gray Pug; Yarrow Plume Moth; Spotted Straw Sun Moth; Northern Scurfy Quaker; Olive Arches; Cynical Quaker; Stalk Borer; Paradiarsia littoralis; Small Brown Quaker; Wavy-Lined Emerald; Striped Garden Caterpillar Moth; Painted Lady",
     "Sunlight": [
       "Sun"
     ],
@@ -609,6 +610,7 @@
     "Autofill image credits": [
       "gardenia.net"
     ],
+    "Hosted Butterflies and Moths": "Pristerognatha agilana",
     "Sunlight": [
       "Sun",
       "Part Sun",
@@ -641,6 +643,7 @@
     "Autofill image credits": [
       "gardenia.net"
     ],
+    "Hosted Butterflies and Moths": "Pristerognatha agilana",
     "Sunlight": [
       "Part Shade",
       "Shade"
@@ -663,6 +666,7 @@
     "Native Range": [
       "Europe"
     ],
+    "Hosted Butterflies and Moths": "Dark Marbled Carpet; Red Carpet",
     "Sunlight": [
       "Part Sun",
       "Part Shade"
@@ -892,8 +896,8 @@
     ],
     "Latin name": "Amsonia tabernaemontana"
   },
-  "Amsonia tabernaemontana 'Blue Ice'": {
-    "Common name": "Eastern Bluestar 'Blue Ice'",
+  "Amsonia orientalis 'Blue Ice'": {
+    "Common name": "Bluestar 'Blue Ice'",
     "Height": "1-1.5 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -901,15 +905,9 @@
     "Ecoregion": "58,59,82,83,84",
     "Native Range": [
       "Cultivar",
-      "MA Native",
-      "(58) Northeastern Highlands",
-      "(59) Northeastern Coastal Zone",
-      "(84) Atlantic Coastal Pine Barrens",
-      "Northeastern US",
-      "Mid-Atlantic US",
-      "Southeastern US"
+      "Europe",
+      "Asia"
     ],
-    "Hosted Butterflies and Moths": "Snowberry Clearwing",
     "Sunlight": [
       "Sun",
       "Part Sun",
@@ -922,7 +920,7 @@
       "May",
       "Jun"
     ],
-    "Latin name": "Amsonia tabernaemontana 'Blue Ice'"
+    "Latin name": "Amsonia orientalis 'Blue Ice'"
   },
   "Anaphalis margaritacea": {
     "Common name": "Pearly Everlasting",
@@ -1028,7 +1026,7 @@
     "Latin name": "Anemone cylindrica"
   },
   "Anemone hupehensis var. japonica 'Pamina'": {
-    "Common name": "Pamina Japanese Anemone",
+    "Common name": "Japanese Anemone 'Pamina'",
     "Height": "2.5-3 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -2844,7 +2842,10 @@
     "Latin name": "Cirsium pumilum"
   },
   "Conoclinium coelestinum": {
-    "Common name": "Mistflower",
+    "Common name": "Blue Mistflower",
+    "Alternate common names": [
+      "Mistflower"
+    ],
     "Height": "1-2 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -2972,6 +2973,9 @@
   },
   "Coreopsis tripteris": {
     "Common name": "Tall Coreopsis",
+    "Alternate common names": [
+      "stachys"
+    ],
     "Height": "7 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -3135,7 +3139,8 @@
     "Hosted Butterflies and Moths": "Reticulated Fruitworm Moth; Paralobesia cypripediana",
     "Latin name": "Cypripedium parviflorum var. parviflorum"
   },
-  "Crocosmia ? crocosmiiflora 'Red King'": {
+  "Crocosmia x crocosmiiflora 'Red King'": {
+    "Common name": "Crocosmia 'Red King'",
     "Height": "1-2 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -3161,7 +3166,7 @@
       "Aug",
       "Sep"
     ],
-    "Latin name": "Crocosmia ? crocosmiiflora 'Red King'"
+    "Latin name": "Crocosmia x crocosmiiflora 'Red King'"
   },
   "Cryptotaenia canadensis": {
     "Common name": "Canadian Honewort",
@@ -3604,7 +3609,7 @@
     "Latin name": "Echinacea purpurea 'Fiery Meadow Mama'"
   },
   "Echinops bannaticus 'Star Frost'": {
-    "Common name": "Star Frost Globe Thistle",
+    "Common name": "Globe Thistle 'Star Frost'",
     "Height": "2.5-3.5 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -5521,8 +5526,31 @@
     ],
     "Latin name": "Hibiscus moscheutos"
   },
+  "Hosta 'Bedazzled'": {
+    "Common name": "Hosta 'Bedazzled'",
+    "Height": "0.5-1 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Asia"
+    ],
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Hosta 'Bedazzled'"
+  },
   "Hosta 'Blue Mouse Ears'": {
-    "Common name": "Blue Mouse Ears Hosta",
+    "Common name": "Hosta 'Blue Mouse Ears'",
     "Height": "0.5-1 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -5575,7 +5603,7 @@
     "Latin name": "Hosta"
   },
   "Hosta 'Shadowland Coast to Coast'": {
-    "Common name": "Shadowland Hosta",
+    "Common name": "Hosta 'Shadowland'",
     "Height": "2.5-3 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -6357,6 +6385,29 @@
       "Aug"
     ],
     "Latin name": "Ligularia stenocephala 'The Rocket'"
+  },
+  "Ligularia dentata 'Othello'": {
+    "Common name": "Leopard Plant 'Othello'",
+    "Height": "2-3 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Asia"
+    ],
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Ligularia dentata 'Othello'"
   },
   "Lobelia cardinalis": {
     "Common name": "Cardinal Flower",
@@ -7143,6 +7194,27 @@
       "Sep"
     ],
     "Latin name": "Monarda punctata"
+  },
+  "Nelumbo nucifera": {
+    "Common name": "Sacred Lotus",
+    "Height": "3-6 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Asia"
+    ],
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Wet"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Nelumbo nucifera"
   },
   "Nuttallanthus canadensis": {
     "Common name": "Old Field Toadflax",
@@ -9372,7 +9444,7 @@
     "Latin name": "Sedum ternatum"
   },
   "Sedum middendorffianum 'Yellow Diamonds'": {
-    "Common name": "Yellow Diamonds Stonecrop",
+    "Common name": "Stonecrop 'Yellow Diamonds'",
     "Height": "0.5-0.75 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -9397,7 +9469,7 @@
     "Latin name": "Sedum middendorffianum 'Yellow Diamonds'"
   },
   "Sedum hybridum 'Sunsparkler Lime Zinger'": {
-    "Common name": "Lime Zinger Stonecrop",
+    "Common name": "Stonecrop 'Lime Zinger'",
     "Height": "0.25-0.5 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -9955,9 +10027,9 @@
     "Latin name": "Solidago juncea"
   },
   "Solidago nemoralis": {
-    "Common name": "Old Field Goldenrod",
+    "Common name": "Gray Goldenrod",
     "Alternate common names": [
-      "Gray Goldenrod"
+      "Old Field Goldenrod"
     ],
     "Height": "1-2 ft",
     "plantType": [
@@ -10395,6 +10467,31 @@
       "Jul"
     ],
     "Latin name": "Spigelia marilandica 'Little Redhead'"
+  },
+  "Stachys byzantina 'Silver Carpet'": {
+    "Common name": "Lamb's Ear 'Silver Carpet'",
+    "Height": "0.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Europe",
+      "Asia"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Jul"
+    ],
+    "Latin name": "Stachys byzantina 'Silver Carpet'"
   },
   "Stachys pilosa": {
     "Common name": "Hairy Hedge-Nettle",
@@ -11909,7 +12006,7 @@
     "Latin name": "Vernonia noveboracensis"
   },
   "Veronica peduncularis 'Georgia Blue'": {
-    "Common name": "Georgia Blue Creeping Speedwell",
+    "Common name": "Creeping Speedwell 'Georgia Blue'",
     "Height": "0.5-0.75 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -11938,7 +12035,7 @@
     "Latin name": "Veronica peduncularis 'Georgia Blue'"
   },
   "Veronica peduncularis 'Waterperry Blue'": {
-    "Common name": "Waterperry Blue Creeping Speedwell",
+    "Common name": "Creeping Speedwell 'Waterperry Blue'",
     "Height": "0.25-0.5 ft",
     "plantType": [
       "Herbaceous perennial"
