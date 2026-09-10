@@ -14,7 +14,7 @@ import {
   getCopyGardenSource, clearCopyGardenSource,
 } from '@/lib/clipboardStorage';
 import { getSharedGardenInfo, getSharedGardenPlants } from '@/lib/dataService';
-import { FEATURED_GARDEN_IDS } from '@/lib/featuredGardens';
+import { FEATURED_SECTIONS } from '@/lib/featuredGardens';
 import NavBar from '@/components/NavBar';
 import ItemGrid, { ItemGridSection } from '@/components/ItemGrid';
 import Modal from '@/components/Modal';
@@ -32,7 +32,8 @@ export default function Home() {
 
   // Data
   const [gardens, setGardens] = useState([]);
-  const [featuredGardens, setFeaturedGardens] = useState([]);
+  // [{ title, gardens: [...] }] — mirrors FEATURED_SECTIONS, minus missing gardens
+  const [featuredSections, setFeaturedSections] = useState([]);
   const [savedGardens, setSavedGardens] = useState([]);
   const [recentGardens, setRecentGardens] = useState([]);
   const [plantCounts, setPlantCounts] = useState({});
@@ -79,15 +80,26 @@ export default function Home() {
         setGardens(result);
 
         // Load featured gardens (handpicked, shown to everyone).
-        // Order follows FEATURED_GARDEN_IDS; missing/private gardens are skipped.
-        let loadedFeatured = [];
-        for (const id of FEATURED_GARDEN_IDS) {
-          try {
-            const info = await getSharedGardenInfo(id);
-            if (info?.garden) loadedFeatured.push(info.garden);
-          } catch { /* skip */ }
+        // Order follows FEATURED_SECTIONS; missing/private gardens are skipped.
+        // A garden listed in more than one section is only fetched once.
+        const featuredById = new Map();
+        const loadedSections = [];
+        for (const section of FEATURED_SECTIONS) {
+          const sectionGardens = [];
+          for (const id of section.gardenIds) {
+            if (!featuredById.has(id)) {
+              try {
+                const info = await getSharedGardenInfo(id);
+                if (info?.garden) featuredById.set(id, info.garden);
+              } catch { /* skip */ }
+            }
+            const garden = featuredById.get(id);
+            if (garden) sectionGardens.push(garden);
+          }
+          loadedSections.push({ title: section.title, gardens: sectionGardens });
         }
-        setFeaturedGardens(loadedFeatured);
+        setFeaturedSections(loadedSections);
+        const loadedFeatured = [...featuredById.values()];
 
         // Load saved gardens
         let loadedSaved = [];
@@ -203,7 +215,12 @@ export default function Home() {
   }, [searchQuery]);
 
   const filteredCreated = useMemo(() => filterBySearch(gardens), [gardens, filterBySearch]);
-  const filteredFeatured = useMemo(() => filterBySearch(featuredGardens), [featuredGardens, filterBySearch]);
+  const filteredFeaturedSections = useMemo(
+    () => featuredSections
+      .map(s => ({ ...s, gardens: filterBySearch(s.gardens) }))
+      .filter(s => s.gardens.length > 0),
+    [featuredSections, filterBySearch]
+  );
   const filteredSaved = useMemo(() => filterBySearch(savedGardens), [savedGardens, filterBySearch]);
   const filteredRecent = useMemo(() => filterBySearch(recentGardens), [recentGardens, filterBySearch]);
 
@@ -497,11 +514,12 @@ export default function Home() {
               )}
             </ItemGridSection>
 
-            {/* Featured Gardens (handpicked, read-only, shown to everyone) Change back to featured*/}
-            {filteredFeatured.length > 0 && (
-              <ItemGridSection title="4th Annual Newton Pollinator Garden Tour (9/19/2026)">
+            {/* Featured sections (handpicked, read-only, shown to everyone).
+                Titles and garden IDs live in lib/featuredGardens.js */}
+            {filteredFeaturedSections.map((section) => (
+              <ItemGridSection key={section.title} title={section.title}>
                 <ItemGrid
-                  items={filteredFeatured}
+                  items={section.gardens}
                   linkPrefix="/share"
                   getItemId={(g) => g.id}
                   getItemImage={(g) => g.image || DEFAULT_GARDEN_IMAGE}
@@ -510,7 +528,7 @@ export default function Home() {
                   getItemBadge={!privacyMode && !rearrangeMode ? (g) => plantCounts[g.id] != null ? plantCounts[g.id] : null : undefined}
                 />
               </ItemGridSection>
-            )}
+            ))}
 
             {/* Saved Gardens */}
             <ItemGridSection title="Saved">
