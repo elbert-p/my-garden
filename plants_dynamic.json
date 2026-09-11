@@ -1330,7 +1330,7 @@
     "Latin name": "Aquilegia canadensis"
   },
   "Aquilegia caerulea 'Kirigami Deep Rose & Pink'": {
-    "Common name": "Kirigami Deep Rose & Pink Columbine",
+    "Common name": "Columbine 'Kirigami Deep Rose & Pink'",
     "Height": "2 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -1360,7 +1360,7 @@
     "Latin name": "Aquilegia caerulea 'Kirigami Deep Rose & Pink'"
   },
   "Aquilegia caerulea 'Kirigami Deep Blue & White'": {
-    "Common name": "Kirigami Deep Blue & White Columbine",
+    "Common name": "Columbine 'Kirigami Deep Blue & White'",
     "Height": "2 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -1742,6 +1742,9 @@
   },
   "Asclepias incarnata": {
     "Common name": "Rose Milkweed",
+    "Alternate common names": [
+      "Swamp Milkweed"
+    ],
     "Height": "2-4 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -3968,6 +3971,39 @@
     ],
     "Latin name": "Eupatorium serotinum"
   },
+  "Euphorbia 'Miner's Merlot'": {
+    "Common name": "Euphorbia 'Miner's Merlot'",
+    "Alternate common names": [
+      "Wood Spurge 'Miner's Merlot'"
+    ],
+    "Height": "1.5 -2 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Europe"
+    ],
+    "Autofill image paths": [
+      "euphorbia-Merlots-Miner.png"
+    ],
+    "Autofill image credits": [
+      "bluestoneperennials.com"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Latin name": "Euphorbia 'Miner's Merlot'"
+  },
   "Eurybia divaricata": {
     "Common name": "White Wood Aster",
     "Height": "1-2 ft",
@@ -5258,6 +5294,9 @@
   },
   "Heliopsis helianthoides": {
     "Common name": "Oxeye Sunflower",
+    "Alternate common names": [
+      "False Sunflower"
+    ],
     "Height": "3-6 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -7204,6 +7243,7 @@
     "Native Range": [
       "Asia"
     ],
+    "Hosted Butterflies and Moths": "Cattail Border Moth; Waterlily Borer Moth; Waterlily Leafcutter Moth; American Lotus Borer; Polymorphic Pondweed Moth",
     "Sunlight": [
       "Sun"
     ],
@@ -7215,6 +7255,28 @@
       "Aug"
     ],
     "Latin name": "Nelumbo nucifera"
+  },
+  "Nepeta racemosa": {
+    "Common name": "Eastern Cat-Mint",
+    "Height": "0.75-2 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Europe",
+      "Asia"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jun"
+    ],
+    "Latin name": "Nepeta racemosa"
   },
   "Nuttallanthus canadensis": {
     "Common name": "Old Field Toadflax",
@@ -7236,6 +7298,7 @@
       "Southeastern US"
     ],
     "Bumblebees": 1,
+    "Hosted Butterflies and Moths": "Tobacco Budworm Moth; Corn Earworm Moth; Common Buckeye; Curved-Line Owlet; Scribbled Sallow",
     "Sunlight": [
       "Sun"
     ],
@@ -9156,7 +9219,7 @@
     "Latin name": "Salvia azurea"
   },
   "Salvia farinacea 'Sallyfun Blue Lagoon'": {
-    "Common name": "Mealycup Sage",
+    "Common name": "Mealycup Sage 'Sallyfun Blue Lagoon'",
     "Height": "1-2.5 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -10247,7 +10310,10 @@
     "Latin name": "Solidago rigidum"
   },
   "Solidago rugosa": {
-    "Common name": "Rough Goldenrod",
+    "Common name": "Common Wrinkle-leaved Goldenrod",
+    "Alternate common names": [
+      "Rough Goldenrod"
+    ],
     "Height": "3-6 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -13710,6 +13776,40 @@
     ],
     "Latin name": "Sporobolus heterolepis"
   },
+  "Stipa tenuissima": {
+    "Common name": "Angel Hair Grass",
+    "Alternate common names": [
+      "Mexican Feather Grass"
+    ],
+    "Height": "2-3 ft",
+    "plantType": [
+      "Grasses and sedges"
+    ],
+    "Native Range": [
+      "Southwestern US"
+    ],
+    "Autofill image paths": [
+      "stipa_tenuissima.png"
+    ],
+    "Autofill image credits": [
+      "provenwinners.com"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Latin name": "Stipa tenuissima"
+  },
   "Tridens flavus": {
     "Common name": "Purpletop",
     "plantType": [
@@ -13717,6 +13817,7 @@
     ],
     "Hosted Butterflies and Moths": "Common Wood Nymph; Wheat Head Armywotm Moth; Paradoxical Grass Moth; Leonard's Skipper; Crossline Skipper; Hobomok Skipper; Zabulon Skipper; Little Glassywing",
     "Sunlight": [
+      "Part Sun",
       "Shade"
     ],
     "Moisture": [
