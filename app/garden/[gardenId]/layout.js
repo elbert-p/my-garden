@@ -371,7 +371,7 @@ function GardenLayoutContent({ children }) {
   const menuItems = [
     { icon: <FiPlus size={16} />, label: 'Add Plant', onClick: () => openAddModal('plant'), variant: 'success' },
     { icon: <FiPlus size={16} />, label: 'Add Wildlife', onClick: () => openAddModal('wildlife'), variant: 'success' },
-    { icon: <FiEdit size={16} />, label: 'Edit Details', onClick: () => openEditModal() },
+    { icon: <FiEdit size={16} />, label: <>Edit Garden<br />Name &amp; Image</>, onClick: () => openEditModal() },
     { icon: <FiSliders size={16} />, label: 'Customize', onClick: () => openCustomizeModal() },
     { icon: <FiEye size={16} />, label: 'Edit Privacy', onClick: startPrivacyMode, visible: !isSubPage && !!user },
     { icon: <FiMove size={16} />, label: 'Rearrange', onClick: startRearrangeMode, visible: !isSubPage },

@@ -6,6 +6,7 @@ import styles from './DropdownMenu.module.css';
 /**
  * Reusable Dropdown Menu Component
  * @param {Array} items - Array of menu items: { icon, label, onClick, danger?, variant?, divider? }
+ *   - label: string, or JSX (use <br /> to split a long label across lines)
  *   - variant: 'default' | 'success' | 'danger' | 'share' | 'save'
  *   - danger: shorthand for variant='danger'
  *   - divider: if true, renders a divider line instead of a button
@@ -79,7 +80,7 @@ export default function DropdownMenu({ items, icon, buttonClassName }) {
                 className={getItemClass(item)}
               >
                 {item.icon && <span className={styles.icon}>{item.icon}</span>}
-                <span>{item.label}</span>
+                <span className={styles.label}>{item.label}</span>
               </button>
             );
           })}
