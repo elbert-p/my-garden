@@ -1787,6 +1787,47 @@
     ],
     "Latin name": "Asclepias incarnata"
   },
+  "Asclepias incarnata 'Ice Ballet'": {
+    "Common name": "Rose Milkweed 'Ice Ballet'",
+    "Alternate common names": [
+      "Swamp Milkweed 'Ice Ballet'"
+    ],
+    "Height": "3-4 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
+    "Key Host Plant": [
+      "K"
+    ],
+    "Bumblebees": 1,
+    "Pollen Source": "Golden Northern Bumblebee, Broad-handed Leafcutter Bee",
+    "Hosted Butterflies and Moths": "Unexpected Cycnia; Delicate Cycnia; Monarch; Milkweed Tussock Moth or Milkweed Tiger Moth; Cecropia Silkmoth; Hitched Arches; Stalk Borer; Lined Ruby Tiger Moth; Black-Shaded Platynota; Isabella Tiger Moth; Fall Armyworm Moth; Gray Hairstreak; Striped Garden Caterpillar Moth",
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Asclepias incarnata 'Ice Ballet'"
+  },
   "Asclepias sullivantii": {
     "Common name": "Prairie Milkweed",
     "Height": "3 ft",
@@ -5409,6 +5450,33 @@
     ],
     "Latin name": "Helleborus orientalis"
   },
+  "Helleborus 'Rio Carnival'": {
+    "Common name": "Hellebore 'Rio Carnival'",
+    "Alternate common names": [
+      "Lenten Rose 'Rio Carnival'"
+    ],
+    "Height": "1.5-2 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Europe",
+      "Asia"
+    ],
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Mar",
+      "Apr"
+    ],
+    "Latin name": "Helleborus 'Rio Carnival'"
+  },
   "Hepatica acutiloba": {
     "Common name": "Sharp-lobed Hepatica",
     "Height": "0.25-0.5 ft",
@@ -6074,6 +6142,29 @@
       "Aug"
     ],
     "Latin name": "Kniphofia 'Lady Luck'"
+  },
+  "Kniphofia 'Mango Popsicle'": {
+    "Common name": "Red Hot Poker 'Mango Popsicle'",
+    "Height": "2-2.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Africa"
+    ],
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Kniphofia 'Mango Popsicle'"
   },
   "Lespedeza capitata": {
     "Common name": "Round-headed Bush Clover",
@@ -14211,6 +14302,69 @@
     ],
     "Latin name": "Matteuccia struthiopteris"
   },
+  "Matteuccia struthiopteris pennsylvanica": {
+    "Common name": "American Ostrich Fern",
+    "Height": "2-6 ft",
+    "plantType": [
+      "Fern"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Mid-Atlantic US"
+    ],
+    "Key Host Plant": [
+      "K"
+    ],
+    "Hosted Butterflies and Moths": "Reticulated Fruitworm Moth; Sharp Angle Shades; Olethreutes auricapitana",
+    "Sunlight": [
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Latin name": "Matteuccia struthiopteris pennsylvanica"
+  },
+  "Matteuccia struthiopteris 'The King'": {
+    "Common name": "Ostrich Fern 'The King'",
+    "Height": "3-6 ft",
+    "plantType": [
+      "Fern"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "Cultivar",
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Mid-Atlantic US"
+    ],
+    "Key Host Plant": [
+      "K"
+    ],
+    "Hosted Butterflies and Moths": "Reticulated Fruitworm Moth; Sharp Angle Shades; Olethreutes auricapitana",
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade",
+      "Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Latin name": "Matteuccia struthiopteris 'The King'"
+  },
   "Onoclea sensibilis": {
     "Common name": "Sensitive Fern",
     "Height": "1-2 ft",
@@ -14232,7 +14386,6 @@
     ],
     "Hosted Butterflies and Moths": "Silver-Spotted Fern Moth; Herpetogramma theseusalis; Rustic Quaker; Sensitive Border Moth; Olive Angle Shades",
     "Sunlight": [
-      "Sun",
       "Part Sun",
       "Part Shade",
       "Shade"
