@@ -3858,6 +3858,12 @@
       "Midwestern US",
       "Southeastern US"
     ],
+    "Autofill image paths": [
+      "erigeron_pulchellus.png"
+    ],
+    "Autofill image credits": [
+      "prairiemoon.com"
+    ],
     "Key Host Plant": [
       "K",
       "Specialist Bees"
@@ -5294,6 +5300,12 @@
     ],
     "Native Range": [
       "Midwestern US"
+    ],
+    "Autofill image paths": [
+      "helianthus_grosseserratus.png"
+    ],
+    "Autofill image credits": [
+      "prairiemoon.com"
     ],
     "Key Host Plant": [
       "Lepidoptera",
@@ -6822,6 +6834,37 @@
     ],
     "Latin name": "Lupinus perennis"
   },
+  "Lychnis coronaria": {
+    "Common name": "Rose Campion",
+    "Height": "2-3 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Europe",
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "lychnis_coronaria.png"
+    ],
+    "Autofill image credits": [
+      "gardenia.net"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun",
+      "Jul"
+    ],
+    "Latin name": "Lychnis coronaria"
+  },
   "Lycopus uniflorus": {
     "Common name": "Northern Bugleweed",
     "Height": "1-2.5 ft",
@@ -7338,6 +7381,12 @@
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
       "US Native"
+    ],
+    "Autofill image paths": [
+      "monarda_fistulosa.png"
+    ],
+    "Autofill image credits": [
+      "prairiemoon.com"
     ],
     "Bumblebees": 1,
     "Pollen Source": "Half-black Bumblebee, Beebalm Shortface Bee",
