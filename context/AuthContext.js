@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useState, useRef } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { supabase } from '@/lib/supabaseClient';
 import localforage from 'localforage';
-import { clearAllCaches, getGardenOwnerId } from '@/lib/dataService';
+import { clearAllCaches, getGardenOwnerId, plantToSupabase } from '@/lib/dataService';
 import { uploadImage } from '@/lib/imageStorage';
 
 const AuthContext = createContext();
@@ -367,6 +367,8 @@ export function AuthProvider({ children }) {
             user_id: userId,
             name: garden.name,
             image: imageUrl,
+            about_blocks: garden.aboutBlocks || [],
+            todo_content: garden.todoContent || '',
             customization: garden.customization || {},
           })
           .select()
@@ -397,24 +399,15 @@ export function AuthProvider({ children }) {
           );
         }
 
+        // Map through the shared mapper so migrated plants keep every column
+        // (type, plant_type, hosted_insects, plant_privacy, autofill_sig ...),
+        // swapping in the uploaded image URLs for the local data URLs.
         const { data: newPlant, error } = await supabase
           .from('plants')
-          .insert({
-            user_id: userId,
-            garden_id: newGardenId,
-            common_name: plant.commonName,
-            scientific_name: plant.scientificName,
-            main_image: mainImageUrl,
-            date_planted: plant.datePlanted || null,
-            bloom_time: plant.bloomTime || [],
-            height: plant.height,
-            sunlight: plant.sunlight || [],
-            moisture: plant.moisture || [],
-            native_range: plant.nativeRange || [],
-            notes: plant.notes,
-            images: galleryUrls,
-            has_autofilled: plant.hasAutofilled || false,
-          })
+          .insert(plantToSupabase(
+            { ...plant, gardenId: newGardenId, mainImage: mainImageUrl, images: galleryUrls },
+            userId
+          ))
           .select()
           .single();
 
