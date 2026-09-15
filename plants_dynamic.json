@@ -680,6 +680,34 @@
     ],
     "Latin name": "Alchemilla mollis"
   },
+  "Allium tuberosum": {
+    "Common name": "Garlic Chives",
+    "Height": "1-2 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Asia"
+    ],
+    "Autofill image paths": [
+      "allium_tuberosum.png"
+    ],
+    "Autofill image credits": [
+      "Missouri Botanical Garden"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug"
+    ],
+    "Latin name": "Allium tuberosum"
+  },
   "Allium cernuum": {
     "Common name": "Nodding Onion",
     "Height": "1.5 ft",
@@ -1577,6 +1605,35 @@
     ],
     "Latin name": "Arisaema tryphyllum"
   },
+  "Artemisia ludoviciana": {
+    "Common name": "White Sage",
+    "Alternate common names": [
+      "Prairie Sage"
+    ],
+    "Height": "1-3 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Midwestern US",
+      "Southwestern US",
+      "Western US"
+    ],
+    "Hosted Butterflies and Moths": "Mouse-Colored Pyrophila; The Nutmeg; Nais Tiger Moth; Apterona helicoidella; Depressaria alienella; Orange-Dotted Dichomeris; Salt Marsh Moth; Striped Phaneta; Wormwood Pug; Gray Pug; Beet Webworm; European Corn Borer Moth; Clandestine Dart; Wavy-Lined Emerald; Painted Lady; American Lady",
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Aug",
+      "Sep"
+    ],
+    "Latin name": "Artemisia ludoviciana"
+  },
   "Artemisia schmidtiana 'Silver Mound'": {
     "Common name": "Artemisia 'Silver Mound'",
     "Alternate common names": [
@@ -1870,6 +1927,12 @@
       "Northeastern US",
       "Midwestern US",
       "Southeastern US"
+    ],
+    "Autofill image paths": [
+      "asclepias_syriaca.png"
+    ],
+    "Autofill image credits": [
+      "prairiemoon.com"
     ],
     "Key Host Plant": [
       "K"
@@ -3602,6 +3665,12 @@
       "Midwestern US",
       "Southeastern US",
       "Southwestern US"
+    ],
+    "Autofill image paths": [
+      "echinacea_purpurea.png"
+    ],
+    "Autofill image credits": [
+      "prairiemoon.com"
     ],
     "Key Host Plant": [
       "Specialist Bees"
@@ -7669,6 +7738,16 @@
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Key Host Plant": [
       "K"
     ],
@@ -7676,8 +7755,7 @@
     "Sunlight": [
       "Sun",
       "Part Sun",
-      "Part Shade",
-      "Shade"
+      "Part Shade"
     ],
     "Moisture": [
       "Wet",
@@ -8550,14 +8628,26 @@
   },
   "Polygonatum biflorum": {
     "Common name": "Solomon's Seal",
-    "Height": "4 ft",
+    "Alternate common names": [
+      "King Solomon's Seal"
+    ],
+    "Height": "1-4 ft",
     "plantType": [
       "Herbaceous perennial"
     ],
+    "Ecoregion": "58,59,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US",
+      "Southwestern US"
+    ],
     "Hosted Butterflies and Moths": "Black-Patched Clepsis",
     "Sunlight": [
-      "Sun",
-      "Part Sun",
       "Part Shade",
       "Shade"
     ],
@@ -10657,6 +10747,31 @@
     ],
     "Latin name": "Stachys pilosa"
   },
+  "Stokesia laevis 'Blue Danube'": {
+    "Common name": "Stokes' Aster 'Blue Danube'",
+    "Height": "1-1.5 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "Southeastern US"
+    ],
+    "Sunlight": [
+      "Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "Latin name": "Stokesia laevis 'Blue Danube'"
+  },
   "Stylophorum diphyllum": {
     "Common name": "Celandine Poppy",
     "Height": "1.5 ft",
@@ -12627,7 +12742,7 @@
     "Latin name": "Andropogon virginicus"
   },
   "Bouteloua curtipendula": {
-    "Common name": "Side oats grama",
+    "Common name": "Side Oats Grama",
     "Height": "2 ft",
     "plantType": [
       "Grasses and sedges"
@@ -12648,12 +12763,24 @@
     ],
     "Latin name": "Bouteloua curtipendula"
   },
-  "Boutelua gracilis": {
-    "Common name": "Blue grama",
-    "Height": "1 ft",
+  "Bouteloua gracilis": {
+    "Common name": "Blue Grama",
+    "Height": "1-2 ft",
     "plantType": [
       "Grasses and sedges"
     ],
+    "Native Range": [
+      "Midwestern US",
+      "Southwestern US",
+      "Western US"
+    ],
+    "Autofill image paths": [
+      "bouteloua_gracilis.png"
+    ],
+    "Autofill image credits": [
+      "gardenia.net"
+    ],
+    "Hosted Butterflies and Moths": "Common Ringlet; Leonard's Skipper; Crossline Skipper",
     "Sunlight": [
       "Sun",
       "Part Sun"
@@ -12667,7 +12794,7 @@
       "Aug",
       "Sep"
     ],
-    "Latin name": "Boutelua gracilis"
+    "Latin name": "Bouteloua gracilis"
   },
   "Bromus ciliatus": {
     "Common name": "Fringed Brome",
@@ -12916,7 +13043,7 @@
   },
   "Carex eburnea": {
     "Common name": "Bristle-leaf sedge",
-    "Height": ".5-1 ft",
+    "Height": "0.5-1 ft",
     "plantType": [
       "Grasses and sedges"
     ],
@@ -13003,7 +13130,7 @@
   },
   "Carex muskingumensis": {
     "Common name": "Palm sedge",
-    "Height": ".5-.75 ft",
+    "Height": "0.5-0.75 ft",
     "plantType": [
       "Grasses and sedges"
     ],
@@ -13058,14 +13185,20 @@
     "Latin name": "Carex pensylvanica"
   },
   "Carex plantaginea": {
-    "Common name": "Plantain leaved sedge",
-    "Height": "12 in",
+    "Common name": "Plantain-leaved sedge",
+    "Height": "0.5-1 ft",
     "plantType": [
       "Grasses and sedges"
     ],
+    "Native Range": [
+      "MA Native",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
     "Hosted Butterflies and Moths": "Henry's Marsh Moth; Pink Sedge Moth; American Ear Moth; Delaware Skipper; Ignorant Apamea; Bordered Apamea; Small Clouded Brindle Moth; Common Wood Nymph; Chain-Dotted Geometer; Common Ringlet; Cosmopterix clemensella; Fernald's Cosmopterix Moth; Virginia Ctenucha; Burnished Bog Moth; Donacaula dispersella; Elachista cucullata; Two-Spotted Skipper; Black Dash; Dion Skipper; Dun Skipper; American Crescent Borer; Leonard's Skipper; Sordid Wainscot; Appalachian Brown; Eyed Brown; Needle Wainscot; Long Dash; Veiled Ear Moth; Slant-Lined Owlet; Slant-Lined Fan-foot; Black-Dotted Lithacodia; Multicolored Sedgeminer; Lesser Wainscot; Green-Washed Culm Borer; Stalk Borer; Included Cordgrass Borer Moth; Putnam's Looper Moth; Mulberry Wing; Broad-Winged Skipper; Pink-Barred Lithacodia; Four-Lined Borer; Fall Armyworm Moth",
     "Sunlight": [
-      "Part Sun",
+      "Part Shade",
       "Shade"
     ],
     "Moisture": [
@@ -13073,8 +13206,7 @@
     ],
     "Bloom time": [
       "Apr",
-      "May",
-      "Jun"
+      "May"
     ],
     "Latin name": "Carex plantaginea"
   },
@@ -14966,6 +15098,12 @@
       "Northeastern US",
       "Southeastern US"
     ],
+    "Autofill image paths": [
+      "aronia_arbutifolia.png"
+    ],
+    "Autofill image credits": [
+      "Missouri Botanical Garden"
+    ],
     "Pollen Source": "Maine blueberry bee",
     "Hosted Butterflies and Moths": "Saddleback Caterpillar Moth; Clear Dagger; Interrupted Dagger; Radcliffe's Dagger; Black Army Worm; Apple Leaf Folder; Wide-Striped Leaf Roller; Exotic Leafroller Moth; Argyrotaenia repertana; White-Blotched Balsa; Praeclara Underwing; Reticulated Fruitworm Moth; Silky Sallow; Obsolete Leafroller; Parallel-Banded Leafroller; Cranberry Spanworm; Oriental Fruit Moth; Spotted Apple Budworm; Zigzag Herpetogramma; Bluish Spring Moth; Metarranthis amyrisaria; Footpath Sallow; Roadside Sallow; Bicolored Woodgrain; White-Marked Tussock Moth; Spicebush Swallowtail; Apple Leaf Miner; Crimson Sallow; Striped Hairstreak; Coral Hairstreak; Large Lace-Border; Four-Lined Wave; Rugose Mamestra; Spotted Cut-Worm; Greater Black-Letter Dart; Lunate Zale",
     "Sunlight": [
@@ -15039,16 +15177,33 @@
     "Latin name": "Aronia floribunda (prunifolia)"
   },
   "Aronia melanocarpa": {
-    "Common name": "Black chokeberry",
+    "Common name": "Black Chokeberry",
     "Height": "3-10 ft",
     "plantType": [
       "Shrub"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US"
+    ],
+    "Autofill image paths": [
+      "aronia_melanocarpa.png"
+    ],
+    "Autofill image credits": [
+      "Missouri Botanical Garden"
     ],
     "Pollen Source": "Maine blueberry bee",
     "Hosted Butterflies and Moths": "Saddleback Caterpillar Moth; Clear Dagger; Interrupted Dagger; Radcliffe's Dagger; Black Army Worm; Apple Leaf Folder; Wide-Striped Leaf Roller; Exotic Leafroller Moth; Argyrotaenia repertana; White-Blotched Balsa; Praeclara Underwing; Reticulated Fruitworm Moth; Silky Sallow; Obsolete Leafroller; Parallel-Banded Leafroller; Cranberry Spanworm; Oriental Fruit Moth; Spotted Apple Budworm; Zigzag Herpetogramma; Bluish Spring Moth; Metarranthis amyrisaria; Footpath Sallow; Roadside Sallow; Bicolored Woodgrain; White-Marked Tussock Moth; Spicebush Swallowtail; Apple Leaf Miner; Crimson Sallow; Striped Hairstreak; Coral Hairstreak; Large Lace-Border; Four-Lined Wave; Rugose Mamestra; Spotted Cut-Worm; Greater Black-Letter Dart; Lunate Zale",
     "Sunlight": [
       "Sun",
-      "Part Sun"
+      "Part Sun",
+      "Part Shade"
     ],
     "Moisture": [
       "Wet",
@@ -15063,7 +15218,7 @@
   },
   "Arctostaphylos uva-ursi": {
     "Common name": "Red Bearberry",
-    "Height": "0.25-.5 ft",
+    "Height": "0.25-0.5 ft",
     "plantType": [
       "Shrub"
     ],
@@ -15073,7 +15228,8 @@
       "(58) Northeastern Highlands",
       "(59) Northeastern Coastal Zone",
       "(84) Atlantic Coastal Pine Barrens",
-      "Northern US",
+      "Northeastern US",
+      "Midwestern US",
       "Western US"
     ],
     "Pollen Source": "Blueberry Cellophane Bee",
@@ -15090,6 +15246,39 @@
       "May"
     ],
     "Latin name": "Arctostaphylos uva-ursi"
+  },
+  "Arctostaphylos uva-ursi 'Massachusetts'": {
+    "Common name": "Red Bearberry 'Massachusetts'",
+    "Height": "0.5-1 ft",
+    "plantType": [
+      "Shrub"
+    ],
+    "Ecoregion": "58,59,82,83,84",
+    "Native Range": [
+      "Cultivar",
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Western US"
+    ],
+    "Pollen Source": "Blueberry Cellophane Bee",
+    "Hosted Butterflies and Moths": "Miranda Underwing; Strawberry Leafroller; Fruit-Tree Leafroller Moth; Rose Tortrix; The Brown Elfin; Hoary Elfin; Zapulata Moth; Spotted Dantana; Cranberry Spanworm; Sumac Leaftier; Common Eupithacia; Sulphur Moth; Macaria occiduaria; Cranberry Span-Worm; Forest Tent Caterpillar; Southern Flannel Moth; Yellow-Washed Metarranthis; Filament Bearer; Manto Tussock Moth; Lappet Moth; Rhopobota finitimana; Blackheaded Fireworm",
+    "Sunlight": [
+      "Sun",
+      "Part Sun"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Apr",
+      "May"
+    ],
+    "Latin name": "Arctostaphylos uva-ursi 'Massachusetts'"
   },
   "Baccharis halimifolia": {
     "Common name": "Eastern False Willow",
@@ -16234,6 +16423,7 @@
       "Southeastern US"
     ],
     "Pollen Source": "Bradley?s Miner, Sheep-Laurel Miner, Maine blueberry bee",
+    "Hosted Butterflies and Moths": "Stained-Back Leafroller Moth; Lesser Apple Leaf Folder; Acrobasis amplexella; Narrow-Winged Dagger; Black Army Worm; Gray-Banded Leafroller Moth; The Brown Elfin; Promethea Silkmoth; Cenopis karacana; Chain-Dotted Geometer; Mottled Gray Carpet; Bog Yellow-Wing; Azalea Sphinx; Cranberry Spanworm; Sharp-Lined Powder Moth; White-Lined Pug; Sundew Dart; Fall Webworm; Spongy Moth; Bicolored Woodgrain; Red-Fronted Emerald; Olethreutes melanomesum; White-Marked Tussock Moth; Paralobesia rhoifructana; Brown Angle Shades; Clouded Veneer Moth; Friendly Probole; Heath Probole; Shagbark Hickory Leafroller; Fawn Sphinx; Bud Moth; Darling Mamestra; Blueberry Sallow; Rhododendron Borer; Inscribed Looper; White Slant-Line; Arcadian Sallow",
     "Sunlight": [
       "Sun",
       "Part Sun",
@@ -16248,6 +16438,36 @@
       "Jun"
     ],
     "Latin name": "Kalmia latifolia"
+  },
+  "Kalmia latifolia 'Olympic Fire'": {
+    "Common name": "Mountain Laurel 'Olympic Fire'",
+    "Height": "4-5 ft",
+    "plantType": [
+      "Shrub"
+    ],
+    "Native Range": [
+      "Cultivar",
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Southeastern US"
+    ],
+    "Pollen Source": "Bradley?s Miner, Sheep-Laurel Miner, Maine blueberry bee",
+    "Hosted Butterflies and Moths": "Stained-Back Leafroller Moth; Lesser Apple Leaf Folder; Acrobasis amplexella; Narrow-Winged Dagger; Black Army Worm; Gray-Banded Leafroller Moth; The Brown Elfin; Promethea Silkmoth; Cenopis karacana; Chain-Dotted Geometer; Mottled Gray Carpet; Bog Yellow-Wing; Azalea Sphinx; Cranberry Spanworm; Sharp-Lined Powder Moth; White-Lined Pug; Sundew Dart; Fall Webworm; Spongy Moth; Bicolored Woodgrain; Red-Fronted Emerald; Olethreutes melanomesum; White-Marked Tussock Moth; Paralobesia rhoifructana; Brown Angle Shades; Clouded Veneer Moth; Friendly Probole; Heath Probole; Shagbark Hickory Leafroller; Fawn Sphinx; Bud Moth; Darling Mamestra; Blueberry Sallow; Rhododendron Borer; Inscribed Looper; White Slant-Line; Arcadian Sallow",
+    "Sunlight": [
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Latin name": "Kalmia latifolia 'Olympic Fire'"
   },
   "Leucothoe axillaris": {
     "Common name": "Coastal Doghobble",
@@ -16760,6 +16980,27 @@
     ],
     "Latin name": "Rhododendron viscosum"
   },
+  "Rhododendron 'Nova Zembla'": {
+    "Common name": "Rhododendron 'Nova Zembla'",
+    "Height": "5-8 ft",
+    "plantType": [
+      "Shrub"
+    ],
+    "Native Range": [
+      "Cultivar"
+    ],
+    "Sunlight": [
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium"
+    ],
+    "Bloom time": [
+      "May",
+      "Jun"
+    ],
+    "Latin name": "Rhododendron 'Nova Zembla'"
+  },
   "Rhus aromatica": {
     "Common name": "Fragrant Sumac",
     "Height": "3-7 ft",
@@ -16772,7 +17013,7 @@
       "Midwestern US",
       "Southeastern US",
       "Southwestern US",
-      "Weestern US"
+      "Western US"
     ],
     "Pollen Source": "Short-tongued Miner Bee, Andrena (Cnemidandrena) robervalensis, Band-footed Sweat Bee",
     "Hosted Butterflies and Moths": "Distinct Quaker; Long-Winged Dagger; Black Army Worm; Luna Moth; White-Lined Leafroller Moth; Variable Antepione; Fruit-Tree Leafroller Moth; Omnivorous Leafroller Moth; Yellow-Winged Oak Leafroller Moth; Salt-and-Pepper Geometer; Maple Prominent; Summer Azure; Oblique-Banded Leafroller Moth; Chain-Dotted Geometer; Royal Walnut Moth; Double-Lined Gray; Yellow-Necked Caterpillar Moth; Spotted Dantana; Pink Star; Showy Emerald; Imperial Moth; Dimorphic Epipaschia; Sumac Leaftier; Common Eupithacia; Cecropia Silkmoth; Hickory Tussock Moth; Spongy Moth; Light Marathyssa; Dark Marathyssa; Beautiful Eutelia; Canadian Melanolphia; Darker Moodna; Confused Woodgrain; Red-Fronted Emerald; Serviceberry Leafroller; Raspberry Leafroller; Eyed Paectes; Pygmy Paectes; Stalk Borer; Paralobesia cypripediana; Paralobesia rhoifructana; Variegated Cutworm; Common Tan Wave; Maple Webworm; American Bordered Sallow; Striped Sumac Leafroller; Bud Moth; Virginian Tiger Moth; Darling Mamestra; Y-Backed Telphusa; Yellow Slant-Line; Evergreen Bagworm Moth",
