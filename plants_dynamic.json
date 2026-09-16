@@ -69,6 +69,45 @@
     ],
     "Latin name": "Bidens cernua"
   },
+  "Bidens frondosa": {
+    "Common name": "Devil's Beggarticks",
+    "Alternate common names": [
+      "Common Beggarticks"
+    ],
+    "Height": "2-5 ft",
+    "plantType": [
+      "Annual"
+    ],
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "US Native"
+    ],
+    "Autofill image paths": [
+      "bidens_frondosa.png"
+    ],
+    "Autofill image credits": [
+      "prairiemoon.com"
+    ],
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Wet",
+      "Medium"
+    ],
+    "Bloom time": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Latin name": "Bidens frondosa"
+  },
   "Acalypha rhomboidea": {
     "Common name": "Common Three-seeded Mercury",
     "Height": "0.5-2 ft",
@@ -2135,6 +2174,12 @@
     "Native Range": [
       "Midwestern US",
       "Southeastern US"
+    ],
+    "Autofill image paths": [
+      "baptisia_australis.png"
+    ],
+    "Autofill image credits": [
+      "prairiemoon.com"
     ],
     "Key Host Plant": [
       "K"
@@ -11215,6 +11260,12 @@
       "Northeastern US",
       "Midatlantic US"
     ],
+    "Autofill image paths": [
+      "symphyotrichum_novi-belgii.png"
+    ],
+    "Autofill image credits": [
+      "prairiemoon.com"
+    ],
     "Key Host Plant": [
       "Lepidoptera",
       "Specialist Bees"
@@ -15612,6 +15663,12 @@
       "Northeastern US",
       "Southeastern US"
     ],
+    "Autofill image paths": [
+      "clethra_alnifolia.png"
+    ],
+    "Autofill image credits": [
+      "gardenia.net"
+    ],
     "Hosted Butterflies and Moths": "Unicorn Caterpillar Moth; Cranberry Spanworm; Bold-Feathered Grass Moth; Zigzag Herpetogramma; Woolly Gray; Spongy Moth; Sweet Pepperbush Nola; Inornate Olethreutes; Large Maple Spanworm Moth; Isabella Tiger Moth; Large Lace-Border",
     "Sunlight": [
       "Sun",
@@ -15740,6 +15797,12 @@
       "Mid-Atlantic US",
       "Midwestern US",
       "Western US"
+    ],
+    "Autofill image paths": [
+      "swida_sericea.png"
+    ],
+    "Autofill image credits": [
+      "bluestemnatives.com"
     ],
     "Key Host Plant": [
       "Specialist Bees"
@@ -16288,6 +16351,12 @@
       "Northeastern US",
       "Mid-Atlantic US",
       "Southeastern US"
+    ],
+    "Autofill image paths": [
+      "Inkberry compacta image 1.png"
+    ],
+    "Autofill image credits": [
+      "Missouri Botanical Garden"
     ],
     "Pollen Source": "Banks? Cellophane Bee",
     "Hosted Butterflies and Moths": "Saddleback Caterpillar Moth; Common Gray; Polyphemus Moth; Spotted Apatelodes; Exotic Leafroller Moth; Red-Banded Leafroller Moth; Io Moth; Henry's Elfin; Wavy-Lined Heterocampa; Reticulated Fruitworm Moth; Scallop Moth; Oblique-Banded Leafroller Moth; Unicorn Caterpillar Moth; Pawpaw Sphinx; Alternate Woodling; Maple Spanworm Moth; Maple Tip Borer; Spiny Oak-Slug Moth; Common Eupithacia; Subterranean Dart; Chickweed Geometer; Harris's Three-Spot; Bold-Feathered Grass Moth; Zigzag Herpetogramma; Fall Webworm; Black-Dotted Ruddy; Dark-Based Larisa; Ambiguous Moth; Pale Green Pinion; Spongy Moth; Forest Tent Caterpillar; Southern Flannel Moth; Holly Sallow; Confused Woodgrain; White-Marked Tussock Moth; Gray Quaker; Ruby Quaker; Skiff Moth; Porcelain Gray; Black-Fringed Leaftier; Winterberry Moth; Rhopobota finitimana; Blackheaded Fireworm; Morning-Glory Prominent; Fawn Sphinx; Clemens' Sphinx; Fall Armyworm Moth; Holly Clearwing Borer; Evergreen Bagworm Moth; Leopard Moth",
