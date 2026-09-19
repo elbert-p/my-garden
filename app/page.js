@@ -27,8 +27,8 @@ import styles from './page.module.css';
 const DEFAULT_GARDEN_IMAGE = '/default-garden.jpg';
 
 // Featured sections pack their tiles tighter than the rest of the page, which
-// stays on the grid's default track width. Narrow screens still collapse to
-// fewer columns via auto-fill.
+// stays on the grid's default track width. A section can override this with its
+// own `columns`. Narrow screens still collapse to fewer columns via auto-fill.
 const FEATURED_COLUMNS = 5;
 
 export default function Home() {
@@ -101,7 +101,11 @@ export default function Home() {
             const garden = featuredById.get(id);
             if (garden) sectionGardens.push(garden);
           }
-          loadedSections.push({ title: section.title, gardens: sectionGardens });
+          loadedSections.push({
+            title: section.title,
+            columns: section.columns,
+            gardens: sectionGardens,
+          });
         }
         setFeaturedSections(loadedSections);
         const loadedFeatured = [...featuredById.values()];
@@ -525,7 +529,7 @@ export default function Home() {
               <ItemGridSection key={section.title} title={section.title}>
                 <ItemGrid
                   items={section.gardens}
-                  columns={FEATURED_COLUMNS}
+                  columns={section.columns ?? FEATURED_COLUMNS}
                   linkPrefix="/share"
                   getItemId={(g) => g.id}
                   getItemImage={(g) => g.image || DEFAULT_GARDEN_IMAGE}
