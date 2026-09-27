@@ -6368,7 +6368,7 @@
     ],
     "Native Range": [
       "Midwestern US",
-      "Southeasern US"
+      "Southeastern US"
     ],
     "Autofill image paths": [
       "liatris_cylindracea.png"
@@ -6376,6 +6376,8 @@
     "Autofill image credits": [
       "prairiemoon.com"
     ],
+    "Pollen Source": "American Bumble Bee, Golden Northern Bumblebee, Andrena (Cnemidandrena) robervalensis, Orange-legged Furrow Bee, Band-footed Sweat Bee, Wide-mouthed Sweat Bee, Bristle Sweat Bee, White-haired Golden Sweat Bee, Densely Punctured Sweat Bee, Hairy Metallic-Sweat Bee, Truncate Sweat Bee, Short Leafcutter Bee, Frigid Leafcutter Bee, Frugal Leafcutter Bee, Unarmed Leafcutter Bee, Broad-handed Leafcutter Bee, Silver-tailed Petalcutter, Golden-tailed Leafcutter Bee",
+    "Hosted Butterflies and Moths": "Blazing Star Borer; Wavy-Lined Emerald",
     "Sunlight": [
       "Sun"
     ],
@@ -6511,13 +6513,8 @@
     ],
     "Ecoregion": "58, not eco-typic in New England",
     "Native Range": [
-      "MA Native",
-      "(58) Northeastern Highlands",
-      "(59) Northeastern Coastal Zone",
-      "(84) Atlantic Coastal Pine Barrens",
-      "Northeastern US",
-      "Southeastern US",
-      "Eastern US"
+      "Midwestern US",
+      "Southeastern US"
     ],
     "Autofill image paths": [
       "liatris_spicata.png"
