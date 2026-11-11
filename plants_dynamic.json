@@ -3584,6 +3584,9 @@
   },
   "Doellingeria umbellata": {
     "Common name": "Flat-topped Aster",
+    "Alternate common names": [
+      "White Tall Aster"
+    ],
     "Height": "3-5 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -4067,6 +4070,9 @@
   },
   "Eupatorium perfoliatum": {
     "Common name": "Boneset",
+    "Alternate common names": [
+      "Common Boneset"
+    ],
     "Height": "4 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -4303,6 +4309,9 @@
   },
   "Euthamia graminifolia": {
     "Common name": "Grass-leaved Goldenrod",
+    "Alternate common names": [
+      "Flat-top Goldenrod"
+    ],
     "Height": "3-4 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -7412,6 +7421,9 @@
   },
   "Monarda fistulosa": {
     "Common name": "Wild Bee Balm",
+    "Alternate common names": [
+      "Wild Bergamot"
+    ],
     "Height": "2-4 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -8878,6 +8890,48 @@
     ],
     "Latin name": "Prunella vulgaris"
   },
+  "Pseudognaphalium obtusifolium": {
+    "Common name": "Blunt-leaved Rabbit Tobacco",
+    "Alternate common names": [
+      "Sweet Everlasting"
+    ],
+    "Height": "1-3 ft",
+    "plantType": [
+      "Herbaceous perennial"
+    ],
+    "Native Range": [
+      "MA Native",
+      "(58) Northeastern Highlands",
+      "(59) Northeastern Coastal Zone",
+      "(84) Atlantic Coastal Pine Barrens",
+      "Northeastern US",
+      "Midwestern US",
+      "Southeastern US",
+      "Southwestern US"
+    ],
+    "Autofill image paths": [
+      "pseudognaphalium_obtusifolium.jpeg"
+    ],
+    "Autofill image credits": [
+      "Ann Dorfman"
+    ],
+    "Hosted Butterflies and Moths": "Chionodes fondella; Everlasting Tebenna; American Lady",
+    "Sunlight": [
+      "Sun",
+      "Part Sun",
+      "Part Shade"
+    ],
+    "Moisture": [
+      "Medium",
+      "Dry"
+    ],
+    "Bloom time": [
+      "Aug",
+      "Sep",
+      "Oct"
+    ],
+    "Latin name": "Pseudognaphalium obtusifolium"
+  },
   "Pycnanthemum incanum": {
     "Common name": "Hoary Mountain Mint",
     "Height": "3 ft",
@@ -8943,6 +8997,9 @@
   },
   "Pycnanthemum tenuifolium": {
     "Common name": "Narrow-leafed Mountain Mint",
+    "Alternate common names": [
+      "Thread-leaf Mountain Mint"
+    ],
     "Height": "0.75-2 ft",
     "plantType": [
       "Herbaceous perennial"
@@ -9692,6 +9749,9 @@
   },
   "Scutellaria incana": {
     "Common name": "Downy Skullcap",
+    "Alternate common names": [
+      "Hoary Skullcap"
+    ],
     "Height": "3 ft",
     "plantType": [
       "Herbaceous perennial"
